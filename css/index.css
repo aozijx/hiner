@@ -6437,7 +6437,7 @@ div#banners .bannerText {
     top: 0;
     left: 0;
   }
-  > a:nth-child > i {
+  > a:nth-child(0) > i {
     padding-right: 8px;
   }
 }
