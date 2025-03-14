@@ -1,6 +1,6 @@
 ---
 title: Hello World
-cover: https://cdn.img2ipfs.com/ipfs/QmSz7pkLChm749PpU47Ya78gLBhKpBvTMKsCT1z8cSMJhy?filename=1191638-20200218165323685-96977184.png
+cover: https://cdn.img2ipfs.com/ipfs/QmaU3HScuxg29LPfTWhDvDK33e7uQQ1ucBqSguybVdG1Zp?filename=hexo.png
 ---
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 

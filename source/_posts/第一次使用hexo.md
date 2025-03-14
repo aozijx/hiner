@@ -1,15 +1,13 @@
 ---
 title: 第一次使用hexo
 date: 2025-03-12 10:04:33
-categories: hexo
-tags: hexo
+categories: [Tips]
+tags: [hexo]
 author: Hiner
-# cover: https://cdn.img2ipfs.com/ipfs/QmeBNLFU3QMkXFJm5tnXDVzwQakouyPbR4S8ahVGTLoGBE?filename=%E8%94%B7%E8%96%87%E8%8A%B1.jpeg
+cover: https://cdn.img2ipfs.com/ipfs/QmaU3HScuxg29LPfTWhDvDK33e7uQQ1ucBqSguybVdG1Zp?filename=hexo.png
 ---
-# 记录一些Tips
 ## markdown的Front-matter
-
-<pre>
+```yml
 title: 文章标题
 date: 2023-10-01 00:00:00
 updated: 2023-10-02 00:00:00
@@ -26,5 +24,5 @@ comments: true
 sticky: 100
 # 是否启用数学公式支持
 mathjax: false        
-</pre>
+```
 

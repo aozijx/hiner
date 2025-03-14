@@ -49,7 +49,7 @@ highlight:
   auto_detect: false
   tab_replace: ''
   wrap: true
-  hljs: false
+  hljs: true
 prismjs:
   preprocess: true
   line_number: true
@@ -134,4 +134,4 @@ deploy:
   type: git
   repo: https://github.com/aozijx/hiner  # 静态页面仓库的 URL
   branch: main          # 部署分支（GitHub Pages 默认为 main 或 gh-pages）
-  message: "Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"  # 可选：提交信息
+  # message: "Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"  # 可选：提交信息 
