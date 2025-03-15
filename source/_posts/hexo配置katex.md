@@ -75,8 +75,10 @@ markdown:
 ```
 [KaTeX and MathJax Comparison Demo](http://www.intmath.com/cg5/katex-mathjax-comparison.php)
 生成公式或图片工具：
+- https://katex.org/#demo
 - https://editor.codecogs.com/
 - https://www.imatheq.com/corpsite/index.html
+  
 https://www.jianshu.com/p/588ab3d22eb8
 https://dora-cmon.github.io/posts/95c5c5d2/
 https://sheepsparks.cn/2025/02/04/Hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/

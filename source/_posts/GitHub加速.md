@@ -4,7 +4,7 @@ date: 2025-03-15 12:48:50
 author:
 categories:
 tags: [GitHub]
-cover:
+cover: https://cdn.img2ipfs.com/ipfs/QmRV6AphA6xwWo6HeACHmrPHEchiX2681ZL8w2qyXKzdSp?filename=a4f651495c555f42d3b0de0122f914e1.png
 ---
 出处:[Jerry Zhou](https://blog.jerryz.com.cn/article/github-speed-up/)
 通过修改系统hosts文件的办法，绕过国内DNS解析，直接访问GitHub的CDN节点，从而达到GitHub访问加速的目的。不需要海外的服务器辅助。

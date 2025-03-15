@@ -6,7 +6,7 @@ tags: [原神, Mod]
 cover: https://cdn.img2ipfs.com/ipfs/QmcVLaFPnHvMMPF96kTLRpodC5g2AWXfg5vyQJKXjy3ZUz?filename=Furina.jpg
 ---
 ### 安装3DMigoto
-链接 [https://github.com/SilentNightSound/GI-Model-Importer/releases/tag/v7.0](https://github.com/SilentNightSound/GI-Model-Importer/releases/download/v7.0/3dmigoto-GIMI-for-development.zip)
+[点击下载](https://github.com/SilentNightSound/GI-Model-Importer/releases/download/v7.0/3dmigoto-GIMI-for-development.zip) : https://github.com/SilentNightSound/GI-Model-Importer/releases/tag/v7.0
 ### 更改配置文件
 将 3DMigoto 解压到除了游戏文件夹的任意位置，打开 **d3dx.ini** 文件，按Ctrl+F搜索“Settings used by the external 3DMigoto Loader”的 **loader** 等等关键词，找到 **target** = D:\miHoYo Launcher\games\Genshin Impact Game\YuanShen.exe 后，将等号后的游戏路径改成自己的，更改完成后保存设置。
 ### 放置Mod
