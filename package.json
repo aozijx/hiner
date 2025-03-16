@@ -12,6 +12,7 @@
     "version": "7.3.0"
   },
   "dependencies": {
+    "@renbaoshuo/markdown-it-katex": "^2.0.2",
     "hexo": "^7.3.0",
     "hexo-deployer-git": "^4.0.0",
     "hexo-filter-katex": "^1.0.1",
@@ -24,6 +25,7 @@
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
     "hexo-theme-landscape": "^1.0.0",
+    "katex": "^0.16.21",
     "markdown-it-highlightjs": "^4.2.0"
   }
 }

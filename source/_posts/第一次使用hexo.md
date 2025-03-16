@@ -25,4 +25,71 @@ sticky: 100
 # 是否启用数学公式支持
 mathjax: false        
 ```
+## 外挂标签
+### Tabs
+标签页标签，用于显示标签页。
+{% tabs test1 %}
+<!-- tab 语法 -->
+```markdown
+{% tabs 唯一名称, [index] %}
 
+<!-- tab [唯一Tab] [@icon] -->
+
+任何内容（也支持内联标签）。
+
+<!-- endtab -->
+
+{% endtabs %}
+```
+<!-- endtab -->
+
+<!-- tab 示例 -->
+```markdown
+{% tabs test1 %}
+
+<!-- tab -->
+
+**This is Tab 1.**
+
+<!-- endtab -->
+
+<!-- tab -->
+
+**This is Tab 2.**
+
+<!-- endtab -->
+
+<!-- tab -->
+
+**This is Tab 3.**
+
+<!-- endtab -->
+
+{% endtabs %}
+```
+<!-- endtab -->
+
+<!-- tab 效果 -->
+{% tabs test %}
+
+<!-- tab -->
+
+**This is Tab 1.**
+
+<!-- endtab -->
+
+<!-- tab -->
+
+**This is Tab 2.**
+
+<!-- endtab -->
+
+<!-- tab -->
+
+**This is Tab 3.**
+
+<!-- endtab -->
+
+{% endtabs %}
+<!-- endtab -->
+{% endtabs %}

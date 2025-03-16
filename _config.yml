@@ -71,6 +71,7 @@ markdown:
     - markdown-it-ins
     - markdown-it-sub
     - markdown-it-sup
+    - '@renbaoshuo/markdown-it-katex'
   anchors:
     level: 2 # 生成 Heading ID 的标题等级
     collisionSuffix: 'v' # Heading ID 重复时，数字的后缀

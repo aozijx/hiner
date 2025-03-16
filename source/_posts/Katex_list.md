@@ -5,7 +5,7 @@ author:
 categories: [Tips]
 tags: [Katex]
 Katex: true
-cover: https://latex.codecogs.com/svg.image?&space;TIPS
+cover: https://latex.codecogs.com/svg.image?&space;TIP
 ---
 ## 编辑网站
 - [KaTeX官方演示](https://katex.org/#demo)

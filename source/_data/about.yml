@@ -1,0 +1,64 @@
+title: 关于本站
+
+contentinfo: # Top personal information display
+  sup: 你好，很高兴认识你👋
+  name: 我是伍十七 # Name
+  title: 学生, 软件工程师, 独立开发者, 博主 # Introduction
+  tip: 追求卓越
+  slogan: 创造源于激情
+  mask:
+    - 卓越产品
+    - 卓越设计
+    - 高效编程
+    - 用户友好体验
+
+skills: # Add as needed
+  title: 技能
+  subtitle: 解锁创造力
+  tags:
+    - title: HTML
+      # img: https://skillicons.dev/icons?i=html # 如果有图片，则不会显示图标
+      icon: fab fa-html5
+      color: "#e9572b"
+
+careers:
+  title: 生涯
+  subtitle: 无限进步
+  image: https://s3.qjqq.cn/47/67a216483c354.png!color
+  items:
+    - color: "#357ef5"
+      school: 软件工程
+      major: 学习
+
+motto:
+  title: 座右铭
+  prefix: 破釜沉舟，
+  content: 勇往直前。
+
+expertise:
+  title: 专长
+  prefix: 数学, 物理, 化学
+  specialist: 专家
+  content: 学习能力
+  level: MAX
+
+cause:
+  tip: 初衷
+  title: 为什么建立这个网站？
+  content:
+    <br>创建这个网站的初衷是有一个地方可以 <b>积累知识和兴趣</b>。与他人分享可以让这些成为积累和沉淀。如果我能帮助更多的人并解决他们的问题，那就太好了。
+    <br>
+    与大多数垂直技术博客不同，这里的类别将非常多样，包括 <b>教程和实用知识</b>、<b>生活轶事和建议</b>、<b>各种主题的思考和想法</b>。无论我研究或发现什么，我都会在这里分享。
+    <br>
+    这是创建这个小网站的初衷，也是 <b>我分享生活的方式</b>。我很幸运在这里遇见你，我相信我们可以一起留下一些美好的回忆。
+    <br>
+
+award:
+  enable: true
+  description: 感谢大家的支持和鼓励。因为你们，我感到写作博客可以为你们创造价值。这将使我在这条路上走得更远。
+  tips: "总金额: ¥ {sum}, 将用于博客的维护和更新。"
+rewardList: # Bottom donations
+  - name: 悦华
+    money: 5
+    time: 2023-04-20
+    icon: fab fa-weixin

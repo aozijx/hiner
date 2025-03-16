@@ -1,0 +1,15 @@
+banner_suffix:
+links:
+  - class_name: 推荐 # 分类名称
+    descr: 参与本站开发、提供设计灵感、捐助本站的优秀博主 # 分类简介
+    type: item # 显示方式，有两种 card / item / disco
+    suffix:
+    link_list:
+      - name: Hexo # 友链名称
+        link: https://hexo.io/ # 友链地址
+        descr: Hexo 是一个快速、简洁且高效的博客框架 # 友链简介
+        avatar: img/pwa/favicon.png # 显示头像
+      - name: Solitude # 友链名称
+        link: https://github.com/everfu/hexo-theme-solitude # 友链地址
+        descr: 一款简单易用的 Hexo 主题 # 友链简介
+        avatar: img/logo.png # 显示头像

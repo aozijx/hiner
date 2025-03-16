@@ -8,30 +8,55 @@ cover: https://cdn.img2ipfs.com/ipfs/QmWHUMHAc6fx4mYg6t8ZK92xhBxf1ztTaprFqXKcDW2
 ---
 ## 翻转卡片
 <style>
+    .container {
+        width: 90%;
+        max-width: 600px;
+        height: auto;
+        min-height: 300px;
+        margin: 20px auto;
+        padding: 20px 10px;
+        border: 2px solid #000;
+        border-radius: 7px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
     .flip-card {
         position: relative;
         width: 200px;
         height: 200px;
         transform-style: preserve-3d;
-        perspective: 1000px;
+        perspective: 500px;
+        margin: 10px;
     }
     .flip-front, .flip-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
         display: flex;
         justify-content: center;
         align-items: center;
-        position: absolute;
         border-radius: 5px;
         object-fit: cover;
         backface-visibility: hidden;
         transition: transform 1s ease-in-out;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .flip-front img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
     }
     .flip-back {
-        width: 180px;
-        height: 180px;
-        margin-top: 18px;
         font-size: 2em;
         color: #000;
+        padding: 15px;
         background-color: #e2e1e1;
+        text-align: center;
     }
     .flip-card:hover .flip-front {
         transform: rotateY(-180deg);
@@ -42,22 +67,33 @@ cover: https://cdn.img2ipfs.com/ipfs/QmWHUMHAc6fx4mYg6t8ZK92xhBxf1ztTaprFqXKcDW2
     .flip-card:hover .flip-back {
         transform: rotateY(0deg);
     }
+    @media (max-width: 768px) {
+        .container {
+            width: 95%;
+            padding: 10px 5px;
+        }
+        .flip-card {
+            width: 180px;
+            height: 180px;
+            margin: 10px;
+        }
+        .flip-back {
+            font-size: 1.2em;
+            padding: 0px;
+        }
+    }
 </style>
-<div style="
-    width: 60%;
-    height: 250px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    border: 2px solid #000;
-    border-radius: 7px;">
+<div class="container">
     <div class="flip-card">
-        <img class="flip-front" src="https://cdn.img2ipfs.com/ipfs/QmWHUMHAc6fx4mYg6t8ZK92xhBxf1ztTaprFqXKcDW2VSr?filename=smile.jpg">
+        <div class="flip-front">
+            <img src="https://cdn.img2ipfs.com/ipfs/QmWHUMHAc6fx4mYg6t8ZK92xhBxf1ztTaprFqXKcDW2VSr?filename=smile.jpg">
+        </div>
         <div class="flip-back"> Smile </div>
     </div>
     <div class="flip-card">
-        <img class="flip-front" src="https://cdn.img2ipfs.com/ipfs/QmUErn9t6KiGpg3m69q24aytNeKjB7Xej2Gn3BXDgA7RN4?filename=hu.jpg">
+        <div class="flip-front">
+            <img src="https://cdn.img2ipfs.com/ipfs/QmUErn9t6KiGpg3m69q24aytNeKjB7Xej2Gn3BXDgA7RN4?filename=hu.jpg">
+        </div>
         <div class="flip-back"> Slience </div>
     </div>
 </div>
@@ -69,25 +105,35 @@ cover: https://cdn.img2ipfs.com/ipfs/QmWHUMHAc6fx4mYg6t8ZK92xhBxf1ztTaprFqXKcDW2
     height: 200px;
     transform-style: preserve-3d;
     perspective: 500px;
+    margin: 10px;
 }
 .flip-front, .flip-back {
-    width: 200px;
-    height: 200px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
     border-radius: 5px;
+    object-fit: cover;
     backface-visibility: hidden;
     transition: transform 1s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.flip-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
 }
 .flip-back {
-    display: flex;
     font-size: 2em;
-    justify-content: center;
-    align-items: center;
     color: #000;
+    padding: 15px;
     background-color: #e2e1e1;
+    text-align: center;
 }
 .flip-card:hover .flip-front {
     transform: rotateY(-180deg);
@@ -101,7 +147,9 @@ cover: https://cdn.img2ipfs.com/ipfs/QmWHUMHAc6fx4mYg6t8ZK92xhBxf1ztTaprFqXKcDW2
 ```
 ```html
 <div class="flip-card">
-    <img class="flip-front" src="https://cdn.img2ipfs.com/ipfs/QmWHUMHAc6fx4mYg6t8ZK92xhBxf1ztTaprFqXKcDW2VSr?filename=smile.jpg">
+    <div class="flip-front">
+        <img src="https://cdn.img2ipfs.com/ipfs/QmWHUMHAc6fx4mYg6t8ZK92xhBxf1ztTaprFqXKcDW2VSr?filename=smile.jpg">
+    </div>
     <div class="flip-back"> Smile </div>
 </div>
 ```
@@ -130,16 +178,7 @@ cover: https://cdn.img2ipfs.com/ipfs/QmWHUMHAc6fx4mYg6t8ZK92xhBxf1ztTaprFqXKcDW2
         transform: translate(var(--disX, 0), var(--disY, 0));
     }
 </style>
-<div style="
-    width: 60%;
-    height: 400px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    border: 2px solid #000;
-    border-radius: 7px;">
+<div class="container">
     <div class="jiu">
         <div class="jiu-item"></div>
         <div class="jiu-item"></div>
