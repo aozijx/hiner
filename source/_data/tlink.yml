@@ -31,7 +31,7 @@ links:
         avatar: https://photokit.com//colors/icons/EyeDropper.svg # 显示头像
 
   - class_name: CSS
-    descr: 工具
+    descr: CSS辅助工具在线网站
     type: item 
     suffix:
     link_list: 
@@ -55,8 +55,12 @@ links:
         descr: 600+ single element loaders # 简介
         avatar: https://css-loaders.com/fav.png # 显示头像 
 
-      - name: ALL | Navnav # 名称
-        link: https://thuvien.org/navnav/ # 地址
-        descr: UI # 简介
-        avatar: https://cdn1.iconfinder.com/data/icons/material-core/20/language-64.png # 显示头像 
+      - name: ALL | Navnav 
+        link: https://thuvien.org/navnav/ 
+        descr: UI 
+        avatar: https://cdn1.iconfinder.com/data/icons/material-core/20/language-64.png 
       
+      - name: Epic Spinners
+        link: https://epic-spinners.vuestic.dev/
+        descr: Loader
+        avatar: https://epic-spinners.vuestic.dev/favicon.ico

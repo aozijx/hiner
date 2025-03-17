@@ -6,7 +6,7 @@ type: banner
 cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 container: true
 rightbtn: 返回图库
-rightbtnlink: /gallery/
+rightbtnlink: /Gallery/
 ---
 
 {% gallery %}
