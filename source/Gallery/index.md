@@ -5,8 +5,5 @@ date: 2025-03-16 19:06:24
 updated: 2025-03-16 19:06:24
 ---
 <div class="gallery-group-main">
-{% galleryGroup '壁纸' '收藏的一些壁纸' '/gallery/wallpaper' https://s3.qjqq.cn/47/678f80ebba3a8.png!color %}
-{% galleryGroup '风景' '收藏的一些风景' '/gallery/scenic' https://s3.qjqq.cn/47/678f89d30c3b3.jpeg!color %}
-{% galleryGroup '山' '我到访过的山' '/gallery/shan' https://s3.qjqq.cn/47/6640bb4be6c63.webp!color %}
+{% galleryGroup '星露谷物语' '存档' 'gallery/StardewValley' https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png %}
 </div>
----

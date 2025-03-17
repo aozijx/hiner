@@ -42,7 +42,7 @@ cover: https://cdn.img2ipfs.com/ipfs/QmWHUMHAc6fx4mYg6t8ZK92xhBxf1ztTaprFqXKcDW2
         border-radius: 5px;
         object-fit: cover;
         backface-visibility: hidden;
-        transition: transform 1s ease-in-out;
+        transition: transform 0.8s ease-in-out;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     .flip-front img {
@@ -119,7 +119,7 @@ cover: https://cdn.img2ipfs.com/ipfs/QmWHUMHAc6fx4mYg6t8ZK92xhBxf1ztTaprFqXKcDW2
     border-radius: 5px;
     object-fit: cover;
     backface-visibility: hidden;
-    transition: transform 1s ease-in-out;
+    transition: transform 0.8s ease-in-out;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 .flip-front img {

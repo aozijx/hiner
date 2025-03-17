@@ -1,0 +1,62 @@
+banner_suffix:
+links:
+  - class_name: 主题 # 分类名称
+    descr: 框架 # 分类简介
+    type: item # 显示方式，有两种 card / item / disco
+    suffix:
+    link_list:
+      - name: Hexo # 名称
+        link: https://hexo.io/ # 地址
+        descr: Hexo 是一个快速、简洁且高效的博客框架 # 简介
+        avatar: img/pwa/favicon.png # 显示头像
+
+      - name: Solitude # 名称
+        link: https://github.com/everfu/hexo-theme-solitude # 地址
+        descr: 一款简单易用的 Hexo 主题 # 简介
+        avatar: img/logo.png # 显示头像
+
+  - class_name: 取色器
+    descr: 点击取色
+    type: item
+    suffix: 
+    link_list: 
+      - name: 菜鸟 # 名称
+        link: https://www.jyshare.com/front-end/6214/#f0db4f # 地址
+        descr: 图片取色器/拾色器/可上传图片 # 简介
+        avatar: https://ts1.tc.mm.bing.net/th?id=ODLS.cc1244f4-c576-40dc-8423-06895c0f5444&w=32&h=32&qlt=90&pcl=fffffa&o=6&pid=1.2 # 显示头像
+      
+      - name: PHOTOKIT # 名称
+        link: https://photokit.com/colors/eyedropper/?lang=zh # 地址
+        descr: 单击颜色吸管按钮并在屏幕上的任意位置选择一种颜色！ # 简介
+        avatar: https://photokit.com//colors/icons/EyeDropper.svg # 显示头像
+
+  - class_name: CSS
+    descr: 工具
+    type: item 
+    suffix:
+    link_list: 
+      - name: CSS Gradient
+        link: https://cssgradient.io/
+        descr: CSS Gradient 是一个设计条纹项目，可让您为网站创建免费的渐变背景。 # 简介
+        avatar: https://cssgradient.io/images/logo-55c31c59.svg
+      
+      - name: Fancy-Border-Radius # 名称
+        link: https://9elements.github.io/fancy-border-radius/ # 地址
+        descr: Fancy Border Radius Generator # 简介
+        avatar: https://9elements.github.io/fancy-border-radius/favicon-32x32.png # 显示头像
+      
+      - name: UIverse # 名称
+        link: https://uiverse.io/ # 地址
+        descr: The Largest Library of Open-Source UI # 简介
+        avatar: https://uiverse.io/android-chrome-192x192.png # 显示头像 
+
+      - name: CSS Loader # 名称
+        link: https://css-loaders.com/classic/ # 地址
+        descr: 600+ single element loaders # 简介
+        avatar: https://css-loaders.com/fav.png # 显示头像 
+
+      - name: ALL | Navnav # 名称
+        link: https://thuvien.org/navnav/ # 地址
+        descr: UI # 简介
+        avatar: https://cdn1.iconfinder.com/data/icons/material-core/20/language-64.png # 显示头像 
+      
