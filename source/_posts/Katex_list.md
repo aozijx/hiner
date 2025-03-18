@@ -8,17 +8,14 @@ Katex: true
 cover: https://latex.codecogs.com/svg.image?&space;TIP
 ---
 ## 编辑网站
-- [KaTeX官方演示](https://katex.org/#demo)
+{% link 'Katex' '官方演示' 'https://katex.org/#demo' %}
 - [CodeCogs公式编辑器](https://editor.codecogs.com/)
 - [iMathEQ数学工具](https://www.imatheq.com/corpsite/index.html)
 ## Katex支持表
-官方
-- 按类型排序
-https://katex.org/docs/supported
-- 按字母顺序排序，其中列出了支持和不支持的函数。
-https://katex.org/docs/support_table
+{% link '官方支持表' '按类型排序' 'https://katex.org/docs/supported' %}
+{% link '官方支持表' '按字母顺序排序，其中列出了支持和不支持的函数。' 'https://katex.org/docs/support_table' %}
 
-第三方
+## 第三方
 - https://www.luogu.com.cn/article/4a81e2tt
 ## 希腊字母（Greek Letters）
 1. $\Alpha$ <code>\Alpha</code> | $\alpha$ <code>\alpha</code> | <code>/&#712;&#230;lf&#601;/</code>  

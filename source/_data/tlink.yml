@@ -64,3 +64,43 @@ links:
         link: https://epic-spinners.vuestic.dev/
         descr: Loader
         avatar: https://epic-spinners.vuestic.dev/favicon.ico
+
+      - name: Hello,Animations
+        link: https://css-animations.io/
+        descr: 游戏
+        avatar: https://css-animations.io/favicon.ico
+
+  - class_name: 矢量图
+    descr: 擦亮眼睛，注意版权
+    type: item 
+    suffix:
+    link_list: 
+      - name: ICONFINDER
+        link: https://www.iconfinder.com/
+        descr: Make beautiful designs faster # 简介
+        avatar: https://www.iconfinder.com/static/img/favicons/favicon-32x32.png?87b2a5c3aa
+
+      - name: FLATICON
+        link: https://www.flaticon.com/
+        descr: Access 18.1M+ vector icons & stickers # 简介
+        avatar: https://media.flaticon.com/dist/min/img/favicon.ico
+
+      - name:
+        link: https://fontawesome.com/
+        descr: Take the hassle out of icons in your website.
+        avatar: https://fontawesome.com/images/favicon/icon.svg
+
+      - name: ICONS8
+        link: https://icons8.com/icons
+        descr: 1,405,300 free icons that match each other
+        avatar: https://maxst.icons8.com/vue-static/landings/primary-landings/favs/icons8_fav_32%C3%9732.png
+
+      - name: Devicon
+        link: https://devicon.dev/
+        descr: Devicon is a set of icons representing programming languages
+        avatar: https://devicon.dev/logos/favicon-32x32.png
+
+      - name: WORLDVECTORLOGO
+        link: https://worldvectorlogo.com/
+        descr: Download vector logos
+        avatar: https://worldvectorlogo.com/static/img/favicon.ico

@@ -53,6 +53,22 @@ cause:
     这是创建这个小网站的初衷，也是 <b>我分享生活的方式</b>。我很幸运在这里遇见你，我相信我们可以一起留下一些美好的回忆。
     <br>
 
+game:
+  - title: 游戏爱好
+    img: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
+    subtitle: 星露谷物语
+    box_shadow: "0 -69px 203px 11px #04120f inset"
+    icon_group:
+      - https://stardewvalleywiki.com/mediawiki/images/b/b2/Animals_Icon.png
+      # - https://7.isyangs.cn/66/6738b472ce11f-66.webp
+      # - https://7.isyangs.cn/66/6738b48045a5b-66.webp
+    tips_right: 比尔吉沃特
+  - title: 游戏爱好
+    img: 
+    subtitle: 
+    box_shadow: "0 -69px 203px 11px #415dc9 inset"
+    tips_left: 
+
 award:
   enable: true
   description: 感谢大家的支持和鼓励。因为你们，我感到写作博客可以为你们创造价值。这将使我在这条路上走得更远。
@@ -62,3 +78,44 @@ rewardList: # Bottom donations
     money: 5
     time: 2023-04-20
     icon: fab fa-weixin
+    color: "#09bb07"
+  - name: 糕小菜
+    money: 6.66
+    time: 2023-08-11
+    icon: fab fa-alipay
+  - name: 木木
+    money: 5
+    time: 2023-08-11
+    icon: fab fa-weixin
+  - name: 悦华
+    money: 56
+    time: 2023-08-25
+    icon: fab fa-weixin
+  - name: 糕小菜
+    money: 3.33
+    time: 2023-12-24
+    icon: fab fa-alipay
+  - name: 爱发电用户_G6sk
+    money: 5
+    time: 2023-11-08
+    icon: fab fa-gratipay
+  - name: 爱发电用户_pShm
+    money: 10
+    time: 2024-03-08
+    icon: fab fa-gratipay
+  - name: -你呀
+    money: 28
+    time: 2024-04-03
+    icon: fab fa-gratipay
+  - name: 虎了吧唧
+    money: 28
+    time: 2024-04-08
+    icon: fab fa-gratipay
+  - name: 爱发电用户_DkdV
+    money: 28
+    time: 2024-04-10
+    icon: fab fa-gratipay
+  - name: 爱发电用户_f4bd6
+    money: 28
+    time: 2024-04-12
+    icon: fab fa-gratipay

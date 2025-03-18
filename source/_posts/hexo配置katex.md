@@ -67,12 +67,7 @@ markdown:
   anchors:
     level: 2
 ```
-## 引入 KaTeX CSS/JS
-在主题模板文件（如 themes/your-theme/layout/_partial/head.ejs）中添加：
-```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script>
-```
+
 [KaTeX and MathJax Comparison Demo](http://www.intmath.com/cg5/katex-mathjax-comparison.php)
 生成公式或图片工具：
 - https://katex.org/#demo
