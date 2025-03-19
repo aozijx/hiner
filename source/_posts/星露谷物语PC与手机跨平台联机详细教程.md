@@ -3,11 +3,11 @@ title: 星露谷物语PC与手机跨平台联机详细教程
 date: 2025-03-18 17:24:33
 author: 
 categories: [游戏]
-tags: [steam， 星露谷物语]
+tags: [steam, 星露谷物语]
 cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 ---
 ## 联机原理说明
-由于星露谷物语官方未支持PC与手机跨平台联机，本教程通过**虚拟局域网（VPN）**技术实现联机。双方设备将在同一虚拟网络中，模拟本地局域网联机环境。
+由于星露谷物语官方未支持PC与手机跨平台联机，本教程通过**虚拟局域网**（VPN）技术实现联机。双方设备将在同一虚拟网络中，模拟本地局域网联机环境。
 
 ## 联机准备清单
 | 项目          | PC端要求                     | 手机端要求                 |
@@ -24,7 +24,7 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 
 2. 设备安装
    - PC端：下载Windows版客户端
-   - 手机端：应用商店搜索「蒲公英VPN」
+   - 手机端：应用商店搜索「贝锐蒲公英」
 
 3. 创建虚拟网络
 PC端登录后点击「创建网络」→ 选择「对等网络」→ 设置网络名称（如：StardewValley）

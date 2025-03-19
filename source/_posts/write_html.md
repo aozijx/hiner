@@ -97,6 +97,7 @@ cover: https://cdn.img2ipfs.com/ipfs/QmWHUMHAc6fx4mYg6t8ZK92xhBxf1ztTaprFqXKcDW2
         <div class="flip-back"> Slience </div>
     </div>
 </div>
+这一版是为了适应主题的css
 
 ```css
 .flip-card {
@@ -145,12 +146,59 @@ cover: https://cdn.img2ipfs.com/ipfs/QmWHUMHAc6fx4mYg6t8ZK92xhBxf1ztTaprFqXKcDW2
     transform: rotateY(0deg);
 }
 ```
+原版
+```css
+.flip-card {
+    position: relative;
+    display: flex;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+.flip-front, .flip-back {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border-radius: 5px;
+    backface-visibility: hidden;
+    transition: transform 1s ease-in-out;
+}
+.flip-back {
+    display: flex;
+    font-size: 2em;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    background-color: #e2e1e1;
+    border: 2px dotted palevioletred;
+}
+.flip-card:hover .flip-front {
+    transform: rotateY(-180deg);
+}
+.flip-card .flip-back {
+    transform: rotateY(180deg);
+}
+.flip-card:hover .flip-back {
+    transform: rotateY(0deg);
+}
+```
 ```html
 <div class="flip-card">
     <div class="flip-front">
         <img src="https://cdn.img2ipfs.com/ipfs/QmWHUMHAc6fx4mYg6t8ZK92xhBxf1ztTaprFqXKcDW2VSr?filename=smile.jpg">
     </div>
     <div class="flip-back"> Smile </div>
+</div>
+```
+原版
+
+```html
+<div class="flip-card">
+    <img class="flip-front" src="src/img/smile.jpg" alt="smile">
+    <div class="flip-back">
+        <span>Smile</span>
+    </div>
 </div>
 ```
 ## 九宫格

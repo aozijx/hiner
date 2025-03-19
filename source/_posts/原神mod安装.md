@@ -18,5 +18,7 @@ cover: https://cdn.img2ipfs.com/ipfs/QmcVLaFPnHvMMPF96kTLRpodC5g2AWXfg5vyQJKXjy3
 ### e.g.
 ![芙宁娜](https://cdn.img2ipfs.com/ipfs/QmXzGWjNoFXPvfssyQrgEuU41iAzQ3wh4yLnqMnJDydtf1?filename=Furina531131.png)
 ![花时来信(随芒荒改变颜色)](https://cdn.img2ipfs.com/ipfs/QmPugvyGbPnGZNqQJDHq6aJTk6nHfMQXCNESUaLFbnnt3u?filename=Furina.png)
+![过曝了](https://cdn.img2ipfs.com/ipfs/QmbG3Q8yrSpVhmFq2JEbbLwFwJewSszUL9GhncoY3NsrNb?filename=Furina1.png)
+![](https://cdn.img2ipfs.com/ipfs/QmU6JDWWPQTwU6Af4SeXVYxm5t8jiELPK6MDS9GHBvgi6j?filename=ying1.png)
 ![雷电将军](https://cdn.img2ipfs.com/ipfs/Qmb5uZUhsb4vY6PGkB8Vej9mGFpQjpoJCDnTUtHqnEadfc?filename=ying.png)
 ![阿蕾奇诺](https://cdn.img2ipfs.com/ipfs/QmatLajvMBQT9fDi5a4jjMTShQTqUrvtAr2dee8zcpHfws?filename=Arlecchino.png)

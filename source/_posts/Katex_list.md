@@ -18,30 +18,32 @@ cover: https://latex.codecogs.com/svg.image?&space;TIP
 ## 第三方
 - https://www.luogu.com.cn/article/4a81e2tt
 ## 希腊字母（Greek Letters）
-1. $\Alpha$ <code>\Alpha</code> | $\alpha$ <code>\alpha</code> | <code>/&#712;&#230;lf&#601;/</code>  
-2. $\Beta$ <code>\Beta</code> | $\beta$ <code>\beta</code> | <code>/&#712;bi&#720;t&#601;/</code> 或 <code>/&#712;be&#618;t&#601;/</code>  
-3. $\Gamma$ <code>\Gamma</code> | $\gamma$ <code>\gamma</code> | <code>/&#712;&#609;&#230;m&#601;/</code>  
-4. $\Delta$ <code>\Delta</code> | $\delta$ <code>\delta</code> | <code>/&#712;d&#603;lt&#601;/</code>  
-5. $\Epsilon$ <code>\Epsilon</code> | $\epsilon$ <code>\epsilon</code> | $\varepsilon$ <code>\varepsilon</code>（变体） | <code>/&#603;p&#712;s&#618;l&#594;n/</code>  
-6. $\Zeta$ <code>\Zeta</code> | $\zeta$ <code>\zeta</code> | <code>/&#712;zi&#720;t&#601;/</code>  
-7. $\Eta$ <code>\Eta</code> | $\eta$ <code>\eta</code> | <code>/&#712;i&#720;t&#601;/</code>  
-8. $\Theta$ <code>\Theta</code> | $\theta$ <code>\theta</code> | $\vartheta$ <code>\vartheta</code>（变体） | <code>/&#712;&#952;i&#720;t&#601;/</code>
-9. $\Iota$ <code>\Iota</code> | $\iota$ <code>\iota</code> | <code>/a&#618;&#712;&#601;&#650;t&#601;/</code>  
-10. $\Kappa$ <code>\Kappa</code> | $\kappa$ <code>\kappa</code> | <code>/&#712;k&#230;p&#601;/</code>  
-11. $\Lambda$ <code>\Lambda</code> | $\lambda$ <code>\lambda</code> | <code>/&#712;l&#230;md&#601;/</code>  
-12. $\Mu$ <code>\Mu</code> | $\mu$ <code>\mu</code> | <code>/mju&#720;/</code>
-13. $\Nu$ <code>\Nu</code> | $\nu$ <code>\nu</code> | <code>/nju&#720;/</code>  
-14. $\Xi$ <code>\Xi</code> | $\xi$ <code>\xi</code> | <code>/&#712;za&#618;/</code> 或 <code>/&#712;sa&#618;/</code>  
-15. $\Omicron$ <code>\Omicron</code> | $\omicron$ <code>\omicron</code> | <code>/o&#650;&#712;ma&#618;kr&#594;n/</code>  
-16. $\Pi$ <code>\Pi</code> | $\pi$ <code>\pi</code> | $\varpi$ <code>\varpi</code>（变体） | <code>/pa&#618;/</code>  
-17. $\Rho$ <code>\Rho</code> | $\rho$ <code>\rho</code> | $\varrho$ <code>\varrho</code>（变体） | <code>/ro&#650;/</code>  
-18. $\Sigma$ <code>\Sigma</code> | $\sigma$ <code>\sigma</code> | $\varsigma$ <code>\varsigma</code>（变体） | <code>/&#712;s&#618;&#609;m&#601;/</code>  
-19. $\Tau$ <code>\Tau</code> | $\tau$ <code>\tau</code> | <code>/ta&#650;/</code> 或 <code>/t&#596;&#720;/</code>  
-20. $\Upsilon$ <code>\Upsilon</code> | $\upsilon$ <code>\upsilon</code> | <code>/&#712;&#652;ps&#618;l&#594;n/</code>  
-21. $\Phi$ <code>\Phi</code> | $\phi$ <code>\phi</code> | $\varphi$ <code>\varphi</code>（变体） | <code>/fa&#618;/</code>  
-22. $\Chi$ <code>\Chi</code> | $\chi$ <code>\chi</code> | <code>/ka&#618;/</code>  
-23. $\Psi$ <code>\Psi</code> | $\psi$ <code>\psi</code> | <code>/psa&#618;/</code>  
-24. $\Omega$ <code>\Omega</code> | $\omega$ <code>\omega</code> | <code>/o&#650;&#712;me&#618;&#609;&#601;/</code>  
+| 序号 | 大写                | 小写                  | 变体                     | 音标                  |
+|------|---------------------|-----------------------|--------------------------|-----------------------|
+| 1.   | $\Alpha$ `\Alpha`   | $\alpha$ `\alpha`     |                          | <code>/&#712;&#230;lf&#601;/</code>              |
+| 2.   | $\Beta$ `\Beta`     | $\beta$ `\beta`       |                          | <code>/&#712;bi&#720;t&#601;/</code> 或 <code>/&#712;be&#618;t&#601;/</code> |
+| 3.   | $\Gamma$ `\Gamma`   | $\gamma$ `\gamma`     |                          | <code>/&#712;&#609;&#230;m&#601;/</code>         |
+| 4.   | $\Delta$ `\Delta`   | $\delta$ `\delta`     |                          | <code>/&#712;d&#603;lt&#601;/</code>             |
+| 5.   | $\Epsilon$ `\Epsilon` | $\epsilon$ `\epsilon` | $\varepsilon$ `\varepsilon` | <code>/&#603;p&#712;s&#618;l&#594;n/</code> |
+| 6.   | $\Zeta$ `\Zeta`     | $\zeta$ `\zeta`       |                          | <code>/&#712;zi&#720;t&#601;/</code>             |
+| 7.   | $\Eta$ `\Eta`       | $\eta$ `\eta`         |                          | <code>/&#712;i&#720;t&#601;/</code>              |
+| 8.   | $\Theta$ `\Theta`   | $\theta$ `\theta`     | $\vartheta$ `\vartheta`  | <code>/&#712;&#952;i&#720;t&#601;/</code>        |
+| 9.   | $\Iota$ `\Iota`     | $\iota$ `\iota`       |                          | <code>/a&#618;&#712;&#601;&#650;t&#601;/</code>  |
+| 10.  | $\Kappa$ `\Kappa`   | $\kappa$ `\kappa`     |                          | <code>/&#712;k&#230;p&#601;/</code>              |
+| 11.  | $\Lambda$ `\Lambda` | $\lambda$ `\lambda`   |                          | <code>/&#712;l&#230;md&#601;/</code>             |
+| 12.  | $\Mu$ `\Mu`         | $\mu$ `\mu`           |                          | <code>/mju&#720;/</code>                         |
+| 13.  | $\Nu$ `\Nu`         | $\nu$ `\nu`           |                          | <code>/nju&#720;/</code>                         |
+| 14.  | $\Xi$ `\Xi`         | $\xi$ `\xi`           |                          | <code>/&#712;za&#618;/</code> 或 <code>/&#712;sa&#618;/</code> |
+| 15.  | $\Omicron$ `\Omicron` | $\omicron$ `\omicron` |                          | <code>/o&#650;&#712;ma&#618;kr&#594;n/</code>  |
+| 16.  | $\Pi$ `\Pi`         | $\pi$ `\pi`           | $\varpi$ `\varpi`        | <code>/pa&#618;/</code>                          |
+| 17.  | $\Rho$ `\Rho`       | $\rho$ `\rho`         | $\varrho$ `\varrho`      | <code>/ro&#650;/</code>                          |
+| 18.  | $\Sigma$ `\Sigma`   | $\sigma$ `\sigma`     | $\varsigma$ `\varsigma`  | <code>/&#712;s&#618;&#609;m&#601;/</code>        |
+| 19.  | $\Tau$ `\Tau`       | $\tau$ `\tau`         |                          | <code>/ta&#650;/</code> 或 <code>/t&#596;&#720;/</code> |
+| 20.  | $\Upsilon$ `\Upsilon` | $\upsilon$ `\upsilon` |                          | <code>/&#712;&#652;ps&#618;l&#594;n/</code>    |
+| 21.  | $\Phi$ `\Phi`       | $\phi$ `\phi`         | $\varphi$ `\varphi`      | <code>/fa&#618;/</code>                          |
+| 22.  | $\Chi$ `\Chi`       | $\chi$ `\chi`         |                          | <code>/ka&#618;/</code>                          |
+| 23.  | $\Psi$ `\Psi`       | $\psi$ `\psi`         |                          | <code>/psa&#618;/</code>                         |
+| 24.  | $\Omega$ `\Omega`   | $\omega$ `\omega`     |                          | <code>/o&#650;&#712;me&#618;&#609;&#601;/</code> |  
 
 tips: 把Katex公式和markdown语法(``)混写了，导致格式问题，都换成html语法就没问题了
 
