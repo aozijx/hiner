@@ -10,8 +10,8 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 ## 一、安装 SMAPI（Mod 加载器）
 
 ### 下载 SMAPI
-- PC
-  {% link 'SMAPI' 'GitHub下载，选择 SMAPI 4.1.10 installer (for players).zip 下载' 'https://github.com/Pathoschild/SMAPI/releases/tag/4.1.10' %}
+- PC: 选择 SMAPI 4.1.10 installer (for players).zip 下载
+  {% link 'SMAPI' 'GitHub下载' 'https://github.com/Pathoschild/SMAPI/releases/tag/4.1.10' %}
   {% link 'SMAPI' 'nexus下载，需要N网账号' 'https://www.nexusmods.com/stardewvalley/mods/2400' %}
 - Android
   {% link 'SMAPI' 'SMAPI For Android' 'https://github.com/NRTnarathip/SMAPILoader/releases/tag/1.1.4' %}
