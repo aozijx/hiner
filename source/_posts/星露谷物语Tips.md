@@ -12,7 +12,7 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 {% endnote %}
 ## 【基础生存】
 - **体力管理**
-   - 当玩家的能量消耗到0或以下（游戏中不显示负值）时会“精疲力尽”，能量到-15后，玩家会晕倒，结束这一天。若在户外晕倒会损失最多💰1000金。
+   - 当玩家的能量消耗到0或以下（游戏中不显示负值）时会“精疲力尽”，能量到-15后，玩家会晕倒，结束这一天。若在户外晕倒会损失最多 <img src="https://stardewvalleywiki.com/mediawiki/images/1/10/Gold.png" style="all: revert;height: 18px;">1000。
    - 如果入睡时已经精疲力尽，或者在 2:00AM 晕倒，则次日醒来仅恢复 50% 体力。
    - 使用肌肉回复药可以消除精疲力尽的状态。如果玩家已婚，通过亲吻配偶（每日首次）消除精疲力尽的状态。
    - ♨️ 温泉（矿洞解锁后，地图右上角）可免费恢复体力。
@@ -34,20 +34,6 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
   - 🛒 皮埃尔商店：周三休息
   - 🔨 铁匠铺：周五休息
   - 🐄 玛妮牧场：周一休息
-
-- **酿酒**
-
-| 名称          | 原料               | 时间       | 基础售价（金） | 食用效果                     |
-|---------------|--------------------|------------|----------------|------------------------------|
-| 啤酒          | 小麦               | 1-2 天     | 200            | +50 能量，+22 生命值（+1 速度，持续30秒） |
-| 咖啡          | 咖啡豆             | 2 小时     | 150            | +25 能量（+1 速度，持续1分12秒）          |
-| 绿茶          | 茶叶               | 3-4 天     | 100            | +30 能量，+13 生命值                    |
-| 水果酒        | 任意水果（除香蕉、椰子等特殊品） | 7 天       | 3×水果基础售价 | +75 能量，+33 生命值          |
-| 古代水果酒    | 古代水果           | 7 天       | 1650           | +125 能量，+56 生命值                    |
-| 蔬菜汁        | 任意蔬菜（除小麦、啤酒花等） | 4 天       | 2.25×蔬菜基础售价 | +60 能量，+27 生命值           |
-| 蜜酒          | 蜂蜜               | 1-2 天     | 200（普通蜂蜜）| +38 能量，+17 生命值                      |
-| 虞美人花蜜酒  | 虞美人花蜂蜜       | 1-2 天     | 680            | +38 能量，+17 生命值                      |
-| 果汁          | 番茄/蓝莓等可压榨蔬菜 | 4 天       | 2.25×蔬菜售价  | +60 能量，+27 生命值                    |
 
 ## 【工具与升级】
 - **工具升级**
@@ -99,8 +85,8 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 |-------|----------|---------|----------------------------------|------|
 | 训练用鱼竿 | 25 金  | 容易使用（只能捕获基础的鱼） | 威利的鱼店购买	|   |
 | 竹鱼竿 | 500 金  |      | `前往沙滩`的过场动画<br>威利的鱼店购买|   |
-| 玻璃纤维鱼竿 | 1800 金 | 可以使用鱼饵 | 威利的鱼店购买| 钓鱼2级<br>（到达2级后隔天玩家会收到一封信）|
-| 铱金鱼竿 | 7500 金 | 可以使用鱼饵和渔具 | 威利的鱼店购买| 钓鱼6级<br>（到达6级后隔天玩家会收到一封信）|
+| 玻璃纤维鱼竿 | 1800 金 | 可以使用鱼饵 | 威利的鱼店购买| 钓鱼2级 |
+| 铱金鱼竿 | 7500 金 | 可以使用鱼饵和渔具 | 威利的鱼店购买| 钓鱼6级<br> |
 | 高级铱金鱼竿 | 25000 金 |   可以使用鱼饵和2个渔具 | 精通山洞 | 钓鱼精通 |
 <!-- endtab -->
 {% endtabs %}
@@ -109,8 +95,8 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 
 - 🎒 **背包扩展**
 玩家可在皮埃尔的杂货店处购买背包的升级，背包的升级只需要足够的金币，无需其他额外的条件，开始游戏后就可购买。
-  - “大型背包”（红色）需要花费Gold.png2,000金，可将物品栏扩大到24格
-  - “豪华背包”（蓝色）需要花费Gold.png10,000金，可将物品栏扩大到36格
+  - “大型背包”（红色）需要花费 <img src="https://stardewvalleywiki.com/mediawiki/images/1/10/Gold.png" style="all: revert;height: 18px;">2,000，可将物品栏扩大到24格
+  - “豪华背包”（蓝色）需要花费 <img src="https://stardewvalleywiki.com/mediawiki/images/1/10/Gold.png" style="all: revert;height: 18px;">10,000，可将物品栏扩大到36格
 
 ## 【探索与资源】
 {% link '星露谷物语Wiki' '矿物' https://zh.stardewvalleywiki.com/矿物 %}
@@ -133,15 +119,381 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 - **建筑**
   - 筒仓
     一旦农场里建成筒仓，在草地里使用镰刀将获取干草到筒仓里（每块草地50%的几率）。每个筒仓可以容纳240份干草。
-  
-  | 名字      | 功能       | 材料      | 解锁条件     |
-  |----------|-----------|-----------|-----------|
-  | 蛋黄酱机  | 将鸡蛋转换为蛋黄酱 | 木材 15<br>石头 15<br>地晶 1<br>铜锭 1 | 耕种 2 级 |
-  | 罐头瓶   | 将蔬菜转换成泡菜，水果为果酱。| 木材 50<br>石头 40<br>煤炭 8 | 耕种 4 级 |
-  | 压酪机   | 将牛奶转换成乳酪。|木材 45<br>石头 45<br>硬木 10<br>铜锭 1 | 耕种 6 级 |
-  | 小桶     | 置放水果或蔬菜在内，最终会变成饮品。| 木材 30<br>铜锭 1<br>铁锭 1<br>橡树树脂 1 | 耕种 8 级 |
-  | 蜂房      | 放置在屋外，然后等着吃甜甜的蜂蜜吧！（除了冬天）| 木材 40<br>煤炭 8<br>铁锭 1<br>枫糖浆 1 | 耕种等级3 |
-  | 木桶      | 在地窖中使用以使产品变陈，如葡萄酒和奶酪 | 木材 20<br>硬木 1 |农舍地下室升级 |
+
+  | 名字    | 材料                               | 解锁条件     |
+  |--------|-------------------------------------|-----------|
+  | 罐头瓶  | 木材 50<br>石头 40<br>煤炭 8           | 耕种 4 级 |
+  | 压酪机  |木材 45<br>石头 45<br>硬木 10<br>铜锭 1   | 耕种 6 级 |
+  | 木桶    | 木材 20<br>硬木 1                     |农舍地下室升级 |
+
+{% tabs 工匠 %}
+<!-- tab 蜂房 -->
+<h1 style="color: #8b4513; text-align: center; border-bottom: 3px solid #d2b48c; padding-bottom: 10px;">🐝 星露谷物语蜂房使用指南 🍯</h1>
+<!-- 蜂房介绍 -->
+<div style="background-color: #fff8dc; padding: 20px; border-radius: 10px; margin: 20px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+    <h2 style="color: #cd853f;">✦ 蜂房基础 ✦</h2>
+    <p style="line-height: 1.6; color: #654321;">
+        蜂房可以将花朵转化为各种有价值的蜂蜜！放置蜂房后，当半径5格范围内有开放的花朵时，每4天可以收获一次蜂蜜。
+    </p>
+    <div style="display: flex; gap: 20px; align-items: flex-start;">
+      <!-- 蜂房图片 -->
+      <img src="https://stardewvalleywiki.com/mediawiki/images/c/ce/Bee_House.png" style="width: 120px; flex-shrink: 0;">
+      <!-- 材料板块 -->
+      <div style="flex: 1;">
+        <h3 style="color: #8b4513; margin: 0 0 10px 0;">制作材料需求：</h3>
+        <div style="background-color: #f5f5dc; padding: 15px; border-radius: 8px;">
+          <div style="color: #654321; margin-bottom: 8px;">
+            <img src="https://stardewvalleywiki.com/mediawiki/images/thumb/d/df/Wood.png/24px-Wood.png" style="all: revert;">×40 木材</div>
+          <div style="color: #654321; margin-bottom: 8px;">
+            <img src="https://stardewvalleywiki.com/mediawiki/images/thumb/a/a7/Coal.png/24px-Coal.png" style="all: revert;">×8 煤炭</div>
+          <div style="color: #654321; margin-bottom: 8px;">
+            <img src="https://stardewvalleywiki.com/mediawiki/images/thumb/6/6c/Iron_Bar.png/24px-Iron_Bar.png" style="all: revert;">×1 铁锭</div>
+          <div style="color: #654321; margin-bottom: 8px;">
+            <img src="https://stardewvalleywiki.com/mediawiki/images/thumb/6/6a/Maple_Syrup.png/24px-Maple_Syrup.png" style="all: revert;">×1 枫糖浆</div>
+        </div>
+        <p style="color: #8b4513; font-size: 0.9em; margin: 10px 0 0 0;">
+          解锁条件：<img src="https://stardewvalleywiki.com/mediawiki/images/thumb/8/82/Farming_Skill_Icon.png/24px-Farming_Skill_Icon.png" style="all: revert;"> 耕种等级3级
+        </p>
+      </div>
+      <div style="flex: 1;">
+        <h3 style="color: #8b4513; margin: 0 0 10px 0;">产出：</h3>
+        <div style="background-color: #f5f5dc; padding: 15px; border-radius: 8px;">
+          <img src="https://stardewvalleywiki.com/mediawiki/images/c/c6/Honey.png" style="all: revert;">
+        </div>
+        <h3 style="color: #8b4513; margin: 0 0 10px 0;">加工时间：</h3>
+        <div style="background-color: #f5f5dc; padding: 15px; border-radius: 8px;">
+          <img src="https://stardewvalleywiki.com/mediawiki/images/thumb/7/70/Time_Icon.png/24px-Time_Icon.png" style="all: revert;"> 6100 分 ≈ 4 天
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- 使用步骤 -->
+<div style="background-color: #f5f5dc; padding: 20px; border-radius: 10px; margin: 20px 0;">
+    <h2 style="color: #cd853f;">✦ 使用步骤 ✦</h2>
+    <ol style="line-height: 1.8; color: #654321;">
+        <li style="margin-bottom: 10px;">建造蜂房</li>
+        <li style="margin-bottom: 10px;">将蜂房放置在花朵附近</li>
+        <li style="margin-bottom: 10px;">确保花朵与蜂房间无障碍物</li>
+        <li style="margin-bottom: 10px;">等待4天收获蜂蜜</li>
+    </ol>
+</div>
+
+<!-- 花朵对应表 -->
+<div style="background-color: #fff8dc; padding: 20px; border-radius: 10px; margin: 20px 0;">
+  <h2 style="color: #cd853f;">✦ 花朵对应蜂蜜类型 ✦</h2>
+    <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+      <tr style="background-color: #d2b48c;">
+          <th style="padding: 8px; border: 1px solid #8b4513;">花朵</th>
+          <th style="padding: 8px; border: 1px solid #8b4513;">蜂蜜类型</th>
+          <th style="padding: 8px; border: 1px solid #8b4513;">售价</th>
+      </tr>
+      <tr style="background-color: #faebd7;">
+          <td style="padding: 8px; border: 1px solid #8b4513;">无/野花</td>
+          <td style="padding: 8px; border: 1px solid #8b4513;">野蜂蜜</td>
+          <td style="padding: 8px; border: 1px solid #8b4513;">
+            <img src="https://stardewvalleywiki.com/mediawiki/images/1/10/Gold.png" style="all: revert;height: 18px;">100</td>
+      </tr>
+      <tr style="background-color: #faebd7;">
+          <td style="padding: 8px; border: 1px solid #8b4513;">
+            <img src="https://stardewvalleywiki.com/mediawiki/images/thumb/2/2f/Blue_Jazz.png/24px-Blue_Jazz.png" style="all: revert;"> 蓝爵</td>
+          <td style="padding: 8px; border: 1px solid #8b4513;">蓝爵蜂蜜</td>
+          <td style="padding: 8px; border: 1px solid #8b4513;">
+            <img src="https://stardewvalleywiki.com/mediawiki/images/1/10/Gold.png" style="all: revert;height: 18px;">200</td>
+      </tr>
+      <tr style="background-color: #faebd7;">
+        <td style="padding: 8px; border: 1px solid #8b4513;">
+          <img src="https://stardewvalleywiki.com/mediawiki/images/thumb/8/81/Sunflower.png/24px-Sunflower.png" style="all: revert;"> 向日葵</td>
+        <td style="padding: 8px; border: 1px solid #8b4513;">向日葵蜂蜜</td>
+        <td style="padding: 8px; border: 1px solid #8b4513;">
+          <img src="https://stardewvalleywiki.com/mediawiki/images/1/10/Gold.png" style="all: revert;height: 18px;">260</td>
+      </tr>
+      <tr style="background-color: #faebd7;">
+        <td style="padding: 8px; border: 1px solid #8b4513;">
+          <img src="https://stardewvalleywiki.com/mediawiki/images/thumb/9/9f/Summer_Spangle.png/24px-Summer_Spangle.png" style="all: revert;"> 夏季亮片</td>
+        <td style="padding: 8px; border: 1px solid #8b4513;">夏季亮片蜂蜜</td>
+        <td style="padding: 8px; border: 1px solid #8b4513;">
+          <img src="https://stardewvalleywiki.com/mediawiki/images/1/10/Gold.png" style="all: revert;height: 18px;">280</td>
+      </tr>
+      <tr style="background-color: #faebd7;">
+          <td style="padding: 8px; border: 1px solid #8b4513;">
+            <img src="https://stardewvalleywiki.com/mediawiki/images/thumb/3/37/Poppy.png/24px-Poppy.png" style="all: revert;"> 虞美人</td>
+          <td style="padding: 8px; border: 1px solid #8b4513;">虞美人蜂蜜</td>
+          <td style="padding: 8px; border: 1px solid #8b4513;">
+            <img src="https://stardewvalleywiki.com/mediawiki/images/1/10/Gold.png" style="all: revert;height: 18px;">380</td>
+      </tr>
+      <tr style="background-color: #faebd7;">
+        <td style="padding: 8px; border: 1px solid #8b4513;">
+          <img src="https://stardewvalleywiki.com/mediawiki/images/thumb/5/5c/Fairy_Rose.png/24px-Fairy_Rose.png" style="all: revert;"> 玫瑰仙子</td>
+        <td style="padding: 8px; border: 1px solid #8b4513;">玫瑰仙子蜂蜜</td>
+        <td style="padding: 8px; border: 1px solid #8b4513;">
+          <img src="https://stardewvalleywiki.com/mediawiki/images/1/10/Gold.png" style="all: revert;height: 18px;">680</td>
+      </tr>
+    </table>
+</div>
+
+<!-- 小贴士 -->
+<div style="background-color: #f5f5dc; padding: 20px; border-radius: 10px; margin: 20px 0;">
+    <h2 style="color: #cd853f;">✦ 专家建议 ✦</h2>
+    <ul style="color: #654321; list-style-type: '❀ '; line-height: 1.8;">
+        <li style="margin-bottom: 8px;">冬季无法生产蜂蜜</li>
+        <li style="margin-bottom: 8px;">使用避雷针保护蜂房</li>
+        <li style="margin-bottom: 8px;">搭配工匠职业可提升售价</li>
+        <li>蜂房可以放置在温室（不会产出蜂蜜）和姜岛</li>
+    </ul>
+</div>
+
+<footer style="text-align: center; color: #8b4513; margin-top: 30px;">
+    © 星露谷物语攻略指南 - 祝你农场生活愉快！ 🌻
+</footer>
+<!-- endtab -->
+<!-- tab 蛋黄酱机 -->
+<h1 style="color: #8b4513; text-align: center; border-bottom: 3px solid #d2b48c; padding-bottom: 10px;">🥚 星露谷物语蛋黄酱机指南 🥚</h1>
+<!-- 蛋黄酱机介绍 -->
+<div style="background-color: #fff8dc; padding: 20px; border-radius: 10px; margin: 20px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+    <h2 style="color: #cd853f;">✦ 基础信息 ✦</h2>
+    <p style="line-height: 1.6; color: #654321;">
+        蛋黄酱机可将鸡蛋转化为不同品质的蛋黄酱！放入大鸡蛋可产出更高价值的蛋黄酱，铱星品质鸡蛋还能制作金色蛋黄酱。
+    </p>
+    <div style="display: flex; gap: 20px; align-items: flex-start;">
+        <!-- 机器图片 -->
+        <img src="https://stardewvalleywiki.com/mediawiki/images/e/ef/Mayonnaise_Machine.png" style="width: 120px; flex-shrink: 0;">
+        <!-- 材料板块 -->
+        <div style="flex: 1;">
+            <h3 style="color: #8b4513; margin: 0 0 10px 0;">制作材料：</h3>
+            <div style="background-color: #f5f5dc; padding: 15px; border-radius: 8px;">
+                <div style="color: #654321; margin-bottom: 8px;">
+                  <img src="https://stardewvalleywiki.com/mediawiki/images/thumb/d/df/Wood.png/24px-Wood.png" style="all: revert;">×15 木材
+                </div>
+                <div style="color: #654321; margin-bottom: 8px;">
+                  <img src="https://stardewvalleywiki.com/mediawiki/images/thumb/d/d4/Stone.png/24px-Stone.png" style="all: revert;">×15 石头
+                </div>
+                <div style="color: #654321; margin-bottom: 8px;">
+                  <img src="https://stardewvalleywiki.com/mediawiki/images/thumb/7/74/Earth_Crystal.png/24px-Earth_Crystal.png" style="all: revert;">×1 地精
+                </div>
+                <div style="color: #654321; margin-bottom: 8px;">
+                  <img src="https://stardewvalleywiki.com/mediawiki/images/f/f1/Copper_Bar.png" style="all: revert;height: 24px;">×1 铜锭
+                </div>
+            </div>
+            <p style="color: #8b4513; font-size: 0.9em; margin: 10px 0 0 0;">
+              解锁条件：<img src="https://stardewvalleywiki.com/mediawiki/images/thumb/8/82/Farming_Skill_Icon.png/24px-Farming_Skill_Icon.png" style="all: revert;"> 耕种等级2级
+            </p>
+        </div>
+        <div style="flex: 1;">
+          <h3 style="color: #8b4513; margin: 0 0 10px 0;">产出：</h3>
+          <div style="background-color: #f5f5dc; padding: 15px; border-radius: 8px;">
+            <img src="https://stardewvalleywiki.com/mediawiki/images/4/4e/Mayonnaise.png" style="all: revert;">
+            <img src="https://stardewvalleywiki.com/mediawiki/images/2/23/Duck_Mayonnaise.png" style="all: revert;">
+            <img src="https://stardewvalleywiki.com/mediawiki/images/f/f3/Void_Mayonnaise.png" style="all: revert;">
+            <img src="https://stardewvalleywiki.com/mediawiki/images/c/c3/Dinosaur_Mayonnaise.png" style="all: revert;">
+          </div>
+          <h3 style="color: #8b4513; margin: 0 0 10px 0;">加工时间：</h3>
+          <div style="background-color: #f5f5dc; padding: 15px; border-radius: 8px;">
+            <img src="https://stardewvalleywiki.com/mediawiki/images/thumb/7/70/Time_Icon.png/24px-Time_Icon.png" style="all: revert;"> 3 小时
+          </div>
+        </div>
+    </div>
+</div>
+
+<!-- 使用步骤 -->
+<div style="background-color: #f5f5dc; padding: 20px; border-radius: 10px; margin: 20px 0;">
+    <h2 style="color: #cd853f;">✦ 使用流程 ✦</h2>
+    <ol style="line-height: 1.8; color: #654321;">
+        <li style="margin-bottom: 10px;">从鸡舍收集鸡蛋</li>
+        <li style="margin-bottom: 10px;">将鸡蛋放入机器</li>
+        <li style="margin-bottom: 10px;">等待3小时游戏时间</li>
+        <li style="margin-bottom: 10px;">收取成品蛋黄酱</li>
+    </ol>
+</div>
+
+<!-- 产品对应表 -->
+<div style="background-color: #fff8dc; padding: 20px; border-radius: 10px; margin: 20px 0;">
+  <h2 style="color: #cd853f;">✦ 原料产出对照表 ✦</h2>
+  <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+    <tr style="background-color: #d2b48c;">
+      <th style="padding: 8px; border: 1px solid #8b4513;">原料</th>
+      <th style="padding: 8px; border: 1px solid #8b4513;">成品</th>
+      <th style="padding: 8px; border: 1px solid #8b4513;">基础售价</th>
+    </tr>
+    <tr style="background-color: #faebd7;">
+      <td style="padding: 8px; border: 1px solid #8b4513;">
+        <img src="https://stardewvalleywiki.com/mediawiki/images/thumb/2/26/Egg.png/24px-Egg.png" style="all: revert;"> 普通鸡蛋
+      </td>
+      <td style="padding: 8px; border: 1px solid #8b4513;">普通蛋黄酱</td>
+      <td style="padding: 8px; border: 1px solid #8b4513;">
+        <img src="https://stardewvalleywiki.com/mediawiki/images/1/10/Gold.png" style="all: revert;height: 18px;">190
+      </td>
+    </tr>
+    <tr style="background-color: #faebd7;">
+      <td style="padding: 8px; border: 1px solid #8b4513;">
+        <img src="https://stardewvalleywiki.com/mediawiki/images/thumb/3/31/Duck_Egg.png/24px-Duck_Egg.png" style="all: revert;"> 鸭蛋
+      </td>
+      <td style="padding: 8px; border: 1px solid #8b4513;">鸭蛋黄酱</td>
+      <td style="padding: 8px; border: 1px solid #8b4513;">
+        <img src="https://stardewvalleywiki.com/mediawiki/images/1/10/Gold.png" style="all: revert;height: 18px;">375
+      </td>
+    </tr>
+    <tr style="background-color: #faebd7;">
+      <td style="padding: 8px; border: 1px solid #8b4513;">
+        <img src="https://stardewvalleywiki.com/mediawiki/images/thumb/5/58/Void_Egg.png/24px-Void_Egg.png" style="all: revert;"> 虚空蛋
+      </td>
+      <td style="padding: 8px; border: 1px solid #8b4513;">虚空蛋黄酱</td>
+      <td style="padding: 8px; border: 1px solid #8b4513;">
+        <img src="https://stardewvalleywiki.com/mediawiki/images/1/10/Gold.png" style="all: revert;height: 18px;">275
+      </td>
+    </tr>
+    <tr style="background-color: #faebd7;">
+      <td style="padding: 8px; border: 1px solid #8b4513;">
+        <img src="https://stardewvalleywiki.com/mediawiki/images/thumb/a/a1/Dinosaur_Egg.png/24px-Dinosaur_Egg.png" style="all: revert;"> 恐龙蛋
+      </td>
+      <td style="padding: 8px; border: 1px solid #8b4513;">恐龙蛋黄酱</td>
+      <td style="padding: 8px; border: 1px solid #8b4513;">
+        <img src="https://stardewvalleywiki.com/mediawiki/images/1/10/Gold.png" style="all: revert;height: 18px;">800
+      </td>
+    </tr>
+  </table>
+</div>
+
+<!-- 小贴士 -->
+<div style="background-color: #f5f5dc; padding: 20px; border-radius: 10px; margin: 20px 0;">
+    <h2 style="color: #cd853f;">✦ 专家建议 ✦</h2>
+    <ul style="color: #654321; list-style-type: '🥄 '; line-height: 1.8;">
+        <li style="margin-bottom: 8px;">使用自动采集器可自动收集</li>
+        <li style="margin-bottom: 8px;">工匠职业可使售价提升40%</li>
+        <li style="margin-bottom: 8px;">金蛋可制作金色蛋黄酱（售价500g）</li>
+        <li>蛋黄酱是完成献祭的重要物品</li>
+    </ul>
+</div>
+
+<footer style="text-align: center; color: #8b4513; margin-top: 30px;">
+    © 星露谷物语攻略指南 - 祝你牧场经营顺利！ 🐔
+</footer>
+<!-- endtab -->
+<!-- tab 小桶 -->
+<h1 style="color: #8b4513; text-align: center; border-bottom: 3px solid #d2b451; padding-bottom: 10px;">🍺 星露谷物语小桶指南 🍇</h1>
+<!-- 小桶介绍 -->
+<div style="background-color: #fff8dc; padding: 20px; border-radius: 10px; margin: 20px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+    <h2 style="color: #cd853f;">✦ 基础信息 ✦</h2>
+    <p style="line-height: 1.6; color: #654321;">
+        小桶可将农产品加工为高价值商品！水果可酿造为酒类，蔬菜可制成腌菜，蜂蜜可制作蜜酒，是后期重要的收入来源。
+    </p>
+    <div style="display: flex; gap: 20px; align-items: flex-start;">
+        <!-- 机器图片 -->
+        <img src="https://stardewvalleywiki.com/mediawiki/images/7/7c/Keg.png" style="width: 120px; flex-shrink: 0;">
+        <!-- 材料板块 -->
+        <div style="flex: 1;">
+            <h3 style="color: #8b4513; margin: 0 0 10px 0;">制作材料：</h3>
+            <div style="background-color: #f5f5dc; padding: 15px; border-radius: 8px;">
+                <div style="color: #654321; margin-bottom: 8px;">
+                  <img src="https://stardewvalleywiki.com/mediawiki/images/d/df/Wood.png" style="all: revert;height: 24px;">×30 木材
+                </div>
+                <div style="color: #654321; margin-bottom: 8px;">
+                  <img src="https://stardewvalleywiki.com/mediawiki/images/f/f1/Copper_Bar.png" style="all: revert;height: 24px;">×1 铜锭
+                </div>
+                <div style="color: #654321; margin-bottom: 8px;">
+                  <img src="https://stardewvalleywiki.com/mediawiki/images/6/6c/Iron_Bar.png" style="all: revert;height: 24px;">×1 铁锭
+                </div>
+                <div style="color: #654321; margin-bottom: 8px;">
+                  <img src="https://stardewvalleywiki.com/mediawiki/images/thumb/4/40/Oak_Resin.png/24px-Oak_Resin.png" style="all: revert;">×1 橡树树脂
+                </div>
+            </div>
+            <p style="color: #8b4513; font-size: 0.9em; margin: 10px 0 0 0;">
+              解锁条件：<img src="https://stardewvalleywiki.com/mediawiki/images/thumb/8/82/Farming_Skill_Icon.png/24px-Farming_Skill_Icon.png" style="all: revert;"> 耕种等级8级
+            </p>
+        </div>
+        <div style="flex: 1;">
+          <h3 style="color: #8b4513; margin: 0 0 10px 0;">产出举例：</h3>
+          <div style="background-color: #f5f5dc; padding: 15px; border-radius: 8px;">
+            <img src="https://stardewvalleywiki.com/mediawiki/images/7/78/Pale_Ale.png" style="all: revert;">
+            <img src="https://stardewvalleywiki.com/mediawiki/images/6/69/Wine.png" style="all: revert;">
+            <img src="https://stardewvalleywiki.com/mediawiki/images/8/84/Mead.png" style="all: revert;">
+            <img src="https://stardewvalleywiki.com/mediawiki/images/e/e9/Coffee.png" style="all: revert;">
+          </div>
+          <h3 style="color: #8b4513; margin: 10px 0;">加工时间：</h3>
+          <div style="background-color: #f5f5dc; padding: 15px; border-radius: 8px;">
+            <img src="https://stardewvalleywiki.com/mediawiki/images/thumb/7/70/Time_Icon.png/24px-Time_Icon.png" style="all: revert;"> 
+            视种类而定
+          </div>
+        </div>
+    </div>
+</div>
+
+<!-- 使用步骤 -->
+<div style="background-color: #f5f5dc; padding: 20px; border-radius: 10px; margin: 20px 0;">
+    <h2 style="color: #cd853f;">✦ 使用流程 ✦</h2>
+    <ol style="line-height: 1.8; color: #654321;">
+        <li style="margin-bottom: 10px;">收集水果/蔬菜/蜂蜜</li>
+        <li style="margin-bottom: 10px;">将原料放入小桶</li>
+        <li style="margin-bottom: 10px;">根据原料类型等待对应天数</li>
+        <li style="margin-bottom: 10px;">收取加工成品</li>
+    </ol>
+</div>
+
+<!-- 产品对应表 -->
+<div style="background-color: #fff8dc; padding: 20px; border-radius: 10px; margin: 20px 0;">
+  <h2 style="color: #cd853f;">✦ 原料产出对照表 ✦</h2>
+  <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+    <tr style="background-color: #d2b48c;">
+      <th style="padding: 8px; border: 1px solid #8b4513;">原料</th>
+      <th style="padding: 8px; border: 1px solid #8b4513;">成品</th>
+      <th style="padding: 8px; border: 1px solid #8b4513;">基础售价</th>
+    </tr>
+    <tr style="background-color: #faebd7;">
+      <td style="padding: 8px; border: 1px solid #8b4513;">
+        <img src="https://stardewvalleywiki.com/mediawiki/images/thumb/d/db/Starfruit.png/24px-Starfruit.png" style="all: revert;"> 杨桃
+      </td>
+      <td style="padding: 8px; border: 1px solid #8b4513;">杨桃酒</td>
+      <td style="padding: 8px; border: 1px solid #8b4513;">
+        <img src="https://stardewvalleywiki.com/mediawiki/images/1/10/Gold.png" style="all: revert;height: 18px;">2250
+      </td>
+    </tr>
+    <tr style="background-color: #faebd7;">
+      <td style="padding: 8px; border: 1px solid #8b4513;">
+        <img src="https://stardewvalleywiki.com/mediawiki/images/thumb/0/01/Ancient_Fruit.png/24px-Ancient_Fruit.png" style="all: revert;"> 上古水果
+      </td>
+      <td style="padding: 8px; border: 1px solid #8b4513;">上古果酒</td>
+      <td style="padding: 8px; border: 1px solid #8b4513;">
+        <img src="https://stardewvalleywiki.com/mediawiki/images/1/10/Gold.png" style="all: revert;height: 18px;">1650
+      </td>
+    </tr>
+    <tr style="background-color: #faebd7;">
+      <td style="padding: 8px; border: 1px solid #8b4513;">
+        <img src="https://stardewvalleywiki.com/mediawiki/images/thumb/e/e2/Wheat.png/24px-Wheat.png" style="all: revert;"> 小麦
+      </td>
+      <td style="padding: 8px; border: 1px solid #8b4513;">啤酒</td>
+      <td style="padding: 8px; border: 1px solid #8b4513;">
+        <img src="https://stardewvalleywiki.com/mediawiki/images/1/10/Gold.png" style="all: revert;height: 18px;">200
+      </td>
+    </tr>
+    <tr style="background-color: #faebd7;">
+      <td style="padding: 8px; border: 1px solid #8b4513;">
+        <img src="https://stardewvalleywiki.com/mediawiki/images/thumb/c/c6/Honey.png/24px-Honey.png" style="all: revert;"> 蜂蜜
+      </td>
+      <td style="padding: 8px; border: 1px solid #8b4513;">蜜酒</td>
+      <td style="padding: 8px; border: 1px solid #8b4513;">
+        <img src="https://stardewvalleywiki.com/mediawiki/images/1/10/Gold.png" style="all: revert;height: 18px;">300
+      </td>
+    </tr>
+  </table>
+</div>
+
+<!-- 小贴士 -->
+<div style="background-color: #f5f5dc; padding: 20px; border-radius: 10px; margin: 20px 0;">
+    <h2 style="color: #cd853f;">✦ 专家建议 ✦</h2>
+    <ul style="color: #654321; list-style-type: '🍷 '; line-height: 1.8;">
+        <li style="margin-bottom: 8px;">在棚屋内可密集摆放小桶</li>
+        <li style="margin-bottom: 8px;">选择基础价值高的水果收益更大</li>
+        <li style="margin-bottom: 8px;">使用加速剂可缩短酿造时间</li>
+        <li>铱星品质原料不影响成品品质</li>
+    </ul>
+</div>
+
+<footer style="text-align: center; color: #8b4513; margin-top: 30px;">
+    © 星露谷物语攻略指南 - 祝你酿酒致富！ 🍷
+</footer>
+<!-- endtab -->
+{% endtabs %}
+
 - **动物与产物**
   - 每日抚摸动物提升心情（影响产物品质）。
   - 未喂食或心情 <70 的动物不产物品。
@@ -165,10 +517,13 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
   {% link '星露谷物语' '可结婚角色' 'https://zh.stardewvalleywiki.com/村民' %}
 - **婚姻**  
   - 单身村民的好感度上限为8心。玩家需要和任意一个单身村民达到8心的好感度才能开始恋爱。
-  - 在与某位单身村民达到8心好感后，第二天早晨皮埃尔将会寄来信件，告知玩家皮埃尔的杂货店开始出售花束（价格 🪙 200 金）。
+  - 在与某位单身村民达到8心好感后，第二天早晨皮埃尔将会寄来信件，告知玩家皮埃尔的杂货店开始出售花束（价格 <img src="https://stardewvalleywiki.com/mediawiki/images/1/10/Gold.png" style="all: revert;height: 18px;">200）。
 > “最近你似乎和镇上的某个人走得很近。如果你想示爱的话，就得送上一束漂亮的鲜花。我这儿卖的花，价钱极其公道！如果你某一天想组建一个家庭，这是第一步！”
 —— 皮埃尔
-  - 送出花束后，好感度上限提高到10心。单身村民接受花束后，TA们在社交界面中将会显示“男/女朋友”字样。花束可以送给多个村民，不限性别。将花束送给多个村民也不会有友谊值惩罚，但如果发生群体10心事件，则玩家所有的男朋友或女朋友会整整一个星期不会给玩家好脸色。
+  - 送出花束后，好感度上限提高到10心。NPC接受后，TA们在社交界面中将会显示“男/女朋友”字样。花束可以送给多个村民，不限性别。
+{% note 'attention' 'fas fa-wand-magic-sparkles' %}
+将花束送给多个村民也不会有友谊值惩罚，但如果发生群体10心事件，则玩家所有的男朋友或女朋友会整整一个星期不会给玩家好脸色。
+{% endnote %}
   - 将枯萎的花束送给男/女朋友便可以结束恋爱关系。收到枯萎的花束后，该村民的友谊值会降到5心，并且会有独特的反应。
 - **求婚**
 赠送“美人鱼吊坠”求婚（雨天海边老水手处购买）。
@@ -200,7 +555,17 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
   - 春季复活节：买齐 草莓种子（过季无法购买）。
   - 冬季冬星节：提前准备NPC最爱的礼物（随机交换）。
 
-## 【联机专属】
+## 【联机】
+{% bvideo 'BV1hDXsY8Ezp' %}
+- **资金管理**
+  - 共享
+    所有联机队友共享一个钱包（注意队友偷偷花钱）
+  - 独立
+    每个联机队友各有一个钱包（注意队友偷你菜去卖钱）
+
+- **技能相关**
+  - 在共享资金时，当队友在线且有影响物品价格的技能时，其他玩家会享受到技能加成。
+
 - **多人模式福利**
   - 👥 共享献祭进度
   - 🛏️ 可以上床回复体力
@@ -221,7 +586,7 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 
 ## 【快捷键技巧】
 - {% keyboard 'Shift' %} 快速购买/制作物品（5个/次，长按可批量操作）。
-- 🌾 按住{% keyboard 'X' %} 快速播种
+- {% keyboard 'X' %} 快速播种
 - {% keyboard 'Tab' %} 切换物品栏
 - {% keyboard 'Y' %} 打开表情轮盘
 - {% keyboard 'T' %} 打开对话框
