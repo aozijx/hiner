@@ -1,0 +1,700 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>星露谷Mod | Hinerの小窝</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="/hiner/img/pwa/favicon.png"><!-- index.css--><link rel="stylesheet" href="/hiner/css/index.css?v=3.0.14"><!-- inject head--><link rel="canonical" href="http://aozijx.github.io/hiner/2025/03/27/%E6%98%9F%E9%9C%B2%E8%B0%B7Mod/index.html"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"><!-- aplayer--><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><!-- swiper--><!-- fancybox ui--><!-- katex--><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><!-- Open Graph--><meta name="description" content="自用星露谷 Mod ，详情见文档 实用 ¶UI Info Suite 2 引用站外链接 UI Info Suite 2 提供有关您周围事物的有用信息，旨"><!-- pwa--><meta name="theme-color" content="#006a73"><meta name="apple-mobile-web-app-status-bar-style" content="#006a73"><link rel="manifest" href="/hiner/manifest.json"><meta name="msapplication-TileColor" content="#006a73"><link rel="mask-icon" href="/hiner/img/pwa/favicon.png" color="#006a73"><link rel="apple-touch-icon" sizes="180x180" href="/hiner/img/pwa/favicon.png"><link rel="icon" type="image/png" sizes="16x16" href="/hiner/img/pwa/favicon_16.png"><link rel="icon" type="image/png" sizes="32x32" href="/hiner/img/pwa/favicon_32.png"><link rel="bookmark" href="/hiner/img/pwa/favicon.png"><script>console.log(' %c Solitude %c ' + '3.0.14' + ' %c https://github.com/everfu/hexo-theme-solitude',
+    'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
+    'background:#ff9a9a ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff',
+    'background:unset ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff')
+</script><script>let mdate = "7-7,9-18,12-13";
+mdate = (mdate.split(","));
+let ndate = new Date();
+for (let i of mdate) {
+    if (i === (ndate.getMonth()+1) + "-" + (ndate.getDate())) {
+        document.documentElement.classList.add('memorial');
+    }
+}
+</script><script src="js/copylink.js" async></script><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+
+                if (name && keyObj[name]) return
+
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+            addEventListenerPjax: (ele, event, fn, option = false) => {
+              ele.addEventListener(event, fn, option)
+              utils.addGlobalFn('pjax', () => {
+                  ele.removeEventListener(event, fn, option)
+              })
+          },
+        }
+    })()</script><!-- theme--><script>initTheme = () => {
+    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const cachedMode = utils.saveToLocal.get('theme');
+    if (cachedMode === undefined) {
+        const nowMode =
+            isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', nowMode);
+    } else {
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    }
+    typeof rm === 'object' && rm.mode(cachedMode === 'dark' && isDarkMode)
+}
+initTheme()</script><!-- global head--><script>const GLOBAL_CONFIG = {
+    root: '/hiner/',
+    algolia: undefined,
+    localsearch: {"preload":true,"path":"/search.xml"},
+    runtime: '2025-03-11 11:30:00',
+    lazyload: {
+        enable: true,
+        error: 'img/error_load.avif'
+    },
+    copyright: false,
+    highlight: {"limit":200,"expand":true,"copy":true,"syntax":"highlight.js"},
+    randomlink: false,
+    lang: {"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"day":"天前","hour":"小时前","just":"刚刚","min":"分钟前","month":"个月前"},"day":" 天","f12":"开发者模式已打开，请遵循GPL协议。","totalk":"无需删除空行，直接输入评论即可","search":{"empty":"找不到你查询的内容：${query}","hit":"找到 ${hits} 条结果，用时 ${time} 毫秒","placeholder":"输入关键词快速查找","count":"共 <b>${count}</b> 条结果。","loading":"搜索中..."}},
+    aside: {
+        state: {
+            morning: "✨ 早上好，新的一天开始了",
+            noon: "🍲 午餐时间",
+            afternoon: "🌞 下午好",
+            night: "早点休息",
+            goodnight: "晚安 😴",
+        },
+        witty_words: ["欢迎你","随便逛逛吧","祝你好运，陌生人"],
+        witty_comment: {
+            prefix: '好久不见，',
+            back: '欢迎再次回来，',
+        },
+    },
+    covercolor: {
+        enable: false
+    },
+    comment: false,
+    lightbox: 'null',
+    right_menu: {"mode":{"dark":"深色模式","light":"浅色模式"},"img_error":"此图片无法复制与下载","music":{"start":"播放音乐","stop":"暂停音乐"},"translate":true,"ctrlOriginalMenu":"按住Ctrl+右键可打开浏览器右键菜单"},
+    translate: {"translateDelay":0,"defaultEncoding":2},
+    lure: {"jump":"404 Not Found","back":"ヾ(≧∇≦*)ゝHey, hey."},
+    expire: false,
+};</script><!-- page-config head--><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: '',
+    toc: true,
+    comment: false,
+    ai_text: false,
+    color: false,
+}</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css" integrity="sha256-TThEtR+XalhWKkfF383YLOrI50NGNeIqrzS+q08afrY=" crossorigin="anonymous"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head><body id="body"><!-- universe--><canvas id="universe"></canvas><!-- background img--><div id="global_bg"></div><!-- loading--><!-- console--><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="solitude fas fa-xmark"></i></div><div class="console-card-group"><div class="console-card-group-right"><div class="console-card tags" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">标签</div><div class="author-content-item-title">寻找感兴趣的领域</div></div><div class="card-tag-cloud"><a href="/hiner/tags/Katex/">Katex<sup>3</sup></a><a href="/hiner/tags/GitHub/">GitHub<sup>1</sup></a><a href="/hiner/tags/hexo/">hexo<sup>2</sup></a><a href="/hiner/tags/css/">css<sup>1</sup></a><a href="/hiner/tags/%E5%8E%9F%E7%A5%9E/">原神<sup>1</sup></a><a href="/hiner/tags/Mod/">Mod<sup>3</sup></a><a href="/hiner/tags/steam/">steam<sup>5</sup></a><a href="/hiner/tags/%E6%98%9F%E9%9C%B2%E8%B0%B7%E7%89%A9%E8%AF%AD/">星露谷物语<sup>5</sup></a></div></div><div class="console-card history" onclick="sco.hideConsole()"><ul class="card-archive-list"><li class="item"><a href="/archives/2025/03/"><span class="date">2025/03</span><div class="count-group"><span class="count">15</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/"><span class="date">全部文章</span><div class="count-group"><span class="count">15</span><span class="unit">篇</span></div></a></li></ul></div></div></div><div class="button-group"><div class="console-btn-item"><span class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换"><i class="solitude fas fa-circle-half-stroke"></i></span></div><div class="console-btn-item" id="consoleHideAside"><span class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制"><i class="solitude fas fa-arrows-left-right-to-line"></i></span></div><div class="console-btn-item" id="consoleMusic" onclick="sco.musicToggle()"><span class="music-switch" title="音乐开关"><i class="solitude fas fa-compact-disc"></i></span></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/hiner/archives/"><div class="headline">文章</div><div class="length-num">15</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/hiner/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/hiner/tags/"><div class="headline">标签</div><div class="length-num">8</div></a></div></div></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude fas fa-circle-half-stroke"></i><span>显示模式</span></span></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">project</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" title="Solitude"><img class="nolazyload back-menu-item-icon" src="img/logo.png" alt="Solitude"><span class="back-menu-item-text">Solitude</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">音乐馆</div><div class="back-menu-list"><a class="back-menu-item" href="/hiner/HeoMusic/" title="HeoMusic"><img class="nolazyload back-menu-item-icon" src="HeoMusic/img/icon.webp" alt="HeoMusic"><span class="back-menu-item-text">HeoMusic</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/archives/"><i class="solitude  fas fa-folder-closed"></i><span>全部文章</span></a></li><li><a class="site-page child" href="/hiner/categories/"><i class="solitude  fas fa-clone"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/hiner/tags/"><i class="solitude  fas fa-tags"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/moments/"><i class="solitude  fas fa-wifi"></i><span>朋友圈</span></a></li><li><a class="site-page child" href="/hiner/links/"><i class="solitude  fas fa-user-group"></i><span>友情链接</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>关于</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/about/"><i class="solitude  fas fa-address-card"></i><span>我</span></a></li><li><a class="site-page child" href="/hiner/Gallery/"><i class="solitude  fas fa-images"></i><span>图库</span></a></li><li><a class="site-page child" href="/hiner/tlink/"><i class="solitude  fas fa-toolbox"></i><span>在线工具</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="card-tag-cloud"><a href="/hiner/tags/Katex/">Katex<sup>3</sup></a><a href="/hiner/tags/GitHub/">GitHub<sup>1</sup></a><a href="/hiner/tags/hexo/">hexo<sup>2</sup></a><a href="/hiner/tags/css/">css<sup>1</sup></a><a href="/hiner/tags/%E5%8E%9F%E7%A5%9E/">原神<sup>1</sup></a><a href="/hiner/tags/Mod/">Mod<sup>3</sup></a><a href="/hiner/tags/steam/">steam<sup>5</sup></a><a href="/hiner/tags/%E6%98%9F%E9%9C%B2%E8%B0%B7%E7%89%A9%E8%AF%AD/">星露谷物语<sup>5</sup></a></div></div></div></div><!-- keyboard--><!-- righhtside--><div class="needEndHide" id="rightside"><div class="rs_hide"><button class="translate" type="button" title="简繁转换">简</button><button class="mode" type="button" title="显示模式切换" onclick="sco.switchDarkMode()"><i class="fas fa-circle-half-stroke"></i></button><button class="aside pc" type="button" title="侧边栏" onclick="sco.switchHideAside()"><i class="fas fa-arrows-alt-h"></i></button></div><div class="rs_show"><button class="config" type="button" title="扩展" onclick="document.querySelector(&quot;.rs_hide&quot;).classList.toggle(&quot;show&quot;)"><i class="fas fa-gear fa-spin"></i></button><button class="mobile toc" type="button" title="目录" onclick="document.querySelector('#card-toc').classList.toggle('open')"><i class="fas fa-list"></i></button><button class="top" type="button" title="返回顶部" onclick="sco.toTop()"><i class="fas fa-arrow-up"></i><span id="percent">0</span></button></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><div class="back-home-button" tabindex="-1"><i class="back-home-button-icon solitude fas fa-bars-progress"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">project</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" title="Solitude"><img class="nolazyload back-menu-item-icon" src="img/logo.png" alt="Solitude"><span class="back-menu-item-text">Solitude</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">音乐馆</div><div class="back-menu-list"><a class="back-menu-item" href="/hiner/HeoMusic/" title="HeoMusic"><img class="nolazyload back-menu-item-icon" src="HeoMusic/img/icon.webp" alt="HeoMusic"><span class="back-menu-item-text">HeoMusic</span></a></div></div></div></div><a id="site-name" href="/hiner/" title="返回博客主页"><span class="title">Solitude</span><i class="solitude fas fa-home"></i></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">星露谷Mod</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/archives/"><i class="solitude  fas fa-folder-closed"></i><span>全部文章</span></a></li><li><a class="site-page child" href="/hiner/categories/"><i class="solitude  fas fa-clone"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/hiner/tags/"><i class="solitude  fas fa-tags"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/moments/"><i class="solitude  fas fa-wifi"></i><span>朋友圈</span></a></li><li><a class="site-page child" href="/hiner/links/"><i class="solitude  fas fa-user-group"></i><span>友情链接</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>关于</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/about/"><i class="solitude  fas fa-address-card"></i><span>我</span></a></li><li><a class="site-page child" href="/hiner/Gallery/"><i class="solitude  fas fa-images"></i><span>图库</span></a></li><li><a class="site-page child" href="/hiner/tlink/"><i class="solitude  fas fa-toolbox"></i><span>在线工具</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机一篇文章" href="javascript:void(0);"><i class="solitude fas fa-dice-d6"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索"><i class="solitude fas fa-magnifying-glass"></i></a></div><div class="nav-button" id="nav-console"><a class="console_switchbutton" onclick="sco.showConsole()" title="中控台" href="javascript:void(0);"><label><i class="left"></i><i class="center"></i><i class="right"></i></label></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude fas fa-bars"></i></a></div></div></div></nav><div class="coverdiv" id="coverdiv"><img class="nolazyload" id="post-cover" src="https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png" alt="星露谷Mod"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="该文章为原创文章，注意版权协议">原创</a><span class="post-meta-categories"><a class="post-meta-categories" href="/hiner/categories/%E6%B8%B8%E6%88%8F/">游戏</a></span><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/hiner/tags/Mod/"><span class="tags-name tags-punctuation"><i class="solitude fas fa-hashtag"></i>Mod</span></a><a class="post-meta__tags" href="/hiner/tags/steam/"><span class="tags-name tags-punctuation"><i class="solitude fas fa-hashtag"></i>steam</span></a><a class="post-meta__tags" href="/hiner/tags/%E6%98%9F%E9%9C%B2%E8%B0%B7%E7%89%A9%E8%AF%AD/"><span class="tags-name tags-punctuation"><i class="solitude fas fa-hashtag"></i>星露谷物语</span></a></div></div></div></div><h1 class="post-title">星露谷Mod</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-date" title="发布于 2025-03-27 22:07:53"><i class="post-meta-icon solitude fas fa-calendar-days"></i><time datetime="2025-03-27T14:07:53.000Z">2025-03-27T14:07:53.000Z</time></span></div></div></div><div id="post-info-bottom"></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content article-container"><blockquote>
+<p>自用星露谷 Mod ，详情见文档</p>
+</blockquote>
+<h1>实用</h1>
+<h2 id="UI-Info-Suite-2"><a class="header-anchor" href="#UI-Info-Suite-2">¶</a>UI Info Suite 2</h2>
+<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/7098" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">UI Info Suite 2</div>
+            <div class="tag-link-sitename">提供有关您周围事物的有用信息，旨在帮助您了解正在发生的事情，而不会觉得自己在作弊。</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<a class="tag-link" href="https://github.com/Annosz/UIInfoSuite2" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">GitHub</div>
+            <div class="tag-link-sitename">对 Stardew Valley 的原始 UI Info Suite mod 进行持续维护。</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<details><summary>当前功能包括：</summary><ul>
+<li>显示代表当前运气的图标</li>
+<li>显示经验值获取</li>
+<li>显示一个动态体验栏，该体验栏会根据您当前的工具或位置而变化</li>
+<li>显示更准确的心率水平</li>
+<li>显示有关物品鼠标悬停的更多信息，包括捆绑包仍然需要的物品</li>
+<li>随时随地查看日历和任务公告牌</li>
+<li>在需要抚摸的动物上显示图标</li>
+<li>显示作物类型和收获前天数</li>
+<li>当动物有物品产量（牛奶、羊毛）时的显示图标</li>
+<li>洒水器、稻草人、蜂巢和 junimo 小屋系列</li>
+<li>在地图上显示 NPC 位置</li>
+<li>按 Escape 键跳过介绍音</li>
+<li>当 Queen of Sauce 播出您还不知道的食谱时，显示她的图标</li>
+<li>在 Clint 升级您的某个工具时显示图标。图标将告诉您距离工具完成还有多长时间，并显示您正在升级的工具。</li>
+<li>显示可捐赠给博物馆的“完整收藏”成就项目的图标</li>
+<li>显示可为“完整货件”成就运送的物品的图标</li>
+<li>显示第二天天气状况的图标</li>
+<li>…选项菜单中还添加了一个新选项卡，允许随时打开或关闭每个单独的 mod。</li>
+</ul></details>
+<details><summary>下载文件：</summary><ul>
+<li>i18n</li>
+<li>assets</li>
+<li>UIInfoSuite2.csproj</li>
+<li>manifest.json</li>
+</ul></details>
+<h2 id="Generic-Mod-Config-Menu"><a class="header-anchor" href="#Generic-Mod-Config-Menu">¶</a>Generic Mod Config Menu</h2>
+<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/5098" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">YGeneric Mod Config Menu</div>
+            <div class="tag-link-sitename">添加了游戏内 UI 以编辑其他 Mod 的配置选项。</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<a class="tag-link" href="https://github.com/spacechase0/StardewValleyMods/tree/develop/GenericModConfigMenu" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">GitHub</div>
+            <div class="tag-link-sitename"></div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<details><summary>下载文件：</summary><ul>
+<li>i18n</li>
+<li>StardewHack.csproj</li>
+<li>manifest.json</li>
+</ul></details>
+<h2 id="Yet-Another-Harvest-With-Scythe-Mod"><a class="header-anchor" href="#Yet-Another-Harvest-With-Scythe-Mod">¶</a>Yet Another Harvest With Scythe Mod</h2>
+<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/2731" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Yet Another Harvest With Scythe Mod</div>
+            <div class="tag-link-sitename">允许您使用镰刀收割所有农作物（包括季节性农作物）和草料。它们也可以被拔掉。</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<a class="tag-link" href="https://github.com/bcmpinc/StardewHack/tree/main/StardewHack" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">GitHub</div>
+            <div class="tag-link-sitename"></div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<details><summary>已知 bug ：</summary><ul>
+<li>此 Mod 与 Tractor Mod 不兼容，并在某些情况下会导致奇怪的行为。此问题无法修复。</li>
+<li>这个 mod 可能与 Don’t stop me now. 不兼容。右键单击 forage 会导致玩家卡住。</li>
+<li>当用剑作为镰刀对付草时，它有 0% 的干草产量。</li>
+</ul></details>
+<details><summary>下载文件：</summary><ul>
+<li>i18n</li>
+<li>assets</li>
+<li>GenericModConfigMenu.csproj</li>
+<li>manifest.json</li>
+</ul></details>
+<h2 id="Automate"><a class="header-anchor" href="#Automate">¶</a>Automate</h2>
+<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/1063" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Automate</div>
+            <div class="tag-link-sitename">在机器（如熔炉或水晶馆）旁边放置一个箱子，机器会自动从箱子中取出原始物品并将加工过的物品推入其中。用箱子连接多台机器以连接它们。</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<a class="tag-link" href="https://github.com/Pathoschild/StardewMods/tree/stable/Automate" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">GitHub</div>
+            <div class="tag-link-sitename"></div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<h2 id="Skip-Fishing-Minigame（不可用）"><a class="header-anchor" href="#Skip-Fishing-Minigame（不可用）">¶</a><s>Skip Fishing Minigame</s>（不可用）</h2>
+<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/2697" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Skip Fishing Minigame</div>
+            <div class="tag-link-sitename">鱼在带着你的鱼饵和钓具逃跑时会嘲笑你吗？您现在可以毫不费力地抓住它们。只需在它们咬人时钩住它们，你就完成了！</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<h2 id="Convenient-Inventory"><a class="header-anchor" href="#Convenient-Inventory">¶</a>Convenient Inventory</h2>
+<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/10384" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Convenient Inventory</div>
+            <div class="tag-link-sitename">为玩家的物品栏添加便利功能，例如快速堆叠到附近的宝箱和收藏的物品。</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<a class="tag-link" href="https://github.com/alanperrow/StardewModding/tree/master/ConvenientInventory" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">GitHub</div>
+            <div class="tag-link-sitename"></div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<details><summary>兼容性：</summary><ul>
+<li>支持单人游戏、分屏本地多人游戏和在线多人游戏。</li>
+<li>通过使用左肩按钮（可配置）进行收藏来支持控制器。</li>
+<li>支持用于游戏内配置编辑的通用 Mod 配置菜单。</li>
+<li>支持更大的背包和其他物品栏扩展 Mod（从 1.1.0 版本开始）。</li>
+<li>支持直接添加新物品栏槽位的 Mod（从 1.3.0 版本开始）。</li>
+<li>通过在安装时添加新的“全局”快速堆栈范围选项来支持 Chests Anywhere（从 1.5.0 版本开始）。</li>
+<li>支持佩戴更多戒指，通过修复带有最爱物品逻辑的边缘情况，因为它重命名了戒指装备槽（从 1.5.0 版本开始）。</li>
+<li>通过使用 SMAPI 内容管道来支持此 mod 加载的自定义图像资产的 Content Patcher（从版本 1.5.3 开始）。
+<ul>
+<li>这允许内容包覆盖此 mod 加载的自定义图像资产。</li>
+</ul>
+</li>
+</ul></details>
+<details><summary>下载文件：</summary><ul>
+<li>i18n</li>
+<li>assets</li>
+<li>manifest.json</li>
+<li>ConvenientInventory.csproj</li>
+</ul></details>
+<h2 id="Carry-Chest（不可用）"><a class="header-anchor" href="#Carry-Chest（不可用）">¶</a><s>Carry Chest</s>（不可用）</h2>
+<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/1333" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Carry Chest</div>
+            <div class="tag-link-sitename">捡起箱子，即使它们不是空的。</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<a class="tag-link" href="https://github.com/spacechase0/StardewValleyMods/tree/develop/CarryChest" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">GitHub</div>
+            <div class="tag-link-sitename"></div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<h1>美化</h1>
+<h2 id="Content-Patcher"><a class="header-anchor" href="#Content-Patcher">¶</a>Content Patcher</h2>
+<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/1915" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Content Patcher</div>
+            <div class="tag-link-sitename">加载更改游戏数据、图像和地图的内容包，而无需替换 XNB 文件。</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<a class="tag-link" href="https://github.com/Pathoschild/StardewMods/tree/stable/ContentPatcher" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">GitHub</div>
+            <div class="tag-link-sitename"></div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<details><summary>下载文件：</summary><ul>
+<li>ContentPatcher.csproj</li>
+<li>manifest.json</li>
+</ul></details>
+<h2 id="Fashion-Sense"><a class="header-anchor" href="#Fashion-Sense">¶</a>Fashion Sense</h2>
+<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/9969" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Fashion Sense</div>
+            <div class="tag-link-sitename">框架，允许更大的配饰、发型、帽子、衬衫、袖子、裤子和鞋子，以及动画支持等。</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<a class="tag-link" href="https://github.com/Floogen/FashionSense/tree/stable" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">GitHub</div>
+            <div class="tag-link-sitename">Stardew Valley 框架，允许更大的配饰、发型和其他外观。包括动画支持等。</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<h2 id="Portraiture"><a class="header-anchor" href="#Portraiture">¶</a>Portraiture</h2>
+<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/999" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Portraiture</div>
+            <div class="tag-link-sitename">添加更高分辨率的肖像，并在不同的肖像模组之间轻松切换。</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<a class="tag-link" href="https://github.com/Platonymous/Stardew-Valley-Mods/tree/master/Portraiture" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">GitHub</div>
+            <div class="tag-link-sitename"></div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<details><summary>下载文件：</summary><ul>
+<li>Portraits</li>
+<li>Portraiture.csproj</li>
+<li>manifest.json</li>
+</ul></details>
+<h2 id="Seasonal-Outfits-Slightly-Cuter-Aesthetic"><a class="header-anchor" href="#Seasonal-Outfits-Slightly-Cuter-Aesthetic">¶</a>Seasonal Outfits - Slightly Cuter Aesthetic</h2>
+<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/5450" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Seasonal Outfits - Slightly Cuter Aesthetic</div>
+            <div class="tag-link-sitename">对所有角色精灵和肖像进行大修，以获得更可爱的美感</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<details><summary>兼容性：</summary><ul>
+<li>这个 mod 现在与其他肖像或 sprite mod 兼容。只需将您不想使用的字符设置为 “false” 即可。肖像和 Sprite 不能单独选择。在 6.0.0 中，不再可能删除 portrait 文件夹以仅获取 sprites，因为这会破坏 mod。</li>
+<li>它与 Get Glam 和其他配置农民精灵的 mod 兼容。请务必按照下面的配置说明进行作。</li>
+<li>它还与 SVE 兼容。但是，SVE 使用 Marlon、Morris 和 Gunther 的精灵和肖像以及额外的动画。这意味着如果您使用 SVE，这些角色将看不到更可爱的版本。如果您想要一致的外观，请下载 Seasonal Outfits - Slightly Cuter Aesthetic for SVE。</li>
+</ul></details>
+<p><img src= "" data-lazy-src="https://staticdelivery.nexusmods.com/mods/1303/images/headers/5450_1712814737.jpg" alt=""></p>
+<h2 id="BaZhua’s-Marriable-Role-Portrait"><a class="header-anchor" href="#BaZhua’s-Marriable-Role-Portrait">¶</a>BaZhua’s Marriable Role Portrait</h2>
+<div class="note attention"><i class="solitude fas fa-wand-magic-sparkles"></i><p>打开 <code>显示成人内容</code> 再访问</p></div>
+<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/20236" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">BaZhua's Marriable Role Portrait</div>
+            <div class="tag-link-sitename">12个可婚角色的像素肖像</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<p><img src= "" data-lazy-src="https://staticdelivery.nexusmods.com/mods/1303/images/headers/20236_1726428286.jpg" alt=""><br>
+<img src= "" data-lazy-src="https://staticdelivery.nexusmods.com/mods/1303/images/thumbnails/20236/20236-1726428312-2089193844.png" alt=""></p>
+<h2 id="Portraits"><a class="header-anchor" href="#Portraits">¶</a>Portraits</h2>
+<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/15234" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Portraits</div>
+            <div class="tag-link-sitename">星露谷物语的肖像</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<p><img src= "" data-lazy-src="https://staticdelivery.nexusmods.com/mods/1303/images/15234/15234-1675604855-1750177193.jpeg" alt=""><br>
+<img src= "" data-lazy-src="https://staticdelivery.nexusmods.com/mods/1303/images/15234/15234-1712295321-202562341.png" alt=""></p>
+<h2 id="DaisyNiko’s-Earthy-Recolour"><a class="header-anchor" href="#DaisyNiko’s-Earthy-Recolour">¶</a>DaisyNiko’s Earthy Recolour</h2>
+<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/5255" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">DaisyNiko's Earthy Recolour</div>
+            <div class="tag-link-sitename">全新的游戏重新着色！！ 这个模组编辑了所有户外瓦片，并包括新的自定义树木、挖掘点和草。 城镇建筑也进行了改造，看起来更自然，与地形相匹配。 适用于1.6</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<p><img src= "" data-lazy-src="https://staticdelivery.nexusmods.com/mods/1303/images/thumbnails/5255/5255-1663637218-706652866.png" alt=""></p>
+<div class="gallery-container waterfall">
+        <div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/thumbnails/5255/5255-1579753544-346970928.png alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/5255/5255-1579753555-787300696.png alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/5255/5255-1579753579-2075766167.png alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/5255/5255-1579753568-935063758.png alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/5255/5255-1579744535-1437257459.gif alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/5255/5255-1579744551-175917464.gif alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/5255/5255-1579744573-724820484.gif alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/5255/5255-1579744563-2033670910.gif alt="" /></div>
+      </div>
+<h2 id="Industrial-Furniture-Set-For-CP-and-CF"><a class="header-anchor" href="#Industrial-Furniture-Set-For-CP-and-CF">¶</a>Industrial Furniture Set - For CP and CF</h2>
+<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/5444" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Industrial Furniture Set - For CP and CF</div>
+            <div class="tag-link-sitename">工业风格家具套装。包括 170+ 件。配有配套的双人床和婴儿床。
+全套家具可以搭配 Mi 的乡村家具和舒适的壁炉。</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<p><img src= "" data-lazy-src="https://images.nexusmods.com/mod-headers/1303/5444.jpg" alt=""></p>
+<div class="gallery-container waterfall">
+        <div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/5444/5444-1582330283-252265938.png alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/5444/5444-1582394787-893548201.png alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/5444/5444-1582394799-942403704.png alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/5444/5444-1582394780-1794006357.png alt="" /></div>
+      </div>
+<h2 id="FS-Bangs2-hairstyle1228"><a class="header-anchor" href="#FS-Bangs2-hairstyle1228">¶</a>(FS)Bangs2-hairstyle1228</h2>
+<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/30376" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">(FS)Bangs2-hairstyle1228</div>
+            <div class="tag-link-sitename">新增10顶fs模式发型</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<div class="gallery-container waterfall">
+        <div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/30376/30376-1735319452-606186301.jpeg alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/30376/30376-1735495398-322376803.jpeg alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/30376/30376-1735495404-1100504458.jpeg alt="" /></div>
+      </div>
+<h2 id="FS-Luoxue-Chinese-traditional-clothing"><a class="header-anchor" href="#FS-Luoxue-Chinese-traditional-clothing">¶</a>FS-Luoxue Chinese traditional clothing</h2>
+<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/30287" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">FS-Luoxue Chinese traditional clothing</div>
+            <div class="tag-link-sitename">國風系列合集
+有不同時代、傳統的、改良的等等古風衣服
+62套衣服+5個配件+4個頭髮+4個下裙</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<div class="gallery-container waterfall">
+        <div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/30287/30287-1735007885-2034140586.png alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/30287/30287-1735007888-56599867.png alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/30287/30287-1735007889-125287406.png alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/30287/30287-1735007892-1487615786.png alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/30287/30287-1735007893-2079661053.png alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/30287/30287-1735007896-1973898900.png alt="" /></div>
+      </div>
+<h2 id="yuyan’s-Christmas-cloak"><a class="header-anchor" href="#yuyan’s-Christmas-cloak">¶</a>yuyan’s Christmas cloak</h2>
+<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/30311" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">yuyan's Christmas cloak</div>
+            <div class="tag-link-sitename">圣诞节快乐！！
+两件fs模式的斗篷，在配饰栏里！</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<p><img src= "" data-lazy-src="https://staticdelivery.nexusmods.com/mods/1303/images/30311/30311-1735139423-367460399.jpeg" alt=""></p>
+<h2 id="FS-Jiaojiao’s-Clothes010125"><a class="header-anchor" href="#FS-Jiaojiao’s-Clothes010125">¶</a>(FS)Jiaojiao’s Clothes010125</h2>
+<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/30470" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">(FS)Jiaojiao's Clothes010125</div>
+            <div class="tag-link-sitename">两条田园格子裙，祝大家元旦快乐</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<p><img src= "" data-lazy-src="https://staticdelivery.nexusmods.com/mods/1303/images/30470/30470-1735670362-549021236.jpeg" alt=""></p>
+</article><div class="post-copyright"><div class="post-copyright__author_group"><div class="post-copyright__author_img"><img class="post-copyright__author_img_front" src= "" data-lazy-src="/hiner/img/logo.png"></div><div class="post-copyright__author_name">Hiner</div><div class="post-copyright__author_desc"></div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div></div></div><div class="social-share"><a class="social-share-ico icon-qq" target="_blank" rel="noopener" href="https://connect.qq.com/widget/shareqq/index.html?url=http%3A%2F%2Faozijx.github.io%2Fhiner%2Fhiner%2F2025%2F03%2F27%2F%25E6%2598%259F%25E9%259C%25B2%25E8%25B0%25B7Mod%2F&amp;title=%E6%98%9F%E9%9C%B2%E8%B0%B7Mod&amp;desc=undefined&amp;summary=undefined&amp;site=%E6%98%9F%E9%9C%B2%E8%B0%B7Mod&amp;pics=https%3A%2F%2Fstardewvalley.net%2Fwp-content%2Fuploads%2F2017%2F12%2Fsdv_divider.png" title="分享到QQ"><i class="solitude fab fa-qq"></i></a><a class="social-share-ico icon-weibo" target="_blank" rel="noopener" href="http://service.weibo.com/share/share.php?url=http%3A%2F%2Faozijx.github.io%2Fhiner%2Fhiner%2F2025%2F03%2F27%2F%25E6%2598%259F%25E9%259C%25B2%25E8%25B0%25B7Mod%2F&amp;title=%E6%98%9F%E9%9C%B2%E8%B0%B7Mod&amp;pic=https%3A%2F%2Fstardewvalley.net%2Fwp-content%2Fuploads%2F2017%2F12%2Fsdv_divider.png" title="分享到微博"><i class="solitude fab fa-weibo"></i></a><div class="social-share-ico icon-link" onclick="utils.copy(&quot;http://aozijx.github.io/hiner/hiner/2025/03/27/%E6%98%9F%E9%9C%B2%E8%B0%B7Mod/&quot;)" title="复制文章链接"><i class="solitude fas fa-link"></i></div><div class="social-share-ico icon-qrcode" title="使用手机扫码阅读这篇文章"><i class="solitude fas fa-qrcode"></i><div class="share-main"><div class="share-main-all"><div id="qrcode"></div><div class="reward-dec">使用手机扫码阅读这篇文章</div></div></div><script pjax>typeof QRCode === 'function' && new QRCode(document.getElementById("qrcode"), {
+    text: 'http://aozijx.github.io/hiner/hiner/2025/03/27/%E6%98%9F%E9%9C%B2%E8%B0%B7Mod/',
+    correctLevel : QRCode.CorrectLevel.L
+});
+window.addEventListener('DOMContentLoaded', () => {
+    new QRCode(document.getElementById("qrcode"), {
+        text: 'http://aozijx.github.io/hiner/hiner/2025/03/27/%E6%98%9F%E9%9C%B2%E8%B0%B7Mod/',
+        correctLevel : QRCode.CorrectLevel.L
+    });
+});
+</script></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本文是原创文章，采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans">CC BY-NC-SA 4.0</a>协议，完整转载请注明来自<a href="/hiner/">Hinerの小窝</a></span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/hiner/tags/Mod/"><span class="tags-punctuation"><i class="solitude fas fa-hashtag"></i>Mod<span class="tagsPageCount">3</span></span></a><a class="post-meta__tags" href="/hiner/tags/steam/"><span class="tags-punctuation"><i class="solitude fas fa-hashtag"></i>steam<span class="tagsPageCount">5</span></span></a><a class="post-meta__tags" href="/hiner/tags/%E6%98%9F%E9%9C%B2%E8%B0%B7%E7%89%A9%E8%AF%AD/"><span class="tags-punctuation"><i class="solitude fas fa-hashtag"></i>星露谷物语<span class="tagsPageCount">5</span></span></a></div></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="next-post pull-full"><a href="/hiner/2025/03/22/%E6%98%9F%E9%9C%B2%E8%B0%B7%E7%89%A9%E8%AF%ADTips/"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">星露谷物语Tips(未完)</div></div></a></div></nav>
+        <div class="relatedPosts">
+            <div class="headline">
+                <i class="solitude fas fa-star"></i>
+                <span>喜欢这篇的人也看了</span>
+                <div class="relatedPosts-link">
+                    <a onclick="event.preventDefault(); toRandomPost();" href="javascript:void(0);" rel="external nofollow" data-pjax-state="">随便逛逛</a>
+                </div>
+            </div>
+            <div class="relatedPosts-list">
+            <div>
+                <a href="/hiner/2025/03/20/%E6%98%9F%E9%9C%B2%E8%B0%B7Mod%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" title="星露谷安装Mod教程">
+                    <img class="cover" src= "" data-lazy-src="https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png" alt="cover">
+                    <div class="content is-center">
+                        <div class="title">星露谷安装Mod教程</div>
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="/hiner/2025/03/22/%E6%98%9F%E9%9C%B2%E8%B0%B7%E7%89%A9%E8%AF%ADTips/" title="星露谷物语Tips(未完)">
+                    <img class="cover" src= "" data-lazy-src="https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png" alt="cover">
+                    <div class="content is-center">
+                        <div class="title">星露谷物语Tips(未完)</div>
+                    </div>
+                </a>
+            </div>
+            </div>
+        </div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="top-group"><div class="sayhi" id="sayhi" onclick="sco.changeWittyWord()"></div></div></div><div class="avatar"><img alt="头像" src="img/logo.png"></div><div class="description">何须浅碧深红色,<br>自是花中第一流。</div><div class="bottom-group"><span class="left"><div class="name">Hiner</div><div class="desc">只有迎风，风筝才能飞得更高。</div></span><div class="social-icons is-center"><a class="social-icon" target="_blank" rel="noopener" href="https://github.com/aozijx" title="Github"><i class="solitude  fab fa-github"></i></a><a class="social-icon" href="mailto:xxhtxml@outlook.com" title="Mail"><i class="solitude  far fa-envelope"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="solitude fas fa-bars"></i><span>文章目录</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">实用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#UI-Info-Suite-2"><span class="toc-text">UI Info Suite 2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Generic-Mod-Config-Menu"><span class="toc-text">Generic Mod Config Menu</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Yet-Another-Harvest-With-Scythe-Mod"><span class="toc-text">Yet Another Harvest With Scythe Mod</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Automate"><span class="toc-text">Automate</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Skip-Fishing-Minigame%EF%BC%88%E4%B8%8D%E5%8F%AF%E7%94%A8%EF%BC%89"><span class="toc-text">Skip Fishing Minigame（不可用）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Convenient-Inventory"><span class="toc-text">Convenient Inventory</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Carry-Chest%EF%BC%88%E4%B8%8D%E5%8F%AF%E7%94%A8%EF%BC%89"><span class="toc-text">Carry Chest（不可用）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">美化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Content-Patcher"><span class="toc-text">Content Patcher</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fashion-Sense"><span class="toc-text">Fashion Sense</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Portraiture"><span class="toc-text">Portraiture</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Seasonal-Outfits-Slightly-Cuter-Aesthetic"><span class="toc-text">Seasonal Outfits - Slightly Cuter Aesthetic</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BaZhua%E2%80%99s-Marriable-Role-Portrait"><span class="toc-text">BaZhua’s Marriable Role Portrait</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Portraits"><span class="toc-text">Portraits</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DaisyNiko%E2%80%99s-Earthy-Recolour"><span class="toc-text">DaisyNiko’s Earthy Recolour</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Industrial-Furniture-Set-For-CP-and-CF"><span class="toc-text">Industrial Furniture Set - For CP and CF</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FS-Bangs2-hairstyle1228"><span class="toc-text">(FS)Bangs2-hairstyle1228</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FS-Luoxue-Chinese-traditional-clothing"><span class="toc-text">FS-Luoxue Chinese traditional clothing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#yuyan%E2%80%99s-Christmas-cloak"><span class="toc-text">yuyan’s Christmas cloak</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FS-Jiaojiao%E2%80%99s-Clothes010125"><span class="toc-text">(FS)Jiaojiao’s Clothes010125</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="solitude fas fa-map"></i><span>最近发布</span></div><div class="aside-list"><a class="aside-list-item" href="/hiner/2025/03/27/%E6%98%9F%E9%9C%B2%E8%B0%B7Mod/" title="星露谷Mod"><div class="thumbnail"><img alt="星露谷Mod" src="https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png"></div><div class="content"><span class="title" href="/hiner/2025/03/27/%E6%98%9F%E9%9C%B2%E8%B0%B7Mod/" title="星露谷Mod">星露谷Mod</span><span class="categories" href="/hiner/2025/03/27/%E6%98%9F%E9%9C%B2%E8%B0%B7Mod/">游戏</span></div></a><a class="aside-list-item" href="/hiner/2025/03/22/%E6%98%9F%E9%9C%B2%E8%B0%B7%E7%89%A9%E8%AF%ADTips/" title="星露谷物语Tips(未完)"><div class="thumbnail"><img alt="星露谷物语Tips(未完)" src="https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png"></div><div class="content"><span class="title" href="/hiner/2025/03/22/%E6%98%9F%E9%9C%B2%E8%B0%B7%E7%89%A9%E8%AF%ADTips/" title="星露谷物语Tips(未完)">星露谷物语Tips(未完)</span><span class="categories" href="/hiner/2025/03/22/%E6%98%9F%E9%9C%B2%E8%B0%B7%E7%89%A9%E8%AF%ADTips/">游戏</span></div></a><a class="aside-list-item" href="/hiner/2025/03/21/hello-world/" title="Hello World"><div class="thumbnail"><img alt="Hello World" src="https://cdn.img2ipfs.com/ipfs/QmaU3HScuxg29LPfTWhDvDK33e7uQQ1ucBqSguybVdG1Zp?filename=hexo.png"></div><div class="content"><span class="title" href="/hiner/2025/03/21/hello-world/" title="Hello World">Hello World</span></div></a><a class="aside-list-item" href="/hiner/2025/03/20/%E6%98%9F%E9%9C%B2%E8%B0%B7Mod%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" title="星露谷安装Mod教程"><div class="thumbnail"><img alt="星露谷安装Mod教程" src="https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png"></div><div class="content"><span class="title" href="/hiner/2025/03/20/%E6%98%9F%E9%9C%B2%E8%B0%B7Mod%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" title="星露谷安装Mod教程">星露谷安装Mod教程</span><span class="categories" href="/hiner/2025/03/20/%E6%98%9F%E9%9C%B2%E8%B0%B7Mod%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">游戏</span></div></a><a class="aside-list-item" href="/hiner/2025/03/18/%E6%98%9F%E9%9C%B2%E8%B0%B7%E7%89%A9%E8%AF%ADPC%E4%B8%8E%E6%89%8B%E6%9C%BA%E8%B7%A8%E5%B9%B3%E5%8F%B0%E8%81%94%E6%9C%BA%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/" title="星露谷物语PC与手机跨平台联机详细教程"><div class="thumbnail"><img alt="星露谷物语PC与手机跨平台联机详细教程" src="https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png"></div><div class="content"><span class="title" href="/hiner/2025/03/18/%E6%98%9F%E9%9C%B2%E8%B0%B7%E7%89%A9%E8%AF%ADPC%E4%B8%8E%E6%89%8B%E6%9C%BA%E8%B7%A8%E5%B9%B3%E5%8F%B0%E8%81%94%E6%9C%BA%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/" title="星露谷物语PC与手机跨平台联机详细教程">星露谷物语PC与手机跨平台联机详细教程</span><span class="categories" href="/hiner/2025/03/18/%E6%98%9F%E9%9C%B2%E8%B0%B7%E7%89%A9%E8%AF%ADPC%E4%B8%8E%E6%89%8B%E6%9C%BA%E8%B7%A8%E5%B9%B3%E5%8F%B0%E8%81%94%E6%9C%BA%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/">游戏</span></div></a></div></div></div></div></main><footer id="footer"><div id="st-footer-bar"><div class="footer-logo"><span>Solitude</span></div><div class="footer-bar-description"></div></div><div id="footer_deal"><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/aozijx" title="Github"><i class="solitude  fab fa-github"></i></a><a class="deal_link" href="mailto:xxhtxml@outlook.com" title="Mail"><i class="solitude  far fa-envelope"></i></a><div class="nolazyload footer_mini_logo" id="footer_mini_logo" title="返回顶部" onclick="sco.toTop()"><img src= "" data-lazy-src="https://aozijx.github.io/xuao/src/img/cat.gif" alt="返回顶部"></div><a class="deal_link" target="_blank" rel="noopener" href="https://space.bilibili.com/522238567" title="Bilibili"><i class="solitude  fab fa-bilibili"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://v.douyin.com/yKIxrIQOcJI/" title="Douyin"><i class="solitude  fab fa-tiktok"></i></a></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2025 By&nbsp;<a class="footer-bar-link" href="/hiner/"><img class="author-avatar" src= "" data-lazy-src="/hiner/img/pwa/favicon.png">Hiner</a></div></div><div class="footer-bar-right"><a class="footer-bar-link" href="/hiner/atom.xml" alt="RSS">RSS</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude/blob/main/LICENSE" alt="License"><i class="solitude fas fa-copyright"></i><i class="solitude fab fa-creative-commons-by"></i><i class="solitude fab fa-creative-commons-nc"></i><i class="solitude fab fa-creative-commons-nd"></i></a></div></div></div></footer></div><!-- right_menu--><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="solitude fas fa-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="solitude fas fa-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="solitude fas fa-arrows-rotate"></i></div><div class="rightMenu-item" id="menu-top"><i class="solitude fas fa-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="solitude fas fa-clone"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="solitude fas fa-clipboard"></i><span>粘贴文本</span></div><div class="rightMenu-item" id="menu-newwindow"><i class="solitude far fa-window-maximize"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="solitude fas fa-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="solitude fas fa-clone"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="solitude fas fa-cloud-arrow-down"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-search"><i class="solitude fas fa-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="solitude fas fa-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="solitude fas fa-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="solitude fas fa-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="solitude fas fa-clone"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" id="menu-randomPost" onclick="toRandomPost()||rm.hideRightMenu()"><i class="solitude fas fa-tower-broadcast"></i><span>随机文章</span></div><div class="rightMenu-item" id="menu-copyPostLink" onclick="copyPostLink()||rm.hideRightMenu()"><i class="solitude fas fa-link"></i><span>复制链接</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" id="menu-darkmode" onclick="sco.switchDarkMode()"><i class="solitude fas fa-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></div><div class="rightMenu-item" id="menu-translate"><i class="solitude fas fa-language"></i><span>轉為繁體</span></div></div></div><div id="rightmenu-mask"></div><!-- inject body--><div><script src="/hiner/js/utils.js?v=3.0.14"></script><script src="/hiner/js/main.js?v=3.0.14"></script><script src="/hiner/js/third_party/waterfall.min.js?v=3.0.14"></script><script src="https://fastly.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="https://fastly.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script><script src="https://fastly.jsdelivr.net/npm/typeit@8.8.7/dist/index.umd.min.js"></script><script src="/hiner/js/third_party/universe.min.js?v=3.0.14"></script><script>dark()
+</script><script src="/hiner/js/tw_cn.js?v=3.0.14"></script><script src="https://fastly.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><script src="https://fastly.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script>var meting_api = 'https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r';</script><script src="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://fastly.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+utils.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+</script><script src="https://fastly.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><script src="/hiner/js/right_menu.js?v=3.0.14"></script><div class="js-pjax"></div></div><!-- pjax--><script>const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: ["title","#body-wrap","#site-config","meta[name=\"description\"]",".js-pjax","meta[property^=\"og:\"]","#config-diff",".rs_show",".rs_hide"],
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+})
+
+document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+})
+
+document.addEventListener('pjax:complete', () => {
+    window.refreshFn()
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+        pjax.loadUrl('/404.html')
+    }
+})</script><!-- google adsense--><!-- search--><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="solitude fas fa-xmark"></i></button></nav><div class="search-wrap"><div class="search-box"><input class="search-box-input" id="search-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="输入关键词快速查找"></div><div id="search-results"><div id="search-hits"><a class="tag-list" href="javascript:void(0);" onclick="pjax.loadUrl('/hiner/tags/Solitude/')">Solitude</a><a class="tag-list" href="javascript:void(0);" onclick="pjax.loadUrl('/hiner/tags/Hexo/')">Hexo</a><a class="tag-list" href="javascript:void(0);" onclick="pjax.loadUrl('/hiner/tags/Katex/')">Katex</a><a class="tag-list" href="javascript:void(0);" onclick="pjax.loadUrl('/hiner/tags/steam/')">steam</a><a class="tag-list" href="javascript:void(0);" onclick="pjax.loadUrl('/hiner/tags/Mod/')">Mod</a></div></div><div id="search-pagination"></div><div id="search-tips"></div></div></div><div id="search-mask"></div></div><script src="/hiner/js/search/local.js?v=3.0.14"></script><!-- music--><div class="needEndHide" id="nav-music"><div id="nav-music-hoverTips" onclick="sco.musicToggle()">音乐已暂停</div><meting-js id="5144842535" server="netease" type="playlist" mutex="true" preload="none" theme="var(--efu-main)" data-lrctype="0" order="random" volume="0.8"></meting-js></div></body></html>
+        <script>
+            const posts = ["2025/03/27/星露谷Mod/","2025/03/22/星露谷物语Tips/","2025/03/21/hello-world/","2025/03/20/星露谷Mod安装教程/","2025/03/18/星露谷物语PC与手机跨平台联机详细教程/","2025/03/16/我的改造/","2025/03/15/Katex_list/","2025/03/15/write_html/","2025/03/15/GitHub加速/","2025/03/14/原神Mod安装教程/","2025/03/13/hexo配置katex/","2025/03/13/hexo代码高亮/","2025/03/13/有趣的公式/","2025/03/12/星露谷物语/","2025/03/12/初试hexo/"];
+            function toRandomPost() {
+                const randomPost = posts[Math.floor(Math.random() * posts.length)];
+                pjax.loadUrl(GLOBAL_CONFIG.root + randomPost);
+            }
+        </script>
