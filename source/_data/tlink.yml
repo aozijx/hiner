@@ -8,12 +8,12 @@ links:
       - name: Hexo # 名称
         link: https://hexo.io/ # 地址
         descr: Hexo 是一个快速、简洁且高效的博客框架 # 简介
-        avatar: /img/pwa/favicon.png # 显示头像
+        avatar: img/pwa/favicon.png # 显示头像
 
       - name: Solitude # 名称
         link: https://github.com/everfu/hexo-theme-solitude # 地址
         descr: 一款简单易用的 Hexo 主题 # 简介
-        avatar: /img/logo.png # 显示头像
+        avatar: img/logo.png # 显示头像
 
   - class_name: 取色器
     descr: 点击取色
@@ -85,7 +85,7 @@ links:
         descr: Access 18.1M+ vector icons & stickers # 简介
         avatar: https://media.flaticon.com/dist/min/img/favicon.ico
 
-      - name:
+      - name: Font Awesome
         link: https://fontawesome.com/
         descr: Take the hassle out of icons in your website.
         avatar: https://fontawesome.com/images/favicon/icon.svg

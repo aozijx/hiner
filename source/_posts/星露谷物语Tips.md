@@ -1,7 +1,7 @@
 ---
-title: 星露谷物语Tips(未完)
+title: 星露谷物语 Tips (未完)
 date: 2025-03-22 19:11:04
-author:
+author: Hiner
 categories: [游戏, Tips]
 tags: [steam, 星露谷物语]
 cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
@@ -517,19 +517,11 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
   {% link '星露谷物语' '可结婚角色' 'https://zh.stardewvalleywiki.com/村民' %}
 - **婚姻**  
   - 单身村民的好感度上限为8心。玩家需要和任意一个单身村民达到8心的好感度才能开始恋爱。
-  - 在与某位单身村民达到8心好感后，第二天早晨皮埃尔将会寄来信件，告知玩家皮埃尔的杂货店开始出售花束（价格 <img src="https://stardewvalleywiki.com/mediawiki/images/1/10/Gold.png" style="all: revert;height: 18px;">200）。
-> “最近你似乎和镇上的某个人走得很近。如果你想示爱的话，就得送上一束漂亮的鲜花。我这儿卖的花，价钱极其公道！如果你某一天想组建一个家庭，这是第一步！”
-—— 皮埃尔
-  - 送出花束后，好感度上限提高到10心。NPC接受后，TA们在社交界面中将会显示“男/女朋友”字样。花束可以送给多个村民，不限性别。
-{% note 'attention' 'fas fa-wand-magic-sparkles' %}
-将花束送给多个村民也不会有友谊值惩罚，但如果发生群体10心事件，则玩家所有的男朋友或女朋友会整整一个星期不会给玩家好脸色。
-{% endnote %}
   - 将枯萎的花束送给男/女朋友便可以结束恋爱关系。收到枯萎的花束后，该村民的友谊值会降到5心，并且会有独特的反应。
+{% note 'attention' 'fas fa-wand-magic-sparkles' %}
+如果发生群体10心事件，则玩家所有的男朋友或女朋友会整整一个星期不会给玩家好脸色。
+{% endnote %}
 - **求婚**
-赠送“美人鱼吊坠”求婚（雨天海边老水手处购买）。
-当玩家和某位可结婚村民达到10心好感之后，玩家将会收到刘易斯的一封信：
-> “我喜欢你而且想让你留在鹈鹕镇，所以我想给你一个建议。如果有一天你想向人求婚的话，你需要给那个人一个“美人鱼吊坠”。别担心，鹈鹕镇的居民都知道护身符的重要性。这是这片地方的古老传统。祝您好运！”
-—— 刘易斯
 {% note 'attention' 'fas fa-wand-magic-sparkles' %}
 要想订婚，玩家必须送一个美人鱼吊坠给求婚对象。求婚对象接受美人鱼吊坠后，可在日历上查看婚礼日期，婚礼当天标有美人鱼吊坠的图标。
 {% endnote %}

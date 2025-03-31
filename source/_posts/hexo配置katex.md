@@ -1,5 +1,5 @@
 ---
-title: hexo配置katex
+title: hexo 配置 katex
 date: 2025-03-13 22:46:59
 categories: [教程]
 tags: [Katex]

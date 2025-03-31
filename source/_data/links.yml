@@ -8,8 +8,9 @@ links:
       - name: Hexo # 友链名称
         link: https://hexo.io/ # 友链地址
         descr: Hexo 是一个快速、简洁且高效的博客框架 # 友链简介
-        avatar: img/pwa/favicon.png # 显示头像
+        avatar: ./img/pwa/favicon.png # 显示头像
+        cover: ./img/default.avif
       - name: Solitude # 友链名称
         link: https://github.com/everfu/hexo-theme-solitude # 友链地址
         descr: 一款简单易用的 Hexo 主题 # 友链简介
-        avatar: img/logo.png # 显示头像
+        avatar: ./img/logo.png # 显示头像

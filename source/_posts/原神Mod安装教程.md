@@ -1,5 +1,5 @@
 ---
-title: 原神mod安装
+title: 原神 Mod 安装
 date: 2025-03-14 14:30:22
 categories: [游戏, 教程]
 tags: [原神, Mod]

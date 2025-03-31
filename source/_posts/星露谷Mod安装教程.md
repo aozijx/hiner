@@ -1,7 +1,7 @@
 ---
-title: 星露谷安装Mod教程
+title: 星露谷 Mod 安装教程
 date: 2025-03-20 15:05:04
-author: 
+author: Hiner
 categories: [游戏]
 tags: [steam, 星露谷物语, Mod]
 cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
@@ -10,9 +10,9 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 ## 一、安装 SMAPI（Mod 加载器）
 
 ### 下载 SMAPI
-- PC: 选择 SMAPI 4.1.10 installer (for players).zip 下载
-  {% link 'SMAPI' 'GitHub下载' 'https://github.com/Pathoschild/SMAPI/releases/tag/4.1.10' %}
-  {% link 'SMAPI' 'nexus下载，需要N网账号' 'https://www.nexusmods.com/stardewvalley/mods/2400' %}
+- PC: 
+  {% link 'SMAPI' 'GitHub，选择 SMAPI 4.1.10 installer.zip 下载' 'https://github.com/Pathoschild/SMAPI/releases/tag/4.2.1' %}
+  {% link 'SMAPI' 'nexus，需要N网账号' 'https://www.nexusmods.com/stardewvalley/mods/2400' %}
 - Android
   {% link 'SMAPI' 'SMAPI For Android' 'https://github.com/NRTnarathip/SMAPILoader/releases/tag/1.1.4' %}
 
@@ -24,11 +24,11 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 2. 命令行界面提示：
    - 输入 1 并回车（选择默认游戏路径）。
    - 再次输入 1 确认安装。
-3. 安装完成后会显示 SMAPI installed successfully!，并自动复制 SMAPI 启动路径（如 "D:\Steam\steamapps\common\Stardew Valley\StardewModdingAPI.exe" %command%）。
+3. 安装完成后会显示 SMAPI installed successfully!，并自动复制 SMAPI 启动路径（如 "D:\Steam\steamapps\common\Stardew Valley\StardewModdingAPI.exe"）。
 
 ## 二、配置 Steam 启动项
 1. 打开 Steam ，右键点击游戏库中的 《星露谷物语》 → 属性 → 通用 → 启动选项。
-2. 粘贴复制的 SMAPI 路径到输入框，保存设置。
+2. 粘贴复制的 SMAPI 路径到输入框（加上 %command% 命令），保存设置。
 ![Steam启动项设置](https://cdn.img2ipfs.com/ipfs/QmbEPaUquPaFE6TcGQCXYaqQyyBgmLUWoEuBzPXn9E2CAq?filename=2025-03-20.png)
 
 ## 三、注册 Nexus Mods 账号
@@ -75,8 +75,12 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
   - 检查Mod是否兼容1.6版本，或删除冲突Mod。
 
 ## 七、推荐工具
-Mod 管理工具：
+Mod 管理工具：可自动检测缺失依赖和 Mod 更新。
 {% link 'Stardrop' 'Mod管理器' 'https://github.com/Stardrop/Stardrop/releases' %}
-可自动检测缺失依赖和 Mod 更新。
+Mod 兼容性
+{% link 'Mod compatibility' '显示了所有已知的 SMAPI 模组和（不兼容的）内容包' 'https://smapi.io/mods' %}
+Mod 故障排查
+{% link 'Modding' '玩家指南/故障排除' 'https://stardewvalleywiki.com/Modding:Player_Guide/Troubleshooting' %}
+{% link 'SMAPI log parser' '日志解析器' 'https://smapi.io/log' %}
 
 > 按照以上步骤操作，即可畅玩星露谷物语的 Mod 内容！遇到问题可查阅 SMAPI 官方文档 或社区论坛。
