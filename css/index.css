@@ -2174,12 +2174,6 @@ main {
 ::-webkit-scrollbar-track {
   background-color: var(--efu-none);
 }
-img[data-lazy-src]:not(.loaded) {
-  filter: blur(8px) brightness(1);
-}
-img[data-lazy-src].error {
-  filter: none;
-}
 ::selection {
   background: var(--efu-main);
   color: var(--efu-white);
