@@ -1,7 +1,7 @@
 ---
 title: Katex支持表
 date: 2025-03-15 18:53:52
-author:
+author: Hiner
 categories: [Tips]
 tags: [Katex]
 Katex: true

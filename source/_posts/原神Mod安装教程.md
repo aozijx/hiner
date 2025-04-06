@@ -1,6 +1,7 @@
 ---
 title: 原神 Mod 安装
 date: 2025-03-14 14:30:22
+author: Hiner
 categories: [游戏, 教程]
 tags: [原神, Mod]
 cover: https://cdn.img2ipfs.com/ipfs/QmcVLaFPnHvMMPF96kTLRpodC5g2AWXfg5vyQJKXjy3ZUz?filename=Furina.jpg

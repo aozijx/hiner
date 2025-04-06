@@ -1,7 +1,7 @@
 ---
 title: md文件写html
 date: 2025-03-15 14:44:15
-author:
+author: Hiner
 categories:
 tags: [css]
 cover: https://cdn.img2ipfs.com/ipfs/QmWHUMHAc6fx4mYg6t8ZK92xhBxf1ztTaprFqXKcDW2VSr?filename=smile.jpg
@@ -148,6 +148,20 @@ cover: https://cdn.img2ipfs.com/ipfs/QmWHUMHAc6fx4mYg6t8ZK92xhBxf1ztTaprFqXKcDW2
 ```
 原版
 ```css
+.container {
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+    min-height: 300px;
+    margin: 20px auto;
+    padding: 20px 10px;
+    border: 2px solid #000;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
 .flip-card {
     position: relative;
     display: flex;

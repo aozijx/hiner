@@ -15,6 +15,11 @@ links:
         descr: 一款简单易用的 Hexo 主题 # 简介
         avatar: img/logo.png # 显示头像
 
+      - name: 张伟是混蛋.COM					
+        link: https://www.zhangweishihundan.com/
+        descr: 爱情公寓
+        avatar: https://www.zhangweishihundan.com/favicon.ico
+
   - class_name: 取色器
     descr: 点击取色
     type: item
@@ -32,33 +37,33 @@ links:
 
   - class_name: CSS
     descr: CSS辅助工具在线网站
-    type: item 
+    type: item
     suffix:
     link_list: 
       - name: CSS Gradient
         link: https://cssgradient.io/
-        descr: CSS Gradient 是一个设计条纹项目，可让您为网站创建免费的渐变背景。 # 简介
+        descr: CSS Gradient 是一个设计条纹项目，可让您为网站创建免费的渐变背景。
         avatar: https://cssgradient.io/images/logo-55c31c59.svg
       
-      - name: Fancy-Border-Radius # 名称
-        link: https://9elements.github.io/fancy-border-radius/ # 地址
-        descr: Fancy Border Radius Generator # 简介
-        avatar: https://9elements.github.io/fancy-border-radius/favicon-32x32.png # 显示头像
+      - name: Fancy-Border-Radius
+        link: https://9elements.github.io/fancy-border-radius/
+        descr: Fancy Border Radius Generator
+        avatar: https://9elements.github.io/fancy-border-radius/favicon-32x32.png
       
-      - name: UIverse # 名称
-        link: https://uiverse.io/ # 地址
-        descr: The Largest Library of Open-Source UI # 简介
-        avatar: https://uiverse.io/android-chrome-192x192.png # 显示头像 
+      - name: UIverse
+        link: https://uiverse.io/
+        descr: The Largest Library of Open-Source UI
+        avatar: https://uiverse.io/android-chrome-192x192.png
 
-      - name: CSS Loader # 名称
-        link: https://css-loaders.com/classic/ # 地址
-        descr: 600+ single element loaders # 简介
-        avatar: https://css-loaders.com/fav.png # 显示头像 
+      - name: CSS Loader
+        link: https://css-loaders.com/classic/
+        descr: 600+ single element loaders
+        avatar: https://css-loaders.com/fav.png
 
-      - name: ALL | Navnav 
-        link: https://thuvien.org/navnav/ 
-        descr: UI 
-        avatar: https://cdn1.iconfinder.com/data/icons/material-core/20/language-64.png 
+      - name: ALL | Navnav
+        link: https://thuvien.org/navnav/
+        descr: UI
+        avatar: https://cdn1.iconfinder.com/data/icons/material-core/20/language-64.png
       
       - name: Epic Spinners
         link: https://epic-spinners.vuestic.dev/
@@ -104,3 +109,179 @@ links:
         link: https://worldvectorlogo.com/
         descr: Download vector logos
         avatar: https://worldvectorlogo.com/static/img/favicon.ico
+    
+      - name: Free SVG Maps
+        link: https://www.amcharts.com/svg-maps/
+        descr: 免费 SVG 地图
+        avatar: https://www.amcharts.com/wp-content/themes/amcharts4/css/img/favicon/favicon.ico
+
+  - class_name: VScode
+    descr: VSCode插件
+    type: item 
+    suffix:
+    link_list: 
+      - name: VScode
+        link: https://code.visualstudio.com/
+        descr: Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications.
+        avatar: https://code.visualstudio.com/assets/favicon.ico
+
+      - name: VScode插件市场
+        link: https://marketplace.visualstudio.com/vscode
+        descr: Visual Studio Code Marketplace
+        avatar: https://marketplace.visualstudio.com/favicon.ico
+
+      - name: Live Server
+        link: https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+        descr: A development server with live reload capability
+        avatar: https://ritwickdey.gallerycdn.vsassets.io/extensions/ritwickdey/liveserver/5.7.9/1736542717282/Microsoft.VisualStudio.Services.Icons.Default
+      
+      - name: Auto Rename Tag
+        link: https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag
+        descr: Auto rename paired HTML/XML tag
+        avatar: https://formulahendry.gallerycdn.vsassets.io/extensions/formulahendry/auto-rename-tag/0.1.10/1644319230173/Microsoft.VisualStudio.Services.Icons.Default
+      
+      - name: htmltagwrap
+        link: https://marketplace.visualstudio.com/items/?itemName=bradgashler.htmltagwrap
+        descr: Wraps the selected text in HTML tags
+        avatar: https://bradgashler.gallerycdn.vsassets.io/extensions/bradgashler/htmltagwrap/1.0.0/1690951480878/Microsoft.VisualStudio.Services.Icons.Default
+      
+      - name: Prettier
+        link: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+        descr: Code formatter using prettier
+        avatar: https://esbenp.gallerycdn.vsassets.io/extensions/esbenp/prettier-vscode/11.0.0/1723648421534/Microsoft.VisualStudio.Services.Icons.Default
+      
+      - name: ImgPreview
+        link: https://marketplace.visualstudio.com/items/?itemName=kisstkondoros.vscode-gutter-preview
+        descr: Preview images in your editor
+        avatar: https://kisstkondoros.gallerycdn.vsassets.io/extensions/kisstkondoros/vscode-gutter-preview/0.32.2/1732997211540/Microsoft.VisualStudio.Services.Icons.Default
+      
+      - name: Path Intellisense
+        link: https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense
+        descr: Visual Studio Code plugin that autocompletes filenames
+        avatar: https://christian-kohler.gallerycdn.vsassets.io/extensions/christian-kohler/path-intellisense/2.10.0/1732919213601/Microsoft.VisualStudio.Services.Icons.Default
+      
+      - name: CodeSnap
+        link: https://marketplace.visualstudio.com/items/?itemName=adpyke.codesnap
+        descr: Take beautiful screenshots of your code
+        avatar: https://adpyke.gallerycdn.vsassets.io/extensions/adpyke/codesnap/1.3.4/1625238962906/Microsoft.VisualStudio.Services.Icons.Default
+      
+      - name: Excalidraw
+        link: https://excalidraw.com/
+        descr: Draw diagrams and sketches in your editor
+        avatar: https://pomdtr.gallerycdn.vsassets.io/extensions/pomdtr/excalidraw-editor/3.8.1/1741785200720/Microsoft.VisualStudio.Services.Icons.Default
+      
+      - name: Draw.io
+        link: https://app.diagrams.net/
+        descr: Draw diagrams and sketches in your editor
+        avatar: https://hediet.gallerycdn.vsassets.io/extensions/hediet/vscode-drawio/1.9.250226013/1740566991071/Microsoft.VisualStudio.Services.Icons.Default
+      
+      - name: GitHub copilot
+        link: https://marketplace.visualstudio.com/items?itemName=GitHub.copilot
+        descr: AI pair programmer
+        avatar: https://GitHub.gallerycdn.vsassets.io/extensions/github/copilot/1.296.1486/1743783345263/Microsoft.VisualStudio.Services.Icons.Default
+        # avatar: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+
+  - class_name: 图床
+    descr: 图片上传
+    type: item 
+    suffix:
+    link_list: 
+      - name: SM.MS
+        link: https://sm.ms/
+        descr: 免费的图床 # 简介
+        avatar: https://sm.ms/favicon.ico
+      
+      - name: 去图图床
+        link: hhttps://7tu.top/upload
+        descr: 不止于此，无限可能。
+        avatar: https://7tu.top/favicon.ico
+
+      - name: ipfs图床
+        link: https://cdn.ipfsscan.io/
+        descr: 永久的、去中心化保存和共享文件
+        avatar: https://pic.rmb.bdstatic.com/bjh/7f258369bc7cae227053a6588adb2453.png
+
+  - class_name: H5 Games
+    descr: H5游戏
+    type: item 
+    suffix:
+    link_list: 
+      - name: 星夜小游戏平台
+        link: https://xingye.me/game/
+        descr: 星夜小游戏平台 # 简介
+        avatar: https://xingye.me/game/icon/App.ico
+
+      - name: EatKano
+        link: https://github.com/arcxingye/EatKano
+        descr: 吃掉小鹿乃
+        avatar: https://xingye.me/game/eatkano/static/image/ClickBefore.png
+
+      - name: 3D 魔方
+        link: https://xingye.me/game/mofang/index.html
+        descr: 
+        avatar: https://xingye.me/game/icon/3dmofang.png
+  
+      - name: 色盲测试
+        link: https://xingye.me/game/colortest/index.html
+        descr: 测测你的眼睛
+        avatar: https://xingye.me/game/icon/colortest.png
+
+      - name: 切积木
+        link: https://xingye.me/game/qjm/index.html
+        descr: 
+        avatar: https://xingye.me/game/icon/qjm.png
+
+      - name: 简单工具
+        link: https://www.xuanzhi33.cn/tools/
+        descr: 汇集众多实用的在线工具
+        avatar: https://www.xuanzhi33.cn/favicon.ico
+      
+      - name: 2048
+        link: https://www.xuanzhi33.cn/game/2048/
+        descr: 经典的2048游戏
+        avatar: https://www.xuanzhi33.cn/game/2048/favicon.ico
+
+      - name: Mikutap 
+        link: https://www.xuanzhi33.cn/game/mikutap/
+        descr: 点击滑动就能产生音乐！
+        avatar: https://www.xuanzhi33.cn/game/mikutap/favicon.ico
+
+      - name: 
+        link: https://www.xuanzhi33.cn/game/0hh1/
+        descr: 一个简单的逻辑游戏
+        avatar: https://www.xuanzhi33.cn/game/0hh1/img/icon-1024.png
+
+      - name: 圈猫游戏
+        link: https://www.xuanzhi33.cn/game/ctc/
+        descr: 圈住小猫
+        avatar: data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBoZWlnaHQ9IjEwMy40MjUwMDAwMDAwMDAwMXB4IiB3aWR0aD0iNzAuMzVweCIgdmlld0JveD0iMCAgMCA0Ni45IDY4Ljk1Ij4KICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgxLjAsIDAuMCwgMC4wLCAxLjAsIDI4LjksIDU5LjI1KSI+CiAgICA8dXNlIGhlaWdodD0iMzMuMzUiIHRyYW5zZm9ybT0ibWF0cml4KDEuMCwgMC4wLCAwLjAsIDEuMCwgLTExLjYsIC0yMy42NSkiIHdpZHRoPSIyNy4zNSIgeGxpbms6aHJlZj0iI3NoYXBlMCIvPgogICAgPHVzZSBoZWlnaHQ9IjE5Ljc1IiB0cmFuc2Zvcm09Im1hdHJpeCgxLjAsIDAuMCwgMC4wLCAxLjAsIC0xMy45NSwgLTM1LjkpIiB3aWR0aD0iMTguNDUiIHhsaW5rOmhyZWY9IiNzaGFwZTEiLz4KICA8L2c+CiAgPGRlZnM+CiAgICA8ZyBpZD0ic2hhcGUwIiB0cmFuc2Zvcm09Im1hdHJpeCgxLjAsIDAuMCwgMC4wLCAxLjAsIDExLjYsIDIzLjY1KSI+CiAgICAgIDxwYXRoIGQ9Ik0xMC4xNSAyLjYgUTExLjQgMS45NSAxMi4zIDAuMSAxMy4yNSAtMS43IDEzLjI1IC0zLjQgMTMuMjUgLTYuOSAxMC42NSAtMTEuMSA4LjAgLTE1LjM1IDguMCAtMTYuOTUgTDguMSAtMTkuMSBROC40IC0yMC4yNSA5LjY1IC0yMS4xNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iNS4wIi8+CiAgICAgIDxwYXRoIGQ9Ik05LjYgLTAuOCBROS42IDIuNSA3LjM1IDQuODUgNS4xIDcuMiAxLjkgNy4yIC0xLjMgNy4yIC0zLjU1IDQuODUgLTUuOCAyLjUgLTUuOCAtMC44IC01LjggLTQuMSAtMy41NSAtNi40NSAtMS4zIC04LjggMS45IC04LjggNS4xIC04LjggNy4zNSAtNi40NSA5LjYgLTQuMSA5LjYgLTAuOCIgZmlsbD0iIzAwMDAwMCIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2U9Im5vbmUiLz4KICAgICAgPHBhdGggZD0iTTkuNiAtMC44IFE5LjYgMi41IDcuMzUgNC44NSA1LjEgNy4yIDEuOSA3LjIgLTEuMyA3LjIgLTMuNTUgNC44NSAtNS44IDIuNSAtNS44IC0wLjggLTUuOCAtNC4xIC0zLjU1IC02LjQ1IC0xLjMgLTguOCAxLjkgLTguOCA1LjEgLTguOCA3LjM1IC02LjQ1IDkuNiAtNC4xIDkuNiAtMC44IFoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMDAwMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjUuMCIvPgogICAgICA8cGF0aCBkPSJNMy40IC0xMy4zIFEzLjQgLTEwLjY1IDEuNiAtOC44IC0wLjI1IC02LjkgLTIuODUgLTYuOSAtNS40IC02LjkgLTcuMjUgLTguOCAtOS4xIC0xMC42NSAtOS4xIC0xMy4zIC05LjEgLTE1Ljk1IC03LjI1IC0xNy44NSAtNS40IC0xOS43IC0yLjg1IC0xOS43IC0wLjI1IC0xOS43IDEuNiAtMTcuODUgMy40IC0xNS45NSAzLjQgLTEzLjMiIGZpbGw9IiMwMDAwMDAiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSJub25lIi8+CiAgICAgIDxwYXRoIGQ9Ik0zLjQgLTEzLjMgUTMuNCAtMTAuNjUgMS42IC04LjggLTAuMjUgLTYuOSAtMi44NSAtNi45IC01LjQgLTYuOSAtNy4yNSAtOC44IC05LjEgLTEwLjY1IC05LjEgLTEzLjMgLTkuMSAtMTUuOTUgLTcuMjUgLTE3Ljg1IC01LjQgLTE5LjcgLTIuODUgLTE5LjcgLTAuMjUgLTE5LjcgMS42IC0xNy44NSAzLjQgLTE1Ljk1IDMuNCAtMTMuMyBaIiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1LjAiLz4KICAgICAgPHBhdGggZD0iTS03LjI1IDIuNzUgUS03LjAgNC40NSAtNS43NSA0LjQgLTQuMyA0LjMgLTQuMCA1LjAgLTMuNDUgNi4xIC0yLjcgNi41IEwtMC41IDYuNzUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMDAwMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjUuMCIvPgogICAgICA8cGF0aCBkPSJNLTcuMjUgLTE1LjAgTC03LjAgLTQuMzUgLTcuMSAtMC43NSBRLTcuNDUgMS4yNSAtOC43NSAxLjAgTC04Ljc1IDIuMjUgLTguNSAyLjI1IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1LjAiLz4KICAgICAgPHBhdGggZD0iTTMuMCAtMTIuMjUgUTQuMDUgLTEyLjQgNC40NSAtMTAuNiA0LjkgLTguNzUgNi4yNSAtOC43NSA2LjE1IC03Ljg1IDYuNTUgLTYuMTUgTDcuMCAtNC4wIiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1LjAiLz4KICAgIDwvZz4KICAgIDxnIGlkPSJzaGFwZTEiIHRyYW5zZm9ybT0ibWF0cml4KDEuMCwgMC4wLCAwLjAsIDEuMCwgMTEuMTUsIDQwLjIpIj4KICAgICAgPHBhdGggZD0iTTcuMjUgLTI3LjI1IFE2Ljk1IC0yNC4wIDQuMSAtMjIuOCAxLjQgLTIwLjE1IC0zLjAgLTIwLjUgLTUuNTUgLTIxLjM1IC03Ljk1IC0yMi42NSAtMTAuOSAtMjQuMyAtMTEuMTUgLTI3Ljg1IC0xMS4zNSAtMzEuMjUgLTkuMTUgLTMzLjkgLTYuOTUgLTM2LjYgLTMuNTUgLTM3LjA1IC0wLjE1IC0zNy40NSAyLjY1IC0zNS41NSA1LjQ1IC0zMy42IDYuNyAtMzAuNDUgNy40IC0yOC45NSA3LjI1IC0yNy4yNSIgZmlsbD0iIzAwMDAwMCIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2U9Im5vbmUiLz4KICAgICAgPHBhdGggZD0iTTIuMzUgLTQwLjE1IFE0LjA1IC00MC42IDUuODUgLTMzLjcgNi40IC0zMS41NSA2LjM1IC0zMC44NSBMNS4xIC0zMC41IFEyLjQ1IC0zMS42IDAuOTUgLTMyLjYgLTEuMSAtMzMuOTUgLTEuOSAtMzUuNTUgTC0xLjggLTM1LjYgLTEuNyAtMzUuOCAtMC45NSAtMzUuNiAtMC42IC0zNS40NSAwLjQ1IC0zNy44IFExLjU1IC0zOS45NSAyLjM1IC00MC4xNSBNLTEwLjcgLTM1LjUgTC0xMC4yNSAtMzkuOTUgUS04Ljk1IC0zOS4yNSAtNy44NSAtMzguMzUgLTYuMDUgLTM2Ljk1IC01LjcgLTM1LjggLTUuMzUgLTM0LjM1IC02Ljg1IC0zMi44IC04LjEgLTMxLjQgLTkuOCAtMzAuOCAtMTAuNzUgLTMyLjU1IC0xMC43IC0zNS41IiBmaWxsPSIjMDAwMDAwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZT0ibm9uZSIvPgogICAgPC9nPgogIDwvZGVmcz4KPC9zdmc+
+
+  - class_name: 其他
+    descr: 其他工具
+    type: item 
+    suffix:
+    link_list: 
+      - name: 又拍云
+        link: https://console.upyun.com/
+        descr: 又拍云 # 简介
+        avatar: https://console.upyun.com/assets/favicon.png
+
+      - name: 站长工具
+        link: https://tool.chinaz.com/
+        descr: 提供网站查询、SEO优化、网站测速等服务 # 简介
+        avatar: https://tool.chinaz.com/favicon.ico
+      
+      - name: 开发者导航栏
+        link: https://codernav.com/
+        descr: 陌上花开，可缓缓归矣。 # 简介
+        avatar: https://cdn.img2ipfs.com/ipfs/QmaPVZGtoHG9bDcvskA9ns5FjYBTr5Gdjr31iDpkB1nQ4X?filename=favicon.png
+
+      - name: 在线工具箱
+        link: https://tool.lu/
+        descr: 在线工具箱，提供多种在线工具 # 简介
+        avatar: https://tool.lu/favicon.ico
+
+      - name: 在线图片压缩器
+        link: https://tinypng.com/
+        descr: 在线图片压缩器，支持多种图片格式压缩 # 简介
+        avatar: https://tinypng.com/images/favicon.ico

@@ -1,6 +1,7 @@
 ---
 title: hexo 配置 katex
 date: 2025-03-13 22:46:59
+author: Hiner
 categories: [教程]
 tags: [Katex]
 cover: https://latex.codecogs.com/svg.image?&space;K^AT_E^X

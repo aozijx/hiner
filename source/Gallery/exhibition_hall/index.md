@@ -6,55 +6,55 @@ type: banner
 cover: https://t.alcy.cc/pc
 container: true
 rightbtn: 返回图库
-rightbtnlink: /Gallery/
+rightbtnlink: Gallery/
 ---
 
 <style>
-    .container{
-        width: 100%;
-        height: 440px;
-        padding: 10px;
-        border: 1px solid #000;
-        border-radius: 6px;
-        box-shadow: 0 4px 10px rgba(82, 75, 75, 0.5);
-    }
-    .qin {
-        display: flex;
-        height: 100%;
-        flex: 1;
-        justify-content: space-evenly;
-    }
-    .qin div span {
-        font: 200 45px;
-        height: 15%;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .box {
-        flex: 1;
-        overflow: hidden;
-        transition: 0.5s;
-        margin: 0 5px;
-        border-radius: 10px;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-        border: 4px solid #fff;
-    }
-    .box img {
-        width: 200%;
-        height: 85%;
-        object-fit: cover;
-        flex-shrink: 0;
-        transition: 0.5s ease-in-out;
-    }
-    .box:hover {
-        flex-basis: 50%;
-    }
-    .box:hover img {
-        width: 100%;
-        height: 100%;
-    }
+  .container{
+      width: 100%;
+      height: 440px;
+      padding: 10px;
+      border: 1px solid #000;
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(82, 75, 75, 0.5);
+  }
+  .qin {
+      display: flex;
+      height: 100%;
+      flex: 1;
+      justify-content: space-evenly;
+  }
+  .qin div span {
+      font: 200 45px;
+      height: 15%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .box {
+      flex: 1;
+      overflow: hidden;
+      transition: 0.5s;
+      margin: 0 5px;
+      border-radius: 10px;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+      border: 4px solid #fff;
+  }
+  .box img {
+      width: 200%;
+      height: 85%;
+      object-fit: cover;
+      flex-shrink: 0;
+      transition: 0.5s ease-in-out;
+  }
+  .box:hover {
+      flex-basis: 50%;
+  }
+  .box:hover img {
+      width: 100%;
+      height: 100%;
+  }
 </style>
 <div class="container">
     <div class="qin">
@@ -85,41 +85,41 @@ rightbtnlink: /Gallery/
 
 ```css
 .qin {
-    display: flex;
-    height: 100%;
-    flex: 1;
-    justify-content: space-evenly;
+  display: flex;
+  height: 100%;
+  flex: 1;
+  justify-content: space-evenly;
 }
 .qin div span {
-    font: 200 45px;
-    height: 15%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font: 200 45px;
+  height: 15%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .box {
-    flex: 1;
-    overflow: hidden;
-    transition: 0.5s;
-    margin: 0 5px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    border: 4px solid #fff;
+  flex: 1;
+  overflow: hidden;
+  transition: 0.5s;
+  margin: 0 5px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border: 4px solid #fff;
 }
 .box img {
-    width: 200%;
-    height: 85%;
-    object-fit: cover;
-    flex-shrink: 0;
-    transition: 0.5s ease-in-out;
+  width: 200%;
+  height: 85%;
+  object-fit: cover;
+  flex-shrink: 0;
+  transition: 0.5s ease-in-out;
 }
 .box:hover {
-    flex-basis: 50%;
+  flex-basis: 50%;
 }
 .box:hover img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 ```
 

@@ -257,6 +257,33 @@ cover: https://moe.jitsu.top/img/?sort=pc&34
 {% link '赵苦瓜のBlog' '欢迎来到赵苦瓜のBlog~！' 'https://blog.jixiaob.cn/?post=93' %}
 {% link '酷小呵' ' ' 'https://www.kuhehe.top/2023/03a05de98.html#30-远方随机风景壁纸api' %}
 
+写一个我遇到的问题，原本想的是 a 标签包裹 img 标签，让 a 标签来承担被点击的角色，然后更改图片，直到我看到了 img 标签直接应用 onclick 事件，我精简了一下 JS 
+
+```html
+<a onclick="changeImage(this, 'https://imgapi.xl0408.top/index.php')">
+    <img src="https://imgapi.xl0408.top/index.php" alt="">
+</a>
+```
+
+```JavaScript
+function changeImage(e, baseUrl) {
+    const img = e.querySelector('img');
+    const separator = baseUrl.includes('?') ? '&' : '?';
+    img.src = baseUrl + separator + 't=' + new Date().getTime();
+}
+```
+
+更改后的
+```html
+<img src="https://imgapi.xl0408.top/index.php" onclick="changeImage(this)" alt="">
+```
+
+```JavaScript
+function changeImages(e) {
+    e.src += (e.src.includes('?') ? '&' : '?') + 't=' + Date.now();
+}
+```
+
 <script>
     function changeImage(e) {
         e.src += (e.src.includes('?') ? '&' : '?') + 't=' + Date.now();

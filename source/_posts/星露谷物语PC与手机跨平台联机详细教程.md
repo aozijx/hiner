@@ -1,7 +1,7 @@
 ---
 title: 星露谷物语PC与手机跨平台联机详细教程
 date: 2025-03-18 17:24:33
-author: 
+author: Hiner
 categories: [游戏]
 tags: [steam, 星露谷物语]
 cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png

@@ -1,6 +1,7 @@
 ---
 title: 星露谷物语
 date: 2025-03-12 23:04:18
+author: Hiner
 categories: [游戏]
 tags: [steam, 星露谷物语]
 cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png

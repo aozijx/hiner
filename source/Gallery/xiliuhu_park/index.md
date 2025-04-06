@@ -6,7 +6,7 @@ type: banner
 cover: https://cdn.img2ipfs.com/ipfs/QmQU5GiFsVhMfmpCwK3VxngPGtHZx93AKmehRCvW5MriyV?filename=mmexport1742211102341.jpg
 container: true
 rightbtn: 返回图库
-rightbtnlink: /Gallery/
+rightbtnlink: Gallery
 ---
 
 {% gallery %}
@@ -22,7 +22,7 @@ rightbtnlink: /Gallery/
 ![](https://cdn.img2ipfs.com/ipfs/QmSMkWfuKaGPqYWdyqPTq1jHrdLM1BxjvPosguXcUS4tKQ?filename=mmexport1742367066658.jpg)
 ![](https://cdn.img2ipfs.com/ipfs/QmQeoAgqYGK6LueAmVt64Ez1JW82oMZPC4Uucgw6p5uyws?filename=mmexport1742367073404.jpg)
 ![](https://aozijx.github.io/stary/img/2025/03/xiliuhu/mmexport1742367076368.jpg)
-![](https://cdn.img2ipfs.com/ipfs/QmQv2nBofEKDztdmWsN49PWFHKZNoMuUgJsFLjpafEejZt?filename=mmexport1742367079702.jpg) 
+![](https://cdn.img2ipfs.com/ipfs/QmQv2nBofEKDztdmWsN49PWFHKZNoMuUgJsFLjpafEejZt?filename=mmexport1742367079702.jpg)
 ![](https://cdn.img2ipfs.com/ipfs/QmYGV41myrXMNPfnsw8SmQhEGjxKip2ubiVsifa1pNdvd5?filename=mmexport1742367086340.jpg)
 ![](https://cdn.img2ipfs.com/ipfs/QmfZU6rptTmx5xpEzrEGzdb24o345qh6mXPYcTACT3ZMFm?filename=mmexport1742370462108.jpg)
 {% endgallery %}

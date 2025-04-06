@@ -8,9 +8,44 @@ links:
       - name: Hexo # 友链名称
         link: https://hexo.io/ # 友链地址
         descr: Hexo 是一个快速、简洁且高效的博客框架 # 友链简介
-        avatar: ./img/pwa/favicon.png # 显示头像
-        cover: ./img/default.avif
-      - name: Solitude # 友链名称
-        link: https://github.com/everfu/hexo-theme-solitude # 友链地址
-        descr: 一款简单易用的 Hexo 主题 # 友链简介
-        avatar: ./img/logo.png # 显示头像
+        avatar: /img/pwa/favicon.png # 显示头像
+        topimg: https://s2.loli.net/2024/11/10/Zm5dvbLOUMr9iFk.webp # 显示顶部图片
+        tag: 框架 # 友链标签
+      
+      - name: Solitude
+        link: https://github.com/everfu/hexo-theme-solitude
+        descr: 一款简单易用的 Hexo 主题
+        avatar: img/logo.png
+        topimg: https://s3.qjqq.cn/47/674c6c6783097.png!color
+        tag: 主题
+
+      - name: 伍拾柒
+        link: https://www.efu.me/
+        descr: 伍拾柒的个人博客
+        avatar: https://avatars.githubusercontent.com/u/74389842?v=4
+        topimg: https://s3.qjqq.cn/47/674c6c6783097.png!color
+        tag: 博主
+        color: vip  
+
+  - class_name: Beauty
+    descr: 好看的 Blog
+    type: card
+    suffix:
+    link_list:
+      - name: Elykia
+        link: https://blog.elykia.cn/
+        descr: 致以无暇之人
+        avatar: 
+        topimg: https://bu.dusays.com/2024/10/25/671b2438203a6.gif
+
+      - name: 璜珀 · HPCesia
+        link: https://blog.hpcesia.com/
+        descr: 一个想要摆烂却又不甘于躺平的人
+        avatar:
+        topimg: https://blog.hpcesia.com/assets/img/avatar.webp
+
+      - name: 轻笑Chuckle
+        link: https://www.qcqx.cn/
+        descr: 漫天倾尘 风中轻笑
+        avatar:
+        topimg: https://www.qcqx.cn/head.webp

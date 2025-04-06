@@ -1,6 +1,7 @@
 ---
 title: 有趣的公式
 date: 2025-03-13 20:10:26
+author: Hiner
 categories: 公式
 tags: [Katex]
 katex: true

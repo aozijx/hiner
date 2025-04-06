@@ -24,7 +24,7 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 2. 命令行界面提示：
    - 输入 1 并回车（选择默认游戏路径）。
    - 再次输入 1 确认安装。
-3. 安装完成后会显示 SMAPI installed successfully!，并自动复制 SMAPI 启动路径（如 "D:\Steam\steamapps\common\Stardew Valley\StardewModdingAPI.exe"）。
+3. 安装完成后会显示 SMAPI installed successfully!，并自动复制 SMAPI 启动路径（如 "D:\Steam\steamapps\common\Stardew Valley\StardewModdingAPI.exe" %command%）。
 
 ## 二、配置 Steam 启动项
 1. 打开 Steam ，右键点击游戏库中的 《星露谷物语》 → 属性 → 通用 → 启动选项。
@@ -84,3 +84,6 @@ Mod 故障排查
 {% link 'SMAPI log parser' '日志解析器' 'https://smapi.io/log' %}
 
 > 按照以上步骤操作，即可畅玩星露谷物语的 Mod 内容！遇到问题可查阅 SMAPI 官方文档 或社区论坛。
+{% fold '' %}
+- 可以在已游玩存档的任何时期添加 Mod 
+{% endfold %}
