@@ -8,21 +8,21 @@ links:
       - name: Hexo # 友链名称
         link: https://hexo.io/ # 友链地址
         descr: Hexo 是一个快速、简洁且高效的博客框架 # 友链简介
-        avatar: /img/pwa/favicon.png # 显示头像
+        avatar: ../img/pwa/favicon.png # 显示头像
         topimg: https://s2.loli.net/2024/11/10/Zm5dvbLOUMr9iFk.webp # 显示顶部图片
         tag: 框架 # 友链标签
       
       - name: Solitude
         link: https://github.com/everfu/hexo-theme-solitude
         descr: 一款简单易用的 Hexo 主题
-        avatar: img/logo.png
+        avatar: ../img/logo.png
         topimg: https://s3.qjqq.cn/47/674c6c6783097.png!color
         tag: 主题
 
       - name: 伍拾柒
         link: https://www.efu.me/
         descr: 伍拾柒的个人博客
-        avatar: https://avatars.githubusercontent.com/u/74389842?v=4
+        avatar: https://avatars.githubusercontent.com/u/74389842
         topimg: https://s3.qjqq.cn/47/674c6c6783097.png!color
         tag: 博主
         color: vip  
@@ -41,11 +41,11 @@ links:
       - name: 璜珀 · HPCesia
         link: https://blog.hpcesia.com/
         descr: 一个想要摆烂却又不甘于躺平的人
-        avatar:
+        avatar: 
         topimg: https://blog.hpcesia.com/assets/img/avatar.webp
 
       - name: 轻笑Chuckle
         link: https://www.qcqx.cn/
         descr: 漫天倾尘 风中轻笑
-        avatar:
+        avatar: 
         topimg: https://www.qcqx.cn/head.webp

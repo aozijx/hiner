@@ -331,7 +331,7 @@ post:
   # Article reading progress
   # 文章封面取色
   covercolor:
-    enable: false
+    enable: true
     # local: local color / api: api color / ave: oss average color
     mode: local
     # api address / api 地址

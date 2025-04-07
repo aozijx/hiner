@@ -67,12 +67,18 @@ game:
     box_shadow: "0 -69px 203px 11px #415dc9 inset"
     tips_left: 
 
+tenyear:
+  title: 十年
+  tips: 测试
+  text: 
+  start: 2025-04-07
+  end: 2035-04-07
+
 award:
   enable: true
   description: 感谢大家的支持和鼓励。因为你们，我感到写作博客可以为你们创造价值。这将使我在这条路上走得更远。
   tips: "总金额: ¥ {sum}, 将用于博客的维护和更新。"
 rewardList: # Bottom donations
-
   - name: example
     money: 6.66
     time: 2023-08-11
