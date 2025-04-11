@@ -4,13 +4,13 @@ contentinfo: # Top personal information display
   sup: 你好，很高兴认识你👋
   name: 我是Hiner # Name
   # title: 学生, 软件工程师, 独立开发者, 博主 # Introduction
-  tip: 追求卓越
-  slogan: 创造源于激情
+  tip: 追求自我
+  slogan: 创造源于灵感
   mask:
     - 卓越产品
-    - 卓越设计
+    - 优秀设计
     - 高效编程
-    - 用户友好体验
+    - 友好体验
 
 skills: # Add as needed
   title: 技能
@@ -20,15 +20,19 @@ skills: # Add as needed
       img: https://skillicons.dev/icons?i=html # 如果有图片，则不会显示图标
       icon: fab fa-html5
       color: "#e9572b"
+    - title: CSS
+      img: https://skillicons.dev/icons?i=css
+      icon: fab fa-css3
+      color: "#4fc1e8"
 
 careers:
   title: 生涯
   subtitle: 无限进步
-  image: https://s3.qjqq.cn/47/67a216483c354.png!color
+  image: 
   items:
     - color: "#357ef5"
-      school: 软件工程
-      major: 学习
+      school: 
+      major: 
 
 motto:
   title: 座右铭
@@ -36,9 +40,9 @@ motto:
   content: 勇往直前。
 
 expertise:
-  title: 专长
-  prefix: 数学, 物理
-  specialist: 专家
+  title: 爱好广泛
+  prefix: 
+  specialist: 
   content: 学习能力
   level: MAX
 
@@ -46,11 +50,8 @@ cause:
   tip: 初衷
   title: 
   content: 
-    - 记录生活
-    - 分享经验
-    - 交流学习
+    - 记录生活<br>分享经验<br>交流学习<br>
    
-
 game:
   - title: 游戏爱好
     img: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
@@ -58,14 +59,12 @@ game:
     box_shadow: "0 -69px 203px 11px #04120f inset"
     icon_group:
       - https://stardewvalleywiki.com/mediawiki/images/b/b2/Animals_Icon.png
-      # - https://7.isyangs.cn/66/6738b472ce11f-66.webp
-      # - https://7.isyangs.cn/66/6738b48045a5b-66.webp
     tips_right: 1480310879
-  - title: 游戏爱好
-    img: 
+  - title: 空置
+    img: https://aozijx.github.io/xuao/src/img/love/不知火.png
     subtitle: 
-    box_shadow: "0 -69px 203px 11px #415dc9 inset"
-    tips_left: 
+    box_shadow: "0 -69px 203px 11px rgb(238, 138, 86) inset"
+    tips_left: PAJ
 
 tenyear:
   title: 十年

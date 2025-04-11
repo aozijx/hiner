@@ -6,7 +6,7 @@
 title: Hinerの小窝
 subtitle: ''
 description: 'Blog'
-keywords:
+keywords: 'Blog, 生活, 资源, 分享'
 author: Hiner
 language: zh-CN
 timezone: ''
@@ -21,35 +21,35 @@ pretty_urls:
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
 
 # Directory
-source_dir: source
-public_dir: public
-tag_dir: tags
-archive_dir: archives
-category_dir: categories
-code_dir: downloads/code
-i18n_dir: :lang
-skip_render:
+source_dir: source # 源文件目录，存放博客文章和资源文件。
+public_dir: public # 生成的静态文件目录，存放 Hexo 生成的静态文件。
+tag_dir: tags # 标签目录，存放标签页面。
+archive_dir: archives # 归档目录，存放归档页面。
+category_dir: categories # 分类目录，存放分类页面。
+code_dir: downloads/code # 代码目录，存放代码文件。
+i18n_dir: :lang # 多语言目录，存放多语言文件。
+skip_render: # 不需要渲染的文件或目录，支持 glob 模式。
 
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
-titlecase: false # Transform title into titlecase
-external_link:
-  enable: true # Open external links in new tab
-  field: site # Apply to the whole site
+titlecase: false # Transform title into titlecase # 将标题转换为标题大小写
+external_link: # 文章中外部链接的设置
+  enable: true # Open external links in new tab # 在新标签页中打开外部链接
+  field: site # Apply to the whole site # 应用于整个站点
   exclude: ''
-filename_case: 0
-render_drafts: false
-post_asset_folder: false
-relative_link: false
-future: true
+filename_case: 0 # 0: no change, 1: lower case, 2: upper case # 0: 不改变，1: 小写，2: 大写
+render_drafts: false # Render drafts # 渲染草稿
+post_asset_folder: false # Enable post asset folder # 启用文章资源文件夹
+relative_link: false # Enable relative link # 启用相对链接
+future: true # Allow publishing future posts # 允许发布未来的文章
 syntax_highlighter: highlight.js
 highlight:
   line_number: true
-  auto_detect: false
-  tab_replace: ''
-  wrap: false
-  hljs: false
+  auto_detect: false # 自动检测代码语言
+  tab_replace: '' # 替换 Tab 键
+  wrap: false # 是否换行
+  hljs: false # 是否使用 highlight.js 语法高亮
 prismjs:
   enable: false
   preprocess: true
@@ -92,18 +92,37 @@ katex:
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
-  per_page: 10
-  order_by: -date
+  path: '' # 首页路径（默认是空字符串）
+  per_page: 10 # 每页显示的文章数量
+  order_by: -date # 排序方式（按日期倒序）
 
 # Category & Tag
 default_category: uncategorized
-category_map:
-tag_map:
+category_map: # 分类映射
+  # 生活: life
+  # 旅行: travel
+  # 学习: study
+  # 技术: technology
+  # 随笔: essay
+  # 其他: other
+tag_map: # 标签映射
+
+
+# RSS 订阅配置
+feed:
+  type: atom       # 类型：atom/rss2（默认atom，兼容性更好）
+  path: atom.xml    # 生成的 RSS 文件路径（默认atom.xml）
+  limit: 20         # 最多包含的文章数量（默认全部）
+  hub:              # 可选，用于 WebSub/PubSubHubbub 通知的Hub地址
+  content: false    # 是否包含文章全文（默认仅摘要）
+  content_limit:    # 摘要长度（默认不限制）
+  order_by: -date   # 排序方式（按日期倒序）
+  icon: icon.png    # 可选，订阅图标
+  autodiscovery: true  # 自动在页面<head>中添加RSS链接
 
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
-meta_generator: true
+meta_generator: true # Add generator meta tag # 添加生成器 meta 标签
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
@@ -112,12 +131,12 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## updated_option supports 'mtime', 'date', 'empty'
-updated_option: 'mtime'
+updated_option: 'mtime' # 'mtime' (modified time), 'date' (published date), 'empty' (no updated date) # 更新日期选项
 
 # Pagination
 ## Set per_page to 0 to disable pagination
-per_page: 10
-pagination_dir: page
+per_page: 10 # 每页显示的文章数量
+pagination_dir: page # 分页目录
 
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder

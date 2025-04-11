@@ -62,11 +62,11 @@ nav:
   right:
     random: true # Random article / 随机文章按钮
     custom:
-    #  - name: 开往 # 名字
-    #    url: https://www.travellings.cn/go.html # 跳转链接
-    #    icon: fas fa-train # 图标
-    #    onclick: # 点击事件
-    #    id: travellings_button # id
+     - name: 开往 # 名字
+       url: https://www.travellings.cn/go.html # 跳转链接
+       icon: fas fa-train # 图标
+       onclick: # 点击事件
+       id: travellings_button # id
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -135,7 +135,7 @@ aside:
   # Sticky: Fixed position / noSticky: Not fixed position
   # Sticky: 固定位置 / noSticky: 不固定位置
   home: # on the homepage
-    noSticky: "about, calendar, schedule"
+    noSticky: "about, calendar"
     Sticky: "allInfo"
   post: # on the article page
     noSticky: "about"
@@ -388,7 +388,6 @@ background:
   opacity: .1
   # dark: https://i.pinimg.com/originals/d8/b3/9d/d8b39d12b653810db452c437211aeb2e.png
   dark: https://cdn.img2ipfs.com/ipfs/QmTd4MFYHGjuRKNXEzoVpzWoayCLvx4cCpPJYr6QoKNKQy?filename=d8b39d12b653810db452c437211aeb2e.png
-  # dark: https://webp.mingcy.cn/
   # light: https://i.pinimg.com/originals/93/57/38/935738ed9657b296c2ef0ebd2151eb66.jpg
 # --------------------------- end ---------------------------
 
@@ -406,7 +405,7 @@ lure:
 # Article expiration
 # 文章过期
 expire:
-  enable: false
+  enable: true
   time: 30 # days
   position: top # top / bottom
   text_prev: "This article expired "
@@ -427,7 +426,7 @@ index_post_list:
 # 相关文章
 related_post:
   enable: true
-  limit: 1
+  limit: 2
   # created: release date / updated: update date
   # created: 发布日期 / updated: 更新日期
   date_type: created
@@ -553,11 +552,11 @@ footer:
   information:
     author: https://aozijx.github.io/xuao/src/img/cat.gif
     left:
-      Github: https://github.com/aozijx || fab fa-github # 名称: 链接 || 图标u
+      # Github: https://github.com/aozijx || fab fa-github # 名称: 链接 || 图标u
       Mail: mailto:xxhtxml@outlook.com || far fa-envelope
     right:
       Bilibili: https://space.bilibili.com/522238567 || fab fa-bilibili
-      Douyin: https://v.douyin.com/yKIxrIQOcJI/ || fab fa-tiktok
+      # Douyin: https://v.douyin.com/yKIxrIQOcJI/ || fab fa-tiktok
   # 友情链接
   group:
     # 导航:
@@ -570,7 +569,7 @@ footer:
     #   Copyright: /copyright/
 
   # 随机友链
-  randomlink: false # 随机友链
+  randomlink: true # 随机友链
 
   # 备案
   beian:
@@ -602,7 +601,7 @@ footer:
 errorpage:
   img: img/404.avif
   text: =awa= Page Not Found # Text
-  recommendList: true
+  recommendList: false
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -658,9 +657,9 @@ lazyload:
   # post, site
   field: site
   # 加载时替换图
-  placeholder: ""
+  placeholder: "/img/default.avif"
   # 加载失败替换图
-  errorimg: img/error_load.avif
+  errorimg: "/img/error_load.avif"
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -702,10 +701,10 @@ highlight:
 # --------------------------- start ---------------------------
 # Lightbox
 # 图片灯箱
-lightbox: false
+lightbox: true
 # warning: Please select any one, but cannot be turned on at the same time.
 # 警告: 请任选其一，但不能同时开启。
-fancybox: false # fancybox
+fancybox: true # fancybox
 mediumZoom: false # mediumZoom
 # --------------------------- end ---------------------------
 
@@ -783,7 +782,7 @@ extends:
   # 插入到 head
   head:
   #  - <script src="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js"></script>
-   - <script src="js/copylink.js" async></script>
+   - <script src="./js/copylink.js" async></script>
   # Insert in body
   # 插入到 body
   body:

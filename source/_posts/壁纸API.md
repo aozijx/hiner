@@ -3,7 +3,7 @@ title: 壁纸 API
 date: 2025-03-30 15:28:00
 author:
 categories: 
-tags:
+tags: [壁纸]
 cover: https://moe.jitsu.top/img/?sort=pc&34
 ---
 分享一些图片或者壁纸 API ,仅收集
@@ -13,10 +13,14 @@ cover: https://moe.jitsu.top/img/?sort=pc&34
 <img src="https://picsum.photos/1920/1080" onclick="changeImage(this)" alt="" >
 
 ## 必应壁纸
+<img src="https://www.cn.bing.com/th?id=OHR.CherryBlossomDC_EN-US9897772834_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp" onclick="changeImage(this)" alt="" >
 <img src="https://api.xsot.cn/bing?jump=true" onclick="changeImage(this)" alt="" >
 
 ## 超级小兔的随机图
 <img src="https://imgapi.xl0408.top/index.php" onclick="changeImage(this)" alt="">
+
+## 忘了
+<img src="https://webp.mingcy.cn/" onclick="changeImage(this)" alt="">
 
 ## [动漫高清壁纸 - 岁月小筑](https://cloud.qqshabi.cn/apidetail/33.html)
 <img src="https://cloud.qqshabi.cn/api/images/api.php" onclick="changeImage(this)" alt="">
@@ -299,6 +303,17 @@ function changeImages(e) {
         t = setTimeout(() => t = null, delay);
     }
     }
+</script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('a.fancybox').forEach(a => {
+            const img = a.querySelector('img');
+            if (img) {
+            // 用 img 标签替换 a 标签
+            a.parentNode.replaceChild(img, a);
+            }
+        });
+    })
 </script>
 <script>
 async function fetchText(e) {  // 接收被点击的元素

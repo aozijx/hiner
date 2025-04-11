@@ -256,6 +256,31 @@ links:
         descr: 圈住小猫
         avatar: data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBoZWlnaHQ9IjEwMy40MjUwMDAwMDAwMDAwMXB4IiB3aWR0aD0iNzAuMzVweCIgdmlld0JveD0iMCAgMCA0Ni45IDY4Ljk1Ij4KICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgxLjAsIDAuMCwgMC4wLCAxLjAsIDI4LjksIDU5LjI1KSI+CiAgICA8dXNlIGhlaWdodD0iMzMuMzUiIHRyYW5zZm9ybT0ibWF0cml4KDEuMCwgMC4wLCAwLjAsIDEuMCwgLTExLjYsIC0yMy42NSkiIHdpZHRoPSIyNy4zNSIgeGxpbms6aHJlZj0iI3NoYXBlMCIvPgogICAgPHVzZSBoZWlnaHQ9IjE5Ljc1IiB0cmFuc2Zvcm09Im1hdHJpeCgxLjAsIDAuMCwgMC4wLCAxLjAsIC0xMy45NSwgLTM1LjkpIiB3aWR0aD0iMTguNDUiIHhsaW5rOmhyZWY9IiNzaGFwZTEiLz4KICA8L2c+CiAgPGRlZnM+CiAgICA8ZyBpZD0ic2hhcGUwIiB0cmFuc2Zvcm09Im1hdHJpeCgxLjAsIDAuMCwgMC4wLCAxLjAsIDExLjYsIDIzLjY1KSI+CiAgICAgIDxwYXRoIGQ9Ik0xMC4xNSAyLjYgUTExLjQgMS45NSAxMi4zIDAuMSAxMy4yNSAtMS43IDEzLjI1IC0zLjQgMTMuMjUgLTYuOSAxMC42NSAtMTEuMSA4LjAgLTE1LjM1IDguMCAtMTYuOTUgTDguMSAtMTkuMSBROC40IC0yMC4yNSA5LjY1IC0yMS4xNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iNS4wIi8+CiAgICAgIDxwYXRoIGQ9Ik05LjYgLTAuOCBROS42IDIuNSA3LjM1IDQuODUgNS4xIDcuMiAxLjkgNy4yIC0xLjMgNy4yIC0zLjU1IDQuODUgLTUuOCAyLjUgLTUuOCAtMC44IC01LjggLTQuMSAtMy41NSAtNi40NSAtMS4zIC04LjggMS45IC04LjggNS4xIC04LjggNy4zNSAtNi40NSA5LjYgLTQuMSA5LjYgLTAuOCIgZmlsbD0iIzAwMDAwMCIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2U9Im5vbmUiLz4KICAgICAgPHBhdGggZD0iTTkuNiAtMC44IFE5LjYgMi41IDcuMzUgNC44NSA1LjEgNy4yIDEuOSA3LjIgLTEuMyA3LjIgLTMuNTUgNC44NSAtNS44IDIuNSAtNS44IC0wLjggLTUuOCAtNC4xIC0zLjU1IC02LjQ1IC0xLjMgLTguOCAxLjkgLTguOCA1LjEgLTguOCA3LjM1IC02LjQ1IDkuNiAtNC4xIDkuNiAtMC44IFoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMDAwMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjUuMCIvPgogICAgICA8cGF0aCBkPSJNMy40IC0xMy4zIFEzLjQgLTEwLjY1IDEuNiAtOC44IC0wLjI1IC02LjkgLTIuODUgLTYuOSAtNS40IC02LjkgLTcuMjUgLTguOCAtOS4xIC0xMC42NSAtOS4xIC0xMy4zIC05LjEgLTE1Ljk1IC03LjI1IC0xNy44NSAtNS40IC0xOS43IC0yLjg1IC0xOS43IC0wLjI1IC0xOS43IDEuNiAtMTcuODUgMy40IC0xNS45NSAzLjQgLTEzLjMiIGZpbGw9IiMwMDAwMDAiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSJub25lIi8+CiAgICAgIDxwYXRoIGQ9Ik0zLjQgLTEzLjMgUTMuNCAtMTAuNjUgMS42IC04LjggLTAuMjUgLTYuOSAtMi44NSAtNi45IC01LjQgLTYuOSAtNy4yNSAtOC44IC05LjEgLTEwLjY1IC05LjEgLTEzLjMgLTkuMSAtMTUuOTUgLTcuMjUgLTE3Ljg1IC01LjQgLTE5LjcgLTIuODUgLTE5LjcgLTAuMjUgLTE5LjcgMS42IC0xNy44NSAzLjQgLTE1Ljk1IDMuNCAtMTMuMyBaIiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1LjAiLz4KICAgICAgPHBhdGggZD0iTS03LjI1IDIuNzUgUS03LjAgNC40NSAtNS43NSA0LjQgLTQuMyA0LjMgLTQuMCA1LjAgLTMuNDUgNi4xIC0yLjcgNi41IEwtMC41IDYuNzUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMDAwMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjUuMCIvPgogICAgICA8cGF0aCBkPSJNLTcuMjUgLTE1LjAgTC03LjAgLTQuMzUgLTcuMSAtMC43NSBRLTcuNDUgMS4yNSAtOC43NSAxLjAgTC04Ljc1IDIuMjUgLTguNSAyLjI1IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1LjAiLz4KICAgICAgPHBhdGggZD0iTTMuMCAtMTIuMjUgUTQuMDUgLTEyLjQgNC40NSAtMTAuNiA0LjkgLTguNzUgNi4yNSAtOC43NSA2LjE1IC03Ljg1IDYuNTUgLTYuMTUgTDcuMCAtNC4wIiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1LjAiLz4KICAgIDwvZz4KICAgIDxnIGlkPSJzaGFwZTEiIHRyYW5zZm9ybT0ibWF0cml4KDEuMCwgMC4wLCAwLjAsIDEuMCwgMTEuMTUsIDQwLjIpIj4KICAgICAgPHBhdGggZD0iTTcuMjUgLTI3LjI1IFE2Ljk1IC0yNC4wIDQuMSAtMjIuOCAxLjQgLTIwLjE1IC0zLjAgLTIwLjUgLTUuNTUgLTIxLjM1IC03Ljk1IC0yMi42NSAtMTAuOSAtMjQuMyAtMTEuMTUgLTI3Ljg1IC0xMS4zNSAtMzEuMjUgLTkuMTUgLTMzLjkgLTYuOTUgLTM2LjYgLTMuNTUgLTM3LjA1IC0wLjE1IC0zNy40NSAyLjY1IC0zNS41NSA1LjQ1IC0zMy42IDYuNyAtMzAuNDUgNy40IC0yOC45NSA3LjI1IC0yNy4yNSIgZmlsbD0iIzAwMDAwMCIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2U9Im5vbmUiLz4KICAgICAgPHBhdGggZD0iTTIuMzUgLTQwLjE1IFE0LjA1IC00MC42IDUuODUgLTMzLjcgNi40IC0zMS41NSA2LjM1IC0zMC44NSBMNS4xIC0zMC41IFEyLjQ1IC0zMS42IDAuOTUgLTMyLjYgLTEuMSAtMzMuOTUgLTEuOSAtMzUuNTUgTC0xLjggLTM1LjYgLTEuNyAtMzUuOCAtMC45NSAtMzUuNiAtMC42IC0zNS40NSAwLjQ1IC0zNy44IFExLjU1IC0zOS45NSAyLjM1IC00MC4xNSBNLTEwLjcgLTM1LjUgTC0xMC4yNSAtMzkuOTUgUS04Ljk1IC0zOS4yNSAtNy44NSAtMzguMzUgLTYuMDUgLTM2Ljk1IC01LjcgLTM1LjggLTUuMzUgLTM0LjM1IC02Ljg1IC0zMi44IC04LjEgLTMxLjQgLTkuOCAtMzAuOCAtMTAuNzUgLTMyLjU1IC0xMC43IC0zNS41IiBmaWxsPSIjMDAwMDAwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZT0ibm9uZSIvPgogICAgPC9nPgogIDwvZGVmcz4KPC9zdmc+
 
+  - class_name: H5 Games
+    descr: H5 游戏
+    type: card
+    suffix:
+    link_list:
+      - name: 🌊游戏大全
+        link: https://game.haiyong.site/
+        descr: 
+        topimg: https://code.haiyong.site/wp-content/uploads/2024/03/微信图片_20220914125812.jpg
+      
+      - name: Github
+        link: https://github.com/wanghao221/moyu
+        descr: 源码
+        topimg: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+      
+      - name: 跳一跳
+        link: https://game.haiyong.site/tyt/
+        descr: 
+        topimg: https://game.haiyong.site/img/moyu/tyt.png
+
+      - name: 3D小车车
+        link: https://game.haiyong.site/cheche/
+        descr: 
+        topimg: https://game.haiyong.site/img/moyu/cheche.png
+      
   - class_name: 其他
     descr: 其他工具
     type: item 
@@ -263,25 +288,30 @@ links:
     link_list: 
       - name: 又拍云
         link: https://console.upyun.com/
-        descr: 又拍云 # 简介
+        descr: 又拍云
         avatar: https://console.upyun.com/assets/favicon.png
 
       - name: 站长工具
         link: https://tool.chinaz.com/
-        descr: 提供网站查询、SEO优化、网站测速等服务 # 简介
-        avatar: https://tool.chinaz.com/favicon.ico
+        descr: 提供网站查询、SEO优化、网站测速等服务
+        avatar: https://csstools.chinaz.com/favicon.ico
       
       - name: 开发者导航栏
         link: https://codernav.com/
-        descr: 陌上花开，可缓缓归矣。 # 简介
+        descr: 陌上花开，可缓缓归矣。
         avatar: https://cdn.img2ipfs.com/ipfs/QmaPVZGtoHG9bDcvskA9ns5FjYBTr5Gdjr31iDpkB1nQ4X?filename=favicon.png
+
+      - name: 霂明导航
+        link: https://n.mumingfang.com/
+        descr: 创意工作者的优质导航
+        avatar: https://n.mumingfang.com/wp-content/uploads/2024/04/cropped-logo-7-32x32.png
 
       - name: 在线工具箱
         link: https://tool.lu/
-        descr: 在线工具箱，提供多种在线工具 # 简介
+        descr: 在线工具箱，提供多种在线工具
         avatar: https://tool.lu/favicon.ico
 
       - name: 在线图片压缩器
         link: https://tinypng.com/
-        descr: 在线图片压缩器，支持多种图片格式压缩 # 简介
+        descr: 在线图片压缩器，支持多种图片格式压缩
         avatar: https://tinypng.com/images/favicon.ico
