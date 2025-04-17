@@ -272,6 +272,116 @@ details[open]>summary:hover:after {
   font-size: inherit;
   letter-spacing: normal;
 }
+div.timenode {
+  position: relative;
+}
+div.timenode:before,
+div.timenode:after {
+  content: '';
+  z-index: 1;
+  position: absolute;
+  background: var(--efu-theme);
+  width: 2px;
+  left: 7px;
+}
+div.timenode:before {
+  top: 0;
+  height: 6px;
+}
+div.timenode:after {
+  top: 26px;
+  height: 100%;
+}
+div.timenode:last-child:after {
+  height: calc(100% - 26px - 16px);
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+div.timenode .timeline-title {
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  font-weight: bold;
+}
+div.timenode .meta {
+  position: relative;
+  line-height: 32px;
+  height: 32px;
+  left: 27px;
+}
+div.timenode .meta:before,
+div.timenode .meta:after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  z-index: 2;
+  left: -27px;
+}
+div.timenode .meta:before {
+  background: var(--efu-theme);
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+}
+div.timenode .meta:after {
+  background: var(--efu-card-bg);
+  margin-left: 2px;
+  margin-top: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  transform: scale(0.5);
+  transition: all 0.28s ease;
+}
+div.timenode .meta p {
+  font-weight: 500;
+  margin: 0;
+}
+div.timenode .body {
+  margin: 4px 0 16px 24px;
+  padding: 16px;
+  border-radius: 8px;
+  background: var(--blockquote-bg);
+}
+div.timenode .body p {
+  margin: 0 !important;
+}
+div.timenode .body p:first-child {
+  margin-top: 0;
+}
+div.timenode .body p:last-child {
+  margin-bottom: 0;
+}
+div.timenode:hover .meta:before {
+  background: var(--efu-theme);
+}
+div.timenode:hover .meta:after {
+  background: var(--efu-theme-op);
+  transform: scale(1);
+}
+.st-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border: var(--style-border);
+  border-radius: 8px;
+  background-color: var(--efu-card-btn-bg);
+  color: var(--efu-fontcolor);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.st-btn:hover {
+  border: var(--style-border-hover);
+  background-color: var(--efu-theme-op);
+}
+.st-btn i {
+  font-size: 1.2em;
+  vertical-align: middle;
+  transition: all 0.3s;
+}
+.st-btn span {
+  margin-left: 0.5em;
+}
 .keyboard-tag {
   border: 1px solid var(--efu-secondbg);
   font-size: 0.7em;
@@ -283,6 +393,31 @@ details[open]>summary:hover:after {
   padding: 1px 5px;
   position: relative;
   top: -1.5px;
+}
+.spoiler.blur-text {
+  filter: blur(3px) !important;
+  padding: 5px;
+  cursor: default;
+  user-select: none !important;
+  transition: filter 0.4s ease 0.15s;
+}
+.spoiler.blur-text:hover,
+.spoiler.blur-text:focus {
+  user-select: auto !important;
+  filter: blur(0) !important;
+}
+.spoiler.block-text {
+  background-color: var(--efu-fontcolor) !important;
+  color: transparent !important;
+  cursor: default;
+  user-select: none !important;
+  transition: background-color 0.4s ease 0.15s, color 0.3s ease 0.15s;
+}
+.spoiler.block-text:hover,
+.spoiler.block-text:focus {
+  color: inherit !important;
+  user-select: auto !important;
+  background-color: transparent !important;
 }
 .card_box {
   display: flex;
