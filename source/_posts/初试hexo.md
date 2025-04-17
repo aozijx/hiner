@@ -26,9 +26,9 @@ sticky: 100
 mathjax: false        
 ```
 ## 外挂标签
-### **Tabs**
+### tabs
 标签页标签，用于显示标签页。
-{% tabs test %}
+{% tabs tabs %}
 <!-- tab 语法 -->
 ```markdown
 {% tabs 唯一名称, [index] %}
@@ -82,12 +82,12 @@ mathjax: false
 <!-- endtab -->
 {% endtabs %}
 
-### **Fold**
+### 折叠 fold
 折叠标签，用于显示折叠内容。
-{% tabs Fold %}
+{% tabs fold %}
 <!-- tab 语法 -->
 ```markdown
-{% fold 'title' open %}
+{% fold [title] open %}
 content
 {% endfold %}
 ```
@@ -107,12 +107,12 @@ content
 <!-- endtab -->
 {% endtabs %}
 
-### **Card**
-Card 标签，用于显示卡片。
-{% tabs Card %}
+### 卡片 card
+card 标签，用于显示卡片。
+{% tabs card %}
 <!-- tab 语法 -->
 ```markdown
-{% card 'title','url','cover','score','desc','icon','tag','width','height' %}
+{% card [title],[url],[cover],[score],[desc],[icon],[tag],[width],[height] %}
 ```
 <!-- endtab -->
 
@@ -137,5 +137,93 @@ Card 标签，用于显示卡片。
 <!-- endtab -->
 <!-- tab 效果 -->
 {% card '诡秘之主','https://book.qidian.com/info/1010868264/','https://bookcover.yuewen.com/qdbimg/349573/1010868264/300','4.5','第一次接触这种西方文学小说，刚开始感觉看不懂，断断续续看了很多次。后来越看越觉好看，每次看甚至都需要查“文档”','fa-solid fa-book-open','小说' %}
+{% card 崩坏：星穹铁道, https://sr.mihoyo.com/, https://bu.dusays.com/2024/10/28/671f2b2119bcf.webp, 5, 健康阳光积极向上的欢乐向回合制 Gacha 游戏, fas fa-gamepad, JRPG, 450px, 275px %}
+<!-- endtab -->
+{% endtabs %}
+
+### 时间轴 timeline
+{% tabs timeline %}
+<!-- tab 语法 -->
+```markdown
+{% timeline [时间轴标题] %}
+{% timenode [时间节点标题] %}
+内容
+{% endtimenode %}
+{% timenode [时间节点标题] %}
+内容
+{% endtimenode %}
+{% endtimeline %}
+```
+<!-- endtab -->
+
+<!-- tab 示例 -->
+```markdown
+{% timeline 时间轴样式预览 %}
+{% timenode 2024-09-01 %}
+更新 ijkl。
+{% endtimenode %}
+{% timenode 2020-11-21 %}
+更新 efgh。
+{% endtimenode %}
+{% timenode 2010-02-02 %}
+更新 abcd。
+{% endtimenode %}
+{% timenode 2000-01-01 %}
+发布文章。
+{% endtimenode %}
+{% endtimeline %}
+```
+<!-- endtab -->
+<!-- tab 效果 -->
+{% timeline 时间轴样式预览 %}
+{% timenode 2024-09-01 %}
+更新 ijkl。
+{% endtimenode %}
+{% timenode 2020-11-21 %}
+更新 efgh。
+{% endtimenode %}
+{% timenode 2010-02-02 %}
+更新 abcd。
+{% endtimenode %}
+{% timenode 2000-01-01 %}
+发布文章。
+{% endtimenode %}
+{% endtimeline %}
+<!-- endtab -->
+{% endtabs %}
+
+### 按钮 button
+{% tabs button %}
+<!-- tab 语法 -->
+```markdown
+{% button [icon] [content] [link] %}
+```
+<!-- endtab -->
+<!-- tab 示例 -->
+```markdown
+{% button 'fas fa-music' '音乐馆' '/music/' %}
+```
+<!-- endtab -->
+<!-- tab 效果 -->
+{% button 'fas fa-music' '音乐馆' '../../../../music/' %}
+<!-- endtab -->
+{% endtabs %}
+
+### 剧透文本 spoiler
+{% tabs button %}
+<!-- tab 语法 -->
+```markdown
+{% spoiler [样式] [文字] %}
+```
+<!-- endtab -->
+<!-- tab 示例 -->
+```markdown
+记忆里曾触及的那抹存在，如{% spoiler block 雾霭中的花 %}，依旧在时光里摇曳。
+往昔谈及的那份故事，像夜空中的流云，缥缈又令人{% spoiler blur 难以忘怀 %}。
+```
+<!-- endtab -->
+<!-- tab 效果 -->
+记忆里曾触及的那抹存在，如{% spoiler block 雾霭中的花 %}，依旧在时光里摇曳。
+往昔谈及的那份故事，像夜空中的流云，缥缈又令人{% spoiler blur 难以忘怀 %}。
 <!-- endtab -->
 {% endtabs %}

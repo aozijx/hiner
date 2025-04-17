@@ -6,9 +6,7 @@ categories: [游戏]
 tags: [steam, 星露谷物语, Mod]
 cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 ---
-
 ## 一、安装 SMAPI（Mod 加载器）
-
 ### 下载 SMAPI
 - PC: 
   {% link 'SMAPI' 'GitHub，选择 SMAPI 4.1.10 installer.zip 下载' 'https://github.com/Pathoschild/SMAPI/releases/tag/4.2.1' %}
@@ -84,6 +82,14 @@ Mod 故障排查
 {% link 'SMAPI log parser' '日志解析器' 'https://smapi.io/log' %}
 
 > 按照以上步骤操作，即可畅玩星露谷物语的 Mod 内容！遇到问题可查阅 SMAPI 官方文档 或社区论坛。
-{% fold '' %}
+{% fold '小技巧' %}
 - 可以在已游玩存档的任何时期添加 Mod 
+- 遇到“这个角色属于另一位玩家”，找到存档，记事本打开，快捷键 {% keyboard 'Ctrl' %} + {% keyboard 'F' %} 寻找 `<farmhand>` ，找到角色名称后向后寻找 `<userID>xxx</userID>` ，意思是只有指定 ID 的玩家可以加入游戏，改成 `<userID />` 。
+- 主机位置 `<player>`
+- 从机位置 `<farmhand>`
+- 房屋代码 `<farmhouse>`
+- 房屋等级 `<houseUpgradeLevel>`
+- 记录献祭及各种邮件内容 `<mailReceived>`
+- 记录看过的情景等等的内容 `<eventsSeen>`
+- 记录玩家 ID 识别哪只动物是哪个玩家买的 `<UniqueMultiplayerID>`
 {% endfold %}

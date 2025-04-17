@@ -6,6 +6,17 @@ categories:
 tags: [壁纸]
 cover: https://moe.jitsu.top/img/?sort=pc&34
 ---
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('a.fancybox').forEach(a => {
+            const img = a.querySelector('img');
+            if (img) {
+            // 用 img 标签替换 a 标签
+            a.parentNode.replaceChild(img, a);
+            }
+        });
+    })
+</script>
 分享一些图片或者壁纸 API ,仅收集
 >点击切图
 ## [Lorem Picsum](https://picsum.photos/)
@@ -295,25 +306,14 @@ function changeImages(e) {
     const debounced = debounce(changeImage, 2000);
 </script>
 <script>
-    function debounceImmediate(func, delay) {
-    let t;
-    return function(...a) {
-        if (!t) f.apply(this, a);
-        clearTimeout(t);
-        t = setTimeout(() => t = null, delay);
+    function debounce(func, delay) {
+      let timer;
+      return function(...args) {
+          if (!timer) func.apply(this, args);
+          clearTimeout(timer);
+          timer = setTimeout(() => timer = null, delay);
+      }
     }
-    }
-</script>
-<script>
-    window.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('a.fancybox').forEach(a => {
-            const img = a.querySelector('img');
-            if (img) {
-            // 用 img 标签替换 a 标签
-            a.parentNode.replaceChild(img, a);
-            }
-        });
-    })
 </script>
 <script>
 async function fetchText(e) {  // 接收被点击的元素
