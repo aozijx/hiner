@@ -1,14 +1,37 @@
-- content: 视频播放测试！
-  date: 2023-10-31 15:32
+- content: 普通文字短文
+  date: 2025-04-21 20:30
+- content: B站视频短文
+  date: 2025-04-21 20:30
   video:
-    bilibili: BV1Cv4y1p717
-- content: 音乐播放测试！
-  date: 2023-10-31 15:32
+    bilibili: BV1sF411D7cq
+- content: 外链视频短文
+  date: 2025-04-21 20:30
+  video:
+    player: 视频直链
+- content: 音乐短文
+  date: 2025-04-21 20:30
   aplayer:
     server: netease
     id: 571340283
+- content: 图片短文（无图片描述）
+  date: 2025-04-21 20:30
+  image:
+    - https://aozijx.github.io/aozijx/wechat_qr_code.png
+- content: 图片短文（有图片描述）
+  date: 2025-04-21 20:30
+  image:
+    - url: https://aozijx.github.io/aozijx/wechat_qr_code.png
+      alt: wechat_qr_code
+- content: 链接短文
+  date: 2025-04-21 20:30
+  link: 链接
+- content: 地点短文
+  date: 2025-04-21 20:30
+  location: 发布地点
 - content: 主题交流群已建立！
-  date: 2023-10-31 15:32
+  date: 2025-04-21 20:30
   image:
     - https://7.isyangs.cn/1/65e9de42e32cd-1.png
+    - url: https://7.isyangs.cn/1/65e9de42e32cd-1.png
+      alt: 主题交流群
   link: https://efu.me/

@@ -2,13 +2,16 @@
 title: Git 命令
 date: 2025-04-05 00:57:35
 author: Hiner
-categories: 
-tags: 
-cover: img/default.avif
+categories: [Tips]
+tags: [Git]
+cover: https://cdn.img2ipfs.com/ipfs/QmURtNSS9x1u3UixkiPvCtM3K74EfFY3DRazvHgNERHmjv?filename=1725908068-git-logo.jpg
 ---
+
 {% link 'Git' '--fast-version-control' 'https://git-scm.com/book/zh/v2' %}
 {% link 'Git' '廖雪峰 Git 教程' 'https://www.shouce.ren/api/view/a/13825' %}
+
 ## 配置相关
+
 ```bash
 # 基础身份配置
 git config --global user.name "Your Name"       # 设置全局用户名
@@ -32,6 +35,7 @@ git config --global alias.st status          # st 代替 status
 ```
 
 ## 初始化本地仓库（如果项目未初始化）
+
 ```bash
 git init                            # 初始化新仓库
 git clone <远程仓库URL>             # 克隆远程仓库（含完整历史）
@@ -39,6 +43,7 @@ git clone --depth 1 <仓库URL>       # 浅克隆（仅最新版本，节省空�
 ```
 
 ## 文件操作
+
 ```bash
 # 添加文件到暂存区
 git add .                          # 添加所有变化（包括新建/修改/删除）
@@ -52,6 +57,7 @@ git mv <旧文件名> <新文件名>         # 重命名文件并暂存操作
 ```
 
 ## 提交管理
+
 ```bash
 git commit -m "提交描述"            # 标准提交
 git commit --amend                 # 修改最后一次提交（可修改描述/追加文件）
@@ -68,15 +74,17 @@ git commit --allow-empty -m "描述"  # 创建空提交（用于触发CI等场�
 ```
 
 ## 远程仓库管理
+
 ```bash
 git remote add origin <URL>        # 添加远程仓库（命名为origin）
 git remote -v                      # 查看远程仓库地址
 git remote rename origin new-name  # 重命名远程仓库
 git remote remove origin           # 删除远程仓库关联
 git push -u origin main            # 首次推送并建立跟踪关系
-```  
+```
 
 ## 分支操作
+
 ```bash
 # 基础分支操作
 git branch                         # 查看本地分支
@@ -99,6 +107,7 @@ git rebase main                    # 变基操作（整理提交历史，保持�
 ```
 
 ## 代码同步
+
 ```bash
 git pull                          # 拉取并合并（= git fetch + git merge）
 git pull --rebase                 # 拉取并使用变基合并（保持提交历史线性）
@@ -108,6 +117,7 @@ git push -f                       # 强制推送（覆盖远程历史，慎用�
 ```
 
 ## 撤销与恢复
+
 ```bash
 # 工作区撤销
 git restore <file>                # 撤销工作区修改（Git 2.23+）
@@ -130,6 +140,7 @@ git stash pop                     # 恢复最近暂存的工作进度
 ```
 
 ## 差异与日志
+
 ```bash
 git status                        # 查看当前仓库状态
 git diff                          # 工作区与暂存区差异
@@ -141,6 +152,7 @@ git blame <file>                  # 逐行查看文件修改历史
 ```
 
 ## 标签管理
+
 ```bash
 git tag v1.0                      # 创建轻量标签
 git tag -a v1.0 -m "版本说明"      # 创建带注释的标签
@@ -151,21 +163,40 @@ git push origin --delete v1.0     # 删除远程标签
 ```
 
 ## 场景：
+
 - 更改仓库分支名称
-   1. 本地分支重命名
+  1. 本地分支重命名
      ```bash
      git branch -m old-branch dev
      ```
-   2. 删除远程旧分支
+  2. 删除远程旧分支
      ```bash
      git push origin --delete old-branch
      ```
-   3. 推送新分支到远程并绑定
+  3. 推送新分支到远程并绑定
      ```bash
      git push -u origin dev
      ```
 
+- 追加小修小补的修改到上一次提交
+  1. 添加新修改到暂存区：
+     ```bash
+     git add .
+     ```
+  2. 修改上一次提交：
+     ```bash
+     git commit --amend -m "新的提交信息"
+     git commit --amend --no-edit #不用修改提交信息
+     ```
+  3. 强制推送：
+     ```bash
+     git push -f
+     ```
+
 ## 补救措施
+
 - 备份 .git 文件夹：如果误操作，可尝试恢复原有 .git 文件夹。
+
 ## 实现快捷操作
+
 - 在 Windows 或 MacOS 命令行中，可以直接将文件或者文件夹拖入窗口，实现快速输入路径

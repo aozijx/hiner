@@ -1,11 +1,12 @@
 ---
 title: 壁纸 API
 date: 2025-03-30 15:28:00
-author:
-categories: 
+author: Hiner
+categories: [Tips]
 tags: [壁纸]
 cover: https://moe.jitsu.top/img/?sort=pc&34
 ---
+
 <script>
     window.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('a.fancybox').forEach(a => {
@@ -316,31 +317,32 @@ function changeImages(e) {
     }
 </script>
 <script>
-async function fetchText(e) {  // 接收被点击的元素
+async function fetchText(el) {  // 直接接收元素作为参数
     try {
-        const el = e.target.closest('[data-src]') || e; // 事件委托精确查找
-        if (!el || el.tagName === 'IMG') return // 排除图片
-        el.textContent = '加载中...'
-        const res = await fetch(el.dataset.src + '?t=' + Date.now())
-        // 更严谨的状态码判断
-        if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
-        el.textContent = await res.text()
+        if (!el || el.tagName === 'IMG') return; // 排除图片
+        el.textContent = '加载中...';
+        const res = await fetch(el.dataset.src + '?t=' + Date.now());
+        // 修正变量名拼写错误
+        if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
+        el.textContent = await res.text();
     } catch (error) {
-        // 错误处理
         console.error('加载失败:', error);
-        el.textContent = '加载失败，点击重试'
-        el.style.color = 'red'
+        el.textContent = '加载失败，点击重试';
+        el.style.color = 'red';
     }
 }
+
 // 初始化绑定点击事件
 document.addEventListener('DOMContentLoaded', () => {
-    // 使用事件委托处理所有 data-src 元素的点击
+    // 使用事件委托处理点击
     document.body.addEventListener('click', e => {
-        if (e.target.closest('[data-src]')) fetchText(e)
-    })
-    // 初始化自动加载
-    document.querySelectorAll('[data-src]').forEach(el => {
-        fetchText(el); // 模拟点击事件对象
+        const targetEl = e.target.closest('[data-src]');
+        if (targetEl) fetchText(targetEl);
     });
-})
+    
+    // 初始化自动加载（直接传递元素）
+    document.querySelectorAll('[data-src]:not(img)').forEach(el => {
+        fetchText(el);
+    });
+});
 </script>

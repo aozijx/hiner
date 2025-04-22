@@ -13,12 +13,13 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://aozijx.github.io/hiner
+url: https://aozijx.github.io
+root: /hiner/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks # 设置为 false 以删除尾部的 'index.html' 后缀
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks # 设置为 false 以删除尾部的 '.html' 后缀
 
 # Directory
 source_dir: source # 源文件目录，存放博客文章和资源文件。
@@ -29,6 +30,11 @@ category_dir: categories # 分类目录，存放分类页面。
 code_dir: downloads/code # 代码目录，存放代码文件。
 i18n_dir: :lang # 多语言目录，存放多语言文件。
 skip_render: # 不需要渲染的文件或目录，支持 glob 模式。
+
+
+plugins:
+  - hexo-solitude-tag
+
 
 # Writing
 new_post_name: :title.md # File name of new posts

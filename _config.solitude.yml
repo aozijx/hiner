@@ -32,9 +32,9 @@ nav:
   # 左侧盒子
   group:
    project: # name
-     Solitude: https://github.com/everfu/hexo-theme-solitude || img/logo.png # name: url || icon
+     Solitude: https://github.com/everfu/hexo-theme-solitude || /img/logo.png # name: url || icon
    音乐馆: 
-     HeoMusic: /HeoMusic/ || HeoMusic/img/icon.webp
+     HeoMusic: /HeoMusic/ || /HeoMusic/img/icon.webp
 
   # Menu
   # 菜单
@@ -45,13 +45,13 @@ nav:
       全部分类: /categories/ || fas fa-clone
       全部标签: /tags/ || fas fa-tags
     友链:
-      朋友圈: /moments/ || fas fa-wifi
+      朋友圈: /essay/ || fas fa-wifi
       友情链接: /links/ || fas fa-user-group
+      弹幕: /message/ || fas fa-comment-dots
       # 宝藏博主: javascript:travelling() || fas fa-gift
     工具:
       音乐馆: /music/ || fas fa-music
       在线工具: /tlink/ || fas fa-toolbox
-      弹幕: /message/ || fas fa-comment-dots
     关于:
       我: about/ || fas fa-address-card
       图库: /Gallery/ || fas fa-images
@@ -86,7 +86,6 @@ hometop:
         img: https://i.postimg.cc/vBWVnY8q/html.png # url
         color: "#e9572b"
       JS:
-        # img: https://i.postimg.cc/3N10Ltv2/js.png
         img: data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iNTEycHgiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEycHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnIGlkPSJfeDMxXzg3LWpzIj48Zz48cmVjdCBoZWlnaHQ9IjQ1OS45OTgiIHN0eWxlPSJmaWxsOiNGMERCNEY7IiB3aWR0aD0iNDU5Ljk5NiIgeD0iMjYuMDAyIiB5PSIyNi4wMDEiLz48cGF0aCBkPSJNMjc2LjMzMSwzODQuNzU5YzAsNDQuNzY3LTI2LjI4Niw2NS4yLTY0LjU4Niw2NS4yYy0zNC42MDEsMC01NC42MjMtMTcuODY1LTY0Ljg5Mi0zOS41MjkgICAgbDM1LjIxOC0yMS4yNTVjNi43NzcsMTIuMDEzLDEyLjkzOCwyMi4xNzcsMjcuODI2LDIyLjE3N2MxNC4xNjksMCwyMy4yMDctNS41NDQsMjMuMjA3LTI3LjIwOFYyMzcuMjFoNDMuMjI3VjM4NC43NTkgICAgTDI3Ni4zMzEsMzg0Ljc1OXoiIHN0eWxlPSJmaWxsOiMzMjMzMzA7Ii8+PHBhdGggZD0iTTM3OC41OTgsNDQ5Ljk1OWMtNDAuMTQ3LDAtNjYuMTI0LTE5LjA5OS03OC43NTQtNDQuMTUxbDM1LjIxOS0yMC4zMzIgICAgYzkuMjQxLDE1LjA5NSwyMS4zNTYsMjYuMjg2LDQyLjYxMSwyNi4yODZjMTcuODY2LDAsMjkuMzY0LTguOTMyLDI5LjM2NC0yMS4zNTVjMC0xNC43ODctMTEuNzA0LTIwLjAyMS0zMS41Mi0yOC43NWwtMTAuNzgxLTQuNjIgICAgYy0zMS4yMTQtMTMuMjQ2LTUxLjg1My0yOS45ODMtNTEuODUzLTY1LjJjMC0zMi40NDcsMjQuNzQ1LTU3LjA5LDYzLjI0OC01Ny4wOWMyNy41MTgsMCw0Ny4yMzIsOS41NDksNjEuNDAyLDM0LjYwMyAgICBsLTMzLjY3OSwyMS41NjJjLTcuMzkyLTEzLjI0Ni0xNS40MDEtMTguNDgxLTI3LjgyNS0xOC40ODFjLTEyLjYzLDAtMjAuNjM5LDguMDEtMjAuNjM5LDE4LjQ4MSAgICBjMCwxMi45MzgsOC4wMDksMTguMTc2LDI2LjU5NCwyNi4yODVsMTAuNzgsNC42MjFjMzYuNzU5LDE1LjcxLDU3LjM5NywzMS44MzIsNTcuMzk3LDY3Ljk3NCAgICBDNDUwLjE2NCw0MjguNjAyLDQxOS41NjUsNDQ5Ljk1OSwzNzguNTk4LDQ0OS45NTlMMzc4LjU5OCw0NDkuOTU5eiIgc3R5bGU9ImZpbGw6IzMyMzMzMDsiLz48L2c+PC9nPjxnIGlkPSJMYXllcl8xIi8+PC9zdmc+
         color: "#f5cb4f"
       C:
@@ -117,12 +116,12 @@ hometop:
     sup: 置顶
     title: Solitude 官方文档
     url: https://solitude.js.org/
-    img: img/default.avif
+    img: /img/default.avif
     color: "none"
 
 # Article Top Banner
 # 文章推荐轮播图
-carousel: false
+carousel: true
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -151,8 +150,8 @@ aside:
   # 信息卡
   my_card:
     author:
-      img: img/logo.png # url
-      sticker: # url, 24x24 size
+      img: /img/logo.png # url
+      sticker: https://cdn.img2ipfs.com/ipfs/QmTmrb78DNFcx5ANzQCDqxC8tDvisqZAzWr9CZ9gdE64Sb?filename=Beach-512.webp # url, 24x24 size
     # 介绍 / Introduction
     description: 只有迎风，风筝才能飞得更高。
     # 内容 / Content
@@ -181,7 +180,7 @@ aside:
   toc:
     post: true
     page: true
-    vague: true
+    vague: true # 模糊搜索
   # --------------------------- end ---------------------------
 
   # --------------------------- start ---------------------------
@@ -243,7 +242,7 @@ page:
     # Default image when no cover is set
     # 未设置封面时的默认图片
     cover:
-      img/default.avif # 默认图片 / default cover
+     img/default.avif # 默认图片 / default cover
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -253,8 +252,8 @@ post:
   default:
     # Default image when no cover is set
     # 未设置封面时的默认图片
-    cover: /img/default.avif
-      # -  # 默认图片 / default cover
+    cover:
+      img/default.avif # 默认图片 / default cover
     # Location
     # 位置
     locate: China
@@ -299,12 +298,12 @@ post:
   # Reward
   # 打赏
   award:
-    enable: false
+    enable: true
     appreciators: /about/ # Reward page
     # Reward Title
     # 打赏标题
-    title: # Thanks for your appreciation. / 感谢您的赞赏
-    desc: # Because of your support, I realize the value of writing articles. / 由于您的支持，我才能够实现写作的价值。
+    title: 感谢您的赞赏 # Thanks for your appreciation.
+    desc: 因为您的支持，我才能够实现写作的价值。 # Because of your support, I realize the value of writing articles.
     # Reward list
     # 打赏列表
     list:
@@ -312,6 +311,14 @@ post:
       #   qcode: https://s3.qjqq.cn/47/661ba900c4bc1.webp!color
       #   url: https://github.com/sponsors/everfu
       #   color: var(--efu-black)
+      - name: WeChat
+        qcode: https://aozijx.github.io/aozijx/wechat_qr_code.png
+        url: https://aozijx.github.io/aozijx/wechat_qr_code.png
+        color: var(--efu-green)
+      - name: Alipay
+        qcode: https://aozijx.github.io/aozijx/alipay_qr_code.png
+        url: https://aozijx.github.io/aozijx/alipay_qr_code.png
+        color: var(--efu-blue)
 
   # Share icon
   # 分享图标
@@ -327,7 +334,7 @@ post:
       # - linkedin
       - link
       - qrcode
-  rss: # /atom.xml
+  rss: /atom.xml
   # Article reading progress
   # 文章封面取色
   covercolor:
@@ -552,11 +559,11 @@ footer:
   information:
     author: https://aozijx.github.io/xuao/src/img/cat.gif
     left:
-      # Github: https://github.com/aozijx || fab fa-github # 名称: 链接 || 图标u
+      Github: https://github.com/aozijx || fab fa-github # 名称: 链接 || 图标u
       Mail: mailto:xxhtxml@outlook.com || far fa-envelope
     right:
       Bilibili: https://space.bilibili.com/522238567 || fab fa-bilibili
-      # Douyin: https://v.douyin.com/yKIxrIQOcJI/ || fab fa-tiktok
+      Douyin: https://v.douyin.com/yKIxrIQOcJI/ || fab fa-tiktok
   # 友情链接
   group:
     # 导航:
@@ -599,7 +606,7 @@ footer:
 # 404 page
 # 404 页面
 errorpage:
-  img: img/404.avif
+  img: /img/404.avif
   text: =awa= Page Not Found # Text
   recommendList: false
 # --------------------------- end ---------------------------
@@ -782,11 +789,19 @@ extends:
   # 插入到 head
   head:
   #  - <script src="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js"></script>
-   - <script src="./js/copylink.js" async></script>
+   - <script src="hiner/js/copylink.js" async></script>
   # Insert in body
   # 插入到 body
   body:
   #  - <script src="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js"></script>
+   - <script src="https://cdn.jsdelivr.net/npm/greensock@1.20.2/dist/TweenLite.js"></script>
+   - <script src="https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js"></script>
+   - <script src="https://cdn.jsdelivr.net/npm/pixi.js@5.3.6/dist/pixi.min.js"></script>
+   - <script src="https://cdn.jsdelivr.net/npm/pixi-live2d-display@0.3.1/dist/cubism4.min.js"></script>
+   - <link href="https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/pio.css" rel="stylesheet" type="text/css"/>
+   - <script src="https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/pio.js"></script>
+   - <script src="https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/pio_sdk4.js"></script>
+   - <script src="https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/load.js"></script>
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -809,7 +824,7 @@ pwa:
 comment:
   # Which commenting system to use(e.g. waline or waline,twikoo)
   # 使用哪个评论系统（例如： waline or waline,twikoo）
-  use: # waline, twikoo, valine, artalk, giscus # Up to two comment systems can be turned on at the same time
+  use: twikoo # waline, , valine, artalk, giscus # Up to two comment systems can be turned on at the same time
   # Whether to display the hot comment switch.
   # 是否显示热门评论开关
   commentBarrage: false
@@ -818,7 +833,7 @@ comment:
   lazyload: false
   # Whether to display the comment count
   # 显示评论数
-  count: false
+  count: true
   # Sidebar displays the total number of comments
   # Sidebar 显示总评论数
   sidebar: false
@@ -840,10 +855,10 @@ comment:
     limit: 5 # 评论数 / Number of comments
 # Twikoo: https://solitude.js.org/comment/twikoo
 twikoo: # https://twikoo.js.org/
-  envId: # url: https://twikoo.sondy.top/
+  envId: https://twikoo-hiner.vercel.app # url: https://twikoo.sondy.top/
   region: # Environment locale, default is ap-shanghai, Tencent cloud environment fill ap-shanghai or ap-guangzhou; Vercel environment do not fill the.
   style: true # Use custom styles when turned on
-  accessToken: # AccessToken
+  accessToken:  AccessToken
   option: # twikoo option
 # Waline: https://solitude.js.org/comment/waline
 waline: # https://waline.js.org/
@@ -882,11 +897,7 @@ search:
   enable: true
   type:  local #/ algolia / docsearch
   tags:
-    - Solitude
     - Hexo
-    - Katex
-    - steam
-    - Mod
   # Algolia
   algolia:
     # hits:
@@ -895,7 +906,7 @@ search:
   # Local search
   local:
     preload: true
-    CDN: # url: search.xml
+    CDN: search.xml # url: search.xml
 
   # DocSearch
   # https://docsearch.algolia.com/
@@ -941,7 +952,7 @@ envelope:
 # Brevity Page
 # 即刻短文
 brevity:
-  enable: false
+  enable: true
   home_mini: true
   music: true
   page: /essay/

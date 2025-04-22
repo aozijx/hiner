@@ -1,9 +1,20 @@
-title: 关于本站
+authorinfo:
+  leftTags:
+    - 🤖️ 数码科技爱好者
+    - 🔍 分享与热心帮助
+    - 🏠 智能家居小能手
+  rightTags:
+    - 脚踏实地行动派 🏃
+    - 团队小组发动机 🧱
+    - 壮汉人狠话不多 💢
+  image: /img/logo.png # 头像
+
+title: 关于
 
 contentinfo: # Top personal information display
   sup: 你好，很高兴认识你👋
   name: 我是Hiner # Name
-  # title: 学生, 软件工程师, 独立开发者, 博主 # Introduction
+  title: 学生  # Introduction
   tip: 追求自我
   slogan: 创造源于灵感
   mask:
@@ -28,16 +39,28 @@ skills: # Add as needed
 careers:
   title: 生涯
   subtitle: 无限进步
-  image: 
+  image: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
   items:
     - color: "#357ef5"
-      school: 
-      major: 
+      school: XX
+      major: XX
+
+personalities:
+  tips: 性格
+  title: 提倡者
+  color: "#56a178"
+  type: INFJ-A
+  image: 
+  link: https://www.16personalities.com/
+  linkText: 16personalities
+  typeLink: https://www.16personalities.com/ch/infj-人格
+  typeName: 提倡者
+  myphoto: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 
 motto:
   title: 座右铭
-  prefix: 破釜沉舟，
-  content: 勇往直前。
+  prefix: 从此唯行乐，
+  content: 闲愁奈我何。
 
 expertise:
   title: 爱好广泛
@@ -45,26 +68,83 @@ expertise:
   specialist: 
   content: 学习能力
   level: MAX
+ 
+# comic 和 like-technology 二选一 你全要也可以
+likes:
+  - type: "comic"
+    tips: 爱好番剧 # 右上角提示
+    title: 追番 # 标题
+    subtips: "科幻、动漫、喜剧" # 左下小字，可不要
+    list: # 最好就是五个或以上，相信你们肯定没那么少的。
+      - name: 紫罗兰永恒花园 # 动漫或影视名
+        href: https://www.bilibili.com/bangumi/play/ss21542 # B站或豆瓣某个位置
+        cover: https://aozijx.github.io/xuao/src/img/love/Violet b.jpg
+      - name: 紫罗兰永恒花园外传：永远与自动手记人偶
+        href: https://www.bilibili.com/bangumi/play/ss31779
+        cover: https://aozijx.github.io/xuao/src/img/love/Violet.jpg
+      - name: 葬送的芙莉莲
+        href: https://www.bilibili.com/bangumi/play/ss46089
+        cover: https://aozijx.github.io/xuao/src/img/love/Frieren.jpg
+      - name: 国家队
+        href: 
+        cover: https://aozijx.github.io/xuao/src/img/love/02.jpg
+      - name: 你的名字
+        href: 
+        cover: https://aozijx.github.io/xuao/src/img/love/jun.jpg
+    button: true # false 可以关闭右边按钮
+    button_link: "https://www.bilibili.com/anime/"  # 跳转路径
+    button_text: "哔哩哔哩"   # 按钮文字
+  # - type: "like-technology"
+  #   bg: "https://images.418121.xyz/file/blog/page/movie.webp"
+  #   tips: "与她一起看"
+  #   title: "影视偏好"
+  #   subtips: "科幻、动漫、喜剧"
+  #   button: true
+  #   button_link: "movie"
+  #   button_text: "观看记录"
+  - type: "like-music"
+    bg: "https://images.418121.xyz/file/blog/page/yy.webp"
+    tips: "流行、轻音乐"
+    title: "歌单"
+    subtips: ""
+    button: true
+    button_link: "music"
+    button_text: "音乐库"      
 
-cause:
-  tip: 初衷
-  title: 
-  content: 
-    - 记录生活<br>分享经验<br>交流学习<br>
-   
 game:
   - title: 游戏爱好
     img: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
     subtitle: 星露谷物语
     box_shadow: "0 -69px 203px 11px #04120f inset"
     icon_group:
-      - https://stardewvalleywiki.com/mediawiki/images/b/b2/Animals_Icon.png
+      - /img/Animals_Icon.png
     tips_right: 1480310879
   - title: 空置
     img: https://aozijx.github.io/xuao/src/img/love/不知火.png
     subtitle: 
     box_shadow: "0 -69px 203px 11px rgb(238, 138, 86) inset"
     tips_left: PAJ
+
+tj: # 统计
+  provider: # 值为 51la（51la网站统计）或 baidu（百度统计）
+  url:  # 需要到51la官网注册自行获取 or 自行搭建 Heo 的 百度统计项目，填写访问地址即可
+  img: https://aozijx.github.io/xuao/src/img/love/不知火.png # 背景
+
+cause:
+  tip: 初衷
+  title: 
+  content: 
+    - 记录生活<br>分享经验<br>交流学习<br>
+
+oneself: # 按需填写
+  location: 中国，河南省 # 所在位置
+  birthYear: 2006 # 生日
+  university: XX大学 # 毕业学校
+  major: XXXX # 专业
+  occupation: 学生 # 职位
+  map: # 你所在位置的地图
+    light:  # 白天
+    dark:  # 夜晚
 
 tenyear:
   title: 十年

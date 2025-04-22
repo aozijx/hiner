@@ -1,8 +1,8 @@
 ---
 title: GitHub 加速
 date: 2025-03-15 12:48:50
-author:
-categories: [技术]
+author: 
+categories: [Tips]
 tags: [GitHub]
 cover: https://cdn.img2ipfs.com/ipfs/QmRV6AphA6xwWo6HeACHmrPHEchiX2681ZL8w2qyXKzdSp?filename=a4f651495c555f42d3b0de0122f914e1.png
 ---

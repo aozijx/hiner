@@ -4,7 +4,6 @@ date: 2025-03-13 22:37:43
 author: Hiner
 categories: [Tips]
 tags: [hexo]
-# cover: https://cdn.img2ipfs.com/ipfs/QmeBNLFU3QMkXFJm5tnXDVzwQakouyPbR4S8ahVGTLoGBE?filename=%E8%94%B7%E8%96%87%E8%8A%B1.jpeg
 cover: https://img.alicdn.com/imgextra/i2/2209748222339/O1CN010muxj21T9JF0IPCI2_!!2209748222339.jpg
 ---
 我遇到了代码高亮的问题，显示不正常等等，首先，在 hexo 根目录的 config 配置文件中缺少了 prismjs 的 enable: false 属性，然后关闭 highlight 的 wrap 和 hljs 属性等。

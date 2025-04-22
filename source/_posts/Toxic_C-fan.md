@@ -1,7 +1,7 @@
 ---
-title: test
+title: 饭圈
 date: 2025-04-16 21:09:51
-author:
+author: 
 categories:
 tags:
 cover: img/default.avif
@@ -9,7 +9,6 @@ cover: img/default.avif
 {% bvideo BV15joxY7E1S %}
 
 {% fold 'subtitle' %}
-[下载](https://aozijx.github.io/xuao/src/【限流区UP】学会相信群众的力量.srt)
 1
 0:0:0,4 --> 0:0:1,52
 好久都没跟乡亲们聊八卦了

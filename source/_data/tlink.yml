@@ -33,7 +33,7 @@ links:
       - name: PHOTOKIT # 名称
         link: https://photokit.com/colors/eyedropper/?lang=zh # 地址
         descr: 单击颜色吸管按钮并在屏幕上的任意位置选择一种颜色！ # 简介
-        avatar: https://photokit.com//colors/icons/EyeDropper.svg # 显示头像
+        avatar: https://photokit.com/images/icon512.png
 
   - class_name: CSS
     descr: CSS辅助工具在线网站
@@ -43,12 +43,22 @@ links:
       - name: CSS Gradient
         link: https://cssgradient.io/
         descr: CSS Gradient 是一个设计条纹项目，可让您为网站创建免费的渐变背景。
-        avatar: https://cssgradient.io/images/logo-55c31c59.svg
+        avatar: https://cssgradient.io/icon.svg?a62173ca109fae84
       
       - name: Fancy-Border-Radius
         link: https://9elements.github.io/fancy-border-radius/
         descr: Fancy Border Radius Generator
         avatar: https://9elements.github.io/fancy-border-radius/favicon-32x32.png
+      
+      - name: CSS Grid Generator
+        link: https://cssgridgenerator.io/
+        descr: CSS Grid 生成
+        avatar: https://cssgridgenerator.io/favicon.ico
+
+      - name: WebAIM 
+        link: https://webaim.org/resources/contrastchecker/
+        descr: 颜色对比检查器
+        avatar: https://webaim.org/favicon.ico
       
       - name: UIverse
         link: https://uiverse.io/
@@ -75,6 +85,11 @@ links:
         descr: 游戏
         avatar: https://css-animations.io/favicon.ico
 
+      - name: CSS property
+        link: https://caniuse.com/
+        descr: CSS 属性兼容性
+        avatar: https://caniuse.com/img/favicon-128.png
+
   - class_name: 矢量图
     descr: 擦亮眼睛，注意版权
     type: item 
@@ -98,7 +113,7 @@ links:
       - name: ICONS8
         link: https://icons8.com/icons
         descr: 1,405,300 free icons that match each other
-        avatar: https://maxst.icons8.com/vue-static/landings/primary-landings/favs/icons8_fav_32%C3%9732.png
+        avatar: https://maxst.icons8.com/vue-static/icon/favicon/icons8_fav_32%C3%9732.png
 
       - name: Devicon
         link: https://devicon.dev/
@@ -315,3 +330,23 @@ links:
         link: https://tinypng.com/
         descr: 在线图片压缩器，支持多种图片格式压缩
         avatar: https://tinypng.com/images/favicon.ico
+
+      - name: 菜鸟教程
+        link: https://www.runoob.com/
+        descr: 菜鸟教程，提供多种编程语言的在线教程
+        avatar: https://www.runoob.com/favicon.ico
+      
+      - name: W3School
+        link: https://www.w3school.com.cn/
+        descr: 领先的 Web 技术教程 - 全部免费
+        avatar: https://www.w3school.com.cn/ui2019/logo-32-red.png
+
+      - name: MDN
+        link: https://developer.mozilla.org/zh-CN/
+        descr: Resources for Developers, by Developers
+        avatar: https://developer.mozilla.org/favicon-192x192.png
+
+      - name: 编码：隐匿在计算机软硬件背后的语言
+        link: https://weread.qq.com/web/bookDetail/64e32bf071fd5a9164ece6b
+        descr: 编码：隐匿在计算机软硬件背后的语言
+        avatar: https://cdn.weread.qq.com/weread/cover/21/yuewen_33381009/t6_yuewen_333810091708675208.jpg

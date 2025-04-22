@@ -7,10 +7,12 @@ tags: [Katex]
 Katex: true
 cover: https://latex.codecogs.com/svg.image?&space;TIP
 ---
+
 ## 编辑网站
 {% link 'Katex' '官方演示' 'https://katex.org/#demo' %}
-- [CodeCogs公式编辑器](https://editor.codecogs.com/)
-- [iMathEQ数学工具](https://www.imatheq.com/corpsite/index.html)
+{% link 'Katex' 'CodeCogs公式编辑器' 'https://editor.codecogs.com/' %}
+{% link 'Katex' 'iMathEQ数学工具' 'https://www.imatheq.com/corpsite/index.html' %}
+
 ## Katex支持表
 {% link '官方支持表' '按类型排序' 'https://katex.org/docs/supported' %}
 {% link '官方支持表' '按字母顺序排序，其中列出了支持和不支持的函数。' 'https://katex.org/docs/support_table' %}
