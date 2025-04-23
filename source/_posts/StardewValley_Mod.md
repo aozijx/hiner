@@ -154,6 +154,7 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 ## DaisyNiko's Earthy Recolour
 {% link "DaisyNiko's Earthy Recolour" '全新的游戏重新着色！！ 这个模组编辑了所有户外瓦片，并包括新的自定义树木、挖掘点和草。 城镇建筑也进行了改造，看起来更自然，与地形相匹配。 适用于1.6' 'https://www.nexusmods.com/stardewvalley/mods/5255' %}
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/thumbnails/5255/5255-1663637218-706652866.png)
+
 {% gallery %}
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/thumbnails/5255/5255-1579753544-346970928.png)
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/5255/5255-1579753555-787300696.png)
@@ -169,6 +170,7 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 {% link 'Industrial Furniture Set - For CP and CF' '工业风格家具套装。包括 170+ 件。配有配套的双人床和婴儿床。
 全套家具可以搭配 Mi 的乡村家具和舒适的壁炉。' 'https://www.nexusmods.com/stardewvalley/mods/5444' %}
 ![](https://images.nexusmods.com/mod-headers/1303/5444.jpg)
+
 {% gallery %}
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/5444/5444-1582330283-252265938.png)
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/5444/5444-1582394787-893548201.png)
@@ -178,6 +180,7 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 
 ## (FS)Bangs2-hairstyle1228
 {% link '(FS)Bangs2-hairstyle1228' '新增10顶fs模式发型' 'https://www.nexusmods.com/stardewvalley/mods/30376' %}
+
 {% gallery %}
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/30376/30376-1735319452-606186301.jpeg)
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/30376/30376-1735495398-322376803.jpeg)
@@ -188,6 +191,7 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 {% link 'FS-Luoxue Chinese traditional clothing' '國風系列合集
 有不同時代、傳統的、改良的等等古風衣服
 62套衣服+5個配件+4個頭髮+4個下裙' 'https://www.nexusmods.com/stardewvalley/mods/30287' %}
+
 {% gallery %}
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/30287/30287-1735007885-2034140586.png)
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/30287/30287-1735007888-56599867.png)

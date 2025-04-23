@@ -32,9 +32,9 @@ nav:
   # 左侧盒子
   group:
    project: # name
-     Solitude: https://github.com/everfu/hexo-theme-solitude || /img/logo.png # name: url || icon
+     Solitude: https://github.com/everfu/hexo-theme-solitude || img/logo.png # name: url || icon
    音乐馆: 
-     HeoMusic: /HeoMusic/ || /HeoMusic/img/icon.webp
+     HeoMusic: /HeoMusic/ || HeoMusic/img/icon.webp
 
   # Menu
   # 菜单
@@ -152,7 +152,7 @@ aside:
   # 信息卡
   my_card:
     author:
-      img: /img/logo.png # url
+      img: img/logo.png # url
       sticker: https://cdn.img2ipfs.com/ipfs/QmTmrb78DNFcx5ANzQCDqxC8tDvisqZAzWr9CZ9gdE64Sb?filename=Beach-512.webp # url, 24x24 size
     # 介绍 / Introduction
     description: 只有迎风，风筝才能飞得更高。
@@ -791,7 +791,7 @@ extends:
   # 插入到 head
   head:
   #  - <script src="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js"></script>
-   - <script src="../js/copylink.js" async></script>
+   - <script src="http:aozijx.github.io/hiner/js/copylink.js" async></script>
   # Insert in body
   # 插入到 body
   body:
@@ -860,7 +860,7 @@ twikoo: # https://twikoo.js.org/
   envId: blog_hiner # url: https://twikoo.sondy.top/
   region: # Environment locale, default is ap-shanghai, Tencent cloud environment fill ap-shanghai or ap-guangzhou; Vercel environment do not fill the.
   style: true # Use custom styles when turned on
-  accessToken:  AccessToken
+  accessToken: 
   option: # twikoo option
 # Waline: https://solitude.js.org/comment/waline
 waline: # https://waline.js.org/
