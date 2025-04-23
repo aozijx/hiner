@@ -116,11 +116,13 @@ hometop:
     sup: 置顶
     title: Solitude 官方文档
     url: https://solitude.js.org/
-    img: /img/default.avif
+    img: img/default.avif
     color: "none"
 
 # Article Top Banner
 # 文章推荐轮播图
+# 使用方法：在文章的front matter中添加“recommend: true”
+# tip：建议开了这个就不要开hometop，其功能类似
 carousel: true
 # --------------------------- end ---------------------------
 
@@ -134,7 +136,7 @@ aside:
   # Sticky: Fixed position / noSticky: Not fixed position
   # Sticky: 固定位置 / noSticky: 不固定位置
   home: # on the homepage
-    noSticky: "about, calendar"
+    noSticky: "about"
     Sticky: "allInfo"
   post: # on the article page
     noSticky: "about"
@@ -242,7 +244,7 @@ page:
     # Default image when no cover is set
     # 未设置封面时的默认图片
     cover:
-     img/default.avif # 默认图片 / default cover
+      - img/default.avif # 默认图片 / default cover
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -253,7 +255,7 @@ post:
     # Default image when no cover is set
     # 未设置封面时的默认图片
     cover:
-      img/default.avif # 默认图片 / default cover
+      - img/default.avif # 默认图片 / default cover
     # Location
     # 位置
     locate: China
@@ -261,7 +263,7 @@ post:
     # 版权
     copyright:
       enable: true
-      author: /img/logo.png # url
+      author: img/logo.png # url
       # License
       # 许可证
       license: CC BY-NC-SA 4.0
@@ -789,7 +791,7 @@ extends:
   # 插入到 head
   head:
   #  - <script src="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js"></script>
-   - <script src="hiner/js/copylink.js" async></script>
+   - <script src="../js/copylink.js" async></script>
   # Insert in body
   # 插入到 body
   body:
@@ -855,7 +857,7 @@ comment:
     limit: 5 # 评论数 / Number of comments
 # Twikoo: https://solitude.js.org/comment/twikoo
 twikoo: # https://twikoo.js.org/
-  envId: https://twikoo-hiner.vercel.app # url: https://twikoo.sondy.top/
+  envId: blog_hiner # url: https://twikoo.sondy.top/
   region: # Environment locale, default is ap-shanghai, Tencent cloud environment fill ap-shanghai or ap-guangzhou; Vercel environment do not fill the.
   style: true # Use custom styles when turned on
   accessToken:  AccessToken
