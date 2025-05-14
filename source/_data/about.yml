@@ -55,7 +55,7 @@ personalities:
   linkText: 16personalities
   typeLink: https://www.16personalities.com/ch/infj-人格
   typeName: 提倡者
-  myphoto: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
+  myphoto: https://aozijx.github.io/xuao/src/img/love/不知火.png
 
 motto:
   title: 座右铭
@@ -117,13 +117,13 @@ game:
     subtitle: 星露谷物语
     box_shadow: "0 -69px 203px 11px #04120f inset"
     icon_group:
-      - /img/Animals_Icon.png
+      - src/img/Animals_Icon.png
     tips_right: 1480310879
-  - title: 空置
-    img: https://aozijx.github.io/xuao/src/img/love/不知火.png
-    subtitle: 
+  - title: steam
+    img: https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1293830/header_schinese.jpg
+    subtitle: 极限竞速：地平线4
     box_shadow: "0 -69px 203px 11px rgb(238, 138, 86) inset"
-    tips_left: PAJ
+    tips_left: 
 
 tj: # 统计
   provider: # 值为 51la（51la网站统计）或 baidu（百度统计）
@@ -170,8 +170,8 @@ rewardList: # Bottom donations
     money: 28
     time: 2024-04-08
     icon: fab fa-gratipay
-  - name: example
-    money: 5
+  - name: tomato
+    money: 10
     time: 2025-04-20
     icon: fab fa-weixin
     color: "#09bb07"

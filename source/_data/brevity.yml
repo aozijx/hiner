@@ -1,5 +1,7 @@
-- content: 普通文字短文
-  date: 2025-04-21 20:30
+- content: 
+  date: 2025-05-14 16:00
+- content: 赛博锁妖塔
+  date: 2025-05-14 12:30
 - content: B站视频短文
   date: 2025-04-21 20:30
   video:
@@ -28,10 +30,3 @@
 - content: 地点短文
   date: 2025-04-21 20:30
   location: 发布地点
-- content: 主题交流群已建立！
-  date: 2025-04-21 20:30
-  image:
-    - https://7.isyangs.cn/1/65e9de42e32cd-1.png
-    - url: https://7.isyangs.cn/1/65e9de42e32cd-1.png
-      alt: 主题交流群
-  link: https://efu.me/

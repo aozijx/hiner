@@ -81,7 +81,7 @@ rightbtnlink: Gallery/
     </div>
 </div>
 
-表现不太好，和主题 css 冲突覆盖了，但又不能既要又要，所以贴出代码[web](https://aozijx.github.io/xuao/src/html/genshin)
+表现不太好，和主题 css 冲突覆盖了，但又不能既要又要，所以贴出代码[web](https://aozijx.github.io/xuao/src/html/genshin) | [tg](https://aozijx.github.io/xuao/src/html/4.html)
 
 ```css
 .qin {

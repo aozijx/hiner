@@ -4,7 +4,7 @@ date: 2025-03-12 20:04:33
 author: Hiner
 categories: [Tips]
 tags: [hexo]
-cover: https://cdn.img2ipfs.com/ipfs/QmaU3HScuxg29LPfTWhDvDK33e7uQQ1ucBqSguybVdG1Zp?filename=hexo.png
+cover: https://cdn.cdnjson.com/i.dawnlab.me/e489814b866d262813417680e613f2e6.jpg
 ---
 
 ## markdown的Front-matter
@@ -203,6 +203,36 @@ card 标签，用于显示卡片。
 <!-- endtab -->
 <!-- tab 效果 -->
 {% button 'fas fa-music' '音乐馆' '../../../../music/' %}
+<!-- endtab -->
+{% endtabs %}
+
+### 提示 note
+note 标签，用于显示提示。
+{% tabs button %}
+<!-- tab 语法 -->
+```markdown
+{% note 'type' 'icon' %}
+content
+{% endnote %}
+```
+<!-- endtab -->
+<!-- tab 参数 -->
+| 参数名 | 说明   | 默认值 | 可选值 |
+|--------|--------|--------|-----|
+| type   | 类型   | 无     | primary, success, warning, danger, info, modern, flat, simple |
+| icon   | 图标   | 无     | Fant Awesome 图标 |
+<!-- endtab -->
+<!-- tab 示例 -->
+```markdown
+{% note 'danger modern' 'fas fa-wand-magic-sparkles' %}
+content
+{% endnote %}
+```
+<!-- endtab -->
+<!-- tab 效果 -->
+{% note 'danger modern' 'fas fa-wand-magic-sparkles' %}
+content
+{% endnote %}
 <!-- endtab -->
 {% endtabs %}
 

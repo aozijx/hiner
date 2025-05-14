@@ -114,3 +114,12 @@ cover: img/default.avif
           shared biological legacy. Only by honoring this planetary covenant can we safeguard tomorrow’s world.
     </div>
 </div>
+
+```CSS
+.letter div::first-letter {
+      font-size: 2em;
+      text-transform: uppercase;
+      float: left;
+      margin-right: 10px;
+  }
+```

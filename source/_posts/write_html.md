@@ -4,7 +4,7 @@ date: 2025-03-15 14:44:15
 author: Hiner
 categories:
 tags: [css]
-cover: https://cdn.img2ipfs.com/ipfs/QmWHUMHAc6fx4mYg6t8ZK92xhBxf1ztTaprFqXKcDW2VSr?filename=smile.jpg
+cover: https://aozijx.github.io/xuao/src/img/smile.jpg
 ---
 ## 翻转卡片
 <style>
@@ -86,67 +86,18 @@ cover: https://cdn.img2ipfs.com/ipfs/QmWHUMHAc6fx4mYg6t8ZK92xhBxf1ztTaprFqXKcDW2
 <div class="container">
     <div class="flip-card">
         <div class="flip-front">
-            <img src="https://cdn.img2ipfs.com/ipfs/QmWHUMHAc6fx4mYg6t8ZK92xhBxf1ztTaprFqXKcDW2VSr?filename=smile.jpg">
+            <img src="https://aozijx.github.io/xuao/src/img/smile.jpg">
         </div>
         <div class="flip-back"> Smile </div>
     </div>
     <div class="flip-card">
         <div class="flip-front">
-            <img src="https://cdn.img2ipfs.com/ipfs/QmUErn9t6KiGpg3m69q24aytNeKjB7Xej2Gn3BXDgA7RN4?filename=hu.jpg">
+            <img src="https://aozijx.github.io/xuao/src/img/hu.jpg">
         </div>
         <div class="flip-back"> Slience </div>
     </div>
 </div>
-这一版是为了适应主题的css
 
-```css
-.flip-card {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    transform-style: preserve-3d;
-    perspective: 500px;
-    margin: 10px;
-}
-.flip-front, .flip-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    object-fit: cover;
-    backface-visibility: hidden;
-    transition: transform 0.8s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-.flip-front img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 5px;
-}
-.flip-back {
-    font-size: 2em;
-    color: #000;
-    padding: 15px;
-    background-color: #e2e1e1;
-    text-align: center;
-}
-.flip-card:hover .flip-front {
-    transform: rotateY(-180deg);
-}
-.flip-card .flip-back {
-    transform: rotateY(180deg);
-}
-.flip-card:hover .flip-back {
-    transform: rotateY(0deg);
-}
-```
-原版
 ```css
 .container {
     width: 90%;
@@ -171,8 +122,8 @@ cover: https://cdn.img2ipfs.com/ipfs/QmWHUMHAc6fx4mYg6t8ZK92xhBxf1ztTaprFqXKcDW2
     perspective: 500px;
 }
 .flip-front, .flip-back {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
     position: absolute;
     border-radius: 5px;
     backface-visibility: hidden;
@@ -197,21 +148,14 @@ cover: https://cdn.img2ipfs.com/ipfs/QmWHUMHAc6fx4mYg6t8ZK92xhBxf1ztTaprFqXKcDW2
     transform: rotateY(0deg);
 }
 ```
-```html
-<div class="flip-card">
-    <div class="flip-front">
-        <img src="https://cdn.img2ipfs.com/ipfs/QmWHUMHAc6fx4mYg6t8ZK92xhBxf1ztTaprFqXKcDW2VSr?filename=smile.jpg">
-    </div>
-    <div class="flip-back"> Smile </div>
-</div>
-```
-原版
 
 ```html
-<div class="flip-card">
-    <img class="flip-front" src="src/img/smile.jpg" alt="smile">
-    <div class="flip-back">
-        <span>Smile</span>
+<div class="container">
+    <div class="flip-card">
+        <img class="flip-front" src="src/img/smile.jpg" alt="smile">
+        <div class="flip-back">
+            <span>Smile</span>
+        </div>
     </div>
 </div>
 ```

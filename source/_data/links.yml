@@ -28,7 +28,7 @@ links:
         color: vip  
 
   - class_name: Beauty
-    descr: 好看的 Blog
+    descr: 好看的 Blog，全是单向。
     type: card
     suffix:
     link_list:
@@ -66,4 +66,10 @@ links:
         link: https://linium.xin/
         descr: 霖的小屋 ο(=•ω＜=)ρ⌒☆
         avatar: 
-        topimg: https://linium.xin/images/lin.png
+        topimg: https://cdn.cdnjson.com/linium.xin/images/lin.png
+
+      - name: Rimrose
+        link: https://rimrose.top/
+        descr: 生活在阴沟里，依然有仰望星空的权利
+        avatar: 
+        topimg: https://q1.qlogo.cn/g?b=qq&nk=2632364603&s=640?v=1

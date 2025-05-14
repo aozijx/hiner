@@ -4,11 +4,13 @@ date: 2025-04-05 00:57:35
 author: Hiner
 categories: [Tips]
 tags: [Git]
-cover: https://cdn.img2ipfs.com/ipfs/QmURtNSS9x1u3UixkiPvCtM3K74EfFY3DRazvHgNERHmjv?filename=1725908068-git-logo.jpg
+cover: https://cdn.cdnjson.com/git-scm.cn/images/logos/downloads/Git-Logo-2Color.png
 ---
 
-{% link 'Git' '--fast-version-control' 'https://git-scm.com/book/zh/v2' %}
-{% link 'Git' '廖雪峰 Git 教程' 'https://www.shouce.ren/api/view/a/13825' %}
+{% link 'Git' 'fast-version-control' 'https://git-scm.com/book/zh/v2' %}
+{% link 'learn Git' ' Git 命令可视化' 'https://learngitbranching.js.org/' %}
+{% link 'Git' '廖雪峰 Git 教程' 'https://liaoxuefeng.com/books/git/introduction/index.html' %}
+{% link 'Git' '教程' 'https://www.cnblogs.com/anding/p/16987769.html' %}
 
 ## 配置相关
 
@@ -80,6 +82,7 @@ git remote add origin <URL>        # 添加远程仓库（命名为origin）
 git remote -v                      # 查看远程仓库地址
 git remote rename origin new-name  # 重命名远程仓库
 git remote remove origin           # 删除远程仓库关联
+git remote clear                   # 清除所有远程关联
 git push -u origin main            # 首次推送并建立跟踪关系
 ```
 
@@ -192,6 +195,24 @@ git push origin --delete v1.0     # 删除远程标签
      ```bash
      git push -f
      ```
+
+- 删除远程 dev 分支，保留本地
+  1. 在删除远程分支前，先确认本地分支是最新的：
+     ```bash
+     git checkout dev          # 切换到 dev 分支
+     git pull origin dev       # 拉取远程最新更改（确保本地与远程同步）
+     ```
+   2. 使用 Git 命令删除远程分支
+      ```bash
+      git push origin --delete dev   # 删除远程 dev 分支
+      ```
+      或（等效命令）：
+      ```bash
+      git push origin :dev          # 推送“空内容”到 dev 分支，相当于删除
+      ```
+{% note 'danger' 'fas fa-exclamation-triangle' %}
+当删除的分支与其他分支存在关联（如合并或衍合）时，其提交历史仍会保留在相关分支中。
+{% endnote %}
 
 ## 补救措施
 

@@ -32,9 +32,10 @@ nav:
   # 左侧盒子
   group:
    project: # name
-     Solitude: https://github.com/everfu/hexo-theme-solitude || img/logo.png # name: url || icon
+     Solitude: https://github.com/everfu/hexo-theme-solitude || /hiner/img/logo.png # name: url || icon
    音乐馆: 
-     HeoMusic: /HeoMusic/ || HeoMusic/img/icon.webp
+     HeoMusic: /HeoMusic/ || /hiner/HeoMusic/img/icon.webp
+   图库: /Gallery/ || fas fa-images
 
   # Menu
   # 菜单
@@ -49,12 +50,9 @@ nav:
       友情链接: /links/ || fas fa-user-group
       弹幕: /message/ || fas fa-comment-dots
       # 宝藏博主: javascript:travelling() || fas fa-gift
-    工具:
-      音乐馆: /music/ || fas fa-music
-      在线工具: /tlink/ || fas fa-toolbox
-    关于:
-      我: about/ || fas fa-address-card
-      图库: /Gallery/ || fas fa-images
+    工具: /tlink/ || fas fa-toolbox
+    音乐馆: /music/ || fas fa-music
+    关于: about/ || fas fa-address-card
       # 我的装备: /equipment/ || fas fa-laptop
 
   # Right button
@@ -152,8 +150,8 @@ aside:
   # 信息卡
   my_card:
     author:
-      img: img/logo.png # url
-      sticker: https://cdn.img2ipfs.com/ipfs/QmTmrb78DNFcx5ANzQCDqxC8tDvisqZAzWr9CZ9gdE64Sb?filename=Beach-512.webp # url, 24x24 size
+      img: /hiner/img/logo.png # url
+      # sticker: # url, 24x24 size
     # 介绍 / Introduction
     description: 只有迎风，风筝才能飞得更高。
     # 内容 / Content
@@ -394,10 +392,9 @@ font:
 # 背景图片
 background:
   enable: true
-  opacity: .1
-  # dark: https://i.pinimg.com/originals/d8/b3/9d/d8b39d12b653810db452c437211aeb2e.png
-  dark: https://cdn.img2ipfs.com/ipfs/QmTd4MFYHGjuRKNXEzoVpzWoayCLvx4cCpPJYr6QoKNKQy?filename=d8b39d12b653810db452c437211aeb2e.png
-  # light: https://i.pinimg.com/originals/93/57/38/935738ed9657b296c2ef0ebd2151eb66.jpg
+  opacity: .2
+  dark: https://aozijx.github.io/hiner/src/img/dark.png
+  light: https://aozijx.github.io/hiner/src/img/light.jpg
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -407,7 +404,7 @@ background:
 lure:
   enable: true
   jump: 404 Not Found
-  back: ヾ(≧∇≦*)ゝHey, hey.
+  back: ヾ(≧∇≦*)ゝ hey.
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -791,17 +788,17 @@ extends:
   # 插入到 head
   head:
   #  - <script src="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js"></script>
-   - <script src="http:aozijx.github.io/hiner/js/copylink.js" async></script>
+   - <script src="https://aozijx.github.io/hiner/js/copylink.js" async></script>
   # Insert in body
   # 插入到 body
   body:
   #  - <script src="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js"></script>
    - <script src="https://cdn.jsdelivr.net/npm/greensock@1.20.2/dist/TweenLite.js"></script>
-   - <script src="https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js"></script>
+   - <script src="/hiner/src/live2d/live2dcubismcore.min.js"></script>
    - <script src="https://cdn.jsdelivr.net/npm/pixi.js@5.3.6/dist/pixi.min.js"></script>
-   - <script src="https://cdn.jsdelivr.net/npm/pixi-live2d-display@0.3.1/dist/cubism4.min.js"></script>
-   - <link href="https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/pio.css" rel="stylesheet" type="text/css"/>
-   - <script src="https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/pio.js"></script>
+   - <script src="/hiner/src/live2d/cubism4.min.js"></script>
+   - <link href="/hiner/src/live2d/pio.css" rel="stylesheet" type="text/css"/>
+   - <script src="/hiner/src/live2d/pio.js"></script>
    - <script src="https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/pio_sdk4.js"></script>
    - <script src="https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/load.js"></script>
 # --------------------------- end ---------------------------
@@ -826,13 +823,13 @@ pwa:
 comment:
   # Which commenting system to use(e.g. waline or waline,twikoo)
   # 使用哪个评论系统（例如： waline or waline,twikoo）
-  use: twikoo # waline, , valine, artalk, giscus # Up to two comment systems can be turned on at the same time
+  use: # twikoo # waline, , valine, artalk, giscus # Up to two comment systems can be turned on at the same time
   # Whether to display the hot comment switch.
   # 是否显示热门评论开关
   commentBarrage: false
   # Lazy load
   # 懒加载评论区
-  lazyload: false
+  lazyload: true
   # Whether to display the comment count
   # 显示评论数
   count: true
@@ -857,7 +854,7 @@ comment:
     limit: 5 # 评论数 / Number of comments
 # Twikoo: https://solitude.js.org/comment/twikoo
 twikoo: # https://twikoo.js.org/
-  envId: blog_hiner # url: https://twikoo.sondy.top/
+  envId: # url: https://twikoo.sondy.top/
   region: # Environment locale, default is ap-shanghai, Tencent cloud environment fill ap-shanghai or ap-guangzhou; Vercel environment do not fill the.
   style: true # Use custom styles when turned on
   accessToken: 
