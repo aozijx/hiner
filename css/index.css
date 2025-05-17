@@ -2656,14 +2656,14 @@ span.tags-punctuation i {
   opacity: 0.2;
   width: 100%;
   height: 100%;
-  background-image: url("https:aozijx.github.io/hiner/src/img/light.png");
+  background-image: url("https://aozijx.github.io/hiner/src/img/light.jpg");
   background-size: cover;
   background-position: center;
   pointer-events: none;
   background-repeat: no-repeat;
 }
 [data-theme=dark] #global_bg {
-  background-image: url("https:aozijx.github.io/hiner/src/img/dark.png");
+  background-image: url("https://aozijx.github.io/hiner/src/img/dark.png");
 }
 .article-container {
   overflow-wrap: break-word;
