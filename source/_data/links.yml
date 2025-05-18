@@ -25,7 +25,15 @@ links:
         avatar: https://avatars.githubusercontent.com/u/74389842
         topimg: https://s3.qjqq.cn/47/674c6c6783097.png!color
         tag: 博主
-        color: vip  
+        color: vip
+
+      - name: 张洪Heo
+        link: https://blog.zhheo.com/
+        descr: 分享设计与科技生活
+        avatar: 
+        topimg: 
+        tag: 
+        color: 
 
   - class_name: Beauty
     descr: 好看的 Blog，全是单向。

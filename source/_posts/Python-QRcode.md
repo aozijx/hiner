@@ -11,7 +11,7 @@ cover: https://aozijx.github.io/aozijx/wechat_qr_code.png
 
 ## 主要特点
 - **简单易用**：只需几行代码即可生成基础二维码
-- **高度可定制**：
+- **高度定制**：
   - 版本控制（1-40）
   - 纠错级别（L/M/Q/H）
   - 方块尺寸调整
@@ -125,7 +125,7 @@ img = qr.make_image(
 img.save("styled_qr.png")
 ```
 
-生成带有渐变效果的二维码：
+生成渐变效果的二维码：
 ```python
 from PIL import ImageColor
 

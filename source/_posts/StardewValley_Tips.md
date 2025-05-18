@@ -6,6 +6,8 @@ categories: [游戏, Tips]
 tags: [steam, 星露谷物语]
 cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 ---
+
+星露谷官方教程文档
 {% link '星露谷物语' 'Wiki教程' 'https://zh.stardewvalleywiki.com/Stardew_Valley_Wiki' %}
 {% note 'attention' 'fas fa-wand-magic-sparkles' %}
 **操作问题**：进入游戏后无法移动时，切换英文输入法，按 {% keyboard 'Shift' %} 或 {% keyboard 'Ctrl' %} + {% keyboard 'Space' %}
@@ -15,7 +17,7 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
    - 当玩家的能量消耗到0或以下（游戏中不显示负值）时会“精疲力尽”，能量到-15后，玩家会晕倒，结束这一天。若在户外晕倒会损失最多 <img src="src/img/Gold.png" style="all: revert;height: 18px;">1000。
    - 如果入睡时已经精疲力尽，或者在 2:00AM 晕倒，则次日醒来仅恢复 50% 体力。
    - 使用肌肉回复药可以消除精疲力尽的状态。如果玩家已婚，通过亲吻配偶（每日首次）消除精疲力尽的状态。
-   - 温泉（矿洞解锁后，地图右上角）可免费恢复体力。
+   - 温泉可免费恢复体力。
 
 - **时间管理**  
   - 凌晨2点前回家，否则晕倒扣钱。
@@ -32,14 +34,13 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 
 - **商店作息**
   - 🐄 玛妮牧场：周一休息
-  - 🛒 皮埃尔商店：周三休息；完成献祭后每一周都不休息
+  - 🛒 皮埃尔商店：周三休息；完成献祭后每周每天都不休息
   - 🔨 铁匠铺：完成献祭后每一周周五休息
 
 ## 【工具与升级】
-- **工具升级**
-
-- **武器**
-{% link '星露谷物语Wiki' '武器' 'https://zh.stardewvalleywiki.com/武器' %}
+- **工具**
+  {% link '星露谷物语Wiki' '武器' 'https://zh.stardewvalleywiki.com/武器' %}
+  - 在采石场左上角的矿洞最深处有一把金色镰刀
 
 - 🎒 **背包扩展**
 玩家可在皮埃尔的杂货店处购买背包的升级，背包的升级只需要足够的金币，无需其他额外的条件，开始游戏后就可购买。
@@ -47,8 +48,9 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
   - “豪华背包”（蓝色）需要花费 <img src="src/img/Gold.png" style="all: revert;height: 18px;">10,000，可将物品栏扩大到36格
 
 ## 【探索与资源】
-{% link '星露谷物语Wiki' '矿物' https://zh.stardewvalleywiki.com/矿物 %}
+可以使用锄头在农场或小镇、野外的地上挖蚯蚓，掉落物品如煤炭、种子等等
 - **矿洞技巧**
+  {% link '星露谷物语Wiki' '矿物' https://zh.stardewvalleywiki.com/矿物 %}
   - 矿井总共有 120 层，每5层解锁电梯，越深的层包含的矿的种类和数量也会越多。
   - 玩家可以通过探险家公会的马龙帮忙找回遗失的武器。花费和丢失物品基础价格等值的钱购买遗失的物品。
   每次因为生命值过低而昏迷以后，可以在物品找回服务中购买一个物品或者一堆同类的物品。未买回的遗失物品会一直保存在马龙那里。
@@ -71,10 +73,10 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
     解锁后，祝尼魔会帮你收菜（范围有限，别建在作物中间！）。
 
 - **动物与产物**
+  - 为领养的宠物往小碗里浇水
   - 每日抚摸动物提升心情（影响产物品质）。
   - 未喂食或心情 <70 的动物不产物品。
-  - 夜间关闭仓门，避免野生动物袭击。
-  - 遭到袭击后动物将在第二天早上被游戏移除，其他所有的动物将有一个心情信息说“<动物的名字>今天似乎很紧张不安，昨晚应该发生了些事情”。
+  - 夜间关闭仓门，避免动物遭受袭击，被袭击后的动物将被游戏移除，并有心情信息说“<动物的名字>今天似乎很紧张不安，昨晚应该发生了些事情”。
   - 动物被困在畜棚/鸡舍外面第二天将会生气。
   - 建造马厩可骑乘马匹（速度+30%），后期解锁 传送塔 快速移动。
   - 用 **帽子** 给马匹 **换装**（将帽子拖到马身上），部分帽子会改变马的外观颜色。
@@ -103,10 +105,9 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
   - 💍 结婚后14心解锁专属剧情
   {% link '星露谷物语' '礼物清单' 'https://zh.stardewvalleywiki.com/全部礼物清单' %}
 
-## 【季节与节日】
-- **节日必做事项**
-  - 春季复活节：买齐 草莓种子（过季无法购买）。
-  - 冬季冬星节：提前准备NPC最爱的礼物（随机交换）。
+## 【季节节日】
+- 春季复活节：买齐 草莓种子（过季无法购买）。
+- 冬季冬星节：提前准备NPC最爱的礼物（随机交换）。
 
 ## 【联机】
 {% bvideo 'BV1hDXsY8Ezp' %}
@@ -122,7 +123,6 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 - **多人模式福利**
   - 👥 共享献祭进度
   - 🛏️ 可以上床回复体力
-  - 💑 全员结婚需安装模组（原版限1人）
   - 🛠️ 分工协作：1人钓鱼1人挖矿
 
 ## 【实用工具】

@@ -31,21 +31,10 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 - 显示第二天天气状况的图标
 - ...选项菜单中还添加了一个新选项卡，允许随时打开或关闭每个单独的 mod。
 {% endfold %}
-{% fold '下载文件：' %}
-- i18n
-- assets
-- UIInfoSuite2.csproj
-- manifest.json
-{% endfold %}
 
 ## Generic Mod Config Menu
 {% link 'YGeneric Mod Config Menu' '添加了游戏内 UI 以编辑其他 Mod 的配置选项。' 'https://www.nexusmods.com/stardewvalley/mods/5098' %}
 {% link 'GitHub' ' ' 'https://github.com/spacechase0/StardewValleyMods/tree/develop/GenericModConfigMenu' %}
-{% fold '下载文件：' %}
-- i18n
-- StardewHack.csproj
-- manifest.json
-{% endfold %}
 
 ## Yet Another Harvest With Scythe Mod
 {% link 'Yet Another Harvest With Scythe Mod' '允许您使用镰刀收割所有农作物（包括季节性农作物）和草料。它们也可以被拔掉。' 'https://www.nexusmods.com/stardewvalley/mods/2731' %}
@@ -54,12 +43,6 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 - 此 Mod 与 Tractor Mod 不兼容，并在某些情况下会导致奇怪的行为。此问题无法修复。
 - 这个 mod 可能与 Don't stop me now. 不兼容。右键单击 forage 会导致玩家卡住。
 - 当用剑作为镰刀对付草时，它有 0% 的干草产量。
-{% endfold %}
-{% fold '下载文件：' %}
-- i18n
-- assets
-- GenericModConfigMenu.csproj
-- manifest.json
 {% endfold %}
 
 ## Automate
@@ -92,12 +75,7 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 - 通过使用 SMAPI 内容管道来支持此 mod 加载的自定义图像资产的 Content Patcher（从版本 1.5.3 开始）。
   - 这允许内容包覆盖此 mod 加载的自定义图像资产。
 {% endfold %}
-{% fold '下载文件：' %}
-- i18n
-- assets
-- manifest.json
-- ConvenientInventory.csproj
-{% endfold %}
+![](https://staticdelivery.nexusmods.com/mods/1303/images/10384/10384-1728601573-809760465.gif)
 
 ## ~~Carry Chest~~（不可用）
 {% link 'Carry Chest' '捡起箱子，即使它们不是空的。' 'https://www.nexusmods.com/stardewvalley/mods/1333' %}
@@ -108,27 +86,6 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 {% endfold %}
 
 # 美化
-## Content Patcher
-{% link 'Content Patcher' '加载更改游戏数据、图像和地图的内容包，而无需替换 XNB 文件。' 'https://www.nexusmods.com/stardewvalley/mods/1915' %}
-{% link 'GitHub' ' ' 'https://github.com/Pathoschild/StardewMods/tree/stable/ContentPatcher' %}
-{% fold '下载文件：' %}
-- ContentPatcher.csproj
-- manifest.json
-{% endfold %}
-
-## Fashion Sense
-{% link 'Fashion Sense' '框架，允许更大的配饰、发型、帽子、衬衫、袖子、裤子和鞋子，以及动画支持等。' 'https://www.nexusmods.com/stardewvalley/mods/9969' %}
-{% link 'GitHub' 'Stardew Valley 框架，允许更大的配饰、发型和其他外观。包括动画支持等。' 'https://github.com/Floogen/FashionSense/tree/stable' %}
-
-## Portraiture
-{% link 'Portraiture' '添加更高分辨率的肖像，并在不同的肖像模组之间轻松切换。' 'https://www.nexusmods.com/stardewvalley/mods/999' %}
-{% link 'GitHub' ' ' 'https://github.com/Platonymous/Stardew-Valley-Mods/tree/master/Portraiture' %}
-{% fold '下载文件：' %}
-- Portraits
-- Portraiture.csproj
-- manifest.json
-{% endfold %}
-
 ## Seasonal Outfits - Slightly Cuter Aesthetic
 {% link 'Seasonal Outfits - Slightly Cuter Aesthetic' '对所有角色精灵和肖像进行大修，以获得更可爱的美感' 'https://www.nexusmods.com/stardewvalley/mods/5450' %}
 {% fold '兼容性：' %}
@@ -139,9 +96,11 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/headers/5450_1712814737.jpg)
 
 ## BaZhua's Marriable Role Portrait
+
 {% note 'attention' 'fas fa-wand-magic-sparkles' %}
 打开 `显示成人内容` 再访问
 {% endnote %}
+
 {% link "BaZhua's Marriable Role Portrait" '12个可婚角色的像素肖像' 'https://www.nexusmods.com/stardewvalley/mods/20236' %}
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/headers/20236_1726428286.jpg)
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/thumbnails/20236/20236-1726428312-2089193844.png)
@@ -150,6 +109,11 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 {% link 'Portraits' '星露谷物语的肖像' 'https://www.nexusmods.com/stardewvalley/mods/15234' %}
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/15234/15234-1675604855-1750177193.jpeg)
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/15234/15234-1712295321-202562341.png)
+
+## Arkneru's Retexture of NPCs
+{% link 'Arkneru's Retexture of NPCs' '这是所有结婚候选人和巫师
+的原始纹理模组' 'https://www.nexusmods.com/stardewvalley/mods/20454' %}
+![](https://staticdelivery.nexusmods.com/mods/1303/images/headers/20454_1709803634.jpg)
 
 ## DaisyNiko's Earthy Recolour
 {% link "DaisyNiko's Earthy Recolour" '全新的游戏重新着色！！ 这个模组编辑了所有户外瓦片，并包括新的自定义树木、挖掘点和草。 城镇建筑也进行了改造，看起来更自然，与地形相匹配。 适用于1.6' 'https://www.nexusmods.com/stardewvalley/mods/5255' %}

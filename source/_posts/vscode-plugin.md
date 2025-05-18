@@ -10,7 +10,7 @@ cover:
 <style>
     img {
         border-radius: 50%;
-        width: 24px;
+        width: 32px;
     }
 </style>
 

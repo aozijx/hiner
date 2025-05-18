@@ -63,11 +63,11 @@ rightbtnlink: Gallery/
             alt="">
         </div>
         <div class="box">
-          <img src="https://www.stardewvalley.net/wp-content/uploads/2024/03/steam_cover.png"
+          <img src="https://store-images.s-microsoft.com/image/apps.27210.13838479673159593.08fca22c-85fe-467d-8f34-cca2715208c0.13d9ddee-93e2-4f9a-ad54-cc67d9bc2e7b"
             alt="">
         </div>
         <div class="box">
-          <img src="https://game.mhcdkey.com/image/ask/200228/ashikmdu3l1.jpg"
+          <img src="https://imgheybox.max-c.com/heybox/game/header/105600_tkzWh.jpg"
             alt="">
         </div>
         <div class="box">
@@ -81,7 +81,7 @@ rightbtnlink: Gallery/
     </div>
 </div>
 
-表现不太好，和主题 css 冲突覆盖了，但又不能既要又要，所以贴出代码[web](https://aozijx.github.io/xuao/src/html/genshin) | [tg](https://aozijx.github.io/xuao/src/html/4.html)
+表现不太好，和主题 css 冲突了，不想改了，所以贴出代码和网页 [web](https://aozijx.github.io/xuao/src/html/genshin) | [tg](https://aozijx.github.io/xuao/src/html/4.html)
 
 ```css
 .qin {
