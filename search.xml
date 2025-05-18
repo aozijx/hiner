@@ -1,27 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Docker安装</title>
-    <url>/hiner/2025/04/02/Docker%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<p><img src="/hiner/src/img/docker.svg" alt=""><br>
-更改安装路径：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Start-Process -Wait -Filepath <span class="string">&quot;下载的 exe 程序&quot;</span> -ArgumentList <span class="string">&quot;install --installation-dir=D:\Docker&quot;</span></span><br></pre></td></tr></table></figure>
-<p><a href="https://github.com/asxez/DockerDesktop-CN?tab=readme-ov-file">https://github.com/asxez/DockerDesktop-CN?tab=readme-ov-file</a></p>
-<a class="tag-link" href="https://docker.easydoc.net/doc/81170005/cCewZWoN/lTKfePfP" target="_blank">
-    <div class="tag-link-tips">引用站外链接</div>
-    <div class="tag-link-bottom">
-        <div class="tag-link-left">
-          <i class="solitude fas fa-link"></i>
-        </div>
-        <div class="tag-link-right">
-            <div class="tag-link-title">Docker</div>
-            <div class="tag-link-sitename">快速入门</div>
-        </div>
-        <i class="solitude fas fa-chevron-right"></i>
-    </div></a>
-]]></content>
-  </entry>
-  <entry>
     <title>原神 Mod 安装</title>
     <url>/hiner/2025/03/14/GenshinImpact_ModInstall/</url>
     <content><![CDATA[<h3 id="安装-3DMigoto"><a class="header-anchor" href="#安装-3DMigoto">¶</a>安装 3DMigoto</h3>
@@ -49,6 +28,50 @@
         <tag>原神</tag>
         <tag>Mod</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Docker 安装</title>
+    <url>/hiner/2025/04/02/Docker_install/</url>
+    <content><![CDATA[<p><img src="/hiner/src/img/docker.svg" alt=""></p>
+<h2 id="准备"><a class="header-anchor" href="#准备">¶</a>准备</h2>
+<ol>
+<li>
+<p>Windows<br>
+开启电脑的功能 Hyper-V 和 适用于 Linux 的 Windows 子系统和虚拟机平台</p>
+<ol>
+<li>打开控制面板 -&gt; 程序 -&gt; 程序和功能 -&gt; 启用或关闭 Windows 功能</li>
+<li>Hyper-V 和 适用于 Linux 的 Windows 子系统和虚拟机平台 （勾选）</li>
+</ol>
+</li>
+<li>
+<p>下载安装</p>
+<ul>
+<li>去官网下载 <a href="https://www.docker.com">Docker</a> 并安装（速度有点慢自行想办法）</li>
+<li>软件默认安装 C 盘，如需更改：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Start-Process -Wait -Filepath <span class="string">&quot;下载的 exe 程序&quot;</span> -ArgumentList <span class="string">&quot;install --installation-dir=D:\Docker&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><a href="https://github.com/asxez/DockerDesktop-CN?tab=readme-ov-file">汉化</a></li>
+</ul>
+</li>
+<li>
+<p>检验成功<br>
+打开 CMD 键入</p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker --version</span><br></pre></td></tr></table></figure>
+<p>输出版本则为成功</p>
+<a class="tag-link" href="https://docker.easydoc.net/doc/81170005/cCewZWoN/lTKfePfP" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Docker</div>
+            <div class="tag-link-sitename">快速入门</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+]]></content>
   </entry>
   <entry>
     <title>GitHub 加速</title>
@@ -1307,9 +1330,9 @@ M40 281 V448H0V74H40V241H400000v40z"/></svg></span><span class="halfarrow-right"
 <ul>
 <li>天气预报：查看次日天气</li>
 <li>算命占卜：显示当日运气（影响挖矿、钓鱼等概率）</li>
-<li>离地而居（周一/周四）：新手教程</li>
+<li>离地而居（周一/周四）：学习游戏知识</li>
 <li>酱料女皇（周日播出/周三复播）：学习烹饪食谱</li>
-<li>钓鱼信息（完成潘姆特别任务 <strong>烈酒</strong> 解锁）</li>
+<li>钓鱼信息（完成潘姆特别任务 <strong>烈酒</strong> 解锁）：当前季节可捕获鱼类</li>
 </ul>
 </li>
 <li>
@@ -1559,108 +1582,6 @@ M40 281 V448H0V74H40V241H400000v40z"/></svg></span><span class="halfarrow-right"
         <tag>steam</tag>
         <tag>星露谷物语</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>CSS 属性</title>
-    <url>/hiner/2025/04/16/css/</url>
-    <content><![CDATA[<h1>有趣的 CSS 属性合集</h1>
-<h2 id="一、视觉特效类"><a class="header-anchor" href="#一、视觉特效类">¶</a>一、视觉特效类</h2>
-<h3 id="1-filter"><a class="header-anchor" href="#1-filter">¶</a>1. <code>filter</code></h3>
-<ul>
-<li><strong><code>drop-shadow()</code></strong><br>
-沿元素不透明区域生成阴影（比 <code>box-shadow</code> 更精准）</li>
-<li><strong><code>contrast()</code></strong><br>
-调整对比度（<code>filter: contrast(1.5)</code>）</li>
-<li><strong><code>blur()</code></strong><br>
-高斯模糊（<code>filter: blur(5px)</code>）</li>
-<li><strong><code>brightness()</code></strong><br>
-亮度控制（<code>filter: brightness(0.8)</code>）</li>
-</ul>
-<h3 id="2-mask"><a class="header-anchor" href="#2-mask">¶</a>2. <code>mask</code></h3>
-<ul>
-<li><strong><code>mask-image</code></strong><br>
-使用图片/渐变作为遮罩（仅显示非透明区域）</li>
-<li><strong><code>mask-size</code></strong><br>
-控制遮罩尺寸（类似 <code>background-size</code>）</li>
-</ul>
-<h3 id="3-mix-blend-mode"><a class="header-anchor" href="#3-mix-blend-mode">¶</a>3. <code>mix-blend-mode</code></h3>
-<p>混合模式（如 <code>multiply</code>, <code>overlay</code>, <code>screen</code>）</p>
-<h2 id="3-3D"><a class="header-anchor" href="#3-3D">¶</a>3. 3D</h2>
-<ul>
-<li><strong><code>transform-style: preserve-3d;</code></strong><br>
-让子元素在 3D 空间中保持位置（默认是 flat，子元素会被拍平到 2D 平面），必须设置在父容器</li>
-</ul>
-<hr>
-<h2 id="二、变形与动画"><a class="header-anchor" href="#二、变形与动画">¶</a>二、变形与动画</h2>
-<h3 id="1-transform"><a class="header-anchor" href="#1-transform">¶</a>1. <code>transform</code></h3>
-<ul>
-<li><strong><code>skew()</code></strong><br>
-元素倾斜（<code>skew(15deg, -5deg)</code> 或 <code>skewX(15deg)</code>与<code>skewY(-5deg)</code>）</li>
-<li><strong><code>scale()</code></strong><br>
-缩放元素（支持 2D/3D）</li>
-<li><strong><code>translate3d()</code></strong><br>
-三维位移（<code>translate3d(10px, 20px, 30px)</code>）</li>
-<li><strong><code>rotate3d()</code></strong><br>
-三维旋转（<code>rotate3d(1, 0.5, 0, 45deg)</code>）</li>
-<li><strong><code>transform-origin</code></strong><br>
-设置变形原点（<code>left top</code>）</li>
-</ul>
-<h3 id="2-animation"><a class="header-anchor" href="#2-animation">¶</a>2. <code>animation</code></h3>
-<ul>
-<li><strong><code>alternate</code></strong> 动画交替反向播放</li>
-<li><strong><code>animation-play-state</code></strong><br>
-暂停/播放控制（<code>paused | running</code>）</li>
-<li><strong><code>steps()</code></strong><br>
-逐帧动画（<code>animation-timing-function: steps(6)</code>）</li>
-</ul>
-<hr>
-<h2 id="三、布局与响应式"><a class="header-anchor" href="#三、布局与响应式">¶</a>三、布局与响应式</h2>
-<h3 id="1-特殊布局"><a class="header-anchor" href="#1-特殊布局">¶</a>1. 特殊布局</h3>
-<ul>
-<li><strong><code>aspect-ratio</code></strong><br>
-强制宽高比（16/9）</li>
-<li><strong><code>shape-outside</code></strong><br>
-文字环绕（circle(50%)）</li>
-<li><strong><code>scroll-snap</code></strong><br>
-滚动对齐（需配合 scroll-snap-type 使用）</li>
-</ul>
-<h3 id="2-三维控制"><a class="header-anchor" href="#2-三维控制">¶</a>2. 三维控制</h3>
-<ul>
-<li><strong><code>backface-visibility</code></strong><br>
-隐藏元素背面（hidden | visible）</li>
-</ul>
-<hr>
-<h2 id="四、渐变与遮罩"><a class="header-anchor" href="#四、渐变与遮罩">¶</a>四、渐变与遮罩</h2>
-<ul>
-<li><strong><code>conic-gradient</code></strong><br>
-圆锥渐变（适合色轮/饼图）<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 圆形 */</span></span><br><span class="line">conic-gradient(<span class="selector-tag">from</span> <span class="number">0deg</span> at <span class="number">50%</span> <span class="number">50%</span>,<span class="selector-id">#ff0000</span> <span class="number">0%</span>,<span class="selector-id">#ff007f</span> <span class="number">8.33%</span>,<span class="selector-id">#ff00ff</span> <span class="number">16.66%</span>,<span class="selector-id">#7f00ff</span> <span class="number">25%</span>,<span class="selector-id">#0000ff</span> <span class="number">33.33%</span>,<span class="selector-id">#007fff</span> <span class="number">41.66%</span>,<span class="selector-id">#00ffff</span> <span class="number">50%</span>,<span class="selector-id">#00ff7f</span> <span class="number">58.33%</span>,<span class="selector-id">#00ff00</span> <span class="number">66.66%</span>,<span class="selector-id">#7fff00</span> <span class="number">75%</span>,<span class="selector-id">#ffff00</span> <span class="number">83.33%</span>,<span class="selector-id">#ff7f00</span> <span class="number">91.66%</span>,<span class="selector-id">#ff0000</span> <span class="number">100%</span>);</span><br><span class="line"><span class="comment">/* 扇形 */</span></span><br><span class="line">conic-gradient(<span class="selector-id">#f00</span> <span class="number">0deg</span> <span class="number">90deg</span>, transparent <span class="number">90deg</span> <span class="number">360deg</span>)</span><br><span class="line"><span class="comment">/* 渐变 */</span></span><br><span class="line">conic-gradient(<span class="selector-id">#00f</span>, transparent)</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 动态饼图 */</span></span><br><span class="line"><span class="keyword">@property</span> --progress &#123;</span><br><span class="line">  syntax: <span class="string">&quot;&lt;angle&gt;&quot;</span>;</span><br><span class="line">  inherits: false;</span><br><span class="line">  initial-value: <span class="number">0deg</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.pie</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">conic-gradient</span>(</span><br><span class="line">    <span class="number">#ff0000</span> <span class="built_in">var</span>(--progress),</span><br><span class="line">    transparent <span class="built_in">var</span>(--progress) <span class="number">360deg</span></span><br><span class="line">  );</span><br><span class="line">  <span class="attribute">transition</span>: --progress <span class="number">0.5s</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.pie</span><span class="selector-pseudo">:hover</span> &#123; <span class="attr">--progress</span>: <span class="number">180deg</span>; &#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<h2 id="五、排版与细节"><a class="header-anchor" href="#五、排版与细节">¶</a>五、排版与细节</h2>
-<h3 id="1-边框"><a class="header-anchor" href="#1-边框">¶</a>1. 边框</h3>
-<ul>
-<li><strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/outline"><code>outline</code></a></strong></li>
-</ul>
-<h3 id="2-基本文本和字体样式"><a class="header-anchor" href="#2-基本文本和字体样式">¶</a>2. 基本文本和字体样式</h3>
-<ul>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Learn_web_development/Core/Text_styling/Fundamentals">字体样式</a></li>
-<li><strong><code>letter-spacing</code></strong><br>
-字符间距（0.1em）</li>
-<li><strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration"><code>text-decoration</code></a></strong><br>
-文本装饰线条</li>
-<li><strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-shadow"><code>text-shadow</code></a></strong><br>
-文字阴影（2px 2px 4px rgba(0,0,0,0.5)）</li>
-</ul>
-<h3 id="3-交互增强"><a class="header-anchor" href="#3-交互增强">¶</a>3. 交互增强</h3>
-<ul>
-<li><strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/cursor"><code>cursor</code></a></strong><br>
-鼠标指针样式（grab, zoom-in）</li>
-<li><strong><code>resize</code></strong><br>
-允许用户调整尺寸（vertical | horizontal）</li>
-</ul>
-]]></content>
   </entry>
   <entry>
     <title>饭圈</title>
@@ -2854,297 +2775,262 @@ Hexo 默认的 hexo-renderer-marked 渲染器可能不支持所有参数（如 t
       </tags>
   </entry>
   <entry>
-    <title>md文件写html</title>
-    <url>/hiner/2025/03/15/write_html/</url>
-    <content><![CDATA[<h2 id="翻转卡片"><a class="header-anchor" href="#翻转卡片">¶</a>翻转卡片</h2>
-<style>
-    .container {
-        width: 90%;
-        max-width: 600px;
-        height: auto;
-        min-height: 300px;
-        margin: 20px auto;
-        padding: 20px 10px;
-        border: 2px solid #000;
-        border-radius: 7px;
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        flex-wrap: wrap;
-    }
-    .flip-card {
-        position: relative;
-        width: 200px;
-        height: 200px;
-        transform-style: preserve-3d;
-        perspective: 500px;
-        margin: 10px;
-    }
-    .flip-front, .flip-back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 5px;
-        object-fit: cover;
-        backface-visibility: hidden;
-        transition: transform 0.8s ease-in-out;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .flip-front img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 5px;
-    }
-    .flip-back {
-        font-size: 2em;
-        color: #000;
-        padding: 15px;
-        background-color: #e2e1e1;
-        text-align: center;
-    }
-    .flip-card:hover .flip-front {
-        transform: rotateY(-180deg);
-    }
-    .flip-card .flip-back {
-        transform: rotateY(180deg);
-    }
-    .flip-card:hover .flip-back {
-        transform: rotateY(0deg);
-    }
-    @media (max-width: 768px) {
-        .container {
-            width: 95%;
-            padding: 10px 5px;
-        }
-        .flip-card {
-            width: 180px;
-            height: 180px;
-            margin: 10px;
-        }
-        .flip-back {
-            font-size: 1.2em;
-            padding: 0px;
-        }
+    <title>VSCode 插件</title>
+    <url>/hiner/2025/05/10/vscode-plugin/</url>
+    <content><![CDATA[<style>
+    img {
+        border-radius: 50%;
+        width: 32px;
     }
 </style>
-<div class="container">
-    <div class="flip-card">
-        <div class="flip-front">
-            <img src="https://aozijx.github.io/xuao/src/img/smile.jpg">
+<h2 id="Live-Server-img-src-https-ritwickdey-gallerycdn-vsassets-io-extensions-ritwickdey-liveserver-5-7-9-1736542717282-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#Live-Server-img-src-https-ritwickdey-gallerycdn-vsassets-io-extensions-ritwickdey-liveserver-5-7-9-1736542717282-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a> <img src="https://ritwickdey.gallerycdn.vsassets.io/extensions/ritwickdey/liveserver/5.7.9/1736542717282/Microsoft.VisualStudio.Services.Icons.Default"></h2>
+<blockquote>
+<p>A development server with live reload capability</p>
+</blockquote>
+<p><strong>功能简介</strong>：基于本地服务的实时开发工具，支持自动刷新。<br>
+<strong>核心功能</strong>：</p>
+<ul>
+<li>启动本地服务器，实时渲染 HTML/CSS/JavaScript 文件。</li>
+<li>代码保存后自动刷新浏览器，即时预览修改效果。</li>
+<li>支持自定义端口、根目录及浏览器默认打开路径。</li>
+</ul>
+<p><strong>适用场景</strong>：前端开发、静态页面调试、快速原型设计。</p>
+<h2 id="Auto-Rename-Tag-img-src-https-formulahendry-gallerycdn-vsassets-io-extensions-formulahendry-auto-rename-tag-0-1-10-1644319230173-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#Auto-Rename-Tag-img-src-https-formulahendry-gallerycdn-vsassets-io-extensions-formulahendry-auto-rename-tag-0-1-10-1644319230173-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag">Auto Rename Tag</a> <img src="https://formulahendry.gallerycdn.vsassets.io/extensions/formulahendry/auto-rename-tag/0.1.10/1644319230173/Microsoft.VisualStudio.Services.Icons.Default"></h2>
+<blockquote>
+<p>Auto rename paired HTML/XML tag</p>
+</blockquote>
+<p><strong>功能简介</strong>：自动同步修改 HTML/XML 标签对。<br>
+<strong>核心功能</strong>：</p>
+<ul>
+<li>修改起始标签时，自动更新对应的闭合标签。</li>
+<li>支持 Vue、React 等框架的 JSX/TSX 语法。</li>
+<li>避免手动修改标签时因遗漏导致的语法错误。</li>
+</ul>
+<p><strong>适用场景</strong>：Web 开发、组件化编程、XML 文件编辑。</p>
+<h2 id="htmltagwrap-img-src-https-bradgashler-gallerycdn-vsassets-io-extensions-bradgashler-htmltagwrap-1-0-0-1690951480878-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#htmltagwrap-img-src-https-bradgashler-gallerycdn-vsassets-io-extensions-bradgashler-htmltagwrap-1-0-0-1690951480878-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items/?itemName=bradgashler.htmltagwrap">htmltagwrap</a> <img src="https://bradgashler.gallerycdn.vsassets.io/extensions/bradgashler/htmltagwrap/1.0.0/1690951480878/Microsoft.VisualStudio.Services.Icons.Default"></h2>
+<blockquote>
+<p>Wraps the selected text in HTML tags</p>
+</blockquote>
+<p><strong>功能简介</strong>：快速为选中文本包裹 HTML 标签。<br>
+<strong>核心功能</strong>：</p>
+<ul>
+<li>快捷键（默认为 Alt + W）一键添加标签。</li>
+<li>支持多层嵌套标签与自定义属性。</li>
+<li>提升批量结构化代码的编写效率。</li>
+</ul>
+<p><strong>适用场景</strong>：HTML 模板构建、内容块快速封装。</p>
+<h2 id="Prettier-img-src-https-esbenp-gallerycdn-vsassets-io-extensions-esbenp-prettier-vscode-11-0-0-1723648421534-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#Prettier-img-src-https-esbenp-gallerycdn-vsassets-io-extensions-esbenp-prettier-vscode-11-0-0-1723648421534-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode">Prettier</a> <img src="https://esbenp.gallerycdn.vsassets.io/extensions/esbenp/prettier-vscode/11.0.0/1723648421534/Microsoft.VisualStudio.Services.Icons.Default"></h2>
+<blockquote>
+<p>Code formatter using prettier</p>
+</blockquote>
+<p><strong>功能简介</strong>：多语言代码格式化工具。<br>
+<strong>核心功能</strong>：</p>
+<ul>
+<li>支持 JavaScript、TypeScript、CSS、JSON 等 20+ 语言。</li>
+<li>通过配置文件（.prettierrc）自定义代码风格。</li>
+<li>保存时自动格式化，确保团队代码风格统一。</li>
+</ul>
+<p><strong>适用场景</strong>：代码规范化、协作开发、代码审查辅助。</p>
+<h2 id="ImgPreview-img-src-https-kisstkondoros-gallerycdn-vsassets-io-extensions-kisstkondoros-vscode-gutter-preview-0-32-2-1732997211540-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#ImgPreview-img-src-https-kisstkondoros-gallerycdn-vsassets-io-extensions-kisstkondoros-vscode-gutter-preview-0-32-2-1732997211540-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items/?itemName=kisstkondoros.vscode-gutter-preview">ImgPreview</a> <img src="https://kisstkondoros.gallerycdn.vsassets.io/extensions/kisstkondoros/vscode-gutter-preview/0.32.2/1732997211540/Microsoft.VisualStudio.Services.Icons.Default"></h2>
+<blockquote>
+<p>Preview images in your editor</p>
+</blockquote>
+<p><strong>功能简介</strong>：在编辑器中直接预览图片。<br>
+<strong>核心功能</strong>：</p>
+<ul>
+<li>鼠标悬停于图片路径时显示缩略图。</li>
+<li>支持 PNG、JPG、GIF、SVG 等常见格式。</li>
+<li>快速定位图片资源，避免频繁切换窗口。</li>
+</ul>
+<p><strong>适用场景</strong>：图像资源管理、静态网站开发、UI 设计对接。</p>
+<h2 id="Path-Intellisense-img-src-https-christian-kohler-gallerycdn-vsassets-io-extensions-christian-kohler-path-intellisense-2-10-0-1732919213601-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#Path-Intellisense-img-src-https-christian-kohler-gallerycdn-vsassets-io-extensions-christian-kohler-path-intellisense-2-10-0-1732919213601-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense">Path Intellisense</a> <img src="https://christian-kohler.gallerycdn.vsassets.io/extensions/christian-kohler/path-intellisense/2.10.0/1732919213601/Microsoft.VisualStudio.Services.Icons.Default"></h2>
+<blockquote>
+<p>Visual Studio Code plugin that autocompletes filenames</p>
+</blockquote>
+<p><strong>功能简介</strong>：文件路径自动补全。<br>
+<strong>核心功能</strong>：</p>
+<ul>
+<li>输入路径时提示当前目录下的文件与文件夹。</li>
+<li>支持相对路径与绝对路径补全。</li>
+<li>减少手动输入错误，提升代码可维护性。</li>
+</ul>
+<p><strong>适用场景</strong>：模块化开发、多文件项目管理。</p>
+<h2 id="CodeSnap-img-src-https-adpyke-gallerycdn-vsassets-io-extensions-adpyke-codesnap-1-3-4-1625238962906-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#CodeSnap-img-src-https-adpyke-gallerycdn-vsassets-io-extensions-adpyke-codesnap-1-3-4-1625238962906-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items/?itemName=adpyke.codesnap">CodeSnap</a> <img src="https://adpyke.gallerycdn.vsassets.io/extensions/adpyke/codesnap/1.3.4/1625238962906/Microsoft.VisualStudio.Services.Icons.Default"></h2>
+<blockquote>
+<p>Take beautiful screenshots of your code</p>
+</blockquote>
+<p><strong>功能简介</strong>：生成高亮代码截图。<br>
+<strong>核心功能</strong>：</p>
+<ul>
+<li>自定义截图背景、阴影、边距等样式。</li>
+<li>支持复制图片到剪贴板或保存为 PNG/SVG。</li>
+<li>可选行号显示与语法高亮主题。</li>
+</ul>
+<p><strong>适用场景</strong>：技术文档编写、社交媒体分享、代码教学。</p>
+<h2 id="Excalidraw-img-src-https-pomdtr-gallerycdn-vsassets-io-extensions-pomdtr-excalidraw-editor-3-8-1-1741785200720-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#Excalidraw-img-src-https-pomdtr-gallerycdn-vsassets-io-extensions-pomdtr-excalidraw-editor-3-8-1-1741785200720-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="">Excalidraw</a> <img src="https://pomdtr.gallerycdn.vsassets.io/extensions/pomdtr/excalidraw-editor/3.8.1/1741785200720/Microsoft.VisualStudio.Services.Icons.Default"></h2>
+<blockquote>
+<p>Draw diagrams and sketches in your editor</p>
+</blockquote>
+<p><strong>功能简介</strong>：手绘风格图表绘制工具。<br>
+<strong>核心功能</strong>：</p>
+<ul>
+<li>内置手绘图形、箭头、便签等元素。</li>
+<li>支持导出为 PNG/SVG 或保存为 .excalidraw 文件。</li>
+<li>实时协作功能（需搭配在线服务）。</li>
+</ul>
+<p><strong>适用场景</strong>：草图设计、流程图绘制、会议笔记。</p>
+<a class="tag-link" href="https://excalidraw.com/" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
         </div>
-        <div class="flip-back"> Smile </div>
-    </div>
-    <div class="flip-card">
-        <div class="flip-front">
-            <img src="https://aozijx.github.io/xuao/src/img/hu.jpg">
+        <div class="tag-link-right">
+            <div class="tag-link-title">Excalidraw</div>
+            <div class="tag-link-sitename">在线网站</div>
         </div>
-        <div class="flip-back"> Slience </div>
-    </div>
-</div>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">90%</span>;</span><br><span class="line">    <span class="attribute">max-width</span>: <span class="number">600px</span>;</span><br><span class="line">    <span class="attribute">height</span>: auto;</span><br><span class="line">    <span class="attribute">min-height</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">20px</span> auto;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">20px</span> <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">2px</span> solid <span class="number">#000</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">7px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">justify-content</span>: center;</span><br><span class="line">    <span class="attribute">gap</span>: <span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">flex-wrap</span>: wrap;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.flip-card</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">transform-style</span>: preserve-<span class="number">3</span>d;</span><br><span class="line">    <span class="attribute">perspective</span>: <span class="number">500px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.flip-front</span>, <span class="selector-class">.flip-back</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">backface-visibility</span>: hidden;</span><br><span class="line">    <span class="attribute">transition</span>: transform <span class="number">1s</span> ease-in-out;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.flip-back</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">2em</span>;</span><br><span class="line">    <span class="attribute">justify-content</span>: center;</span><br><span class="line">    <span class="attribute">align-items</span>: center;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#000</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#e2e1e1</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">2px</span> dotted palevioletred;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.flip-card</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.flip-front</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotateY</span>(-<span class="number">180deg</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.flip-card</span> <span class="selector-class">.flip-back</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotateY</span>(<span class="number">180deg</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.flip-card</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.flip-back</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotateY</span>(<span class="number">0deg</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;flip-card&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">&quot;flip-front&quot;</span> <span class="attr">src</span>=<span class="string">&quot;src/img/smile.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;smile&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;flip-back&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">span</span>&gt;</span>Smile<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="九宫格"><a class="header-anchor" href="#九宫格">¶</a>九宫格</h2>
-<style>
-    .jiu {
-        display: grid;
-        width: 300px;
-        height: 300px;
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .jiu-item {
-        overflow: hidden;
-        transition: 0.1s;
-        background-image: url(https://p3-pc.douyinpic.com/img/aweme-avatar/tos-cn-i-0813c001_ocAAAPjStmnQfCHA0FDXjI7hCqe9EjFgAcrAUL~c5_300x300.jpeg?from=2956013662);
-        background-size: 300px 300px;
-        background-position: var(--bgX, 0) var(--bgY, 0);
-        transform: translate(0, 0);
-    }
-    .jiu:active .jiu-item {
-        box-shadow: inset 0 0 0 1px #fff;
-        transform: translate(var(--disX, 0), var(--disY, 0));
-    }
-    .jiu-item:hover {
-        box-shadow: inset 0 0 0 1px #fff;
-        transform: translate(var(--disX, 0), var(--disY, 0));
-    }
-</style>
-<div class="container">
-    <div class="jiu">
-        <div class="jiu-item"></div>
-        <div class="jiu-item"></div>
-        <div class="jiu-item"></div>
-        <div class="jiu-item"></div>
-        <div class="jiu-item"></div>
-        <div class="jiu-item"></div>
-        <div class="jiu-item"></div>
-        <div class="jiu-item"></div>
-        <div class="jiu-item"></div>
-    </div>
-</div>
-<script>
-const items = document.querySelectorAll('.jiu-item');
-for (let i = 0; i < items.length; i++) {
-    const item = items[i];
-    const r = Math.floor(i / 3);
-    const c = i % 3;
-    const bgX = -c * 100 + '%';  // 每格宽度 100px
-    const bgY = -r * 100 + '%';  // 每格高度 100px
-    // 鼠标悬停时每个格子向外偏移20px，中心格（c=1, r=1）不动
-    const disX = (c - 1) * 20 + 'px';
-    const disY = (r - 1) * 20 + 'px';
-    item.style.setProperty('--bgX', bgX);
-    item.style.setProperty('--bgY', bgY);
-    item.style.setProperty('--disX', disX);
-    item.style.setProperty('--disY', disY);
-}
-</script>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.jiu</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: grid;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: <span class="built_in">repeat</span>(<span class="number">3</span>, <span class="number">1</span>fr);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.jiu-item</span> &#123;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    <span class="attribute">transition</span>: <span class="number">0.1s</span>;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">https://p3-pc.douyinpic.com/img/aweme-avatar/tos-cn-i-0813c001_ocAAAPjStmnQfCHA0FDXjI7hCqe9EjFgAcrAUL~c5_300x300.jpeg?from=2956013662</span>);</span><br><span class="line">    <span class="attribute">background-size</span>: <span class="number">300px</span> <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">background-position</span>: <span class="built_in">var</span>(--bgX, <span class="number">0</span>) <span class="built_in">var</span>(--bgY, <span class="number">0</span>);</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translate</span>(<span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.jiu</span><span class="selector-pseudo">:active</span> <span class="selector-class">.jiu-item</span> &#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1px</span> <span class="number">#fff</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translate</span>(<span class="built_in">var</span>(--disX, <span class="number">0</span>), <span class="built_in">var</span>(--disY, <span class="number">0</span>));</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.jiu-item</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1px</span> <span class="number">#fff</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translate</span>(<span class="built_in">var</span>(--disX, <span class="number">0</span>), <span class="built_in">var</span>(--disY, <span class="number">0</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;jiu&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;jiu-item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;jiu-item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;jiu-item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;jiu-item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;jiu-item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;jiu-item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;jiu-item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;jiu-item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;jiu-item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> items = <span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&#x27;.jiu-item&#x27;</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; items.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">const</span> item = items[i];</span><br><span class="line">    <span class="keyword">const</span> r = <span class="title class_">Math</span>.<span class="title function_">floor</span>(i / <span class="number">3</span>);</span><br><span class="line">    <span class="keyword">const</span> c = i % <span class="number">3</span>;</span><br><span class="line">    <span class="keyword">const</span> bgX = -c * <span class="number">100</span> + <span class="string">&#x27;%&#x27;</span>;  <span class="comment">// 每格宽度 100px</span></span><br><span class="line">    <span class="keyword">const</span> bgY = -r * <span class="number">100</span> + <span class="string">&#x27;%&#x27;</span>;  <span class="comment">// 每格高度 100px</span></span><br><span class="line">    <span class="comment">// 鼠标悬停时每个格子向外偏移20px，中心格（c=1, r=1）不动</span></span><br><span class="line">    <span class="keyword">const</span> disX = (c - <span class="number">1</span>) * <span class="number">20</span> + <span class="string">&#x27;px&#x27;</span>;</span><br><span class="line">    <span class="keyword">const</span> disY = (r - <span class="number">1</span>) * <span class="number">20</span> + <span class="string">&#x27;px&#x27;</span>;</span><br><span class="line">    item.<span class="property">style</span>.<span class="title function_">setProperty</span>(<span class="string">&#x27;--bgX&#x27;</span>, bgX);</span><br><span class="line">    item.<span class="property">style</span>.<span class="title function_">setProperty</span>(<span class="string">&#x27;--bgY&#x27;</span>, bgY);</span><br><span class="line">    item.<span class="property">style</span>.<span class="title function_">setProperty</span>(<span class="string">&#x27;--disX&#x27;</span>, disX);</span><br><span class="line">    item.<span class="property">style</span>.<span class="title function_">setProperty</span>(<span class="string">&#x27;--disY&#x27;</span>, disY);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>css</tag>
-      </tags>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<h2 id="Draw-io-img-src-https-hediet-gallerycdn-vsassets-io-extensions-hediet-vscode-drawio-1-9-250226013-1740566991071-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#Draw-io-img-src-https-hediet-gallerycdn-vsassets-io-extensions-hediet-vscode-drawio-1-9-250226013-1740566991071-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio">Draw.io</a> <img src="https://hediet.gallerycdn.vsassets.io/extensions/hediet/vscode-drawio/1.9.250226013/1740566991071/Microsoft.VisualStudio.Services.Icons.Default"></h2>
+<blockquote>
+<p>Draw diagrams and sketches in your editor</p>
+</blockquote>
+<p><strong>功能简介</strong>：专业图表与流程图设计工具。<br>
+<strong>核心功能</strong>：</p>
+<ul>
+<li>集成 <a href="http://Draw.io">Draw.io</a> 的完整功能，支持 UML、网络拓扑图等复杂图表。</li>
+<li>提供海量模板与图标库。</li>
+<li>直接保存图表为 .drawio 或导出为图片/PDF。</li>
+</ul>
+<p><strong>适用场景</strong>：技术架构设计、数据库建模、流程文档化。</p>
+<a class="tag-link" href="https://app.diagrams.net/" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Draw.io</div>
+            <div class="tag-link-sitename">在线网站</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<h2 id="GitHub-copilot-img-src-https-GitHub-gallerycdn-vsassets-io-extensions-github-copilot-1-296-1486-1743783345263-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#GitHub-copilot-img-src-https-GitHub-gallerycdn-vsassets-io-extensions-github-copilot-1-296-1486-1743783345263-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot">GitHub copilot</a> <img src="https://GitHub.gallerycdn.vsassets.io/extensions/github/copilot/1.296.1486/1743783345263/Microsoft.VisualStudio.Services.Icons.Default"></h2>
+<blockquote>
+<p>AI pair programmer</p>
+</blockquote>
+<p><strong>功能简介</strong>：AI 驱动的代码自动补全工具。<br>
+<strong>核心功能</strong>：</p>
+<ul>
+<li>基于上下文生成单行、多行甚至完整函数代码。</li>
+<li>支持 Python、JavaScript、Go 等主流语言。</li>
+<li>通过学习开源代码库提供符合习惯的代码建议。</li>
+</ul>
+<p><strong>适用场景</strong>：快速原型开发、学习新语言、减少重复编码。</p>
+<!-- ![](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png) -->
+]]></content>
   </entry>
   <entry>
-    <title>初试hexo</title>
-    <url>/hiner/2025/03/12/%E5%88%9D%E8%AF%95hexo/</url>
-    <content><![CDATA[<h2 id="markdown的Front-matter"><a class="header-anchor" href="#markdown的Front-matter">¶</a>markdown的Front-matter</h2>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">文章标题</span></span><br><span class="line"><span class="attr">date:</span> <span class="string">创建日期</span></span><br><span class="line"><span class="attr">updated:</span> <span class="string">更新日期</span></span><br><span class="line"><span class="attr">tags:</span> [<span class="string">标签1</span>, <span class="string">标签2</span>]</span><br><span class="line"><span class="attr">categories:</span> [<span class="string">分类1</span>]</span><br><span class="line"><span class="attr">cover:</span> <span class="string">封面图路径</span></span><br><span class="line"><span class="attr">reprint:</span> <span class="literal">true</span> <span class="comment">#  版权（默认为原创）为true时为转载</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">true</span> <span class="comment"># 评论（默认：true）</span></span><br><span class="line"><span class="attr">sticky:</span> <span class="number">100</span> <span class="comment"># 置顶优先级（数值越大越靠前，0 表示不置顶）</span></span><br><span class="line"><span class="attr">mathjax:</span> <span class="literal">false</span> <span class="comment"># 数学公式支持（默认：false）</span></span><br></pre></td></tr></table></figure>
-<p>title 和 date 为必须</p>
-<h2 id="外挂标签"><a class="header-anchor" href="#外挂标签">¶</a>外挂标签</h2>
-<h3 id="tabs"><a class="header-anchor" href="#tabs">¶</a>tabs</h3>
-<p>标签页标签，用于显示标签页。</p>
-<div class="tabs" id="tabs"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#tabs-0">语法</button></li><li class="tab"><button type="button" data-href="#tabs-1">示例</button></li><li class="tab"><button type="button" data-href="#tabs-2">效果</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="tabs-0"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% tabs 唯一名称, [index] %&#125;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab [唯一Tab] [@icon] --&gt;</span><br><span class="line"></span><br><span class="line">任何内容（也支持内联标签）。</span><br><span class="line"></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="tabs-1"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% tabs test %&#125;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 1.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 2.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 3.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="tabs-2"><div class="tabs" id="test"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#test-0">test 0</button></li><li class="tab"><button type="button" data-href="#test-1">test 1</button></li><li class="tab"><button type="button" data-href="#test-2">test 2</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="test-0"><p><strong>This is Tab 1.</strong></p></div><div class="tab-item-content" id="test-1"><p><strong>This is Tab 2.</strong></p></div><div class="tab-item-content" id="test-2"><p><strong>This is Tab 3.</strong></p></div></div></div></div></div></div>
-<h3 id="折叠-fold"><a class="header-anchor" href="#折叠-fold">¶</a>折叠 fold</h3>
-<p>折叠标签，用于显示折叠内容。</p>
-<div class="tabs" id="fold"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#fold-0">语法</button></li><li class="tab"><button type="button" data-href="#fold-1">参数</button></li><li class="tab"><button type="button" data-href="#fold-2">效果</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="fold-0"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% fold [title] open %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endfold %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="fold-1"><table>
-<thead>
-<tr>
-<th>参数</th>
-<th>说明</th>
-<th>默认值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>title</td>
-<td>标题</td>
-<td>无</td>
-</tr>
-<tr>
-<td>open</td>
-<td>是否展开</td>
-<td>不填不显示</td>
-</tr>
-</tbody>
-</table></div><div class="tab-item-content" id="fold-2"><details open><summary>title</summary><p>content</p></details></div></div></div>
-<h3 id="卡片-card"><a class="header-anchor" href="#卡片-card">¶</a>卡片 card</h3>
-<p>card 标签，用于显示卡片。</p>
-<div class="tabs" id="card"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#card-0">语法</button></li><li class="tab"><button type="button" data-href="#card-1">参数</button></li><li class="tab"><button type="button" data-href="#card-2">示例</button></li><li class="tab"><button type="button" data-href="#card-3">效果</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="card-0"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% card [title],[url],[cover],[score],[desc],[icon],[tag],[width],[height] %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="card-1"><table>
-<thead>
-<tr>
-<th>参数</th>
-<th>说明</th>
-<th>默认值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>title</td>
-<td>标题</td>
-<td>无</td>
-</tr>
-<tr>
-<td>url</td>
-<td>链接</td>
-<td>无</td>
-</tr>
-<tr>
-<td>cover</td>
-<td>封面</td>
-<td>无</td>
-</tr>
-<tr>
-<td>score</td>
-<td>评分</td>
-<td>无</td>
-</tr>
-<tr>
-<td>desc</td>
-<td>评价</td>
-<td>无</td>
-</tr>
-<tr>
-<td>icon</td>
-<td>图标</td>
-<td>无</td>
-</tr>
-<tr>
-<td>tag</td>
-<td>标签</td>
-<td>无</td>
-</tr>
-<tr>
-<td>width</td>
-<td>宽度</td>
-<td>无</td>
-</tr>
-<tr>
-<td>height</td>
-<td>高度</td>
-<td>无</td>
-</tr>
-</tbody>
-</table></div><div class="tab-item-content" id="card-2"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% card &#x27;诡秘之主&#x27;,&#x27;https://book.qidian.com/info/1010868264/&#x27;,&#x27;https://bookcover.yuewen.com/qdbimg/349573/1010868264/300&#x27;,&#x27;4.5&#x27;,&#x27;第一次接触这种西方文学小说，刚开始感觉看不懂，断断续续看了很多次。后来越看越觉好看，每次看甚至都需要查“文档”&#x27;,&#x27;fa-solid fa-book-open&#x27;,&#x27;小说&#x27; %&#125;</span><br><span class="line">&#123;% card 崩坏：星穹铁道, https://sr.mihoyo.com/, https://bu.dusays.com/2024/10/28/671f2b2119bcf.webp, 5, 健康阳光积极向上的欢乐向回合制 Gacha 游戏, fas fa-gamepad, JRPG, 450px, 275px %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="card-3"><div title="诡秘之主" referrerPolicy="no-referrer" class="card_box" style="background-image: url(https:&#x2F;&#x2F;bookcover.yuewen.com&#x2F;qdbimg&#x2F;349573&#x2F;1010868264&#x2F;300); width:200px; height:275px;"><div class="card_mask"><span>第一次接触这种西方文学小说，刚开始感觉看不懂，断断续续看了很多次。后来越看越觉好看，每次看甚至都需要查“文档”</span><a href="https://book.qidian.com/info/1010868264/">查看详情</a></div><div class="card_top"><i class="fa-solid fa-book-open"></i><span>小说</span></div><div class="card_content"><span>诡秘之主</span><div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-alt"></i></div></div></div>
-<div title="崩坏：星穹铁道" referrerPolicy="no-referrer" class="card_box" style="background-image: url(https:&#x2F;&#x2F;bu.dusays.com&#x2F;2024&#x2F;10&#x2F;28&#x2F;671f2b2119bcf.webp); width:450px; height:275px;"><div class="card_mask"><span>健康阳光积极向上的欢乐向回合制 Gacha 游戏</span><a href="https://sr.mihoyo.com/">查看详情</a></div><div class="card_top"><i class="fas fa-gamepad"></i><span>JRPG</span></div><div class="card_content"><span>崩坏：星穹铁道</span><div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></div></div></div></div></div>
-<h3 id="时间轴-timeline"><a class="header-anchor" href="#时间轴-timeline">¶</a>时间轴 timeline</h3>
-<div class="tabs" id="timeline"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#timeline-0">语法</button></li><li class="tab"><button type="button" data-href="#timeline-1">示例</button></li><li class="tab"><button type="button" data-href="#timeline-2">效果</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="timeline-0"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% timeline [时间轴标题] %&#125;</span><br><span class="line">&#123;% timenode [时间节点标题] %&#125;</span><br><span class="line">内容</span><br><span class="line">&#123;% endtimenode %&#125;</span><br><span class="line">&#123;% timenode [时间节点标题] %&#125;</span><br><span class="line">内容</span><br><span class="line">&#123;% endtimenode %&#125;</span><br><span class="line">&#123;% endtimeline %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="timeline-1"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% timeline 时间轴样式预览 %&#125;</span><br><span class="line">&#123;% timenode 2024-09-01 %&#125;</span><br><span class="line">更新 ijkl。</span><br><span class="line">&#123;% endtimenode %&#125;</span><br><span class="line">&#123;% timenode 2020-11-21 %&#125;</span><br><span class="line">更新 efgh。</span><br><span class="line">&#123;% endtimenode %&#125;</span><br><span class="line">&#123;% timenode 2010-02-02 %&#125;</span><br><span class="line">更新 abcd。</span><br><span class="line">&#123;% endtimenode %&#125;</span><br><span class="line">&#123;% timenode 2000-01-01 %&#125;</span><br><span class="line">发布文章。</span><br><span class="line">&#123;% endtimenode %&#125;</span><br><span class="line">&#123;% endtimeline %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="timeline-2"><div class="timeline"><span class="timeline-title">时间轴样式预览</span><div class="timenode"><div class="meta"><p>2024-09-01</p></div><div class="body"><p>更新 ijkl。</p></div></div>
-<div class="timenode"><div class="meta"><p>2020-11-21</p></div><div class="body"><p>更新 efgh。</p></div></div>
-<div class="timenode"><div class="meta"><p>2010-02-02</p></div><div class="body"><p>更新 abcd。</p></div></div>
-<div class="timenode"><div class="meta"><p>2000-01-01</p></div><div class="body"><p>发布文章。</p></div></div></div></div></div></div>
-<h3 id="按钮-button"><a class="header-anchor" href="#按钮-button">¶</a>按钮 button</h3>
-<div class="tabs" id="button"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#button-0">语法</button></li><li class="tab"><button type="button" data-href="#button-1">示例</button></li><li class="tab"><button type="button" data-href="#button-2">效果</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="button-0"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% button [icon] [content] [link] %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="button-1"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% button &#x27;fas fa-music&#x27; &#x27;音乐馆&#x27; &#x27;/music/&#x27; %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="button-2"><p><button class="st-btn" onclick="window.open(&#39;..&#x2F;..&#x2F;..&#x2F;..&#x2F;music&#x2F;&#39;)"><i class="solitude fas fa-music"></i><span>音乐馆</span></button></p></div></div></div>
-<h3 id="提示-note"><a class="header-anchor" href="#提示-note">¶</a>提示 note</h3>
-<p>note 标签，用于显示提示。</p>
-<div class="tabs" id="button"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#button-0">语法</button></li><li class="tab"><button type="button" data-href="#button-1">参数</button></li><li class="tab"><button type="button" data-href="#button-2">示例</button></li><li class="tab"><button type="button" data-href="#button-3">效果</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="button-0"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% note &#x27;type&#x27; &#x27;icon&#x27; %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="button-1"><table>
-<thead>
-<tr>
-<th>参数名</th>
-<th>说明</th>
-<th>默认值</th>
-<th>可选值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>type</td>
-<td>类型</td>
-<td>无</td>
-<td>primary, success, warning, danger, info, modern, flat, simple</td>
-</tr>
-<tr>
-<td>icon</td>
-<td>图标</td>
-<td>无</td>
-<td>Fant Awesome 图标</td>
-</tr>
-</tbody>
-</table></div><div class="tab-item-content" id="button-2"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% note &#x27;danger modern&#x27; &#x27;fas fa-wand-magic-sparkles&#x27; %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="button-3"><div class="note danger modern"><i class="solitude fas fa-wand-magic-sparkles"></i><p>content</p></div></div></div></div>
-<h3 id="剧透文本-spoiler"><a class="header-anchor" href="#剧透文本-spoiler">¶</a>剧透文本 spoiler</h3>
-<div class="tabs" id="button"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#button-0">语法</button></li><li class="tab"><button type="button" data-href="#button-1">示例</button></li><li class="tab"><button type="button" data-href="#button-2">效果</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="button-0"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% spoiler [样式] [文字] %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="button-1"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">记忆里曾触及的那抹存在，如&#123;% spoiler block 雾霭中的花 %&#125;，依旧在时光里摇曳。</span><br><span class="line">往昔谈及的那份故事，像夜空中的流云，缥缈又令人&#123;% spoiler blur 难以忘怀 %&#125;。</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="button-2"><p>记忆里曾触及的那抹存在，如<span class="spoiler block-text">雾霭中的花</span>，依旧在时光里摇曳。<br>
-往昔谈及的那份故事，像夜空中的流云，缥缈又令人<span class="spoiler blur-text">难以忘怀</span>。</p></div></div></div>]]></content>
-      <categories>
-        <category>Tips</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
+    <title>CSS 属性</title>
+    <url>/hiner/2025/04/16/css/</url>
+    <content><![CDATA[<h1>有趣的 CSS 属性合集</h1>
+<h2 id="一、视觉特效类"><a class="header-anchor" href="#一、视觉特效类">¶</a>一、视觉特效类</h2>
+<h3 id="1-filter"><a class="header-anchor" href="#1-filter">¶</a>1. <code>filter</code></h3>
+<ul>
+<li><strong><code>drop-shadow()</code></strong><br>
+沿元素不透明区域生成阴影（比 <code>box-shadow</code> 更精准）</li>
+<li><strong><code>contrast()</code></strong><br>
+调整对比度（<code>filter: contrast(1.5)</code>）</li>
+<li><strong><code>blur()</code></strong><br>
+高斯模糊（<code>filter: blur(5px)</code>）</li>
+<li><strong><code>brightness()</code></strong><br>
+亮度控制（<code>filter: brightness(0.8)</code>）</li>
+</ul>
+<h3 id="2-mask"><a class="header-anchor" href="#2-mask">¶</a>2. <code>mask</code></h3>
+<ul>
+<li><strong><code>mask-image</code></strong><br>
+使用图片/渐变作为遮罩（仅显示非透明区域）</li>
+<li><strong><code>mask-size</code></strong><br>
+控制遮罩尺寸（类似 <code>background-size</code>）</li>
+</ul>
+<h3 id="3-mix-blend-mode"><a class="header-anchor" href="#3-mix-blend-mode">¶</a>3. <code>mix-blend-mode</code></h3>
+<p>混合模式（如 <code>multiply</code>, <code>overlay</code>, <code>screen</code>）</p>
+<h2 id="3-3D"><a class="header-anchor" href="#3-3D">¶</a>3. 3D</h2>
+<ul>
+<li><strong><code>transform-style: preserve-3d;</code></strong><br>
+让子元素在 3D 空间中保持位置（默认是 flat，子元素会被拍平到 2D 平面），必须设置在父容器</li>
+</ul>
+<hr>
+<h2 id="二、变形与动画"><a class="header-anchor" href="#二、变形与动画">¶</a>二、变形与动画</h2>
+<h3 id="1-transform"><a class="header-anchor" href="#1-transform">¶</a>1. <code>transform</code></h3>
+<ul>
+<li><strong><code>skew()</code></strong><br>
+元素倾斜（<code>skew(15deg, -5deg)</code> 或 <code>skewX(15deg)</code>与<code>skewY(-5deg)</code>）</li>
+<li><strong><code>scale()</code></strong><br>
+缩放元素（支持 2D/3D）</li>
+<li><strong><code>translate3d()</code></strong><br>
+三维位移（<code>translate3d(10px, 20px, 30px)</code>）</li>
+<li><strong><code>rotate3d()</code></strong><br>
+三维旋转（<code>rotate3d(1, 0.5, 0, 45deg)</code>）</li>
+<li><strong><code>transform-origin</code></strong><br>
+设置变形原点（<code>left top</code>）</li>
+</ul>
+<h3 id="2-animation"><a class="header-anchor" href="#2-animation">¶</a>2. <code>animation</code></h3>
+<ul>
+<li><strong><code>alternate</code></strong> 动画交替反向播放</li>
+<li><strong><code>animation-play-state</code></strong><br>
+暂停/播放控制（<code>paused | running</code>）</li>
+<li><strong><code>steps()</code></strong><br>
+逐帧动画（<code>animation-timing-function: steps(6)</code>）</li>
+</ul>
+<hr>
+<h2 id="三、布局与响应式"><a class="header-anchor" href="#三、布局与响应式">¶</a>三、布局与响应式</h2>
+<h3 id="1-特殊布局"><a class="header-anchor" href="#1-特殊布局">¶</a>1. 特殊布局</h3>
+<ul>
+<li><strong><code>aspect-ratio</code></strong><br>
+强制宽高比（16/9）</li>
+<li><strong><code>shape-outside</code></strong><br>
+文字环绕（circle(50%)）</li>
+<li><strong><code>scroll-snap</code></strong><br>
+滚动对齐（需配合 scroll-snap-type 使用）</li>
+</ul>
+<h3 id="2-三维控制"><a class="header-anchor" href="#2-三维控制">¶</a>2. 三维控制</h3>
+<ul>
+<li><strong><code>backface-visibility</code></strong><br>
+隐藏元素背面（hidden | visible）</li>
+</ul>
+<hr>
+<h2 id="四、渐变与遮罩"><a class="header-anchor" href="#四、渐变与遮罩">¶</a>四、渐变与遮罩</h2>
+<ul>
+<li><strong><code>conic-gradient</code></strong><br>
+圆锥渐变（适合色轮/饼图）<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 圆形 */</span></span><br><span class="line">conic-gradient(<span class="selector-tag">from</span> <span class="number">0deg</span> at <span class="number">50%</span> <span class="number">50%</span>,<span class="selector-id">#ff0000</span> <span class="number">0%</span>,<span class="selector-id">#ff007f</span> <span class="number">8.33%</span>,<span class="selector-id">#ff00ff</span> <span class="number">16.66%</span>,<span class="selector-id">#7f00ff</span> <span class="number">25%</span>,<span class="selector-id">#0000ff</span> <span class="number">33.33%</span>,<span class="selector-id">#007fff</span> <span class="number">41.66%</span>,<span class="selector-id">#00ffff</span> <span class="number">50%</span>,<span class="selector-id">#00ff7f</span> <span class="number">58.33%</span>,<span class="selector-id">#00ff00</span> <span class="number">66.66%</span>,<span class="selector-id">#7fff00</span> <span class="number">75%</span>,<span class="selector-id">#ffff00</span> <span class="number">83.33%</span>,<span class="selector-id">#ff7f00</span> <span class="number">91.66%</span>,<span class="selector-id">#ff0000</span> <span class="number">100%</span>);</span><br><span class="line"><span class="comment">/* 扇形 */</span></span><br><span class="line">conic-gradient(<span class="selector-id">#f00</span> <span class="number">0deg</span> <span class="number">90deg</span>, transparent <span class="number">90deg</span> <span class="number">360deg</span>)</span><br><span class="line"><span class="comment">/* 渐变 */</span></span><br><span class="line">conic-gradient(<span class="selector-id">#00f</span>, transparent)</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 动态饼图 */</span></span><br><span class="line"><span class="keyword">@property</span> --progress &#123;</span><br><span class="line">  syntax: <span class="string">&quot;&lt;angle&gt;&quot;</span>;</span><br><span class="line">  inherits: false;</span><br><span class="line">  initial-value: <span class="number">0deg</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.pie</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">conic-gradient</span>(</span><br><span class="line">    <span class="number">#ff0000</span> <span class="built_in">var</span>(--progress),</span><br><span class="line">    transparent <span class="built_in">var</span>(--progress) <span class="number">360deg</span></span><br><span class="line">  );</span><br><span class="line">  <span class="attribute">transition</span>: --progress <span class="number">0.5s</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.pie</span><span class="selector-pseudo">:hover</span> &#123; <span class="attr">--progress</span>: <span class="number">180deg</span>; &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h2 id="五、排版与细节"><a class="header-anchor" href="#五、排版与细节">¶</a>五、排版与细节</h2>
+<h3 id="1-边框"><a class="header-anchor" href="#1-边框">¶</a>1. 边框</h3>
+<ul>
+<li><strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/outline"><code>outline</code></a></strong></li>
+</ul>
+<h3 id="2-基本文本和字体样式"><a class="header-anchor" href="#2-基本文本和字体样式">¶</a>2. 基本文本和字体样式</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Learn_web_development/Core/Text_styling/Fundamentals">字体样式</a></li>
+<li><strong><code>letter-spacing</code></strong><br>
+字符间距（0.1em）</li>
+<li><strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration"><code>text-decoration</code></a></strong><br>
+文本装饰线条</li>
+<li><strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-shadow"><code>text-shadow</code></a></strong><br>
+文字阴影（2px 2px 4px rgba(0,0,0,0.5)）</li>
+</ul>
+<h3 id="3-交互增强"><a class="header-anchor" href="#3-交互增强">¶</a>3. 交互增强</h3>
+<ul>
+<li><strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/cursor"><code>cursor</code></a></strong><br>
+鼠标指针样式（grab, zoom-in）</li>
+<li><strong><code>resize</code></strong><br>
+允许用户调整尺寸（vertical | horizontal）</li>
+</ul>
+]]></content>
   </entry>
   <entry>
     <title>壁纸 API</title>
@@ -3160,9 +3046,9 @@ for (let i = 0; i < items.length; i++) {
         });
     })
 </script>
-<p>分享一些图片或者壁纸 API ,仅收集</p>
+<p>分享一些图片或者壁纸 API ，仅收集</p>
 <blockquote>
-<p>点击切图</p>
+<p>刷新页面后，点击即可切图</p>
 </blockquote>
 <h2 id="Lorem-Picsum"><a class="header-anchor" href="#Lorem-Picsum">¶</a><a href="https://picsum.photos/">Lorem Picsum</a></h2>
 <p>更改链接数字以改变图片像素<br>
@@ -3214,6 +3100,13 @@ for (let i = 0; i < items.length; i++) {
 <img src="https://moe.jitsu.top/img/?sort=pc&34" onclick="changeImage(this)" alt="">
 <img src="https://moe.jitsu.top/api" onclick="changeImage(this)" alt="">
 <img src="https://moe.jitsu.top/r18" onclick="changeImage(this)" alt="">
+<h2 id="韩小韩WebAPI接口"><a class="header-anchor" href="#韩小韩WebAPI接口">¶</a><a href="https://api.vvhan.com/">韩小韩WebAPI接口</a></h2>
+<h3 id="Bing"><a class="header-anchor" href="#Bing">¶</a>Bing</h3>
+<img src="https://api.vvhan.com/api/bing" onclick="changeImage(this)" alt="">
+<h3 id="风景"><a class="header-anchor" href="#风景">¶</a>风景</h3>
+<img src="https://api.vvhan.com/api/wallpaper/views" onclick="changeImage(this)" alt="">
+<h3 id="一言"><a class="header-anchor" href="#一言">¶</a>一言</h3>
+<p data-src="https://api.vvhan.com/api/ian/rand">点击此处加载初始文本</p>
 <h2 id="桑帛云-API"><a class="header-anchor" href="#桑帛云-API">¶</a><a href="https://api.lolimi.cn/">桑帛云 API</a></h2>
 <img src="https://api.lolimi.cn/API/tup/xjj.php" onclick="changeImage(this)" alt="">
 <img src="https://api.lolimi.cn/API/meizi/api.php?type=image" onclick="changeImage(this)" alt="">
@@ -3461,12 +3354,12 @@ for (let i = 0; i < items.length; i++) {
         </div>
         <i class="solitude fas fa-chevron-right"></i>
     </div></a>
-<p>写一个我遇到的问题，原本想的是 a 标签包裹 img 标签，让 a 标签来承担被点击的角色，然后更改图片，直到我看到了 img 标签直接应用 onclick 事件，我精简了一下 JS</p>
+<details><summary><p>写一个我遇到的问题，原本想的是 a 标签包裹 img 标签，让 a 标签来承担被点击的角色，然后更改图片，直到我看到了 img 标签直接应用 onclick 事件，我精简了一下 JS</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">onclick</span>=<span class="string">&quot;changeImage(this, &#x27;https://imgapi.xl0408.top/index.php&#x27;)&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://imgapi.xl0408.top/index.php&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">changeImage</span>(<span class="params">e, baseUrl</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> img = e.<span class="title function_">querySelector</span>(<span class="string">&#x27;img&#x27;</span>);</span><br><span class="line">    <span class="keyword">const</span> separator = baseUrl.<span class="title function_">includes</span>(<span class="string">&#x27;?&#x27;</span>) ? <span class="string">&#x27;&amp;&#x27;</span> : <span class="string">&#x27;?&#x27;</span>;</span><br><span class="line">    img.<span class="property">src</span> = baseUrl + separator + <span class="string">&#x27;t=&#x27;</span> + <span class="keyword">new</span> <span class="title class_">Date</span>().<span class="title function_">getTime</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>更改后的</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://imgapi.xl0408.top/index.php&quot;</span> <span class="attr">onclick</span>=<span class="string">&quot;changeImage(this)&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">changeImages</span>(<span class="params">e</span>) &#123;</span><br><span class="line">    e.<span class="property">src</span> += (e.<span class="property">src</span>.<span class="title function_">includes</span>(<span class="string">&#x27;?&#x27;</span>) ? <span class="string">&#x27;&amp;&#x27;</span> : <span class="string">&#x27;?&#x27;</span>) + <span class="string">&#x27;t=&#x27;</span> + <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">changeImages</span>(<span class="params">e</span>) &#123;</span><br><span class="line">    e.<span class="property">src</span> += (e.<span class="property">src</span>.<span class="title function_">includes</span>(<span class="string">&#x27;?&#x27;</span>) ? <span class="string">&#x27;&amp;&#x27;</span> : <span class="string">&#x27;?&#x27;</span>) + <span class="string">&#x27;t=&#x27;</span> + <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></details>
 <script>
     function changeImage(e) {
         e.src += (e.src.includes('?') ? '&' : '?') + 't=' + Date.now();
@@ -3521,160 +3414,162 @@ document.addEventListener('DOMContentLoaded', () => {
       </tags>
   </entry>
   <entry>
-    <title>VSCode 插件</title>
-    <url>/hiner/2025/05/10/vscode-plugin/</url>
-    <content><![CDATA[<style>
-    img {
-        border-radius: 50%;
-        width: 32px;
+    <title>md文件写html</title>
+    <url>/hiner/2025/03/15/write_html/</url>
+    <content><![CDATA[<h2 id="翻转卡片"><a class="header-anchor" href="#翻转卡片">¶</a>翻转卡片</h2>
+<style>
+    .container {
+        width: 90%;
+        max-width: 600px;
+        height: auto;
+        min-height: 300px;
+        margin: 20px auto;
+        padding: 20px 10px;
+        border: 2px solid #000;
+        border-radius: 7px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    .flip-card {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        transform-style: preserve-3d;
+        perspective: 500px;
+        margin: 10px;
+    }
+    .flip-front, .flip-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        object-fit: cover;
+        backface-visibility: hidden;
+        transition: transform 0.8s ease-in-out;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .flip-front img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+    .flip-back {
+        font-size: 2em;
+        color: #000;
+        padding: 15px;
+        background-color: #e2e1e1;
+        text-align: center;
+    }
+    .flip-card:hover .flip-front {
+        transform: rotateY(-180deg);
+    }
+    .flip-card .flip-back {
+        transform: rotateY(180deg);
+    }
+    .flip-card:hover .flip-back {
+        transform: rotateY(0deg);
+    }
+    @media (max-width: 768px) {
+        .container {
+            width: 95%;
+            padding: 10px 5px;
+        }
+        .flip-card {
+            width: 180px;
+            height: 180px;
+            margin: 10px;
+        }
+        .flip-back {
+            font-size: 1.2em;
+            padding: 0px;
+        }
     }
 </style>
-<h2 id="Live-Server-img-src-https-ritwickdey-gallerycdn-vsassets-io-extensions-ritwickdey-liveserver-5-7-9-1736542717282-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#Live-Server-img-src-https-ritwickdey-gallerycdn-vsassets-io-extensions-ritwickdey-liveserver-5-7-9-1736542717282-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a> <img src="https://ritwickdey.gallerycdn.vsassets.io/extensions/ritwickdey/liveserver/5.7.9/1736542717282/Microsoft.VisualStudio.Services.Icons.Default"></h2>
-<blockquote>
-<p>A development server with live reload capability</p>
-</blockquote>
-<p><strong>功能简介</strong>：基于本地服务的实时开发工具，支持自动刷新。<br>
-<strong>核心功能</strong>：</p>
-<ul>
-<li>启动本地服务器，实时渲染 HTML/CSS/JavaScript 文件。</li>
-<li>代码保存后自动刷新浏览器，即时预览修改效果。</li>
-<li>支持自定义端口、根目录及浏览器默认打开路径。</li>
-</ul>
-<p><strong>适用场景</strong>：前端开发、静态页面调试、快速原型设计。</p>
-<h2 id="Auto-Rename-Tag-img-src-https-formulahendry-gallerycdn-vsassets-io-extensions-formulahendry-auto-rename-tag-0-1-10-1644319230173-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#Auto-Rename-Tag-img-src-https-formulahendry-gallerycdn-vsassets-io-extensions-formulahendry-auto-rename-tag-0-1-10-1644319230173-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag">Auto Rename Tag</a> <img src="https://formulahendry.gallerycdn.vsassets.io/extensions/formulahendry/auto-rename-tag/0.1.10/1644319230173/Microsoft.VisualStudio.Services.Icons.Default"></h2>
-<blockquote>
-<p>Auto rename paired HTML/XML tag</p>
-</blockquote>
-<p><strong>功能简介</strong>：自动同步修改 HTML/XML 标签对。<br>
-<strong>核心功能</strong>：</p>
-<ul>
-<li>修改起始标签时，自动更新对应的闭合标签。</li>
-<li>支持 Vue、React 等框架的 JSX/TSX 语法。</li>
-<li>避免手动修改标签时因遗漏导致的语法错误。</li>
-</ul>
-<p><strong>适用场景</strong>：Web 开发、组件化编程、XML 文件编辑。</p>
-<h2 id="htmltagwrap-img-src-https-bradgashler-gallerycdn-vsassets-io-extensions-bradgashler-htmltagwrap-1-0-0-1690951480878-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#htmltagwrap-img-src-https-bradgashler-gallerycdn-vsassets-io-extensions-bradgashler-htmltagwrap-1-0-0-1690951480878-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items/?itemName=bradgashler.htmltagwrap">htmltagwrap</a> <img src="https://bradgashler.gallerycdn.vsassets.io/extensions/bradgashler/htmltagwrap/1.0.0/1690951480878/Microsoft.VisualStudio.Services.Icons.Default"></h2>
-<blockquote>
-<p>Wraps the selected text in HTML tags</p>
-</blockquote>
-<p><strong>功能简介</strong>：快速为选中文本包裹 HTML 标签。<br>
-<strong>核心功能</strong>：</p>
-<ul>
-<li>快捷键（默认为 Alt + W）一键添加标签。</li>
-<li>支持多层嵌套标签与自定义属性。</li>
-<li>提升批量结构化代码的编写效率。</li>
-</ul>
-<p><strong>适用场景</strong>：HTML 模板构建、内容块快速封装。</p>
-<h2 id="Prettier-img-src-https-esbenp-gallerycdn-vsassets-io-extensions-esbenp-prettier-vscode-11-0-0-1723648421534-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#Prettier-img-src-https-esbenp-gallerycdn-vsassets-io-extensions-esbenp-prettier-vscode-11-0-0-1723648421534-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode">Prettier</a> <img src="https://esbenp.gallerycdn.vsassets.io/extensions/esbenp/prettier-vscode/11.0.0/1723648421534/Microsoft.VisualStudio.Services.Icons.Default"></h2>
-<blockquote>
-<p>Code formatter using prettier</p>
-</blockquote>
-<p><strong>功能简介</strong>：多语言代码格式化工具。<br>
-<strong>核心功能</strong>：</p>
-<ul>
-<li>支持 JavaScript、TypeScript、CSS、JSON 等 20+ 语言。</li>
-<li>通过配置文件（.prettierrc）自定义代码风格。</li>
-<li>保存时自动格式化，确保团队代码风格统一。</li>
-</ul>
-<p><strong>适用场景</strong>：代码规范化、协作开发、代码审查辅助。</p>
-<h2 id="ImgPreview-img-src-https-kisstkondoros-gallerycdn-vsassets-io-extensions-kisstkondoros-vscode-gutter-preview-0-32-2-1732997211540-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#ImgPreview-img-src-https-kisstkondoros-gallerycdn-vsassets-io-extensions-kisstkondoros-vscode-gutter-preview-0-32-2-1732997211540-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items/?itemName=kisstkondoros.vscode-gutter-preview">ImgPreview</a> <img src="https://kisstkondoros.gallerycdn.vsassets.io/extensions/kisstkondoros/vscode-gutter-preview/0.32.2/1732997211540/Microsoft.VisualStudio.Services.Icons.Default"></h2>
-<blockquote>
-<p>Preview images in your editor</p>
-</blockquote>
-<p><strong>功能简介</strong>：在编辑器中直接预览图片。<br>
-<strong>核心功能</strong>：</p>
-<ul>
-<li>鼠标悬停于图片路径时显示缩略图。</li>
-<li>支持 PNG、JPG、GIF、SVG 等常见格式。</li>
-<li>快速定位图片资源，避免频繁切换窗口。</li>
-</ul>
-<p><strong>适用场景</strong>：图像资源管理、静态网站开发、UI 设计对接。</p>
-<h2 id="Path-Intellisense-img-src-https-christian-kohler-gallerycdn-vsassets-io-extensions-christian-kohler-path-intellisense-2-10-0-1732919213601-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#Path-Intellisense-img-src-https-christian-kohler-gallerycdn-vsassets-io-extensions-christian-kohler-path-intellisense-2-10-0-1732919213601-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense">Path Intellisense</a> <img src="https://christian-kohler.gallerycdn.vsassets.io/extensions/christian-kohler/path-intellisense/2.10.0/1732919213601/Microsoft.VisualStudio.Services.Icons.Default"></h2>
-<blockquote>
-<p>Visual Studio Code plugin that autocompletes filenames</p>
-</blockquote>
-<p><strong>功能简介</strong>：文件路径自动补全。<br>
-<strong>核心功能</strong>：</p>
-<ul>
-<li>输入路径时提示当前目录下的文件与文件夹。</li>
-<li>支持相对路径与绝对路径补全。</li>
-<li>减少手动输入错误，提升代码可维护性。</li>
-</ul>
-<p><strong>适用场景</strong>：模块化开发、多文件项目管理。</p>
-<h2 id="CodeSnap-img-src-https-adpyke-gallerycdn-vsassets-io-extensions-adpyke-codesnap-1-3-4-1625238962906-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#CodeSnap-img-src-https-adpyke-gallerycdn-vsassets-io-extensions-adpyke-codesnap-1-3-4-1625238962906-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items/?itemName=adpyke.codesnap">CodeSnap</a> <img src="https://adpyke.gallerycdn.vsassets.io/extensions/adpyke/codesnap/1.3.4/1625238962906/Microsoft.VisualStudio.Services.Icons.Default"></h2>
-<blockquote>
-<p>Take beautiful screenshots of your code</p>
-</blockquote>
-<p><strong>功能简介</strong>：生成高亮代码截图。<br>
-<strong>核心功能</strong>：</p>
-<ul>
-<li>自定义截图背景、阴影、边距等样式。</li>
-<li>支持复制图片到剪贴板或保存为 PNG/SVG。</li>
-<li>可选行号显示与语法高亮主题。</li>
-</ul>
-<p><strong>适用场景</strong>：技术文档编写、社交媒体分享、代码教学。</p>
-<h2 id="Excalidraw-img-src-https-pomdtr-gallerycdn-vsassets-io-extensions-pomdtr-excalidraw-editor-3-8-1-1741785200720-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#Excalidraw-img-src-https-pomdtr-gallerycdn-vsassets-io-extensions-pomdtr-excalidraw-editor-3-8-1-1741785200720-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="">Excalidraw</a> <img src="https://pomdtr.gallerycdn.vsassets.io/extensions/pomdtr/excalidraw-editor/3.8.1/1741785200720/Microsoft.VisualStudio.Services.Icons.Default"></h2>
-<blockquote>
-<p>Draw diagrams and sketches in your editor</p>
-</blockquote>
-<p><strong>功能简介</strong>：手绘风格图表绘制工具。<br>
-<strong>核心功能</strong>：</p>
-<ul>
-<li>内置手绘图形、箭头、便签等元素。</li>
-<li>支持导出为 PNG/SVG 或保存为 .excalidraw 文件。</li>
-<li>实时协作功能（需搭配在线服务）。</li>
-</ul>
-<p><strong>适用场景</strong>：草图设计、流程图绘制、会议笔记。</p>
-<a class="tag-link" href="https://excalidraw.com/" target="_blank">
-    <div class="tag-link-tips">引用站外链接</div>
-    <div class="tag-link-bottom">
-        <div class="tag-link-left">
-          <i class="solitude fas fa-link"></i>
+<div class="container">
+    <div class="flip-card">
+        <div class="flip-front">
+            <img src="https://aozijx.github.io/xuao/src/img/smile.jpg">
         </div>
-        <div class="tag-link-right">
-            <div class="tag-link-title">Excalidraw</div>
-            <div class="tag-link-sitename">在线网站</div>
+        <div class="flip-back"> Smile </div>
+    </div>
+    <div class="flip-card">
+        <div class="flip-front">
+            <img src="https://aozijx.github.io/xuao/src/img/hu.jpg">
         </div>
-        <i class="solitude fas fa-chevron-right"></i>
-    </div></a>
-<h2 id="Draw-io-img-src-https-hediet-gallerycdn-vsassets-io-extensions-hediet-vscode-drawio-1-9-250226013-1740566991071-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#Draw-io-img-src-https-hediet-gallerycdn-vsassets-io-extensions-hediet-vscode-drawio-1-9-250226013-1740566991071-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio">Draw.io</a> <img src="https://hediet.gallerycdn.vsassets.io/extensions/hediet/vscode-drawio/1.9.250226013/1740566991071/Microsoft.VisualStudio.Services.Icons.Default"></h2>
-<blockquote>
-<p>Draw diagrams and sketches in your editor</p>
-</blockquote>
-<p><strong>功能简介</strong>：专业图表与流程图设计工具。<br>
-<strong>核心功能</strong>：</p>
-<ul>
-<li>集成 <a href="http://Draw.io">Draw.io</a> 的完整功能，支持 UML、网络拓扑图等复杂图表。</li>
-<li>提供海量模板与图标库。</li>
-<li>直接保存图表为 .drawio 或导出为图片/PDF。</li>
-</ul>
-<p><strong>适用场景</strong>：技术架构设计、数据库建模、流程文档化。</p>
-<a class="tag-link" href="https://app.diagrams.net/" target="_blank">
-    <div class="tag-link-tips">引用站外链接</div>
-    <div class="tag-link-bottom">
-        <div class="tag-link-left">
-          <i class="solitude fas fa-link"></i>
-        </div>
-        <div class="tag-link-right">
-            <div class="tag-link-title">Draw.io</div>
-            <div class="tag-link-sitename">在线网站</div>
-        </div>
-        <i class="solitude fas fa-chevron-right"></i>
-    </div></a>
-<h2 id="GitHub-copilot-img-src-https-GitHub-gallerycdn-vsassets-io-extensions-github-copilot-1-296-1486-1743783345263-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#GitHub-copilot-img-src-https-GitHub-gallerycdn-vsassets-io-extensions-github-copilot-1-296-1486-1743783345263-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot">GitHub copilot</a> <img src="https://GitHub.gallerycdn.vsassets.io/extensions/github/copilot/1.296.1486/1743783345263/Microsoft.VisualStudio.Services.Icons.Default"></h2>
-<blockquote>
-<p>AI pair programmer</p>
-</blockquote>
-<p><strong>功能简介</strong>：AI 驱动的代码自动补全工具。<br>
-<strong>核心功能</strong>：</p>
-<ul>
-<li>基于上下文生成单行、多行甚至完整函数代码。</li>
-<li>支持 Python、JavaScript、Go 等主流语言。</li>
-<li>通过学习开源代码库提供符合习惯的代码建议。</li>
-</ul>
-<p><strong>适用场景</strong>：快速原型开发、学习新语言、减少重复编码。</p>
-<!-- ![](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png) -->
-]]></content>
+        <div class="flip-back"> Slience </div>
+    </div>
+</div>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">90%</span>;</span><br><span class="line">    <span class="attribute">max-width</span>: <span class="number">600px</span>;</span><br><span class="line">    <span class="attribute">height</span>: auto;</span><br><span class="line">    <span class="attribute">min-height</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">20px</span> auto;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">20px</span> <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">2px</span> solid <span class="number">#000</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">7px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">justify-content</span>: center;</span><br><span class="line">    <span class="attribute">gap</span>: <span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">flex-wrap</span>: wrap;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.flip-card</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">transform-style</span>: preserve-<span class="number">3</span>d;</span><br><span class="line">    <span class="attribute">perspective</span>: <span class="number">500px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.flip-front</span>, <span class="selector-class">.flip-back</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">backface-visibility</span>: hidden;</span><br><span class="line">    <span class="attribute">transition</span>: transform <span class="number">1s</span> ease-in-out;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.flip-back</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">2em</span>;</span><br><span class="line">    <span class="attribute">justify-content</span>: center;</span><br><span class="line">    <span class="attribute">align-items</span>: center;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#000</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#e2e1e1</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">2px</span> dotted palevioletred;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.flip-card</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.flip-front</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotateY</span>(-<span class="number">180deg</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.flip-card</span> <span class="selector-class">.flip-back</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotateY</span>(<span class="number">180deg</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.flip-card</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.flip-back</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotateY</span>(<span class="number">0deg</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;flip-card&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">&quot;flip-front&quot;</span> <span class="attr">src</span>=<span class="string">&quot;src/img/smile.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;smile&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;flip-back&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">span</span>&gt;</span>Smile<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="九宫格"><a class="header-anchor" href="#九宫格">¶</a>九宫格</h2>
+<style>
+    .jiu {
+        display: grid;
+        width: 300px;
+        height: 300px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .jiu-item {
+        overflow: hidden;
+        transition: 0.1s;
+        background-image: url(https://p3-pc.douyinpic.com/img/aweme-avatar/tos-cn-i-0813c001_ocAAAPjStmnQfCHA0FDXjI7hCqe9EjFgAcrAUL~c5_300x300.jpeg?from=2956013662);
+        background-size: 300px 300px;
+        background-position: var(--bgX, 0) var(--bgY, 0);
+        transform: translate(0, 0);
+    }
+    .jiu:active .jiu-item {
+        box-shadow: inset 0 0 0 1px #fff;
+        transform: translate(var(--disX, 0), var(--disY, 0));
+    }
+    .jiu-item:hover {
+        box-shadow: inset 0 0 0 1px #fff;
+        transform: translate(var(--disX, 0), var(--disY, 0));
+    }
+</style>
+<div class="container">
+    <div class="jiu">
+        <div class="jiu-item"></div>
+        <div class="jiu-item"></div>
+        <div class="jiu-item"></div>
+        <div class="jiu-item"></div>
+        <div class="jiu-item"></div>
+        <div class="jiu-item"></div>
+        <div class="jiu-item"></div>
+        <div class="jiu-item"></div>
+        <div class="jiu-item"></div>
+    </div>
+</div>
+<script>
+const items = document.querySelectorAll('.jiu-item');
+for (let i = 0; i < items.length; i++) {
+    const item = items[i];
+    const r = Math.floor(i / 3);
+    const c = i % 3;
+    const bgX = -c * 100 + '%';  // 每格宽度 100px
+    const bgY = -r * 100 + '%';  // 每格高度 100px
+    // 鼠标悬停时每个格子向外偏移20px，中心格（c=1, r=1）不动
+    const disX = (c - 1) * 20 + 'px';
+    const disY = (r - 1) * 20 + 'px';
+    item.style.setProperty('--bgX', bgX);
+    item.style.setProperty('--bgY', bgY);
+    item.style.setProperty('--disX', disX);
+    item.style.setProperty('--disY', disY);
+}
+</script>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.jiu</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: grid;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: <span class="built_in">repeat</span>(<span class="number">3</span>, <span class="number">1</span>fr);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.jiu-item</span> &#123;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    <span class="attribute">transition</span>: <span class="number">0.1s</span>;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">https://p3-pc.douyinpic.com/img/aweme-avatar/tos-cn-i-0813c001_ocAAAPjStmnQfCHA0FDXjI7hCqe9EjFgAcrAUL~c5_300x300.jpeg?from=2956013662</span>);</span><br><span class="line">    <span class="attribute">background-size</span>: <span class="number">300px</span> <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">background-position</span>: <span class="built_in">var</span>(--bgX, <span class="number">0</span>) <span class="built_in">var</span>(--bgY, <span class="number">0</span>);</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translate</span>(<span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.jiu</span><span class="selector-pseudo">:active</span> <span class="selector-class">.jiu-item</span> &#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1px</span> <span class="number">#fff</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translate</span>(<span class="built_in">var</span>(--disX, <span class="number">0</span>), <span class="built_in">var</span>(--disY, <span class="number">0</span>));</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.jiu-item</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1px</span> <span class="number">#fff</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translate</span>(<span class="built_in">var</span>(--disX, <span class="number">0</span>), <span class="built_in">var</span>(--disY, <span class="number">0</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;jiu&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;jiu-item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;jiu-item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;jiu-item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;jiu-item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;jiu-item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;jiu-item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;jiu-item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;jiu-item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;jiu-item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> items = <span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&#x27;.jiu-item&#x27;</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; items.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">const</span> item = items[i];</span><br><span class="line">    <span class="keyword">const</span> r = <span class="title class_">Math</span>.<span class="title function_">floor</span>(i / <span class="number">3</span>);</span><br><span class="line">    <span class="keyword">const</span> c = i % <span class="number">3</span>;</span><br><span class="line">    <span class="keyword">const</span> bgX = -c * <span class="number">100</span> + <span class="string">&#x27;%&#x27;</span>;  <span class="comment">// 每格宽度 100px</span></span><br><span class="line">    <span class="keyword">const</span> bgY = -r * <span class="number">100</span> + <span class="string">&#x27;%&#x27;</span>;  <span class="comment">// 每格高度 100px</span></span><br><span class="line">    <span class="comment">// 鼠标悬停时每个格子向外偏移20px，中心格（c=1, r=1）不动</span></span><br><span class="line">    <span class="keyword">const</span> disX = (c - <span class="number">1</span>) * <span class="number">20</span> + <span class="string">&#x27;px&#x27;</span>;</span><br><span class="line">    <span class="keyword">const</span> disY = (r - <span class="number">1</span>) * <span class="number">20</span> + <span class="string">&#x27;px&#x27;</span>;</span><br><span class="line">    item.<span class="property">style</span>.<span class="title function_">setProperty</span>(<span class="string">&#x27;--bgX&#x27;</span>, bgX);</span><br><span class="line">    item.<span class="property">style</span>.<span class="title function_">setProperty</span>(<span class="string">&#x27;--bgY&#x27;</span>, bgY);</span><br><span class="line">    item.<span class="property">style</span>.<span class="title function_">setProperty</span>(<span class="string">&#x27;--disX&#x27;</span>, disX);</span><br><span class="line">    item.<span class="property">style</span>.<span class="title function_">setProperty</span>(<span class="string">&#x27;--disY&#x27;</span>, disY);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>css</tag>
+      </tags>
   </entry>
   <entry>
     <title>xuao Blog</title>
@@ -3695,30 +3590,6 @@ document.addEventListener('DOMContentLoaded', () => {
             color: #ff0266;
         }
     }
-    /* .color span:nth-child(1) {
-        animation-delay: 0s;
-    }
-    .color span:nth-child(2) {
-        animation-delay: 0.1s;
-    }
-    .color span:nth-child(3) {
-        animation-delay: 0.2s;
-    }
-    .color span:nth-child(4) {
-        animation-delay: 0.3s;
-    }
-    .color span:nth-child(5) {
-        animation-delay: 0.4s;
-    }
-    .color span:nth-child(6) {
-        animation-delay: 0.5s;
-    }
-    .color span:nth-child(7) {
-        animation-delay: 0.6s;
-    }
-    .color span:nth-child(8) {
-        animation-delay: 0.7s;
-    } */
 </style>
 <div class="color">
     <span>C</span>
@@ -3735,6 +3606,8 @@ document.addEventListener('DOMContentLoaded', () => {
         span.style.animationDelay = `${index * 0.1}s`;
     });
 </script>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.color</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">4em</span>;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.color</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#e0e0e0</span>;</span><br><span class="line">    <span class="attribute">animation</span>: ColorChange <span class="number">1s</span> infinite ease-in-out alternate;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@keyframes</span> ColorChange &#123;</span><br><span class="line">    <span class="selector-tag">to</span> &#123;</span><br><span class="line">        <span class="attribute">color</span>: <span class="number">#ff0266</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&#x27;.color span&#x27;</span>).<span class="title function_">forEach</span>(<span class="function">(<span class="params">span, index</span>) =&gt;</span> &#123;</span><br><span class="line">    span.<span class="property">style</span>.<span class="property">animationDelay</span> = <span class="string">`<span class="subst">$&#123;index * <span class="number">0.1</span>&#125;</span>s`</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <style>
     .line span {
         font-size: 1.5em;
@@ -3767,25 +3640,28 @@ document.addEventListener('DOMContentLoaded', () => {
     “It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of
     foolishness...”</span>
 </div>
-<ul>
-<li><strong><code>::first-letter</code></strong><br>
-设置选中第一个字母</li>
-<li><strong><code>::selection</code></strong><br>
-设置选中文本的样式</li>
-</ul>
 <div class="line letter">
     <h3><span>A Covenant Between Civilization and Nature</span></h3>
     <div>
-          Environmental crises now threaten humanity’s survival. Polar ice melting at unprecedented rates, 90% of
-          seabirds ingesting plastics, and rampant deforestation expose a fractured ecosystem. These are not isolated
-          issues but symptoms of a broken human-nature covenant.
-          True solutions demand dual action: individuals adopting sustainable habits and governments enforcing green
-          policies. As Jane Goodall warned, "Protecting nature is not a choice but a necessity for civilization’s
-          continuity." Environmentalism must evolve from "saving Earth" to redefining humanity’s role as stewards of a
-          shared biological legacy. Only by honoring this planetary covenant can we safeguard tomorrow’s world.
+        Environmental crises now threaten humanity’s survival. Polar ice melting at unprecedented rates, 90% of
+        seabirds ingesting plastics, and rampant deforestation expose a fractured ecosystem. These are not isolated
+        issues but symptoms of a broken human-nature covenant.
+    </div>
+    <div>
+        True solutions demand dual action: individuals adopting sustainable habits and governments enforcing green
+        policies. As Jane Goodall warned, "Protecting nature is not a choice but a necessity for civilization’s
+        continuity." Environmentalism must evolve from "saving Earth" to redefining humanity’s role as stewards of a
+        shared biological legacy. Only by honoring this planetary covenant can we safeguard tomorrow’s world.
     </div>
 </div>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.letter</span> <span class="selector-tag">div</span><span class="selector-pseudo">::first-letter</span> &#123;</span><br><span class="line">      <span class="attribute">font-size</span>: <span class="number">2em</span>;</span><br><span class="line">      <span class="attribute">text-transform</span>: uppercase;</span><br><span class="line">      <span class="attribute">float</span>: left;</span><br><span class="line">      <span class="attribute">margin-right</span>: <span class="number">10px</span>;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>]]></content>
+<ul>
+<li><strong>::first-letter</strong><br>
+设置选中第一个字母</li>
+<li><strong>::selection</strong><br>
+设置选中文本的样式</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.line</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">1.5em</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(to right, <span class="number">#f00</span>, <span class="number">#00f</span>) no-repeat;</span><br><span class="line">    <span class="attribute">background-size</span>: <span class="number">0px</span> <span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">background-position</span>: right bottom;</span><br><span class="line">    <span class="attribute">transition</span>: background-size <span class="number">1s</span>;</span><br><span class="line">    <span class="attribute">cursor</span>: pointer;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.line</span> <span class="selector-tag">span</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">background-size</span>: <span class="number">100%</span> <span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">background-position</span>: left bottom;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.letter</span> <span class="selector-tag">div</span><span class="selector-pseudo">::first-letter</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">2em</span>;</span><br><span class="line">    <span class="attribute">text-transform</span>: uppercase;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">    <span class="attribute">margin-right</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.letter</span> <span class="selector-tag">div</span><span class="selector-pseudo">::selection</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: palevioletred;</span><br><span class="line">    <span class="attribute">text-decoration</span>: underline;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Tips</category>
       </categories>
@@ -3794,83 +3670,139 @@ document.addEventListener('DOMContentLoaded', () => {
       </tags>
   </entry>
   <entry>
-    <title>我的改造</title>
-    <url>/hiner/2025/03/16/%E6%88%91%E7%9A%84%E6%94%B9%E9%80%A0/</url>
-    <content><![CDATA[<h2 id="右键菜单添加复制当前页面链接按钮"><a class="header-anchor" href="#右键菜单添加复制当前页面链接按钮">¶</a>右键菜单添加复制当前页面链接按钮</h2>
-<p>新建 <code>/themes/solitude/js/copylink.js</code> ，内容如下：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">copyPostLink</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> postLink = <span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span>;</span><br><span class="line"></span><br><span class="line">    navigator.<span class="property">clipboard</span>.<span class="title function_">writeText</span>(postLink).<span class="title function_">then</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        utils.<span class="title function_">snackbarShow</span>(<span class="string">&quot;当前页面链接已复制到剪贴板&quot;</span>, <span class="literal">false</span>, <span class="number">2000</span>);</span><br><span class="line">    &#125;).<span class="title function_">catch</span>(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&quot;无法复制链接&quot;</span>, err);</span><br><span class="line">        utils.<span class="title function_">snackbarShow</span>(<span class="string">&quot;复制失败，请重试&quot;</span>, <span class="literal">false</span>, <span class="number">2000</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>修改 <code>_config.solitude.yml</code> ，引入js：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">extends:</span></span><br><span class="line">   <span class="attr">body:</span></span><br><span class="line">       <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;/js/copylink.js&quot;</span> <span class="string">async&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
-<p>然后右键菜单添加该项即可：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">right_menu:</span></span><br><span class="line">  <span class="attr">custom_list:</span></span><br><span class="line">     <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">复制链接</span></span><br><span class="line">       <span class="attr">click:</span> <span class="string">copyPostLink()</span></span><br><span class="line">       <span class="attr">id:</span> <span class="string">menu-copyPostLink</span></span><br><span class="line">       <span class="attr">class:</span></span><br><span class="line">       <span class="attr">icon:</span> <span class="string">fas</span> <span class="string">fa-link</span></span><br></pre></td></tr></table></figure>
-<p>第六项：<a href="https://r1n.top/post/c28e60f4.html">https://r1n.top/post/c28e60f4.html</a></p>
-<h2 id="导航栏页面"><a class="header-anchor" href="#导航栏页面">¶</a>导航栏页面</h2>
-<a class="tag-link" href="https://solitude.js.org/feature/links.html" target="_blank">
-    <div class="tag-link-tips">引用站外链接</div>
-    <div class="tag-link-bottom">
-        <div class="tag-link-left">
-          <i class="solitude fas fa-link"></i>
-        </div>
-        <div class="tag-link-right">
-            <div class="tag-link-title">solitude</div>
-            <div class="tag-link-sitename">官方文档</div>
-        </div>
-        <i class="solitude fas fa-chevron-right"></i>
-    </div></a>
-<h2 id="links-页面"><a class="header-anchor" href="#links-页面">¶</a>links 页面</h2>
-<p>想改成只显示 title ，hover 显示 desc，调不好，只能这样了，当 avatar 值为 None 触发，但就在我要推送的时候，我想到：为什么不把条件设置为空呢😅🤣</p>
-<ul>
-<li>card</li>
-</ul>
-<blockquote>
-<p>themes\solitude\layout\includes\widgets\page\links\linksCard.pug &gt;line 14</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if item.avatar</span><br><span class="line">    .site-card-avatar</span><br><span class="line">        img.flink-avatar.cf-friends-avatar(src=item.avatar + (data.suffix || &#x27;&#x27;), alt=item.name)</span><br><span class="line">        //- .img-alt.is-center= item.name</span><br><span class="line">else    </span><br><span class="line">    - var avatarStyle =  &#x27;display:none&#x27;</span><br><span class="line">.site-card-text</span><br><span class="line">    span.title.cf-friends-name= item.name</span><br><span class="line">    span.desc(title=item.descr)= item.descr</span><br></pre></td></tr></table></figure>
-<ul>
-<li>banner</li>
-</ul>
-<blockquote>
-<p>themes\solitude\layout\includes\widgets\page\links\banner.pug &gt;line 30</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a.tags-group-icon(href=url_for(y.link), title=y.name)</span><br><span class="line">    if y.avatar</span><br><span class="line">        img(src=y.avatar + (site.data.links.banner_suffix || &#x27;&#x27;), title=y.name)</span><br><span class="line">    else</span><br><span class="line">        img(src=y.topimg + (site.data.links.banner_suffix || &#x27;&#x27;), title=y.name)</span><br><span class="line">    span.tags-group-title=y.name</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>themes\solitude\source\css_page\links.stylline &gt;line 152 .site-card-text &gt; .title</p>
-</blockquote>
-<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="attribute">padding-bottom</span> <span class="number">7px</span></span><br></pre></td></tr></table></figure>
-<h2 id="about-页面"><a class="header-anchor" href="#about-页面">¶</a>about 页面</h2>
-<ul>
-<li>游戏 icon 显示异常</li>
-</ul>
-<blockquote>
-<p>themes\solitude\layout\includes\widgets\page\about\hobbies.pug &gt;line 16</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.icon-group</span><br><span class="line">    each icon in game.icon_group</span><br><span class="line">        i(style=`background: url($&#123;icon&#125;) center / cover;`)</span><br></pre></td></tr></table></figure>
-<h2 id="嘉然"><a class="header-anchor" href="#嘉然">¶</a>嘉然</h2>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">body:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;https://cdn.jsdelivr.net/npm/greensock@1.20.2/dist/TweenLite.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;https://cdn.jsdelivr.net/npm/pixi.js@5.3.6/dist/pixi.min.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;https://cdn.jsdelivr.net/npm/pixi-live2d-display@0.3.1/dist/cubism4.min.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">href=&quot;https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/pio.css&quot;</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">type=&quot;text/css&quot;/&gt;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/pio.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/pio_sdk4.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/load.js&quot;&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="灯箱（failed）"><a class="header-anchor" href="#灯箱（failed）">¶</a><s>灯箱</s>（failed）</h2>
-<p>在 Font Matter 添加 no_lightbox 为 true 实现文章不显现 lightbox<br>
-但是改造失败了，退而求其次：使用 js 吧</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;DOMContentLoaded&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&#x27;a.fancybox&#x27;</span>).<span class="title function_">forEach</span>(<span class="function"><span class="params">a</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> img = a.<span class="title function_">querySelector</span>(<span class="string">&#x27;img&#x27;</span>);</span><br><span class="line">        <span class="keyword">if</span> (img) &#123;</span><br><span class="line">        <span class="comment">// 用 img 标签替换 a 标签</span></span><br><span class="line">        a.<span class="property">parentNode</span>.<span class="title function_">replaceChild</span>(img, a);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>themes\solitude\scripts\filter\default.js &gt;line 25</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">data.<span class="property">no_lightbox</span> = data.<span class="title function_">hasOwnProperty</span>(<span class="string">&quot;no_lightbox&quot;</span>) ? data.<span class="property">no_lightbox</span> === <span class="literal">true</span> : <span class="literal">false</span>;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>themes\solitude\layout\includes\inject\body.pug &gt;line 48、104</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> theme.<span class="property">lightbox</span> || page.<span class="property">no_lightbox</span> === <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>themes\solitude\source\js\main.js &gt;line 922</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">lightbox &amp;&amp; page.<span class="property">no_lightbox</span> === <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>themes\solitude\layout\includes\inject\head.pug &gt;line 16</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> theme.<span class="property">lightbox</span> &amp;&amp; theme.<span class="property">fancybox</span> &amp;&amp; page.<span class="property">no_lightbox</span> == <span class="literal">false</span></span><br></pre></td></tr></table></figure>]]></content>
+    <title>初试hexo</title>
+    <url>/hiner/2025/03/12/%E5%88%9D%E8%AF%95hexo/</url>
+    <content><![CDATA[<h2 id="markdown的Front-matter"><a class="header-anchor" href="#markdown的Front-matter">¶</a>markdown的Front-matter</h2>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">文章标题</span></span><br><span class="line"><span class="attr">date:</span> <span class="string">创建日期</span></span><br><span class="line"><span class="attr">updated:</span> <span class="string">更新日期</span></span><br><span class="line"><span class="attr">tags:</span> [<span class="string">标签1</span>, <span class="string">标签2</span>]</span><br><span class="line"><span class="attr">categories:</span> [<span class="string">分类1</span>]</span><br><span class="line"><span class="attr">cover:</span> <span class="string">封面图路径</span></span><br><span class="line"><span class="attr">reprint:</span> <span class="literal">true</span> <span class="comment">#  版权（默认为原创）为true时为转载</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">true</span> <span class="comment"># 评论（默认：true）</span></span><br><span class="line"><span class="attr">sticky:</span> <span class="number">100</span> <span class="comment"># 置顶优先级（数值越大越靠前，0 表示不置顶）</span></span><br><span class="line"><span class="attr">mathjax:</span> <span class="literal">false</span> <span class="comment"># 数学公式支持（默认：false）</span></span><br></pre></td></tr></table></figure>
+<p>title 和 date 为必须</p>
+<h2 id="外挂标签"><a class="header-anchor" href="#外挂标签">¶</a>外挂标签</h2>
+<h3 id="tabs"><a class="header-anchor" href="#tabs">¶</a>tabs</h3>
+<p>标签页标签，用于显示标签页。</p>
+<div class="tabs" id="tabs"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#tabs-0">语法</button></li><li class="tab"><button type="button" data-href="#tabs-1">示例</button></li><li class="tab"><button type="button" data-href="#tabs-2">效果</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="tabs-0"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% tabs 唯一名称, [index] %&#125;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab [唯一Tab] [@icon] --&gt;</span><br><span class="line"></span><br><span class="line">任何内容（也支持内联标签）。</span><br><span class="line"></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="tabs-1"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% tabs test %&#125;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 1.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 2.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 3.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="tabs-2"><div class="tabs" id="test"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#test-0">test 0</button></li><li class="tab"><button type="button" data-href="#test-1">test 1</button></li><li class="tab"><button type="button" data-href="#test-2">test 2</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="test-0"><p><strong>This is Tab 1.</strong></p></div><div class="tab-item-content" id="test-1"><p><strong>This is Tab 2.</strong></p></div><div class="tab-item-content" id="test-2"><p><strong>This is Tab 3.</strong></p></div></div></div></div></div></div>
+<h3 id="折叠-fold"><a class="header-anchor" href="#折叠-fold">¶</a>折叠 fold</h3>
+<p>折叠标签，用于显示折叠内容。</p>
+<div class="tabs" id="fold"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#fold-0">语法</button></li><li class="tab"><button type="button" data-href="#fold-1">参数</button></li><li class="tab"><button type="button" data-href="#fold-2">效果</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="fold-0"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% fold [title] open %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endfold %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="fold-1"><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>标题</td>
+<td>无</td>
+</tr>
+<tr>
+<td>open</td>
+<td>是否展开</td>
+<td>不填不显示</td>
+</tr>
+</tbody>
+</table></div><div class="tab-item-content" id="fold-2"><details open><summary>title</summary><p>content</p></details></div></div></div>
+<h3 id="卡片-card"><a class="header-anchor" href="#卡片-card">¶</a>卡片 card</h3>
+<p>card 标签，用于显示卡片。</p>
+<div class="tabs" id="card"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#card-0">语法</button></li><li class="tab"><button type="button" data-href="#card-1">参数</button></li><li class="tab"><button type="button" data-href="#card-2">示例</button></li><li class="tab"><button type="button" data-href="#card-3">效果</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="card-0"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% card [title],[url],[cover],[score],[desc],[icon],[tag],[width],[height] %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="card-1"><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>标题</td>
+<td>无</td>
+</tr>
+<tr>
+<td>url</td>
+<td>链接</td>
+<td>无</td>
+</tr>
+<tr>
+<td>cover</td>
+<td>封面</td>
+<td>无</td>
+</tr>
+<tr>
+<td>score</td>
+<td>评分</td>
+<td>无</td>
+</tr>
+<tr>
+<td>desc</td>
+<td>评价</td>
+<td>无</td>
+</tr>
+<tr>
+<td>icon</td>
+<td>图标</td>
+<td>无</td>
+</tr>
+<tr>
+<td>tag</td>
+<td>标签</td>
+<td>无</td>
+</tr>
+<tr>
+<td>width</td>
+<td>宽度</td>
+<td>无</td>
+</tr>
+<tr>
+<td>height</td>
+<td>高度</td>
+<td>无</td>
+</tr>
+</tbody>
+</table></div><div class="tab-item-content" id="card-2"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% card &#x27;诡秘之主&#x27;,&#x27;https://book.qidian.com/info/1010868264/&#x27;,&#x27;https://bookcover.yuewen.com/qdbimg/349573/1010868264/300&#x27;,&#x27;4.5&#x27;,&#x27;第一次接触这种西方文学小说，刚开始感觉看不懂，断断续续看了很多次。后来越看越觉好看，每次看甚至都需要查“文档”&#x27;,&#x27;fa-solid fa-book-open&#x27;,&#x27;小说&#x27; %&#125;</span><br><span class="line">&#123;% card 崩坏：星穹铁道, https://sr.mihoyo.com/, https://bu.dusays.com/2024/10/28/671f2b2119bcf.webp, 5, 健康阳光积极向上的欢乐向回合制 Gacha 游戏, fas fa-gamepad, JRPG, 450px, 275px %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="card-3"><div title="诡秘之主" referrerPolicy="no-referrer" class="card_box" style="background-image: url(https:&#x2F;&#x2F;bookcover.yuewen.com&#x2F;qdbimg&#x2F;349573&#x2F;1010868264&#x2F;300); width:200px; height:275px;"><div class="card_mask"><span>第一次接触这种西方文学小说，刚开始感觉看不懂，断断续续看了很多次。后来越看越觉好看，每次看甚至都需要查“文档”</span><a href="https://book.qidian.com/info/1010868264/">查看详情</a></div><div class="card_top"><i class="fa-solid fa-book-open"></i><span>小说</span></div><div class="card_content"><span>诡秘之主</span><div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-alt"></i></div></div></div>
+<div title="崩坏：星穹铁道" referrerPolicy="no-referrer" class="card_box" style="background-image: url(https:&#x2F;&#x2F;bu.dusays.com&#x2F;2024&#x2F;10&#x2F;28&#x2F;671f2b2119bcf.webp); width:450px; height:275px;"><div class="card_mask"><span>健康阳光积极向上的欢乐向回合制 Gacha 游戏</span><a href="https://sr.mihoyo.com/">查看详情</a></div><div class="card_top"><i class="fas fa-gamepad"></i><span>JRPG</span></div><div class="card_content"><span>崩坏：星穹铁道</span><div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></div></div></div></div></div>
+<h3 id="时间轴-timeline"><a class="header-anchor" href="#时间轴-timeline">¶</a>时间轴 timeline</h3>
+<div class="tabs" id="timeline"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#timeline-0">语法</button></li><li class="tab"><button type="button" data-href="#timeline-1">示例</button></li><li class="tab"><button type="button" data-href="#timeline-2">效果</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="timeline-0"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% timeline [时间轴标题] %&#125;</span><br><span class="line">&#123;% timenode [时间节点标题] %&#125;</span><br><span class="line">内容</span><br><span class="line">&#123;% endtimenode %&#125;</span><br><span class="line">&#123;% timenode [时间节点标题] %&#125;</span><br><span class="line">内容</span><br><span class="line">&#123;% endtimenode %&#125;</span><br><span class="line">&#123;% endtimeline %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="timeline-1"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% timeline 时间轴样式预览 %&#125;</span><br><span class="line">&#123;% timenode 2024-09-01 %&#125;</span><br><span class="line">更新 ijkl。</span><br><span class="line">&#123;% endtimenode %&#125;</span><br><span class="line">&#123;% timenode 2020-11-21 %&#125;</span><br><span class="line">更新 efgh。</span><br><span class="line">&#123;% endtimenode %&#125;</span><br><span class="line">&#123;% timenode 2010-02-02 %&#125;</span><br><span class="line">更新 abcd。</span><br><span class="line">&#123;% endtimenode %&#125;</span><br><span class="line">&#123;% timenode 2000-01-01 %&#125;</span><br><span class="line">发布文章。</span><br><span class="line">&#123;% endtimenode %&#125;</span><br><span class="line">&#123;% endtimeline %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="timeline-2"><div class="timeline"><span class="timeline-title">时间轴样式预览</span><div class="timenode"><div class="meta"><p>2024-09-01</p></div><div class="body"><p>更新 ijkl。</p></div></div>
+<div class="timenode"><div class="meta"><p>2020-11-21</p></div><div class="body"><p>更新 efgh。</p></div></div>
+<div class="timenode"><div class="meta"><p>2010-02-02</p></div><div class="body"><p>更新 abcd。</p></div></div>
+<div class="timenode"><div class="meta"><p>2000-01-01</p></div><div class="body"><p>发布文章。</p></div></div></div></div></div></div>
+<h3 id="按钮-button"><a class="header-anchor" href="#按钮-button">¶</a>按钮 button</h3>
+<div class="tabs" id="button"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#button-0">语法</button></li><li class="tab"><button type="button" data-href="#button-1">示例</button></li><li class="tab"><button type="button" data-href="#button-2">效果</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="button-0"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% button [icon] [content] [link] %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="button-1"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% button &#x27;fas fa-music&#x27; &#x27;音乐馆&#x27; &#x27;/music/&#x27; %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="button-2"><p><button class="st-btn" onclick="window.open(&#39;..&#x2F;..&#x2F;..&#x2F;..&#x2F;music&#x2F;&#39;)"><i class="solitude fas fa-music"></i><span>音乐馆</span></button></p></div></div></div>
+<h3 id="提示-note"><a class="header-anchor" href="#提示-note">¶</a>提示 note</h3>
+<p>note 标签，用于显示提示。</p>
+<div class="tabs" id="button"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#button-0">语法</button></li><li class="tab"><button type="button" data-href="#button-1">参数</button></li><li class="tab"><button type="button" data-href="#button-2">示例</button></li><li class="tab"><button type="button" data-href="#button-3">效果</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="button-0"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% note &#x27;type&#x27; &#x27;icon&#x27; %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="button-1"><table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>说明</th>
+<th>默认值</th>
+<th>可选值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>类型</td>
+<td>无</td>
+<td>primary, success, warning, danger, info, modern, flat, simple</td>
+</tr>
+<tr>
+<td>icon</td>
+<td>图标</td>
+<td>无</td>
+<td>Fant Awesome 图标</td>
+</tr>
+</tbody>
+</table></div><div class="tab-item-content" id="button-2"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% note &#x27;danger modern&#x27; &#x27;fas fa-wand-magic-sparkles&#x27; %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="button-3"><div class="note danger modern"><i class="solitude fas fa-wand-magic-sparkles"></i><p>content</p></div></div></div></div>
+<h3 id="剧透文本-spoiler"><a class="header-anchor" href="#剧透文本-spoiler">¶</a>剧透文本 spoiler</h3>
+<div class="tabs" id="button"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#button-0">语法</button></li><li class="tab"><button type="button" data-href="#button-1">示例</button></li><li class="tab"><button type="button" data-href="#button-2">效果</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="button-0"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% spoiler [样式] [文字] %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="button-1"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">记忆里曾触及的那抹存在，如&#123;% spoiler block 雾霭中的花 %&#125;，依旧在时光里摇曳。</span><br><span class="line">往昔谈及的那份故事，像夜空中的流云，缥缈又令人&#123;% spoiler blur 难以忘怀 %&#125;。</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="button-2"><p>记忆里曾触及的那抹存在，如<span class="spoiler block-text">雾霭中的花</span>，依旧在时光里摇曳。<br>
+往昔谈及的那份故事，像夜空中的流云，缥缈又令人<span class="spoiler blur-text">难以忘怀</span>。</p></div></div></div>]]></content>
       <categories>
-        <category>Hexo</category>
-        <category>solitude</category>
+        <category>Tips</category>
       </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
   </entry>
   <entry>
     <title>星露谷物语PC与手机跨平台联机详细教程</title>
@@ -4025,5 +3957,84 @@ PC端登录后点击「创建网络」→ 选择「对等网络」→ 设置网�
         <tag>steam</tag>
         <tag>星露谷物语</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>我的改造</title>
+    <url>/hiner/2025/03/16/%E6%88%91%E7%9A%84%E6%94%B9%E9%80%A0/</url>
+    <content><![CDATA[<h2 id="右键菜单添加复制当前页面链接按钮"><a class="header-anchor" href="#右键菜单添加复制当前页面链接按钮">¶</a>右键菜单添加复制当前页面链接按钮</h2>
+<p>新建 <code>/themes/solitude/js/copylink.js</code> ，内容如下：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">copyPostLink</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> postLink = <span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span>;</span><br><span class="line"></span><br><span class="line">    navigator.<span class="property">clipboard</span>.<span class="title function_">writeText</span>(postLink).<span class="title function_">then</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        utils.<span class="title function_">snackbarShow</span>(<span class="string">&quot;当前页面链接已复制到剪贴板&quot;</span>, <span class="literal">false</span>, <span class="number">2000</span>);</span><br><span class="line">    &#125;).<span class="title function_">catch</span>(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&quot;无法复制链接&quot;</span>, err);</span><br><span class="line">        utils.<span class="title function_">snackbarShow</span>(<span class="string">&quot;复制失败，请重试&quot;</span>, <span class="literal">false</span>, <span class="number">2000</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>修改 <code>_config.solitude.yml</code> ，引入js：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">extends:</span></span><br><span class="line">   <span class="attr">body:</span></span><br><span class="line">       <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;/js/copylink.js&quot;</span> <span class="string">async&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p>然后右键菜单添加该项即可：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">right_menu:</span></span><br><span class="line">  <span class="attr">custom_list:</span></span><br><span class="line">     <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">复制链接</span></span><br><span class="line">       <span class="attr">click:</span> <span class="string">copyPostLink()</span></span><br><span class="line">       <span class="attr">id:</span> <span class="string">menu-copyPostLink</span></span><br><span class="line">       <span class="attr">class:</span></span><br><span class="line">       <span class="attr">icon:</span> <span class="string">fas</span> <span class="string">fa-link</span></span><br></pre></td></tr></table></figure>
+<p>第六项：<a href="https://r1n.top/post/c28e60f4.html">https://r1n.top/post/c28e60f4.html</a></p>
+<h2 id="导航栏页面"><a class="header-anchor" href="#导航栏页面">¶</a>导航栏页面</h2>
+<a class="tag-link" href="https://solitude.js.org/feature/links.html" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">solitude</div>
+            <div class="tag-link-sitename">官方文档</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<h2 id="links-页面"><a class="header-anchor" href="#links-页面">¶</a>links 页面</h2>
+<p>想改成只显示 title ，hover 显示 desc，调不好，只能这样了，当 avatar 值为 None 触发，但就在我要推送的时候，我想到：为什么不把条件设置为空呢😅🤣</p>
+<ul>
+<li>card</li>
+</ul>
+<blockquote>
+<p>themes\solitude\layout\includes\widgets\page\links\linksCard.pug &gt;line 14</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if item.avatar</span><br><span class="line">    .site-card-avatar</span><br><span class="line">        img.flink-avatar.cf-friends-avatar(src=item.avatar + (data.suffix || &#x27;&#x27;), alt=item.name)</span><br><span class="line">        //- .img-alt.is-center= item.name</span><br><span class="line">else    </span><br><span class="line">    - var avatarStyle =  &#x27;display:none&#x27;</span><br><span class="line">.site-card-text</span><br><span class="line">    span.title.cf-friends-name= item.name</span><br><span class="line">    span.desc(title=item.descr)= item.descr</span><br></pre></td></tr></table></figure>
+<ul>
+<li>banner</li>
+</ul>
+<blockquote>
+<p>themes\solitude\layout\includes\widgets\page\links\banner.pug &gt;line 30</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a.tags-group-icon(href=url_for(y.link), title=y.name)</span><br><span class="line">    if y.avatar</span><br><span class="line">        img(src=y.avatar + (site.data.links.banner_suffix || &#x27;&#x27;), title=y.name)</span><br><span class="line">    else</span><br><span class="line">        img(src=y.topimg + (site.data.links.banner_suffix || &#x27;&#x27;), title=y.name)</span><br><span class="line">    span.tags-group-title=y.name</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>themes\solitude\source\css_page\links.stylline &gt;line 152 .site-card-text &gt; .title</p>
+</blockquote>
+<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="attribute">padding-bottom</span> <span class="number">7px</span></span><br></pre></td></tr></table></figure>
+<h2 id="about-页面"><a class="header-anchor" href="#about-页面">¶</a>about 页面</h2>
+<ul>
+<li>游戏 icon 显示异常</li>
+</ul>
+<blockquote>
+<p>themes\solitude\layout\includes\widgets\page\about\hobbies.pug &gt;line 16</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.icon-group</span><br><span class="line">    each icon in game.icon_group</span><br><span class="line">        i(style=`background: url($&#123;icon&#125;) center / cover;`)</span><br></pre></td></tr></table></figure>
+<h2 id="嘉然"><a class="header-anchor" href="#嘉然">¶</a>嘉然</h2>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">body:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;https://cdn.jsdelivr.net/npm/greensock@1.20.2/dist/TweenLite.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;https://cdn.jsdelivr.net/npm/pixi.js@5.3.6/dist/pixi.min.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;https://cdn.jsdelivr.net/npm/pixi-live2d-display@0.3.1/dist/cubism4.min.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">href=&quot;https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/pio.css&quot;</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">type=&quot;text/css&quot;/&gt;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/pio.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/pio_sdk4.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/load.js&quot;&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="灯箱（failed）"><a class="header-anchor" href="#灯箱（failed）">¶</a><s>灯箱</s>（failed）</h2>
+<p>在 Font Matter 添加 no_lightbox 为 true 实现文章不显现 lightbox<br>
+但是改造失败了，退而求其次：使用 js 吧</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;DOMContentLoaded&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&#x27;a.fancybox&#x27;</span>).<span class="title function_">forEach</span>(<span class="function"><span class="params">a</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> img = a.<span class="title function_">querySelector</span>(<span class="string">&#x27;img&#x27;</span>);</span><br><span class="line">        <span class="keyword">if</span> (img) &#123;</span><br><span class="line">        <span class="comment">// 用 img 标签替换 a 标签</span></span><br><span class="line">        a.<span class="property">parentNode</span>.<span class="title function_">replaceChild</span>(img, a);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>themes\solitude\scripts\filter\default.js &gt;line 25</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">data.<span class="property">no_lightbox</span> = data.<span class="title function_">hasOwnProperty</span>(<span class="string">&quot;no_lightbox&quot;</span>) ? data.<span class="property">no_lightbox</span> === <span class="literal">true</span> : <span class="literal">false</span>;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>themes\solitude\layout\includes\inject\body.pug &gt;line 48、104</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> theme.<span class="property">lightbox</span> || page.<span class="property">no_lightbox</span> === <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>themes\solitude\source\js\main.js &gt;line 922</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">lightbox &amp;&amp; page.<span class="property">no_lightbox</span> === <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>themes\solitude\layout\includes\inject\head.pug &gt;line 16</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> theme.<span class="property">lightbox</span> &amp;&amp; theme.<span class="property">fancybox</span> &amp;&amp; page.<span class="property">no_lightbox</span> == <span class="literal">false</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Hexo</category>
+        <category>solitude</category>
+      </categories>
   </entry>
 </search>
