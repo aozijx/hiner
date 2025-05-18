@@ -4,7 +4,7 @@ date: 2025-04-05 00:57:35
 author: Hiner
 categories: [Tips]
 tags: [Git]
-cover: https://cdn.cdnjson.com/git-scm.cn/images/logos/downloads/Git-Logo-2Color.png
+cover: src/img/git-logo.png
 ---
 
 {% link 'Git' 'fast-version-control' 'https://git-scm.com/book/zh/v2' %}

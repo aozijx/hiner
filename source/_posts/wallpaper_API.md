@@ -18,8 +18,8 @@ cover: https://moe.jitsu.top/img/?sort=pc&34
         });
     })
 </script>
-分享一些图片或者壁纸 API ,仅收集
->点击切图
+分享一些图片或者壁纸 API ，仅收集
+> 刷新页面后，点击即可切图
 ## [Lorem Picsum](https://picsum.photos/)
 更改链接数字以改变图片像素
 <img src="https://picsum.photos/1920/1080" onclick="changeImage(this)" alt="" >
@@ -97,6 +97,16 @@ cover: https://moe.jitsu.top/img/?sort=pc&34
 <img src="https://moe.jitsu.top/api" onclick="changeImage(this)" alt="">
 <img src="https://moe.jitsu.top/r18" onclick="changeImage(this)" alt="">
 
+## [韩小韩WebAPI接口](https://api.vvhan.com/)
+### Bing
+<img src="https://api.vvhan.com/api/bing" onclick="changeImage(this)" alt="">
+
+### 风景
+<img src="https://api.vvhan.com/api/wallpaper/views" onclick="changeImage(this)" alt="">
+
+### 一言
+<p data-src="https://api.vvhan.com/api/ian/rand">点击此处加载初始文本</p>
+
 ## [桑帛云 API](https://api.lolimi.cn/)
 <img src="https://api.lolimi.cn/API/tup/xjj.php" onclick="changeImage(this)" alt="">
 <img src="https://api.lolimi.cn/API/meizi/api.php?type=image" onclick="changeImage(this)" alt="">
@@ -141,7 +151,9 @@ cover: https://moe.jitsu.top/img/?sort=pc&34
 <img src="https://t.alcy.cc/fj" onclick="changeImage(this)" alt="">
 
 ## [MirlKoiAPI](https://dev.iw233.cn/API/index.php)
+
 ## [樱道随机图片 API 接口](https://img.r10086.com/)
+
 ## [MoeHuAPI](https://img.moehu.org/)
 - 喵星人
 <img src="https://img.moehu.org/pic.php?id=cat" onclick="changeImage(this)" alt="">
@@ -170,8 +182,10 @@ cover: https://moe.jitsu.top/img/?sort=pc&34
 - 抖音瞳瞳系列视频 https://api.yujn.cn/api/tongtong.php
 - 超高质量图片 https://api.yujn.cn/api/gzl_ACG.php?type=image&form=pc
 {% endfold %}
+
 ## [久黎 API](http://jiuli.xiaoapi.cn/)
   - http://jiuli.xiaoapi.cn/i/img/mnyjs.php
+
 ## [遇见 API](https://api.yujn.cn/)
 {% fold '展开' %}
 - 最新小姐姐短视频 http://api.yujn.cn/api/zzxjj.php
@@ -180,6 +194,7 @@ cover: https://moe.jitsu.top/img/?sort=pc&34
 - 萝莉视频 http://api.yujn.cn/api/luoli.php
 - 女大学生 https://api.yujn.cn/api/nvda.php
 {% endfold %}
+
 - 唯美写真
 <img src="http://api.yujn.cn/api/xiezhen.php?type=image" onclick="changeImage(this)" alt="">
 
@@ -222,7 +237,6 @@ cover: https://moe.jitsu.top/img/?sort=pc&34
 
 - cos
 <img src="https://free.wqwlkj.cn/wqwlapi/hlxcos.php?type=image" onclick="changeImage(this)" alt="">
-
 
 ## [最要学习 API](https://api.zylearning.top/)
 - 随机类型壁纸
@@ -273,6 +287,7 @@ cover: https://moe.jitsu.top/img/?sort=pc&34
 {% link '赵苦瓜のBlog' '欢迎来到赵苦瓜のBlog~！' 'https://blog.jixiaob.cn/?post=93' %}
 {% link '酷小呵' ' ' 'https://www.kuhehe.top/2023/03a05de98.html#30-远方随机风景壁纸api' %}
 
+{% fold "" %}
 写一个我遇到的问题，原本想的是 a 标签包裹 img 标签，让 a 标签来承担被点击的角色，然后更改图片，直到我看到了 img 标签直接应用 onclick 事件，我精简了一下 JS 
 
 ```html
@@ -299,6 +314,7 @@ function changeImages(e) {
     e.src += (e.src.includes('?') ? '&' : '?') + 't=' + Date.now();
 }
 ```
+{% endfold %}
 
 <script>
     function changeImage(e) {

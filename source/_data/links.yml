@@ -27,19 +27,23 @@ links:
         tag: 博主
         color: vip
 
-      - name: 张洪Heo
-        link: https://blog.zhheo.com/
-        descr: 分享设计与科技生活
-        avatar: 
-        topimg: 
-        tag: 
-        color: 
-
   - class_name: Beauty
     descr: 好看的 Blog，全是单向。
     type: card
     suffix:
     link_list:
+      - name: 张洪Heo
+        link: https://blog.zhheo.com/
+        descr: 分享设计与科技生活
+        avatar: 
+        topimg: https://bu.dusays.com/2022/12/28/63ac2812183aa.png
+
+      - name:: ❖星港◎Star☆
+        link: https://blog.starsharbor.com
+        descr: 以博客记录生活与热爱！
+        avatar: 
+        topimg: https://7.isyangs.cn/85/67b33ac68d72d-85.webp
+
       - name: Elykia
         link: https://blog.elykia.cn/
         descr: 致以无暇之人

@@ -1,5 +1,3 @@
-- content: 
-  date: 2025-05-14 16:00
 - content: 赛博锁妖塔
   date: 2025-05-14 12:30
 - content: B站视频短文
@@ -9,7 +7,7 @@
 - content: 外链视频短文
   date: 2025-04-21 20:30
   video:
-    player: 视频直链
+    player: https://www.douyin.com/aweme/v1/play/?video_id=v0200fg10000cv3smr7og65so2ulpdg0&line=0&file_id=76f9bbd733274179886e80e0995eb8da&sign=89c39479d61827a6321179bab83efb62&is_play_url=1&source=PackSourceEnum_AWEME_DETAIL
 - content: 音乐短文
   date: 2025-04-21 20:30
   aplayer:

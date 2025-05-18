@@ -35,7 +35,6 @@ nav:
      Solitude: https://github.com/everfu/hexo-theme-solitude || /hiner/img/logo.png # name: url || icon
    音乐馆: 
      HeoMusic: /HeoMusic/ || /hiner/HeoMusic/img/icon.webp
-   图库: /Gallery/ || fas fa-images
 
   # Menu
   # 菜单
@@ -46,13 +45,16 @@ nav:
       全部分类: /categories/ || fas fa-clone
       全部标签: /tags/ || fas fa-tags
     友链:
-      朋友圈: /essay/ || fas fa-wifi
       友情链接: /links/ || fas fa-user-group
       弹幕: /message/ || fas fa-comment-dots
       # 宝藏博主: javascript:travelling() || fas fa-gift
-    工具: /tlink/ || fas fa-toolbox
-    音乐馆: /music/ || fas fa-music
-    关于: about/ || fas fa-address-card
+    娱乐:
+      工具: /tlink/ || fas fa-toolbox
+      音乐馆: /music/ || fas fa-music
+    关于:
+      我: about/ || fas fa-address-card
+      说说: /essay/ || fas fa-wifi
+      图库: /Gallery/ || fa-solid fa-image
       # 我的装备: /equipment/ || fas fa-laptop
 
   # Right button
@@ -108,7 +110,7 @@ hometop:
         img: https://i.postimg.cc/nhgjwjCS/git.png
         color: "#df5b40"
   group:
-    热门: /tags/星露谷物语 || fas fa-fire || linear-gradient(to right,#f65,#ffbf37)
+    最近: /tags/星露谷物语 || fas fa-fire || linear-gradient(to right,#f65,#ffbf37)
   recommendList:
     enable: true
     sup: 置顶
