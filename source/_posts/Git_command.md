@@ -2,15 +2,16 @@
 title: Git 命令
 date: 2025-04-05 00:57:35
 author: Hiner
-categories: [Tips]
+categories: [Git]
 tags: [Git]
 cover: src/img/git-logo.png
 ---
 
 {% link 'Git' 'fast-version-control' 'https://git-scm.com/book/zh/v2' %}
-{% link 'learn Git' ' Git 命令可视化' 'https://learngitbranching.js.org/' %}
 {% link 'Git' '廖雪峰 Git 教程' 'https://liaoxuefeng.com/books/git/introduction/index.html' %}
 {% link 'Git' '教程' 'https://www.cnblogs.com/anding/p/16987769.html' %}
+{% link 'learn Git' 'Git 闯关' 'https://learngitbranching.js.org/' %}
+{% link 'learn Git' 'Git 沙盒' 'https://learngitbranching.js.org/?locale=zh_CN&NODEMO=' %}
 
 ## 配置相关
 
@@ -30,7 +31,7 @@ git config --global core.fileMode false      # 忽略文件权限变更
 git config core.ignorecase false             # 打开文件大小写敏感
 
 # 编辑器与别名
-git config --global core.editor "vim"        # 设置默认编辑器
+git config --global core.editor "vim"        # 设置默认编辑器（vim）
 git config --global alias.co checkout        # 创建别名（co 代替 checkout）
 git config --global alias.br branch          # br 代替 branch
 git config --global alias.st status          # st 代替 status
@@ -54,8 +55,8 @@ git add -u                         # 仅添加已跟踪文件的修改（不包�
 git add -p                         # 交互式选择修改片段添加到暂存区
 
 # 文件状态管理
-git rm <文件名>                     # 删除文件并暂存删除操作
-git mv <旧文件名> <新文件名>         # 重命名文件并暂存操作
+git rm [file-name]                 # 删除文件并暂存删除操作
+git mv [old-name] [new-name]       # 重命名文件并暂存操作
 ```
 
 ## 提交管理
@@ -78,30 +79,30 @@ git commit --allow-empty -m "描述"  # 创建空提交（用于触发CI等场�
 ## 远程仓库管理
 
 ```bash
-git remote add origin <URL>        # 添加远程仓库（命名为origin）
-git remote -v                      # 查看远程仓库地址
-git remote rename origin new-name  # 重命名远程仓库
-git remote remove origin           # 删除远程仓库关联
-git remote clear                   # 清除所有远程关联
-git push -u origin main            # 首次推送并建立跟踪关系
+git remote add origin [URL]          # 添加远程仓库（命名为origin）
+git remote -v                        # 查看远程仓库地址
+git remote rename origin [new-name]  # 重命名远程仓库
+git remote remove origin             # 删除远程仓库关联
+git remote clear                     # 清除所有远程关联
+git push -u origin main              # 首次推送并建立跟踪关系
 ```
 
 ## 分支操作
 
 ```bash
 # 基础分支操作
-git branch                         # 查看本地分支
-git branch -r                      # 查看远程分支
-git branch -a                      # 查看所有分支（本地+远程）
-git checkout -b dev                # 创建并切换到新分支
-git switch dev                     # 更直观的分支切换（Git 2.23+）
-git branch -m old new              # 本地分支重命名
-git push origin --delete old       # 删除远程分支
+git branch                                  # 查看本地分支
+git branch -r                               # 查看远程分支
+git branch -a                               # 查看所有分支（本地+远程）
+git checkout -b [new-branch]                # 创建并切换到新分支
+git switch dev                              # 更直观的分支切换（Git 2.23+）
+git branch -m [old-branch] [new-branch]     # 本地分支重命名
+git push origin --delete [old-branch]       # 删除远程分支
 
 # 分支关系管理
-git branch -vv                     # 查看分支跟踪关系
+git branch -vv                            # 查看分支跟踪关系
 git branch --set-upstream-to=origin/main  # 修改当前分支的上游分支
-git push -u origin dev             # 推送并设置上游分支
+git push -u origin dev                    # 推送并设置上游分支
 
 # 分支合并策略
 git merge dev                      # 普通合并（保留合并提交记录）
@@ -123,21 +124,21 @@ git push -f                       # 强制推送（覆盖远程历史，慎用�
 
 ```bash
 # 工作区撤销
-git restore <file>                # 撤销工作区修改（Git 2.23+）
-git checkout -- <file>            # 传统撤销方式（效果同上）
+git restore [file]                # 撤销工作区修改（Git 2.23+）
+git checkout -- [file]            # 传统撤销方式（效果同上）
 
 # 暂存区撤销
-git restore --staged <file>       # 将文件移出暂存区（Git 2.23+）
-git reset HEAD <file>             # 传统方式（效果同上）
+git restore --staged [file]       # 将文件移出暂存区（Git 2.23+）
+git reset HEAD [file]             # 传统方式（效果同上）
 
 # 提交历史操作
 git reset --soft HEAD~1           # 回退提交但保留修改在暂存区
 git reset --hard HEAD~1           # 彻底回退提交（慎用！）
-git revert <commit-hash>          # 创建反向提交撤销指定修改
+git revert [commit-hash]          # 创建反向提交撤销指定修改
 
 # 应急恢复
 git reflog                        # 查看所有操作记录（找回丢失的提交）
-git cherry-pick <commit-hash>     # 复制指定提交到当前分支
+git cherry-pick [commit-hash]     # 复制指定提交到当前分支
 git stash                         # 临时保存工作进度
 git stash pop                     # 恢复最近暂存的工作进度
 ```
@@ -151,7 +152,7 @@ git diff --staged                 # 暂存区与最新提交的差异
 git diff commit1 commit2          # 两个提交之间的差异
 git log --oneline --graph         # 图形化简洁日志
 git log -p                        # 显示详细修改内容
-git blame <file>                  # 逐行查看文件修改历史
+git blame [file]                  # 逐行查看文件修改历史
 ```
 
 ## 标签管理
@@ -170,15 +171,15 @@ git push origin --delete v1.0     # 删除远程标签
 - 更改仓库分支名称
   1. 本地分支重命名
      ```bash
-     git branch -m old-branch dev
+     git branch -m [old-branch] [new-branch]
      ```
   2. 删除远程旧分支
      ```bash
-     git push origin --delete old-branch
+     git push origin --delete [old-branch]
      ```
   3. 推送新分支到远程并绑定
      ```bash
-     git push -u origin dev
+     git push -u origin [new-branch]
      ```
 
 - 追加小修小补的修改到上一次提交
@@ -189,35 +190,33 @@ git push origin --delete v1.0     # 删除远程标签
   2. 修改上一次提交：
      ```bash
      git commit --amend -m "新的提交信息"
-     git commit --amend --no-edit #不用修改提交信息
+     git commit --amend --no-edit         #不用修改提交信息
      ```
   3. 强制推送：
      ```bash
      git push -f
      ```
 
-- 删除远程 dev 分支，保留本地
+- 删除远程 [branch] 分支，保留本地
   1. 在删除远程分支前，先确认本地分支是最新的：
      ```bash
-     git checkout dev          # 切换到 dev 分支
-     git pull origin dev       # 拉取远程最新更改（确保本地与远程同步）
+     git checkout [branch]          # 切换到 [branch] 分支
+     git pull origin [branch]       # 拉取远程最新更改（确保本地与远程同步）
      ```
    2. 使用 Git 命令删除远程分支
       ```bash
-      git push origin --delete dev   # 删除远程 dev 分支
+      git push origin --delete [branch]   # 删除远程 [branch] 分支
       ```
       或（等效命令）：
       ```bash
-      git push origin :dev          # 推送“空内容”到 dev 分支，相当于删除
+      git push origin :[branch]          # 推送“空内容”到 [branch] 分支，相当于删除
       ```
 {% note 'danger' 'fas fa-exclamation-triangle' %}
 当删除的分支与其他分支存在关联（如合并或衍合）时，其提交历史仍会保留在相关分支中。
 {% endnote %}
 
 ## 补救措施
-
 - 备份 .git 文件夹：如果误操作，可尝试恢复原有 .git 文件夹。
 
 ## 实现快捷操作
-
 - 在 Windows 或 MacOS 命令行中，可以直接将文件或者文件夹拖入窗口，实现快速输入路径

@@ -244,7 +244,7 @@ page:
     # Default image when no cover is set
     # 未设置封面时的默认图片
     cover:
-      - img/default.avif # 默认图片 / default cover
+      - img/default.avif # banner 默认图片 / default cover
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -274,7 +274,7 @@ post:
   # 文章本地AI
   ai:
     enable: false
-    modelName: 小七 GPT
+    modelName: AI
   # Article meta information
   # 文章元信息
   meta:
@@ -413,7 +413,7 @@ lure:
 # Article expiration
 # 文章过期
 expire:
-  enable: true
+  enable: false
   time: 30 # days
   position: top # top / bottom
   text_prev: "This article expired "
@@ -477,6 +477,11 @@ right_menu:
       id: menu-copyPostLink
       class:
       icon: fas fa-link
+    - name: 音乐胶囊
+      click: sco.musicToggle()
+      id: consoleMusic
+      class: 
+      icon: solitude fas fa-compact-disc
 # --------------------------- end -----------------------
 
 # --------------------------- start ---------------------------
@@ -665,9 +670,9 @@ lazyload:
   # post, site
   field: site
   # 加载时替换图
-  placeholder: "/img/default.avif"
+  placeholder: "/hiner/img/default.avif"
   # 加载失败替换图
-  errorimg: "/img/error_load.avif"
+  errorimg: "/hiner/img/error_load.avif"
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -679,7 +684,7 @@ loading:
   fullpage: false
   # Loading icon, default is siteicon
   # 加载图标，不写默认siteicon
-  favicon: img/favicon.png
+  favicon: /hiner/img/favicon.png
   # Pace loading
   # Pace 加载
   pace: true

@@ -8,17 +8,12 @@ links:
       - name: Hexo # 名称
         link: https://hexo.io/ # 地址
         descr: Hexo 是一个快速、简洁且高效的博客框架 # 简介
-        avatar: img/pwa/favicon.png # 显示头像
+        avatar: /hiner/img/pwa/favicon.png # 显示头像
 
       - name: Solitude # 名称
         link: https://github.com/everfu/hexo-theme-solitude # 地址
         descr: 一款简单易用的 Hexo 主题 # 简介
-        avatar: img/logo.png # 显示头像
-
-      - name: 张伟是混蛋.COM					
-        link: https://www.zhangweishihundan.com/
-        descr: 爱情公寓
-        avatar: https://www.zhangweishihundan.com/favicon.ico
+        avatar: /hiner/img/logo.png # 显示头像
 
   - class_name: 取色器
     descr: 点击取色
@@ -276,7 +271,7 @@ links:
         topimg: https://game.haiyong.site/img/moyu/cheche.png
       
   - class_name: 其他
-    descr: 其他工具
+    descr: 其他工具 & 网站
     type: item 
     suffix:
     link_list: 
@@ -349,3 +344,13 @@ links:
         link: https://weread.qq.com/web/bookDetail/64e32bf071fd5a9164ece6b
         descr: 编码：隐匿在计算机软硬件背后的语言
         avatar: https://cdn.weread.qq.com/weread/cover/21/yuewen_33381009/t6_yuewen_333810091708675208.jpg
+
+      - name: 张伟是混蛋.COM					
+        link: https://www.zhangweishihundan.com/
+        descr: 爱情公寓
+        avatar: https://www.zhangweishihundan.com/favicon.ico
+
+      - name: 赛马娘
+        link: https://www.wpstud.com/UmaMusume/UmaIntro.htm
+        descr: ウマ娘日英中馬名對照翻譯及史實馬介紹
+        avatar: https://www.wpstud.com/favicon.ico

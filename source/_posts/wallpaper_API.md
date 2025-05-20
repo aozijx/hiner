@@ -1,5 +1,5 @@
 ---
-title: 壁纸 API
+title: 随机壁纸 API
 date: 2025-03-30 15:28:00
 author: Hiner
 categories: [Tips]
@@ -18,8 +18,9 @@ cover: https://moe.jitsu.top/img/?sort=pc&34
         });
     })
 </script>
-分享一些图片或者壁纸 API ，仅收集
-> 刷新页面后，点击即可切图
+
+分享一些图片或者壁纸 API ，仅收集之用
+> 第一次进来后刷新页面，点击图片即可切图
 ## [Lorem Picsum](https://picsum.photos/)
 更改链接数字以改变图片像素
 <img src="https://picsum.photos/1920/1080" onclick="changeImage(this)" alt="" >

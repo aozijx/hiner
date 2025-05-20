@@ -8,6 +8,9 @@ cover: img/default.avif
 ---
 
 开始学习 HTML 和 CSS 写的一个页面，后来在网上看到有意思的效果，都会写一遍
+
+## 渐变
+
 <style>
     .color {
     width: 100%;
@@ -62,8 +65,41 @@ document.querySelectorAll('.color span').forEach((span, index) => {
 });
 ```
 
+## 透明字
+> 可换艺术字、使用滚动动画
+
 <style>
-    .line span {
+    .gta {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10vw;
+        background: url(https://imgapi.xl0408.top/index.php) no-repeat center/cover;
+        background-clip: text; /* 背景只在文字区域显示 */
+        color: transparent; /* 文字有颜色 */
+        animation: gta-scale 3s forwards;
+    }
+    @keyframes gta-scale {
+        from {
+            font-size: 500vw;
+            /* color: transparent; */
+        }
+        to {
+            font-size: 10vw;
+            /* color: #fff; */
+        }
+    }
+</style>
+<div style="width: 100%;height: 600px;">
+    <h1 class="gta">AMAZING</h1>
+</div>
+
+## 下划线
+
+<style>
+    .bline span {
         font-size: 1.5em;
         background: linear-gradient(to right, #f00, #00f) no-repeat;
         background-size: 0px 2px;
@@ -71,11 +107,32 @@ document.querySelectorAll('.color span').forEach((span, index) => {
         transition: background-size 1s;
         cursor: pointer;
     }
-    .line span:hover {
+    .bline span:hover {
         background-size: 100% 2px;
         background-position: left bottom;
     }
 </style>
+<div class="bline letter">
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur recusandae voluptatum quo dolore tenetur cum ipsa corporis, reprehenderit tempore inventore et labore sit illum natus, est maiores! Eveniet, corrupti reprehenderit?</span>
+</div>
+
+```css
+.bline span {
+    font-size: 1.5em;
+    background: linear-gradient(to right, #f00, #00f) no-repeat;
+    background-size: 0px 2px;
+    background-position: right bottom;
+    transition: background-size 1s;
+    cursor: pointer;
+}
+.bline span:hover {
+    background-size: 100% 2px;
+    background-position: left bottom;
+}
+```
+
+## 首字样式
+
 <style>
     .letter div::first-letter {
         font-size: 2em;
@@ -88,21 +145,12 @@ document.querySelectorAll('.color span').forEach((span, index) => {
         text-decoration: underline;
     }
 </style>
-<div class="line letter">
-    <span>“The supreme happiness of life is the conviction that we are loved; loved for ourselves—say rather, loved in
-    spite of ourselves.”<br>
-    “It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of
-    foolishness...”</span>
-</div>
-
-<div class="line letter">
+<div class="bline letter">
     <h3><span>A Covenant Between Civilization and Nature</span></h3>
     <div>
         Environmental crises now threaten humanity’s survival. Polar ice melting at unprecedented rates, 90% of
         seabirds ingesting plastics, and rampant deforestation expose a fractured ecosystem. These are not isolated
         issues but symptoms of a broken human-nature covenant.
-    </div>
-    <div>
         True solutions demand dual action: individuals adopting sustainable habits and governments enforcing green
         policies. As Jane Goodall warned, "Protecting nature is not a choice but a necessity for civilization’s
         continuity." Environmentalism must evolve from "saving Earth" to redefining humanity’s role as stewards of a
@@ -110,25 +158,10 @@ document.querySelectorAll('.color span').forEach((span, index) => {
     </div>
 </div>
 
-- **::first-letter**
-  设置选中第一个字母
-- **::selection**
-  设置选中文本的样式
+> **::selection** 设置选中文本的样式
 
-```css
-.line span {
-    font-size: 1.5em;
-    background: linear-gradient(to right, #f00, #00f) no-repeat;
-    background-size: 0px 2px;
-    background-position: right bottom;
-    transition: background-size 1s;
-    cursor: pointer;
-}
-.line span:hover {
-    background-size: 100% 2px;
-    background-position: left bottom;
-}
-```
+> **::first-letter** 设置选中第一个字母
+
 ```css
 .letter div::first-letter {
     font-size: 2em;

@@ -55,11 +55,12 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 - xnb
   解压后复制 Mod 文件夹中 xnb 后缀的文件，打开星露谷 /Stardew Valley/Content/Portraits 文件夹，粘贴并替换，恢复原样只需检查游戏资源完整性即可
 - png
-根据前置 Mod 不同，选择不同方法
+> 根据前置 Mod 不同，选择不同方法
   - [Portraiture](https://www.nexusmods.com/stardewvalley/mods/999)
     将 Mod 中包含 PNG 图片的文件夹复制到 /Mods/Portraiture/Portraits 中即可，游戏中按 {% keyboard 'P' %} 切换，{% keyboard 'O' %} 为锁定肖像
   - [PNG Retex Helper](https://www.nexusmods.com/stardewvalley/mods/6340)
-    将 Mod 中的
+    将 Mod 中的 PNG 文件夹复制到 /Mods/PNG Retex Helper/assets 中并替换即可
+    实测 **Portraiture** {% keyboard 'P' %} 键可替换 **PNG Retex Helper** 肖像
   - [Fashion Sense](https://www.nexusmods.com/stardewvalley/mods/9969)
     服装等等 Mod 解压到游戏 Mods 文件夹
     在皮埃尔商店购买 Hand Mirror ，您只需使用 Hand Mirror 即可更改 Fashion Sense 配饰、发型、帽子、衬衫、袖子、裤子或鞋子，。自定义服装也可以通过此工具保存和加载。
@@ -90,12 +91,12 @@ Mod 兼容性
 Mod 故障排查
 {% link 'Modding' '玩家指南/故障排除' 'https://stardewvalleywiki.com/Modding:Player_Guide/Troubleshooting' %}
 {% link 'SMAPI log parser' '日志解析器' 'https://smapi.io/log' %}
-> 按 {% keyboard 'win' %} + {% keyboard 'R' %} ，在输入框中键入 **%appdata%\StardewValley\ErrorLogs** ，将日志文件拖入网页输入框即可。
+> 按 {% keyboard 'win' %} + {% keyboard 'R' %} 在输入框中键入 **%appdata%\StardewValley\ErrorLogs** ，将日志文件拖入网页输入框即可。
 
 > 按照以上步骤操作，即可畅玩星露谷物语的 Mod 内容！遇到问题可查阅 SMAPI 官方文档 或社区论坛。
 {% fold '小技巧' %}
 - 可以在已游玩存档的任何时期添加 Mod 
-- 遇到“这个角色属于另一位玩家”，找到存档，记事本打开，快捷键 {% keyboard 'Ctrl' %} + {% keyboard 'F' %} 寻找 `<farmhand>` ，找到角色名称后向后寻找 `<userID>xxx</userID>` ，意思是只有指定 ID 的玩家可以加入游戏，改成 `<userID />` 。
+- 遇到“这个角色属于另一位玩家”问题，找到存档，记事本打开，快捷键 {% keyboard 'Ctrl' %} + {% keyboard 'F' %} 寻找 `<farmhand>` ，找到角色名称后向后寻找 `<userID>xxx</userID>` ，意思是只有指定 ID 的玩家可以加入游戏，改成 `<userID />` 。
 - 主机位置 `<player>`
 - 从机位置 `<farmhand>`
 - 房屋代码 `<farmhouse>`

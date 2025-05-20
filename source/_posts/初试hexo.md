@@ -7,20 +7,22 @@ tags: [hexo]
 cover: https://cdn.cdnjson.com/i.dawnlab.me/e489814b866d262813417680e613f2e6.jpg
 ---
 
-## markdown的Front-matter
+## Markdown的Font-matter
 ```yml
-title: 文章标题
-date: 创建日期
+title: 文章标题 | 必需
+date: 创建日期 | 必需
 updated: 更新日期
 tags: [标签1, 标签2]
 categories: [分类1]
 cover: 封面图路径
+ai_text: 文章 AI 摘要内容
+recommend: 推荐文章，值为数字或者 true
 reprint: true #  版权（默认为原创）为true时为转载
 comments: true # 评论（默认：true）
 sticky: 100 # 置顶优先级（数值越大越靠前，0 表示不置顶）
 mathjax: false # 数学公式支持（默认：false）
 ```
-title 和 date 为必须
+
 ## 外挂标签
 ### tabs
 标签页标签，用于显示标签页。
