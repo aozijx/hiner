@@ -1,35 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>原神 Mod 安装</title>
-    <url>/hiner/2025/03/14/GenshinImpact_ModInstall/</url>
-    <content><![CDATA[<h3 id="安装-3DMigoto"><a class="header-anchor" href="#安装-3DMigoto">¶</a>安装 3DMigoto</h3>
-<p><a href="https://github.com/SilentNightSound/GI-Model-Importer/releases/download/v7.0/3dmigoto-GIMI-for-development.zip">点击下载</a> : <a href="https://github.com/SilentNightSound/GI-Model-Importer/releases/tag/v7.0">https://github.com/SilentNightSound/GI-Model-Importer/releases/tag/v7.0</a></p>
-<h3 id="更改配置文件"><a class="header-anchor" href="#更改配置文件">¶</a>更改配置文件</h3>
-<p>将 3DMigoto 解压到除了游戏文件夹的任意位置，打开 <strong>d3dx.ini</strong> 文件，按 Ctrl+F 搜索“Settings used by the external 3DMigoto Loader”的 <strong>loader</strong> 等等关键词，找到 <strong>target</strong> = D:\miHoYo Launcher\games\Genshin Impact Game\YuanShen.exe 后，将等号后的游戏路径改成自己的，更改完成后保存设置。</p>
-<h3 id="放置-Mod"><a class="header-anchor" href="#放置-Mod">¶</a>放置 Mod</h3>
-<p>在 Mods 文件夹放置你解压好的 Mod 文件，注意：一个角色只能有一个对应的模型 Mod 文件，否则会造成模型冲突。</p>
-<h3 id="启动游戏"><a class="header-anchor" href="#启动游戏">¶</a>启动游戏</h3>
-<p>启动 3DMigoto Loader.exe，将弹出一个命令行窗口，提示你现在可以打开游戏了，是的，它不会帮你打开游戏，需要手动启动。首次打开若模型异常，请到游戏设置中关闭动态高精度。游戏内更换或移动 Mod 后，按 F10 刷新游戏。当 3DMigoto 开启时，在数字键盘上按 0 可以开启狩猎模式（显示绿色文本，默认）或关闭（无文本）。</p>
-<h3 id="T"><a class="header-anchor" href="#T">¶</a>T:</h3>
-<p>此外，尽管许多玩家长期使用 Mod 而未遇到问题，但使用 Mod 仍存在潜在的风险，可能导致游戏账号被封禁。因此，在使用 Mod 时，请务必权衡利弊，并根据个人情况谨慎做出选择。请牢记，任何因使用 Mod 而导致的后果，需由玩家自行承担。<code>进阶玩法</code>：3DMigoto 抓取游戏模型进行替换后塞回游戏 🤗</p>
-<h3 id="e-g"><a class="header-anchor" href="#e-g">¶</a>e.g.</h3>
-<p><img src="/hiner/src/img/Furina.png" alt="芙宁娜"><br>
-<img src="/hiner/src/img/Furina.png" alt="花时来信(随芒荒改变颜色)"><br>
-<img src="/hiner/src/img/Furina1.png" alt="过曝了"><br>
-<img src="/hiner/src/img/ying.png" alt="雷电将军"><br>
-<img src="/hiner/src/img/Arlecchino.png" alt="阿蕾奇诺"></p>
-]]></content>
-      <categories>
-        <category>游戏</category>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>原神</tag>
-        <tag>Mod</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Docker 安装</title>
     <url>/hiner/2025/04/02/Docker_install/</url>
     <content><![CDATA[<p><img src="/hiner/src/img/docker.svg" alt=""></p>
@@ -72,6 +43,35 @@
         <i class="solitude fas fa-chevron-right"></i>
     </div></a>
 ]]></content>
+  </entry>
+  <entry>
+    <title>原神 Mod 安装</title>
+    <url>/hiner/2025/03/14/GenshinImpact_ModInstall/</url>
+    <content><![CDATA[<h3 id="安装-3DMigoto"><a class="header-anchor" href="#安装-3DMigoto">¶</a>安装 3DMigoto</h3>
+<p><a href="https://github.com/SilentNightSound/GI-Model-Importer/releases/download/v7.0/3dmigoto-GIMI-for-development.zip">点击下载</a> : <a href="https://github.com/SilentNightSound/GI-Model-Importer/releases/tag/v7.0">https://github.com/SilentNightSound/GI-Model-Importer/releases/tag/v7.0</a></p>
+<h3 id="更改配置文件"><a class="header-anchor" href="#更改配置文件">¶</a>更改配置文件</h3>
+<p>将 3DMigoto 解压到除了游戏文件夹的任意位置，打开 <strong>d3dx.ini</strong> 文件，按 Ctrl+F 搜索“Settings used by the external 3DMigoto Loader”的 <strong>loader</strong> 等等关键词，找到 <strong>target</strong> = D:\miHoYo Launcher\games\Genshin Impact Game\YuanShen.exe 后，将等号后的游戏路径改成自己的，更改完成后保存设置。</p>
+<h3 id="放置-Mod"><a class="header-anchor" href="#放置-Mod">¶</a>放置 Mod</h3>
+<p>在 Mods 文件夹放置你解压好的 Mod 文件，注意：一个角色只能有一个对应的模型 Mod 文件，否则会造成模型冲突。</p>
+<h3 id="启动游戏"><a class="header-anchor" href="#启动游戏">¶</a>启动游戏</h3>
+<p>启动 3DMigoto Loader.exe，将弹出一个命令行窗口，提示你现在可以打开游戏了，是的，它不会帮你打开游戏，需要手动启动。首次打开若模型异常，请到游戏设置中关闭动态高精度。游戏内更换或移动 Mod 后，按 F10 刷新游戏。当 3DMigoto 开启时，在数字键盘上按 0 可以开启狩猎模式（显示绿色文本，默认）或关闭（无文本）。</p>
+<h3 id="T"><a class="header-anchor" href="#T">¶</a>T:</h3>
+<p>此外，尽管许多玩家长期使用 Mod 而未遇到问题，但使用 Mod 仍存在潜在的风险，可能导致游戏账号被封禁。因此，在使用 Mod 时，请务必权衡利弊，并根据个人情况谨慎做出选择。请牢记，任何因使用 Mod 而导致的后果，需由玩家自行承担。<code>进阶玩法</code>：3DMigoto 抓取游戏模型进行替换后塞回游戏 🤗</p>
+<h3 id="e-g"><a class="header-anchor" href="#e-g">¶</a>e.g.</h3>
+<p><img src="/hiner/src/img/Furina.png" alt="芙宁娜"><br>
+<img src="/hiner/src/img/Furina.png" alt="花时来信(随芒荒改变颜色)"><br>
+<img src="/hiner/src/img/Furina1.png" alt="过曝了"><br>
+<img src="/hiner/src/img/ying.png" alt="雷电将军"><br>
+<img src="/hiner/src/img/Arlecchino.png" alt="阿蕾奇诺"></p>
+]]></content>
+      <categories>
+        <category>游戏</category>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>原神</tag>
+        <tag>Mod</tag>
+      </tags>
   </entry>
   <entry>
     <title>GitHub 加速</title>
@@ -691,171 +691,13 @@ M40 281 V448H0V74H40V241H400000v40z"/></svg></span><span class="halfarrow-right"
       </tags>
   </entry>
   <entry>
-    <title>Python QR Code生成二维码</title>
-    <url>/hiner/2025/04/19/Python-QRcode/</url>
-    <content><![CDATA[<p><a href="https://github.com/lincolnloop/python-qrcode">qrcode</a> 是一个用于生成二维码的 <a href="https://pypi.org/project/qrcode/">Python</a> 库，使用方便。它允许用户轻松将文本、URL 等数据编码为二维码图像。</p>
-<h2 id="主要特点"><a class="header-anchor" href="#主要特点">¶</a>主要特点</h2>
-<ul>
-<li><strong>简单易用</strong>：只需几行代码即可生成基础二维码</li>
-<li><strong>高度定制</strong>：
-<ul>
-<li>版本控制（1-40）</li>
-<li>纠错级别（L/M/Q/H）</li>
-<li>方块尺寸调整</li>
-<li>边框宽度设置</li>
-</ul>
-</li>
-<li><strong>多格式输出</strong>：支持 PNG/JPEG/SVG 图片格式，兼容终端 ASCII 显示</li>
-</ul>
-<h2 id="安装"><a class="header-anchor" href="#安装">¶</a>安装</h2>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install qrcode</span><br></pre></td></tr></table></figure>
-<h2 id="基础用法"><a class="header-anchor" href="#基础用法">¶</a>基础用法</h2>
-<p>在命令行中，使用已安装的 qr 脚本：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">qr <span class="string">&quot;Some text&quot;</span> &gt; test.png</span><br></pre></td></tr></table></figure>
-<p>在 Python 中使用 make 快捷方式功能：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> qrcode</span><br><span class="line"></span><br><span class="line">data = <span class="string">&quot;https://www.example.com&quot;</span>  <span class="comment"># 要编码的内容</span></span><br><span class="line"></span><br><span class="line">qr = qrcode.QRCode(</span><br><span class="line">    version=<span class="number">1</span>,  <span class="comment"># 二维码尺寸 (1-40)</span></span><br><span class="line">    error_correction=qrcode.constants.ERROR_CORRECT_L,  <span class="comment"># 纠错级别</span></span><br><span class="line">    box_size=<span class="number">10</span>,  <span class="comment"># 每个方块的像素大小</span></span><br><span class="line">    border=<span class="number">4</span>,     <span class="comment"># 边框宽度（单位：方块数量）</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">qr.add_data(data)  <span class="comment"># 将数据添加到 QRCode 对象中。</span></span><br><span class="line">qr.make(fit=<span class="literal">True</span>)  <span class="comment"># 自动适配数据最小版本</span></span><br><span class="line"></span><br><span class="line">img = qr.make_image(fill_color=<span class="string">&quot;black&quot;</span>, back_color=<span class="string">&quot;white&quot;</span>) <span class="comment"># 创建二维码图像对象</span></span><br><span class="line">img.save(<span class="string">&quot;qrcode.png&quot;</span>)  <span class="comment"># 保存为PNG</span></span><br></pre></td></tr></table></figure>
-<h3 id="参数说明"><a class="header-anchor" href="#参数说明">¶</a>参数说明</h3>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>version</td>
-<td>二维码尺寸 (1-40)，值越大尺寸越大</td>
-</tr>
-<tr>
-<td>box_size</td>
-<td>每个小方块的像素大小</td>
-</tr>
-<tr>
-<td>border</td>
-<td>二维码外边框的方块数量</td>
-</tr>
-<tr>
-<td>fill_color</td>
-<td>二维码填充颜色（支持十六进制/RGB）</td>
-</tr>
-<tr>
-<td>image_factory</td>
-<td>输出格式（默认 PIL，可选 SVG）</td>
-</tr>
-</tbody>
-</table>
-<h3 id="纠错级别说明（error-correction）"><a class="header-anchor" href="#纠错级别说明（error-correction）">¶</a>纠错级别说明（error_correction）</h3>
-<ul>
-<li>ERROR_CORRECT_L 表示低纠错级别，损坏的部分不超过 7%，就仍然可以被正确解码。</li>
-<li>ERROR_CORRECT_M 默认纠错级别，适用于大多数常见的应用场景，损坏的部分不超过 15%，就仍然可以被正确解码。</li>
-<li>ERROR_CORRECT_Q 在户外环境中张贴的海报上的二维码，或者可能会被折叠、涂抹的纸质二维码，纠错能力 25%。</li>
-<li>ERROR_CORRECT_H 在工业环境中被油污、灰尘覆盖的二维码标签，纠错能力 30%。</li>
-</ul>
-<h2 id="IImage-factories"><a class="header-anchor" href="#IImage-factories">¶</a>IImage factories</h2>
-<h3 id="终端显示-ASCII-二维码"><a class="header-anchor" href="#终端显示-ASCII-二维码">¶</a>终端显示 ASCII 二维码</h3>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> qrcode</span><br><span class="line"></span><br><span class="line">qr = qrcode.QRCode()</span><br><span class="line">qr.add_data(<span class="string">&quot;Hello Terminal!&quot;</span>)</span><br><span class="line">qr.print_ascii(tty=<span class="literal">True</span>)  <span class="comment"># 在终端显示彩色二维码</span></span><br></pre></td></tr></table></figure>
-<h3 id="生成-SVG-格式二维码"><a class="header-anchor" href="#生成-SVG-格式二维码">¶</a>生成 SVG 格式二维码</h3>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> qrcode</span><br><span class="line"><span class="keyword">from</span> qrcode.image.svg <span class="keyword">import</span> SvgImage</span><br><span class="line"></span><br><span class="line">qr = qrcode.QRCode(image_factory=SvgImage)</span><br><span class="line">qr.add_data(<span class="string">&quot;https://example.com&quot;</span>)</span><br><span class="line">qr.make_image().save(<span class="string">&quot;qrcode.svg&quot;</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="Styled-Image"><a class="header-anchor" href="#Styled-Image">¶</a>Styled Image</h2>
-<blockquote>
-<p>这些 QR Codes 不能保证适用于所有阅读器，建议 error correction 设置为 High（尤其是在嵌入图像）。</p>
-</blockquote>
-<p>StyledPilImage 是 qrcode 库中用于生成 样式化二维码图像 的类，基于 Pillow（PIL）库。它允许你通过不同的 module_drawer（模块绘制器）和颜色参数，自定义二维码的模块形状、颜色和整体视觉效果。</p>
-<h3 id="核心功能"><a class="header-anchor" href="#核心功能">¶</a>核心功能</h3>
-<ol>
-<li>
-<p>模块形状自定义<br>
-通过 module_drawer 参数，可以改变二维码模块（黑白色块）的几何形状。常用的内置绘制器包括：</p>
-<ul>
-<li>方形模块：SquareModuleDrawer（默认）</li>
-<li>圆形模块：CircleModuleDrawer</li>
-<li>圆角矩形模块：GappedSquareModuleDrawer</li>
-<li>其他形状：可自定义实现。</li>
-</ul>
-</li>
-<li>
-<p>颜色自定义</p>
-<ul>
-<li>前景色：二维码主色（通常是黑色）</li>
-<li>背景色：二维码背景色（通常是白色）</li>
-<li>渐变色支持：通过 Pillow 的 ImageColor 实现动态颜色过渡。</li>
-</ul>
-</li>
-</ol>
-<h3 id="代码示例"><a class="header-anchor" href="#代码示例">¶</a>代码示例</h3>
-<p>生成带有圆形模块的二维码：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> qrcode</span><br><span class="line"><span class="keyword">from</span> qrcode.image.styledpil <span class="keyword">import</span> StyledPilImage</span><br><span class="line"><span class="keyword">from</span> qrcode.image.styles.moduledrawers <span class="keyword">import</span> CircleModuleDrawer</span><br><span class="line"></span><br><span class="line">qr = qrcode.QRCode(</span><br><span class="line">    error_correction=qrcode.constants.ERROR_CORRECT_H,</span><br><span class="line">    box_size=<span class="number">20</span>,</span><br><span class="line">    border=<span class="number">2</span></span><br><span class="line">)</span><br><span class="line">qr.add_data(<span class="string">&quot;https://example.com&quot;</span>)</span><br><span class="line"></span><br><span class="line">img = qr.make_image(</span><br><span class="line">    image_factory=StyledPilImage,</span><br><span class="line">    module_drawer=CircleModuleDrawer(),  <span class="comment"># 圆形模块</span></span><br><span class="line">    eye_drawer=CircleModuleDrawer(),     <span class="comment"># 圆形定位标记</span></span><br><span class="line">    color_mask=(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>)               <span class="comment"># 红色前景色</span></span><br><span class="line">)</span><br><span class="line">img.save(<span class="string">&quot;styled_qr.png&quot;</span>)</span><br></pre></td></tr></table></figure>
-<p>生成渐变效果的二维码：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> ImageColor</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义渐变色函数（水平方向渐变）</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">gradient_mask</span>(<span class="params">width, height</span>):</span><br><span class="line">    gradient = Image.new(<span class="string">&quot;RGB&quot;</span>, (width, height))</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(width):</span><br><span class="line">        color = ImageColor.getrgb(<span class="string">f&quot;hsl(<span class="subst">&#123;x % <span class="number">360</span>&#125;</span>, 70%, 50%)&quot;</span>)</span><br><span class="line">        <span class="keyword">for</span> y <span class="keyword">in</span> <span class="built_in">range</span>(height):</span><br><span class="line">            gradient.putpixel((x, y), color)</span><br><span class="line">    <span class="keyword">return</span> gradient</span><br><span class="line"></span><br><span class="line">img = qr.make_image(</span><br><span class="line">    image_factory=StyledPilImage,</span><br><span class="line">    module_drawer=CircleModuleDrawer(),</span><br><span class="line">    color_mask=gradient_mask  <span class="comment"># 应用渐变掩码</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<h3 id="module-drawer-（模块绘制器）-详解"><a class="header-anchor" href="#module-drawer-（模块绘制器）-详解">¶</a>module_drawer （模块绘制器） 详解</h3>
-<ol>
-<li>内置模块绘制器</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>绘制器类名</th>
-<th>效果描述</th>
-<th>适用场景</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>SquareModuleDrawer</td>
-<td>默认方形模块</td>
-<td>传统二维码样式</td>
-</tr>
-<tr>
-<td>CircleModuleDrawer</td>
-<td>圆形模块，视觉更柔和</td>
-<td>创意设计、品牌宣传</td>
-</tr>
-<tr>
-<td>GappedSquareModuleDrawer</td>
-<td>圆角矩形模块（间隙更明显）</td>
-<td>高容错率下的美观设计</td>
-</tr>
-<tr>
-<td>VerticalBarsDrawer</td>
-<td>垂直条形模块</td>
-<td>艺术化风格输出</td>
-</tr>
-</tbody>
-</table>
-<ol>
-<li>自定义绘制器<br>
-实现一个 星形模块 的示例：</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> qrcode.image.styles.moduledrawers.base <span class="keyword">import</span> ModuleDrawer</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">StarModuleDrawer</span>(<span class="title class_ inherited__">ModuleDrawer</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">drawrect</span>(<span class="params">self, img, box, active</span>):</span><br><span class="line">        <span class="comment"># box: (x0, y0, x1, y1)</span></span><br><span class="line">        <span class="comment"># active: True（前景）或 False（背景）</span></span><br><span class="line">        <span class="keyword">if</span> active:</span><br><span class="line">            draw = ImageDraw.Draw(img)</span><br><span class="line">            center = ((box[<span class="number">0</span>] + box[<span class="number">2</span>])/<span class="number">2</span>, (box[<span class="number">1</span>] + box[<span class="number">3</span>])/<span class="number">2</span>)</span><br><span class="line">            radius = (box[<span class="number">2</span>] - box[<span class="number">0</span>]) * <span class="number">0.4</span></span><br><span class="line">            <span class="comment"># 绘制五角星</span></span><br><span class="line">            draw.regular_polygon((center, radius), <span class="number">5</span>, rotation=<span class="number">0</span>, fill=<span class="string">&quot;black&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span> img</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用自定义绘制器</span></span><br><span class="line">img = qr.make_image(</span><br><span class="line">    image_factory=StyledPilImage,</span><br><span class="line">    module_drawer=StarModuleDrawer()</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<h2 id="定位标记独立样式"><a class="header-anchor" href="#定位标记独立样式">¶</a>定位标记独立样式</h2>
-<p>通过 eye_drawer 参数单独设置二维码的定位标记（三个角上的大方块）形状：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> qrcode.image.styles.moduledrawers <span class="keyword">import</span> SquareModuleDrawer, CircleModuleDrawer</span><br><span class="line"></span><br><span class="line">img = qr.make_image(</span><br><span class="line">    module_drawer=CircleModuleDrawer(),  <span class="comment"># 模块为圆形</span></span><br><span class="line">    eye_drawer=SquareModuleDrawer()      <span class="comment"># 定位标记保持方形</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<h3 id="动态颜色逻辑"><a class="header-anchor" href="#动态颜色逻辑">¶</a>动态颜色逻辑</h3>
-<p>结合 Pillow 的 ImageDraw 实现动态颜色逻辑，例如根据模块位置生成不同颜色：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">dynamic_color_mask</span>(<span class="params">width, height</span>):</span><br><span class="line">    mask = Image.new(<span class="string">&quot;RGB&quot;</span>, (width, height))</span><br><span class="line">    draw = ImageDraw.Draw(mask)</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(width):</span><br><span class="line">        <span class="keyword">for</span> y <span class="keyword">in</span> <span class="built_in">range</span>(height):</span><br><span class="line">            <span class="comment"># 根据坐标生成颜色</span></span><br><span class="line">            r = <span class="built_in">int</span>((x / width) * <span class="number">255</span>)</span><br><span class="line">            g = <span class="built_in">int</span>((y / height) * <span class="number">255</span>)</span><br><span class="line">            b = <span class="number">128</span></span><br><span class="line">            draw.point((x, y), fill=(r, g, b))</span><br><span class="line">    <span class="keyword">return</span> mask</span><br><span class="line"></span><br><span class="line">img = qr.make_image(</span><br><span class="line">    color_mask=dynamic_color_mask,</span><br><span class="line">    module_drawer=CircleModuleDrawer()</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<h2 id="注意事项"><a class="header-anchor" href="#注意事项">¶</a>注意事项</h2>
-<ol>
-<li>
-<p>可扫描性<br>
-过度复杂的样式（如低对比度颜色、密集渐变）可能导致扫码失败。建议：</p>
-<ul>
-<li>保持前景与背景对比度 &gt; 70%</li>
-<li>使用 error_correction=qrcode.constants.ERROR_CORRECT_H（最高容错率）</li>
-</ul>
-</li>
-<li>
-<p>性能问题<br>
-自定义绘制器或复杂颜色计算可能增加生成时间，尤其是大尺寸二维码。</p>
-</li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
     <title>星露谷 Mod</title>
     <url>/hiner/2025/03/27/StardewValley_Mod/</url>
     <content><![CDATA[<blockquote>
-<p>自用星露谷 Mod ，详情见文档</p>
+<p>自用星露谷 Mod ，详情见 nexus。</p>
+</blockquote>
+<blockquote>
+<p><a href="https://www.nexusmods.com/stardewvalley/mods/">https://www.nexusmods.com/stardewvalley/mods/[尾号]</a></p>
 </blockquote>
 <h1>实用</h1>
 <h2 id="UI-Info-Suite-2"><a class="header-anchor" href="#UI-Info-Suite-2">¶</a>UI Info Suite 2</h2>
@@ -1116,7 +958,8 @@ M40 281 V448H0V74H40V241H400000v40z"/></svg></span><span class="halfarrow-right"
         <i class="solitude fas fa-chevron-right"></i>
     </div></a></details>
 <h1>美化</h1>
-<h2 id="Seasonal-Outfits-Slightly-Cuter-Aesthetic"><a class="header-anchor" href="#Seasonal-Outfits-Slightly-Cuter-Aesthetic">¶</a>Seasonal Outfits - Slightly Cuter Aesthetic</h2>
+<h2 id="角色肖像美化"><a class="header-anchor" href="#角色肖像美化">¶</a>角色肖像美化</h2>
+<h3 id="Seasonal-Outfits-Slightly-Cuter-Aesthetic"><a class="header-anchor" href="#Seasonal-Outfits-Slightly-Cuter-Aesthetic">¶</a>Seasonal Outfits - Slightly Cuter Aesthetic</h3>
 <a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/5450" target="_blank">
     <div class="tag-link-tips">引用站外链接</div>
     <div class="tag-link-bottom">
@@ -1135,7 +978,7 @@ M40 281 V448H0V74H40V241H400000v40z"/></svg></span><span class="halfarrow-right"
 <li>它还与 SVE 兼容。但是，SVE 使用 Marlon、Morris 和 Gunther 的精灵和肖像以及额外的动画。这意味着如果您使用 SVE，这些角色将看不到更可爱的版本。如果您想要一致的外观，请下载 Seasonal Outfits - Slightly Cuter Aesthetic for SVE。</li>
 </ul></details>
 <p><img src="https://staticdelivery.nexusmods.com/mods/1303/images/headers/5450_1712814737.jpg" alt=""></p>
-<h2 id="BaZhua’s-Marriable-Role-Portrait"><a class="header-anchor" href="#BaZhua’s-Marriable-Role-Portrait">¶</a>BaZhua’s Marriable Role Portrait</h2>
+<h3 id="BaZhua’s-Marriable-Role-Portrait"><a class="header-anchor" href="#BaZhua’s-Marriable-Role-Portrait">¶</a>BaZhua’s Marriable Role Portrait</h3>
 <div class="note attention"><i class="solitude fas fa-wand-magic-sparkles"></i><p>打开 <code>显示成人内容</code> 再访问</p></div>
 <a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/20236" target="_blank">
     <div class="tag-link-tips">引用站外链接</div>
@@ -1150,8 +993,8 @@ M40 281 V448H0V74H40V241H400000v40z"/></svg></span><span class="halfarrow-right"
         <i class="solitude fas fa-chevron-right"></i>
     </div></a>
 <p><img src="https://staticdelivery.nexusmods.com/mods/1303/images/headers/20236_1726428286.jpg" alt=""><br>
-<img src="https://staticdelivery.nexusmods.com/mods/1303/images/thumbnails/20236/20236-1726428312-2089193844.png" alt=""></p>
-<h2 id="Portraits"><a class="header-anchor" href="#Portraits">¶</a>Portraits</h2>
+<img src="https://staticdelivery.nexusmods.com/mods/1303/images/20236/20236-1726428312-2089193844.png" alt=""></p>
+<h3 id="Portraits"><a class="header-anchor" href="#Portraits">¶</a>Portraits</h3>
 <a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/15234" target="_blank">
     <div class="tag-link-tips">引用站外链接</div>
     <div class="tag-link-bottom">
@@ -1166,7 +1009,7 @@ M40 281 V448H0V74H40V241H400000v40z"/></svg></span><span class="halfarrow-right"
     </div></a>
 <p><img src="https://staticdelivery.nexusmods.com/mods/1303/images/15234/15234-1675604855-1750177193.jpeg" alt=""><br>
 <img src="https://staticdelivery.nexusmods.com/mods/1303/images/15234/15234-1712295321-202562341.png" alt=""></p>
-<h2 id="Arkneru’s-Retexture-of-NPCs"><a class="header-anchor" href="#Arkneru’s-Retexture-of-NPCs">¶</a>Arkneru’s Retexture of NPCs</h2>
+<h3 id="Arkneru’s-Retexture-of-NPCs"><a class="header-anchor" href="#Arkneru’s-Retexture-of-NPCs">¶</a>Arkneru’s Retexture of NPCs</h3>
 <a class="tag-link" href="of" target="_blank">
     <div class="tag-link-tips">引用站外链接</div>
     <div class="tag-link-bottom">
@@ -1180,7 +1023,151 @@ M40 281 V448H0V74H40V241H400000v40z"/></svg></span><span class="halfarrow-right"
         <i class="solitude fas fa-chevron-right"></i>
     </div></a>
 <p><img src="https://staticdelivery.nexusmods.com/mods/1303/images/headers/20454_1709803634.jpg" alt=""></p>
-<h2 id="DaisyNiko’s-Earthy-Recolour"><a class="header-anchor" href="#DaisyNiko’s-Earthy-Recolour">¶</a>DaisyNiko’s Earthy Recolour</h2>
+<h3 id="PellyK’s-female-portraits（效果自行上网查询）-Fixed-Pelly-K’s-Portraits-Files-High-res"><a class="header-anchor" href="#PellyK’s-female-portraits（效果自行上网查询）-Fixed-Pelly-K’s-Portraits-Files-High-res">¶</a>PellyK’s female portraits（效果自行上网查询）(Fixed) Pelly.K’s Portraits Files_High res</h3>
+<p><a href="https://www.nexusmods.com/stardewvalley/mods/27795?tab=files&amp;file_id=111388">下载</a></p>
+<h3 id="Nyapu’s-Portraits-inspired-by-Dong"><a class="header-anchor" href="#Nyapu’s-Portraits-inspired-by-Dong">¶</a>Nyapu’s Portraits inspired by Dong</h3>
+<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/11491" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Nyapu's Portraits inspired by Dong</div>
+            <div class="tag-link-sitename">Nyapu 受 Dong 启发的肖像</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<p><img src="https://staticdelivery.nexusmods.com/mods/1303/images/headers/11491_1648702900.jpg" alt=""><br>
+<img src="https://staticdelivery.nexusmods.com/mods/1303/images/11491/11491-1711183147-603746817.png" alt=""><br>
+<img src="https://staticdelivery.nexusmods.com/mods/1303/images/11491/11491-1679027164-1041749908.png" alt=""><br>
+<img src="https://staticdelivery.nexusmods.com/mods/1303/images/11491/11491-1708499379-501186861.png" alt=""><br>
+<img src="https://staticdelivery.nexusmods.com/mods/1303/images/11491/11491-1740055599-382620618.png" alt=""></p>
+<h3 id="Unique-Children"><a class="header-anchor" href="#Unique-Children">¶</a>Unique Children</h3>
+<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/6278" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Unique Children</div>
+            <div class="tag-link-sitename">有了这个模组，游戏中的所有玩家，根据他们的配偶，都有长相不同的孩子。</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<blockquote>
+<p>单人、多人都有效<br>
+<img src="https://staticdelivery.nexusmods.com/mods/1303/images/6278/6278-1631108547-1664485556.png" alt=""></p>
+</blockquote>
+<h2 id="UI-界面美化"><a class="header-anchor" href="#UI-界面美化">¶</a>UI 界面美化</h2>
+<h3 id="Custom-Menu-Background"><a class="header-anchor" href="#Custom-Menu-Background">¶</a>Custom Menu Background</h3>
+<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/7416" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Custom Menu Background</div>
+            <div class="tag-link-sitename">对菜单背景的所有元素进行一组完全可定制的重新着色（加上原始插件）。超过 2000 万种潜在组合！</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<h3 id="Overgrown-Flowery-Interface"><a class="header-anchor" href="#Overgrown-Flowery-Interface">¶</a>Overgrown Flowery Interface</h3>
+<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/6166" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Overgrown Flowery Interface</div>
+            <div class="tag-link-sitename">对菜单背景的所有元素进行一组完全可定制的重新着色（加上原始插件）。超过 2000 万种潜在组合！</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<p><img src="https://staticdelivery.nexusmods.com/mods/1303/images/6166/6166-1646578793-214446202.png" alt=""><br>
+<img src="https://staticdelivery.nexusmods.com/mods/1303/images/6166/6166-1646578793-816264335.png" alt=""><br>
+<img src="https://staticdelivery.nexusmods.com/mods/1303/images/6166/6166-1646572598-401537327.png" alt=""></p>
+<h3 id="Lovely-UI"><a class="header-anchor" href="#Lovely-UI">¶</a>Lovely UI</h3>
+<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/17283" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Lovely UI</div>
+            <div class="tag-link-sitename">拥有如此可爱的用户界面。</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<p><img src="https://staticdelivery.nexusmods.com/mods/1303/images/17283/17283-1713215780-846584946.png" alt=""><br>
+<img src="https://staticdelivery.nexusmods.com/mods/1303/images/17283/17283-1689286404-736534396.png" alt=""></p>
+<h3 id="Lavender-Dreams-UI-Recolor"><a class="header-anchor" href="#Lavender-Dreams-UI-Recolor">¶</a>Lavender Dreams UI Recolor</h3>
+<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/17323" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Lavender Dreams UI Recolor</div>
+            <div class="tag-link-sitename">具有紫色、自然灵感美感的 UI 重新着色。</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<p><img src="https://staticdelivery.nexusmods.com/mods/1303/images/17323/17323-1711047668-1430436496.png" alt=""><br>
+<img src="https://staticdelivery.nexusmods.com/mods/1303/images/17323/17323-1711047792-1450080987.png" alt=""></p>
+<h3 id="Lowkey-Spring-Interface-Recolor"><a class="header-anchor" href="#Lowkey-Spring-Interface-Recolor">¶</a>Lowkey Spring Interface Recolor</h3>
+<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/25349" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Lowkey Spring Interface Recolor</div>
+            <div class="tag-link-sitename">柔和的桃色 UI 重新着色，带有花卉装饰。</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<p><img src="https://staticdelivery.nexusmods.com/mods/1303/images/25349/25349-1718937773-1202846129.png" alt=""><br>
+<img src="https://staticdelivery.nexusmods.com/mods/1303/images/25349/25349-1718937780-1330514781.png" alt=""></p>
+<h3 id="UI-3-in-1-theme-color-Interface"><a class="header-anchor" href="#UI-3-in-1-theme-color-Interface">¶</a>UI 3 in 1 theme color (Interface)</h3>
+<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/6229" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">UI 3 in 1 theme color (Interface)</div>
+            <div class="tag-link-sitename">适用于 PC/Android 的主题界面。兼容英语和泰语。</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<p><img src="https://staticdelivery.nexusmods.com/mods/1303/images/6229/6229-1591277430-307720433.png" alt=""><br>
+<img src="https://staticdelivery.nexusmods.com/mods/1303/images/6229/6229-1591277430-1306297178.png" alt=""></p>
+<h3 id="Starry-Ocean-Garden-UI-Theme-Available-in-Different-Languages"><a class="header-anchor" href="#Starry-Ocean-Garden-UI-Theme-Available-in-Different-Languages">¶</a>Starry Ocean Garden UI Theme -Available in Different Languages-</h3>
+<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/24090" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Starry Ocean Garden UI Theme -Available in Different Languages-</div>
+            <div class="tag-link-sitename">一个主要使用紫色、蓝色、蓝绿色和粉红色的用户界面 Mod。以星系、海洋和花园为主题 :)
+（不包括天空！）</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<p><img src="https://staticdelivery.nexusmods.com/mods/1303/images/24090/24090-1715858155-1886778106.jpeg" alt=""><br>
+<img src="https://staticdelivery.nexusmods.com/mods/1303/images/24090/24090-1715858742-1506408420.jpeg" alt=""></p>
+<h2 id="地图建筑美化"><a class="header-anchor" href="#地图建筑美化">¶</a>地图建筑美化</h2>
+<h3 id="DaisyNiko’s-Earthy-Recolour"><a class="header-anchor" href="#DaisyNiko’s-Earthy-Recolour">¶</a>DaisyNiko’s Earthy Recolour</h3>
 <a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/5255" target="_blank">
     <div class="tag-link-tips">引用站外链接</div>
     <div class="tag-link-bottom">
@@ -1197,7 +1184,7 @@ M40 281 V448H0V74H40V241H400000v40z"/></svg></span><span class="halfarrow-right"
 <div class="gallery-container waterfall">
         <div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/thumbnails/5255/5255-1579753544-346970928.png alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/5255/5255-1579753555-787300696.png alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/5255/5255-1579753579-2075766167.png alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/5255/5255-1579753568-935063758.png alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/5255/5255-1579744535-1437257459.gif alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/5255/5255-1579744551-175917464.gif alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/5255/5255-1579744573-724820484.gif alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/5255/5255-1579744563-2033670910.gif alt="" /></div>
       </div>
-<h2 id="Industrial-Furniture-Set-For-CP-and-CF"><a class="header-anchor" href="#Industrial-Furniture-Set-For-CP-and-CF">¶</a>Industrial Furniture Set - For CP and CF</h2>
+<h3 id="Industrial-Furniture-Set-For-CP-and-CF"><a class="header-anchor" href="#Industrial-Furniture-Set-For-CP-and-CF">¶</a>Industrial Furniture Set - For CP and CF</h3>
 <a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/5444" target="_blank">
     <div class="tag-link-tips">引用站外链接</div>
     <div class="tag-link-bottom">
@@ -1215,7 +1202,8 @@ M40 281 V448H0V74H40V241H400000v40z"/></svg></span><span class="halfarrow-right"
 <div class="gallery-container waterfall">
         <div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/5444/5444-1582330283-252265938.png alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/5444/5444-1582394787-893548201.png alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/5444/5444-1582394799-942403704.png alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/5444/5444-1582394780-1794006357.png alt="" /></div>
       </div>
-<h2 id="FS-Bangs2-hairstyle1228"><a class="header-anchor" href="#FS-Bangs2-hairstyle1228">¶</a>(FS)Bangs2-hairstyle1228</h2>
+<h2 id="服装饰品美化"><a class="header-anchor" href="#服装饰品美化">¶</a>服装饰品美化</h2>
+<h3 id="FS-Bangs2-hairstyle1228"><a class="header-anchor" href="#FS-Bangs2-hairstyle1228">¶</a>(FS)Bangs2-hairstyle1228</h3>
 <a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/30376" target="_blank">
     <div class="tag-link-tips">引用站外链接</div>
     <div class="tag-link-bottom">
@@ -1231,7 +1219,7 @@ M40 281 V448H0V74H40V241H400000v40z"/></svg></span><span class="halfarrow-right"
 <div class="gallery-container waterfall">
         <div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/30376/30376-1735319452-606186301.jpeg alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/30376/30376-1735495398-322376803.jpeg alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/30376/30376-1735495404-1100504458.jpeg alt="" /></div>
       </div>
-<h2 id="FS-Luoxue-Chinese-traditional-clothing"><a class="header-anchor" href="#FS-Luoxue-Chinese-traditional-clothing">¶</a>FS-Luoxue Chinese traditional clothing</h2>
+<h3 id="FS-Luoxue-Chinese-traditional-clothing"><a class="header-anchor" href="#FS-Luoxue-Chinese-traditional-clothing">¶</a>FS-Luoxue Chinese traditional clothing</h3>
 <a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/30287" target="_blank">
     <div class="tag-link-tips">引用站外链接</div>
     <div class="tag-link-bottom">
@@ -1249,7 +1237,7 @@ M40 281 V448H0V74H40V241H400000v40z"/></svg></span><span class="halfarrow-right"
 <div class="gallery-container waterfall">
         <div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/30287/30287-1735007885-2034140586.png alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/30287/30287-1735007888-56599867.png alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/30287/30287-1735007889-125287406.png alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/30287/30287-1735007892-1487615786.png alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/30287/30287-1735007893-2079661053.png alt="" /></div><div class="gallery-item"><img class="nolazyload" src=https://staticdelivery.nexusmods.com/mods/1303/images/30287/30287-1735007896-1973898900.png alt="" /></div>
       </div>
-<h2 id="yuyan’s-Christmas-cloak"><a class="header-anchor" href="#yuyan’s-Christmas-cloak">¶</a>yuyan’s Christmas cloak</h2>
+<h3 id="yuyan’s-Christmas-cloak"><a class="header-anchor" href="#yuyan’s-Christmas-cloak">¶</a>yuyan’s Christmas cloak</h3>
 <a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/30311" target="_blank">
     <div class="tag-link-tips">引用站外链接</div>
     <div class="tag-link-bottom">
@@ -1264,7 +1252,7 @@ M40 281 V448H0V74H40V241H400000v40z"/></svg></span><span class="halfarrow-right"
         <i class="solitude fas fa-chevron-right"></i>
     </div></a>
 <p><img src="https://staticdelivery.nexusmods.com/mods/1303/images/30311/30311-1735139423-367460399.jpeg" alt=""></p>
-<h2 id="FS-Jiaojiao’s-Clothes010125"><a class="header-anchor" href="#FS-Jiaojiao’s-Clothes010125">¶</a>(FS)Jiaojiao’s Clothes010125</h2>
+<h3 id="FS-Jiaojiao’s-Clothes010125"><a class="header-anchor" href="#FS-Jiaojiao’s-Clothes010125">¶</a>(FS)Jiaojiao’s Clothes010125</h3>
 <a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/30470" target="_blank">
     <div class="tag-link-tips">引用站外链接</div>
     <div class="tag-link-bottom">
@@ -1279,6 +1267,410 @@ M40 281 V448H0V74H40V241H400000v40z"/></svg></span><span class="halfarrow-right"
     </div></a>
 <p><img src="https://staticdelivery.nexusmods.com/mods/1303/images/30470/30470-1735670362-549021236.jpeg" alt=""></p>
 ]]></content>
+      <categories>
+        <category>游戏</category>
+      </categories>
+      <tags>
+        <tag>Mod</tag>
+        <tag>steam</tag>
+        <tag>星露谷物语</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python QR Code生成二维码</title>
+    <url>/hiner/2025/04/19/Python-QRcode/</url>
+    <content><![CDATA[<p><a href="https://github.com/lincolnloop/python-qrcode">qrcode</a> 是一个用于生成二维码的 <a href="https://pypi.org/project/qrcode/">Python</a> 库，使用方便。它允许用户轻松将文本、URL 等数据编码为二维码图像。</p>
+<h2 id="主要特点"><a class="header-anchor" href="#主要特点">¶</a>主要特点</h2>
+<ul>
+<li><strong>简单易用</strong>：只需几行代码即可生成基础二维码</li>
+<li><strong>高度定制</strong>：
+<ul>
+<li>版本控制（1-40）</li>
+<li>纠错级别（L/M/Q/H）</li>
+<li>方块尺寸调整</li>
+<li>边框宽度设置</li>
+</ul>
+</li>
+<li><strong>多格式输出</strong>：支持 PNG/JPEG/SVG 图片格式，兼容终端 ASCII 显示</li>
+</ul>
+<h2 id="安装"><a class="header-anchor" href="#安装">¶</a>安装</h2>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install qrcode</span><br></pre></td></tr></table></figure>
+<h2 id="基础用法"><a class="header-anchor" href="#基础用法">¶</a>基础用法</h2>
+<p>在命令行中，使用已安装的 qr 脚本：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">qr <span class="string">&quot;Some text&quot;</span> &gt; test.png</span><br></pre></td></tr></table></figure>
+<p>在 Python 中使用 make 快捷方式功能：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> qrcode</span><br><span class="line"></span><br><span class="line">data = <span class="string">&quot;https://www.example.com&quot;</span>  <span class="comment"># 要编码的内容</span></span><br><span class="line"></span><br><span class="line">qr = qrcode.QRCode(</span><br><span class="line">    version=<span class="number">1</span>,  <span class="comment"># 二维码尺寸 (1-40)</span></span><br><span class="line">    error_correction=qrcode.constants.ERROR_CORRECT_L,  <span class="comment"># 纠错级别</span></span><br><span class="line">    box_size=<span class="number">10</span>,  <span class="comment"># 每个方块的像素大小</span></span><br><span class="line">    border=<span class="number">4</span>,     <span class="comment"># 边框宽度（单位：方块数量）</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">qr.add_data(data)  <span class="comment"># 将数据添加到 QRCode 对象中。</span></span><br><span class="line">qr.make(fit=<span class="literal">True</span>)  <span class="comment"># 自动适配数据最小版本</span></span><br><span class="line"></span><br><span class="line">img = qr.make_image(fill_color=<span class="string">&quot;black&quot;</span>, back_color=<span class="string">&quot;white&quot;</span>) <span class="comment"># 创建二维码图像对象</span></span><br><span class="line">img.save(<span class="string">&quot;qrcode.png&quot;</span>)  <span class="comment"># 保存为PNG</span></span><br></pre></td></tr></table></figure>
+<h3 id="参数说明"><a class="header-anchor" href="#参数说明">¶</a>参数说明</h3>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>version</td>
+<td>二维码尺寸 (1-40)，值越大尺寸越大</td>
+</tr>
+<tr>
+<td>box_size</td>
+<td>每个小方块的像素大小</td>
+</tr>
+<tr>
+<td>border</td>
+<td>二维码外边框的方块数量</td>
+</tr>
+<tr>
+<td>fill_color</td>
+<td>二维码填充颜色（支持十六进制/RGB）</td>
+</tr>
+<tr>
+<td>image_factory</td>
+<td>输出格式（默认 PIL，可选 SVG）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="纠错级别说明（error-correction）"><a class="header-anchor" href="#纠错级别说明（error-correction）">¶</a>纠错级别说明（error_correction）</h3>
+<ul>
+<li>ERROR_CORRECT_L 表示低纠错级别，损坏的部分不超过 7%，就仍然可以被正确解码。</li>
+<li>ERROR_CORRECT_M 默认纠错级别，适用于大多数常见的应用场景，损坏的部分不超过 15%，就仍然可以被正确解码。</li>
+<li>ERROR_CORRECT_Q 在户外环境中张贴的海报上的二维码，或者可能会被折叠、涂抹的纸质二维码，纠错能力 25%。</li>
+<li>ERROR_CORRECT_H 在工业环境中被油污、灰尘覆盖的二维码标签，纠错能力 30%。</li>
+</ul>
+<h2 id="IImage-factories"><a class="header-anchor" href="#IImage-factories">¶</a>IImage factories</h2>
+<h3 id="终端显示-ASCII-二维码"><a class="header-anchor" href="#终端显示-ASCII-二维码">¶</a>终端显示 ASCII 二维码</h3>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> qrcode</span><br><span class="line"></span><br><span class="line">qr = qrcode.QRCode()</span><br><span class="line">qr.add_data(<span class="string">&quot;Hello Terminal!&quot;</span>)</span><br><span class="line">qr.print_ascii(tty=<span class="literal">True</span>)  <span class="comment"># 在终端显示彩色二维码</span></span><br></pre></td></tr></table></figure>
+<h3 id="生成-SVG-格式二维码"><a class="header-anchor" href="#生成-SVG-格式二维码">¶</a>生成 SVG 格式二维码</h3>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> qrcode</span><br><span class="line"><span class="keyword">from</span> qrcode.image.svg <span class="keyword">import</span> SvgImage</span><br><span class="line"></span><br><span class="line">qr = qrcode.QRCode(image_factory=SvgImage)</span><br><span class="line">qr.add_data(<span class="string">&quot;https://example.com&quot;</span>)</span><br><span class="line">qr.make_image().save(<span class="string">&quot;qrcode.svg&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="Styled-Image"><a class="header-anchor" href="#Styled-Image">¶</a>Styled Image</h2>
+<blockquote>
+<p>这些 QR Codes 不能保证适用于所有阅读器，建议 error correction 设置为 High（尤其是在嵌入图像）。</p>
+</blockquote>
+<p>StyledPilImage 是 qrcode 库中用于生成 样式化二维码图像 的类，基于 Pillow（PIL）库。它允许你通过不同的 module_drawer（模块绘制器）和颜色参数，自定义二维码的模块形状、颜色和整体视觉效果。</p>
+<h3 id="核心功能"><a class="header-anchor" href="#核心功能">¶</a>核心功能</h3>
+<ol>
+<li>
+<p>模块形状自定义<br>
+通过 module_drawer 参数，可以改变二维码模块（黑白色块）的几何形状。常用的内置绘制器包括：</p>
+<ul>
+<li>方形模块：SquareModuleDrawer（默认）</li>
+<li>圆形模块：CircleModuleDrawer</li>
+<li>圆角矩形模块：GappedSquareModuleDrawer</li>
+<li>其他形状：可自定义实现。</li>
+</ul>
+</li>
+<li>
+<p>颜色自定义</p>
+<ul>
+<li>前景色：二维码主色（通常是黑色）</li>
+<li>背景色：二维码背景色（通常是白色）</li>
+<li>渐变色支持：通过 Pillow 的 ImageColor 实现动态颜色过渡。</li>
+</ul>
+</li>
+</ol>
+<h3 id="代码示例"><a class="header-anchor" href="#代码示例">¶</a>代码示例</h3>
+<p>生成带有圆形模块的二维码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> qrcode</span><br><span class="line"><span class="keyword">from</span> qrcode.image.styledpil <span class="keyword">import</span> StyledPilImage</span><br><span class="line"><span class="keyword">from</span> qrcode.image.styles.moduledrawers <span class="keyword">import</span> CircleModuleDrawer</span><br><span class="line"></span><br><span class="line">qr = qrcode.QRCode(</span><br><span class="line">    error_correction=qrcode.constants.ERROR_CORRECT_H,</span><br><span class="line">    box_size=<span class="number">20</span>,</span><br><span class="line">    border=<span class="number">2</span></span><br><span class="line">)</span><br><span class="line">qr.add_data(<span class="string">&quot;https://example.com&quot;</span>)</span><br><span class="line"></span><br><span class="line">img = qr.make_image(</span><br><span class="line">    image_factory=StyledPilImage,</span><br><span class="line">    module_drawer=CircleModuleDrawer(),  <span class="comment"># 圆形模块</span></span><br><span class="line">    eye_drawer=CircleModuleDrawer(),     <span class="comment"># 圆形定位标记</span></span><br><span class="line">    color_mask=(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>)               <span class="comment"># 红色前景色</span></span><br><span class="line">)</span><br><span class="line">img.save(<span class="string">&quot;styled_qr.png&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>生成渐变效果的二维码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> ImageColor</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义渐变色函数（水平方向渐变）</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">gradient_mask</span>(<span class="params">width, height</span>):</span><br><span class="line">    gradient = Image.new(<span class="string">&quot;RGB&quot;</span>, (width, height))</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(width):</span><br><span class="line">        color = ImageColor.getrgb(<span class="string">f&quot;hsl(<span class="subst">&#123;x % <span class="number">360</span>&#125;</span>, 70%, 50%)&quot;</span>)</span><br><span class="line">        <span class="keyword">for</span> y <span class="keyword">in</span> <span class="built_in">range</span>(height):</span><br><span class="line">            gradient.putpixel((x, y), color)</span><br><span class="line">    <span class="keyword">return</span> gradient</span><br><span class="line"></span><br><span class="line">img = qr.make_image(</span><br><span class="line">    image_factory=StyledPilImage,</span><br><span class="line">    module_drawer=CircleModuleDrawer(),</span><br><span class="line">    color_mask=gradient_mask  <span class="comment"># 应用渐变掩码</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h3 id="module-drawer-（模块绘制器）-详解"><a class="header-anchor" href="#module-drawer-（模块绘制器）-详解">¶</a>module_drawer （模块绘制器） 详解</h3>
+<ol>
+<li>内置模块绘制器</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>绘制器类名</th>
+<th>效果描述</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SquareModuleDrawer</td>
+<td>默认方形模块</td>
+<td>传统二维码样式</td>
+</tr>
+<tr>
+<td>CircleModuleDrawer</td>
+<td>圆形模块，视觉更柔和</td>
+<td>创意设计、品牌宣传</td>
+</tr>
+<tr>
+<td>GappedSquareModuleDrawer</td>
+<td>圆角矩形模块（间隙更明显）</td>
+<td>高容错率下的美观设计</td>
+</tr>
+<tr>
+<td>VerticalBarsDrawer</td>
+<td>垂直条形模块</td>
+<td>艺术化风格输出</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>自定义绘制器<br>
+实现一个 星形模块 的示例：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> qrcode.image.styles.moduledrawers.base <span class="keyword">import</span> ModuleDrawer</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">StarModuleDrawer</span>(<span class="title class_ inherited__">ModuleDrawer</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">drawrect</span>(<span class="params">self, img, box, active</span>):</span><br><span class="line">        <span class="comment"># box: (x0, y0, x1, y1)</span></span><br><span class="line">        <span class="comment"># active: True（前景）或 False（背景）</span></span><br><span class="line">        <span class="keyword">if</span> active:</span><br><span class="line">            draw = ImageDraw.Draw(img)</span><br><span class="line">            center = ((box[<span class="number">0</span>] + box[<span class="number">2</span>])/<span class="number">2</span>, (box[<span class="number">1</span>] + box[<span class="number">3</span>])/<span class="number">2</span>)</span><br><span class="line">            radius = (box[<span class="number">2</span>] - box[<span class="number">0</span>]) * <span class="number">0.4</span></span><br><span class="line">            <span class="comment"># 绘制五角星</span></span><br><span class="line">            draw.regular_polygon((center, radius), <span class="number">5</span>, rotation=<span class="number">0</span>, fill=<span class="string">&quot;black&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span> img</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用自定义绘制器</span></span><br><span class="line">img = qr.make_image(</span><br><span class="line">    image_factory=StyledPilImage,</span><br><span class="line">    module_drawer=StarModuleDrawer()</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h2 id="定位标记独立样式"><a class="header-anchor" href="#定位标记独立样式">¶</a>定位标记独立样式</h2>
+<p>通过 eye_drawer 参数单独设置二维码的定位标记（三个角上的大方块）形状：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> qrcode.image.styles.moduledrawers <span class="keyword">import</span> SquareModuleDrawer, CircleModuleDrawer</span><br><span class="line"></span><br><span class="line">img = qr.make_image(</span><br><span class="line">    module_drawer=CircleModuleDrawer(),  <span class="comment"># 模块为圆形</span></span><br><span class="line">    eye_drawer=SquareModuleDrawer()      <span class="comment"># 定位标记保持方形</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h3 id="动态颜色逻辑"><a class="header-anchor" href="#动态颜色逻辑">¶</a>动态颜色逻辑</h3>
+<p>结合 Pillow 的 ImageDraw 实现动态颜色逻辑，例如根据模块位置生成不同颜色：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">dynamic_color_mask</span>(<span class="params">width, height</span>):</span><br><span class="line">    mask = Image.new(<span class="string">&quot;RGB&quot;</span>, (width, height))</span><br><span class="line">    draw = ImageDraw.Draw(mask)</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(width):</span><br><span class="line">        <span class="keyword">for</span> y <span class="keyword">in</span> <span class="built_in">range</span>(height):</span><br><span class="line">            <span class="comment"># 根据坐标生成颜色</span></span><br><span class="line">            r = <span class="built_in">int</span>((x / width) * <span class="number">255</span>)</span><br><span class="line">            g = <span class="built_in">int</span>((y / height) * <span class="number">255</span>)</span><br><span class="line">            b = <span class="number">128</span></span><br><span class="line">            draw.point((x, y), fill=(r, g, b))</span><br><span class="line">    <span class="keyword">return</span> mask</span><br><span class="line"></span><br><span class="line">img = qr.make_image(</span><br><span class="line">    color_mask=dynamic_color_mask,</span><br><span class="line">    module_drawer=CircleModuleDrawer()</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h2 id="注意事项"><a class="header-anchor" href="#注意事项">¶</a>注意事项</h2>
+<ol>
+<li>
+<p>可扫描性<br>
+过度复杂的样式（如低对比度颜色、密集渐变）可能导致扫码失败。建议：</p>
+<ul>
+<li>保持前景与背景对比度 &gt; 70%</li>
+<li>使用 error_correction=qrcode.constants.ERROR_CORRECT_H（最高容错率）</li>
+</ul>
+</li>
+<li>
+<p>性能问题<br>
+自定义绘制器或复杂颜色计算可能增加生成时间，尤其是大尺寸二维码。</p>
+</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>星露谷 Mod 安装教程</title>
+    <url>/hiner/2025/03/20/StardewValley_ModInstall/</url>
+    <content><![CDATA[<h2 id="一、安装-SMAPI（Mod-加载器）"><a class="header-anchor" href="#一、安装-SMAPI（Mod-加载器）">¶</a>一、安装 SMAPI（Mod 加载器）</h2>
+<h3 id="下载-SMAPI"><a class="header-anchor" href="#下载-SMAPI">¶</a>下载 SMAPI</h3>
+<ul>
+<li>PC:<a class="tag-link" href="https://github.com/Pathoschild/SMAPI/releases/tag/4.2.1" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">SMAPI</div>
+            <div class="tag-link-sitename">GitHub，选择 SMAPI 4.1.10 installer.zip 下载</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/2400" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">SMAPI</div>
+            <div class="tag-link-sitename">nexus，需要N网账号</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+</li>
+<li>Android<a class="tag-link" href="https://github.com/NRTnarathip/SMAPILoader/releases/tag/1.1.4" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">SMAPI</div>
+            <div class="tag-link-sitename">SMAPI For Android</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+</li>
+</ul>
+<h3 id="解压文件"><a class="header-anchor" href="#解压文件">¶</a>解压文件</h3>
+<p>将压缩包解压到当前文件夹，避免权限问题，建议路径：D:\StardewValley\SMAPI。</p>
+<h3 id="运行安装脚本"><a class="header-anchor" href="#运行安装脚本">¶</a>运行安装脚本</h3>
+<ol>
+<li>打开解压后的文件夹，双击运行 install on Windows.bat</li>
+<li>命令行界面提示：
+<ul>
+<li>输入 1 并回车（选择默认游戏路径）。</li>
+<li>再次输入 1 确认安装。</li>
+</ul>
+</li>
+<li>安装完成后会显示 SMAPI installed successfully!，并自动复制 SMAPI 启动路径（如 “D:\Steam\steamapps\common\Stardew Valley\StardewModdingAPI.exe” %command%）。</li>
+</ol>
+<h2 id="二、配置-Steam-启动项"><a class="header-anchor" href="#二、配置-Steam-启动项">¶</a>二、配置 Steam 启动项</h2>
+<ol>
+<li>打开 Steam ，右键点击游戏库中的 《星露谷物语》 → 属性 → 通用 → 启动选项。</li>
+<li>粘贴上述命令行的输出路径或者 SMAPI 路径到输入框（加上 %command% 命令），保存设置。<br>
+<img src="/hiner/src/img/stardew_valley.png" alt="Steam启动项设置"></li>
+</ol>
+<h2 id="三、注册-Nexus-Mods-账号"><a class="header-anchor" href="#三、注册-Nexus-Mods-账号">¶</a>三、注册 Nexus Mods 账号</h2>
+<ol>
+<li>访问 <a class="tag-link" href="https://www.nexusmods.com/" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Nexus Mods官网</div>
+            <div class="tag-link-sitename">Nexus Mods</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a></li>
+<li>点击右上角 Register，填写邮箱、用户名、密码完成注册。</li>
+<li>登录后，在 Site Preferences → Content Blocking 中关闭成人内容过滤（避免部分 Mod 被隐藏）。</li>
+</ol>
+<h2 id="四、下载并安装-Mod"><a class="header-anchor" href="#四、下载并安装-Mod">¶</a>四、下载并安装 Mod</h2>
+<h3 id="普通-Mod"><a class="header-anchor" href="#普通-Mod">¶</a>普通 Mod</h3>
+<ol>
+<li>下载 Mod<br>
+以热门的 “自动化” Mod（Automate） 为例：<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/1063" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Automate下载页</div>
+            <div class="tag-link-sitename">Nexus Mods</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<ul>
+<li>点击 Files → Manual Download 下载文件（通常为 .zip 格式）。</li>
+</ul>
+</li>
+<li>安装 Mod</li>
+</ol>
+<ul>
+<li>解压下载的 Mod 文件，将解压后的整个文件夹复制到：你的游戏目录 /Stardew Valley/Mods 中(steam 点击游戏管理 -&gt; 浏览本地文件)</li>
+</ul>
+<blockquote>
+<p>示例路径：D:\Steam\steamapps\common\Stardew Valley\Mods<br>
+如果 Mods 文件夹不存在，手动创建。</p>
+</blockquote>
+<details open><summary>检查依赖项</summary><ul>
+<li>大部分 Mod 需要额外依赖库</li>
+<li>安装方式同上，确保依赖库位于 Mods 文件夹内。</li>
+</ul></details>
+<h3 id="美化-Mod"><a class="header-anchor" href="#美化-Mod">¶</a>美化 Mod</h3>
+<p>分为 xnb 和 png 两种格式</p>
+<ul>
+<li>xnb<br>
+解压后复制 Mod 文件夹中 xnb 后缀的文件，打开星露谷 /Stardew Valley/Content/Portraits 文件夹，粘贴并替换，恢复原样只需检查游戏资源完整性即可</li>
+<li>png<br>
+根据前置 Mod 不同，选择不同方法
+<ul>
+<li><a href="https://www.nexusmods.com/stardewvalley/mods/999">Portraiture</a><br>
+将 Mod 中包含 PNG 图片的文件夹复制到 /Mods/Portraiture/Portraits 中即可，游戏中按 <span class="keyboard-tag">P</span> 切换，<span class="keyboard-tag">O</span> 为锁定肖像</li>
+<li><a href="https://www.nexusmods.com/stardewvalley/mods/6340">PNG Retex Helper</a><br>
+将 Mod 中的</li>
+<li><a href="https://www.nexusmods.com/stardewvalley/mods/9969">Fashion Sense</a><br>
+服装等等 Mod 解压到游戏 Mods 文件夹<br>
+在皮埃尔商店购买 Hand Mirror ，您只需使用 Hand Mirror 即可更改 Fashion Sense 配饰、发型、帽子、衬衫、袖子、裤子或鞋子，。自定义服装也可以通过此工具保存和加载。</li>
+</ul>
+</li>
+</ul>
+<h2 id="五、验证-Mod-是否生效"><a class="header-anchor" href="#五、验证-Mod-是否生效">¶</a>五、验证 Mod 是否生效</h2>
+<ol>
+<li>通过 Steam 启动游戏，会自动运行 SMAPI。</li>
+<li>游戏启动时，命令行窗口会显示加载的 Mod 列表。
+<ul>
+<li>白色：Loaded 表示成功。</li>
+<li>红色：Failed 表示失败。</li>
+<li>紫色：Mod 需要更新（不强制）。</li>
+</ul>
+</li>
+</ol>
+<h2 id="六、常见问题"><a class="header-anchor" href="#六、常见问题">¶</a>六、常见问题</h2>
+<ul>
+<li>
+<p>Mod 未加载</p>
+<ul>
+<li>检查 Mod 文件夹层级：正确路径应为 Mods/Mod 名称/模组文件，而非嵌套多层。</li>
+<li>确保所有依赖项（前置 Mod）已安装。</li>
+</ul>
+</li>
+<li>
+<p>Mod 过期</p>
+<ul>
+<li>定期在 Nexus Mods 检查更新，关注 Mod 页面的 Posts 板块获取兼容性通知。</li>
+</ul>
+</li>
+<li>
+<p>Mod 兼容</p>
+<ul>
+<li>检查Mod是否兼容1.6版本，或删除冲突Mod。</li>
+</ul>
+</li>
+</ul>
+<h2 id="七、推荐工具"><a class="header-anchor" href="#七、推荐工具">¶</a>七、推荐工具</h2>
+<p>Mod 管理工具：可自动检测缺失依赖和 Mod 更新。</p>
+<a class="tag-link" href="https://github.com/Stardrop/Stardrop/releases" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Stardrop</div>
+            <div class="tag-link-sitename">Mod管理器</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<p>Mod 兼容性</p>
+<a class="tag-link" href="https://smapi.io/mods" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Mod compatibility</div>
+            <div class="tag-link-sitename">显示了所有已知的 SMAPI 模组和（不兼容的）内容包</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<p>Mod 故障排查</p>
+<a class="tag-link" href="https://stardewvalleywiki.com/Modding:Player_Guide/Troubleshooting" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Modding</div>
+            <div class="tag-link-sitename">玩家指南/故障排除</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<a class="tag-link" href="https://smapi.io/log" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">SMAPI log parser</div>
+            <div class="tag-link-sitename">日志解析器</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<blockquote>
+<p>按 <span class="keyboard-tag">Win⌘</span> + <span class="keyboard-tag">R</span> ，在输入框中键入 <strong>%appdata%\StardewValley\ErrorLogs</strong> ，将日志文件拖入网页输入框即可。</p>
+</blockquote>
+<blockquote>
+<p>按照以上步骤操作，即可畅玩星露谷物语的 Mod 内容！遇到问题可查阅 SMAPI 官方文档 或社区论坛。</p>
+</blockquote>
+<details><summary>小技巧</summary><ul>
+<li>可以在已游玩存档的任何时期添加 Mod</li>
+<li>遇到“这个角色属于另一位玩家”，找到存档，记事本打开，快捷键 <span class="keyboard-tag">Ctrl</span> + <span class="keyboard-tag">F</span> 寻找 <code>&lt;farmhand&gt;</code> ，找到角色名称后向后寻找 <code>&lt;userID&gt;xxx&lt;/userID&gt;</code> ，意思是只有指定 ID 的玩家可以加入游戏，改成 <code>&lt;userID /&gt;</code> 。</li>
+<li>主机位置 <code>&lt;player&gt;</code></li>
+<li>从机位置 <code>&lt;farmhand&gt;</code></li>
+<li>房屋代码 <code>&lt;farmhouse&gt;</code></li>
+<li>房屋等级 <code>&lt;houseUpgradeLevel&gt;</code></li>
+<li>记录献祭及各种邮件内容 <code>&lt;mailReceived&gt;</code></li>
+<li>记录看过的情景等等的内容 <code>&lt;eventsSeen&gt;</code></li>
+<li>记录玩家 ID 识别哪只动物是哪个玩家买的 <code>&lt;UniqueMultiplayerID&gt;</code></li>
+</ul></details>]]></content>
       <categories>
         <category>游戏</category>
       </categories>
@@ -2399,247 +2791,106 @@ M40 281 V448H0V74H40V241H400000v40z"/></svg></span><span class="halfarrow-right"
 相信这些品牌呢自己就能做出一个正确的选择</p></details>]]></content>
   </entry>
   <entry>
-    <title>星露谷 Mod 安装教程</title>
-    <url>/hiner/2025/03/20/StardewValley_ModInstall/</url>
-    <content><![CDATA[<h2 id="一、安装-SMAPI（Mod-加载器）"><a class="header-anchor" href="#一、安装-SMAPI（Mod-加载器）">¶</a>一、安装 SMAPI（Mod 加载器）</h2>
-<h3 id="下载-SMAPI"><a class="header-anchor" href="#下载-SMAPI">¶</a>下载 SMAPI</h3>
+    <title>CSS 属性</title>
+    <url>/hiner/2025/04/16/css/</url>
+    <content><![CDATA[<h1>有趣的 CSS 属性合集</h1>
+<h2 id="一、视觉特效类"><a class="header-anchor" href="#一、视觉特效类">¶</a>一、视觉特效类</h2>
+<h3 id="1-filter"><a class="header-anchor" href="#1-filter">¶</a>1. <code>filter</code></h3>
 <ul>
-<li>PC:<a class="tag-link" href="https://github.com/Pathoschild/SMAPI/releases/tag/4.2.1" target="_blank">
-    <div class="tag-link-tips">引用站外链接</div>
-    <div class="tag-link-bottom">
-        <div class="tag-link-left">
-          <i class="solitude fas fa-link"></i>
-        </div>
-        <div class="tag-link-right">
-            <div class="tag-link-title">SMAPI</div>
-            <div class="tag-link-sitename">GitHub，选择 SMAPI 4.1.10 installer.zip 下载</div>
-        </div>
-        <i class="solitude fas fa-chevron-right"></i>
-    </div></a>
-<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/2400" target="_blank">
-    <div class="tag-link-tips">引用站外链接</div>
-    <div class="tag-link-bottom">
-        <div class="tag-link-left">
-          <i class="solitude fas fa-link"></i>
-        </div>
-        <div class="tag-link-right">
-            <div class="tag-link-title">SMAPI</div>
-            <div class="tag-link-sitename">nexus，需要N网账号</div>
-        </div>
-        <i class="solitude fas fa-chevron-right"></i>
-    </div></a>
-</li>
-<li>Android<a class="tag-link" href="https://github.com/NRTnarathip/SMAPILoader/releases/tag/1.1.4" target="_blank">
-    <div class="tag-link-tips">引用站外链接</div>
-    <div class="tag-link-bottom">
-        <div class="tag-link-left">
-          <i class="solitude fas fa-link"></i>
-        </div>
-        <div class="tag-link-right">
-            <div class="tag-link-title">SMAPI</div>
-            <div class="tag-link-sitename">SMAPI For Android</div>
-        </div>
-        <i class="solitude fas fa-chevron-right"></i>
-    </div></a>
-</li>
+<li><strong><code>drop-shadow()</code></strong><br>
+沿元素不透明区域生成阴影（比 <code>box-shadow</code> 更精准）</li>
+<li><strong><code>contrast()</code></strong><br>
+调整对比度（<code>filter: contrast(1.5)</code>）</li>
+<li><strong><code>blur()</code></strong><br>
+高斯模糊（<code>filter: blur(5px)</code>）</li>
+<li><strong><code>brightness()</code></strong><br>
+亮度控制（<code>filter: brightness(0.8)</code>）</li>
 </ul>
-<h3 id="解压文件"><a class="header-anchor" href="#解压文件">¶</a>解压文件</h3>
-<p>将压缩包解压到当前文件夹，避免权限问题，建议路径：D:\StardewValley\SMAPI。</p>
-<h3 id="运行安装脚本"><a class="header-anchor" href="#运行安装脚本">¶</a>运行安装脚本</h3>
-<ol>
-<li>打开解压后的文件夹，双击运行 install on Windows.bat</li>
-<li>命令行界面提示：
+<h3 id="2-mask"><a class="header-anchor" href="#2-mask">¶</a>2. <code>mask</code></h3>
 <ul>
-<li>输入 1 并回车（选择默认游戏路径）。</li>
-<li>再次输入 1 确认安装。</li>
+<li><strong><code>mask-image</code></strong><br>
+使用图片/渐变作为遮罩（仅显示非透明区域）</li>
+<li><strong><code>mask-size</code></strong><br>
+控制遮罩尺寸（类似 <code>background-size</code>）</li>
 </ul>
-</li>
-<li>安装完成后会显示 SMAPI installed successfully!，并自动复制 SMAPI 启动路径（如 “D:\Steam\steamapps\common\Stardew Valley\StardewModdingAPI.exe” %command%）。</li>
-</ol>
-<h2 id="二、配置-Steam-启动项"><a class="header-anchor" href="#二、配置-Steam-启动项">¶</a>二、配置 Steam 启动项</h2>
-<ol>
-<li>打开 Steam ，右键点击游戏库中的 《星露谷物语》 → 属性 → 通用 → 启动选项。</li>
-<li>粘贴上述命令行的输出路径或者 SMAPI 路径到输入框（加上 %command% 命令），保存设置。<br>
-<img src="/hiner/src/img/stardew_valley.png" alt="Steam启动项设置"></li>
-</ol>
-<h2 id="三、注册-Nexus-Mods-账号"><a class="header-anchor" href="#三、注册-Nexus-Mods-账号">¶</a>三、注册 Nexus Mods 账号</h2>
-<ol>
-<li>访问 <a class="tag-link" href="https://www.nexusmods.com/" target="_blank">
-    <div class="tag-link-tips">引用站外链接</div>
-    <div class="tag-link-bottom">
-        <div class="tag-link-left">
-          <i class="solitude fas fa-link"></i>
-        </div>
-        <div class="tag-link-right">
-            <div class="tag-link-title">Nexus Mods官网</div>
-            <div class="tag-link-sitename">Nexus Mods</div>
-        </div>
-        <i class="solitude fas fa-chevron-right"></i>
-    </div></a></li>
-<li>点击右上角 Register，填写邮箱、用户名、密码完成注册。</li>
-<li>登录后，在 Site Preferences → Content Blocking 中关闭成人内容过滤（避免部分 Mod 被隐藏）。</li>
-</ol>
-<h2 id="四、下载并安装-Mod"><a class="header-anchor" href="#四、下载并安装-Mod">¶</a>四、下载并安装 Mod</h2>
-<h3 id="普通-Mod"><a class="header-anchor" href="#普通-Mod">¶</a>普通 Mod</h3>
-<ol>
-<li>下载 Mod<br>
-以热门的 “自动化” Mod（Automate） 为例：<a class="tag-link" href="https://www.nexusmods.com/stardewvalley/mods/1063" target="_blank">
-    <div class="tag-link-tips">引用站外链接</div>
-    <div class="tag-link-bottom">
-        <div class="tag-link-left">
-          <i class="solitude fas fa-link"></i>
-        </div>
-        <div class="tag-link-right">
-            <div class="tag-link-title">Automate下载页</div>
-            <div class="tag-link-sitename">Nexus Mods</div>
-        </div>
-        <i class="solitude fas fa-chevron-right"></i>
-    </div></a>
+<h3 id="3-mix-blend-mode"><a class="header-anchor" href="#3-mix-blend-mode">¶</a>3. <code>mix-blend-mode</code></h3>
+<p>混合模式（如 <code>multiply</code>, <code>overlay</code>, <code>screen</code>）</p>
+<h2 id="3-3D"><a class="header-anchor" href="#3-3D">¶</a>3. 3D</h2>
 <ul>
-<li>点击 Files → Manual Download 下载文件（通常为 .zip 格式）。</li>
+<li><strong><code>transform-style: preserve-3d;</code></strong><br>
+让子元素在 3D 空间中保持位置（默认是 flat，子元素会被拍平到 2D 平面），必须设置在父容器</li>
 </ul>
-</li>
-<li>安装 Mod</li>
-</ol>
+<hr>
+<h2 id="二、变形与动画"><a class="header-anchor" href="#二、变形与动画">¶</a>二、变形与动画</h2>
+<h3 id="1-transform"><a class="header-anchor" href="#1-transform">¶</a>1. <code>transform</code></h3>
 <ul>
-<li>解压下载的 Mod 文件，将解压后的整个文件夹复制到：你的游戏目录 /Stardew Valley/Mods 中(steam 点击游戏管理 -&gt; 浏览本地文件)</li>
+<li><strong><code>skew()</code></strong><br>
+元素倾斜（<code>skew(15deg, -5deg)</code> 或 <code>skewX(15deg)</code>与<code>skewY(-5deg)</code>）</li>
+<li><strong><code>scale()</code></strong><br>
+缩放元素（支持 2D/3D）</li>
+<li><strong><code>translate3d()</code></strong><br>
+三维位移（<code>translate3d(10px, 20px, 30px)</code>）</li>
+<li><strong><code>rotate3d()</code></strong><br>
+三维旋转（<code>rotate3d(1, 0.5, 0, 45deg)</code>）</li>
+<li><strong><code>transform-origin</code></strong><br>
+设置变形原点（<code>left top</code>）</li>
 </ul>
-<blockquote>
-<p>示例路径：D:\Steam\steamapps\common\Stardew Valley\Mods<br>
-如果 Mods 文件夹不存在，手动创建。</p>
-</blockquote>
-<details open><summary>检查依赖项</summary><ul>
-<li>大部分 Mod 需要额外依赖库</li>
-<li>安装方式同上，确保依赖库位于 Mods 文件夹内。</li>
-</ul></details>
-<h3 id="美化-Mod"><a class="header-anchor" href="#美化-Mod">¶</a>美化 Mod</h3>
-<p>分为 xnb 和 png 两种格式</p>
+<h3 id="2-animation"><a class="header-anchor" href="#2-animation">¶</a>2. <code>animation</code></h3>
 <ul>
-<li>xnb<br>
-解压后复制 Mod 文件夹中 xnb 后缀的文件，打开星露谷 /Stardew Valley/Content/Portraits 文件夹，粘贴并替换，恢复原样只需检查游戏资源完整性即可</li>
-<li>png<br>
-根据前置 Mod 不同，选择不同方法
-<ul>
-<li><a href="https://www.nexusmods.com/stardewvalley/mods/999">Portraiture</a><br>
-将 Mod 中包含 PNG 图片的文件夹复制到 /Mods/Portraiture/Portraits 中即可，游戏中按 <span class="keyboard-tag">P</span> 切换，<span class="keyboard-tag">O</span> 为锁定肖像</li>
-<li><a href="https://www.nexusmods.com/stardewvalley/mods/6340">PNG Retex Helper</a><br>
-将 Mod 中的</li>
-<li><a href="https://www.nexusmods.com/stardewvalley/mods/9969">Fashion Sense</a><br>
-服装等等 Mod 解压到游戏 Mods 文件夹<br>
-在皮埃尔商店购买 Hand Mirror ，您只需使用 Hand Mirror 即可更改 Fashion Sense 配饰、发型、帽子、衬衫、袖子、裤子或鞋子，。自定义服装也可以通过此工具保存和加载。</li>
+<li><strong><code>alternate</code></strong> 动画交替反向播放</li>
+<li><strong><code>animation-play-state</code></strong><br>
+暂停/播放控制（<code>paused | running</code>）</li>
+<li><strong><code>steps()</code></strong><br>
+逐帧动画（<code>animation-timing-function: steps(6)</code>）</li>
 </ul>
+<hr>
+<h2 id="三、布局与响应式"><a class="header-anchor" href="#三、布局与响应式">¶</a>三、布局与响应式</h2>
+<h3 id="1-特殊布局"><a class="header-anchor" href="#1-特殊布局">¶</a>1. 特殊布局</h3>
+<ul>
+<li><strong><code>aspect-ratio</code></strong><br>
+强制宽高比（16/9）</li>
+<li><strong><code>shape-outside</code></strong><br>
+文字环绕（circle(50%)）</li>
+<li><strong><code>scroll-snap</code></strong><br>
+滚动对齐（需配合 scroll-snap-type 使用）</li>
+</ul>
+<h3 id="2-三维控制"><a class="header-anchor" href="#2-三维控制">¶</a>2. 三维控制</h3>
+<ul>
+<li><strong><code>backface-visibility</code></strong><br>
+隐藏元素背面（hidden | visible）</li>
+</ul>
+<hr>
+<h2 id="四、渐变与遮罩"><a class="header-anchor" href="#四、渐变与遮罩">¶</a>四、渐变与遮罩</h2>
+<ul>
+<li><strong><code>conic-gradient</code></strong><br>
+圆锥渐变（适合色轮/饼图）<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 圆形 */</span></span><br><span class="line">conic-gradient(<span class="selector-tag">from</span> <span class="number">0deg</span> at <span class="number">50%</span> <span class="number">50%</span>,<span class="selector-id">#ff0000</span> <span class="number">0%</span>,<span class="selector-id">#ff007f</span> <span class="number">8.33%</span>,<span class="selector-id">#ff00ff</span> <span class="number">16.66%</span>,<span class="selector-id">#7f00ff</span> <span class="number">25%</span>,<span class="selector-id">#0000ff</span> <span class="number">33.33%</span>,<span class="selector-id">#007fff</span> <span class="number">41.66%</span>,<span class="selector-id">#00ffff</span> <span class="number">50%</span>,<span class="selector-id">#00ff7f</span> <span class="number">58.33%</span>,<span class="selector-id">#00ff00</span> <span class="number">66.66%</span>,<span class="selector-id">#7fff00</span> <span class="number">75%</span>,<span class="selector-id">#ffff00</span> <span class="number">83.33%</span>,<span class="selector-id">#ff7f00</span> <span class="number">91.66%</span>,<span class="selector-id">#ff0000</span> <span class="number">100%</span>);</span><br><span class="line"><span class="comment">/* 扇形 */</span></span><br><span class="line">conic-gradient(<span class="selector-id">#f00</span> <span class="number">0deg</span> <span class="number">90deg</span>, transparent <span class="number">90deg</span> <span class="number">360deg</span>)</span><br><span class="line"><span class="comment">/* 渐变 */</span></span><br><span class="line">conic-gradient(<span class="selector-id">#00f</span>, transparent)</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 动态饼图 */</span></span><br><span class="line"><span class="keyword">@property</span> --progress &#123;</span><br><span class="line">  syntax: <span class="string">&quot;&lt;angle&gt;&quot;</span>;</span><br><span class="line">  inherits: false;</span><br><span class="line">  initial-value: <span class="number">0deg</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.pie</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">conic-gradient</span>(</span><br><span class="line">    <span class="number">#ff0000</span> <span class="built_in">var</span>(--progress),</span><br><span class="line">    transparent <span class="built_in">var</span>(--progress) <span class="number">360deg</span></span><br><span class="line">  );</span><br><span class="line">  <span class="attribute">transition</span>: --progress <span class="number">0.5s</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.pie</span><span class="selector-pseudo">:hover</span> &#123; <span class="attr">--progress</span>: <span class="number">180deg</span>; &#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="五、验证-Mod-是否生效"><a class="header-anchor" href="#五、验证-Mod-是否生效">¶</a>五、验证 Mod 是否生效</h2>
-<ol>
-<li>通过 Steam 启动游戏，会自动运行 SMAPI。</li>
-<li>游戏启动时，命令行窗口会显示加载的 Mod 列表。
+<hr>
+<h2 id="五、排版与细节"><a class="header-anchor" href="#五、排版与细节">¶</a>五、排版与细节</h2>
+<h3 id="1-边框"><a class="header-anchor" href="#1-边框">¶</a>1. 边框</h3>
 <ul>
-<li>白色：Loaded 表示成功。</li>
-<li>红色：Failed 表示失败。</li>
-<li>紫色：Mod 需要更新（不强制）。</li>
+<li><strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/outline"><code>outline</code></a></strong></li>
 </ul>
-</li>
-</ol>
-<h2 id="六、常见问题"><a class="header-anchor" href="#六、常见问题">¶</a>六、常见问题</h2>
+<h3 id="2-基本文本和字体样式"><a class="header-anchor" href="#2-基本文本和字体样式">¶</a>2. 基本文本和字体样式</h3>
 <ul>
-<li>
-<p>Mod 未加载</p>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Learn_web_development/Core/Text_styling/Fundamentals">字体样式</a></li>
+<li><strong><code>letter-spacing</code></strong><br>
+字符间距（0.1em）</li>
+<li><strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration"><code>text-decoration</code></a></strong><br>
+文本装饰线条</li>
+<li><strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-shadow"><code>text-shadow</code></a></strong><br>
+文字阴影（2px 2px 4px rgba(0,0,0,0.5)）</li>
+</ul>
+<h3 id="3-交互增强"><a class="header-anchor" href="#3-交互增强">¶</a>3. 交互增强</h3>
 <ul>
-<li>检查 Mod 文件夹层级：正确路径应为 Mods/Mod 名称/模组文件，而非嵌套多层。</li>
-<li>确保所有依赖项（前置 Mod）已安装。</li>
+<li><strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/cursor"><code>cursor</code></a></strong><br>
+鼠标指针样式（grab, zoom-in）</li>
+<li><strong><code>resize</code></strong><br>
+允许用户调整尺寸（vertical | horizontal）</li>
 </ul>
-</li>
-<li>
-<p>Mod 过期</p>
-<ul>
-<li>定期在 Nexus Mods 检查更新，关注 Mod 页面的 Posts 板块获取兼容性通知。</li>
-</ul>
-</li>
-<li>
-<p>Mod 兼容</p>
-<ul>
-<li>检查Mod是否兼容1.6版本，或删除冲突Mod。</li>
-</ul>
-</li>
-</ul>
-<h2 id="七、推荐工具"><a class="header-anchor" href="#七、推荐工具">¶</a>七、推荐工具</h2>
-<p>Mod 管理工具：可自动检测缺失依赖和 Mod 更新。</p>
-<a class="tag-link" href="https://github.com/Stardrop/Stardrop/releases" target="_blank">
-    <div class="tag-link-tips">引用站外链接</div>
-    <div class="tag-link-bottom">
-        <div class="tag-link-left">
-          <i class="solitude fas fa-link"></i>
-        </div>
-        <div class="tag-link-right">
-            <div class="tag-link-title">Stardrop</div>
-            <div class="tag-link-sitename">Mod管理器</div>
-        </div>
-        <i class="solitude fas fa-chevron-right"></i>
-    </div></a>
-<p>Mod 兼容性</p>
-<a class="tag-link" href="https://smapi.io/mods" target="_blank">
-    <div class="tag-link-tips">引用站外链接</div>
-    <div class="tag-link-bottom">
-        <div class="tag-link-left">
-          <i class="solitude fas fa-link"></i>
-        </div>
-        <div class="tag-link-right">
-            <div class="tag-link-title">Mod compatibility</div>
-            <div class="tag-link-sitename">显示了所有已知的 SMAPI 模组和（不兼容的）内容包</div>
-        </div>
-        <i class="solitude fas fa-chevron-right"></i>
-    </div></a>
-<p>Mod 故障排查</p>
-<a class="tag-link" href="https://stardewvalleywiki.com/Modding:Player_Guide/Troubleshooting" target="_blank">
-    <div class="tag-link-tips">引用站外链接</div>
-    <div class="tag-link-bottom">
-        <div class="tag-link-left">
-          <i class="solitude fas fa-link"></i>
-        </div>
-        <div class="tag-link-right">
-            <div class="tag-link-title">Modding</div>
-            <div class="tag-link-sitename">玩家指南/故障排除</div>
-        </div>
-        <i class="solitude fas fa-chevron-right"></i>
-    </div></a>
-<a class="tag-link" href="https://smapi.io/log" target="_blank">
-    <div class="tag-link-tips">引用站外链接</div>
-    <div class="tag-link-bottom">
-        <div class="tag-link-left">
-          <i class="solitude fas fa-link"></i>
-        </div>
-        <div class="tag-link-right">
-            <div class="tag-link-title">SMAPI log parser</div>
-            <div class="tag-link-sitename">日志解析器</div>
-        </div>
-        <i class="solitude fas fa-chevron-right"></i>
-    </div></a>
-<blockquote>
-<p>按 <span class="keyboard-tag">Win⌘</span> + <span class="keyboard-tag">R</span> ，在输入框中键入 <strong>%appdata%\StardewValley\ErrorLogs</strong> ，将日志文件拖入网页输入框即可。</p>
-</blockquote>
-<blockquote>
-<p>按照以上步骤操作，即可畅玩星露谷物语的 Mod 内容！遇到问题可查阅 SMAPI 官方文档 或社区论坛。</p>
-</blockquote>
-<details><summary>小技巧</summary><ul>
-<li>可以在已游玩存档的任何时期添加 Mod</li>
-<li>遇到“这个角色属于另一位玩家”，找到存档，记事本打开，快捷键 <span class="keyboard-tag">Ctrl</span> + <span class="keyboard-tag">F</span> 寻找 <code>&lt;farmhand&gt;</code> ，找到角色名称后向后寻找 <code>&lt;userID&gt;xxx&lt;/userID&gt;</code> ，意思是只有指定 ID 的玩家可以加入游戏，改成 <code>&lt;userID /&gt;</code> 。</li>
-<li>主机位置 <code>&lt;player&gt;</code></li>
-<li>从机位置 <code>&lt;farmhand&gt;</code></li>
-<li>房屋代码 <code>&lt;farmhouse&gt;</code></li>
-<li>房屋等级 <code>&lt;houseUpgradeLevel&gt;</code></li>
-<li>记录献祭及各种邮件内容 <code>&lt;mailReceived&gt;</code></li>
-<li>记录看过的情景等等的内容 <code>&lt;eventsSeen&gt;</code></li>
-<li>记录玩家 ID 识别哪只动物是哪个玩家买的 <code>&lt;UniqueMultiplayerID&gt;</code></li>
-</ul></details>]]></content>
-      <categories>
-        <category>游戏</category>
-      </categories>
-      <tags>
-        <tag>Mod</tag>
-        <tag>steam</tag>
-        <tag>星露谷物语</tag>
-      </tags>
+]]></content>
   </entry>
   <entry>
     <title>Hello World</title>
@@ -2931,109 +3182,7 @@ Hexo 默认的 hexo-renderer-marked 渲染器可能不支持所有参数（如 t
 ]]></content>
   </entry>
   <entry>
-    <title>CSS 属性</title>
-    <url>/hiner/2025/04/16/css/</url>
-    <content><![CDATA[<h1>有趣的 CSS 属性合集</h1>
-<h2 id="一、视觉特效类"><a class="header-anchor" href="#一、视觉特效类">¶</a>一、视觉特效类</h2>
-<h3 id="1-filter"><a class="header-anchor" href="#1-filter">¶</a>1. <code>filter</code></h3>
-<ul>
-<li><strong><code>drop-shadow()</code></strong><br>
-沿元素不透明区域生成阴影（比 <code>box-shadow</code> 更精准）</li>
-<li><strong><code>contrast()</code></strong><br>
-调整对比度（<code>filter: contrast(1.5)</code>）</li>
-<li><strong><code>blur()</code></strong><br>
-高斯模糊（<code>filter: blur(5px)</code>）</li>
-<li><strong><code>brightness()</code></strong><br>
-亮度控制（<code>filter: brightness(0.8)</code>）</li>
-</ul>
-<h3 id="2-mask"><a class="header-anchor" href="#2-mask">¶</a>2. <code>mask</code></h3>
-<ul>
-<li><strong><code>mask-image</code></strong><br>
-使用图片/渐变作为遮罩（仅显示非透明区域）</li>
-<li><strong><code>mask-size</code></strong><br>
-控制遮罩尺寸（类似 <code>background-size</code>）</li>
-</ul>
-<h3 id="3-mix-blend-mode"><a class="header-anchor" href="#3-mix-blend-mode">¶</a>3. <code>mix-blend-mode</code></h3>
-<p>混合模式（如 <code>multiply</code>, <code>overlay</code>, <code>screen</code>）</p>
-<h2 id="3-3D"><a class="header-anchor" href="#3-3D">¶</a>3. 3D</h2>
-<ul>
-<li><strong><code>transform-style: preserve-3d;</code></strong><br>
-让子元素在 3D 空间中保持位置（默认是 flat，子元素会被拍平到 2D 平面），必须设置在父容器</li>
-</ul>
-<hr>
-<h2 id="二、变形与动画"><a class="header-anchor" href="#二、变形与动画">¶</a>二、变形与动画</h2>
-<h3 id="1-transform"><a class="header-anchor" href="#1-transform">¶</a>1. <code>transform</code></h3>
-<ul>
-<li><strong><code>skew()</code></strong><br>
-元素倾斜（<code>skew(15deg, -5deg)</code> 或 <code>skewX(15deg)</code>与<code>skewY(-5deg)</code>）</li>
-<li><strong><code>scale()</code></strong><br>
-缩放元素（支持 2D/3D）</li>
-<li><strong><code>translate3d()</code></strong><br>
-三维位移（<code>translate3d(10px, 20px, 30px)</code>）</li>
-<li><strong><code>rotate3d()</code></strong><br>
-三维旋转（<code>rotate3d(1, 0.5, 0, 45deg)</code>）</li>
-<li><strong><code>transform-origin</code></strong><br>
-设置变形原点（<code>left top</code>）</li>
-</ul>
-<h3 id="2-animation"><a class="header-anchor" href="#2-animation">¶</a>2. <code>animation</code></h3>
-<ul>
-<li><strong><code>alternate</code></strong> 动画交替反向播放</li>
-<li><strong><code>animation-play-state</code></strong><br>
-暂停/播放控制（<code>paused | running</code>）</li>
-<li><strong><code>steps()</code></strong><br>
-逐帧动画（<code>animation-timing-function: steps(6)</code>）</li>
-</ul>
-<hr>
-<h2 id="三、布局与响应式"><a class="header-anchor" href="#三、布局与响应式">¶</a>三、布局与响应式</h2>
-<h3 id="1-特殊布局"><a class="header-anchor" href="#1-特殊布局">¶</a>1. 特殊布局</h3>
-<ul>
-<li><strong><code>aspect-ratio</code></strong><br>
-强制宽高比（16/9）</li>
-<li><strong><code>shape-outside</code></strong><br>
-文字环绕（circle(50%)）</li>
-<li><strong><code>scroll-snap</code></strong><br>
-滚动对齐（需配合 scroll-snap-type 使用）</li>
-</ul>
-<h3 id="2-三维控制"><a class="header-anchor" href="#2-三维控制">¶</a>2. 三维控制</h3>
-<ul>
-<li><strong><code>backface-visibility</code></strong><br>
-隐藏元素背面（hidden | visible）</li>
-</ul>
-<hr>
-<h2 id="四、渐变与遮罩"><a class="header-anchor" href="#四、渐变与遮罩">¶</a>四、渐变与遮罩</h2>
-<ul>
-<li><strong><code>conic-gradient</code></strong><br>
-圆锥渐变（适合色轮/饼图）<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 圆形 */</span></span><br><span class="line">conic-gradient(<span class="selector-tag">from</span> <span class="number">0deg</span> at <span class="number">50%</span> <span class="number">50%</span>,<span class="selector-id">#ff0000</span> <span class="number">0%</span>,<span class="selector-id">#ff007f</span> <span class="number">8.33%</span>,<span class="selector-id">#ff00ff</span> <span class="number">16.66%</span>,<span class="selector-id">#7f00ff</span> <span class="number">25%</span>,<span class="selector-id">#0000ff</span> <span class="number">33.33%</span>,<span class="selector-id">#007fff</span> <span class="number">41.66%</span>,<span class="selector-id">#00ffff</span> <span class="number">50%</span>,<span class="selector-id">#00ff7f</span> <span class="number">58.33%</span>,<span class="selector-id">#00ff00</span> <span class="number">66.66%</span>,<span class="selector-id">#7fff00</span> <span class="number">75%</span>,<span class="selector-id">#ffff00</span> <span class="number">83.33%</span>,<span class="selector-id">#ff7f00</span> <span class="number">91.66%</span>,<span class="selector-id">#ff0000</span> <span class="number">100%</span>);</span><br><span class="line"><span class="comment">/* 扇形 */</span></span><br><span class="line">conic-gradient(<span class="selector-id">#f00</span> <span class="number">0deg</span> <span class="number">90deg</span>, transparent <span class="number">90deg</span> <span class="number">360deg</span>)</span><br><span class="line"><span class="comment">/* 渐变 */</span></span><br><span class="line">conic-gradient(<span class="selector-id">#00f</span>, transparent)</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 动态饼图 */</span></span><br><span class="line"><span class="keyword">@property</span> --progress &#123;</span><br><span class="line">  syntax: <span class="string">&quot;&lt;angle&gt;&quot;</span>;</span><br><span class="line">  inherits: false;</span><br><span class="line">  initial-value: <span class="number">0deg</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.pie</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">conic-gradient</span>(</span><br><span class="line">    <span class="number">#ff0000</span> <span class="built_in">var</span>(--progress),</span><br><span class="line">    transparent <span class="built_in">var</span>(--progress) <span class="number">360deg</span></span><br><span class="line">  );</span><br><span class="line">  <span class="attribute">transition</span>: --progress <span class="number">0.5s</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.pie</span><span class="selector-pseudo">:hover</span> &#123; <span class="attr">--progress</span>: <span class="number">180deg</span>; &#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<h2 id="五、排版与细节"><a class="header-anchor" href="#五、排版与细节">¶</a>五、排版与细节</h2>
-<h3 id="1-边框"><a class="header-anchor" href="#1-边框">¶</a>1. 边框</h3>
-<ul>
-<li><strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/outline"><code>outline</code></a></strong></li>
-</ul>
-<h3 id="2-基本文本和字体样式"><a class="header-anchor" href="#2-基本文本和字体样式">¶</a>2. 基本文本和字体样式</h3>
-<ul>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Learn_web_development/Core/Text_styling/Fundamentals">字体样式</a></li>
-<li><strong><code>letter-spacing</code></strong><br>
-字符间距（0.1em）</li>
-<li><strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration"><code>text-decoration</code></a></strong><br>
-文本装饰线条</li>
-<li><strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-shadow"><code>text-shadow</code></a></strong><br>
-文字阴影（2px 2px 4px rgba(0,0,0,0.5)）</li>
-</ul>
-<h3 id="3-交互增强"><a class="header-anchor" href="#3-交互增强">¶</a>3. 交互增强</h3>
-<ul>
-<li><strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/cursor"><code>cursor</code></a></strong><br>
-鼠标指针样式（grab, zoom-in）</li>
-<li><strong><code>resize</code></strong><br>
-允许用户调整尺寸（vertical | horizontal）</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>壁纸 API</title>
+    <title>随机壁纸 API</title>
     <url>/hiner/2025/03/30/wallpaper_API/</url>
     <content><![CDATA[<script>
     window.addEventListener('DOMContentLoaded', () => {
@@ -3046,9 +3195,9 @@ Hexo 默认的 hexo-renderer-marked 渲染器可能不支持所有参数（如 t
         });
     })
 </script>
-<p>分享一些图片或者壁纸 API ，仅收集</p>
+<p>分享一些图片或者壁纸 API ，仅收集之用</p>
 <blockquote>
-<p>刷新页面后，点击即可切图</p>
+<p>第一次进来后刷新页面，点击图片即可切图</p>
 </blockquote>
 <h2 id="Lorem-Picsum"><a class="header-anchor" href="#Lorem-Picsum">¶</a><a href="https://picsum.photos/">Lorem Picsum</a></h2>
 <p>更改链接数字以改变图片像素<br>
@@ -3572,109 +3721,10 @@ for (let i = 0; i < items.length; i++) {
       </tags>
   </entry>
   <entry>
-    <title>xuao Blog</title>
-    <url>/hiner/2025/04/16/xuao/</url>
-    <content><![CDATA[<p>开始学习 HTML 和 CSS 写的一个页面，后来在网上看到有意思的效果，都会写一遍</p>
-<style>
-    .color {
-    width: 100%;
-    font-size: 4em;
-    text-align: center;
-    }
-    .color span {
-        color: #e0e0e0;
-        animation: ColorChange 1s infinite ease-in-out alternate;
-    }
-    @keyframes ColorChange {
-        to {
-            color: #ff0266;
-        }
-    }
-</style>
-<div class="color">
-    <span>C</span>
-    <span>O</span>
-    <span>L</span>
-    <span>O</span>
-    <span>R</span>
-    <span>F</span>
-    <span>U</span>
-    <span>L</span>
-</div>
-<script>
-    document.querySelectorAll('.color span').forEach((span, index) => {
-        span.style.animationDelay = `${index * 0.1}s`;
-    });
-</script>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.color</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">4em</span>;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.color</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#e0e0e0</span>;</span><br><span class="line">    <span class="attribute">animation</span>: ColorChange <span class="number">1s</span> infinite ease-in-out alternate;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@keyframes</span> ColorChange &#123;</span><br><span class="line">    <span class="selector-tag">to</span> &#123;</span><br><span class="line">        <span class="attribute">color</span>: <span class="number">#ff0266</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&#x27;.color span&#x27;</span>).<span class="title function_">forEach</span>(<span class="function">(<span class="params">span, index</span>) =&gt;</span> &#123;</span><br><span class="line">    span.<span class="property">style</span>.<span class="property">animationDelay</span> = <span class="string">`<span class="subst">$&#123;index * <span class="number">0.1</span>&#125;</span>s`</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<style>
-    .line span {
-        font-size: 1.5em;
-        background: linear-gradient(to right, #f00, #00f) no-repeat;
-        background-size: 0px 2px;
-        background-position: right bottom;
-        transition: background-size 1s;
-        cursor: pointer;
-    }
-    .line span:hover {
-        background-size: 100% 2px;
-        background-position: left bottom;
-    }
-</style>
-<style>
-    .letter div::first-letter {
-        font-size: 2em;
-        text-transform: uppercase;
-        float: left;
-        margin-right: 10px;
-    }
-    .letter div::selection {
-        background-color: palevioletred;
-        text-decoration: underline;
-    }
-</style>
-<div class="line letter">
-    <span>“The supreme happiness of life is the conviction that we are loved; loved for ourselves—say rather, loved in
-    spite of ourselves.”<br>
-    “It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of
-    foolishness...”</span>
-</div>
-<div class="line letter">
-    <h3><span>A Covenant Between Civilization and Nature</span></h3>
-    <div>
-        Environmental crises now threaten humanity’s survival. Polar ice melting at unprecedented rates, 90% of
-        seabirds ingesting plastics, and rampant deforestation expose a fractured ecosystem. These are not isolated
-        issues but symptoms of a broken human-nature covenant.
-    </div>
-    <div>
-        True solutions demand dual action: individuals adopting sustainable habits and governments enforcing green
-        policies. As Jane Goodall warned, "Protecting nature is not a choice but a necessity for civilization’s
-        continuity." Environmentalism must evolve from "saving Earth" to redefining humanity’s role as stewards of a
-        shared biological legacy. Only by honoring this planetary covenant can we safeguard tomorrow’s world.
-    </div>
-</div>
-<ul>
-<li><strong>::first-letter</strong><br>
-设置选中第一个字母</li>
-<li><strong>::selection</strong><br>
-设置选中文本的样式</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.line</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">1.5em</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(to right, <span class="number">#f00</span>, <span class="number">#00f</span>) no-repeat;</span><br><span class="line">    <span class="attribute">background-size</span>: <span class="number">0px</span> <span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">background-position</span>: right bottom;</span><br><span class="line">    <span class="attribute">transition</span>: background-size <span class="number">1s</span>;</span><br><span class="line">    <span class="attribute">cursor</span>: pointer;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.line</span> <span class="selector-tag">span</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">background-size</span>: <span class="number">100%</span> <span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">background-position</span>: left bottom;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.letter</span> <span class="selector-tag">div</span><span class="selector-pseudo">::first-letter</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">2em</span>;</span><br><span class="line">    <span class="attribute">text-transform</span>: uppercase;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">    <span class="attribute">margin-right</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.letter</span> <span class="selector-tag">div</span><span class="selector-pseudo">::selection</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: palevioletred;</span><br><span class="line">    <span class="attribute">text-decoration</span>: underline;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Tips</category>
-      </categories>
-      <tags>
-        <tag>Blog</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>初试hexo</title>
     <url>/hiner/2025/03/12/%E5%88%9D%E8%AF%95hexo/</url>
-    <content><![CDATA[<h2 id="markdown的Front-matter"><a class="header-anchor" href="#markdown的Front-matter">¶</a>markdown的Front-matter</h2>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">文章标题</span></span><br><span class="line"><span class="attr">date:</span> <span class="string">创建日期</span></span><br><span class="line"><span class="attr">updated:</span> <span class="string">更新日期</span></span><br><span class="line"><span class="attr">tags:</span> [<span class="string">标签1</span>, <span class="string">标签2</span>]</span><br><span class="line"><span class="attr">categories:</span> [<span class="string">分类1</span>]</span><br><span class="line"><span class="attr">cover:</span> <span class="string">封面图路径</span></span><br><span class="line"><span class="attr">reprint:</span> <span class="literal">true</span> <span class="comment">#  版权（默认为原创）为true时为转载</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">true</span> <span class="comment"># 评论（默认：true）</span></span><br><span class="line"><span class="attr">sticky:</span> <span class="number">100</span> <span class="comment"># 置顶优先级（数值越大越靠前，0 表示不置顶）</span></span><br><span class="line"><span class="attr">mathjax:</span> <span class="literal">false</span> <span class="comment"># 数学公式支持（默认：false）</span></span><br></pre></td></tr></table></figure>
-<p>title 和 date 为必须</p>
+    <content><![CDATA[<h2 id="Markdown的Font-matter"><a class="header-anchor" href="#Markdown的Font-matter">¶</a>Markdown的Font-matter</h2>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">文章标题</span> <span class="string">|</span> <span class="string">必需</span></span><br><span class="line"><span class="attr">date:</span> <span class="string">创建日期</span> <span class="string">|</span> <span class="string">必需</span></span><br><span class="line"><span class="attr">updated:</span> <span class="string">更新日期</span></span><br><span class="line"><span class="attr">tags:</span> [<span class="string">标签1</span>, <span class="string">标签2</span>]</span><br><span class="line"><span class="attr">categories:</span> [<span class="string">分类1</span>]</span><br><span class="line"><span class="attr">cover:</span> <span class="string">封面图路径</span></span><br><span class="line"><span class="attr">ai_text:</span> <span class="string">文章</span> <span class="string">AI</span> <span class="string">摘要内容</span></span><br><span class="line"><span class="attr">recommend:</span> <span class="string">推荐文章，值为数字或者</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">reprint:</span> <span class="literal">true</span> <span class="comment">#  版权（默认为原创）为true时为转载</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">true</span> <span class="comment"># 评论（默认：true）</span></span><br><span class="line"><span class="attr">sticky:</span> <span class="number">100</span> <span class="comment"># 置顶优先级（数值越大越靠前，0 表示不置顶）</span></span><br><span class="line"><span class="attr">mathjax:</span> <span class="literal">false</span> <span class="comment"># 数学公式支持（默认：false）</span></span><br></pre></td></tr></table></figure>
 <h2 id="外挂标签"><a class="header-anchor" href="#外挂标签">¶</a>外挂标签</h2>
 <h3 id="tabs"><a class="header-anchor" href="#tabs">¶</a>tabs</h3>
 <p>标签页标签，用于显示标签页。</p>
@@ -3803,6 +3853,183 @@ for (let i = 0; i < items.length; i++) {
       <tags>
         <tag>hexo</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>xuao Blog</title>
+    <url>/hiner/2025/04/16/xuao/</url>
+    <content><![CDATA[<p>开始学习 HTML 和 CSS 写的一个页面，后来在网上看到有意思的效果，都会写一遍</p>
+<style>
+    .color {
+    width: 100%;
+    font-size: 4em;
+    text-align: center;
+    }
+    .color span {
+        color: #e0e0e0;
+        animation: ColorChange 1s infinite ease-in-out alternate;
+    }
+    @keyframes ColorChange {
+        to {
+            color: #ff0266;
+        }
+    }
+</style>
+<div class="color">
+    <span>C</span>
+    <span>O</span>
+    <span>L</span>
+    <span>O</span>
+    <span>R</span>
+    <span>F</span>
+    <span>U</span>
+    <span>L</span>
+</div>
+<script>
+    document.querySelectorAll('.color span').forEach((span, index) => {
+        span.style.animationDelay = `${index * 0.1}s`;
+    });
+</script>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.color</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">4em</span>;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.color</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#e0e0e0</span>;</span><br><span class="line">    <span class="attribute">animation</span>: ColorChange <span class="number">1s</span> infinite ease-in-out alternate;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@keyframes</span> ColorChange &#123;</span><br><span class="line">    <span class="selector-tag">to</span> &#123;</span><br><span class="line">        <span class="attribute">color</span>: <span class="number">#ff0266</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&#x27;.color span&#x27;</span>).<span class="title function_">forEach</span>(<span class="function">(<span class="params">span, index</span>) =&gt;</span> &#123;</span><br><span class="line">    span.<span class="property">style</span>.<span class="property">animationDelay</span> = <span class="string">`<span class="subst">$&#123;index * <span class="number">0.1</span>&#125;</span>s`</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<style>
+    .line span {
+        font-size: 1.5em;
+        background: linear-gradient(to right, #f00, #00f) no-repeat;
+        background-size: 0px 2px;
+        background-position: right bottom;
+        transition: background-size 1s;
+        cursor: pointer;
+    }
+    .line span:hover {
+        background-size: 100% 2px;
+        background-position: left bottom;
+    }
+</style>
+<style>
+    .letter div::first-letter {
+        font-size: 2em;
+        text-transform: uppercase;
+        float: left;
+        margin-right: 10px;
+    }
+    .letter div::selection {
+        background-color: palevioletred;
+        text-decoration: underline;
+    }
+</style>
+<div class="line letter">
+    <span>“The supreme happiness of life is the conviction that we are loved; loved for ourselves—say rather, loved in
+    spite of ourselves.”<br>
+    “It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of
+    foolishness...”</span>
+</div>
+<div class="line letter">
+    <h3><span>A Covenant Between Civilization and Nature</span></h3>
+    <div>
+        Environmental crises now threaten humanity’s survival. Polar ice melting at unprecedented rates, 90% of
+        seabirds ingesting plastics, and rampant deforestation expose a fractured ecosystem. These are not isolated
+        issues but symptoms of a broken human-nature covenant.
+    </div>
+    <div>
+        True solutions demand dual action: individuals adopting sustainable habits and governments enforcing green
+        policies. As Jane Goodall warned, "Protecting nature is not a choice but a necessity for civilization’s
+        continuity." Environmentalism must evolve from "saving Earth" to redefining humanity’s role as stewards of a
+        shared biological legacy. Only by honoring this planetary covenant can we safeguard tomorrow’s world.
+    </div>
+</div>
+<ul>
+<li><strong>::first-letter</strong><br>
+设置选中第一个字母</li>
+<li><strong>::selection</strong><br>
+设置选中文本的样式</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.line</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">1.5em</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(to right, <span class="number">#f00</span>, <span class="number">#00f</span>) no-repeat;</span><br><span class="line">    <span class="attribute">background-size</span>: <span class="number">0px</span> <span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">background-position</span>: right bottom;</span><br><span class="line">    <span class="attribute">transition</span>: background-size <span class="number">1s</span>;</span><br><span class="line">    <span class="attribute">cursor</span>: pointer;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.line</span> <span class="selector-tag">span</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">background-size</span>: <span class="number">100%</span> <span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">background-position</span>: left bottom;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.letter</span> <span class="selector-tag">div</span><span class="selector-pseudo">::first-letter</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">2em</span>;</span><br><span class="line">    <span class="attribute">text-transform</span>: uppercase;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">    <span class="attribute">margin-right</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.letter</span> <span class="selector-tag">div</span><span class="selector-pseudo">::selection</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: palevioletred;</span><br><span class="line">    <span class="attribute">text-decoration</span>: underline;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Tips</category>
+      </categories>
+      <tags>
+        <tag>Blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的改造</title>
+    <url>/hiner/2025/03/16/%E6%88%91%E7%9A%84%E6%94%B9%E9%80%A0/</url>
+    <content><![CDATA[<h2 id="右键菜单添加复制当前页面链接按钮"><a class="header-anchor" href="#右键菜单添加复制当前页面链接按钮">¶</a>右键菜单添加复制当前页面链接按钮</h2>
+<p>新建 <code>/themes/solitude/js/copylink.js</code> ，内容如下：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">copyPostLink</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> postLink = <span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span>;</span><br><span class="line"></span><br><span class="line">    navigator.<span class="property">clipboard</span>.<span class="title function_">writeText</span>(postLink).<span class="title function_">then</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        utils.<span class="title function_">snackbarShow</span>(<span class="string">&quot;当前页面链接已复制到剪贴板&quot;</span>, <span class="literal">false</span>, <span class="number">2000</span>);</span><br><span class="line">    &#125;).<span class="title function_">catch</span>(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&quot;无法复制链接&quot;</span>, err);</span><br><span class="line">        utils.<span class="title function_">snackbarShow</span>(<span class="string">&quot;复制失败，请重试&quot;</span>, <span class="literal">false</span>, <span class="number">2000</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>修改 <code>_config.solitude.yml</code> ，引入js：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">extends:</span></span><br><span class="line">   <span class="attr">body:</span></span><br><span class="line">       <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;/js/copylink.js&quot;</span> <span class="string">async&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p>然后右键菜单添加该项即可：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">right_menu:</span></span><br><span class="line">  <span class="attr">custom_list:</span></span><br><span class="line">     <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">复制链接</span></span><br><span class="line">       <span class="attr">click:</span> <span class="string">copyPostLink()</span></span><br><span class="line">       <span class="attr">id:</span> <span class="string">menu-copyPostLink</span></span><br><span class="line">       <span class="attr">class:</span></span><br><span class="line">       <span class="attr">icon:</span> <span class="string">fas</span> <span class="string">fa-link</span></span><br></pre></td></tr></table></figure>
+<p>第六项：<a href="https://r1n.top/post/c28e60f4.html">https://r1n.top/post/c28e60f4.html</a></p>
+<h2 id="导航栏页面"><a class="header-anchor" href="#导航栏页面">¶</a>导航栏页面</h2>
+<a class="tag-link" href="https://solitude.js.org/feature/links.html" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">solitude</div>
+            <div class="tag-link-sitename">官方文档</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<h2 id="links-页面"><a class="header-anchor" href="#links-页面">¶</a>links 页面</h2>
+<p>想改成只显示 title ，hover 显示 desc，调不好，只能这样了，当 avatar 值为 None 触发，但就在我要推送的时候，我想到：为什么不把条件设置为空呢😅🤣</p>
+<ul>
+<li>card</li>
+</ul>
+<blockquote>
+<p>themes\solitude\layout\includes\widgets\page\links\linksCard.pug &gt;line 14</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if item.avatar</span><br><span class="line">    .site-card-avatar</span><br><span class="line">        img.flink-avatar.cf-friends-avatar(src=item.avatar + (data.suffix || &#x27;&#x27;), alt=item.name)</span><br><span class="line">        //- .img-alt.is-center= item.name</span><br><span class="line">else    </span><br><span class="line">    - var avatarStyle =  &#x27;display:none&#x27;</span><br><span class="line">.site-card-text</span><br><span class="line">    span.title.cf-friends-name= item.name</span><br><span class="line">    span.desc(title=item.descr)= item.descr</span><br></pre></td></tr></table></figure>
+<ul>
+<li>banner</li>
+</ul>
+<blockquote>
+<p>themes\solitude\layout\includes\widgets\page\links\banner.pug &gt;line 30</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a.tags-group-icon(href=url_for(y.link), title=y.name)</span><br><span class="line">    if y.avatar</span><br><span class="line">        img(src=y.avatar + (site.data.links.banner_suffix || &#x27;&#x27;), title=y.name)</span><br><span class="line">    else</span><br><span class="line">        img(src=y.topimg + (site.data.links.banner_suffix || &#x27;&#x27;), title=y.name)</span><br><span class="line">    span.tags-group-title=y.name</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>themes\solitude\source\css_page\links.stylline &gt;line 152 .site-card-text &gt; .title</p>
+</blockquote>
+<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="attribute">padding-bottom</span> <span class="number">7px</span></span><br></pre></td></tr></table></figure>
+<h2 id="about-页面"><a class="header-anchor" href="#about-页面">¶</a>about 页面</h2>
+<ul>
+<li>游戏 icon 显示异常</li>
+</ul>
+<blockquote>
+<p>themes\solitude\layout\includes\widgets\page\about\hobbies.pug &gt;line 16</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.icon-group</span><br><span class="line">    each icon in game.icon_group</span><br><span class="line">        i(style=`background: url($&#123;icon&#125;) center / cover;`)</span><br></pre></td></tr></table></figure>
+<h2 id="嘉然"><a class="header-anchor" href="#嘉然">¶</a>嘉然</h2>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">body:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;https://cdn.jsdelivr.net/npm/greensock@1.20.2/dist/TweenLite.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;https://cdn.jsdelivr.net/npm/pixi.js@5.3.6/dist/pixi.min.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;https://cdn.jsdelivr.net/npm/pixi-live2d-display@0.3.1/dist/cubism4.min.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">href=&quot;https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/pio.css&quot;</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">type=&quot;text/css&quot;/&gt;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/pio.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/pio_sdk4.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/load.js&quot;&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="灯箱（failed）"><a class="header-anchor" href="#灯箱（failed）">¶</a><s>灯箱</s>（failed）</h2>
+<p>在 Font Matter 添加 no_lightbox 为 true 实现文章不显现 lightbox<br>
+但是改造失败了，退而求其次：使用 js 吧</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;DOMContentLoaded&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&#x27;a.fancybox&#x27;</span>).<span class="title function_">forEach</span>(<span class="function"><span class="params">a</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> img = a.<span class="title function_">querySelector</span>(<span class="string">&#x27;img&#x27;</span>);</span><br><span class="line">        <span class="keyword">if</span> (img) &#123;</span><br><span class="line">        <span class="comment">// 用 img 标签替换 a 标签</span></span><br><span class="line">        a.<span class="property">parentNode</span>.<span class="title function_">replaceChild</span>(img, a);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>themes\solitude\scripts\filter\default.js &gt;line 25</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">data.<span class="property">no_lightbox</span> = data.<span class="title function_">hasOwnProperty</span>(<span class="string">&quot;no_lightbox&quot;</span>) ? data.<span class="property">no_lightbox</span> === <span class="literal">true</span> : <span class="literal">false</span>;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>themes\solitude\layout\includes\inject\body.pug &gt;line 48、104</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> theme.<span class="property">lightbox</span> || page.<span class="property">no_lightbox</span> === <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>themes\solitude\source\js\main.js &gt;line 922</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">lightbox &amp;&amp; page.<span class="property">no_lightbox</span> === <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>themes\solitude\layout\includes\inject\head.pug &gt;line 16</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> theme.<span class="property">lightbox</span> &amp;&amp; theme.<span class="property">fancybox</span> &amp;&amp; page.<span class="property">no_lightbox</span> == <span class="literal">false</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Hexo</category>
+        <category>solitude</category>
+      </categories>
   </entry>
   <entry>
     <title>星露谷物语PC与手机跨平台联机详细教程</title>
@@ -3957,84 +4184,5 @@ PC端登录后点击「创建网络」→ 选择「对等网络」→ 设置网�
         <tag>steam</tag>
         <tag>星露谷物语</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>我的改造</title>
-    <url>/hiner/2025/03/16/%E6%88%91%E7%9A%84%E6%94%B9%E9%80%A0/</url>
-    <content><![CDATA[<h2 id="右键菜单添加复制当前页面链接按钮"><a class="header-anchor" href="#右键菜单添加复制当前页面链接按钮">¶</a>右键菜单添加复制当前页面链接按钮</h2>
-<p>新建 <code>/themes/solitude/js/copylink.js</code> ，内容如下：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">copyPostLink</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> postLink = <span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span>;</span><br><span class="line"></span><br><span class="line">    navigator.<span class="property">clipboard</span>.<span class="title function_">writeText</span>(postLink).<span class="title function_">then</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        utils.<span class="title function_">snackbarShow</span>(<span class="string">&quot;当前页面链接已复制到剪贴板&quot;</span>, <span class="literal">false</span>, <span class="number">2000</span>);</span><br><span class="line">    &#125;).<span class="title function_">catch</span>(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&quot;无法复制链接&quot;</span>, err);</span><br><span class="line">        utils.<span class="title function_">snackbarShow</span>(<span class="string">&quot;复制失败，请重试&quot;</span>, <span class="literal">false</span>, <span class="number">2000</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>修改 <code>_config.solitude.yml</code> ，引入js：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">extends:</span></span><br><span class="line">   <span class="attr">body:</span></span><br><span class="line">       <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;/js/copylink.js&quot;</span> <span class="string">async&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
-<p>然后右键菜单添加该项即可：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">right_menu:</span></span><br><span class="line">  <span class="attr">custom_list:</span></span><br><span class="line">     <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">复制链接</span></span><br><span class="line">       <span class="attr">click:</span> <span class="string">copyPostLink()</span></span><br><span class="line">       <span class="attr">id:</span> <span class="string">menu-copyPostLink</span></span><br><span class="line">       <span class="attr">class:</span></span><br><span class="line">       <span class="attr">icon:</span> <span class="string">fas</span> <span class="string">fa-link</span></span><br></pre></td></tr></table></figure>
-<p>第六项：<a href="https://r1n.top/post/c28e60f4.html">https://r1n.top/post/c28e60f4.html</a></p>
-<h2 id="导航栏页面"><a class="header-anchor" href="#导航栏页面">¶</a>导航栏页面</h2>
-<a class="tag-link" href="https://solitude.js.org/feature/links.html" target="_blank">
-    <div class="tag-link-tips">引用站外链接</div>
-    <div class="tag-link-bottom">
-        <div class="tag-link-left">
-          <i class="solitude fas fa-link"></i>
-        </div>
-        <div class="tag-link-right">
-            <div class="tag-link-title">solitude</div>
-            <div class="tag-link-sitename">官方文档</div>
-        </div>
-        <i class="solitude fas fa-chevron-right"></i>
-    </div></a>
-<h2 id="links-页面"><a class="header-anchor" href="#links-页面">¶</a>links 页面</h2>
-<p>想改成只显示 title ，hover 显示 desc，调不好，只能这样了，当 avatar 值为 None 触发，但就在我要推送的时候，我想到：为什么不把条件设置为空呢😅🤣</p>
-<ul>
-<li>card</li>
-</ul>
-<blockquote>
-<p>themes\solitude\layout\includes\widgets\page\links\linksCard.pug &gt;line 14</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if item.avatar</span><br><span class="line">    .site-card-avatar</span><br><span class="line">        img.flink-avatar.cf-friends-avatar(src=item.avatar + (data.suffix || &#x27;&#x27;), alt=item.name)</span><br><span class="line">        //- .img-alt.is-center= item.name</span><br><span class="line">else    </span><br><span class="line">    - var avatarStyle =  &#x27;display:none&#x27;</span><br><span class="line">.site-card-text</span><br><span class="line">    span.title.cf-friends-name= item.name</span><br><span class="line">    span.desc(title=item.descr)= item.descr</span><br></pre></td></tr></table></figure>
-<ul>
-<li>banner</li>
-</ul>
-<blockquote>
-<p>themes\solitude\layout\includes\widgets\page\links\banner.pug &gt;line 30</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a.tags-group-icon(href=url_for(y.link), title=y.name)</span><br><span class="line">    if y.avatar</span><br><span class="line">        img(src=y.avatar + (site.data.links.banner_suffix || &#x27;&#x27;), title=y.name)</span><br><span class="line">    else</span><br><span class="line">        img(src=y.topimg + (site.data.links.banner_suffix || &#x27;&#x27;), title=y.name)</span><br><span class="line">    span.tags-group-title=y.name</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>themes\solitude\source\css_page\links.stylline &gt;line 152 .site-card-text &gt; .title</p>
-</blockquote>
-<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="attribute">padding-bottom</span> <span class="number">7px</span></span><br></pre></td></tr></table></figure>
-<h2 id="about-页面"><a class="header-anchor" href="#about-页面">¶</a>about 页面</h2>
-<ul>
-<li>游戏 icon 显示异常</li>
-</ul>
-<blockquote>
-<p>themes\solitude\layout\includes\widgets\page\about\hobbies.pug &gt;line 16</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.icon-group</span><br><span class="line">    each icon in game.icon_group</span><br><span class="line">        i(style=`background: url($&#123;icon&#125;) center / cover;`)</span><br></pre></td></tr></table></figure>
-<h2 id="嘉然"><a class="header-anchor" href="#嘉然">¶</a>嘉然</h2>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">body:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;https://cdn.jsdelivr.net/npm/greensock@1.20.2/dist/TweenLite.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;https://cdn.jsdelivr.net/npm/pixi.js@5.3.6/dist/pixi.min.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;https://cdn.jsdelivr.net/npm/pixi-live2d-display@0.3.1/dist/cubism4.min.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">href=&quot;https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/pio.css&quot;</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">type=&quot;text/css&quot;/&gt;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/pio.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/pio_sdk4.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/load.js&quot;&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="灯箱（failed）"><a class="header-anchor" href="#灯箱（failed）">¶</a><s>灯箱</s>（failed）</h2>
-<p>在 Font Matter 添加 no_lightbox 为 true 实现文章不显现 lightbox<br>
-但是改造失败了，退而求其次：使用 js 吧</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;DOMContentLoaded&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&#x27;a.fancybox&#x27;</span>).<span class="title function_">forEach</span>(<span class="function"><span class="params">a</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> img = a.<span class="title function_">querySelector</span>(<span class="string">&#x27;img&#x27;</span>);</span><br><span class="line">        <span class="keyword">if</span> (img) &#123;</span><br><span class="line">        <span class="comment">// 用 img 标签替换 a 标签</span></span><br><span class="line">        a.<span class="property">parentNode</span>.<span class="title function_">replaceChild</span>(img, a);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>themes\solitude\scripts\filter\default.js &gt;line 25</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">data.<span class="property">no_lightbox</span> = data.<span class="title function_">hasOwnProperty</span>(<span class="string">&quot;no_lightbox&quot;</span>) ? data.<span class="property">no_lightbox</span> === <span class="literal">true</span> : <span class="literal">false</span>;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>themes\solitude\layout\includes\inject\body.pug &gt;line 48、104</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> theme.<span class="property">lightbox</span> || page.<span class="property">no_lightbox</span> === <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>themes\solitude\source\js\main.js &gt;line 922</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">lightbox &amp;&amp; page.<span class="property">no_lightbox</span> === <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>themes\solitude\layout\includes\inject\head.pug &gt;line 16</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> theme.<span class="property">lightbox</span> &amp;&amp; theme.<span class="property">fancybox</span> &amp;&amp; page.<span class="property">no_lightbox</span> == <span class="literal">false</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Hexo</category>
-        <category>solitude</category>
-      </categories>
   </entry>
 </search>
