@@ -6,7 +6,7 @@
   <link href="https://aozijx.github.io/hiner/atom.xml" rel="self"/>
   
   <link href="https://aozijx.github.io/hiner/"/>
-  <updated>2025-05-17T03:07:05.237Z</updated>
+  <updated>2025-05-25T08:34:26.923Z</updated>
   <id>https://aozijx.github.io/hiner/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>learngitbranch</title>
+    <link href="https://aozijx.github.io/hiner/2025/05/25/learngit/"/>
+    <id>https://aozijx.github.io/hiner/2025/05/25/learngit/</id>
+    <published>2025-05-25T02:00:00.000Z</published>
+    <updated>2025-05-25T08:34:26.923Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="Git" scheme="https://aozijx.github.io/hiner/categories/Git/"/>
+    
+    
+    <category term="Git" scheme="https://aozijx.github.io/hiner/tags/Git/"/>
+    
+  </entry>
   
   <entry>
     <title>VSCode 插件</title>
@@ -115,7 +137,7 @@
     <link href="https://aozijx.github.io/hiner/2025/04/05/Git_command/"/>
     <id>https://aozijx.github.io/hiner/2025/04/05/Git_command/</id>
     <published>2025-04-04T16:57:35.000Z</published>
-    <updated>2025-05-18T07:26:04.320Z</updated>
+    <updated>2025-05-25T06:06:14.282Z</updated>
     
     
       
@@ -125,7 +147,7 @@
     
     
     
-    <category term="Tips" scheme="https://aozijx.github.io/hiner/categories/Tips/"/>
+    <category term="Git" scheme="https://aozijx.github.io/hiner/categories/Git/"/>
     
     
     <category term="Git" scheme="https://aozijx.github.io/hiner/tags/Git/"/>
@@ -137,7 +159,7 @@
     <link href="https://aozijx.github.io/hiner/2025/04/02/Docker_install/"/>
     <id>https://aozijx.github.io/hiner/2025/04/02/Docker_install/</id>
     <published>2025-04-02T06:58:47.000Z</published>
-    <updated>2025-05-21T15:15:21.234Z</updated>
+    <updated>2025-05-23T10:22:57.605Z</updated>
     
     
       
@@ -177,7 +199,7 @@
     <link href="https://aozijx.github.io/hiner/2025/03/27/StardewValley_Mod/"/>
     <id>https://aozijx.github.io/hiner/2025/03/27/StardewValley_Mod/</id>
     <published>2025-03-27T14:07:53.000Z</published>
-    <updated>2025-05-20T16:05:43.912Z</updated>
+    <updated>2025-05-25T11:42:36.338Z</updated>
     
     
       
@@ -229,7 +251,7 @@
     <link href="https://aozijx.github.io/hiner/2025/03/20/StardewValley_ModInstall/"/>
     <id>https://aozijx.github.io/hiner/2025/03/20/StardewValley_ModInstall/</id>
     <published>2025-03-20T07:05:04.000Z</published>
-    <updated>2025-05-17T11:11:32.846Z</updated>
+    <updated>2025-05-24T16:32:55.687Z</updated>
     
     
       
@@ -243,30 +265,6 @@
     
     
     <category term="Mod" scheme="https://aozijx.github.io/hiner/tags/Mod/"/>
-    
-    <category term="steam" scheme="https://aozijx.github.io/hiner/tags/steam/"/>
-    
-    <category term="星露谷物语" scheme="https://aozijx.github.io/hiner/tags/%E6%98%9F%E9%9C%B2%E8%B0%B7%E7%89%A9%E8%AF%AD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>星露谷物语PC与手机跨平台联机详细教程</title>
-    <link href="https://aozijx.github.io/hiner/2025/03/18/%E6%98%9F%E9%9C%B2%E8%B0%B7%E7%89%A9%E8%AF%ADPC%E4%B8%8E%E6%89%8B%E6%9C%BA%E8%B7%A8%E5%B9%B3%E5%8F%B0%E8%81%94%E6%9C%BA%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/"/>
-    <id>https://aozijx.github.io/hiner/2025/03/18/%E6%98%9F%E9%9C%B2%E8%B0%B7%E7%89%A9%E8%AF%ADPC%E4%B8%8E%E6%89%8B%E6%9C%BA%E8%B7%A8%E5%B9%B3%E5%8F%B0%E8%81%94%E6%9C%BA%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</id>
-    <published>2025-03-18T09:24:33.000Z</published>
-    <updated>2025-04-06T16:04:49.811Z</updated>
-    
-    
-      
-      
-    <summary type="html"></summary>
-      
-    
-    
-    
-    <category term="游戏" scheme="https://aozijx.github.io/hiner/categories/%E6%B8%B8%E6%88%8F/"/>
-    
     
     <category term="steam" scheme="https://aozijx.github.io/hiner/tags/steam/"/>
     
@@ -365,7 +363,7 @@
     <link href="https://aozijx.github.io/hiner/2025/03/14/GenshinImpact_ModInstall/"/>
     <id>https://aozijx.github.io/hiner/2025/03/14/GenshinImpact_ModInstall/</id>
     <published>2025-03-14T06:30:22.000Z</published>
-    <updated>2025-05-14T13:32:20.829Z</updated>
+    <updated>2025-05-24T16:44:32.490Z</updated>
     
     
       
