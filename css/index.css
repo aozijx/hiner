@@ -2656,14 +2656,14 @@ span.tags-punctuation i {
   opacity: 0.2;
   width: 100%;
   height: 100%;
-  background-image: url("https://aozijx.github.io/hiner/src/img/light.jpg");
+  background-image: url("/hiner/src/img/light.jpg");
   background-size: cover;
   background-position: center;
   pointer-events: none;
   background-repeat: no-repeat;
 }
 [data-theme=dark] #global_bg {
-  background-image: url("https://aozijx.github.io/hiner/src/img/dark.png");
+  background-image: url("/hiner/src/img/dark.png");
 }
 .article-container {
   overflow-wrap: break-word;
@@ -8722,13 +8722,13 @@ body[data-type=music] #nav-music {
   height: 100%;
   top: 0;
   left: 0;
+  pointer-events: none;
 }
 #about-page .author-content-item.comic .author-content-item-tips,
 #about-page .author-content-item.comic .author-content-item-title,
 #about-page .author-content-item.comic .content-bottom {
   z-index: 3;
   color: var(--efu-white);
-  pointer-events: none;
 }
 #about-page .author-content-item.comic .comic-item {
   height: 100%;
