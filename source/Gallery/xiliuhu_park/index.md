@@ -6,7 +6,7 @@ type: banner
 cover: https://aozijx.github.io/stary/2025/03/xiliuhu/mmexport1742215218588.jpg
 container: true
 rightbtn: 返回图库
-rightbtnlink: Gallery
+rightbtnlink: /hiner/Gallery
 ---
 
 {% gallery %}

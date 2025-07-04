@@ -6,7 +6,7 @@ type: banner
 cover: https://t.alcy.cc/pc
 container: true
 rightbtn: 返回图库
-rightbtnlink: Gallery
+rightbtnlink: /hiner/Gallery
 ---
 
 <style>

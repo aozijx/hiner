@@ -136,14 +136,14 @@ aside:
   # Sticky: Fixed position / noSticky: Not fixed position
   # Sticky: 固定位置 / noSticky: 不固定位置
   home: # on the homepage
-    noSticky: "about"
+    noSticky: "about,  love"
     Sticky: "allInfo"
   post: # on the article page
     noSticky: "about"
     Sticky: "newestPost"
   page: # on the page
     noSticky: "about"
-    Sticky: "newestPost,allInfo"
+    Sticky: "newestPost, allInfo"
   # 菜单栏位置(0: 左 1: 右)
   position: 1 # Sidebar positioning(0: left 1: right)
 
@@ -395,8 +395,8 @@ font:
 background:
   enable: true
   opacity: .2
-  dark: https://aozijx.github.io/hiner/src/img/dark.png
-  light: https://aozijx.github.io/hiner/src/img/light.jpg
+  dark: /hiner/src/img/dark.png
+  light: /hiner/src/img/light.jpg
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
