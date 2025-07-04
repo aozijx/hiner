@@ -1,13 +1,13 @@
 ---
-title: 初试hexo
+title: 初试 Hexo
 date: 2025-03-12 20:04:33
 author: Hiner
 categories: [Tips]
-tags: [hexo]
+tags: [Hexo]
 cover: https://cdn.cdnjson.com/i.dawnlab.me/e489814b866d262813417680e613f2e6.jpg
 ---
 
-## Markdown的Font-matter
+## Markdown 的 Front-matter
 ```yml
 title: 文章标题 | 必需
 date: 创建日期 | 必需

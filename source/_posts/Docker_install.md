@@ -4,7 +4,7 @@ date: 2025-04-02 14:58:47
 author: 
 categories: 
 tags: 
-cover: /src/img/docker.png
+cover: /src/img/docker-logo.png
 ---
 
 ![](/hiner/src/img/docker.svg)

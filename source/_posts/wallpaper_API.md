@@ -19,8 +19,23 @@ cover: https://moe.jitsu.top/img/?sort=pc&34
     })
 </script>
 
-分享一些图片或者壁纸 API ，仅收集之用
-> 第一次进来后刷新页面，点击图片即可切图
+分享一些图片或者壁纸 API ，仅收集
+> 首次进入后刷新页面，点击图片即可切图
+
+## [今日诗词](https://www.jinrishici.com/)
+每次返回一句诗词
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<div id="poem_sentence"></div>
+<div id="poem_info"></div>
+<script type="text/javascript">
+  jinrishici.load(function(result) {
+    var sentence = document.querySelector("#poem_sentence")
+    var info = document.querySelector("#poem_info")
+    sentence.innerHTML = result.data.content
+    info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
+  });
+</script>
+
 ## [Lorem Picsum](https://picsum.photos/)
 更改链接数字以改变图片像素
 <img src="https://picsum.photos/1920/1080" onclick="changeImage(this)" alt="" >
@@ -288,24 +303,8 @@ cover: https://moe.jitsu.top/img/?sort=pc&34
 {% link '赵苦瓜のBlog' '欢迎来到赵苦瓜のBlog~！' 'https://blog.jixiaob.cn/?post=93' %}
 {% link '酷小呵' ' ' 'https://www.kuhehe.top/2023/03a05de98.html#30-远方随机风景壁纸api' %}
 
-{% fold "" %}
-写一个我遇到的问题，原本想的是 a 标签包裹 img 标签，让 a 标签来承担被点击的角色，然后更改图片，直到我看到了 img 标签直接应用 onclick 事件，我精简了一下 JS 
+> 遇到问题，fancybox
 
-```html
-<a onclick="changeImage(this, 'https://imgapi.xl0408.top/index.php')">
-    <img src="https://imgapi.xl0408.top/index.php" alt="">
-</a>
-```
-
-```JavaScript
-function changeImage(e, baseUrl) {
-    const img = e.querySelector('img');
-    const separator = baseUrl.includes('?') ? '&' : '?';
-    img.src = baseUrl + separator + 't=' + new Date().getTime();
-}
-```
-
-更改后的
 ```html
 <img src="https://imgapi.xl0408.top/index.php" onclick="changeImage(this)" alt="">
 ```
@@ -315,7 +314,6 @@ function changeImages(e) {
     e.src += (e.src.includes('?') ? '&' : '?') + 't=' + Date.now();
 }
 ```
-{% endfold %}
 
 <script>
     function changeImage(e) {

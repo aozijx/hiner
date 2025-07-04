@@ -2,7 +2,7 @@
 title: 原神 Mod 安装
 date: 2025-03-14 14:30:22
 author: Hiner
-categories: [教程，游戏]
+categories: [教程]
 tags: [原神, Mod]
 cover: src/img/Furina.jpg
 ---
