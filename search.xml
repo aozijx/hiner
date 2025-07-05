@@ -47,35 +47,31 @@
 ]]></content>
   </entry>
   <entry>
-    <title>GitHub 加速</title>
-    <url>/hiner/2025/03/15/GitHub-Up/</url>
-    <content><![CDATA[<p>转载:<a href="https://blog.jerryz.com.cn/article/github-speed-up/">Jerry Zhou</a><br>
-通过修改系统hosts文件的办法，绕过国内DNS解析，直接访问GitHub的CDN节点，从而达到GitHub访问加速的目的。不需要海外的服务器辅助。<br>
-做到以下需要三步：</p>
-<ul>
-<li>获取 GitHub 官方 CDN 地址</li>
-<li>修改系统 hosts 文件</li>
-<li>刷新系统 DNS 缓存</li>
-</ul>
-<h2 id="获取-GitHub-官方-CDN-地址"><a class="header-anchor" href="#获取-GitHub-官方-CDN-地址">¶</a>获取 GitHub 官方 CDN 地址</h2>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">140.82.121.3  github.com</span><br><span class="line">140.82.121.3  gist.github.com</span><br><span class="line">185.199.110.153 assets-cdn.github.com</span><br><span class="line">185.199.108.133 raw.githubusercontent.com</span><br><span class="line">185.199.111.133 gist.githubusercontent.com</span><br><span class="line">185.199.110.133 cloud.githubusercontent.com</span><br><span class="line">185.199.111.133 camo.githubusercontent.com</span><br><span class="line">185.199.111.133 avatars0.githubusercontent.com</span><br><span class="line">185.199.110.133 avatars1.githubusercontent.com</span><br><span class="line">185.199.111.133 avatars2.githubusercontent.com</span><br><span class="line">185.199.109.133 avatars3.githubusercontent.com</span><br><span class="line">185.199.108.133 avatars4.githubusercontent.com</span><br><span class="line">185.199.111.133 avatars5.githubusercontent.com</span><br><span class="line">185.199.109.133 avatars6.githubusercontent.com</span><br><span class="line">185.199.109.133 avatars7.githubusercontent.com</span><br><span class="line">185.199.110.133 avatars8.githubusercontent.com</span><br><span class="line">185.199.108.133 avatars.githubusercontent.com</span><br><span class="line">185.199.111.154 github.githubassets.com</span><br><span class="line">185.199.109.133 user-images.githubusercontent.com</span><br><span class="line">140.82.112.9 codeload.github.com</span><br><span class="line">185.199.110.133 favicons.githubusercontent.com</span><br><span class="line">192.30.255.116 api.github.com</span><br></pre></td></tr></table></figure>
-<h2 id="修改系统-hosts-文件"><a class="header-anchor" href="#修改系统-hosts-文件">¶</a>修改系统 hosts 文件</h2>
-<p>打开 C:\Windows\System32\drivers\etc</p>
-<ul>
-<li>显示隐藏的文件(Win11)<br>
-文件资源管理器 - 查看 - 显示 - 隐藏的项目</li>
-</ul>
-<h2 id="刷新系统-DNS-缓存"><a class="header-anchor" href="#刷新系统-DNS-缓存">¶</a>刷新系统 DNS 缓存</h2>
-<ul>
-<li>右击任务栏上的 “开始” 按钮，打开 “Windows 终端（管理员）”</li>
-<li>在命令行中输入 ipconfig /flushdns 来手动刷新系统 DNS 缓存</li>
-</ul>
+    <title>原神 Mod 安装</title>
+    <url>/hiner/2025/03/14/GenshinImpact_ModInstall/</url>
+    <content><![CDATA[<h3 id="安装-3DMigoto"><a class="header-anchor" href="#安装-3DMigoto">¶</a>安装 3DMigoto</h3>
+<p><a href="https://github.com/SilentNightSound/GI-Model-Importer/releases/download/v7.0/3dmigoto-GIMI-for-development.zip">点击下载</a> : <a href="https://github.com/SilentNightSound/GI-Model-Importer/releases/tag/v7.0">https://github.com/SilentNightSound/GI-Model-Importer/releases/tag/v7.0</a></p>
+<h3 id="更改配置文件"><a class="header-anchor" href="#更改配置文件">¶</a>更改配置文件</h3>
+<p>将 3DMigoto 解压到除了游戏文件夹的任意位置，打开 <strong>d3dx.ini</strong> 文件，按 Ctrl+F 搜索“Settings used by the external 3DMigoto Loader”的 <strong>loader</strong> 等等关键词，找到 <strong>target</strong> = D:\miHoYo Launcher\games\Genshin Impact Game\YuanShen.exe 后，将等号后的游戏路径改成自己的，更改完成后保存设置。</p>
+<h3 id="放置-Mod"><a class="header-anchor" href="#放置-Mod">¶</a>放置 Mod</h3>
+<p>在 Mods 文件夹放置你解压好的 Mod 文件，注意：一个角色只能有一个对应的模型 Mod 文件，否则会造成模型冲突。</p>
+<h3 id="启动游戏"><a class="header-anchor" href="#启动游戏">¶</a>启动游戏</h3>
+<p>启动 3DMigoto Loader.exe，将弹出一个命令行窗口，提示你现在可以打开游戏了，是的，它不会帮你打开游戏，需要手动启动。首次打开若模型异常，请到游戏设置中关闭动态高精度。游戏内更换或移动 Mod 后，按 F10 刷新游戏。当 3DMigoto 开启时，在数字键盘上按 0 可以开启狩猎模式（显示绿色文本，默认）或关闭（无文本）。</p>
+<h3 id="T"><a class="header-anchor" href="#T">¶</a>T:</h3>
+<p>此外，尽管许多玩家长期使用 Mod 而未遇到问题，但使用 Mod 仍存在潜在的风险，可能导致游戏账号被封禁。因此，在使用 Mod 时，请务必权衡利弊，并根据个人情况谨慎做出选择。请牢记，任何因使用 Mod 而导致的后果，需由玩家自行承担。</p>
+<h3 id="e-g"><a class="header-anchor" href="#e-g">¶</a>e.g.</h3>
+<p><img src="/hiner/src/img/Furina.png" alt="芙宁娜"><br>
+<img src="/hiner/src/img/Furina.png" alt="花时来信(随芒荒改变颜色)"><br>
+<img src="/hiner/src/img/Furina1.png" alt="过曝了"><br>
+<img src="/hiner/src/img/ying.png" alt="雷电将军"><br>
+<img src="/hiner/src/img/Arlecchino.png" alt="阿蕾奇诺"></p>
 ]]></content>
       <categories>
-        <category>Tips</category>
+        <category>教程</category>
       </categories>
       <tags>
-        <tag>GitHub</tag>
+        <tag>原神</tag>
+        <tag>Mod</tag>
       </tags>
   </entry>
   <entry>
@@ -214,31 +210,103 @@
       </tags>
   </entry>
   <entry>
-    <title>原神 Mod 安装</title>
-    <url>/hiner/2025/03/14/GenshinImpact_ModInstall/</url>
-    <content><![CDATA[<h3 id="安装-3DMigoto"><a class="header-anchor" href="#安装-3DMigoto">¶</a>安装 3DMigoto</h3>
-<p><a href="https://github.com/SilentNightSound/GI-Model-Importer/releases/download/v7.0/3dmigoto-GIMI-for-development.zip">点击下载</a> : <a href="https://github.com/SilentNightSound/GI-Model-Importer/releases/tag/v7.0">https://github.com/SilentNightSound/GI-Model-Importer/releases/tag/v7.0</a></p>
-<h3 id="更改配置文件"><a class="header-anchor" href="#更改配置文件">¶</a>更改配置文件</h3>
-<p>将 3DMigoto 解压到除了游戏文件夹的任意位置，打开 <strong>d3dx.ini</strong> 文件，按 Ctrl+F 搜索“Settings used by the external 3DMigoto Loader”的 <strong>loader</strong> 等等关键词，找到 <strong>target</strong> = D:\miHoYo Launcher\games\Genshin Impact Game\YuanShen.exe 后，将等号后的游戏路径改成自己的，更改完成后保存设置。</p>
-<h3 id="放置-Mod"><a class="header-anchor" href="#放置-Mod">¶</a>放置 Mod</h3>
-<p>在 Mods 文件夹放置你解压好的 Mod 文件，注意：一个角色只能有一个对应的模型 Mod 文件，否则会造成模型冲突。</p>
-<h3 id="启动游戏"><a class="header-anchor" href="#启动游戏">¶</a>启动游戏</h3>
-<p>启动 3DMigoto Loader.exe，将弹出一个命令行窗口，提示你现在可以打开游戏了，是的，它不会帮你打开游戏，需要手动启动。首次打开若模型异常，请到游戏设置中关闭动态高精度。游戏内更换或移动 Mod 后，按 F10 刷新游戏。当 3DMigoto 开启时，在数字键盘上按 0 可以开启狩猎模式（显示绿色文本，默认）或关闭（无文本）。</p>
-<h3 id="T"><a class="header-anchor" href="#T">¶</a>T:</h3>
-<p>此外，尽管许多玩家长期使用 Mod 而未遇到问题，但使用 Mod 仍存在潜在的风险，可能导致游戏账号被封禁。因此，在使用 Mod 时，请务必权衡利弊，并根据个人情况谨慎做出选择。请牢记，任何因使用 Mod 而导致的后果，需由玩家自行承担。</p>
-<h3 id="e-g"><a class="header-anchor" href="#e-g">¶</a>e.g.</h3>
-<p><img src="/hiner/src/img/Furina.png" alt="芙宁娜"><br>
-<img src="/hiner/src/img/Furina.png" alt="花时来信(随芒荒改变颜色)"><br>
-<img src="/hiner/src/img/Furina1.png" alt="过曝了"><br>
-<img src="/hiner/src/img/ying.png" alt="雷电将军"><br>
-<img src="/hiner/src/img/Arlecchino.png" alt="阿蕾奇诺"></p>
+    <title>GitHub 加速</title>
+    <url>/hiner/2025/03/15/GitHub-Up/</url>
+    <content><![CDATA[<p>转载:<a href="https://blog.jerryz.com.cn/article/github-speed-up/">Jerry Zhou</a><br>
+通过修改系统hosts文件的办法，绕过国内DNS解析，直接访问GitHub的CDN节点，从而达到GitHub访问加速的目的。不需要海外的服务器辅助。<br>
+做到以下需要三步：</p>
+<ul>
+<li>获取 GitHub 官方 CDN 地址</li>
+<li>修改系统 hosts 文件</li>
+<li>刷新系统 DNS 缓存</li>
+</ul>
+<h2 id="获取-GitHub-官方-CDN-地址"><a class="header-anchor" href="#获取-GitHub-官方-CDN-地址">¶</a>获取 GitHub 官方 CDN 地址</h2>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">140.82.121.3  github.com</span><br><span class="line">140.82.121.3  gist.github.com</span><br><span class="line">185.199.110.153 assets-cdn.github.com</span><br><span class="line">185.199.108.133 raw.githubusercontent.com</span><br><span class="line">185.199.111.133 gist.githubusercontent.com</span><br><span class="line">185.199.110.133 cloud.githubusercontent.com</span><br><span class="line">185.199.111.133 camo.githubusercontent.com</span><br><span class="line">185.199.111.133 avatars0.githubusercontent.com</span><br><span class="line">185.199.110.133 avatars1.githubusercontent.com</span><br><span class="line">185.199.111.133 avatars2.githubusercontent.com</span><br><span class="line">185.199.109.133 avatars3.githubusercontent.com</span><br><span class="line">185.199.108.133 avatars4.githubusercontent.com</span><br><span class="line">185.199.111.133 avatars5.githubusercontent.com</span><br><span class="line">185.199.109.133 avatars6.githubusercontent.com</span><br><span class="line">185.199.109.133 avatars7.githubusercontent.com</span><br><span class="line">185.199.110.133 avatars8.githubusercontent.com</span><br><span class="line">185.199.108.133 avatars.githubusercontent.com</span><br><span class="line">185.199.111.154 github.githubassets.com</span><br><span class="line">185.199.109.133 user-images.githubusercontent.com</span><br><span class="line">140.82.112.9 codeload.github.com</span><br><span class="line">185.199.110.133 favicons.githubusercontent.com</span><br><span class="line">192.30.255.116 api.github.com</span><br></pre></td></tr></table></figure>
+<h2 id="修改系统-hosts-文件"><a class="header-anchor" href="#修改系统-hosts-文件">¶</a>修改系统 hosts 文件</h2>
+<p>打开 C:\Windows\System32\drivers\etc</p>
+<ul>
+<li>显示隐藏的文件(Win11)<br>
+文件资源管理器 - 查看 - 显示 - 隐藏的项目</li>
+</ul>
+<h2 id="刷新系统-DNS-缓存"><a class="header-anchor" href="#刷新系统-DNS-缓存">¶</a>刷新系统 DNS 缓存</h2>
+<ul>
+<li>右击任务栏上的 “开始” 按钮，打开 “Windows 终端（管理员）”</li>
+<li>在命令行中输入 ipconfig /flushdns 来手动刷新系统 DNS 缓存</li>
+</ul>
 ]]></content>
       <categories>
-        <category>教程</category>
+        <category>Tips</category>
       </categories>
       <tags>
-        <tag>原神</tag>
-        <tag>Mod</tag>
+        <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>有趣的公式</title>
+    <url>/hiner/2025/03/13/InterstingFunction/</url>
+    <content><![CDATA[<h1>数学公式</h1>
+<p>若 <span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>l</mi><mi>o</mi><msub><mi>g</mi><mi>I</mi></msub><mi>f</mi><mi>o</mi><mi>r</mi><mi>e</mi><mi>v</mi><mi>e</mi><mi>r</mi><mo>=</mo><mi>l</mi><mi>o</mi><mi>v</mi><mi>e</mi><mtext> </mtext><mi>y</mi><mi>o</mi><mi>u</mi></mrow><annotation encoding="application/x-tex"> log_I forever = love\,you </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07847em;">I</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal">ore</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord mathnormal" style="margin-right:0.02778em;">er</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord mathnormal">e</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">yo</span><span class="mord mathnormal">u</span></span></span></span></span><br>
+那么 <span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mi>I</mi><mrow><mi>l</mi><mi>o</mi><mi>v</mi><mi>e</mi><mtext> </mtext><mi>y</mi><mi>o</mi><mi>u</mi></mrow></msup><mo>=</mo><mi>f</mi><mi>o</mi><mi>r</mi><mi>e</mi><mi>v</mi><mi>e</mi><mi>r</mi></mrow><annotation encoding="application/x-tex"> I^{love\,you} = forever </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8991em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span><span class="mord mathnormal mtight">o</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">v</span><span class="mord mathnormal mtight">e</span><span class="mspace mtight" style="margin-right:0.1952em;"></span><span class="mord mathnormal mtight">yo</span><span class="mord mathnormal mtight">u</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal">ore</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord mathnormal" style="margin-right:0.02778em;">er</span></span></span></span></span></p>
+<hr>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mo fence="true">∣</mo><mtable rowspacing="0.16em" columnalign="center center center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mtext>我</mtext></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mtext>生</mtext></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mtext>有</mtext></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mtext>你</mtext></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mtext>幸</mtext></mstyle></mtd></mtr></mtable><mo fence="true">∣</mo></mrow><mo>=</mo><mtext>我有幸</mtext><mo>−</mo><mtext>生有你</mtext></mrow><annotation encoding="application/x-tex">
+\begin{vmatrix}
+\text{我} &amp; 0 &amp; \text{生} \\
+0 &amp; \text{有} &amp; 0 \\
+\text{你} &amp; 0 &amp; \text{幸}
+\end{vmatrix} = \text{我有幸} - \text{生有你}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3.6em;vertical-align:-1.55em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.05em;"><span class="pstrut" style="height:5.6em;"></span><span style="width:0.333em;height:3.600em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.333em" height="3.600em" viewBox="0 0 333 3600"><path d="M145 15 v585 v2400 v585 c2.667,10,9.667,15,21,15
+c10,0,16.667,-5,20,-15 v-585 v-2400 v-585 c-2.667,-10,-9.667,-15,-21,-15
+c-10,0,-16.667,5,-20,15z M188 15 H145 v585 v2400 v585 h43z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord cjk_fallback">我</span></span></span></span><span style="top:-3.01em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span></span></span><span style="top:-1.81em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord cjk_fallback">你</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span></span></span><span style="top:-3.01em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord cjk_fallback">有</span></span></span></span><span style="top:-1.81em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord cjk_fallback">生</span></span></span></span><span style="top:-3.01em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span></span></span><span style="top:-1.81em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord cjk_fallback">幸</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.05em;"><span class="pstrut" style="height:5.6em;"></span><span style="width:0.333em;height:3.600em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.333em" height="3.600em" viewBox="0 0 333 3600"><path d="M145 15 v585 v2400 v585 c2.667,10,9.667,15,21,15
+c10,0,16.667,-5,20,-15 v-585 v-2400 v-585 c-2.667,-10,-9.667,-15,-21,-15
+c-10,0,-16.667,5,-20,15z M188 15 H145 v585 v2400 v585 h43z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord text"><span class="mord cjk_fallback">我有幸</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">生有你</span></span></span></span></span></span>
+<hr>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mo fence="true">∣</mo><mtable rowspacing="0.16em" columnalign="center center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mtext>爱</mtext></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mtext>万</mtext></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mtext>年</mtext></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mtext>你</mtext></mstyle></mtd></mtr></mtable><mo fence="true">∣</mo></mrow><mo>=</mo><mtext>爱你</mtext><mo>−</mo><mtext>万年</mtext></mrow><annotation encoding="application/x-tex">
+\begin{vmatrix}
+\text{爱} &amp; \text{万} \\
+\text{年} &amp; \text{你}
+\end{vmatrix} = \text{爱你} - \text{万年}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.4em;vertical-align:-0.95em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.45em;"><span class="pstrut" style="height:4.4em;"></span><span style="width:0.333em;height:2.400em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.333em" height="2.400em" viewBox="0 0 333 2400"><path d="M145 15 v585 v1200 v585 c2.667,10,9.667,15,21,15
+c10,0,16.667,-5,20,-15 v-585 v-1200 v-585 c-2.667,-10,-9.667,-15,-21,-15
+c-10,0,-16.667,5,-20,15z M188 15 H145 v585 v1200 v585 h43z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.95em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord cjk_fallback">爱</span></span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord cjk_fallback">年</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.95em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord cjk_fallback">万</span></span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord cjk_fallback">你</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.95em;"><span></span></span></span></span></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.45em;"><span class="pstrut" style="height:4.4em;"></span><span style="width:0.333em;height:2.400em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.333em" height="2.400em" viewBox="0 0 333 2400"><path d="M145 15 v585 v1200 v585 c2.667,10,9.667,15,21,15
+c10,0,16.667,-5,20,-15 v-585 v-1200 v-585 c-2.667,-10,-9.667,-15,-21,-15
+c-10,0,-16.667,5,-20,15z M188 15 H145 v585 v1200 v585 h43z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.95em;"><span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord text"><span class="mord cjk_fallback">爱你</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">万年</span></span></span></span></span></span>
+<hr>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mtext>馅</mtext><mo>→</mo><mn>0</mn></mrow></munder><mtext>包子</mtext><mo>=</mo><mtext>馒头</mtext></mrow><annotation encoding="application/x-tex"> \lim_{\text{馅} \to 0} \text{包子} = \text{馒头} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.4388em;vertical-align:-0.7443em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.3557em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord cjk_fallback mtight">馅</span></span><span class="mrel mtight">→</span><span class="mord mtight">0</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7443em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord text"><span class="mord cjk_fallback">包子</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">馒头</span></span></span></span></span></span>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mtext>馅</mtext><mo>→</mo><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></munder><mtext>包子</mtext><mo>=</mo><mtext>丸子</mtext></mrow><annotation encoding="application/x-tex"> \lim_{\text{馅} \to +\infty} \text{包子} = \text{丸子} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.4971em;vertical-align:-0.8027em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.3557em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord cjk_fallback mtight">馅</span></span><span class="mrel mtight">→</span><span class="mord mtight">+</span><span class="mord mtight">∞</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8027em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord text"><span class="mord cjk_fallback">包子</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">丸子</span></span></span></span></span></span>
+<hr>
+<p>切比雪夫不等式</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi mathvariant="normal">∣</mi><mi>ξ</mi><mo>−</mo><mi>a</mi><mi mathvariant="normal">∣</mi><mo>⩾</mo><mi>ϵ</mi><mo stretchy="false">)</mo><mo>⩽</mo><mfrac><mrow><mi>D</mi><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow><msup><mi>ϵ</mi><mn>2</mn></msup></mfrac></mrow><annotation encoding="application/x-tex"> P(|\xi-a|\geqslant\epsilon)\leqslant\frac{D(\xi)}{\epsilon^2} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.04601em;">ξ</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">a</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel amsrm">⩾</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">ϵ</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel amsrm">⩽</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.113em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">ϵ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.04601em;">ξ</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span>
+<h1>化学公式</h1>
+<h2 id="双氧水的分解"><a class="header-anchor" href="#双氧水的分解">¶</a>双氧水的分解</h2>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>2</mn><msub><mi>H</mi><mn>2</mn></msub><msub><mi>O</mi><mn>2</mn></msub><mover><mo stretchy="true" minsize="3.0em">→</mo><mpadded width="+0.6em" lspace="0.3em"><mtext>催化剂</mtext></mpadded></mover><mn>2</mn><msub><mi>H</mi><mn>2</mn></msub><mi>O</mi><mo>+</mo><msub><mi>O</mi><mn>2</mn></msub><mo>↑</mo></mrow><annotation encoding="application/x-tex"> 2H_2O_2 \xrightarrow{\text{催化剂}} 2H_2O + O_2 \uparrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2503em;vertical-align:-0.15em;"></span><span class="mord">2</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel x-arrow"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1003em;"><span style="top:-3.322em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight x-arrow-pad"><span class="mord mtight"><span class="mord text mtight"><span class="mord cjk_fallback mtight">催化剂</span></span></span></span></span><span class="svg-align" style="top:-2.689em;"><span class="pstrut" style="height:2.7em;"></span><span class="hide-tail" style="height:0.522em;min-width:1.469em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="0.522em" viewBox="0 0 400000 522" preserveAspectRatio="xMaxYMin slice"><path d="M0 241v40h399891c-47.3 35.3-84 78-110 128
+-16.7 32-27.7 63.7-33 95 0 1.3-.2 2.7-.5 4-.3 1.3-.5 2.3-.5 3 0 7.3 6.7 11 20
+ 11 8 0 13.2-.8 15.5-2.5 2.3-1.7 4.2-5.5 5.5-11.5 2-13.3 5.7-27 11-41 14.7-44.7
+ 39-84.5 73-119.5s73.7-60.2 119-75.5c6-2 9-5.7 9-11s-3-9-9-11c-45.3-15.3-85
+-40.5-119-75.5s-58.3-74.8-73-119.5c-4.7-14-8.3-27.3-11-40-1.3-6.7-3.2-10.8-5.5
+-12.5-2.3-1.7-7.5-2.5-15.5-2.5-14 0-21 3.7-21 11 0 2 2 10.3 6 25 20.7 83.3 67
+ 151.7 139 205zm0 0v40h399900v-40z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.011em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord">2</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">↑</span></span></span></span></span>
+<p>就像两颗不安分的灵魂（过氧化氢分子），在相遇的瞬间迸发能量，褪去防备（分解为水），释放出轻盈的自由（氧气）。这或许隐喻着：爱情有时需要打破原本的形态，才能让温柔与自由共存。</p>
+<h2 id="镁的燃烧"><a class="header-anchor" href="#镁的燃烧">¶</a>镁的燃烧</h2>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>2</mn><mi>M</mi><mi>g</mi><mtext> </mtext><mo>+</mo><mtext> </mtext><msub><mi>O</mi><mn>2</mn></msub><mo>→</mo><mn>2</mn><mi>M</mi><mi>g</mi><mi>O</mi></mrow><annotation encoding="application/x-tex"> 2Mg\,+\,O_2 \rightarrow 2MgO </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span></span></span></span></span>
+<p>镁条在氧气中迸发耀眼白光，化作细腻白烟。<br>
+寓意：炽烈的爱或许短暂，却在燃烧的瞬间留下永恒印记。</p>
+<h2 id="中和反应"><a class="header-anchor" href="#中和反应">¶</a>中和反应</h2>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>H</mi><mi>C</mi><mi>l</mi><mtext> </mtext><mo>+</mo><mtext> </mtext><mi>N</mi><mi>a</mi><mi>O</mi><mi>H</mi><mo>→</mo><mi>N</mi><mi>a</mi><mi>C</mi><mi>l</mi><mtext> </mtext><mo>+</mo><mtext> </mtext><msub><mi>H</mi><mn>2</mn></msub><mi>O</mi></mrow><annotation encoding="application/x-tex"> HCl\,+\,NaOH \rightarrow NaCl\,+\,H_2O </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mord mathnormal" style="margin-right:0.01968em;">Cl</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.01968em;">Cl</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span></span></span></span></span>
+<p>酸与碱激烈碰撞，最终化作温柔的盐与水。<br>
+寓意：差异的融合，可能创造最朴实的圆满。</p>
+<h2 id="银镜反应"><a class="header-anchor" href="#银镜反应">¶</a>银镜反应</h2>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>C</mi><msub><mi>H</mi><mn>3</mn></msub><mi>C</mi><mi>H</mi><mi>O</mi><mtext> </mtext><mo>+</mo><mtext> </mtext><mn>2</mn><mo stretchy="false">[</mo><mi>A</mi><mi>g</mi><mo stretchy="false">(</mo><mi>N</mi><msub><mi>H</mi><mn>3</mn></msub><msub><mo stretchy="false">)</mo><mn>2</mn></msub><msup><mo stretchy="false">]</mo><mo>+</mo></msup><mo>→</mo><mi>C</mi><msub><mi>H</mi><mn>3</mn></msub><mi>C</mi><mi>O</mi><mi>O</mi><mi>H</mi><mtext> </mtext><mo>+</mo><mtext> </mtext><mn>2</mn><mi>A</mi><mi>g</mi><mo>↓</mo><mtext> </mtext><mo>+</mo><mtext> </mtext><mn>2</mn><mi>N</mi><msubsup><mi>H</mi><mn>4</mn><mo>+</mo></msubsup></mrow><annotation encoding="application/x-tex"> CH_3CHO\,+\,2[Ag(NH_3)_2]^+ \rightarrow CH_3COOH\,+\,2Ag\downarrow\,+\,2NH_4^+ </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0713em;vertical-align:-0.25em;"></span><span class="mord">2</span><span class="mopen">[</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">]</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8213em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">+</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.02778em;">COO</span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">2</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">↓</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0778em;vertical-align:-0.2564em;"></span><span class="mord">+</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8213em;"><span style="top:-2.4436em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">+</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2564em;"><span></span></span></span></span></span></span></span></span></span></span>
+<p>乙醛在银氨溶液中悄然镀上镜面，如同爱让平凡事物闪烁光芒。</p>
+<h2 id="星辰的诞生（核聚变）"><a class="header-anchor" href="#星辰的诞生（核聚变）">¶</a>星辰的诞生（核聚变）</h2>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>4</mn><mtext> </mtext><msup><mrow></mrow><mn>1</mn></msup><mi>H</mi><mo>→</mo><msup><mrow></mrow><mn>4</mn></msup><mi>H</mi><mi>e</mi><mo>+</mo><mn>2</mn><msup><mi>e</mi><mo>+</mo></msup><mo>+</mo><mn>2</mn><mi>ν</mi><mo>+</mo><mi>γ</mi></mrow><annotation encoding="application/x-tex"> 4\,{}^1H \rightarrow {}^4He + 2e^+ + 2\nu + \gamma </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8641em;"></span><span class="mord">4</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord"></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9474em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord"></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span><span class="mord mathnormal">He</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.9047em;vertical-align:-0.0833em;"></span><span class="mord">2</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8213em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">+</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.06366em;">ν</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05556em;">γ</span></span></span></span></span>
+<p>氢原子在恒星核心相拥，历经亿万年的压力，终成璀璨的氦与光。<br>
+寓意：爱需要时间与坚持，才能蜕变为恒久的光辉。</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>Katex</tag>
       </tags>
   </entry>
   <entry>
@@ -634,235 +702,6 @@ M40 281 V448H0V74H40V241H400000v40z"/></svg></span><span class="halfarrow-right"
       <tags>
         <tag>Katex</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>有趣的公式</title>
-    <url>/hiner/2025/03/13/InterstingFunction/</url>
-    <content><![CDATA[<h1>数学公式</h1>
-<p>若 <span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>l</mi><mi>o</mi><msub><mi>g</mi><mi>I</mi></msub><mi>f</mi><mi>o</mi><mi>r</mi><mi>e</mi><mi>v</mi><mi>e</mi><mi>r</mi><mo>=</mo><mi>l</mi><mi>o</mi><mi>v</mi><mi>e</mi><mtext> </mtext><mi>y</mi><mi>o</mi><mi>u</mi></mrow><annotation encoding="application/x-tex"> log_I forever = love\,you </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07847em;">I</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal">ore</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord mathnormal" style="margin-right:0.02778em;">er</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord mathnormal">e</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">yo</span><span class="mord mathnormal">u</span></span></span></span></span><br>
-那么 <span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mi>I</mi><mrow><mi>l</mi><mi>o</mi><mi>v</mi><mi>e</mi><mtext> </mtext><mi>y</mi><mi>o</mi><mi>u</mi></mrow></msup><mo>=</mo><mi>f</mi><mi>o</mi><mi>r</mi><mi>e</mi><mi>v</mi><mi>e</mi><mi>r</mi></mrow><annotation encoding="application/x-tex"> I^{love\,you} = forever </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8991em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span><span class="mord mathnormal mtight">o</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">v</span><span class="mord mathnormal mtight">e</span><span class="mspace mtight" style="margin-right:0.1952em;"></span><span class="mord mathnormal mtight">yo</span><span class="mord mathnormal mtight">u</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal">ore</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord mathnormal" style="margin-right:0.02778em;">er</span></span></span></span></span></p>
-<hr>
-<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mo fence="true">∣</mo><mtable rowspacing="0.16em" columnalign="center center center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mtext>我</mtext></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mtext>生</mtext></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mtext>有</mtext></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mtext>你</mtext></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mtext>幸</mtext></mstyle></mtd></mtr></mtable><mo fence="true">∣</mo></mrow><mo>=</mo><mtext>我有幸</mtext><mo>−</mo><mtext>生有你</mtext></mrow><annotation encoding="application/x-tex">
-\begin{vmatrix}
-\text{我} &amp; 0 &amp; \text{生} \\
-0 &amp; \text{有} &amp; 0 \\
-\text{你} &amp; 0 &amp; \text{幸}
-\end{vmatrix} = \text{我有幸} - \text{生有你}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3.6em;vertical-align:-1.55em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.05em;"><span class="pstrut" style="height:5.6em;"></span><span style="width:0.333em;height:3.600em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.333em" height="3.600em" viewBox="0 0 333 3600"><path d="M145 15 v585 v2400 v585 c2.667,10,9.667,15,21,15
-c10,0,16.667,-5,20,-15 v-585 v-2400 v-585 c-2.667,-10,-9.667,-15,-21,-15
-c-10,0,-16.667,5,-20,15z M188 15 H145 v585 v2400 v585 h43z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord cjk_fallback">我</span></span></span></span><span style="top:-3.01em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span></span></span><span style="top:-1.81em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord cjk_fallback">你</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span></span></span><span style="top:-3.01em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord cjk_fallback">有</span></span></span></span><span style="top:-1.81em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord cjk_fallback">生</span></span></span></span><span style="top:-3.01em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span></span></span><span style="top:-1.81em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord cjk_fallback">幸</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.05em;"><span class="pstrut" style="height:5.6em;"></span><span style="width:0.333em;height:3.600em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.333em" height="3.600em" viewBox="0 0 333 3600"><path d="M145 15 v585 v2400 v585 c2.667,10,9.667,15,21,15
-c10,0,16.667,-5,20,-15 v-585 v-2400 v-585 c-2.667,-10,-9.667,-15,-21,-15
-c-10,0,-16.667,5,-20,15z M188 15 H145 v585 v2400 v585 h43z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord text"><span class="mord cjk_fallback">我有幸</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">生有你</span></span></span></span></span></span>
-<hr>
-<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mo fence="true">∣</mo><mtable rowspacing="0.16em" columnalign="center center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mtext>爱</mtext></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mtext>万</mtext></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mtext>年</mtext></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mtext>你</mtext></mstyle></mtd></mtr></mtable><mo fence="true">∣</mo></mrow><mo>=</mo><mtext>爱你</mtext><mo>−</mo><mtext>万年</mtext></mrow><annotation encoding="application/x-tex">
-\begin{vmatrix}
-\text{爱} &amp; \text{万} \\
-\text{年} &amp; \text{你}
-\end{vmatrix} = \text{爱你} - \text{万年}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.4em;vertical-align:-0.95em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.45em;"><span class="pstrut" style="height:4.4em;"></span><span style="width:0.333em;height:2.400em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.333em" height="2.400em" viewBox="0 0 333 2400"><path d="M145 15 v585 v1200 v585 c2.667,10,9.667,15,21,15
-c10,0,16.667,-5,20,-15 v-585 v-1200 v-585 c-2.667,-10,-9.667,-15,-21,-15
-c-10,0,-16.667,5,-20,15z M188 15 H145 v585 v1200 v585 h43z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.95em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord cjk_fallback">爱</span></span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord cjk_fallback">年</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.95em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord cjk_fallback">万</span></span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord cjk_fallback">你</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.95em;"><span></span></span></span></span></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.45em;"><span class="pstrut" style="height:4.4em;"></span><span style="width:0.333em;height:2.400em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.333em" height="2.400em" viewBox="0 0 333 2400"><path d="M145 15 v585 v1200 v585 c2.667,10,9.667,15,21,15
-c10,0,16.667,-5,20,-15 v-585 v-1200 v-585 c-2.667,-10,-9.667,-15,-21,-15
-c-10,0,-16.667,5,-20,15z M188 15 H145 v585 v1200 v585 h43z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.95em;"><span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord text"><span class="mord cjk_fallback">爱你</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">万年</span></span></span></span></span></span>
-<hr>
-<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mtext>馅</mtext><mo>→</mo><mn>0</mn></mrow></munder><mtext>包子</mtext><mo>=</mo><mtext>馒头</mtext></mrow><annotation encoding="application/x-tex"> \lim_{\text{馅} \to 0} \text{包子} = \text{馒头} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.4388em;vertical-align:-0.7443em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.3557em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord cjk_fallback mtight">馅</span></span><span class="mrel mtight">→</span><span class="mord mtight">0</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7443em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord text"><span class="mord cjk_fallback">包子</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">馒头</span></span></span></span></span></span>
-<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mtext>馅</mtext><mo>→</mo><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></munder><mtext>包子</mtext><mo>=</mo><mtext>丸子</mtext></mrow><annotation encoding="application/x-tex"> \lim_{\text{馅} \to +\infty} \text{包子} = \text{丸子} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.4971em;vertical-align:-0.8027em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.3557em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord cjk_fallback mtight">馅</span></span><span class="mrel mtight">→</span><span class="mord mtight">+</span><span class="mord mtight">∞</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8027em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord text"><span class="mord cjk_fallback">包子</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">丸子</span></span></span></span></span></span>
-<hr>
-<p>切比雪夫不等式</p>
-<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi mathvariant="normal">∣</mi><mi>ξ</mi><mo>−</mo><mi>a</mi><mi mathvariant="normal">∣</mi><mo>⩾</mo><mi>ϵ</mi><mo stretchy="false">)</mo><mo>⩽</mo><mfrac><mrow><mi>D</mi><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow><msup><mi>ϵ</mi><mn>2</mn></msup></mfrac></mrow><annotation encoding="application/x-tex"> P(|\xi-a|\geqslant\epsilon)\leqslant\frac{D(\xi)}{\epsilon^2} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.04601em;">ξ</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">a</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel amsrm">⩾</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">ϵ</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel amsrm">⩽</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.113em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">ϵ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.04601em;">ξ</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span>
-<h1>化学公式</h1>
-<h2 id="双氧水的分解"><a class="header-anchor" href="#双氧水的分解">¶</a>双氧水的分解</h2>
-<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>2</mn><msub><mi>H</mi><mn>2</mn></msub><msub><mi>O</mi><mn>2</mn></msub><mover><mo stretchy="true" minsize="3.0em">→</mo><mpadded width="+0.6em" lspace="0.3em"><mtext>催化剂</mtext></mpadded></mover><mn>2</mn><msub><mi>H</mi><mn>2</mn></msub><mi>O</mi><mo>+</mo><msub><mi>O</mi><mn>2</mn></msub><mo>↑</mo></mrow><annotation encoding="application/x-tex"> 2H_2O_2 \xrightarrow{\text{催化剂}} 2H_2O + O_2 \uparrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2503em;vertical-align:-0.15em;"></span><span class="mord">2</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel x-arrow"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1003em;"><span style="top:-3.322em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight x-arrow-pad"><span class="mord mtight"><span class="mord text mtight"><span class="mord cjk_fallback mtight">催化剂</span></span></span></span></span><span class="svg-align" style="top:-2.689em;"><span class="pstrut" style="height:2.7em;"></span><span class="hide-tail" style="height:0.522em;min-width:1.469em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="0.522em" viewBox="0 0 400000 522" preserveAspectRatio="xMaxYMin slice"><path d="M0 241v40h399891c-47.3 35.3-84 78-110 128
--16.7 32-27.7 63.7-33 95 0 1.3-.2 2.7-.5 4-.3 1.3-.5 2.3-.5 3 0 7.3 6.7 11 20
- 11 8 0 13.2-.8 15.5-2.5 2.3-1.7 4.2-5.5 5.5-11.5 2-13.3 5.7-27 11-41 14.7-44.7
- 39-84.5 73-119.5s73.7-60.2 119-75.5c6-2 9-5.7 9-11s-3-9-9-11c-45.3-15.3-85
--40.5-119-75.5s-58.3-74.8-73-119.5c-4.7-14-8.3-27.3-11-40-1.3-6.7-3.2-10.8-5.5
--12.5-2.3-1.7-7.5-2.5-15.5-2.5-14 0-21 3.7-21 11 0 2 2 10.3 6 25 20.7 83.3 67
- 151.7 139 205zm0 0v40h399900v-40z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.011em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord">2</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">↑</span></span></span></span></span>
-<p>就像两颗不安分的灵魂（过氧化氢分子），在相遇的瞬间迸发能量，褪去防备（分解为水），释放出轻盈的自由（氧气）。这或许隐喻着：爱情有时需要打破原本的形态，才能让温柔与自由共存。</p>
-<h2 id="镁的燃烧"><a class="header-anchor" href="#镁的燃烧">¶</a>镁的燃烧</h2>
-<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>2</mn><mi>M</mi><mi>g</mi><mtext> </mtext><mo>+</mo><mtext> </mtext><msub><mi>O</mi><mn>2</mn></msub><mo>→</mo><mn>2</mn><mi>M</mi><mi>g</mi><mi>O</mi></mrow><annotation encoding="application/x-tex"> 2Mg\,+\,O_2 \rightarrow 2MgO </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span></span></span></span></span>
-<p>镁条在氧气中迸发耀眼白光，化作细腻白烟。<br>
-寓意：炽烈的爱或许短暂，却在燃烧的瞬间留下永恒印记。</p>
-<h2 id="中和反应"><a class="header-anchor" href="#中和反应">¶</a>中和反应</h2>
-<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>H</mi><mi>C</mi><mi>l</mi><mtext> </mtext><mo>+</mo><mtext> </mtext><mi>N</mi><mi>a</mi><mi>O</mi><mi>H</mi><mo>→</mo><mi>N</mi><mi>a</mi><mi>C</mi><mi>l</mi><mtext> </mtext><mo>+</mo><mtext> </mtext><msub><mi>H</mi><mn>2</mn></msub><mi>O</mi></mrow><annotation encoding="application/x-tex"> HCl\,+\,NaOH \rightarrow NaCl\,+\,H_2O </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mord mathnormal" style="margin-right:0.01968em;">Cl</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.01968em;">Cl</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span></span></span></span></span>
-<p>酸与碱激烈碰撞，最终化作温柔的盐与水。<br>
-寓意：差异的融合，可能创造最朴实的圆满。</p>
-<h2 id="银镜反应"><a class="header-anchor" href="#银镜反应">¶</a>银镜反应</h2>
-<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>C</mi><msub><mi>H</mi><mn>3</mn></msub><mi>C</mi><mi>H</mi><mi>O</mi><mtext> </mtext><mo>+</mo><mtext> </mtext><mn>2</mn><mo stretchy="false">[</mo><mi>A</mi><mi>g</mi><mo stretchy="false">(</mo><mi>N</mi><msub><mi>H</mi><mn>3</mn></msub><msub><mo stretchy="false">)</mo><mn>2</mn></msub><msup><mo stretchy="false">]</mo><mo>+</mo></msup><mo>→</mo><mi>C</mi><msub><mi>H</mi><mn>3</mn></msub><mi>C</mi><mi>O</mi><mi>O</mi><mi>H</mi><mtext> </mtext><mo>+</mo><mtext> </mtext><mn>2</mn><mi>A</mi><mi>g</mi><mo>↓</mo><mtext> </mtext><mo>+</mo><mtext> </mtext><mn>2</mn><mi>N</mi><msubsup><mi>H</mi><mn>4</mn><mo>+</mo></msubsup></mrow><annotation encoding="application/x-tex"> CH_3CHO\,+\,2[Ag(NH_3)_2]^+ \rightarrow CH_3COOH\,+\,2Ag\downarrow\,+\,2NH_4^+ </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0713em;vertical-align:-0.25em;"></span><span class="mord">2</span><span class="mopen">[</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">]</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8213em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">+</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.02778em;">COO</span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">2</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">↓</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0778em;vertical-align:-0.2564em;"></span><span class="mord">+</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8213em;"><span style="top:-2.4436em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">+</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2564em;"><span></span></span></span></span></span></span></span></span></span></span>
-<p>乙醛在银氨溶液中悄然镀上镜面，如同爱让平凡事物闪烁光芒。</p>
-<h2 id="星辰的诞生（核聚变）"><a class="header-anchor" href="#星辰的诞生（核聚变）">¶</a>星辰的诞生（核聚变）</h2>
-<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>4</mn><mtext> </mtext><msup><mrow></mrow><mn>1</mn></msup><mi>H</mi><mo>→</mo><msup><mrow></mrow><mn>4</mn></msup><mi>H</mi><mi>e</mi><mo>+</mo><mn>2</mn><msup><mi>e</mi><mo>+</mo></msup><mo>+</mo><mn>2</mn><mi>ν</mi><mo>+</mo><mi>γ</mi></mrow><annotation encoding="application/x-tex"> 4\,{}^1H \rightarrow {}^4He + 2e^+ + 2\nu + \gamma </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8641em;"></span><span class="mord">4</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord"></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9474em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord"></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span><span class="mord mathnormal">He</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.9047em;vertical-align:-0.0833em;"></span><span class="mord">2</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8213em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">+</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.06366em;">ν</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05556em;">γ</span></span></span></span></span>
-<p>氢原子在恒星核心相拥，历经亿万年的压力，终成璀璨的氦与光。<br>
-寓意：爱需要时间与坚持，才能蜕变为恒久的光辉。</p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>Katex</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python QR Code生成二维码</title>
-    <url>/hiner/2025/04/19/Python-QRcode/</url>
-    <content><![CDATA[<p><a href="https://github.com/lincolnloop/python-qrcode">qrcode</a> 是一个用于生成二维码的 <a href="https://pypi.org/project/qrcode/">Python</a> 库，使用方便。它允许用户轻松将文本、URL 等数据编码为二维码图像。</p>
-<h2 id="主要特点"><a class="header-anchor" href="#主要特点">¶</a>主要特点</h2>
-<ul>
-<li><strong>简单易用</strong>：只需几行代码即可生成基础二维码</li>
-<li><strong>高度定制</strong>：
-<ul>
-<li>版本控制（1-40）</li>
-<li>纠错级别（L/M/Q/H）</li>
-<li>方块尺寸调整</li>
-<li>边框宽度设置</li>
-</ul>
-</li>
-<li><strong>多格式输出</strong>：支持 PNG/JPEG/SVG 图片格式，兼容终端 ASCII 显示</li>
-</ul>
-<h2 id="安装"><a class="header-anchor" href="#安装">¶</a>安装</h2>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install qrcode</span><br></pre></td></tr></table></figure>
-<h2 id="基础用法"><a class="header-anchor" href="#基础用法">¶</a>基础用法</h2>
-<p>在命令行中，使用已安装的 qr 脚本：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">qr <span class="string">&quot;Some text&quot;</span> &gt; test.png</span><br></pre></td></tr></table></figure>
-<p>在 Python 中使用 make 快捷方式功能：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> qrcode</span><br><span class="line"></span><br><span class="line">data = <span class="string">&quot;https://www.example.com&quot;</span>  <span class="comment"># 要编码的内容</span></span><br><span class="line"></span><br><span class="line">qr = qrcode.QRCode(</span><br><span class="line">    version=<span class="number">1</span>,  <span class="comment"># 二维码尺寸 (1-40)</span></span><br><span class="line">    error_correction=qrcode.constants.ERROR_CORRECT_L,  <span class="comment"># 纠错级别</span></span><br><span class="line">    box_size=<span class="number">10</span>,  <span class="comment"># 每个方块的像素大小</span></span><br><span class="line">    border=<span class="number">4</span>,     <span class="comment"># 边框宽度（单位：方块数量）</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">qr.add_data(data)  <span class="comment"># 将数据添加到 QRCode 对象中。</span></span><br><span class="line">qr.make(fit=<span class="literal">True</span>)  <span class="comment"># 自动适配数据最小版本</span></span><br><span class="line"></span><br><span class="line">img = qr.make_image(fill_color=<span class="string">&quot;black&quot;</span>, back_color=<span class="string">&quot;white&quot;</span>) <span class="comment"># 创建二维码图像对象</span></span><br><span class="line">img.save(<span class="string">&quot;qrcode.png&quot;</span>)  <span class="comment"># 保存为PNG</span></span><br></pre></td></tr></table></figure>
-<h3 id="参数说明"><a class="header-anchor" href="#参数说明">¶</a>参数说明</h3>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>version</td>
-<td>二维码尺寸 (1-40)，值越大尺寸越大</td>
-</tr>
-<tr>
-<td>box_size</td>
-<td>每个小方块的像素大小</td>
-</tr>
-<tr>
-<td>border</td>
-<td>二维码外边框的方块数量</td>
-</tr>
-<tr>
-<td>fill_color</td>
-<td>二维码填充颜色（支持十六进制/RGB）</td>
-</tr>
-<tr>
-<td>image_factory</td>
-<td>输出格式（默认 PIL，可选 SVG）</td>
-</tr>
-</tbody>
-</table>
-<h3 id="纠错级别说明（error-correction）"><a class="header-anchor" href="#纠错级别说明（error-correction）">¶</a>纠错级别说明（error_correction）</h3>
-<ul>
-<li>ERROR_CORRECT_L 表示低纠错级别，损坏的部分不超过 7%，就仍然可以被正确解码。</li>
-<li>ERROR_CORRECT_M 默认纠错级别，适用于大多数常见的应用场景，损坏的部分不超过 15%，就仍然可以被正确解码。</li>
-<li>ERROR_CORRECT_Q 在户外环境中张贴的海报上的二维码，或者可能会被折叠、涂抹的纸质二维码，纠错能力 25%。</li>
-<li>ERROR_CORRECT_H 在工业环境中被油污、灰尘覆盖的二维码标签，纠错能力 30%。</li>
-</ul>
-<h2 id="IImage-factories"><a class="header-anchor" href="#IImage-factories">¶</a>IImage factories</h2>
-<h3 id="终端显示-ASCII-二维码"><a class="header-anchor" href="#终端显示-ASCII-二维码">¶</a>终端显示 ASCII 二维码</h3>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> qrcode</span><br><span class="line"></span><br><span class="line">qr = qrcode.QRCode()</span><br><span class="line">qr.add_data(<span class="string">&quot;Hello Terminal!&quot;</span>)</span><br><span class="line">qr.print_ascii(tty=<span class="literal">True</span>)  <span class="comment"># 在终端显示彩色二维码</span></span><br></pre></td></tr></table></figure>
-<h3 id="生成-SVG-格式二维码"><a class="header-anchor" href="#生成-SVG-格式二维码">¶</a>生成 SVG 格式二维码</h3>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> qrcode</span><br><span class="line"><span class="keyword">from</span> qrcode.image.svg <span class="keyword">import</span> SvgImage</span><br><span class="line"></span><br><span class="line">qr = qrcode.QRCode(image_factory=SvgImage)</span><br><span class="line">qr.add_data(<span class="string">&quot;https://example.com&quot;</span>)</span><br><span class="line">qr.make_image().save(<span class="string">&quot;qrcode.svg&quot;</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="Styled-Image"><a class="header-anchor" href="#Styled-Image">¶</a>Styled Image</h2>
-<blockquote>
-<p>这些 QR Codes 不能保证适用于所有阅读器，建议 error correction 设置为 High（尤其是在嵌入图像）。</p>
-</blockquote>
-<p>StyledPilImage 是 qrcode 库中用于生成 样式化二维码图像 的类，基于 Pillow（PIL）库。它允许你通过不同的 module_drawer（模块绘制器）和颜色参数，自定义二维码的模块形状、颜色和整体视觉效果。</p>
-<h3 id="核心功能"><a class="header-anchor" href="#核心功能">¶</a>核心功能</h3>
-<ol>
-<li>
-<p>模块形状自定义<br>
-通过 module_drawer 参数，可以改变二维码模块（黑白色块）的几何形状。常用的内置绘制器包括：</p>
-<ul>
-<li>方形模块：SquareModuleDrawer（默认）</li>
-<li>圆形模块：CircleModuleDrawer</li>
-<li>圆角矩形模块：GappedSquareModuleDrawer</li>
-<li>其他形状：可自定义实现。</li>
-</ul>
-</li>
-<li>
-<p>颜色自定义</p>
-<ul>
-<li>前景色：二维码主色（通常是黑色）</li>
-<li>背景色：二维码背景色（通常是白色）</li>
-<li>渐变色支持：通过 Pillow 的 ImageColor 实现动态颜色过渡。</li>
-</ul>
-</li>
-</ol>
-<h3 id="代码示例"><a class="header-anchor" href="#代码示例">¶</a>代码示例</h3>
-<p>生成带有圆形模块的二维码：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> qrcode</span><br><span class="line"><span class="keyword">from</span> qrcode.image.styledpil <span class="keyword">import</span> StyledPilImage</span><br><span class="line"><span class="keyword">from</span> qrcode.image.styles.moduledrawers <span class="keyword">import</span> CircleModuleDrawer</span><br><span class="line"></span><br><span class="line">qr = qrcode.QRCode(</span><br><span class="line">    error_correction=qrcode.constants.ERROR_CORRECT_H,</span><br><span class="line">    box_size=<span class="number">20</span>,</span><br><span class="line">    border=<span class="number">2</span></span><br><span class="line">)</span><br><span class="line">qr.add_data(<span class="string">&quot;https://example.com&quot;</span>)</span><br><span class="line"></span><br><span class="line">img = qr.make_image(</span><br><span class="line">    image_factory=StyledPilImage,</span><br><span class="line">    module_drawer=CircleModuleDrawer(),  <span class="comment"># 圆形模块</span></span><br><span class="line">    eye_drawer=CircleModuleDrawer(),     <span class="comment"># 圆形定位标记</span></span><br><span class="line">    color_mask=(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>)               <span class="comment"># 红色前景色</span></span><br><span class="line">)</span><br><span class="line">img.save(<span class="string">&quot;styled_qr.png&quot;</span>)</span><br></pre></td></tr></table></figure>
-<p>生成渐变效果的二维码：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> ImageColor</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义渐变色函数（水平方向渐变）</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">gradient_mask</span>(<span class="params">width, height</span>):</span><br><span class="line">    gradient = Image.new(<span class="string">&quot;RGB&quot;</span>, (width, height))</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(width):</span><br><span class="line">        color = ImageColor.getrgb(<span class="string">f&quot;hsl(<span class="subst">&#123;x % <span class="number">360</span>&#125;</span>, 70%, 50%)&quot;</span>)</span><br><span class="line">        <span class="keyword">for</span> y <span class="keyword">in</span> <span class="built_in">range</span>(height):</span><br><span class="line">            gradient.putpixel((x, y), color)</span><br><span class="line">    <span class="keyword">return</span> gradient</span><br><span class="line"></span><br><span class="line">img = qr.make_image(</span><br><span class="line">    image_factory=StyledPilImage,</span><br><span class="line">    module_drawer=CircleModuleDrawer(),</span><br><span class="line">    color_mask=gradient_mask  <span class="comment"># 应用渐变掩码</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<h3 id="module-drawer-（模块绘制器）-详解"><a class="header-anchor" href="#module-drawer-（模块绘制器）-详解">¶</a>module_drawer （模块绘制器） 详解</h3>
-<ol>
-<li>内置模块绘制器</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>绘制器类名</th>
-<th>效果描述</th>
-<th>适用场景</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>SquareModuleDrawer</td>
-<td>默认方形模块</td>
-<td>传统二维码样式</td>
-</tr>
-<tr>
-<td>CircleModuleDrawer</td>
-<td>圆形模块，视觉更柔和</td>
-<td>创意设计、品牌宣传</td>
-</tr>
-<tr>
-<td>GappedSquareModuleDrawer</td>
-<td>圆角矩形模块（间隙更明显）</td>
-<td>高容错率下的美观设计</td>
-</tr>
-<tr>
-<td>VerticalBarsDrawer</td>
-<td>垂直条形模块</td>
-<td>艺术化风格输出</td>
-</tr>
-</tbody>
-</table>
-<ol>
-<li>自定义绘制器<br>
-实现一个 星形模块 的示例：</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> qrcode.image.styles.moduledrawers.base <span class="keyword">import</span> ModuleDrawer</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">StarModuleDrawer</span>(<span class="title class_ inherited__">ModuleDrawer</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">drawrect</span>(<span class="params">self, img, box, active</span>):</span><br><span class="line">        <span class="comment"># box: (x0, y0, x1, y1)</span></span><br><span class="line">        <span class="comment"># active: True（前景）或 False（背景）</span></span><br><span class="line">        <span class="keyword">if</span> active:</span><br><span class="line">            draw = ImageDraw.Draw(img)</span><br><span class="line">            center = ((box[<span class="number">0</span>] + box[<span class="number">2</span>])/<span class="number">2</span>, (box[<span class="number">1</span>] + box[<span class="number">3</span>])/<span class="number">2</span>)</span><br><span class="line">            radius = (box[<span class="number">2</span>] - box[<span class="number">0</span>]) * <span class="number">0.4</span></span><br><span class="line">            <span class="comment"># 绘制五角星</span></span><br><span class="line">            draw.regular_polygon((center, radius), <span class="number">5</span>, rotation=<span class="number">0</span>, fill=<span class="string">&quot;black&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span> img</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用自定义绘制器</span></span><br><span class="line">img = qr.make_image(</span><br><span class="line">    image_factory=StyledPilImage,</span><br><span class="line">    module_drawer=StarModuleDrawer()</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<h2 id="定位标记独立样式"><a class="header-anchor" href="#定位标记独立样式">¶</a>定位标记独立样式</h2>
-<p>通过 eye_drawer 参数单独设置二维码的定位标记（三个角上的大方块）形状：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> qrcode.image.styles.moduledrawers <span class="keyword">import</span> SquareModuleDrawer, CircleModuleDrawer</span><br><span class="line"></span><br><span class="line">img = qr.make_image(</span><br><span class="line">    module_drawer=CircleModuleDrawer(),  <span class="comment"># 模块为圆形</span></span><br><span class="line">    eye_drawer=SquareModuleDrawer()      <span class="comment"># 定位标记保持方形</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<h3 id="动态颜色逻辑"><a class="header-anchor" href="#动态颜色逻辑">¶</a>动态颜色逻辑</h3>
-<p>结合 Pillow 的 ImageDraw 实现动态颜色逻辑，例如根据模块位置生成不同颜色：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">dynamic_color_mask</span>(<span class="params">width, height</span>):</span><br><span class="line">    mask = Image.new(<span class="string">&quot;RGB&quot;</span>, (width, height))</span><br><span class="line">    draw = ImageDraw.Draw(mask)</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(width):</span><br><span class="line">        <span class="keyword">for</span> y <span class="keyword">in</span> <span class="built_in">range</span>(height):</span><br><span class="line">            <span class="comment"># 根据坐标生成颜色</span></span><br><span class="line">            r = <span class="built_in">int</span>((x / width) * <span class="number">255</span>)</span><br><span class="line">            g = <span class="built_in">int</span>((y / height) * <span class="number">255</span>)</span><br><span class="line">            b = <span class="number">128</span></span><br><span class="line">            draw.point((x, y), fill=(r, g, b))</span><br><span class="line">    <span class="keyword">return</span> mask</span><br><span class="line"></span><br><span class="line">img = qr.make_image(</span><br><span class="line">    color_mask=dynamic_color_mask,</span><br><span class="line">    module_drawer=CircleModuleDrawer()</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<h2 id="注意事项"><a class="header-anchor" href="#注意事项">¶</a>注意事项</h2>
-<ol>
-<li>
-<p>可扫描性<br>
-过度复杂的样式（如低对比度颜色、密集渐变）可能导致扫码失败。建议：</p>
-<ul>
-<li>保持前景与背景对比度 &gt; 70%</li>
-<li>使用 error_correction=qrcode.constants.ERROR_CORRECT_H（最高容错率）</li>
-</ul>
-</li>
-<li>
-<p>性能问题<br>
-自定义绘制器或复杂颜色计算可能增加生成时间，尤其是大尺寸二维码。</p>
-</li>
-</ol>
-]]></content>
   </entry>
   <entry>
     <title>星露谷 Mod</title>
@@ -1713,6 +1552,167 @@ c-10,0,-16.667,5,-20,15z M188 15 H145 v585 v1200 v585 h43z"/></svg></span></span
       </tags>
   </entry>
   <entry>
+    <title>Python QR Code生成二维码</title>
+    <url>/hiner/2025/04/19/Python-QRcode/</url>
+    <content><![CDATA[<p><a href="https://github.com/lincolnloop/python-qrcode">qrcode</a> 是一个用于生成二维码的 <a href="https://pypi.org/project/qrcode/">Python</a> 库，使用方便。它允许用户轻松将文本、URL 等数据编码为二维码图像。</p>
+<h2 id="主要特点"><a class="header-anchor" href="#主要特点">¶</a>主要特点</h2>
+<ul>
+<li><strong>简单易用</strong>：只需几行代码即可生成基础二维码</li>
+<li><strong>高度定制</strong>：
+<ul>
+<li>版本控制（1-40）</li>
+<li>纠错级别（L/M/Q/H）</li>
+<li>方块尺寸调整</li>
+<li>边框宽度设置</li>
+</ul>
+</li>
+<li><strong>多格式输出</strong>：支持 PNG/JPEG/SVG 图片格式，兼容终端 ASCII 显示</li>
+</ul>
+<h2 id="安装"><a class="header-anchor" href="#安装">¶</a>安装</h2>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install qrcode</span><br></pre></td></tr></table></figure>
+<h2 id="基础用法"><a class="header-anchor" href="#基础用法">¶</a>基础用法</h2>
+<p>在命令行中，使用已安装的 qr 脚本：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">qr <span class="string">&quot;Some text&quot;</span> &gt; test.png</span><br></pre></td></tr></table></figure>
+<p>在 Python 中使用 make 快捷方式功能：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> qrcode</span><br><span class="line"></span><br><span class="line">data = <span class="string">&quot;https://www.example.com&quot;</span>  <span class="comment"># 要编码的内容</span></span><br><span class="line"></span><br><span class="line">qr = qrcode.QRCode(</span><br><span class="line">    version=<span class="number">1</span>,  <span class="comment"># 二维码尺寸 (1-40)</span></span><br><span class="line">    error_correction=qrcode.constants.ERROR_CORRECT_L,  <span class="comment"># 纠错级别</span></span><br><span class="line">    box_size=<span class="number">10</span>,  <span class="comment"># 每个方块的像素大小</span></span><br><span class="line">    border=<span class="number">4</span>,     <span class="comment"># 边框宽度（单位：方块数量）</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">qr.add_data(data)  <span class="comment"># 将数据添加到 QRCode 对象中。</span></span><br><span class="line">qr.make(fit=<span class="literal">True</span>)  <span class="comment"># 自动适配数据最小版本</span></span><br><span class="line"></span><br><span class="line">img = qr.make_image(fill_color=<span class="string">&quot;black&quot;</span>, back_color=<span class="string">&quot;white&quot;</span>) <span class="comment"># 创建二维码图像对象</span></span><br><span class="line">img.save(<span class="string">&quot;qrcode.png&quot;</span>)  <span class="comment"># 保存为PNG</span></span><br></pre></td></tr></table></figure>
+<h3 id="参数说明"><a class="header-anchor" href="#参数说明">¶</a>参数说明</h3>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>version</td>
+<td>二维码尺寸 (1-40)，值越大尺寸越大</td>
+</tr>
+<tr>
+<td>box_size</td>
+<td>每个小方块的像素大小</td>
+</tr>
+<tr>
+<td>border</td>
+<td>二维码外边框的方块数量</td>
+</tr>
+<tr>
+<td>fill_color</td>
+<td>二维码填充颜色（支持十六进制/RGB）</td>
+</tr>
+<tr>
+<td>image_factory</td>
+<td>输出格式（默认 PIL，可选 SVG）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="纠错级别说明（error-correction）"><a class="header-anchor" href="#纠错级别说明（error-correction）">¶</a>纠错级别说明（error_correction）</h3>
+<ul>
+<li>ERROR_CORRECT_L 表示低纠错级别，损坏的部分不超过 7%，就仍然可以被正确解码。</li>
+<li>ERROR_CORRECT_M 默认纠错级别，适用于大多数常见的应用场景，损坏的部分不超过 15%，就仍然可以被正确解码。</li>
+<li>ERROR_CORRECT_Q 在户外环境中张贴的海报上的二维码，或者可能会被折叠、涂抹的纸质二维码，纠错能力 25%。</li>
+<li>ERROR_CORRECT_H 在工业环境中被油污、灰尘覆盖的二维码标签，纠错能力 30%。</li>
+</ul>
+<h2 id="IImage-factories"><a class="header-anchor" href="#IImage-factories">¶</a>IImage factories</h2>
+<h3 id="终端显示-ASCII-二维码"><a class="header-anchor" href="#终端显示-ASCII-二维码">¶</a>终端显示 ASCII 二维码</h3>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> qrcode</span><br><span class="line"></span><br><span class="line">qr = qrcode.QRCode()</span><br><span class="line">qr.add_data(<span class="string">&quot;Hello Terminal!&quot;</span>)</span><br><span class="line">qr.print_ascii(tty=<span class="literal">True</span>)  <span class="comment"># 在终端显示彩色二维码</span></span><br></pre></td></tr></table></figure>
+<h3 id="生成-SVG-格式二维码"><a class="header-anchor" href="#生成-SVG-格式二维码">¶</a>生成 SVG 格式二维码</h3>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> qrcode</span><br><span class="line"><span class="keyword">from</span> qrcode.image.svg <span class="keyword">import</span> SvgImage</span><br><span class="line"></span><br><span class="line">qr = qrcode.QRCode(image_factory=SvgImage)</span><br><span class="line">qr.add_data(<span class="string">&quot;https://example.com&quot;</span>)</span><br><span class="line">qr.make_image().save(<span class="string">&quot;qrcode.svg&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="Styled-Image"><a class="header-anchor" href="#Styled-Image">¶</a>Styled Image</h2>
+<blockquote>
+<p>这些 QR Codes 不能保证适用于所有阅读器，建议 error correction 设置为 High（尤其是在嵌入图像）。</p>
+</blockquote>
+<p>StyledPilImage 是 qrcode 库中用于生成 样式化二维码图像 的类，基于 Pillow（PIL）库。它允许你通过不同的 module_drawer（模块绘制器）和颜色参数，自定义二维码的模块形状、颜色和整体视觉效果。</p>
+<h3 id="核心功能"><a class="header-anchor" href="#核心功能">¶</a>核心功能</h3>
+<ol>
+<li>
+<p>模块形状自定义<br>
+通过 module_drawer 参数，可以改变二维码模块（黑白色块）的几何形状。常用的内置绘制器包括：</p>
+<ul>
+<li>方形模块：SquareModuleDrawer（默认）</li>
+<li>圆形模块：CircleModuleDrawer</li>
+<li>圆角矩形模块：GappedSquareModuleDrawer</li>
+<li>其他形状：可自定义实现。</li>
+</ul>
+</li>
+<li>
+<p>颜色自定义</p>
+<ul>
+<li>前景色：二维码主色（通常是黑色）</li>
+<li>背景色：二维码背景色（通常是白色）</li>
+<li>渐变色支持：通过 Pillow 的 ImageColor 实现动态颜色过渡。</li>
+</ul>
+</li>
+</ol>
+<h3 id="代码示例"><a class="header-anchor" href="#代码示例">¶</a>代码示例</h3>
+<p>生成带有圆形模块的二维码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> qrcode</span><br><span class="line"><span class="keyword">from</span> qrcode.image.styledpil <span class="keyword">import</span> StyledPilImage</span><br><span class="line"><span class="keyword">from</span> qrcode.image.styles.moduledrawers <span class="keyword">import</span> CircleModuleDrawer</span><br><span class="line"></span><br><span class="line">qr = qrcode.QRCode(</span><br><span class="line">    error_correction=qrcode.constants.ERROR_CORRECT_H,</span><br><span class="line">    box_size=<span class="number">20</span>,</span><br><span class="line">    border=<span class="number">2</span></span><br><span class="line">)</span><br><span class="line">qr.add_data(<span class="string">&quot;https://example.com&quot;</span>)</span><br><span class="line"></span><br><span class="line">img = qr.make_image(</span><br><span class="line">    image_factory=StyledPilImage,</span><br><span class="line">    module_drawer=CircleModuleDrawer(),  <span class="comment"># 圆形模块</span></span><br><span class="line">    eye_drawer=CircleModuleDrawer(),     <span class="comment"># 圆形定位标记</span></span><br><span class="line">    color_mask=(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>)               <span class="comment"># 红色前景色</span></span><br><span class="line">)</span><br><span class="line">img.save(<span class="string">&quot;styled_qr.png&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>生成渐变效果的二维码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> ImageColor</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义渐变色函数（水平方向渐变）</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">gradient_mask</span>(<span class="params">width, height</span>):</span><br><span class="line">    gradient = Image.new(<span class="string">&quot;RGB&quot;</span>, (width, height))</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(width):</span><br><span class="line">        color = ImageColor.getrgb(<span class="string">f&quot;hsl(<span class="subst">&#123;x % <span class="number">360</span>&#125;</span>, 70%, 50%)&quot;</span>)</span><br><span class="line">        <span class="keyword">for</span> y <span class="keyword">in</span> <span class="built_in">range</span>(height):</span><br><span class="line">            gradient.putpixel((x, y), color)</span><br><span class="line">    <span class="keyword">return</span> gradient</span><br><span class="line"></span><br><span class="line">img = qr.make_image(</span><br><span class="line">    image_factory=StyledPilImage,</span><br><span class="line">    module_drawer=CircleModuleDrawer(),</span><br><span class="line">    color_mask=gradient_mask  <span class="comment"># 应用渐变掩码</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h3 id="module-drawer-（模块绘制器）-详解"><a class="header-anchor" href="#module-drawer-（模块绘制器）-详解">¶</a>module_drawer （模块绘制器） 详解</h3>
+<ol>
+<li>内置模块绘制器</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>绘制器类名</th>
+<th>效果描述</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SquareModuleDrawer</td>
+<td>默认方形模块</td>
+<td>传统二维码样式</td>
+</tr>
+<tr>
+<td>CircleModuleDrawer</td>
+<td>圆形模块，视觉更柔和</td>
+<td>创意设计、品牌宣传</td>
+</tr>
+<tr>
+<td>GappedSquareModuleDrawer</td>
+<td>圆角矩形模块（间隙更明显）</td>
+<td>高容错率下的美观设计</td>
+</tr>
+<tr>
+<td>VerticalBarsDrawer</td>
+<td>垂直条形模块</td>
+<td>艺术化风格输出</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>自定义绘制器<br>
+实现一个 星形模块 的示例：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> qrcode.image.styles.moduledrawers.base <span class="keyword">import</span> ModuleDrawer</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">StarModuleDrawer</span>(<span class="title class_ inherited__">ModuleDrawer</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">drawrect</span>(<span class="params">self, img, box, active</span>):</span><br><span class="line">        <span class="comment"># box: (x0, y0, x1, y1)</span></span><br><span class="line">        <span class="comment"># active: True（前景）或 False（背景）</span></span><br><span class="line">        <span class="keyword">if</span> active:</span><br><span class="line">            draw = ImageDraw.Draw(img)</span><br><span class="line">            center = ((box[<span class="number">0</span>] + box[<span class="number">2</span>])/<span class="number">2</span>, (box[<span class="number">1</span>] + box[<span class="number">3</span>])/<span class="number">2</span>)</span><br><span class="line">            radius = (box[<span class="number">2</span>] - box[<span class="number">0</span>]) * <span class="number">0.4</span></span><br><span class="line">            <span class="comment"># 绘制五角星</span></span><br><span class="line">            draw.regular_polygon((center, radius), <span class="number">5</span>, rotation=<span class="number">0</span>, fill=<span class="string">&quot;black&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span> img</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用自定义绘制器</span></span><br><span class="line">img = qr.make_image(</span><br><span class="line">    image_factory=StyledPilImage,</span><br><span class="line">    module_drawer=StarModuleDrawer()</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h2 id="定位标记独立样式"><a class="header-anchor" href="#定位标记独立样式">¶</a>定位标记独立样式</h2>
+<p>通过 eye_drawer 参数单独设置二维码的定位标记（三个角上的大方块）形状：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> qrcode.image.styles.moduledrawers <span class="keyword">import</span> SquareModuleDrawer, CircleModuleDrawer</span><br><span class="line"></span><br><span class="line">img = qr.make_image(</span><br><span class="line">    module_drawer=CircleModuleDrawer(),  <span class="comment"># 模块为圆形</span></span><br><span class="line">    eye_drawer=SquareModuleDrawer()      <span class="comment"># 定位标记保持方形</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h3 id="动态颜色逻辑"><a class="header-anchor" href="#动态颜色逻辑">¶</a>动态颜色逻辑</h3>
+<p>结合 Pillow 的 ImageDraw 实现动态颜色逻辑，例如根据模块位置生成不同颜色：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">dynamic_color_mask</span>(<span class="params">width, height</span>):</span><br><span class="line">    mask = Image.new(<span class="string">&quot;RGB&quot;</span>, (width, height))</span><br><span class="line">    draw = ImageDraw.Draw(mask)</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(width):</span><br><span class="line">        <span class="keyword">for</span> y <span class="keyword">in</span> <span class="built_in">range</span>(height):</span><br><span class="line">            <span class="comment"># 根据坐标生成颜色</span></span><br><span class="line">            r = <span class="built_in">int</span>((x / width) * <span class="number">255</span>)</span><br><span class="line">            g = <span class="built_in">int</span>((y / height) * <span class="number">255</span>)</span><br><span class="line">            b = <span class="number">128</span></span><br><span class="line">            draw.point((x, y), fill=(r, g, b))</span><br><span class="line">    <span class="keyword">return</span> mask</span><br><span class="line"></span><br><span class="line">img = qr.make_image(</span><br><span class="line">    color_mask=dynamic_color_mask,</span><br><span class="line">    module_drawer=CircleModuleDrawer()</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h2 id="注意事项"><a class="header-anchor" href="#注意事项">¶</a>注意事项</h2>
+<ol>
+<li>
+<p>可扫描性<br>
+过度复杂的样式（如低对比度颜色、密集渐变）可能导致扫码失败。建议：</p>
+<ul>
+<li>保持前景与背景对比度 &gt; 70%</li>
+<li>使用 error_correction=qrcode.constants.ERROR_CORRECT_H（最高容错率）</li>
+</ul>
+</li>
+<li>
+<p>性能问题<br>
+自定义绘制器或复杂颜色计算可能增加生成时间，尤其是大尺寸二维码。</p>
+</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
     <title>星露谷物语 Tips (未完)</title>
     <url>/hiner/2025/03/22/StardewValley_Tips/</url>
     <content><![CDATA[<p>星露谷官方教程文档</p>
@@ -2055,35 +2055,85 @@ CSS 变量将样式定义与使用分离，大大提高了代码的可维护性�
       </tags>
   </entry>
   <entry>
-    <title>hexo 配置 katex</title>
-    <url>/hiner/2025/03/13/hexo%E9%85%8D%E7%BD%AEkatex/</url>
-    <content><![CDATA[<h2 id="安装-KaTeX-插件"><a class="header-anchor" href="#安装-KaTeX-插件">¶</a>安装 KaTeX 插件</h2>
-<p>Hexo 社区提供了 hexo-filter-katex 插件，能自动处理公式渲染：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-katex --save</span><br></pre></td></tr></table></figure>
-<h2 id="配置-Hexo-全局文件"><a class="header-anchor" href="#配置-Hexo-全局文件">¶</a>配置 Hexo 全局文件</h2>
-<p>在 Hexo 根目录的 _config.yml 中添加以下配置：</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">katex:</span></span><br><span class="line">  <span class="comment"># 开启全局渲染（无需在每篇文章中声明）</span></span><br><span class="line">  <span class="attr">global:</span> <span class="literal">false</span>  <span class="comment"># 建议设为 false，按需在文章头启用</span></span><br><span class="line">  <span class="comment"># 排除不需要渲染的元素（可选）</span></span><br><span class="line">  <span class="attr">exclude:</span> </span><br><span class="line">    <span class="bullet">-</span> <span class="string">blockquote</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">code</span></span><br></pre></td></tr></table></figure>
-<h2 id="修改文章-Front-matter"><a class="header-anchor" href="#修改文章-Front-matter">¶</a>修改文章 Front-matter</h2>
-<p>在需要渲染公式的文章头部添加 katex: true：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 测试文章</span><br><span class="line">date: 2025-01-01</span><br><span class="line"><span class="section">katex: true</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
-<h2 id="解决-Markdown-语法冲突"><a class="header-anchor" href="#解决-Markdown-语法冲突">¶</a>解决 Markdown 语法冲突</h2>
-<p>Hexo 默认的 Markdown 渲染器 (hexo-renderer-marked) 会与 KaTeX 的 _ 和 \ 冲突，更换渲染器：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-markdown-it --save</span><br></pre></td></tr></table></figure>
-<p>在 _config.yml 中添加配置：</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Markdown-it config</span></span><br><span class="line"><span class="attr">markdown:</span></span><br><span class="line">  <span class="attr">render:</span></span><br><span class="line">    <span class="attr">html:</span> <span class="literal">true</span> <span class="comment"># 不转义 HTML 内容 # 转义 HTML 内容，使标签作为文本输出</span></span><br><span class="line">    <span class="attr">xhtmlOut:</span> <span class="literal">false</span> <span class="comment"># 必须使用完全的 XHTML 代码，换行必须为 &lt;br/&gt; # 不必必使用完全的 XHTML 代码，换行可以为 &lt;br&gt;</span></span><br><span class="line">    <span class="attr">breaks:</span> <span class="literal">true</span> <span class="comment"># 每次会车换行相当于一个 &lt;br/&gt; 标签 # Pa每次会车换行会被忽略</span></span><br><span class="line">    <span class="attr">linkify:</span> <span class="literal">true</span> <span class="comment"># 类似链接的文本，作为链接输出 # 类似链接的文本，依然作为文本输出</span></span><br><span class="line">    <span class="attr">typographer:</span> <span class="literal">true</span> <span class="comment"># 替换常见的排版元素 # 不替换常见的排版元素</span></span><br><span class="line">    <span class="attr">quotes:</span> <span class="string">&#x27;“”‘’&#x27;</span> <span class="comment"># &#x27;single&#x27;、&quot;double&quot; 变成 ‘single’、“double” # &#x27;single&#x27;、&quot;double&quot; 变成 “single”、«single»</span></span><br><span class="line">  <span class="attr">plugins:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-abbr</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-footnote</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-ins</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-sub</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-sup</span></span><br><span class="line">  <span class="attr">anchors:</span></span><br><span class="line">    <span class="attr">level:</span> <span class="number">2</span> <span class="comment"># 生成 Heading ID 的标题等级</span></span><br><span class="line">    <span class="attr">collisionSuffix:</span> <span class="string">&#x27;v&#x27;</span> <span class="comment"># Heading ID 重复时，数字的后缀</span></span><br><span class="line">    <span class="attr">permalink:</span> <span class="literal">true</span> <span class="comment"># 则创建一个锚标记，除标题外还有一个固定链接</span></span><br><span class="line">    <span class="attr">permalinkClass:</span> <span class="string">header-anchor</span> <span class="comment"># 用于固定链接锚标记的样式</span></span><br><span class="line">    <span class="attr">permalinkSymbol:</span> <span class="string">¶</span> <span class="comment"># 用于固定链接标记的符号</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">markdown:</span></span><br><span class="line">  <span class="attr">plugins:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-katex</span></span><br><span class="line">  <span class="attr">anchors:</span></span><br><span class="line">    <span class="attr">level:</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
-<p><a href="http://www.intmath.com/cg5/katex-mathjax-comparison.php">KaTeX and MathJax Comparison Demo</a><br>
-生成公式或图片工具：<br>
-<a href="https://www.jianshu.com/p/588ab3d22eb8">https://www.jianshu.com/p/588ab3d22eb8</a><br>
-<a href="https://dora-cmon.github.io/posts/95c5c5d2/">https://dora-cmon.github.io/posts/95c5c5d2/</a><br>
-<a href="https://sheepsparks.cn/2025/02/04/Hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/">https://sheepsparks.cn/2025/02/04/Hexo博客框架学习/</a><br>
-<a href="https://www.luogu.com.cn/article/4a81e2tt">https://www.luogu.com.cn/article/4a81e2tt</a></p>
+    <title>Hexo 代码高亮</title>
+    <url>/hiner/2025/03/13/hexo-lighting/</url>
+    <content><![CDATA[<p>我遇到了代码高亮的问题，显示不正常等等，首先，在 hexo 根目录的 config 配置文件中缺少了 prismjs 的 enable: false 属性，然后关闭 highlight 的 wrap 和 hljs 属性等。</p>
+<h2 id="一"><a class="header-anchor" href="#一">¶</a>一</h2>
+<p>使用 <code>&#123;% codeblock %&#125;` 和 `&#123;% endcodeblock %&#125;</code> 包裹代码，并在 codeblock 后添加说明 [title] [lang:language] [url] [link text] [additional otions]</p>
+<figure class="highlight plaintext"><figcaption><span>[title] [lang:language] [url] [link text] [additional otions]</span></figcaption><table><tr><td class="code"><pre><span class="line">code snippet</span><br></pre></td></tr></table></figure>
+<h2 id="二"><a class="header-anchor" href="#二">¶</a>二</h2>
+<p>使用 <code>&#123;% code %&#125;` 和 `&#123;% endcode %&#125;</code> 包裹代码，并在 code 后添加说明 [title] [lang:language] [url] [link text] [additional options]</p>
+<figure class="highlight plaintext"><figcaption><span>[title] [lang:language] [url] [link text] [additional options]</span></figcaption><table><tr><td class="code"><pre><span class="line">code snippet</span><br></pre></td></tr></table></figure>
+<h2 id="三"><a class="header-anchor" href="#三">¶</a>三</h2>
+<p>使用两个<code>```</code>包裹代码，并在<code>```</code>后添加说明 [language] [title] [url] [link text] [additional options]</p>
+<figure class="highlight plaintext"><figcaption><span>[title] [url] [link text]</span></figcaption><table><tr><td class="code"><pre><span class="line">code snippet</span><br></pre></td></tr></table></figure>
+<h2 id="参数详解"><a class="header-anchor" href="#参数详解">¶</a>参数详解</h2>
+<ol>
+<li>[language]
+<ul>
+<li>作用：指定代码的语言（如 python、javascript），以便正确高亮语法。</li>
+</ul>
+</li>
+<li>[title]
+<ul>
+<li>作用：为代码块添加标题，显示在代码块上方（类似标注说明）。</li>
+</ul>
+</li>
+<li>[url] 和 [link text]
+<ul>
+<li>作用：在代码块下方添加一个外部链接（如源码来源或参考文档）。
+<ul>
+<li>[url]：链接地址（需是完整 URL）。</li>
+<li>[link text]：链接显示的文本。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>[additional options]
+<ul>
+<li>作用：添加额外配置选项（具体支持的功能取决于渲染器或插件）。</li>
+<li>常见选项：
+<ul>
+<li>linenos：显示行号（部分插件支持）。</li>
+<li>highlight：高亮指定行（如 hl_lines=1,3）。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="注意事项"><a class="header-anchor" href="#注意事项">¶</a>注意事项</h2>
+<ol>
+<li>依赖渲染器或插件：<br>
+Hexo 默认的 hexo-renderer-marked 渲染器可能不支持所有参数（如 title、url）。
+<ul>
+<li>若需完整功能，建议使用扩展插件：
+<ul>
+<li>hexo-renderer-markdown-it（支持更多 Markdown 扩展语法）。</li>
+<li>hexo-prism-plugin（支持行号、高亮行等）。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>参数顺序：<br>
+参数的顺序必须严格按照 [language] [title] [url] [link text] [additional options]，不可随意调换。</li>
+<li>空格分隔：<br>
+参数之间需用空格分隔，若标题本身包含空格，需用引号包裹（如 “This is a title”）。</li>
+</ol>
+<h2 id="完整示例"><a class="header-anchor" href="#完整示例">¶</a>完整示例</h2>
+<figure class="highlight python"><figcaption><span>斐波那契数列</span><a href="https://github.com/example/fibonacci">源码链接 linonstart</a></figcaption><table><tr><td class="code"><pre><span class="line">python 斐波那契数列 https://github.com/example/fibonacci 源码链接 linonstart=<span class="number">1</span> hl_lines=<span class="number">3</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fibonacci</span>(<span class="params">n</span>):</span><br><span class="line">    a, b = <span class="number">0</span>, <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        <span class="keyword">yield</span> a</span><br><span class="line">        a, b = b, a + b</span><br></pre></td></tr></table></figure>
+<p>效果说明：</p>
+<ul>
+<li>语言：python（高亮 Python 语法）。</li>
+<li>标题：斐波那契数列（显示在代码块顶部）。</li>
+<li>链接：<a href="https://github.com/example/fibonacci%EF%BC%88%E5%9C%B0%E5%9D%80%EF%BC%89">https://github.com/example/fibonacci（地址）</a> + 源码链接（显示文本）。</li>
+<li>选项：linenostart=1（行号从 1 开始）、hl_lines=3（高亮第 3 行）。</li>
+</ul>
 ]]></content>
       <categories>
-        <category>教程</category>
+        <category>Tips</category>
       </categories>
       <tags>
-        <tag>Katex</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -2223,260 +2273,36 @@ CSS 变量将样式定义与使用分离，大大提高了代码的可维护性�
 ]]></content>
   </entry>
   <entry>
-    <title>HTML 标签，知识</title>
-    <url>/hiner/2025/06/30/html/</url>
-    <content><![CDATA[<p>addr 标签展示缩写<br>
-<abbr title="etcetera">etc.</abbr></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">abbr</span> <span class="attr">title</span>=<span class="string">&quot;etcetera&quot;</span>&gt;</span>etc.<span class="tag">&lt;/<span class="name">abbr</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>a 标签的锚点可用 name 表示，用法同 id<br>
-<a name="label">锚（显示在页面上的文本）</a></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">&quot;label&quot;</span>&gt;</span>锚（显示在页面上的文本）<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>img 元素中的 “usemap” 属性引用 map 元素中的 “id” 或 “name” 属性（根据浏览器）</p>
+    <title>hexo 配置 katex</title>
+    <url>/hiner/2025/03/13/hexo%E9%85%8D%E7%BD%AEkatex/</url>
+    <content><![CDATA[<h2 id="安装-KaTeX-插件"><a class="header-anchor" href="#安装-KaTeX-插件">¶</a>安装 KaTeX 插件</h2>
+<p>Hexo 社区提供了 hexo-filter-katex 插件，能自动处理公式渲染：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-katex --save</span><br></pre></td></tr></table></figure>
+<h2 id="配置-Hexo-全局文件"><a class="header-anchor" href="#配置-Hexo-全局文件">¶</a>配置 Hexo 全局文件</h2>
+<p>在 Hexo 根目录的 _config.yml 中添加以下配置：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">katex:</span></span><br><span class="line">  <span class="comment"># 开启全局渲染（无需在每篇文章中声明）</span></span><br><span class="line">  <span class="attr">global:</span> <span class="literal">false</span>  <span class="comment"># 建议设为 false，按需在文章头启用</span></span><br><span class="line">  <span class="comment"># 排除不需要渲染的元素（可选）</span></span><br><span class="line">  <span class="attr">exclude:</span> </span><br><span class="line">    <span class="bullet">-</span> <span class="string">blockquote</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">code</span></span><br></pre></td></tr></table></figure>
+<h2 id="修改文章-Front-matter"><a class="header-anchor" href="#修改文章-Front-matter">¶</a>修改文章 Front-matter</h2>
+<p>在需要渲染公式的文章头部添加 katex: true：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 测试文章</span><br><span class="line">date: 2025-01-01</span><br><span class="line"><span class="section">katex: true</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
+<h2 id="解决-Markdown-语法冲突"><a class="header-anchor" href="#解决-Markdown-语法冲突">¶</a>解决 Markdown 语法冲突</h2>
+<p>Hexo 默认的 Markdown 渲染器 (hexo-renderer-marked) 会与 KaTeX 的 _ 和 \ 冲突，更换渲染器：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-markdown-it --save</span><br></pre></td></tr></table></figure>
+<p>在 _config.yml 中添加配置：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Markdown-it config</span></span><br><span class="line"><span class="attr">markdown:</span></span><br><span class="line">  <span class="attr">render:</span></span><br><span class="line">    <span class="attr">html:</span> <span class="literal">true</span> <span class="comment"># 不转义 HTML 内容 # 转义 HTML 内容，使标签作为文本输出</span></span><br><span class="line">    <span class="attr">xhtmlOut:</span> <span class="literal">false</span> <span class="comment"># 必须使用完全的 XHTML 代码，换行必须为 &lt;br/&gt; # 不必必使用完全的 XHTML 代码，换行可以为 &lt;br&gt;</span></span><br><span class="line">    <span class="attr">breaks:</span> <span class="literal">true</span> <span class="comment"># 每次会车换行相当于一个 &lt;br/&gt; 标签 # Pa每次会车换行会被忽略</span></span><br><span class="line">    <span class="attr">linkify:</span> <span class="literal">true</span> <span class="comment"># 类似链接的文本，作为链接输出 # 类似链接的文本，依然作为文本输出</span></span><br><span class="line">    <span class="attr">typographer:</span> <span class="literal">true</span> <span class="comment"># 替换常见的排版元素 # 不替换常见的排版元素</span></span><br><span class="line">    <span class="attr">quotes:</span> <span class="string">&#x27;“”‘’&#x27;</span> <span class="comment"># &#x27;single&#x27;、&quot;double&quot; 变成 ‘single’、“double” # &#x27;single&#x27;、&quot;double&quot; 变成 “single”、«single»</span></span><br><span class="line">  <span class="attr">plugins:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-abbr</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-footnote</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-ins</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-sub</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-sup</span></span><br><span class="line">  <span class="attr">anchors:</span></span><br><span class="line">    <span class="attr">level:</span> <span class="number">2</span> <span class="comment"># 生成 Heading ID 的标题等级</span></span><br><span class="line">    <span class="attr">collisionSuffix:</span> <span class="string">&#x27;v&#x27;</span> <span class="comment"># Heading ID 重复时，数字的后缀</span></span><br><span class="line">    <span class="attr">permalink:</span> <span class="literal">true</span> <span class="comment"># 则创建一个锚标记，除标题外还有一个固定链接</span></span><br><span class="line">    <span class="attr">permalinkClass:</span> <span class="string">header-anchor</span> <span class="comment"># 用于固定链接锚标记的样式</span></span><br><span class="line">    <span class="attr">permalinkSymbol:</span> <span class="string">¶</span> <span class="comment"># 用于固定链接标记的符号</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">markdown:</span></span><br><span class="line">  <span class="attr">plugins:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-katex</span></span><br><span class="line">  <span class="attr">anchors:</span></span><br><span class="line">    <span class="attr">level:</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
+<p><a href="http://www.intmath.com/cg5/katex-mathjax-comparison.php">KaTeX and MathJax Comparison Demo</a><br>
+生成公式或图片工具：<br>
+<a href="https://www.jianshu.com/p/588ab3d22eb8">https://www.jianshu.com/p/588ab3d22eb8</a><br>
+<a href="https://dora-cmon.github.io/posts/95c5c5d2/">https://dora-cmon.github.io/posts/95c5c5d2/</a><br>
+<a href="https://sheepsparks.cn/2025/02/04/Hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/">https://sheepsparks.cn/2025/02/04/Hexo博客框架学习/</a><br>
+<a href="https://www.luogu.com.cn/article/4a81e2tt">https://www.luogu.com.cn/article/4a81e2tt</a></p>
 ]]></content>
       <categories>
-        <category>笔记</category>
+        <category>教程</category>
       </categories>
       <tags>
-        <tag>HTML</tag>
+        <tag>Katex</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hexo 代码高亮</title>
-    <url>/hiner/2025/03/13/hexo-lighting/</url>
-    <content><![CDATA[<p>我遇到了代码高亮的问题，显示不正常等等，首先，在 hexo 根目录的 config 配置文件中缺少了 prismjs 的 enable: false 属性，然后关闭 highlight 的 wrap 和 hljs 属性等。</p>
-<h2 id="一"><a class="header-anchor" href="#一">¶</a>一</h2>
-<p>使用 <code>&#123;% codeblock %&#125;` 和 `&#123;% endcodeblock %&#125;</code> 包裹代码，并在 codeblock 后添加说明 [title] [lang:language] [url] [link text] [additional otions]</p>
-<figure class="highlight plaintext"><figcaption><span>[title] [lang:language] [url] [link text] [additional otions]</span></figcaption><table><tr><td class="code"><pre><span class="line">code snippet</span><br></pre></td></tr></table></figure>
-<h2 id="二"><a class="header-anchor" href="#二">¶</a>二</h2>
-<p>使用 <code>&#123;% code %&#125;` 和 `&#123;% endcode %&#125;</code> 包裹代码，并在 code 后添加说明 [title] [lang:language] [url] [link text] [additional options]</p>
-<figure class="highlight plaintext"><figcaption><span>[title] [lang:language] [url] [link text] [additional options]</span></figcaption><table><tr><td class="code"><pre><span class="line">code snippet</span><br></pre></td></tr></table></figure>
-<h2 id="三"><a class="header-anchor" href="#三">¶</a>三</h2>
-<p>使用两个<code>```</code>包裹代码，并在<code>```</code>后添加说明 [language] [title] [url] [link text] [additional options]</p>
-<figure class="highlight plaintext"><figcaption><span>[title] [url] [link text]</span></figcaption><table><tr><td class="code"><pre><span class="line">code snippet</span><br></pre></td></tr></table></figure>
-<h2 id="参数详解"><a class="header-anchor" href="#参数详解">¶</a>参数详解</h2>
-<ol>
-<li>[language]
-<ul>
-<li>作用：指定代码的语言（如 python、javascript），以便正确高亮语法。</li>
-</ul>
-</li>
-<li>[title]
-<ul>
-<li>作用：为代码块添加标题，显示在代码块上方（类似标注说明）。</li>
-</ul>
-</li>
-<li>[url] 和 [link text]
-<ul>
-<li>作用：在代码块下方添加一个外部链接（如源码来源或参考文档）。
-<ul>
-<li>[url]：链接地址（需是完整 URL）。</li>
-<li>[link text]：链接显示的文本。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>[additional options]
-<ul>
-<li>作用：添加额外配置选项（具体支持的功能取决于渲染器或插件）。</li>
-<li>常见选项：
-<ul>
-<li>linenos：显示行号（部分插件支持）。</li>
-<li>highlight：高亮指定行（如 hl_lines=1,3）。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="注意事项"><a class="header-anchor" href="#注意事项">¶</a>注意事项</h2>
-<ol>
-<li>依赖渲染器或插件：<br>
-Hexo 默认的 hexo-renderer-marked 渲染器可能不支持所有参数（如 title、url）。
-<ul>
-<li>若需完整功能，建议使用扩展插件：
-<ul>
-<li>hexo-renderer-markdown-it（支持更多 Markdown 扩展语法）。</li>
-<li>hexo-prism-plugin（支持行号、高亮行等）。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>参数顺序：<br>
-参数的顺序必须严格按照 [language] [title] [url] [link text] [additional options]，不可随意调换。</li>
-<li>空格分隔：<br>
-参数之间需用空格分隔，若标题本身包含空格，需用引号包裹（如 “This is a title”）。</li>
-</ol>
-<h2 id="完整示例"><a class="header-anchor" href="#完整示例">¶</a>完整示例</h2>
-<figure class="highlight python"><figcaption><span>斐波那契数列</span><a href="https://github.com/example/fibonacci">源码链接 linonstart</a></figcaption><table><tr><td class="code"><pre><span class="line">python 斐波那契数列 https://github.com/example/fibonacci 源码链接 linonstart=<span class="number">1</span> hl_lines=<span class="number">3</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fibonacci</span>(<span class="params">n</span>):</span><br><span class="line">    a, b = <span class="number">0</span>, <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        <span class="keyword">yield</span> a</span><br><span class="line">        a, b = b, a + b</span><br></pre></td></tr></table></figure>
-<p>效果说明：</p>
-<ul>
-<li>语言：python（高亮 Python 语法）。</li>
-<li>标题：斐波那契数列（显示在代码块顶部）。</li>
-<li>链接：<a href="https://github.com/example/fibonacci%EF%BC%88%E5%9C%B0%E5%9D%80%EF%BC%89">https://github.com/example/fibonacci（地址）</a> + 源码链接（显示文本）。</li>
-<li>选项：linenostart=1（行号从 1 开始）、hl_lines=3（高亮第 3 行）。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Tips</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>VSCode 插件</title>
-    <url>/hiner/2025/05/10/vscode-plugin/</url>
-    <content><![CDATA[<style>
-    img {
-        border-radius: 50%;
-        width: 32px;
-    }
-</style>
-<h2 id="Live-Server-img-src-https-ritwickdey-gallerycdn-vsassets-io-extensions-ritwickdey-liveserver-5-7-9-1736542717282-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#Live-Server-img-src-https-ritwickdey-gallerycdn-vsassets-io-extensions-ritwickdey-liveserver-5-7-9-1736542717282-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a> <img src="https://ritwickdey.gallerycdn.vsassets.io/extensions/ritwickdey/liveserver/5.7.9/1736542717282/Microsoft.VisualStudio.Services.Icons.Default"></h2>
-<blockquote>
-<p>A development server with live reload capability</p>
-</blockquote>
-<p><strong>功能简介</strong>：基于本地服务的实时开发工具，支持自动刷新。<br>
-<strong>核心功能</strong>：</p>
-<ul>
-<li>启动本地服务器，实时渲染 HTML/CSS/JavaScript 文件。</li>
-<li>代码保存后自动刷新浏览器，即时预览修改效果。</li>
-<li>支持自定义端口、根目录及浏览器默认打开路径。</li>
-</ul>
-<p><strong>适用场景</strong>：前端开发、静态页面调试、快速原型设计。</p>
-<h2 id="Auto-Rename-Tag-img-src-https-formulahendry-gallerycdn-vsassets-io-extensions-formulahendry-auto-rename-tag-0-1-10-1644319230173-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#Auto-Rename-Tag-img-src-https-formulahendry-gallerycdn-vsassets-io-extensions-formulahendry-auto-rename-tag-0-1-10-1644319230173-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag">Auto Rename Tag</a> <img src="https://formulahendry.gallerycdn.vsassets.io/extensions/formulahendry/auto-rename-tag/0.1.10/1644319230173/Microsoft.VisualStudio.Services.Icons.Default"></h2>
-<blockquote>
-<p>Auto rename paired HTML/XML tag</p>
-</blockquote>
-<p><strong>功能简介</strong>：自动同步修改 HTML/XML 标签对。<br>
-<strong>核心功能</strong>：</p>
-<ul>
-<li>修改起始标签时，自动更新对应的闭合标签。</li>
-<li>支持 Vue、React 等框架的 JSX/TSX 语法。</li>
-<li>避免手动修改标签时因遗漏导致的语法错误。</li>
-</ul>
-<p><strong>适用场景</strong>：Web 开发、组件化编程、XML 文件编辑。</p>
-<h2 id="htmltagwrap-img-src-https-bradgashler-gallerycdn-vsassets-io-extensions-bradgashler-htmltagwrap-1-0-0-1690951480878-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#htmltagwrap-img-src-https-bradgashler-gallerycdn-vsassets-io-extensions-bradgashler-htmltagwrap-1-0-0-1690951480878-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items/?itemName=bradgashler.htmltagwrap">htmltagwrap</a> <img src="https://bradgashler.gallerycdn.vsassets.io/extensions/bradgashler/htmltagwrap/1.0.0/1690951480878/Microsoft.VisualStudio.Services.Icons.Default"></h2>
-<blockquote>
-<p>Wraps the selected text in HTML tags</p>
-</blockquote>
-<p><strong>功能简介</strong>：快速为选中文本包裹 HTML 标签。<br>
-<strong>核心功能</strong>：</p>
-<ul>
-<li>快捷键（默认为 Alt + W）一键添加标签。</li>
-<li>支持多层嵌套标签与自定义属性。</li>
-<li>提升批量结构化代码的编写效率。</li>
-</ul>
-<p><strong>适用场景</strong>：HTML 模板构建、内容块快速封装。</p>
-<h2 id="Prettier-img-src-https-esbenp-gallerycdn-vsassets-io-extensions-esbenp-prettier-vscode-11-0-0-1723648421534-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#Prettier-img-src-https-esbenp-gallerycdn-vsassets-io-extensions-esbenp-prettier-vscode-11-0-0-1723648421534-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode">Prettier</a> <img src="https://esbenp.gallerycdn.vsassets.io/extensions/esbenp/prettier-vscode/11.0.0/1723648421534/Microsoft.VisualStudio.Services.Icons.Default"></h2>
-<blockquote>
-<p>Code formatter using prettier</p>
-</blockquote>
-<p><strong>功能简介</strong>：多语言代码格式化工具。<br>
-<strong>核心功能</strong>：</p>
-<ul>
-<li>支持 JavaScript、TypeScript、CSS、JSON 等 20+ 语言。</li>
-<li>通过配置文件（.prettierrc）自定义代码风格。</li>
-<li>保存时自动格式化，确保团队代码风格统一。</li>
-</ul>
-<p><strong>适用场景</strong>：代码规范化、协作开发、代码审查辅助。</p>
-<h2 id="ImgPreview-img-src-https-kisstkondoros-gallerycdn-vsassets-io-extensions-kisstkondoros-vscode-gutter-preview-0-32-2-1732997211540-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#ImgPreview-img-src-https-kisstkondoros-gallerycdn-vsassets-io-extensions-kisstkondoros-vscode-gutter-preview-0-32-2-1732997211540-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items/?itemName=kisstkondoros.vscode-gutter-preview">ImgPreview</a> <img src="https://kisstkondoros.gallerycdn.vsassets.io/extensions/kisstkondoros/vscode-gutter-preview/0.32.2/1732997211540/Microsoft.VisualStudio.Services.Icons.Default"></h2>
-<blockquote>
-<p>Preview images in your editor</p>
-</blockquote>
-<p><strong>功能简介</strong>：在编辑器中直接预览图片。<br>
-<strong>核心功能</strong>：</p>
-<ul>
-<li>鼠标悬停于图片路径时显示缩略图。</li>
-<li>支持 PNG、JPG、GIF、SVG 等常见格式。</li>
-<li>快速定位图片资源，避免频繁切换窗口。</li>
-</ul>
-<p><strong>适用场景</strong>：图像资源管理、静态网站开发、UI 设计对接。</p>
-<h2 id="Path-Intellisense-img-src-https-christian-kohler-gallerycdn-vsassets-io-extensions-christian-kohler-path-intellisense-2-10-0-1732919213601-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#Path-Intellisense-img-src-https-christian-kohler-gallerycdn-vsassets-io-extensions-christian-kohler-path-intellisense-2-10-0-1732919213601-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense">Path Intellisense</a> <img src="https://christian-kohler.gallerycdn.vsassets.io/extensions/christian-kohler/path-intellisense/2.10.0/1732919213601/Microsoft.VisualStudio.Services.Icons.Default"></h2>
-<blockquote>
-<p>Visual Studio Code plugin that autocompletes filenames</p>
-</blockquote>
-<p><strong>功能简介</strong>：文件路径自动补全。<br>
-<strong>核心功能</strong>：</p>
-<ul>
-<li>输入路径时提示当前目录下的文件与文件夹。</li>
-<li>支持相对路径与绝对路径补全。</li>
-<li>减少手动输入错误，提升代码可维护性。</li>
-</ul>
-<p><strong>适用场景</strong>：模块化开发、多文件项目管理。</p>
-<h2 id="CodeSnap-img-src-https-adpyke-gallerycdn-vsassets-io-extensions-adpyke-codesnap-1-3-4-1625238962906-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#CodeSnap-img-src-https-adpyke-gallerycdn-vsassets-io-extensions-adpyke-codesnap-1-3-4-1625238962906-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items/?itemName=adpyke.codesnap">CodeSnap</a> <img src="https://adpyke.gallerycdn.vsassets.io/extensions/adpyke/codesnap/1.3.4/1625238962906/Microsoft.VisualStudio.Services.Icons.Default"></h2>
-<blockquote>
-<p>Take beautiful screenshots of your code</p>
-</blockquote>
-<p><strong>功能简介</strong>：生成高亮代码截图。<br>
-<strong>核心功能</strong>：</p>
-<ul>
-<li>自定义截图背景、阴影、边距等样式。</li>
-<li>支持复制图片到剪贴板或保存为 PNG/SVG。</li>
-<li>可选行号显示与语法高亮主题。</li>
-</ul>
-<p><strong>适用场景</strong>：技术文档编写、社交媒体分享、代码教学。</p>
-<h2 id="Excalidraw-img-src-https-pomdtr-gallerycdn-vsassets-io-extensions-pomdtr-excalidraw-editor-3-8-1-1741785200720-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#Excalidraw-img-src-https-pomdtr-gallerycdn-vsassets-io-extensions-pomdtr-excalidraw-editor-3-8-1-1741785200720-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="">Excalidraw</a> <img src="https://pomdtr.gallerycdn.vsassets.io/extensions/pomdtr/excalidraw-editor/3.8.1/1741785200720/Microsoft.VisualStudio.Services.Icons.Default"></h2>
-<blockquote>
-<p>Draw diagrams and sketches in your editor</p>
-</blockquote>
-<p><strong>功能简介</strong>：手绘风格图表绘制工具。<br>
-<strong>核心功能</strong>：</p>
-<ul>
-<li>内置手绘图形、箭头、便签等元素。</li>
-<li>支持导出为 PNG/SVG 或保存为 .excalidraw 文件。</li>
-<li>实时协作功能（需搭配在线服务）。</li>
-</ul>
-<p><strong>适用场景</strong>：草图设计、流程图绘制、会议笔记。</p>
-<a class="tag-link" href="https://excalidraw.com/" target="_blank">
-    <div class="tag-link-tips">引用站外链接</div>
-    <div class="tag-link-bottom">
-        <div class="tag-link-left">
-          <i class="solitude fas fa-link"></i>
-        </div>
-        <div class="tag-link-right">
-            <div class="tag-link-title">Excalidraw</div>
-            <div class="tag-link-sitename">在线网站</div>
-        </div>
-        <i class="solitude fas fa-chevron-right"></i>
-    </div></a>
-<h2 id="Draw-io-img-src-https-hediet-gallerycdn-vsassets-io-extensions-hediet-vscode-drawio-1-9-250226013-1740566991071-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#Draw-io-img-src-https-hediet-gallerycdn-vsassets-io-extensions-hediet-vscode-drawio-1-9-250226013-1740566991071-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio">Draw.io</a> <img src="https://hediet.gallerycdn.vsassets.io/extensions/hediet/vscode-drawio/1.9.250226013/1740566991071/Microsoft.VisualStudio.Services.Icons.Default"></h2>
-<blockquote>
-<p>Draw diagrams and sketches in your editor</p>
-</blockquote>
-<p><strong>功能简介</strong>：专业图表与流程图设计工具。<br>
-<strong>核心功能</strong>：</p>
-<ul>
-<li>集成 <a href="http://Draw.io">Draw.io</a> 的完整功能，支持 UML、网络拓扑图等复杂图表。</li>
-<li>提供海量模板与图标库。</li>
-<li>直接保存图表为 .drawio 或导出为图片/PDF。</li>
-</ul>
-<p><strong>适用场景</strong>：技术架构设计、数据库建模、流程文档化。</p>
-<a class="tag-link" href="https://app.diagrams.net/" target="_blank">
-    <div class="tag-link-tips">引用站外链接</div>
-    <div class="tag-link-bottom">
-        <div class="tag-link-left">
-          <i class="solitude fas fa-link"></i>
-        </div>
-        <div class="tag-link-right">
-            <div class="tag-link-title">Draw.io</div>
-            <div class="tag-link-sitename">在线网站</div>
-        </div>
-        <i class="solitude fas fa-chevron-right"></i>
-    </div></a>
-<h2 id="GitHub-copilot-img-src-https-GitHub-gallerycdn-vsassets-io-extensions-github-copilot-1-296-1486-1743783345263-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#GitHub-copilot-img-src-https-GitHub-gallerycdn-vsassets-io-extensions-github-copilot-1-296-1486-1743783345263-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot">GitHub copilot</a> <img src="https://GitHub.gallerycdn.vsassets.io/extensions/github/copilot/1.296.1486/1743783345263/Microsoft.VisualStudio.Services.Icons.Default"></h2>
-<blockquote>
-<p>AI pair programmer</p>
-</blockquote>
-<p><strong>功能简介</strong>：AI 驱动的代码自动补全工具。<br>
-<strong>核心功能</strong>：</p>
-<ul>
-<li>基于上下文生成单行、多行甚至完整函数代码。</li>
-<li>支持 Python、JavaScript、Go 等主流语言。</li>
-<li>通过学习开源代码库提供符合习惯的代码建议。</li>
-</ul>
-<p><strong>适用场景</strong>：快速原型开发、学习新语言、减少重复编码。</p>
-<!-- ![](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png) -->
-]]></content>
   </entry>
   <entry>
     <title>随机壁纸 API</title>
@@ -3031,130 +2857,21 @@ for (let i = 0; i < items.length; i++) {
       </tags>
   </entry>
   <entry>
-    <title>xuao Blog</title>
-    <url>/hiner/2025/04/16/xuao/</url>
-    <content><![CDATA[<p>开始学习 HTML 和 CSS 写的一个页面，后来在网上看到有意思的效果，都会写一遍</p>
-<h2 id="渐变"><a class="header-anchor" href="#渐变">¶</a>渐变</h2>
-<style>
-    .color {
-    width: 100%;
-    font-size: 4em;
-    text-align: center;
-    }
-    .color span {
-        color: #e0e0e0;
-        animation: ColorChange 1s infinite ease-in-out alternate;
-    }
-    @keyframes ColorChange {
-        to {
-            color: #ff0266;
-        }
-    }
-</style>
-<div class="color">
-    <span>C</span>
-    <span>O</span>
-    <span>L</span>
-    <span>O</span>
-    <span>R</span>
-    <span>F</span>
-    <span>U</span>
-    <span>L</span>
-</div>
-<script>
-    document.querySelectorAll('.color span').forEach((span, index) => {
-        span.style.animationDelay = `${index * 0.1}s`;
-    });
-</script>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.color</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">4em</span>;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.color</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#e0e0e0</span>;</span><br><span class="line">    <span class="attribute">animation</span>: ColorChange <span class="number">1s</span> infinite ease-in-out alternate;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@keyframes</span> ColorChange &#123;</span><br><span class="line">    <span class="selector-tag">to</span> &#123;</span><br><span class="line">        <span class="attribute">color</span>: <span class="number">#ff0266</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&#x27;.color span&#x27;</span>).<span class="title function_">forEach</span>(<span class="function">(<span class="params">span, index</span>) =&gt;</span> &#123;</span><br><span class="line">    span.<span class="property">style</span>.<span class="property">animationDelay</span> = <span class="string">`<span class="subst">$&#123;index * <span class="number">0.1</span>&#125;</span>s`</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h2 id="透明字"><a class="header-anchor" href="#透明字">¶</a>透明字</h2>
-<blockquote>
-<p>可换艺术字、使用滚动动画</p>
-</blockquote>
-<style>
-    .gta {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 10vw;
-        background: url(https://imgapi.xl0408.top/index.php) no-repeat center/cover;
-        background-clip: text; /* 背景只在文字区域显示 */
-        color: transparent; /* 文字有颜色 */
-        animation: gta-scale 3s forwards;
-    }
-    @keyframes gta-scale {
-        from {
-            font-size: 500vw;
-            /* color: transparent; */
-        }
-        to {
-            font-size: 10vw;
-            /* color: #fff; */
-        }
-    }
-</style>
-<div style="width: 100%;height: 600px;">
-    <h1 class="gta">AMAZING</h1>
-</div>
-<h2 id="下划线"><a class="header-anchor" href="#下划线">¶</a>下划线</h2>
-<style>
-    .bline span {
-        font-size: 1.5em;
-        background: linear-gradient(to right, #f00, #00f) no-repeat;
-        background-size: 0px 2px;
-        background-position: right bottom;
-        transition: background-size 1s;
-        cursor: pointer;
-    }
-    .bline span:hover {
-        background-size: 100% 2px;
-        background-position: left bottom;
-    }
-</style>
-<div class="bline letter">
-    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur recusandae voluptatum quo dolore tenetur cum ipsa corporis, reprehenderit tempore inventore et labore sit illum natus, est maiores! Eveniet, corrupti reprehenderit?</span>
-</div>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.bline</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">1.5em</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(to right, <span class="number">#f00</span>, <span class="number">#00f</span>) no-repeat;</span><br><span class="line">    <span class="attribute">background-size</span>: <span class="number">0px</span> <span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">background-position</span>: right bottom;</span><br><span class="line">    <span class="attribute">transition</span>: background-size <span class="number">1s</span>;</span><br><span class="line">    <span class="attribute">cursor</span>: pointer;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.bline</span> <span class="selector-tag">span</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">background-size</span>: <span class="number">100%</span> <span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">background-position</span>: left bottom;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="首字样式"><a class="header-anchor" href="#首字样式">¶</a>首字样式</h2>
-<style>
-    .letter div::first-letter {
-        font-size: 2em;
-        text-transform: uppercase;
-        float: left;
-        margin-right: 10px;
-    }
-    .letter div::selection {
-        background-color: palevioletred;
-        text-decoration: underline;
-    }
-</style>
-<div class="bline letter">
-    <h3><span>A Covenant Between Civilization and Nature</span></h3>
-    <div>
-        Environmental crises now threaten humanity’s survival. Polar ice melting at unprecedented rates, 90% of
-        seabirds ingesting plastics, and rampant deforestation expose a fractured ecosystem. These are not isolated
-        issues but symptoms of a broken human-nature covenant.
-        True solutions demand dual action: individuals adopting sustainable habits and governments enforcing green
-        policies. As Jane Goodall warned, "Protecting nature is not a choice but a necessity for civilization’s
-        continuity." Environmentalism must evolve from "saving Earth" to redefining humanity’s role as stewards of a
-        shared biological legacy. Only by honoring this planetary covenant can we safeguard tomorrow’s world.
-    </div>
-</div>
-<blockquote>
-<p><strong>::selection</strong> 设置选中文本的样式</p>
-</blockquote>
-<blockquote>
-<p><strong>::first-letter</strong> 设置选中第一个字母</p>
-</blockquote>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.letter</span> <span class="selector-tag">div</span><span class="selector-pseudo">::first-letter</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">2em</span>;</span><br><span class="line">    <span class="attribute">text-transform</span>: uppercase;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">    <span class="attribute">margin-right</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.letter</span> <span class="selector-tag">div</span><span class="selector-pseudo">::selection</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: palevioletred;</span><br><span class="line">    <span class="attribute">text-decoration</span>: underline;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <title>HTML 标签，知识</title>
+    <url>/hiner/2025/06/30/html/</url>
+    <content><![CDATA[<p>addr 标签展示缩写<br>
+<abbr title="etcetera">etc.</abbr></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">abbr</span> <span class="attr">title</span>=<span class="string">&quot;etcetera&quot;</span>&gt;</span>etc.<span class="tag">&lt;/<span class="name">abbr</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>a 标签的锚点可用 name 表示，用法同 id<br>
+<a name="label">锚（显示在页面上的文本）</a></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">&quot;label&quot;</span>&gt;</span>锚（显示在页面上的文本）<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>img 元素中的 “usemap” 属性引用 map 元素中的 “id” 或 “name” 属性（根据浏览器）</p>
+]]></content>
       <categories>
-        <category>Tips</category>
+        <category>笔记</category>
       </categories>
       <tags>
-        <tag>Blog</tag>
+        <tag>HTML</tag>
       </tags>
   </entry>
   <entry>
@@ -3292,6 +3009,289 @@ for (let i = 0; i < items.length; i++) {
       </tags>
   </entry>
   <entry>
+    <title>VSCode 插件</title>
+    <url>/hiner/2025/05/10/vscode-plugin/</url>
+    <content><![CDATA[<style>
+    img {
+        border-radius: 50%;
+        width: 32px;
+    }
+</style>
+<h2 id="Live-Server-img-src-https-ritwickdey-gallerycdn-vsassets-io-extensions-ritwickdey-liveserver-5-7-9-1736542717282-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#Live-Server-img-src-https-ritwickdey-gallerycdn-vsassets-io-extensions-ritwickdey-liveserver-5-7-9-1736542717282-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a> <img src="https://ritwickdey.gallerycdn.vsassets.io/extensions/ritwickdey/liveserver/5.7.9/1736542717282/Microsoft.VisualStudio.Services.Icons.Default"></h2>
+<blockquote>
+<p>A development server with live reload capability</p>
+</blockquote>
+<p><strong>功能简介</strong>：基于本地服务的实时开发工具，支持自动刷新。<br>
+<strong>核心功能</strong>：</p>
+<ul>
+<li>启动本地服务器，实时渲染 HTML/CSS/JavaScript 文件。</li>
+<li>代码保存后自动刷新浏览器，即时预览修改效果。</li>
+<li>支持自定义端口、根目录及浏览器默认打开路径。</li>
+</ul>
+<p><strong>适用场景</strong>：前端开发、静态页面调试、快速原型设计。</p>
+<h2 id="Auto-Rename-Tag-img-src-https-formulahendry-gallerycdn-vsassets-io-extensions-formulahendry-auto-rename-tag-0-1-10-1644319230173-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#Auto-Rename-Tag-img-src-https-formulahendry-gallerycdn-vsassets-io-extensions-formulahendry-auto-rename-tag-0-1-10-1644319230173-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag">Auto Rename Tag</a> <img src="https://formulahendry.gallerycdn.vsassets.io/extensions/formulahendry/auto-rename-tag/0.1.10/1644319230173/Microsoft.VisualStudio.Services.Icons.Default"></h2>
+<blockquote>
+<p>Auto rename paired HTML/XML tag</p>
+</blockquote>
+<p><strong>功能简介</strong>：自动同步修改 HTML/XML 标签对。<br>
+<strong>核心功能</strong>：</p>
+<ul>
+<li>修改起始标签时，自动更新对应的闭合标签。</li>
+<li>支持 Vue、React 等框架的 JSX/TSX 语法。</li>
+<li>避免手动修改标签时因遗漏导致的语法错误。</li>
+</ul>
+<p><strong>适用场景</strong>：Web 开发、组件化编程、XML 文件编辑。</p>
+<h2 id="htmltagwrap-img-src-https-bradgashler-gallerycdn-vsassets-io-extensions-bradgashler-htmltagwrap-1-0-0-1690951480878-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#htmltagwrap-img-src-https-bradgashler-gallerycdn-vsassets-io-extensions-bradgashler-htmltagwrap-1-0-0-1690951480878-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items/?itemName=bradgashler.htmltagwrap">htmltagwrap</a> <img src="https://bradgashler.gallerycdn.vsassets.io/extensions/bradgashler/htmltagwrap/1.0.0/1690951480878/Microsoft.VisualStudio.Services.Icons.Default"></h2>
+<blockquote>
+<p>Wraps the selected text in HTML tags</p>
+</blockquote>
+<p><strong>功能简介</strong>：快速为选中文本包裹 HTML 标签。<br>
+<strong>核心功能</strong>：</p>
+<ul>
+<li>快捷键（默认为 Alt + W）一键添加标签。</li>
+<li>支持多层嵌套标签与自定义属性。</li>
+<li>提升批量结构化代码的编写效率。</li>
+</ul>
+<p><strong>适用场景</strong>：HTML 模板构建、内容块快速封装。</p>
+<h2 id="Prettier-img-src-https-esbenp-gallerycdn-vsassets-io-extensions-esbenp-prettier-vscode-11-0-0-1723648421534-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#Prettier-img-src-https-esbenp-gallerycdn-vsassets-io-extensions-esbenp-prettier-vscode-11-0-0-1723648421534-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode">Prettier</a> <img src="https://esbenp.gallerycdn.vsassets.io/extensions/esbenp/prettier-vscode/11.0.0/1723648421534/Microsoft.VisualStudio.Services.Icons.Default"></h2>
+<blockquote>
+<p>Code formatter using prettier</p>
+</blockquote>
+<p><strong>功能简介</strong>：多语言代码格式化工具。<br>
+<strong>核心功能</strong>：</p>
+<ul>
+<li>支持 JavaScript、TypeScript、CSS、JSON 等 20+ 语言。</li>
+<li>通过配置文件（.prettierrc）自定义代码风格。</li>
+<li>保存时自动格式化，确保团队代码风格统一。</li>
+</ul>
+<p><strong>适用场景</strong>：代码规范化、协作开发、代码审查辅助。</p>
+<h2 id="ImgPreview-img-src-https-kisstkondoros-gallerycdn-vsassets-io-extensions-kisstkondoros-vscode-gutter-preview-0-32-2-1732997211540-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#ImgPreview-img-src-https-kisstkondoros-gallerycdn-vsassets-io-extensions-kisstkondoros-vscode-gutter-preview-0-32-2-1732997211540-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items/?itemName=kisstkondoros.vscode-gutter-preview">ImgPreview</a> <img src="https://kisstkondoros.gallerycdn.vsassets.io/extensions/kisstkondoros/vscode-gutter-preview/0.32.2/1732997211540/Microsoft.VisualStudio.Services.Icons.Default"></h2>
+<blockquote>
+<p>Preview images in your editor</p>
+</blockquote>
+<p><strong>功能简介</strong>：在编辑器中直接预览图片。<br>
+<strong>核心功能</strong>：</p>
+<ul>
+<li>鼠标悬停于图片路径时显示缩略图。</li>
+<li>支持 PNG、JPG、GIF、SVG 等常见格式。</li>
+<li>快速定位图片资源，避免频繁切换窗口。</li>
+</ul>
+<p><strong>适用场景</strong>：图像资源管理、静态网站开发、UI 设计对接。</p>
+<h2 id="Path-Intellisense-img-src-https-christian-kohler-gallerycdn-vsassets-io-extensions-christian-kohler-path-intellisense-2-10-0-1732919213601-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#Path-Intellisense-img-src-https-christian-kohler-gallerycdn-vsassets-io-extensions-christian-kohler-path-intellisense-2-10-0-1732919213601-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense">Path Intellisense</a> <img src="https://christian-kohler.gallerycdn.vsassets.io/extensions/christian-kohler/path-intellisense/2.10.0/1732919213601/Microsoft.VisualStudio.Services.Icons.Default"></h2>
+<blockquote>
+<p>Visual Studio Code plugin that autocompletes filenames</p>
+</blockquote>
+<p><strong>功能简介</strong>：文件路径自动补全。<br>
+<strong>核心功能</strong>：</p>
+<ul>
+<li>输入路径时提示当前目录下的文件与文件夹。</li>
+<li>支持相对路径与绝对路径补全。</li>
+<li>减少手动输入错误，提升代码可维护性。</li>
+</ul>
+<p><strong>适用场景</strong>：模块化开发、多文件项目管理。</p>
+<h2 id="CodeSnap-img-src-https-adpyke-gallerycdn-vsassets-io-extensions-adpyke-codesnap-1-3-4-1625238962906-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#CodeSnap-img-src-https-adpyke-gallerycdn-vsassets-io-extensions-adpyke-codesnap-1-3-4-1625238962906-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items/?itemName=adpyke.codesnap">CodeSnap</a> <img src="https://adpyke.gallerycdn.vsassets.io/extensions/adpyke/codesnap/1.3.4/1625238962906/Microsoft.VisualStudio.Services.Icons.Default"></h2>
+<blockquote>
+<p>Take beautiful screenshots of your code</p>
+</blockquote>
+<p><strong>功能简介</strong>：生成高亮代码截图。<br>
+<strong>核心功能</strong>：</p>
+<ul>
+<li>自定义截图背景、阴影、边距等样式。</li>
+<li>支持复制图片到剪贴板或保存为 PNG/SVG。</li>
+<li>可选行号显示与语法高亮主题。</li>
+</ul>
+<p><strong>适用场景</strong>：技术文档编写、社交媒体分享、代码教学。</p>
+<h2 id="Excalidraw-img-src-https-pomdtr-gallerycdn-vsassets-io-extensions-pomdtr-excalidraw-editor-3-8-1-1741785200720-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#Excalidraw-img-src-https-pomdtr-gallerycdn-vsassets-io-extensions-pomdtr-excalidraw-editor-3-8-1-1741785200720-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="">Excalidraw</a> <img src="https://pomdtr.gallerycdn.vsassets.io/extensions/pomdtr/excalidraw-editor/3.8.1/1741785200720/Microsoft.VisualStudio.Services.Icons.Default"></h2>
+<blockquote>
+<p>Draw diagrams and sketches in your editor</p>
+</blockquote>
+<p><strong>功能简介</strong>：手绘风格图表绘制工具。<br>
+<strong>核心功能</strong>：</p>
+<ul>
+<li>内置手绘图形、箭头、便签等元素。</li>
+<li>支持导出为 PNG/SVG 或保存为 .excalidraw 文件。</li>
+<li>实时协作功能（需搭配在线服务）。</li>
+</ul>
+<p><strong>适用场景</strong>：草图设计、流程图绘制、会议笔记。</p>
+<a class="tag-link" href="https://excalidraw.com/" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Excalidraw</div>
+            <div class="tag-link-sitename">在线网站</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<h2 id="Draw-io-img-src-https-hediet-gallerycdn-vsassets-io-extensions-hediet-vscode-drawio-1-9-250226013-1740566991071-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#Draw-io-img-src-https-hediet-gallerycdn-vsassets-io-extensions-hediet-vscode-drawio-1-9-250226013-1740566991071-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio">Draw.io</a> <img src="https://hediet.gallerycdn.vsassets.io/extensions/hediet/vscode-drawio/1.9.250226013/1740566991071/Microsoft.VisualStudio.Services.Icons.Default"></h2>
+<blockquote>
+<p>Draw diagrams and sketches in your editor</p>
+</blockquote>
+<p><strong>功能简介</strong>：专业图表与流程图设计工具。<br>
+<strong>核心功能</strong>：</p>
+<ul>
+<li>集成 <a href="http://Draw.io">Draw.io</a> 的完整功能，支持 UML、网络拓扑图等复杂图表。</li>
+<li>提供海量模板与图标库。</li>
+<li>直接保存图表为 .drawio 或导出为图片/PDF。</li>
+</ul>
+<p><strong>适用场景</strong>：技术架构设计、数据库建模、流程文档化。</p>
+<a class="tag-link" href="https://app.diagrams.net/" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Draw.io</div>
+            <div class="tag-link-sitename">在线网站</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<h2 id="GitHub-copilot-img-src-https-GitHub-gallerycdn-vsassets-io-extensions-github-copilot-1-296-1486-1743783345263-Microsoft-VisualStudio-Services-Icons-Default"><a class="header-anchor" href="#GitHub-copilot-img-src-https-GitHub-gallerycdn-vsassets-io-extensions-github-copilot-1-296-1486-1743783345263-Microsoft-VisualStudio-Services-Icons-Default">¶</a><a href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot">GitHub copilot</a> <img src="https://GitHub.gallerycdn.vsassets.io/extensions/github/copilot/1.296.1486/1743783345263/Microsoft.VisualStudio.Services.Icons.Default"></h2>
+<blockquote>
+<p>AI pair programmer</p>
+</blockquote>
+<p><strong>功能简介</strong>：AI 驱动的代码自动补全工具。<br>
+<strong>核心功能</strong>：</p>
+<ul>
+<li>基于上下文生成单行、多行甚至完整函数代码。</li>
+<li>支持 Python、JavaScript、Go 等主流语言。</li>
+<li>通过学习开源代码库提供符合习惯的代码建议。</li>
+</ul>
+<p><strong>适用场景</strong>：快速原型开发、学习新语言、减少重复编码。</p>
+<!-- ![](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png) -->
+]]></content>
+  </entry>
+  <entry>
+    <title>xuao Blog</title>
+    <url>/hiner/2025/04/16/xuao/</url>
+    <content><![CDATA[<p>开始学习 HTML 和 CSS 写的一个页面，后来在网上看到有意思的效果，都会写一遍</p>
+<h2 id="渐变"><a class="header-anchor" href="#渐变">¶</a>渐变</h2>
+<style>
+    .color {
+    width: 100%;
+    font-size: 4em;
+    text-align: center;
+    }
+    .color span {
+        color: #e0e0e0;
+        animation: ColorChange 1s infinite ease-in-out alternate;
+    }
+    @keyframes ColorChange {
+        to {
+            color: #ff0266;
+        }
+    }
+</style>
+<div class="color">
+    <span>C</span>
+    <span>O</span>
+    <span>L</span>
+    <span>O</span>
+    <span>R</span>
+    <span>F</span>
+    <span>U</span>
+    <span>L</span>
+</div>
+<script>
+    document.querySelectorAll('.color span').forEach((span, index) => {
+        span.style.animationDelay = `${index * 0.1}s`;
+    });
+</script>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.color</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">4em</span>;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.color</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#e0e0e0</span>;</span><br><span class="line">    <span class="attribute">animation</span>: ColorChange <span class="number">1s</span> infinite ease-in-out alternate;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@keyframes</span> ColorChange &#123;</span><br><span class="line">    <span class="selector-tag">to</span> &#123;</span><br><span class="line">        <span class="attribute">color</span>: <span class="number">#ff0266</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&#x27;.color span&#x27;</span>).<span class="title function_">forEach</span>(<span class="function">(<span class="params">span, index</span>) =&gt;</span> &#123;</span><br><span class="line">    span.<span class="property">style</span>.<span class="property">animationDelay</span> = <span class="string">`<span class="subst">$&#123;index * <span class="number">0.1</span>&#125;</span>s`</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="透明字"><a class="header-anchor" href="#透明字">¶</a>透明字</h2>
+<blockquote>
+<p>可换艺术字、使用滚动动画</p>
+</blockquote>
+<style>
+    .gta {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10vw;
+        background: url(https://imgapi.xl0408.top/index.php) no-repeat center/cover;
+        background-clip: text; /* 背景只在文字区域显示 */
+        color: transparent; /* 文字有颜色 */
+        animation: gta-scale 3s forwards;
+    }
+    @keyframes gta-scale {
+        from {
+            font-size: 500vw;
+            /* color: transparent; */
+        }
+        to {
+            font-size: 10vw;
+            /* color: #fff; */
+        }
+    }
+</style>
+<div style="width: 100%;height: 600px;">
+    <h1 class="gta">AMAZING</h1>
+</div>
+<h2 id="下划线"><a class="header-anchor" href="#下划线">¶</a>下划线</h2>
+<style>
+    .bline span {
+        font-size: 1.5em;
+        background: linear-gradient(to right, #f00, #00f) no-repeat;
+        background-size: 0px 2px;
+        background-position: right bottom;
+        transition: background-size 1s;
+        cursor: pointer;
+    }
+    .bline span:hover {
+        background-size: 100% 2px;
+        background-position: left bottom;
+    }
+</style>
+<div class="bline letter">
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur recusandae voluptatum quo dolore tenetur cum ipsa corporis, reprehenderit tempore inventore et labore sit illum natus, est maiores! Eveniet, corrupti reprehenderit?</span>
+</div>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.bline</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">1.5em</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(to right, <span class="number">#f00</span>, <span class="number">#00f</span>) no-repeat;</span><br><span class="line">    <span class="attribute">background-size</span>: <span class="number">0px</span> <span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">background-position</span>: right bottom;</span><br><span class="line">    <span class="attribute">transition</span>: background-size <span class="number">1s</span>;</span><br><span class="line">    <span class="attribute">cursor</span>: pointer;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.bline</span> <span class="selector-tag">span</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">background-size</span>: <span class="number">100%</span> <span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">background-position</span>: left bottom;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="首字样式"><a class="header-anchor" href="#首字样式">¶</a>首字样式</h2>
+<style>
+    .letter div::first-letter {
+        font-size: 2em;
+        text-transform: uppercase;
+        float: left;
+        margin-right: 10px;
+    }
+    .letter div::selection {
+        background-color: palevioletred;
+        text-decoration: underline;
+    }
+</style>
+<div class="bline letter">
+    <h3><span>A Covenant Between Civilization and Nature</span></h3>
+    <div>
+        Environmental crises now threaten humanity’s survival. Polar ice melting at unprecedented rates, 90% of
+        seabirds ingesting plastics, and rampant deforestation expose a fractured ecosystem. These are not isolated
+        issues but symptoms of a broken human-nature covenant.
+        True solutions demand dual action: individuals adopting sustainable habits and governments enforcing green
+        policies. As Jane Goodall warned, "Protecting nature is not a choice but a necessity for civilization’s
+        continuity." Environmentalism must evolve from "saving Earth" to redefining humanity’s role as stewards of a
+        shared biological legacy. Only by honoring this planetary covenant can we safeguard tomorrow’s world.
+    </div>
+</div>
+<blockquote>
+<p><strong>::selection</strong> 设置选中文本的样式</p>
+</blockquote>
+<blockquote>
+<p><strong>::first-letter</strong> 设置选中第一个字母</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.letter</span> <span class="selector-tag">div</span><span class="selector-pseudo">::first-letter</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">2em</span>;</span><br><span class="line">    <span class="attribute">text-transform</span>: uppercase;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">    <span class="attribute">margin-right</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.letter</span> <span class="selector-tag">div</span><span class="selector-pseudo">::selection</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: palevioletred;</span><br><span class="line">    <span class="attribute">text-decoration</span>: underline;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Tips</category>
+      </categories>
+      <tags>
+        <tag>Blog</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>我的改造</title>
     <url>/hiner/2025/03/16/%E6%88%91%E7%9A%84%E6%94%B9%E9%80%A0/</url>
     <content><![CDATA[<h2 id="右键菜单添加复制当前页面链接按钮"><a class="header-anchor" href="#右键菜单添加复制当前页面链接按钮">¶</a>右键菜单添加复制当前页面链接按钮</h2>
@@ -3335,6 +3335,11 @@ for (let i = 0; i < items.length; i++) {
 <p>themes\solitude\source\css_page\links.stylline &gt;line 152 .site-card-text &gt; .title</p>
 </blockquote>
 <figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="attribute">padding-bottom</span> <span class="number">7px</span></span><br></pre></td></tr></table></figure>
+<h2 id="brevity"><a class="header-anchor" href="#brevity">¶</a>brevity</h2>
+<blockquote>
+<p>themes\solitude\layout\includes\page\brevity.pug &gt;line 20</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if item.image</span><br><span class="line">    .bber-content-img</span><br><span class="line">        each img in item.image</span><br><span class="line">            if typeof img === &#x27;string&#x27;</span><br><span class="line">                img(src=img)</span><br><span class="line">            else</span><br><span class="line">                img(src=img.url, alt=img.alt)</span><br></pre></td></tr></table></figure>
 <a class="tag-link" href="https://yeminxi.github.io/posts/e4ce9af4.html" target="_blank">
     <div class="tag-link-tips">引用站外链接</div>
     <div class="tag-link-bottom">
