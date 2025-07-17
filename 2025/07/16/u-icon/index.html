@@ -1,0 +1,467 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>更改 U 盘图标 | Hinerの小窝</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="/hiner/img/pwa/favicon.png"><!-- index.css--><link rel="stylesheet" href="/hiner/css/index.css?v=3.0.19"><!-- inject head--><link rel="canonical" href="https://aozijx.github.io/hiner/2025/07/16/u-icon/index.html"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"><!-- aplayer--><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><!-- swiper--><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css"><!-- fancybox ui--><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.min.css"><!-- katex--><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><!-- Open Graph--><meta name="description" content="¶须知 本文通过在 U 盘根目录下放置一个图标文件（通常为.ico格式），并创建一个 inf 文件或 ini 文件来更改图标，当 U 盘插入电脑时，系统会自动读取这个配置文件，从而显示自定义图标。但大部分 U 盘格式为 exFAT，且 exFAT 不支持 NTFS 的文件系统属性（如系统文件标记），"><!-- pwa--><meta name="theme-color" content="#006a73"><meta name="apple-mobile-web-app-status-bar-style" content="#006a73"><link rel="manifest" href="/hiner/manifest.json"><meta name="msapplication-TileColor" content="#006a73"><link rel="mask-icon" href="/hiner/img/pwa/favicon.png" color="#006a73"><link rel="apple-touch-icon" sizes="180x180" href="/hiner/img/pwa/favicon.png"><link rel="icon" type="image/png" sizes="16x16" href="/hiner/img/pwa/favicon_16.png"><link rel="icon" type="image/png" sizes="32x32" href="/hiner/img/pwa/favicon_32.png"><link rel="bookmark" href="/hiner/img/pwa/favicon.png"><script>console.log(' %c Solitude %c ' + '3.0.19' + ' %c https://github.com/everfu/hexo-theme-solitude',
+    'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
+    'background:#ff9a9a ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff',
+    'background:unset ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff')
+</script><script>let mdate = "7-7,9-18,12-13";
+mdate = (mdate.split(","));
+let ndate = new Date();
+for (let i of mdate) {
+    if (i === (ndate.getMonth()+1) + "-" + (ndate.getDate())) {
+        document.documentElement.classList.add('memorial');
+    }
+}
+</script><script src="https://aozijx.github.io/hiner/js/copylink.js" async></script><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+
+                if (name && keyObj[name]) return
+
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+            addEventListenerPjax: (ele, event, fn, option = false) => {
+              ele.addEventListener(event, fn, option)
+              utils.addGlobalFn('pjax', () => {
+                  ele.removeEventListener(event, fn, option)
+              })
+            },
+            diffDateFormat: (selector) => {
+                selector.forEach(item => {
+                    const date = new Date(item.getAttribute('datetime') || item.textContent);
+                    item.textContent = (date.getMonth() + 1).toString()+'/'+date.getDate().toString();
+                });
+            },
+        }
+    })()</script><!-- theme--><script>initTheme = () => {
+    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const cachedMode = utils.saveToLocal.get('theme');
+    if (cachedMode === undefined) {
+        const nowMode =
+            isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', nowMode);
+    } else {
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    }
+    typeof rm === 'object' && rm.mode(cachedMode === 'dark' && isDarkMode)
+}
+initTheme()</script><!-- global head--><script>const GLOBAL_CONFIG = {
+    root: '/hiner/',
+    algolia: undefined,
+    localsearch: {"preload":true,"path":"search.xml"},
+    runtime: '2025-03-11 11:30:00',
+    lazyload: {
+        enable: false,
+        error: '/hiner/img/error_load.avif'
+    },
+    copyright: false,
+    highlight: {"limit":200,"expand":true,"copy":true,"syntax":"highlight.js"},
+    randomlink: true,
+    lang: {"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"day":"天前","hour":"小时前","just":"刚刚","min":"分钟前","month":"个月前"},"day":" 天","f12":"开发者模式已打开，请遵循GPL协议。","totalk":"无需删除空行，直接输入评论即可","search":{"empty":"找不到你查询的内容：${query}","hit":"找到 ${hits} 条结果，用时 ${time} 毫秒","placeholder":"输入关键词快速查找","count":"共 <b>${count}</b> 条结果。","loading":"搜索中..."}},
+    aside: {
+        state: {
+            morning: "✨ 早上好，新的一天开始了",
+            noon: "🍲 午餐时间",
+            afternoon: "🌞 下午好",
+            night: "早点休息",
+            goodnight: "晚安 😴",
+        },
+        witty_words: ["欢迎你","随便逛逛吧","祝你好运，陌生人"],
+        witty_comment: {
+            prefix: '好久不见，',
+            back: '欢迎再次回来，',
+        },
+    },
+    covercolor: {
+        enable: true
+    },
+    comment: false,
+    lightbox: 'fancybox',
+    right_menu: {"mode":{"dark":"深色模式","light":"浅色模式"},"img_error":"此图片无法复制与下载","music":{"start":"播放音乐","stop":"暂停音乐"},"translate":true,"ctrlOriginalMenu":"按住Ctrl+右键可打开浏览器右键菜单"},
+    translate: {"translateDelay":0,"defaultEncoding":2},
+    lure: {"jump":"404 Not Found","back":"ヾ(≧∇≦*)ゝ hey."},
+    expire: false,
+};</script><!-- page-config head--><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: '',
+    toc: true,
+    comment: false,
+    ai_text: false,
+    color: false,
+}</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha512-fHwaWebuwA7NSF5Qg/af4UeDx9XqUpYpOGgubo3yWu+b2IQR4UeQwbb42Ti7gVAjNtVoI/I9TEoYeu9omwcC6g==" crossorigin="anonymous" referrerpolicy="no-referrer" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/hiner/atom.xml" title="Hinerの小窝" type="application/atom+xml">
+</head><body id="body"><!-- universe--><canvas id="universe"></canvas><!-- background img--><div id="global_bg"></div><!-- loading--><!-- console--><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="solitude fas fa-xmark"></i></div><div class="console-card-group"><div class="console-card-group-right"><div class="console-card tags" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">标签</div><div class="author-content-item-title">寻找感兴趣的领域</div></div><div class="card-tag-cloud"><a href="/hiner/tags/%E5%8E%9F%E7%A5%9E/">原神<sup>1</sup></a><a href="/hiner/tags/Mod/">Mod<sup>3</sup></a><a href="/hiner/tags/GitHub/">GitHub<sup>1</sup></a><a href="/hiner/tags/Git/">Git<sup>1</sup></a><a href="/hiner/tags/Katex/">Katex<sup>3</sup></a><a href="/hiner/tags/steam/">steam<sup>3</sup></a><a href="/hiner/tags/%E6%98%9F%E9%9C%B2%E8%B0%B7%E7%89%A9%E8%AF%AD/">星露谷物语<sup>3</sup></a><a href="/hiner/tags/CSS/">CSS<sup>4</sup></a><a href="/hiner/tags/HTML/">HTML<sup>3</sup></a><a href="/hiner/tags/Hexo/">Hexo<sup>2</sup></a><a href="/hiner/tags/%E5%A3%81%E7%BA%B8/">壁纸<sup>1</sup></a><a href="/hiner/tags/Blog/">Blog<sup>1</sup></a></div></div><div class="console-card history" onclick="sco.hideConsole()"><ul class="card-archive-list"><li class="item"><a href="/archives/2025/07/"><span class="date">2025/07</span><div class="count-group"><span class="count">2</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2025/06/"><span class="date">2025/06</span><div class="count-group"><span class="count">2</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2025/05/"><span class="date">2025/05</span><div class="count-group"><span class="count">1</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2025/04/"><span class="date">2025/04</span><div class="count-group"><span class="count">5</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2025/03/"><span class="date">2025/03</span><div class="count-group"><span class="count">14</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/"><span class="date">全部文章</span><div class="count-group"><span class="count">24</span><span class="unit">篇</span></div></a></li></ul></div></div></div><div class="button-group"><div class="console-btn-item"><span class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换"><i class="solitude fas fa-circle-half-stroke"></i></span></div><div class="console-btn-item" id="consoleHideAside"><span class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制"><i class="solitude fas fa-arrows-left-right-to-line"></i></span></div><div class="console-btn-item" id="consoleMusic" onclick="sco.musicToggle()"><span class="music-switch" title="音乐开关"><i class="solitude fas fa-compact-disc"></i></span></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/hiner/archives/"><div class="headline">文章</div><div class="length-num">24</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/hiner/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/hiner/tags/"><div class="headline">标签</div><div class="length-num">12</div></a></div></div></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude fas fa-circle-half-stroke"></i><span>显示模式</span></span></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">project</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" title="Solitude"><img class="nolazyload back-menu-item-icon" src="/hiner/img/logo.png" alt="Solitude"><span class="back-menu-item-text">Solitude</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">音乐馆</div><div class="back-menu-list"><a class="back-menu-item" href="/hiner/HeoMusic/" title="HeoMusic"><img class="nolazyload back-menu-item-icon" src="/hiner/HeoMusic/img/icon.webp" alt="HeoMusic"><span class="back-menu-item-text">HeoMusic</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/archives/"><i class="solitude  fas fa-folder-closed"></i><span>全部文章</span></a></li><li><a class="site-page child" href="/hiner/categories/"><i class="solitude  fas fa-clone"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/hiner/tags/"><i class="solitude  fas fa-tags"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/links/"><i class="solitude  fas fa-user-group"></i><span>友情链接</span></a></li><li><a class="site-page child" href="/hiner/message/"><i class="solitude  fas fa-comment-dots"></i><span>弹幕</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>娱乐</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/tlink/"><i class="solitude  fas fa-toolbox"></i><span>工具</span></a></li><li><a class="site-page child" href="/hiner/music/"><i class="solitude  fas fa-music"></i><span>音乐馆</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>关于</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/about/"><i class="solitude  fas fa-address-card"></i><span>我</span></a></li><li><a class="site-page child" href="/hiner/essay/"><i class="solitude  fas fa-wifi"></i><span>说说</span></a></li><li><a class="site-page child" href="/hiner/Gallery/"><i class="solitude  fa-solid fa-image"></i><span>图库</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="card-tag-cloud"><a href="/hiner/tags/%E5%8E%9F%E7%A5%9E/">原神<sup>1</sup></a><a href="/hiner/tags/Mod/">Mod<sup>3</sup></a><a href="/hiner/tags/GitHub/">GitHub<sup>1</sup></a><a href="/hiner/tags/Git/">Git<sup>1</sup></a><a href="/hiner/tags/Katex/">Katex<sup>3</sup></a><a href="/hiner/tags/steam/">steam<sup>3</sup></a><a href="/hiner/tags/%E6%98%9F%E9%9C%B2%E8%B0%B7%E7%89%A9%E8%AF%AD/">星露谷物语<sup>3</sup></a><a href="/hiner/tags/CSS/">CSS<sup>4</sup></a><a href="/hiner/tags/HTML/">HTML<sup>3</sup></a><a href="/hiner/tags/Hexo/">Hexo<sup>2</sup></a><a href="/hiner/tags/%E5%A3%81%E7%BA%B8/">壁纸<sup>1</sup></a><a href="/hiner/tags/Blog/">Blog<sup>1</sup></a></div></div></div></div><!-- keyboard--><!-- righhtside--><div class="needEndHide" id="rightside"><div class="rs_hide"><button class="translate" type="button" title="简繁转换">简</button><button class="mode" type="button" title="显示模式切换" onclick="sco.switchDarkMode()"><i class="fas fa-circle-half-stroke"></i></button><button class="aside pc" type="button" title="侧边栏" onclick="sco.switchHideAside()"><i class="fas fa-arrows-alt-h"></i></button></div><div class="rs_show"><button class="config" type="button" title="扩展" onclick="document.querySelector(&quot;.rs_hide&quot;).classList.toggle(&quot;show&quot;)"><i class="fas fa-gear fa-spin"></i></button><button class="mobile toc" type="button" title="目录" onclick="document.querySelector('#card-toc').classList.toggle('open')"><i class="fas fa-list"></i></button><button class="top" type="button" title="返回顶部" onclick="sco.toTop()"><i class="fas fa-arrow-up"></i><span id="percent">0</span></button></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><div class="back-home-button" tabindex="-1"><i class="back-home-button-icon solitude fas fa-bars-progress"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">project</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" title="Solitude"><img class="nolazyload back-menu-item-icon" src="/hiner/img/logo.png" alt="Solitude"><span class="back-menu-item-text">Solitude</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">音乐馆</div><div class="back-menu-list"><a class="back-menu-item" href="/hiner/HeoMusic/" title="HeoMusic"><img class="nolazyload back-menu-item-icon" src="/hiner/HeoMusic/img/icon.webp" alt="HeoMusic"><span class="back-menu-item-text">HeoMusic</span></a></div></div></div></div><a id="site-name" href="/hiner/" title="返回博客主页"><span class="title">Solitude</span><i class="solitude fas fa-home"></i></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">更改 U 盘图标</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/archives/"><i class="solitude  fas fa-folder-closed"></i><span>全部文章</span></a></li><li><a class="site-page child" href="/hiner/categories/"><i class="solitude  fas fa-clone"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/hiner/tags/"><i class="solitude  fas fa-tags"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/links/"><i class="solitude  fas fa-user-group"></i><span>友情链接</span></a></li><li><a class="site-page child" href="/hiner/message/"><i class="solitude  fas fa-comment-dots"></i><span>弹幕</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>娱乐</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/tlink/"><i class="solitude  fas fa-toolbox"></i><span>工具</span></a></li><li><a class="site-page child" href="/hiner/music/"><i class="solitude  fas fa-music"></i><span>音乐馆</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>关于</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/about/"><i class="solitude  fas fa-address-card"></i><span>我</span></a></li><li><a class="site-page child" href="/hiner/essay/"><i class="solitude  fas fa-wifi"></i><span>说说</span></a></li><li><a class="site-page child" href="/hiner/Gallery/"><i class="solitude  fa-solid fa-image"></i><span>图库</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="travellings_button"><a class="site-page" target="_blank" rel="noopener" href="https://www.travellings.cn/go.html" title=""><i class="solitude fas fa-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机一篇文章" href="javascript:void(0);"><i class="solitude fas fa-dice-d6"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索"><i class="solitude fas fa-magnifying-glass"></i></a></div><div class="nav-button" id="nav-console"><a class="console_switchbutton" onclick="sco.showConsole()" title="中控台" href="javascript:void(0);"><label><i class="left"></i><i class="center"></i><i class="right"></i></label></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude fas fa-bars"></i></a></div></div></div></nav><div class="coverdiv" id="coverdiv"><img class="nolazyload" id="post-cover" src="/hiner/img/default.avif" alt="更改 U 盘图标"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="该文章为原创文章，注意版权协议">原创</a><div class="tag_share"><div class="post-meta__tag-list"></div></div></div></div><h1 class="post-title">更改 U 盘图标</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-date" title="发布于 2025-07-16 15:17:16"><i class="post-meta-icon solitude fas fa-calendar-days"></i><time datetime="2025-07-16T07:17:16.000Z">2025-07-16T07:17:16.000Z</time></span><span class="post-meta-date" title="最后更新于 2025-07-16 16:54:22"><i class="post-meta-icon solitude fas fa-arrows-rotate"></i><time datetime="2025-07-16T08:54:22.461Z">2025-07-16T08:54:22.461Z</time></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content article-container"><h2 id="须知"><a class="header-anchor" href="#须知">¶</a>须知</h2>
+<p>本文通过在 U 盘根目录下放置一个图标文件（通常为.ico格式），并创建一个 inf 文件或 ini 文件来更改图标，当 U 盘插入电脑时，系统会自动读取这个配置文件，从而显示自定义图标。但大部分 U 盘格式为 exFAT，且 exFAT 不支持 NTFS 的文件系统属性（如系统文件标记），所以attrib 命令的 +s（系统文件）属性可能无效，又因为 Windows 默认可能禁用自动运行，inf 文件半无效，最后总结来说是个半成品。</p>
+<h2 id="准备"><a class="header-anchor" href="#准备">¶</a>准备</h2>
+<p>需要一张 ico 格式的图片，不能通过更改 jpg 或 png 图片来得到</p>
+<ul>
+<li>.ico 是特殊的容器格式，支持多尺寸/多色深图标（如 16x16, 32x32, 256x256 等），而 jpg/png 是单图层的压缩图像格式。</li>
+<li>ICO 文件至少需要 16x16 和 32x32 尺寸，否则在某些界面（如任务栏）会显示模糊。</li>
+</ul>
+<p><strong>在线转换工具</strong>：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.icoconverter.com">icoconverter.com</a></li>
+<li><a target="_blank" rel="noopener" href="https://convertio.co/ico-png/">convertio.co/ico-png</a></li>
+</ul>
+<p>上传图片并下载转换后的 ICO 文件。对图片文件进行重命名，后文用 x.ico 指代，并将其放在 U 盘的根目录下。</p>
+<h2 id="步骤"><a class="header-anchor" href="#步骤">¶</a>步骤</h2>
+<h3 id="方法一：使用-autorun-inf-文件"><a class="header-anchor" href="#方法一：使用-autorun-inf-文件">¶</a>方法一：使用 autorun.inf 文件</h3>
+<ol>
+<li>在 U 盘根目录下创建一个文本文件，将其命名为“autorun.inf”（注意：文件名必须是这个）。</li>
+<li>编辑 autorun.inf 文件，添加以下内容：</li>
+</ol>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[Autorun]</span></span><br><span class="line"><span class="attr">icon</span>=x.ico</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>保存文件，然后安全弹出 U 盘并重新插入，即可看到图标已经改变。</li>
+</ol>
+<p>注意：在某些操作系统中（如 Windows 10 及以上版本），由于安全原因，自动运行功能可能被默认禁用，因此图标可能不会自动更新。此时，我们可以尝试以下方法：</p>
+<ul>
+<li>确保图标文件是.ico格式，并且路径正确。</li>
+<li>重启电脑或资源管理器。</li>
+<li>在文件夹选项中设置显示图标而不是缩略图。</li>
+</ul>
+<p>另外，如果U盘已经分区，可能需要在每个分区都进行上述操作（如果有多个分区需要更改的话）。<br>
+但是，请注意，使用 autorun.inf 来更改图标的方法在现代操作系统中可能不再被支持，因为 autorun.inf 曾被用于传播病毒，所以微软在后续系统中禁用了 autorun 功能（除了 CD 驱动器）。因此，如果上述方法无效，我们可以采用另一种方法：</p>
+<h2 id="方法二：使用-desktop-ini-文件"><a class="header-anchor" href="#方法二：使用-desktop-ini-文件">¶</a>方法二：使用 desktop.ini 文件</h2>
+<ol>
+<li>在 U 盘根目录下创建一个桌面配置文件，命名为“desktop.ini”（如果已经存在，则直接编辑）。</li>
+<li>在 desktop.ini 文件中写入以下内容：</li>
+</ol>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[.ShellClassInfo]</span></span><br><span class="line"><span class="attr">IconResource</span>=x.ico,<span class="number">0</span></span><br><span class="line"><span class="comment">; [ViewState]</span></span><br><span class="line"><span class="comment">; Mode=</span></span><br><span class="line"><span class="comment">; Vid=</span></span><br><span class="line"><span class="comment">; FolderType=Generic</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>保存文件，并将desktop.ini文件设置为隐藏和系统文件（避免被误删）。</li>
+</ol>
+<ul>
+<li>按 Win + R 输入 cmd 打开命令提示符。</li>
+<li>在U盘根目录执行命令：<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">attrib</span> +s +h desktop.ini  # 隐藏并设为系统文件</span><br><span class="line"><span class="built_in">attrib</span> +s +h custom.ico   # 可选，隐藏图标文件</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="4">
+<li>将 U 盘安全弹出并重新插入，或在资源管理器按 F5 刷新。</li>
+</ol>
+<p>注意：方法二需要确保 U 盘的文件系统是 NTFS（因为 FAT32 不支持文件属性设置），如果不是，可能需要转换文件系统（注意：转换文件系统会清除U盘数据，请先备份）。</p>
+<h2 id="备注"><a class="header-anchor" href="#备注">¶</a>备注</h2>
+<h3 id="刷新资源管理器"><a class="header-anchor" href="#刷新资源管理器">¶</a>刷新资源管理器</h3>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">taskkill</span> /f /im explorer.exe &amp;&amp; <span class="built_in">start</span> explorer</span><br></pre></td></tr></table></figure>
+<h3 id="取消隐藏属性"><a class="header-anchor" href="#取消隐藏属性">¶</a>取消隐藏属性</h3>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">:: 以管理员身份运行<span class="built_in">CMD</span></span><br><span class="line"><span class="built_in">attrib</span> -h -s X:\desktop.ini</span><br><span class="line"><span class="built_in">attrib</span> -h -s X:\your_icon.ico</span><br></pre></td></tr></table></figure>
+<p>（X: 替换为U盘盘符）</p>
+<h3 id="🌐-exFAT-系统图标兼容性对照表"><a class="header-anchor" href="#🌐-exFAT-系统图标兼容性对照表">¶</a>🌐 exFAT 系统图标兼容性对照表</h3>
+<table>
+<thead>
+<tr>
+<th>操作系统</th>
+<th>autorun.inf</th>
+<th>desktop.ini</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows 10/11</td>
+<td>❌ 默认禁用</td>
+<td>✅ 需强制刷新</td>
+</tr>
+<tr>
+<td>Windows 7/8</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>macOS</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Linux</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<h3 id="📜-完整-autorun-inf-配置模板"><a class="header-anchor" href="#📜-完整-autorun-inf-配置模板">¶</a>📜 完整 autorun.inf 配置模板</h3>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[AutoRun]</span>                                   <span class="comment">; 必须的配置段</span></span><br><span class="line"><span class="attr">icon</span>=.\icons\custom.ico                     <span class="comment">; 图标路径（支持相对路径）</span></span><br><span class="line"><span class="attr">label</span>=My Secret Drive                       <span class="comment">; 驱动器显示名称</span></span><br><span class="line"><span class="attr">action</span>=Open Documents                       <span class="comment">; 自动运行提示文本</span></span><br><span class="line"><span class="attr">open</span>=setup.exe                              <span class="comment">; 自动运行程序路径</span></span><br><span class="line">shell\<span class="attr">open</span>=打开(&amp;O)                         <span class="comment">; 右键菜单命令1</span></span><br><span class="line">shell\open\<span class="attr">command</span>=start.exe doc            <span class="comment">; 命令1执行程序</span></span><br><span class="line">shell\<span class="attr">explore</span>=文件管理(&amp;X)                  <span class="comment">; 右键菜单命令2</span></span><br><span class="line">shell\explore\<span class="attr">command</span>=explorer.exe .        <span class="comment">; 命令2执行程序</span></span><br><span class="line"></span><br><span class="line"><span class="section">[Content]</span>                                   <span class="comment">; 媒体类型识别（Win7+）</span></span><br><span class="line"><span class="attr">MusicFiles</span>=<span class="literal">false</span>                            <span class="comment">; 禁用音乐文件预览</span></span><br><span class="line"><span class="attr">PictureFiles</span>=<span class="literal">false</span>                          <span class="comment">; 禁用图片文件预览</span></span><br><span class="line"><span class="attr">VideoFiles</span>=<span class="literal">false</span>                            <span class="comment">; 禁用视频文件预览</span></span><br><span class="line"></span><br><span class="line"><span class="section">[ExclusiveContentPaths]</span>                     <span class="comment">; 指定特殊目录</span></span><br><span class="line">Private                                     <span class="comment">; 隐藏目录（不显示预览）</span></span><br><span class="line"></span><br><span class="line"><span class="section">[IgnoreContentPaths]</span>                        <span class="comment">; 忽略预览的目录</span></span><br><span class="line">Backup                                      <span class="comment">; 跳过备份目录</span></span><br><span class="line">Temp                                        <span class="comment">; 跳过临时目录</span></span><br><span class="line"></span><br><span class="line"><span class="comment">; === 高级安全设置 ===</span></span><br><span class="line"><span class="section">[DeviceInstall]</span>                             <span class="comment">; 驱动程序安装</span></span><br><span class="line"><span class="comment">; CopyFiles=DriverSection                   ; 需要配合[DriverInstall]使用</span></span><br><span class="line"></span><br><span class="line"><span class="section">[DriverInstall]</span>                             <span class="comment">; 驱动程序配置</span></span><br><span class="line"><span class="comment">; CopyFiles=DriverFiles                     ; 需要INF文件支持</span></span><br></pre></td></tr></table></figure>
+<p>🔍 参数详解表</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>值示例</th>
+<th>作用</th>
+<th>系统支持</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>icon</code></strong></td>
+<td><code>\res\icon.ico</code></td>
+<td>设置驱动器图标</td>
+<td>WinXP - Win11</td>
+<td>支持相对路径（如 <code>.\icons\myicon.ico</code>）</td>
+</tr>
+<tr>
+<td><strong><code>label</code></strong></td>
+<td><code>Work Backup</code></td>
+<td>自定义驱动器名称</td>
+<td>所有Windows版本</td>
+<td>显示在&quot;此电脑&quot;中的名称</td>
+</tr>
+<tr>
+<td><strong><code>action</code></strong></td>
+<td><code>查看相册</code></td>
+<td>自动运行提示文字</td>
+<td>WinXP - Win10</td>
+<td>插入U盘时弹出的提示框文本（需启用自动播放）</td>
+</tr>
+<tr>
+<td><strong><code>open</code></strong></td>
+<td><code>autorun\start.exe</code></td>
+<td>指定自动运行程序</td>
+<td>WinXP - Win7</td>
+<td>需禁用自动播放策略才有效</td>
+</tr>
+<tr>
+<td><strong><code>shell\verb</code></strong></td>
+<td><code>扫描病毒</code></td>
+<td>添加右键菜单自定义项</td>
+<td>Win7+</td>
+<td><code>verb</code>可替换为任意命令名（如 <code>open</code>, <code>scan</code>）</td>
+</tr>
+<tr>
+<td><strong><code>shell\verb\command</code></strong></td>
+<td><code>antivirus.exe /scan</code></td>
+<td>关联右键菜单的执行命令</td>
+<td>Win7+</td>
+<td>需与 <code>shell\verb</code> 配对使用</td>
+</tr>
+<tr>
+<td><strong><code>MusicFiles</code></strong></td>
+<td><code>true</code>/<code>false</code></td>
+<td>启用/禁用音乐文件预览</td>
+<td>Win7+</td>
+<td>禁用可提升U盘打开速度</td>
+</tr>
+<tr>
+<td><strong><code>PictureFiles</code></strong></td>
+<td><code>true</code>/<code>false</code></td>
+<td>启用/禁用图片文件预览</td>
+<td>Win7+</td>
+<td>禁用后缩略图不显示</td>
+</tr>
+<tr>
+<td><strong><code>VideoFiles</code></strong></td>
+<td><code>true</code>/<code>false</code></td>
+<td>启用/禁用视频文件预览</td>
+<td>Win7+</td>
+<td>影响资源管理器性能</td>
+</tr>
+<tr>
+<td><strong><code>shellexecute</code></strong></td>
+<td>（空值）</td>
+<td>禁用所有自动执行</td>
+<td>Win10/11</td>
+<td>安全防护关键设置</td>
+</tr>
+<tr>
+<td><strong><code>useAutoPlay</code></strong></td>
+<td><code>0</code>/<code>1</code></td>
+<td>强制关闭/开启自动播放</td>
+<td>Win7+</td>
+<td>需配合组策略设置</td>
+</tr>
+<tr>
+<td><strong><code>NoDriveTypeAutoRun</code></strong></td>
+<td><code>0x91</code></td>
+<td>通过注册表禁用自动运行</td>
+<td>所有版本</td>
+<td>需导入注册表（安全防护）</td>
+</tr>
+</tbody>
+</table>
+<p>⚠️ 安全注意事项</p>
+<ol>
+<li>禁用自动运行（防病毒关键）<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[AutoRun]</span></span><br><span class="line"><span class="attr">shellexecute</span>=                            <span class="comment">; 显式禁用执行</span></span><br><span class="line"><span class="attr">useautoPlay</span>=<span class="number">0</span>                            <span class="comment">; 关闭自动播放</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>阻止恶意代码<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[AutorunDisabled]</span>                        <span class="comment">; 完全禁用自动运行</span></span><br><span class="line"><span class="attr">NoDriveType</span>=<span class="number">0</span>xFF                         <span class="comment">; 禁止所有类型驱动器自动运行</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author_group"><div class="post-copyright__author_img"><img class="post-copyright__author_img_front" src="/hiner/img/logo.png"></div><div class="post-copyright__author_name">Hiner</div><div class="post-copyright__author_desc"></div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div><div class="post-reward"><div class="reward-button" title="赞赏作者" onclick="AddRewardMask()"><i class="solitude fas fa-heart"></i>赞赏作者</div><div class="reward-main"><ul class="reward-all"><span class="reward-title">感谢您的赞赏</span><ul class="reward-group"><li class="reward-item"><a href="https://aozijx.github.io/aozijx/wechat_qr_code.png"><img class="post-qr-code-img nolazyload" src="https://aozijx.github.io/aozijx/wechat_qr_code.png" alt="WeChat" style="border-color: var(--efu-green)"></a><div class="post-qr-code-desc">WeChat</div></li><li class="reward-item"><a href="https://aozijx.github.io/aozijx/alipay_qr_code.png"><img class="post-qr-code-img nolazyload" src="https://aozijx.github.io/aozijx/alipay_qr_code.png" alt="Alipay" style="border-color: var(--efu-blue)"></a><div class="post-qr-code-desc">Alipay</div></li></ul><a class="reward-main-btn" href="/hiner/about/"><div class="reward-text">赞赏名单</div><div class="reward-dec">因为您的支持，我才能够实现写作的价值。</div></a></ul></div></div><script>function RemoveRewardMask() {
+    let rewardMainElements = document.querySelectorAll(".reward-main");
+    let quitBoxElement = document.querySelector("#quit-box");
+
+    rewardMainElements.forEach(element => {
+        element.style.display = "none";
+    });
+
+    if (quitBoxElement) {
+        quitBoxElement.style.display = "none";
+    }
+}
+
+function AddRewardMask() {
+    let rewardMainElements = document.querySelectorAll(".reward-main");
+    let quitBoxElement = document.querySelector("#quit-box");
+
+    rewardMainElements.forEach(element => {
+        element.style.display = "flex";
+    });
+
+    if (quitBoxElement) {
+        quitBoxElement.style.display = "flex";
+    }
+}</script><div class="reward-link mode"><a class="reward-link-button" href="/hiner/atom.xml"><i class="solitude fas fa-seedling"></i>订阅</a></div></div></div><div class="social-share"><a class="social-share-ico icon-qq" target="_blank" rel="noopener" href="https://connect.qq.com/widget/shareqq/index.html?url=https%3A%2F%2Faozijx.github.io%2Fhiner%2Fhiner%2F2025%2F07%2F16%2Fu-icon%2F&amp;title=%E6%9B%B4%E6%94%B9%20U%20%E7%9B%98%E5%9B%BE%E6%A0%87&amp;desc=undefined&amp;summary=undefined&amp;site=%E6%9B%B4%E6%94%B9%20U%20%E7%9B%98%E5%9B%BE%E6%A0%87&amp;pics=img%2Fdefault.avif" title="分享到QQ"><i class="solitude fab fa-qq"></i></a><a class="social-share-ico icon-weibo" target="_blank" rel="noopener" href="http://service.weibo.com/share/share.php?url=https%3A%2F%2Faozijx.github.io%2Fhiner%2Fhiner%2F2025%2F07%2F16%2Fu-icon%2F&amp;title=%E6%9B%B4%E6%94%B9%20U%20%E7%9B%98%E5%9B%BE%E6%A0%87&amp;pic=img%2Fdefault.avif" title="分享到微博"><i class="solitude fab fa-weibo"></i></a><div class="social-share-ico icon-link" onclick="utils.copy(&quot;https://aozijx.github.io/hiner/hiner/2025/07/16/u-icon/&quot;)" title="复制文章链接"><i class="solitude fas fa-link"></i></div><div class="social-share-ico icon-qrcode" title="使用手机扫码阅读这篇文章"><i class="solitude fas fa-qrcode"></i><div class="share-main"><div class="share-main-all"><div id="qrcode"></div><div class="reward-dec">使用手机扫码阅读这篇文章</div></div></div><script pjax>typeof QRCode === 'function' && new QRCode(document.getElementById("qrcode"), {
+    text: 'https://aozijx.github.io/hiner/hiner/2025/07/16/u-icon/',
+    correctLevel : QRCode.CorrectLevel.L
+});
+window.addEventListener('DOMContentLoaded', () => {
+    new QRCode(document.getElementById("qrcode"), {
+        text: 'https://aozijx.github.io/hiner/hiner/2025/07/16/u-icon/',
+        correctLevel : QRCode.CorrectLevel.L
+    });
+});
+</script></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本文是原创文章，采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans">CC BY-NC-SA 4.0</a>协议，完整转载请注明来自<a href="/hiner/">Hinerの小窝</a></span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"></div></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="next-post pull-full"><a href="/hiner/2025/07/08/vue/"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">CSS 属性</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="top-group"><div class="sayhi" id="sayhi" onclick="sco.changeWittyWord()"></div></div></div><div class="avatar"><img alt="头像" src="/hiner/img/logo.png"></div><div class="description">何须浅碧深红色,<br>自是花中第一流。</div><div class="bottom-group"><span class="left"><div class="name">Hiner</div><div class="desc">只有迎风，风筝才能飞得更高。</div></span><div class="social-icons is-center"><a class="social-icon" target="_blank" rel="noopener" href="https://github.com/aozijx" title="Github"><i class="solitude  fab fa-github"></i></a><a class="social-icon" href="mailto:xxhtxml@outlook.com" title="Mail"><i class="solitude  far fa-envelope"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="solitude fas fa-bars"></i><span>文章目录</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%BB%E7%9F%A5"><span class="toc-text">须知</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87"><span class="toc-text">准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4"><span class="toc-text">步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80%EF%BC%9A%E4%BD%BF%E7%94%A8-autorun-inf-%E6%96%87%E4%BB%B6"><span class="toc-text">方法一：使用 autorun.inf 文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C%EF%BC%9A%E4%BD%BF%E7%94%A8-desktop-ini-%E6%96%87%E4%BB%B6"><span class="toc-text">方法二：使用 desktop.ini 文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%87%E6%B3%A8"><span class="toc-text">备注</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%B7%E6%96%B0%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8"><span class="toc-text">刷新资源管理器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%96%E6%B6%88%E9%9A%90%E8%97%8F%E5%B1%9E%E6%80%A7"><span class="toc-text">取消隐藏属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8C%90-exFAT-%E7%B3%BB%E7%BB%9F%E5%9B%BE%E6%A0%87%E5%85%BC%E5%AE%B9%E6%80%A7%E5%AF%B9%E7%85%A7%E8%A1%A8"><span class="toc-text">🌐 exFAT 系统图标兼容性对照表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%9C-%E5%AE%8C%E6%95%B4-autorun-inf-%E9%85%8D%E7%BD%AE%E6%A8%A1%E6%9D%BF"><span class="toc-text">📜 完整 autorun.inf 配置模板</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="solitude fas fa-map"></i><span>最近发布</span></div><div class="aside-list"><a class="aside-list-item" href="/hiner/2025/07/16/u-icon/" title="更改 U 盘图标"><div class="thumbnail"><img alt="更改 U 盘图标" src="/hiner/img/default.avif"></div><div class="content"><span class="title" href="/hiner/2025/07/16/u-icon/" title="更改 U 盘图标">更改 U 盘图标</span></div></a><a class="aside-list-item" href="/hiner/2025/07/08/vue/" title="CSS 属性"><div class="thumbnail"><img alt="CSS 属性" src="/hiner/src/img/mdn_web_docs.png"></div><div class="content"><span class="title" href="/hiner/2025/07/08/vue/" title="CSS 属性">CSS 属性</span><span class="categories" href="/hiner/2025/07/08/vue/">笔记</span></div></a><a class="aside-list-item" href="/hiner/2025/06/30/html/" title="HTML 标签，知识"><div class="thumbnail"><img alt="HTML 标签，知识" src="/hiner/img/default.avif"></div><div class="content"><span class="title" href="/hiner/2025/06/30/html/" title="HTML 标签，知识">HTML 标签，知识</span><span class="categories" href="/hiner/2025/06/30/html/">笔记</span></div></a><a class="aside-list-item" href="/hiner/2025/06/18/color-mode/" title="主题切换方式"><div class="thumbnail"><img alt="主题切换方式" src="/hiner/img/default.avif"></div><div class="content"><span class="title" href="/hiner/2025/06/18/color-mode/" title="主题切换方式">主题切换方式</span><span class="categories" href="/hiner/2025/06/18/color-mode/">笔记</span></div></a><a class="aside-list-item" href="/hiner/2025/05/10/vscode-plugin/" title="VSCode 插件"><div class="thumbnail"><img alt="VSCode 插件" src="/hiner/img/default.avif"></div><div class="content"><span class="title" href="/hiner/2025/05/10/vscode-plugin/" title="VSCode 插件">VSCode 插件</span></div></a></div></div></div></div></main><footer id="footer"><div id="st-footer-bar"><div class="footer-logo"><span>Solitude</span></div><div class="footer-bar-description"></div></div><div id="footer_deal"><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/aozijx" title="Github"><i class="solitude  fab fa-github"></i></a><a class="deal_link" href="mailto:xxhtxml@outlook.com" title="Mail"><i class="solitude  far fa-envelope"></i></a><div class="nolazyload footer_mini_logo" id="footer_mini_logo" title="返回顶部" onclick="sco.toTop()"><img src="https://aozijx.github.io/xuao/src/img/cat.gif" alt="返回顶部"></div><a class="deal_link" target="_blank" rel="noopener" href="https://space.bilibili.com/522238567" title="Bilibili"><i class="solitude  fab fa-bilibili"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://v.douyin.com/yKIxrIQOcJI/" title="Douyin"><i class="solitude  fab fa-tiktok"></i></a></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2025 By&nbsp;<a class="footer-bar-link" href="/hiner/"><img class="author-avatar" src="/hiner/img/pwa/favicon.png">Hiner</a></div><div class="beian-group"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://hexo.io/">框架：Hexo</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude">主题：Solitude</a></div></div><div class="footer-bar-right"><a class="footer-bar-link" href="/hiner/atom.xml" alt="RSS">RSS</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude/blob/main/LICENSE" alt="License"><i class="solitude fas fa-copyright"></i><i class="solitude fab fa-creative-commons-by"></i><i class="solitude fab fa-creative-commons-nc"></i><i class="solitude fab fa-creative-commons-nd"></i></a></div></div></div></footer></div><!-- right_menu--><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="solitude fas fa-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="solitude fas fa-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="solitude fas fa-arrows-rotate"></i></div><div class="rightMenu-item" id="menu-top"><i class="solitude fas fa-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="solitude fas fa-clone"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="solitude fas fa-clipboard"></i><span>粘贴文本</span></div><div class="rightMenu-item" id="menu-newwindow"><i class="solitude far fa-window-maximize"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="solitude fas fa-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="solitude fas fa-clone"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="solitude fas fa-cloud-arrow-down"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-search"><i class="solitude fas fa-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="solitude fas fa-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="solitude fas fa-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="solitude fas fa-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="solitude fas fa-clone"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" id="menu-randomPost" onclick="toRandomPost()||rm.hideRightMenu()"><i class="solitude fas fa-tower-broadcast"></i><span>随机文章</span></div><div class="rightMenu-item" id="menu-copyPostLink" onclick="copyPostLink()||rm.hideRightMenu()"><i class="solitude fas fa-link"></i><span>复制链接</span></div><div class="rightMenu-item" id="consoleMusic" onclick="sco.musicToggle()||rm.hideRightMenu()"><i class="solitude solitude fas fa-compact-disc"></i><span>音乐胶囊</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" id="menu-darkmode" onclick="sco.switchDarkMode()"><i class="solitude fas fa-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></div><div class="rightMenu-item" id="menu-translate"><i class="solitude fas fa-language"></i><span>轉為繁體</span></div></div></div><div id="rightmenu-mask"></div><!-- inject body--><div><script src="/hiner/js/utils.js?v=3.0.19"></script><script src="/hiner/js/main.js?v=3.0.19"></script><script src="/hiner/js/third_party/waterfall.min.js?v=3.0.19"></script><script src="https://fastly.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="https://fastly.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script><script src="https://fastly.jsdelivr.net/npm/typeit@8.8.7/dist/index.umd.min.js"></script><script src="/hiner/js/third_party/universe.min.js?v=3.0.19"></script><script>dark()
+</script><script src="/hiner/js/tw_cn.js?v=3.0.19"></script><script src="https://fastly.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script src="https://fastly.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.umd.min.js"></script><script src="https://fastly.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js"></script><script>var meting_api = 'https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r';</script><script src="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://fastly.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script><script src="https://fastly.jsdelivr.net/npm/colorthief@2.6.0/dist/color-thief.min.js"></script><script src="/hiner/js/covercolor/local.js?v=3.0.19"></script><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+utils.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+</script><script src="https://fastly.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><script src="/hiner/js/right_menu.js?v=3.0.19"></script><script src="https://cdn.jsdelivr.net/npm/greensock@1.20.2/dist/TweenLite.js"></script><script src="/hiner/src/live2d/live2dcubismcore.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pixi.js@5.3.6/dist/pixi.min.js"></script><script src="/hiner/src/live2d/cubism4.min.js"></script><link href="/hiner/src/live2d/pio.css" rel="stylesheet" type="text/css"/><script src="/hiner/src/live2d/pio.js"></script><script src="https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/pio_sdk4.js"></script><script src="https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/load.js"></script><div class="js-pjax"></div></div><script>const links = [{"name":"Hexo","link":"https://hexo.io/"},{"name":"Solitude","link":"https://github.com/everfu/hexo-theme-solitude"},{"name":"伍拾柒","link":"https://www.efu.me/"},{"name":"张洪Heo","link":"https://blog.zhheo.com/"},{"name":"❖星港◎Star☆","link":"https://blog.starsharbor.com"},{"name":"Elykia","link":"https://blog.elykia.cn/"},{"name":"璜珀 · HPCesia","link":"https://blog.hpcesia.com/"},{"name":"轻笑Chuckle","link":"https://www.qcqx.cn/"},{"name":"MuXiaoChen🍊","link":"https://www.aimiliy.top/"},{"name":"贰猹の小窝","link":"https://noionion.top/"},{"name":"Bruce","link":"https://wanglin.blog/"},{"name":"霜月","link":"https://linium.xin/"},{"name":"Rimrose","link":"https://rimrose.top/"}]
+const randomText = '点击前往按钮进入随机一个友链，不保证跳转网站的安全性和可用性。本次随机到的是本站友链：⌈ ${name} ⌋'
+function travelling() {
+    const link = links[utils.randomNum(links.length)];
+    Snackbar.show({
+        text: randomText.replace(/\$\{name}/,link.name),
+        duration: 8000,
+        pos: 'top-center',
+        actionText: '前往',
+        onActionClick: function(element) {
+            element.style.opacity = 0;
+            window.open(link.link, '_blank');
+        }
+    });
+}
+</script><script>function randomLinksList() {
+    const linkcard = document.getElementById('friend-links-in-footer');
+    if (linkcard == null) return;
+
+    let data = '';
+    let linksCopy = [...links];
+    let count = Math.min(3, linksCopy.length);
+
+    for (let i = 0; i < count; i++) {
+        let index = utils.randomNum(linksCopy.length);
+        const {link, name} = linksCopy[index];
+        data += `<a class="footer-item" href="${link}" target="_blank" rel="noopener noreferrer nofollow">${name}</a>`;
+        linksCopy.splice(index, 1);
+    }
+
+    linkcard.innerHTML = data + '<a class="footer-item" href="/hiner/links/">更多</a>';
+}</script><!-- pjax--><script>const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: ["title","#body-wrap","#site-config","meta[name=\"description\"]",".js-pjax","meta[property^=\"og:\"]","#config-diff",".rs_show",".rs_hide"],
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+})
+
+document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+})
+
+document.addEventListener('pjax:complete', () => {
+    window.refreshFn()
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+        pjax.loadUrl('/404.html')
+    }
+})</script><!-- google adsense--><!-- search--><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="solitude fas fa-xmark"></i></button></nav><div class="search-wrap"><div class="search-box"><input class="search-box-input" id="search-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="输入关键词快速查找"></div><div id="search-results"><div id="search-hits"><a class="tag-list" href="javascript:void(0);" onclick="pjax.loadUrl('/hiner/tags/Hexo/')">Hexo</a></div></div><div id="search-pagination"></div><div id="search-tips"></div></div></div><div id="search-mask"></div></div><script src="/hiner/js/search/local.js?v=3.0.19"></script><!-- music--><div class="needEndHide" id="nav-music"><div id="nav-music-hoverTips" onclick="sco.musicToggle()">音乐已暂停</div><meting-js id="5144842535" server="netease" type="playlist" mutex="true" preload="none" theme="var(--efu-main)" data-lrctype="0" order="random" volume="0.8"></meting-js></div></body></html>
+        <script>
+            const posts = ["2025/07/16/u-icon/","2025/07/08/vue/","2025/06/30/html/","2025/06/18/color-mode/","2025/05/10/vscode-plugin/","2025/04/19/Python-QRcode/","2025/04/16/xuao/","2025/04/16/css/","2025/04/05/Git_command/","2025/04/02/Docker_install/","2025/03/30/wallpaper_API/","2025/03/27/StardewValley_Mod/","2025/03/22/StardewValley_Tips/","2025/03/20/StardewValley_ModInstall/","2025/03/16/我的改造/","2025/03/15/Katex-list/","2025/03/15/write_html/","2025/03/15/GitHub-Up/","2025/03/14/GenshinImpact_ModInstall/","2025/03/13/hexo配置katex/","2025/03/13/hexo-lighting/","2025/03/13/InterstingFunction/","2025/03/12/初试hexo/","2025/03/12/hello-world/"];
+            function toRandomPost() {
+                const randomPost = posts[Math.floor(Math.random() * posts.length)];
+                pjax.loadUrl(GLOBAL_CONFIG.root + randomPost);
+            }
+        </script>
