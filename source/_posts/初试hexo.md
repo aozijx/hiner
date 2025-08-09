@@ -2,7 +2,7 @@
 title: 初试 Hexo
 date: 2025-03-12 20:04:33
 author: Hiner
-categories: [Tips]
+categories: [整理]
 tags: [Hexo]
 cover: https://cdn.cdnjson.com/i.dawnlab.me/e489814b866d262813417680e613f2e6.jpg
 ---

@@ -2,7 +2,7 @@
 title: Git 命令
 date: 2025-04-05 00:57:35
 author: Hiner
-categories: [Git]
+categories: [学习分享]
 tags: [Git]
 cover: src/img/git-logo.png
 ---

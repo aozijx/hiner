@@ -1,8 +1,8 @@
 ---
-title: Katex支持表
+title: Katex 支持表
 date: 2025-03-15 18:53:52
 author: Hiner
-categories: [Tips]
+categories: [整理]
 tags: [Katex]
 Katex: true
 cover: https://latex.codecogs.com/svg.image?&space;TIP

@@ -2,7 +2,7 @@
 title: xuao Blog
 date: 2025-04-16 23:33:31
 author: Hiner
-categories: [Tips]
+categories: [学习分享]
 tags: [Blog]
 cover: img/default.avif
 ---

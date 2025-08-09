@@ -2,7 +2,7 @@
 title: 星露谷物语 Tips (未完)
 date: 2025-03-22 19:11:04
 author: Hiner
-categories: [游戏, Tips]
+categories: [游戏]
 tags: [steam, 星露谷物语]
 cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 ---

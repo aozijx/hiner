@@ -2,7 +2,7 @@
 title: CSS 属性
 date: 2025-04-16 23:22:52
 author: Hiner
-categories: [笔记]
+categories: [学习分享]
 tags: [CSS]
 cover: src/img/mdn_web_docs.png
 # https://developer.mozilla.org/mdn-social-share.d893525a4fb5fb1f67a2.png

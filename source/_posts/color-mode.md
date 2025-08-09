@@ -2,7 +2,7 @@
 title: 主题切换方式
 date: 2025-06-18 16:15:04
 author: Hiner
-categories: [笔记]
+categories: [学习分享]
 tags: [HTML, CSS]
 cover: 
 ---

@@ -253,21 +253,25 @@ links:
       - name: 🌊游戏大全
         link: https://game.haiyong.site/
         descr: 
+        avatar: /hiner/src/img/web-link.png
         topimg: https://code.haiyong.site/wp-content/uploads/2024/03/微信图片_20220914125812.jpg
       
       - name: Github
         link: https://github.com/wanghao221/moyu
         descr: 源码
+        avatar: /hiner/src/img/web-link.png
         topimg: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
       
       - name: 跳一跳
         link: https://game.haiyong.site/tyt/
         descr: 
+        avatar: /hiner/src/img/web-link.png
         topimg: https://game.haiyong.site/img/moyu/tyt.png
 
       - name: 3D小车
         link: https://game.haiyong.site/cheche/
         descr: 
+        avatar: /hiner/src/img/web-link.png
         topimg: https://game.haiyong.site/img/moyu/cheche.png
       
   - class_name: 其他
@@ -283,7 +287,7 @@ links:
       - name: 开发者导航栏
         link: https://codernav.com/
         descr: 陌上花开，可缓缓归矣。
-        avatar: https://codernav.com/favicon.png
+        avatar: /hiner/src/img/web-link.png
 
       - name: 霂明导航
         link: https://n.mumingfang.com/
@@ -348,7 +352,7 @@ links:
       - name: 张伟是混蛋.COM					
         link: https://www.zhangweishihundan.com/
         descr: 爱情公寓
-        avatar: https://www.zhangweishihundan.com/favicon.ico
+        avatar: /hiner/src/img/web-link.png
 
       - name: 赛马娘
         link: https://www.wpstud.com/UmaMusume/UmaIntro.htm

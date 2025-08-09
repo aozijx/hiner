@@ -2,7 +2,7 @@
 title: 原神 Mod 安装
 date: 2025-03-14 14:30:22
 author: Hiner
-categories: [教程]
+categories: [游戏]
 tags: [原神, Mod]
 cover: src/img/Furina.jpg
 ---
@@ -34,3 +34,4 @@ cover: src/img/Furina.jpg
 ![过曝了](/hiner/src/img/Furina1.png)
 ![雷电将军](/hiner/src/img/ying.png)
 ![阿蕾奇诺](/hiner/src/img/Arlecchino.png)
+![呃……那维莱特](/hiner/src/img/Screenshot.png)

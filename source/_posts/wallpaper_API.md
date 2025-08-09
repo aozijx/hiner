@@ -2,7 +2,7 @@
 title: 随机壁纸 API
 date: 2025-03-30 15:28:00
 author: Hiner
-categories: [Tips]
+categories: [资源分享]
 tags: [壁纸]
 cover: https://moe.jitsu.top/img/?sort=pc&34
 ---

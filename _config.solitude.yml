@@ -44,13 +44,15 @@ nav:
       全部文章: /archives/ || fas fa-folder-closed # item name: link || icon
       全部分类: /categories/ || fas fa-clone
       全部标签: /tags/ || fas fa-tags
-    友链:
-      友情链接: /links/ || fas fa-user-group
+    社交:
+      友情链接: /links/ || fas fa-link
       弹幕: /message/ || fas fa-comment-dots
       # 宝藏博主: javascript:travelling() || fas fa-gift
     娱乐:
-      工具: /tlink/ || fas fa-toolbox
       音乐馆: /music/ || fas fa-music
+    工具:
+      工具箱: /tlink/ || fas fa-toolbox
+      Katex公式编辑器: /katex/ || fas fa-square-root-alt
     关于:
       我: about/ || fas fa-address-card
       说说: /essay/ || fas fa-wifi
@@ -77,10 +79,9 @@ hometop:
   banner:
     title: 分享技术<br>与科技生活 # 大字
     desc: # 小字
-      - 一个热爱生活的人
-      - 我只是一个普通的程序员
-      - 但我有一个不平凡的梦想
-      - 我希望能够改变世界
+      - 随便逛逛吧，这里没有规矩
+      - 代码无bug，咖啡永不凉
+      - 这里住着一个爱折腾的灵魂
     icon:
       HTML: # name
         img: https://i.postimg.cc/vBWVnY8q/html.png # url
@@ -136,14 +137,14 @@ aside:
   # Sticky: Fixed position / noSticky: Not fixed position
   # Sticky: 固定位置 / noSticky: 不固定位置
   home: # on the homepage
-    noSticky: "about,  love"
+    noSticky: "about,calendar,schedule"
     Sticky: "allInfo"
   post: # on the article page
     noSticky: "about"
     Sticky: "newestPost"
   page: # on the page
     noSticky: "about"
-    Sticky: "newestPost, allInfo"
+    Sticky: "newestPost,allInfo"
   # 菜单栏位置(0: 左 1: 右)
   position: 1 # Sidebar positioning(0: left 1: right)
 
@@ -167,7 +168,17 @@ aside:
     witty_words:
       - 欢迎你
       - 随便逛逛吧
-      - 祝你好运，陌生人
+      - 愿你的服务器永远在线
+      - 坚信美好的事情即将发生
+      - 唯愿人间有惊鸿
+      - 愿星光落在你肩上
+      - 前行的人，总会遇见同行者.
+      - 此处有风，可稍作停留.
+      - 愿你的道路漫长，充满奇迹。
+      - 焚尽世间铅华，寻一程美好时光。
+      - 不求天长地久，只愿曾经拥有。
+      - 岁月静好，与君共
+      - 但使汝辈心欢乐，不嫁南枝与北枝
     # social
     # 社交信息图标
     information:
@@ -181,7 +192,7 @@ aside:
   # 文章目录
   toc:
     post: true
-    page: true
+    page: false
     vague: true # 模糊搜索
   # --------------------------- end ---------------------------
 
@@ -447,7 +458,7 @@ right_menu:
   enable: true
   # Whether to display the hot comment switch.
   # 是否显示热门评论开关
-  commentBarrage: false
+  commentBarrage: true
   # Whether to display the browser's context menu when hold Ctrl key.
   # 是否在按住 Ctrl 键时显示浏览器右键菜单
   ctrlOriginalMenu: true
@@ -501,12 +512,12 @@ copy:
 
 # --------------------------- start ---------------------------
 # Mermaid
-mermaid: false
+mermaid: true
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
 # Chart.js
-chart: false
+chart: true
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -566,10 +577,10 @@ footer:
     author: https://aozijx.github.io/xuao/src/img/cat.gif
     left:
       Github: https://github.com/aozijx || fab fa-github # 名称: 链接 || 图标u
-      Mail: mailto:xxhtxml@outlook.com || far fa-envelope
     right:
-      Bilibili: https://space.bilibili.com/522238567 || fab fa-bilibili
-      Douyin: https://v.douyin.com/yKIxrIQOcJI/ || fab fa-tiktok
+      Mail: mailto:xxhtxml@outlook.com || far fa-envelope
+      # Bilibili: https://space.bilibili.com/522238567 || fab fa-bilibili
+      # Douyin: https://v.douyin.com/yKIxrIQOcJI/ || fab fa-tiktok
   # 友情链接
   group:
     # 导航:
@@ -582,7 +593,7 @@ footer:
     #   Copyright: /copyright/
 
   # 随机友链
-  randomlink: true # 随机友链
+  randomlink: true
 
   # 备案
   beian:
@@ -612,7 +623,7 @@ footer:
 # 404 page
 # 404 页面
 errorpage:
-  img: /img/404.avif
+  img: /hiner/img/404.avif
   text: =awa= Page Not Found # Text
   recommendList: false
 # --------------------------- end ---------------------------
@@ -666,13 +677,13 @@ keyboard:
 # Lazyload
 # 图片懒加载
 lazyload:
-  enable: false
+  enable: true
   # post, site
-  field: site
+  field: site, post
   # 加载时替换图
-  placeholder: "/hiner/img/default.avif"
+  placeholder: /hiner/img/default.avif
   # 加载失败替换图
-  errorimg: "/hiner/img/error_load.avif"
+  errorimg: /hiner/img/error_load.avif
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -795,7 +806,8 @@ extends:
   # 插入到 head
   head:
   #  - <script src="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js"></script>
-   - <script src="https://aozijx.github.io/hiner/js/copylink.js" async></script>
+   - <link href="/hiner/src/css/schedule.css" rel="stylesheet">
+   - <script src="/hiner/js/copylink.js" async></script>
   # Insert in body
   # 插入到 body
   body:
@@ -808,6 +820,8 @@ extends:
    - <script src="/hiner/src/live2d/pio.js"></script>
    - <script src="https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/pio_sdk4.js"></script>
    - <script src="https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/load.js"></script>
+   - <script src="https://open.lightxi.com/unpkg/chinese-lunar@0.1.4/lib/chinese-lunar.js"></script>
+   - <script src="/hiner/src/js/schedule.js"></script>
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -815,7 +829,7 @@ extends:
 # Progressive Web App
 pwa:
   enable: true
-  manifest: /manifest.json # manifest.json
+  manifest: /hiner/manifest.json # manifest.json
   theme_color: "#006a73" # Theme color
   mask_icon: /img/pwa/favicon.png # Mask icon
   apple_touch_icon: /img/pwa/favicon.png # Apple touch icon
@@ -861,7 +875,7 @@ comment:
     limit: 5 # 评论数 / Number of comments
 # Twikoo: https://solitude.js.org/comment/twikoo
 twikoo: # https://twikoo.js.org/
-  envId: # url: https://twikoo.sondy.top/
+  envId: https://twikoo-hiner-ekxf.vercel.app/
   region: # Environment locale, default is ap-shanghai, Tencent cloud environment fill ap-shanghai or ap-guangzhou; Vercel environment do not fill the.
   style: true # Use custom styles when turned on
   accessToken: 

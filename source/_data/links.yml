@@ -20,7 +20,7 @@ links:
         tag: 主题
 
       - name: 伍拾柒
-        link: https://www.efu.me/
+        link: https://blog.efu.me/
         descr: 伍拾柒的个人博客
         avatar: https://avatars.githubusercontent.com/u/74389842
         topimg: https://s3.qjqq.cn/47/674c6c6783097.png!color
@@ -28,66 +28,73 @@ links:
         color: vip
 
   - class_name: Beauty
-    descr: 网上冲浪遇到好看的 Blog，友链全是单向。
-    type: card
+    descr: 网上冲浪遇到好看的 Blog，全是单向。
+    type: item
     suffix:
     link_list:
       - name: 张洪Heo
         link: https://blog.zhheo.com/
         descr: 分享设计与科技生活
-        avatar: 
+        avatar: https://bu.dusays.com/2022/12/28/63ac2812183aa.png
         topimg: https://bu.dusays.com/2022/12/28/63ac2812183aa.png
 
       - name: ❖星港◎Star☆
         link: https://blog.starsharbor.com
         descr: 以博客记录生活与热爱！
-        avatar: 
+        avatar: https://7.isyangs.cn/85/67b33ac68d72d-85.webp
         topimg: https://7.isyangs.cn/85/67b33ac68d72d-85.webp
 
       - name: Elykia
         link: https://blog.elykia.cn/
         descr: 致以无暇之人
-        avatar: 
+        avatar: https://bu.dusays.com/2024/10/25/671b2438203a6.gif
         topimg: https://bu.dusays.com/2024/10/25/671b2438203a6.gif
 
       - name: 璜珀 · HPCesia
         link: https://blog.hpcesia.com/
         descr: 一个想要摆烂却又不甘于躺平的人
-        avatar: 
+        avatar: https://blog.hpcesia.com/assets/img/avatar.webp
         topimg: https://blog.hpcesia.com/assets/img/avatar.webp
 
       - name: 轻笑Chuckle
         link: https://www.qcqx.cn/
         descr: 漫天倾尘 风中轻笑
-        avatar: 
+        avatar: https://www.qcqx.cn/head.webp
         topimg: https://www.qcqx.cn/head.webp
 
       - name: MuXiaoChen🍊
         link: https://www.aimiliy.top/
         descr: 欢迎来到我の小窝
-        avatar: 
+        avatar: https://tuchuang.voooe.cn/images/2024/07/10/avator.webp
         topimg: https://tuchuang.voooe.cn/images/2024/07/10/avator.webp
 
       - name: 贰猹の小窝
         link: https://noionion.top/
         descr: 用这生命中的每一秒，给自己一个不后悔的未来
-        avatar: 
-        topimg: data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+PCFET0NUWVBFIHN2ZyAgUFVCTElDICctLy9XM0MvL0RURCBTVkcgMS4xLy9FTicgICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPjxzdmcgaGVpZ2h0PSI1MTJweCIgaWQ9IkxheWVyXzEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEycHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik00NDgsNDQ4YzAsMCwwLTI2LjQtMi4yLTQwLjJjLTEuOC0xMC45LTE2LjktMjUuMy04MS4xLTQ4LjljLTYzLjItMjMuMi01OS4zLTExLjktNTkuMy01NC42YzAtMjcuNywxNC4xLTExLjYsMjMuMS02NC4yICBjMy41LTIwLjcsNi4zLTYuOSwxMy45LTQwLjFjNC0xNy40LTIuNy0xOC43LTEuOS0yN2MwLjgtOC4zLDEuNi0xNS43LDMuMS0zMi43QzM0NS40LDExOS4zLDMyNS45LDY0LDI1Niw2NCAgYy02OS45LDAtODkuNCw1NS4zLTg3LjUsNzYuNGMxLjUsMTYuOSwyLjMsMjQuNCwzLjEsMzIuN2MwLjgsOC4zLTUuOSw5LjYtMS45LDI3YzcuNiwzMy4xLDEwLjQsMTkuMywxMy45LDQwLjEgIGM5LDUyLjYsMjMuMSwzNi41LDIzLjEsNjQuMmMwLDQyLjgsMy45LDMxLjUtNTkuMyw1NC42Yy02NC4yLDIzLjUtNzkuNCwzOC04MS4xLDQ4LjlDNjQsNDIxLjYsNjQsNDQ4LDY0LDQ0OGgxOTJINDQ4eiIvPjwvc3ZnPg==
+        avatar: /hiner/img/person_icon.svg
+        topimg: 
 
       - name: Bruce
         link: https://wanglin.blog/
         descr: 物是旧时物，人非旧时人。
-        avatar: 
+        avatar: https://image-1309076403.cos.ap-beijing.myqcloud.com/typecho5059c83219745250bda9c94ed48c02ce_1.jpg
         topimg: https://image-1309076403.cos.ap-beijing.myqcloud.com/typecho5059c83219745250bda9c94ed48c02ce_1.jpg
 
       - name: 霜月
         link: https://linium.xin/
         descr: 霖的小屋 ο(=•ω＜=)ρ⌒☆
-        avatar: 
-        topimg: https://cdn.cdnjson.com/linium.xin/images/lin.png
+        avatar: https://linium.xin/images/lin.png
+        topimg: https://linium.xin/images/lin.png
 
       - name: Rimrose
         link: https://rimrose.top/
         descr: 生活在阴沟里，依然有仰望星空的权利
-        avatar: 
+        avatar: https://q1.qlogo.cn/g?b=qq&nk=2632364603&s=640?v=1
         topimg: https://q1.qlogo.cn/g?b=qq&nk=2632364603&s=640?v=1
+
+      - name: Ideas en Blanco
+        link: https://avdyan.github.io/blog/
+        descr: 
+        avatar: /hiner/img/person_icon.svg
+        topimg: 
+

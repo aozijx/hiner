@@ -2,7 +2,7 @@
 title: GitHub 加速
 date: 2025-03-15 12:48:50
 author: 
-categories: [Tips]
+categories: [学习分享]
 tags: [GitHub]
 cover: src/img/GitHub.webp
 ---

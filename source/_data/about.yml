@@ -7,7 +7,7 @@ authorinfo:
     - 脚踏实地行动派 🏃
     - 团队小组发动机 🧱
     - 壮汉人狠话不多 💢
-  image: /hiner/img/logo.png # 头像
+  image: /hiner/src/img/Firefly.gif # 头像
 
 title: 关于
 
@@ -133,9 +133,8 @@ tj: # 统计
 cause:
   tip: 介绍
   title: 自说自话
-  content: 
-    - 记录生活<br>分享经验<br>交流学习
-    - 很多内容、标签为主题默认，自己不知道改什么，也不想去折腾，想到什么改什么，顺其自然。
+  content: |
+    <br>记录生活<br>分享经验<br>交流学习<br>很多内容、标签为主题默认，自己不知道改什么，也不想去折腾，想到什么改什么，顺其自然。
 
 oneself: # 按需填写
   location: 中国，河南省 # 所在位置

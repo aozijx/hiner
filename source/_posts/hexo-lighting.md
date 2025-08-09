@@ -2,7 +2,7 @@
 title: Hexo 代码高亮
 date: 2025-03-13 22:37:43
 author: Hiner
-categories: [Tips]
+categories: [学习分享]
 tags: [Hexo]
 cover: https://img.alicdn.com/imgextra/i2/2209748222339/O1CN010muxj21T9JF0IPCI2_!!2209748222339.jpg
 ---

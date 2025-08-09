@@ -1,8 +1,8 @@
 ---
-title: HTML 标签，知识
+title: HTML 标签
 date: 2025-06-30 17:25:00
 author: Hiner
-categories: [笔记]
+categories: [学习分享]
 tags: [HTML]
 cover: 
 ---

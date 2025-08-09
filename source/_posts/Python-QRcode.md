@@ -2,8 +2,8 @@
 title: Python QR Code生成二维码
 date: 2025-04-19 12:49:37
 author: Hiner
-categories: []
-tags: []
+categories: [学习分享]
+tags: [Python]
 cover: https://aozijx.github.io/aozijx/wechat_qr_code.png
 ---
 
