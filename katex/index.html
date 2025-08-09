@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://editor.codecogs.com/eqneditor.api.min.js"></script>
+    <link rel="stylesheet" href="https://editor.codecogs.com/eqneditor.css" />
+    <script>
+        window.onload = function () {
+            textarea = EqEditor.TextArea.link('latexInput')
+                .addOutput(new EqEditor.Output('output'))
+                .addHistoryMenu(new EqEditor.History('history'));
+
+            EqEditor.Toolbar.link('toolbar').addTextArea(textarea);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="equation-editor">
+        <div id="history"></div>
+        <div id="toolbar"></div>
+        <div id="latexInput" placeholder="Write Equation here..."></div>
+        <div id="equation-output">
+            <img id="output">
+        </div>
+    </div>
+</body>
+
+</html>
+
+<a href="https://editor.codecogs.com/docs" target="_blank" rel="noopener noreferrer">Equation Editor 文档</a>
+<a href="https://editor.codecogs.com/docs/1-editor_integration.php" target="_blank" rel="noopener noreferrer">有趣的编辑器集成</a>
