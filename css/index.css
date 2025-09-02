@@ -5526,6 +5526,9 @@ span.tags-punctuation {
   right: -300px;
   overflow: hidden auto;
   width: 300px;
+  max-width: 80%;
+  height: 100%;
+  background: var(--efu-maskbg);
   height: 100%;
   background: var(--efu-maskbgdeep);
   transition: all 0.5s ease 0s;
@@ -7048,7 +7051,7 @@ body[data-type=music] #nav-music {
   }
 }
 #Music-page ol {
-  max-height: calc(var(--vh) - 170px) !important;
+  max-height: calc(var(--vh) - 150px) !important;
 }
 #Music-page ol > li {
   font-size: 14px;

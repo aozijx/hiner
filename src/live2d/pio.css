@@ -151,11 +151,16 @@
 }
 
 @media screen and (max-width: 768px) {
+    .pio-container {
+        pointer-events: none
+    }
+
     #pio {
         width: 8em
     }
 
-    .pio-container {
-        pointer-events: none
+    .pio-container .pio-show {
+        display: none !important;
     }
+
 }
