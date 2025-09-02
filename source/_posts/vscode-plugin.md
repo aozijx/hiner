@@ -3,8 +3,8 @@ title: VSCode 插件
 date: 2025-05-10 10:32:18
 author: Hiner
 categories: 
-tags: 
-cover: 
+tags: [vscode, 插件]
+cover: src/img/vscode.webp
 ---
 
 <style>

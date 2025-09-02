@@ -6,6 +6,7 @@ categories: [学习分享]
 tags: [HTML, CSS]
 cover: https://aozijx.github.io/xuao/src/img/smile.jpg
 ---
+
 ## 翻转卡片
 <style>
     .container {
@@ -55,14 +56,12 @@ cover: https://aozijx.github.io/xuao/src/img/smile.jpg
         font-size: 2em;
         color: #000;
         padding: 15px;
+        transform: rotateY(180deg);
         background-color: #e2e1e1;
         text-align: center;
     }
     .flip-card:hover .flip-front {
         transform: rotateY(-180deg);
-    }
-    .flip-card .flip-back {
-        transform: rotateY(180deg);
     }
     .flip-card:hover .flip-back {
         transform: rotateY(0deg);
@@ -134,15 +133,13 @@ cover: https://aozijx.github.io/xuao/src/img/smile.jpg
     font-size: 2em;
     justify-content: center;
     align-items: center;
+    transform: rotateY(180deg);
     color: #000;
     background-color: #e2e1e1;
     border: 2px dotted palevioletred;
 }
 .flip-card:hover .flip-front {
     transform: rotateY(-180deg);
-}
-.flip-card .flip-back {
-    transform: rotateY(180deg);
 }
 .flip-card:hover .flip-back {
     transform: rotateY(0deg);

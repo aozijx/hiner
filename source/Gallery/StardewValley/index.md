@@ -30,3 +30,5 @@ rightbtnlink: /hiner/Gallery
 ![](https://aozijx.github.io/stary/StardewValley/oplk_4-27-2025.png)
 ![](https://aozijx.github.io/stary/StardewValley/oplk_5-1-2025.png)
 {% endgallery %}
+
+---

@@ -92,8 +92,8 @@ likes:
         href: 
         cover: https://aozijx.github.io/xuao/src/img/love/jun.jpg
     button: true # false 可以关闭右边按钮
-    button_link: "https://www.bilibili.com/anime/"  # 跳转路径
     button_text: "哔哩哔哩"   # 按钮文字
+    button_link: "https://www.bilibili.com/anime/"  # 跳转路径
   # - type: "like-technology"
   #   bg: "https://images.418121.xyz/file/blog/page/movie.webp"
   #   tips: "与她一起看"
@@ -108,8 +108,8 @@ likes:
     title: "歌单"
     subtips: ""
     button: true
-    button_link: "music"
-    button_text: "音乐库"      
+    button_text: "音乐库"  
+    button_link: "music"    
 
 game:
   - title: 游戏爱好
@@ -129,6 +129,10 @@ tj: # 统计
   provider: # 值为 51la（51la网站统计）或 baidu（百度统计）
   url:  # 需要到51la官网注册自行获取 or 自行搭建 Heo 的 百度统计项目，填写访问地址即可
   img: # 背景
+  desc: 统计描述
+  # button: true
+  # button_text: "查看统计"
+  # button_link: "https://www.example.com/statistics"
 
 cause:
   tip: 介绍

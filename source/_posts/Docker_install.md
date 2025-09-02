@@ -2,8 +2,8 @@
 title: Docker 安装
 date: 2025-04-02 14:58:47
 author: 
-categories: 
-tags: 
+categories: []
+tags: [Docker, WSL]
 cover: /src/img/docker-logo.png
 ---
 

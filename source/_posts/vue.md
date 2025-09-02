@@ -3,8 +3,8 @@ title: vue
 date: 2025-07-08 23:22:52
 author: Hiner
 categories: [学习分享]
-tags: 
-cover: 
+tags: [vue]
+cover: src/img/vue.webp
 ---
 
 ## vue 安装区别

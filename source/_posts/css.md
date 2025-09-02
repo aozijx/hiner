@@ -5,7 +5,6 @@ author: Hiner
 categories: [学习分享]
 tags: [CSS]
 cover: src/img/mdn_web_docs.png
-# https://developer.mozilla.org/mdn-social-share.d893525a4fb5fb1f67a2.png
 ---
 
 # CSS 属性合集

@@ -79,7 +79,8 @@ document.querySelectorAll('.color span').forEach((span, index) => {
         background: url(https://imgapi.xl0408.top/index.php) no-repeat center/cover;
         background-clip: text; /* 背景只在文字区域显示 */
         color: transparent; /* 文字有颜色 */
-        animation: gta-scale 3s forwards;
+        overflow: hidden;
+        animation: gta-scale 3s infinite;
     }
     @keyframes gta-scale {
         from {
@@ -95,6 +96,37 @@ document.querySelectorAll('.color span').forEach((span, index) => {
 <div style="width: 100%;height: 600px;">
     <h1 class="gta">AMAZING</h1>
 </div>
+
+```css
+.gta {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10vw;
+    background: url(https://imgapi.xl0408.top/index.php) no-repeat center/cover;
+    background-clip: text; /* 背景只在文字区域显示 */
+    color: transparent; /* 文字有颜色 */
+    overflow: hidden;
+    animation: gta-scale 3s forwards;
+}
+@keyframes gta-scale {
+    from {
+        font-size: 500vw;
+        /* color: transparent; */
+    }
+    to {
+        font-size: 10vw;
+        /* color: #fff; */
+    }
+}
+```
+```html
+<div style="width: 100%;height: 600px;">
+    <h1 class="gta">AMAZING</h1>
+</div>
+```
 
 ## 下划线
 

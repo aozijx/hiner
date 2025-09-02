@@ -42,7 +42,7 @@ function toggleTheme() {
 toggleButton.addEventListener('click', toggleTheme);
 ```
 
-可以结合 CSS 变量使用：
+结合 CSS 变量使用：
 CSS 变量将样式定义与使用分离，大大提高了代码的可维护性。
 ```css
 [data-theme="theme"] {
