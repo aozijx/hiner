@@ -1,5 +1,5 @@
 ---
-title: 我的改造
+title: solitude 主题魔改
 date: 2025-03-16 18:09:10
 updated: 2025-08-14  21:38:10
 author: Hiner
@@ -7,6 +7,13 @@ categories: [魔改]
 tags: [solitude]
 cover: img/default.avif
 ---
+
+## config
+### 背景图片
+git 提交hash：`007e2cf4b07e95d24f2845bb78f3a711c29a9aa6`
+### 文章推荐轮播图
+git 提交hash：`48ddc536baea18c56483140582a93e6384934abe`
+
 ## 右键菜单添加复制当前页面链接按钮
 新建 `/themes/solitude/js/copylink.js` ，内容如下：
 
@@ -44,22 +51,6 @@ right_menu:
 ## 导航栏页面
 {% link 'solitude' '官方文档' 'https://solitude.js.org/cn/configuration/fetures-page/friendshiplink' %}
 
-## links 页面
-想改成只显示 title ，hover 显示 desc，调不好，只能这样了，当 avatar 值为 None 触发，但就在我要推送的时候，我想到：为什么不把条件设置为空呢😅🤣
-- card
-> themes\solitude\layout\includes\widgets\page\links\linksCard.pug >line 14
-```pug
-if item.avatar
-    .site-card-avatar
-        img.flink-avatar.cf-friends-avatar(src=item.avatar + (data.suffix || ''), alt=item.name)
-        //- .img-alt.is-center= item.name
-else    
-    - var avatarStyle =  'display:none'
-.site-card-text
-    span.title.cf-friends-name= item.name
-    span.desc(title=item.descr)= item.descr
-```
-
 - banner
 > themes\solitude\layout\includes\widgets\page\links\banner.pug >line 30
 ```pug
@@ -74,30 +65,6 @@ a.tags-group-icon(href=url_for(y.link), title=y.name)
 > themes\solitude\source\css\_page\links.stylline >line 152 .site-card-text > .title
 ```styl
 padding-bottom 7px
-```
-
-## Music 页面
-- 底部歌曲列表空白
-> themes\solitude\source\css\_page\music.styl >line 86
-```styl
-ol
-  max-height calc(var(--vh) - 150px)!important
-```
-- 歌曲列表高度覆盖导航栏
-> themes\solitude\source\css\_page\music.styl >line 420
-```styl
-+maxWidth798()
-    position fixed
-    z-index 1002
-    width 100%
-    bottom 0
-    left 0
-    background var(--efu-white)
-    border-radius 16px 16px 0 0
-    padding 15px 0
-    max-width 100%
-    height 65vh
-    transition all .3s
 ```
 
 ## brevity 页面
@@ -134,36 +101,4 @@ extends:
     - <script src="https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/pio.js"></script>
     - <script src="https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/pio_sdk4.js"></script>
     - <script src="https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/load.js"></script>
-```
-
-
-## ~~灯箱~~（failed）
-在 Font Matter 添加 no_lightbox 为 true 实现文章不显现 lightbox
-但是改造失败了，退而求其次：使用 js 吧
-```JavaScript
-window.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('a.fancybox').forEach(a => {
-        const img = a.querySelector('img');
-        if (img) {
-        // 用 img 标签替换 a 标签
-        a.parentNode.replaceChild(img, a);
-        }
-    });
-})
-```
-> themes\solitude\scripts\filter\default.js >line 25
-```JavaScript
-  data.no_lightbox = data.hasOwnProperty("no_lightbox") ? data.no_lightbox === true : false;
-```
-> themes\solitude\layout\includes\inject\body.pug >line 48、104
-```JavaScript
-  if theme.lightbox || page.no_lightbox === false
-```
-> themes\solitude\source\js\main.js >line 922
-```JavaScript
-  lightbox && page.no_lightbox === false
-```
-> themes\solitude\layout\includes\inject\head.pug >line 16
-```JavaScript
-if theme.lightbox && theme.fancybox && page.no_lightbox == false
 ```

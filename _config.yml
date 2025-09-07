@@ -126,6 +126,12 @@ feed:
   icon: icon.png    # 可选，订阅图标
   autodiscovery: true  # 自动在页面<head>中添加RSS链接
 
+swpp:
+  # 是否启用插件
+  enable: false
+  # 是否在发布前自动执行脚本
+  # auto_exec: true
+
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
 meta_generator: true # Add generator meta tag # 添加生成器 meta 标签

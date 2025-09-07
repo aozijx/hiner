@@ -12,6 +12,10 @@
 // ----
 
 var Paul_Pio = function (prop) {
+    // 保存props到全局变量，以便togglePio函数访问
+    window.pio = window.pio || {};
+    window.pio.props = prop;
+    
     var that = this;
 
     var current = {
