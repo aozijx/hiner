@@ -90,6 +90,7 @@ if item.image
 ```
 
 ## 嘉然
+{% link '看板娘插件文档' 'Paul' 'https://docs.paul.ren/pio/#/' %}
 ```yml
 extends:
   body:

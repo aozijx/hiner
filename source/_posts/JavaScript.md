@@ -54,11 +54,20 @@ function fun(num) {
         2: [ 'one', 'two' ]
     }
 
-    // 使用 log 语句，可替换为实际逻辑
+    // 可替换为实际逻辑
     console.log(config[num]?.[0] || 'default value')
 }
 
 fun(2)
 ```
 
-
+```JavaScript
+document.addEventListener('click', function(e) {
+   // 获取元素本身
+   const parent = e.currentTarget;
+   // 获取被点击的元素
+   const directChild = e.target;
+   // 查找最近的直接子元素
+   const directChild = e.target.closest('.parent-container');
+})
+```

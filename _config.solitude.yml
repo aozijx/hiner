@@ -43,7 +43,7 @@ nav:
       分类: /categories/ || fas fa-clone
       标签: /tags/ || fas fa-tags
     社交:
-      友情链接: /links/ || fas fa-link
+      友链: /links/ || fas fa-link
       弹幕: /message/ || fas fa-comment-dots
       # 宝藏博主: javascript:travelling() || fas fa-gift
     娱乐:
@@ -371,8 +371,8 @@ post:
 # --------------------------- start ---------------------------
 # Custom Theme Color
 theme_color:
-  dark: "#008b8b" # dark #ffc848
-  light: "#425AEF" # light
+  dark: "#fb929e" # dark
+  light: "#41bfda" # light
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------

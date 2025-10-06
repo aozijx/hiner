@@ -8,30 +8,29 @@ cover: src/img/vue.webp
 ---
 
 ## vue 安装区别
-1. `npm install vue`
+1. **npm install vue**
 - **作用**：安装 Vue.js 的核心库（运行时 + 编译器），仅包含 Vue 的底层功能。
 - **用途**：在项目中直接使用 Vue.js 进行开发，比如创建 Vue 实例、组件等。
 - **适用场景**：
   - 手动搭建 Vue 项目（例如结合 Webpack/Vite 从零配置）。
   - 在已有项目（如传统后端渲染项目）中引入 Vue.js。
 
-2. `npm install -g @vue/cli`（通常全局安装）
+2. **npm install -g @vue/cli**（通常全局安装）
 - **作用**：安装 Vue CLI（Vue 官方脚手架工具），提供项目生成和管理功能。
 - **用途**：快速生成和管理 Vue 项目，提供开箱即用的构建配置（Webpack、Babel、ESLint 等）。
 - **适用场景**：
   - 快速初始化一个现代化的 Vue 项目（单页应用 SPA）。
   - 通过命令行工具（如 vue create、vue serve）管理项目。
 
-3. `npm create vite`
+3. **npm create vite**
 - **作用**：基于 Vite 快速初始化一个前端项目（支持 Vue、React 等框架）。
-- **用途**：
+- **用途**：快速创建一个基于 Vite 的 Vue 项目，享受 Vite 带来的极速开发体验。
 - **适用场景**：
   - 追求开发体验（如热更新速度、简洁配置）。
   - 轻量级项目或需要自定义构建工具（如搭配其他工具库使用）。
 
 **关键区别**：
-对比项	npm install vue	npm install @vue/cli
-| 对比项          | `npm install vue`                  | `npm install @vue/cli`               |
+| 对比项          | npm install vue                  | npm install @vue/cli               |
 |-----------------|------------------------------------|--------------------------------------|
 | 安装内容        | Vue 核心库（运行时 + 编译器）       | Vue 官方脚手架工具（命令行工具）      |
 | 用途           | 直接使用 Vue.js 开发                | 创建和管理 Vue 项目                   |
@@ -48,12 +47,12 @@ cover: src/img/vue.webp
 ## 创建 Vue 项目
 Vite 官方提供了 Vue 模板，可以直接生成一个基于 Vite 的 Vue 项目，无需手动配置。
 1. 使用 Vite 创建 Vue 项目
-命令：`npm create vite`
+命令：**npm create vite**
    ```bash
    npm create vite@latest my-vue-app -- --template vue
    ```
-   - my-vue-app 是你的项目名称（可自定义）。
-   - --template vue 指定使用 Vue 模板（Vite 也支持 React、Svelte 等）。
+   - **my-vue-app** 是你的项目名称（可自定义）。
+   - **--template vue** 指定使用 Vue 模板（Vite 也支持 React、Svelte 等）。
 
 2. 进入项目并安装依赖
    ```bash
@@ -109,8 +108,8 @@ create vite 直接调用最新版本的 Vite，无需提前安装 @vue/cli 或�
    ```powershell
    Set-ExecutionPolicy RemoteSigned -Force
    ```
-   - `RemoteSigned`：允许本地脚本运行，远程脚本需签名。
-   - `-Force`：跳过确认提示。
+   - **RemoteSigned**：允许本地脚本运行，远程脚本需签名。
+   - **-Force**：跳过确认提示。
 
 1. 使用 cmd 代替 PowerShell
 如果不想修改策略，可以直接在 命令提示符（cmd） 中运行：
