@@ -10560,10 +10560,10 @@ div#banners .bannerText {
   z-index: 1000;
 }
 [data-theme=dark] {
-  --efu-theme: #008b8b;
-  --efu-theme-op: rgba(0,139,139,0.137);
-  --efu-theme-op-deep: rgba(0,139,139,0.867);
-  --efu-theme-none: rgba(0,139,139,0);
+  --efu-theme: #fb929e;
+  --efu-theme-op: rgba(251,146,158,0.137);
+  --efu-theme-op-deep: rgba(251,146,158,0.867);
+  --efu-theme-none: rgba(251,146,158,0);
   --efu-blue: #0084ff;
   --efu-red: #ff3842;
   --efu-pink: #d44040;
@@ -10605,11 +10605,11 @@ div#banners .bannerText {
   --efu-background: #18171d;
 }
 [data-theme=light] {
-  --efu-theme: #425aef;
-  --efu-theme-op: rgba(66,90,239,0.137);
-  --efu-theme-op-deep: rgba(66,90,239,0.867);
+  --efu-theme: #41bfda;
+  --efu-theme-op: rgba(65,191,218,0.137);
+  --efu-theme-op-deep: rgba(65,191,218,0.867);
   --efu-theme-op-light: rgba(66,89,239,0.051);
-  --efu-theme-none: rgba(66,90,239,0);
+  --efu-theme-none: rgba(65,191,218,0);
   --efu-blue: #425aef;
   --efu-red: #f04a63;
   --efu-pink: #ff7c7c;
@@ -12056,7 +12056,7 @@ figure.highlight .code-expand-btn:not(.expand-done) ~ pre {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 1;
+  z-index: 0;
 }
 [data-theme=light] #universe {
   display: none;
