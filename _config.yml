@@ -60,8 +60,8 @@ prismjs:
 markdown:
   render:
     html: true # 不转义 HTML 内容 # 转义 HTML 内容，使标签作为文本输出
-    xhtmlOut: false # 必须使用完全的 XHTML 代码，换行必须为 <br/> # 不必必使用完全的 XHTML 代码，换行可以为 <br>
-    breaks: true # 每次会车换行相当于一个 <br/> 标签 # Pa每次会车换行会被忽略
+    xhtmlOut: false # 必须使用完全的 XHTML 代码，换行必须为 <br/> # 不必使用完全的 XHTML 代码，换行可以为 <br>
+    breaks: true # 每次换行相当于一个 <br/> 标签 # 每次换行会被忽略
     linkify: true # 类似链接的文本，作为链接输出 # 类似链接的文本，依然作为文本输出
     typographer: true # 替换常见的排版元素 # 不替换常见的排版元素
     quotes: '“”‘’' # 'single'、"double" 变成 ‘single’、“double” # 'single'、"double" 变成 “single”、«single»

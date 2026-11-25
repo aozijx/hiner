@@ -24,8 +24,10 @@ mathjax: false # 数学公式支持（默认：false）
 ```
 
 ## 外挂标签
-### tabs
-标签页标签，用于显示标签页。
+{% link '伍拾柒' '外挂标签使用' 'https://everfu.github.io/solitude-demo/posts/8f9926b7.html' %}
+
+### Tabs
+显示标签页。
 {% tabs tabs %}
 <!-- tab 语法 -->
 ```markdown
@@ -80,8 +82,8 @@ mathjax: false # 数学公式支持（默认：false）
 <!-- endtab -->
 {% endtabs %}
 
-### 折叠 fold
-折叠标签，用于显示折叠内容。
+### Fold
+显示折叠内容。
 {% tabs fold %}
 <!-- tab 语法 -->
 ```markdown
@@ -105,8 +107,8 @@ content
 <!-- endtab -->
 {% endtabs %}
 
-### 卡片 card
-card 标签，用于显示卡片。
+### Card
+显示卡片。
 {% tabs card %}
 <!-- tab 语法 -->
 ```markdown
@@ -140,7 +142,7 @@ card 标签，用于显示卡片。
 <!-- endtab -->
 {% endtabs %}
 
-### 时间轴 timeline
+### 时间轴 Timeline
 {% tabs timeline %}
 <!-- tab 语法 -->
 ```markdown
@@ -191,7 +193,8 @@ card 标签，用于显示卡片。
 <!-- endtab -->
 {% endtabs %}
 
-### 按钮 button
+### Button
+展示按钮
 {% tabs button %}
 <!-- tab 语法 -->
 ```markdown
@@ -208,8 +211,8 @@ card 标签，用于显示卡片。
 <!-- endtab -->
 {% endtabs %}
 
-### 提示 note
-note 标签，用于显示提示。
+### Note
+显示提示。
 {% tabs button %}
 <!-- tab 语法 -->
 ```markdown
@@ -238,7 +241,31 @@ content
 <!-- endtab -->
 {% endtabs %}
 
-### 剧透文本 spoiler
+### Keyboard
+展示键盘按键
+{% tabs Keyboard %}
+<!-- tab 语法 -->
+```markdown
+{% keyboard 'key' %}
+```
+<!-- endtab -->
+<!-- tab 参数 -->
+|参数   |	说明    | 默认值|
+|-------|----------|-------|
+|key    |	按键    |	无 |
+<!-- endtab -->
+<!-- tab 示例 -->
+```markdown
+{% keyboard 'ctrl' %}
+```
+<!-- endtab -->
+<!-- tab 效果 -->
+{% keyboard 'ctrl' %}
+<!-- endtab -->
+{% endtabs %}
+
+### Spoiler
+展示剧透
 {% tabs button %}
 <!-- tab 语法 -->
 ```markdown

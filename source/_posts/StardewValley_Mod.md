@@ -100,41 +100,62 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 {% endfold %}
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/headers/5450_1712814737.jpg)
 
-### BaZhua's Marriable Role Portrait
+### [BaZhua's Marriable Role Portrait](https://www.nexusmods.com/stardewvalley/mods/20236?tab=files&file_id=115950)
 {% note 'attention' 'fas fa-wand-magic-sparkles' %}
 在 nexus 设置打开 **显示成人内容** 再访问
 {% endnote %}
 
 {% link "BaZhua's Marriable Role Portrait" '12个可婚角色的像素肖像' 'https://www.nexusmods.com/stardewvalley/mods/20236' %}
+{% gallery %}
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/headers/20236_1726428286.jpg)
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/20236/20236-1726428312-2089193844.png)
+{% endgallery %}
 
-### Portraits
+### [Portraits](https://www.nexusmods.com/stardewvalley/mods/15234?tab=files&file_id=89224)
 {% link 'Portraits' '星露谷物语的肖像' 'https://www.nexusmods.com/stardewvalley/mods/15234' %}
+{% gallery %}
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/15234/15234-1675604855-1750177193.jpeg)
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/15234/15234-1712295321-202562341.png)
+{% endgallery %}
 
 ### Arkneru's Retexture of NPCs
 {% link "Arkneru's Retexture of NPCs" '这是所有结婚候选人和巫师
 的原始纹理模组' 'https://www.nexusmods.com/stardewvalley/mods/20454' %}
+{% gallery %}
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/headers/20454_1709803634.jpg)
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/20454/20454-1747747823-1781965438.png)
+{% endgallery %}
 
 ### PellyK's female portraits（27795 效果自行上网查询）(Fixed) Pelly.K's Portraits Files_High res
 [下载](https://www.nexusmods.com/stardewvalley/mods/27795?tab=files&file_id=111388)
 
 ### Lowland's portraits
 {% link "Lowland's portraits" '适婚候选人和一些村民的肖像。' 'https://www.nexusmods.com/stardewvalley/mods/34850' %}
+{% gallery %}
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/34850/34850-1750332744-1663849764.png)
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/34850/34850-1750333184-1421428158.png)
+{% endgallery %}
+
+### [jiao's clothes083025](https://www.nexusmods.com/stardewvalley/mods/37144?tab=files&file_id=141655)
+{% link "jiao's clothes083025" '无限暖暖服装' 'https://www.nexusmods.com/stardewvalley/mods/37144' %}
+{% gallery %}
+![](https://staticdelivery.nexusmods.com/mods/1303/images/37144/37144-1756535222-2074102548.jpg)
+![](https://staticdelivery.nexusmods.com/mods/1303/images/37144/37144-1756535189-44701134.png)
+![](https://staticdelivery.nexusmods.com/mods/1303/images/37144/37144-1756535195-328135046.png)
+![](https://staticdelivery.nexusmods.com/mods/1303/images/37144/37144-1756535201-1346268236.png)
+![](https://staticdelivery.nexusmods.com/mods/1303/images/37144/37144-1756535210-282794185.png)
+![](https://staticdelivery.nexusmods.com/mods/1303/images/37144/37144-1756535216-229225544.png)
+{% endgallery %}
 
 ### Nyapu's Portraits inspired by Dong
-{% link "Nyapu's Portraits inspired by Dong" 'Nyapu 受 Dong 启发的肖像 ' 'https://www.nexusmods.com/stardewvalley/mods/11491' %}
+{% link "Nyapu's Portraits inspired by Dong" 'Nyapu 受 Dong 启发的肖像' 'https://www.nexusmods.com/stardewvalley/mods/11491' %}
+{% gallery %}
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/headers/11491_1648702900.jpg)
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/11491/11491-1711183147-603746817.png)
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/11491/11491-1679027164-1041749908.png)
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/11491/11491-1708499379-501186861.png)
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/11491/11491-1740055599-382620618.png)
+{% endgallery %}
 
 ### Unique Children
 {% link "Unique Children" '有了这个模组，游戏中的所有玩家，根据他们的配偶，都有长相不同的孩子。' 'https://www.nexusmods.com/stardewvalley/mods/6278' %}
@@ -148,35 +169,48 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 
 ### Overgrown Flowery Interface
 {% link "Overgrown Flowery Interface" '对菜单背景的所有元素进行一组完全可定制的重新着色（加上原始插件）。超过 2000 万种潜在组合！' 'https://www.nexusmods.com/stardewvalley/mods/6166' %}
+{% gallery %}
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/6166/6166-1646578793-214446202.png)
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/6166/6166-1646578793-816264335.png)
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/6166/6166-1646572598-401537327.png)
+{% endgallery %}
 
 ### Lovely UI
 {% link "Lovely UI" '拥有如此可爱的用户界面。' 'https://www.nexusmods.com/stardewvalley/mods/17283' %}
+{% gallery %}
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/17283/17283-1713215780-846584946.png)
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/17283/17283-1689286404-736534396.png)
+{% endgallery %}
 
 ### Lavender Dreams UI Recolor
 {% link "Lavender Dreams UI Recolor" '具有紫色、自然灵感美感的 UI 重新着色。' 'https://www.nexusmods.com/stardewvalley/mods/17323' %}
+
+{% gallery %}
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/17323/17323-1711047668-1430436496.png)
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/17323/17323-1711047792-1450080987.png)
+{% endgallery %}
 
 ### Lowkey Spring Interface Recolor
 {% link "Lowkey Spring Interface Recolor" '柔和的桃色 UI 重新着色，带有花卉装饰。' 'https://www.nexusmods.com/stardewvalley/mods/25349' %}
+{% gallery %}
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/25349/25349-1718937773-1202846129.png)
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/25349/25349-1718937780-1330514781.png)
+{% endgallery %}
 
 ### UI 3 in 1 theme color (Interface)
 {% link "UI 3 in 1 theme color (Interface)" '适用于 PC/Android 的主题界面。兼容英语和泰语。' 'https://www.nexusmods.com/stardewvalley/mods/6229' %}
+{% gallery %}
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/6229/6229-1591277430-307720433.png)
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/6229/6229-1591277430-1306297178.png)
+{% endgallery %}
 
 ### Starry Ocean Garden UI Theme -Available in Different Languages-
 {% link "Starry Ocean Garden UI Theme -Available in Different Languages-" '一个主要使用紫色、蓝色、蓝绿色和粉红色的用户界面 Mod。以星系、海洋和花园为主题 :)
 （不包括天空！）' 'https://www.nexusmods.com/stardewvalley/mods/24090' %}
+{% gallery %}
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/24090/24090-1715858155-1886778106.jpeg)
 ![](https://staticdelivery.nexusmods.com/mods/1303/images/24090/24090-1715858742-1506408420.jpeg)
+{% endgallery %}
 
 ## 地图建筑美化
 ### DaisyNiko's Earthy Recolour
@@ -207,6 +241,20 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 {% endgallery %}
 
 ## 服装饰品美化
+### Infinity Nikki HD clothes
+{% link 'Infinity Nikki HD clothes' '4套来自无限暖暖的高清动态服饰/four sets of high-definition and has dynamic clothes from Infinity Nikki' 'https://www.nexusmods.com/stardewvalley/mods/37220' %}
+![](https://staticdelivery.nexusmods.com/mods/1303/images/37220/37220-1756807435-1448176142.png)
+{% gallery %}
+![](https://staticdelivery.nexusmods.com/mods/1303/images/37220/37220-1756807434-312291863.png)
+![](https://staticdelivery.nexusmods.com/mods/1303/images/37220/37220-1756807435-627540504.png)
+![](https://staticdelivery.nexusmods.com/mods/1303/images/37220/37220-1756807435-1461588027.png)
+![](https://staticdelivery.nexusmods.com/mods/1303/images/37220/37220-1756807434-466778463.png)
+![](https://staticdelivery.nexusmods.com/mods/1303/images/37220/37220-1756808969-501840695.gif)
+![](https://staticdelivery.nexusmods.com/mods/1303/images/37220/37220-1756808945-525696897.gif)
+![](https://staticdelivery.nexusmods.com/mods/1303/images/37220/37220-1756808954-129961673.gif)
+![](https://staticdelivery.nexusmods.com/mods/1303/images/37220/37220-1756808963-1834926320.gif)
+{% endgallery %}
+
 ### (FS)Bangs2-hairstyle1228
 {% link '(FS)Bangs2-hairstyle1228' '新增10顶fs模式发型' 'https://www.nexusmods.com/stardewvalley/mods/30376' %}
 

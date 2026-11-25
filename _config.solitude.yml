@@ -815,6 +815,7 @@ extends:
    - <link href="/hiner/src/css/schedule.css" rel="stylesheet">
    - <script src="/hiner/src/js/copylink.js" async></script>
    - <script src="/hiner/src/js/piotoggle.js" async></script>
+   - <script src="/hiner/src/js/cover-fallback.js"></script>
   # Insert in body
   # 插入到 body
   body:
