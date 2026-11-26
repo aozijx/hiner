@@ -1,0 +1,574 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>星露谷物语实用技巧（未完） | Hinerの小窝</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="/hiner/img/pwa/favicon.png"><link rel="stylesheet" href="/hiner/css/index.css?v=3.0.20"><link rel="canonical" href="https://aozijx.github.io/hiner/2025/03/22/stardew-valley-tips/index.html"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"><!-- Feature-specific CSS--><!-- aplayer--><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><!-- swiper--><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css"><!-- fancybox ui--><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.min.css"><!-- katex--><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"><!-- Open Graph--><meta name="description" content="星露谷官方教程文档 引用站外链接 星露谷物语 Wiki教程 操作问题：进入游戏后无法移动时，切换英文输入法，按"><!-- pwa--><meta name="theme-color" content="#006a73"><meta name="apple-mobile-web-app-status-bar-style" content="#006a73"><link rel="manifest" href="/hiner/manifest.json"><meta name="msapplication-TileColor" content="#006a73"><link rel="mask-icon" href="/hiner/img/pwa/favicon.png" color="#006a73"><link rel="apple-touch-icon" sizes="180x180" href="/hiner/img/pwa/favicon.png"><link rel="icon" type="image/png" sizes="16x16" href="/hiner/img/pwa/favicon_16.png"><link rel="icon" type="image/png" sizes="32x32" href="/hiner/img/pwa/favicon_32.png"><link rel="bookmark" href="/hiner/img/pwa/favicon.png"><script>console.log(' %c Solitude %c ' + '3.0.20' + ' %c https://github.com/everfu/hexo-theme-solitude',
+    'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
+    'background:#ff9a9a ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff',
+    'background:unset ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff')
+</script><script>let mdate = "7-7,9-18,12-13";
+mdate = (mdate.split(","));
+let ndate = new Date();
+for (let i of mdate) {
+    if (i === (ndate.getMonth()+1) + "-" + (ndate.getDate())) {
+        document.documentElement.classList.add('memorial');
+    }
+}
+</script><link href="/hiner/src/css/schedule.css" rel="stylesheet"><script src="/hiner/src/js/copylink.js" async></script><script src="/hiner/src/js/piotoggle.js" async></script><script src="/hiner/src/js/cover-fallback.js"></script><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+
+                if (name && keyObj[name]) return
+
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+            addEventListenerPjax: (ele, event, fn, option = false) => {
+              ele.addEventListener(event, fn, option)
+              utils.addGlobalFn('pjax', () => {
+                  ele.removeEventListener(event, fn, option)
+              })
+            },
+            diffDateFormat: (selector) => {
+                selector.forEach(item => {
+                    const date = new Date(item.getAttribute('datetime') || item.textContent);
+                    item.textContent = (date.getMonth() + 1).toString()+'/'+date.getDate().toString();
+                });
+            },
+        }
+    })()</script><!-- theme--><script>initTheme = () => {
+    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const cachedMode = utils.saveToLocal.get('theme');
+    if (cachedMode === undefined) {
+        const nowMode =
+            isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', nowMode);
+    } else {
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    }
+    typeof rm === 'object' && rm.mode(cachedMode === 'dark' && isDarkMode)
+}
+initTheme()</script><script>const GLOBAL_CONFIG = {
+    root: '/hiner/',
+    algolia: undefined,
+    localsearch: {"preload":true,"path":"search.xml"},
+    runtime: '2025-03-11 11:30:00',
+    lazyload: {
+        enable: true,
+        error: '/hiner/img/error_load.avif'
+    },
+    copyright: false,
+    highlight: {"limit":200,"expand":true,"copy":true,"syntax":"highlight.js"},
+    randomlink: false,
+    lang: {"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"day":"天前","hour":"小时前","just":"刚刚","min":"分钟前","month":"个月前"},"day":" 天","f12":"开发者模式已打开，请遵循GPL协议。","totalk":"无需删除空行，直接输入评论即可","search":{"empty":"找不到你查询的内容：${query}","hit":"找到 ${hits} 条结果，用时 ${time} 毫秒","placeholder":"输入关键词快速查找","count":"共 <b>${count}</b> 条结果。","loading":"搜索中..."}},
+    aside: {
+        state: {
+            morning: "✨ 早上好，新的一天开始了",
+            noon: "🍲 午餐时间",
+            afternoon: "🌞 下午好",
+            night: "早点休息",
+            goodnight: "晚安 😴",
+        },
+        witty_words: ["欢迎你","随便逛逛吧","愿你的服务器永远在线","坚信美好的事情即将发生","唯愿人间有惊鸿","愿星光落在你肩上","前行的人，总会遇见同行者.","此处有风，可稍作停留.","愿你的道路漫长，充满奇迹。","焚尽世间铅华，寻一程美好时光。","不求天长地久，只愿曾经拥有。","岁月静好，与君共","但使汝辈心欢乐，不嫁南枝与北枝"],
+        witty_comment: {
+            prefix: '好久不见，',
+            back: '欢迎再次回来，',
+        },
+    },
+    covercolor: {
+        enable: true
+    },
+    comment: false,
+    lightbox: 'fancybox',
+    right_menu: {"mode":{"dark":"深色模式","light":"浅色模式"},"img_error":"此图片无法复制与下载","music":{"start":"播放音乐","stop":"暂停音乐"},"translate":true,"ctrlOriginalMenu":"按住Ctrl+右键可打开浏览器右键菜单"},
+    translate: {"translateDelay":0,"defaultEncoding":2},
+    lure: {"jump":"404 Not Found","back":"ヾ(≧∇≦*)ゝ hey."},
+    expire: false,
+};</script><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: '',
+    toc: true,
+    comment: false,
+    ai_text: false,
+    color: false,
+}</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha512-fHwaWebuwA7NSF5Qg/af4UeDx9XqUpYpOGgubo3yWu+b2IQR4UeQwbb42Ti7gVAjNtVoI/I9TEoYeu9omwcC6g==" crossorigin="anonymous" referrerpolicy="no-referrer" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/hiner/atom.xml" title="Hinerの小窝" type="application/atom+xml">
+</head><body id="body"><div><canvas id="universe"></canvas></div><div><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="solitude fas fa-xmark"></i></div><div class="console-card-group"><div class="console-card-group-right"><div class="console-card tags" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">标签</div><div class="author-content-item-title">寻找感兴趣的领域</div></div><div class="card-tag-cloud"><a href="/hiner/tags/CSS/">CSS<sup>3</sup></a><a href="/hiner/tags/%E5%8E%9F%E7%A5%9E/">原神<sup>1</sup></a><a href="/hiner/tags/Mod/">Mod<sup>3</sup></a><a href="/hiner/tags/GitHub/">GitHub<sup>1</sup></a><a href="/hiner/tags/Hexo/">Hexo<sup>2</sup></a><a href="/hiner/tags/Git/">Git<sup>1</sup></a><a href="/hiner/tags/Katex/">Katex<sup>3</sup></a><a href="/hiner/tags/HTML/">HTML<sup>3</sup></a><a href="/hiner/tags/JavaScript/">JavaScript<sup>1</sup></a><a href="/hiner/tags/Python/">Python<sup>1</sup></a><a href="/hiner/tags/%E5%A3%81%E7%BA%B8/">壁纸<sup>1</sup></a><a href="/hiner/tags/solitude/">solitude<sup>1</sup></a><a href="/hiner/tags/steam/">steam<sup>3</sup></a><a href="/hiner/tags/%E6%98%9F%E9%9C%B2%E8%B0%B7%E7%89%A9%E8%AF%AD/">星露谷物语<sup>3</sup></a><a href="/hiner/tags/vscode/">vscode<sup>2</sup></a><a href="/hiner/tags/%E6%8F%92%E4%BB%B6/">插件<sup>1</sup></a><a href="/hiner/tags/%E6%96%87%E6%A1%A3/">文档<sup>1</sup></a><a href="/hiner/tags/vue/">vue<sup>1</sup></a><a href="/hiner/tags/Docker/">Docker<sup>1</sup></a><a href="/hiner/tags/WSL/">WSL<sup>1</sup></a><a href="/hiner/tags/Blog/">Blog<sup>1</sup></a></div></div><div class="console-card history" onclick="sco.hideConsole()"><ul class="card-archive-list"><li class="item"><a href="/archives/2025/10/"><span class="date">2025/10</span><div class="count-group"><span class="count">1</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2025/09/"><span class="date">2025/09</span><div class="count-group"><span class="count">3</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2025/08/"><span class="date">2025/08</span><div class="count-group"><span class="count">1</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2025/07/"><span class="date">2025/07</span><div class="count-group"><span class="count">3</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2025/06/"><span class="date">2025/06</span><div class="count-group"><span class="count">2</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2025/05/"><span class="date">2025/05</span><div class="count-group"><span class="count">1</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2025/04/"><span class="date">2025/04</span><div class="count-group"><span class="count">5</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2025/03/"><span class="date">2025/03</span><div class="count-group"><span class="count">14</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/"><span class="date">全部文章</span><div class="count-group"><span class="count">30</span><span class="unit">篇</span></div></a></li></ul></div></div></div><div class="button-group"><div class="console-btn-item"><span class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换"><i class="solitude fas fa-circle-half-stroke"></i></span></div><div class="console-btn-item" id="consoleHideAside"><span class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制"><i class="solitude fas fa-arrows-left-right-to-line"></i></span></div><div class="console-btn-item" id="consoleMusic" onclick="sco.musicToggle()"><span class="music-switch" title="音乐开关"><i class="solitude fas fa-compact-disc"></i></span></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div></div><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/hiner/archives/"><div class="headline">文章</div><div class="length-num">30</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/hiner/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/hiner/tags/"><div class="headline">标签</div><div class="length-num">21</div></a></div></div></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude fas fa-circle-half-stroke"></i><span>显示模式</span></span></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">音乐馆</div><div class="back-menu-list"><a class="back-menu-item" href="/hiner/HeoMusic/" title="HeoMusic"><img class="nolazyload back-menu-item-icon" src="/hiner/HeoMusic/img/icon.webp" alt="HeoMusic"><span class="back-menu-item-text">HeoMusic</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文章</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/archives/"><i class="solitude  fas fa-folder-closed"></i><span>归档</span></a></li><li><a class="site-page child" href="/hiner/categories/"><i class="solitude  fas fa-clone"></i><span>分类</span></a></li><li><a class="site-page child" href="/hiner/tags/"><i class="solitude  fas fa-tags"></i><span>标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>社交</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/links/"><i class="solitude  fas fa-link"></i><span>友链</span></a></li><li><a class="site-page child" href="/hiner/message/"><i class="solitude  fas fa-comment-dots"></i><span>弹幕</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>娱乐</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/music/"><i class="solitude  fas fa-music"></i><span>音乐馆</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>工具</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/tlink/"><i class="solitude  fas fa-toolbox"></i><span>工具箱</span></a></li><li><a class="site-page child" href="/hiner/katex/"><i class="solitude  fas fa-square-root-alt"></i><span>Katex公式编辑器</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/about/"><i class="solitude  fas fa-address-card"></i><span>关于</span></a></li><li><a class="site-page child" href="/hiner/essay/"><i class="solitude  fas fa-wifi"></i><span>说说</span></a></li><li><a class="site-page child" href="/hiner/Gallery/"><i class="solitude  fa-solid fa-image"></i><span>图库</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="card-tag-cloud"><a href="/hiner/tags/CSS/">CSS<sup>3</sup></a><a href="/hiner/tags/%E5%8E%9F%E7%A5%9E/">原神<sup>1</sup></a><a href="/hiner/tags/Mod/">Mod<sup>3</sup></a><a href="/hiner/tags/GitHub/">GitHub<sup>1</sup></a><a href="/hiner/tags/Hexo/">Hexo<sup>2</sup></a><a href="/hiner/tags/Git/">Git<sup>1</sup></a><a href="/hiner/tags/Katex/">Katex<sup>3</sup></a><a href="/hiner/tags/HTML/">HTML<sup>3</sup></a><a href="/hiner/tags/JavaScript/">JavaScript<sup>1</sup></a><a href="/hiner/tags/Python/">Python<sup>1</sup></a><a href="/hiner/tags/%E5%A3%81%E7%BA%B8/">壁纸<sup>1</sup></a><a href="/hiner/tags/solitude/">solitude<sup>1</sup></a><a href="/hiner/tags/steam/">steam<sup>3</sup></a><a href="/hiner/tags/%E6%98%9F%E9%9C%B2%E8%B0%B7%E7%89%A9%E8%AF%AD/">星露谷物语<sup>3</sup></a><a href="/hiner/tags/vscode/">vscode<sup>2</sup></a><a href="/hiner/tags/%E6%8F%92%E4%BB%B6/">插件<sup>1</sup></a><a href="/hiner/tags/%E6%96%87%E6%A1%A3/">文档<sup>1</sup></a><a href="/hiner/tags/vue/">vue<sup>1</sup></a><a href="/hiner/tags/Docker/">Docker<sup>1</sup></a><a href="/hiner/tags/WSL/">WSL<sup>1</sup></a><a href="/hiner/tags/Blog/">Blog<sup>1</sup></a></div></div></div></div><div><div class="needEndHide" id="rightside"><div class="rs_hide"><button class="translate" type="button" title="简繁转换">简</button><button class="mode" type="button" title="显示模式切换" onclick="sco.switchDarkMode()"><i class="fas fa-circle-half-stroke"></i></button><button class="aside pc" type="button" title="侧边栏" onclick="sco.switchHideAside()"><i class="fas fa-arrows-alt-h"></i></button></div><div class="rs_show"><button class="config" type="button" title="扩展" onclick="document.querySelector(&quot;.rs_hide&quot;).classList.toggle(&quot;show&quot;)"><i class="fas fa-gear fa-spin"></i></button><button class="mobile toc" type="button" title="目录" onclick="document.querySelector('#card-toc').classList.toggle('open')"><i class="fas fa-list"></i></button><button class="top" type="button" title="返回顶部" onclick="sco.toTop()"><i class="fas fa-arrow-up"></i><span id="percent">0</span></button></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><div class="back-home-button" tabindex="-1"><i class="solitude fas fa-bars-progress"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">音乐馆</div><div class="back-menu-list"><a class="back-menu-item" href="/hiner/HeoMusic/" title="HeoMusic"><img class="nolazyload back-menu-item-icon" src="/hiner/HeoMusic/img/icon.webp" alt="HeoMusic"><span class="back-menu-item-text">HeoMusic</span></a></div></div></div></div><a href="/hiner/" title="返回博客主页" id="site-name"><span class="title">Solitude</span><i class="solitude fas fa-home"></i></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">星露谷物语实用技巧（未完）</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文章</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/archives/"><i class="solitude  fas fa-folder-closed"></i><span>归档</span></a></li><li><a class="site-page child" href="/hiner/categories/"><i class="solitude  fas fa-clone"></i><span>分类</span></a></li><li><a class="site-page child" href="/hiner/tags/"><i class="solitude  fas fa-tags"></i><span>标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>社交</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/links/"><i class="solitude  fas fa-link"></i><span>友链</span></a></li><li><a class="site-page child" href="/hiner/message/"><i class="solitude  fas fa-comment-dots"></i><span>弹幕</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>娱乐</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/music/"><i class="solitude  fas fa-music"></i><span>音乐馆</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>工具</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/tlink/"><i class="solitude  fas fa-toolbox"></i><span>工具箱</span></a></li><li><a class="site-page child" href="/hiner/katex/"><i class="solitude  fas fa-square-root-alt"></i><span>Katex公式编辑器</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/about/"><i class="solitude  fas fa-address-card"></i><span>关于</span></a></li><li><a class="site-page child" href="/hiner/essay/"><i class="solitude  fas fa-wifi"></i><span>说说</span></a></li><li><a class="site-page child" href="/hiner/Gallery/"><i class="solitude  fa-solid fa-image"></i><span>图库</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="travellings_button"><a class="site-page" target="_blank" rel="noopener" href="https://www.travellings.cn/go.html" title=""><i class="solitude fas fa-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机一篇文章" href="javascript:void(0);"><i class="solitude fas fa-dice-d6"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索"><i class="solitude fas fa-magnifying-glass"></i></a></div><div class="nav-button" id="nav-console"><a class="console_switchbutton" onclick="sco.showConsole()" title="中控台" href="javascript:void(0);"><label><i class="left"></i><i class="center"></i><i class="right"></i></label></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude fas fa-bars"></i></a></div></div></div></nav><div class="coverdiv" id="coverdiv"><img class="nolazyload" id="post-cover" src="https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png" alt="星露谷物语实用技巧（未完）"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="该文章为原创文章，注意版权协议">原创</a><span class="post-meta-categories"><a class="post-meta-categories" href="/hiner/categories/%E6%B8%B8%E6%88%8F/">游戏</a></span><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/hiner/tags/steam/"><span class="tags-name tags-punctuation"><i class="solitude fas fa-hashtag"></i>steam</span></a><a class="post-meta__tags" href="/hiner/tags/%E6%98%9F%E9%9C%B2%E8%B0%B7%E7%89%A9%E8%AF%AD/"><span class="tags-name tags-punctuation"><i class="solitude fas fa-hashtag"></i>星露谷物语</span></a></div></div></div></div><h1 class="post-title">星露谷物语实用技巧（未完）</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-date" title="发布于 2025-03-22 19:11:04"><i class="post-meta-icon solitude fas fa-calendar-days"></i><time datetime="2025-03-22T11:11:04.000Z">2025-03-22T11:11:04.000Z</time></span><span class="post-meta-date" title="最后更新于 2026-11-26 18:11:37"><i class="post-meta-icon solitude fas fa-arrows-rotate"></i><time datetime="2026-11-26T10:11:37.390Z">2026-11-26T10:11:37.390Z</time></span></div></div></div><div class="post-radius-bottom"></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content article-container"><p>星露谷官方教程文档</p>
+<a class="tag-link" href="https://zh.stardewvalleywiki.com/Stardew_Valley_Wiki" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">星露谷物语</div>
+            <div class="tag-link-sitename">Wiki教程</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<div class="note attention"><i class="solitude fas fa-wand-magic-sparkles"></i><p><strong>操作问题</strong>：进入游戏后无法移动时，切换英文输入法，按 <span class="keyboard-tag">Shift⇧</span> 或 <span class="keyboard-tag">Ctrl</span> + <span class="keyboard-tag">Space</span></p></div>
+<h2 id="【基础生存】"><a class="header-anchor" href="#【基础生存】">¶</a>【基础生存】</h2>
+<ul>
+<li>
+<p><strong>体力管理</strong></p>
+<ul>
+<li>当玩家的能量消耗到 0 或以下（游戏中不显示负值）时会“精疲力尽”；能量降到 -15 后，玩家会晕倒，结束这一天。若在户外晕倒，最多会损失 <img src="src/img/Gold.png" style="all: revert;height: 18px;">1000 金币。</li>
+<li>如果入睡时已经精疲力尽，或者在 2:00AM 晕倒，则次日醒来仅恢复 50% 体力。</li>
+<li>使用肌肉回复药可以消除精疲力尽的状态。如果玩家已婚，通过亲吻配偶（每日首次）消除精疲力尽的状态。</li>
+<li>温泉可免费恢复体力。</li>
+</ul>
+</li>
+<li>
+<p><strong>时间管理</strong></p>
+<ul>
+<li>凌晨 2 点前回家，否则会因晕倒而损失金钱。</li>
+<li>提前睡觉可手动存档。</li>
+<li>雨天优先钓鱼/挖矿。</li>
+<li>每个季节仅 28 天，过季作物会枯萎。</li>
+</ul>
+</li>
+<li>
+<p><strong>电视节目</strong></p>
+<ul>
+<li>天气预报：查看次日天气</li>
+<li>算命占卜：显示当日运气（影响挖矿、钓鱼等概率）</li>
+<li>离地而居（周一/周四）：学习游戏知识</li>
+<li>酱料女皇（周日播出/周三复播）：学习烹饪食谱</li>
+<li>钓鱼信息（完成潘姆特别任务 <strong>烈酒</strong> 解锁）：当前季节可捕获鱼类</li>
+</ul>
+</li>
+<li>
+<p><strong>商店作息</strong></p>
+<ul>
+<li>玛妮牧场：周一休息</li>
+<li>皮埃尔商店：周三休息；完成献祭后每周每天都不休息</li>
+<li>铁匠铺：完成献祭后每一周周五休息</li>
+</ul>
+</li>
+</ul>
+<h2 id="【工具与升级】"><a class="header-anchor" href="#【工具与升级】">¶</a>【工具与升级】</h2>
+<ul>
+<li>
+<p><strong>工具</strong></p>
+<a class="tag-link" href="https://zh.stardewvalleywiki.com/%E6%AD%A6%E5%99%A8" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">星露谷物语Wiki</div>
+            <div class="tag-link-sitename">武器</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<ul>
+<li>在采石场左上角的矿洞最深处有一把金色镰刀</li>
+</ul>
+</li>
+<li>
+<p><strong>背包扩展</strong><br>
+玩家可以在皮埃尔的杂货店购买背包升级。背包升级只需要足够的金币，无需其他条件，开始游戏后即可购买。</p>
+<ul>
+<li>“大型背包”（红色）需要花费 <img src="src/img/Gold.png" style="all: revert;height: 18px;">2,000，可将物品栏扩大到24格</li>
+<li>“豪华背包”（蓝色）需要花费 <img src="src/img/Gold.png" style="all: revert;height: 18px;">10,000，可将物品栏扩大到36格</li>
+</ul>
+</li>
+</ul>
+<h2 id="【探索与资源】"><a class="header-anchor" href="#【探索与资源】">¶</a>【探索与资源】</h2>
+<p>可以使用锄头在农场、小镇或野外的地面挖蚯蚓，掉落物品包括煤炭、种子等。</p>
+<ul>
+<li>
+<p><strong>矿洞技巧</strong></p>
+<a class="tag-link" href="https://zh.stardewvalleywiki.com/%E7%9F%BF%E7%89%A9" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">星露谷物语Wiki</div>
+            <div class="tag-link-sitename">矿物</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<ul>
+<li>矿井总共有 120 层，每 5 层解锁一部电梯；越深的楼层包含的矿石种类和数量也越多。</li>
+<li>玩家可以通过探险家公会的马龙帮忙找回遗失的武器。花费和丢失物品基础价格等值的钱购买遗失的物品。<br>
+每次因为生命值过低而昏迷以后，可以在物品找回服务中购买一个物品或者一堆同类的物品。未买回的遗失物品会一直保存在马龙那里。</li>
+<li>沙漠矿洞（骷髅洞穴）需先获得 头骨钥匙（普通矿洞120层解锁）。</li>
+</ul>
+</li>
+<li>
+<p><strong>秘密森林</strong></p>
+<ul>
+<li>每天可砍12块硬木，需钢斧解锁入口（法师塔上方）。</li>
+<li>秘密森林中会生成各种季节性采集品，以及会攻击玩家的史莱姆。击杀这里的史莱姆有可能掉落桃花心木种子。</li>
+<li>村民不会路过秘密森林，所以可以在秘密森林的任意位置安全放置生产设备。</li>
+</ul>
+</li>
+<li>
+<p><strong>古物</strong><br>
+捐赠博物馆解锁奖励。</p>
+</li>
+</ul>
+<a class="tag-link" href="https://zh.stardewvalleywiki.com/%E5%8F%A4%E7%89%A9" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">星露谷物语Wiki</div>
+            <div class="tag-link-sitename">古物</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<h2 id="【农场建设】"><a class="header-anchor" href="#【农场建设】">¶</a>【农场建设】</h2>
+<ul>
+<li>
+<p><strong>建筑</strong></p>
+<ul>
+<li>筒仓<br>
+一旦农场里建成筒仓，在草地上使用镰刀即可将干草收入筒仓（每块草地有 50% 的概率）。每个筒仓可以容纳 240 份干草。</li>
+<li>祝尼魔小屋<br>
+解锁后，祝尼魔会帮你收菜（范围有限，别建在作物中间！）。</li>
+</ul>
+</li>
+<li>
+<p><strong>动物与产物</strong></p>
+<ul>
+<li>为领养的宠物往小碗里浇水</li>
+<li>每日抚摸动物提升心情（影响产物品质）。</li>
+<li>未喂食或心情 &lt;70 的动物不产物品。</li>
+<li>夜间关闭仓门，避免动物遭受袭击，被袭击后的动物将被游戏移除，并有心情信息说“&lt;动物的名字&gt;今天似乎很紧张不安，昨晚应该发生了些事情”。</li>
+<li>动物被困在畜棚/鸡舍外面第二天将会生气。</li>
+<li>建造马厩可骑乘马匹（速度 +30%）；后期解锁传送塔后可以快速移动。</li>
+<li>用 <strong>帽子</strong> 给马匹 <strong>换装</strong>（将帽子拖到马身上），部分帽子会改变马的外观颜色。</li>
+</ul>
+</li>
+</ul>
+<h2 id="【社区中心】"><a class="header-anchor" href="#【社区中心】">¶</a>【社区中心】</h2>
+<ul>
+<li>完成对应社区中心收集包，社区中心里相应的区域将会翻新。</li>
+<li>如果所有的收集包都被完成了，整个社区中心将被修好，祝尼魔将会离开。之后，Joja超市会倒闭，每周三皮埃尔的杂货店不再闭店。每周五克林特会前往社区中心，因此铁匠铺每周五暂停营业，不过建筑本身仍然可以进入。</li>
+</ul>
+<h2 id="【NPC与好感】"><a class="header-anchor" href="#【NPC与好感】">¶</a>【NPC与好感】</h2>
+<ul>
+<li>
+<p><strong>可结婚对象</strong></p>
+<a class="tag-link" href="https://zh.stardewvalleywiki.com/%E6%9D%91%E6%B0%91" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">星露谷物语</div>
+            <div class="tag-link-sitename">可结婚角色</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+</li>
+<li>
+<p><strong>婚姻</strong></p>
+<ul>
+<li>单身村民的好感度上限为8心。玩家需要和任意一个单身村民达到8心的好感度才能开始恋爱。</li>
+<li>要想订婚，玩家必须送一个美人鱼吊坠给求婚对象。求婚对象接受美人鱼吊坠后，可在日历上查看婚礼日期，婚礼当天标有美人鱼吊坠的图标。</li>
+<li>如果发生群体10心事件，则玩家所有的男朋友或女朋友会整整一个星期不会给玩家好脸色。</li>
+<li>将枯萎的花束送给男/女朋友便可以结束恋爱关系。收到枯萎的花束后，该村民的友谊值会降到5心，并且会有独特的反应。</li>
+</ul>
+</li>
+<li>
+<p><strong>妒忌</strong><br>
+玩家结婚后，向其他单身的村民赠送其不讨厌的礼物可能会导致配偶吃醋。</p>
+<ul>
+<li>这种情况只会发生在接受礼物的村民已接受玩家的花束、且与配偶为相同性别时。</li>
+<li>村民是否喜欢该礼物与配偶是否妒忌无关。</li>
+<li>如果你的配偶吃醋了，你与配偶之间的好感度会降低30点，且第二天与配偶对话时，会有一条特殊的对话，提到你给别人送的礼物。</li>
+</ul>
+</li>
+<li>
+<p><strong>提升好感</strong></p>
+<ul>
+<li>每天对话 + 送礼物（生日送最爱礼物+8倍好感）。</li>
+<li>结婚后14心解锁专属剧情</li>
+</ul>
+<a class="tag-link" href="https://zh.stardewvalleywiki.com/%E5%85%A8%E9%83%A8%E7%A4%BC%E7%89%A9%E6%B8%85%E5%8D%95" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">星露谷物语</div>
+            <div class="tag-link-sitename">礼物清单</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+</li>
+</ul>
+<h2 id="【季节节日】"><a class="header-anchor" href="#【季节节日】">¶</a>【季节节日】</h2>
+<ul>
+<li>春季复活节：买齐 草莓种子（过季无法购买）。</li>
+<li>冬季冬星节：提前准备 NPC 最爱的礼物（随机交换）。</li>
+</ul>
+<h2 id="【联机】"><a class="header-anchor" href="#【联机】">¶</a>【联机】</h2>
+<div class="video-container"><iframe src="//player.bilibili.com/player.html?autoplay=0&bvid=BV1hDXsY8Ezp" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<ul>
+<li>
+<p><strong>资金管理</strong></p>
+<ul>
+<li>共享<br>
+所有联机队友共享一个钱包（注意队友偷偷花钱）</li>
+<li>独立<br>
+每个联机队友各有一个钱包（注意队友偷你菜去卖钱）</li>
+</ul>
+</li>
+<li>
+<p><strong>技能相关</strong></p>
+<ul>
+<li>在共享资金时，当队友在线且有影响物品价格的技能时，其他玩家会享受到技能加成。</li>
+</ul>
+</li>
+<li>
+<p><strong>多人模式福利</strong></p>
+<ul>
+<li>共享献祭进度</li>
+<li>可以上床恢复体力</li>
+<li>分工协作：1人钓鱼1人挖矿</li>
+</ul>
+</li>
+</ul>
+<h2 id="【实用工具】"><a class="header-anchor" href="#【实用工具】">¶</a>【实用工具】</h2>
+<ul>
+<li>农场规划工具 Stardew Planner 提前设计洒水器布局和建筑位置。<a class="tag-link" href="https://stardew.info/planner" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Stardew Planner</div>
+            <div class="tag-link-sitename">星露谷布局规划</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+</li>
+</ul>
+<h2 id="【快捷键技巧】"><a class="header-anchor" href="#【快捷键技巧】">¶</a>【快捷键技巧】</h2>
+<ul>
+<li>
+<span class="keyboard-tag">Shift⇧</span> 快速购买/制作物品（5个/次，长按可批量操作）。
+</li>
+<li>
+<span class="keyboard-tag">X</span> 快速播种
+</li>
+<li>
+<span class="keyboard-tag">Tab</span> 切换物品栏
+</li>
+<li>鼠标滚轮快速切换物品</li>
+<li>
+<span class="keyboard-tag">Y</span> 打开表情轮盘
+</li>
+<li>
+<span class="keyboard-tag">T</span> 打开对话框
+</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author_group"><div class="post-copyright__author_img"><img class="post-copyright__author_img_front" src="/hiner/img/logo.png"></div><div class="post-copyright__author_name">Hiner</div><div class="post-copyright__author_desc"></div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div><div class="post-reward"><div class="reward-button" title="赞赏作者" onclick="AddRewardMask()"><i class="solitude fas fa-heart"></i>赞赏作者</div><div class="reward-main"><ul class="reward-all"><span class="reward-title">感谢您的赞赏</span><ul class="reward-group"><li class="reward-item"><a href="https://aozijx.github.io/aozijx/wechat_qr_code.png"><img class="post-qr-code-img nolazyload" src="https://aozijx.github.io/aozijx/wechat_qr_code.png" alt="WeChat" style="border-color: var(--efu-green)"></a><div class="post-qr-code-desc">WeChat</div></li><li class="reward-item"><a href="https://aozijx.github.io/aozijx/alipay_qr_code.png"><img class="post-qr-code-img nolazyload" src="https://aozijx.github.io/aozijx/alipay_qr_code.png" alt="Alipay" style="border-color: var(--efu-blue)"></a><div class="post-qr-code-desc">Alipay</div></li></ul><a class="reward-main-btn" href="/hiner/about/"><div class="reward-text">赞赏名单</div><div class="reward-dec">因为您的支持，我才能够实现写作的价值。</div></a></ul></div></div><script>function RemoveRewardMask() {
+    let rewardMainElements = document.querySelectorAll(".reward-main");
+    let quitBoxElement = document.querySelector("#quit-box");
+
+    rewardMainElements.forEach(element => {
+        element.style.display = "none";
+    });
+
+    if (quitBoxElement) {
+        quitBoxElement.style.display = "none";
+    }
+}
+
+function AddRewardMask() {
+    let rewardMainElements = document.querySelectorAll(".reward-main");
+    let quitBoxElement = document.querySelector("#quit-box");
+
+    rewardMainElements.forEach(element => {
+        element.style.display = "flex";
+    });
+
+    if (quitBoxElement) {
+        quitBoxElement.style.display = "flex";
+    }
+}</script><div class="reward-link mode"><a class="reward-link-button" href="/hiner/atom.xml"><i class="solitude fas fa-seedling"></i>订阅</a></div></div></div><div class="social-share"><a class="social-share-ico icon-qq" target="_blank" rel="noopener" href="https://connect.qq.com/widget/shareqq/index.html?url=https%3A%2F%2Faozijx.github.io%2Fhiner%2Fhiner%2F2025%2F03%2F22%2Fstardew-valley-tips%2F&amp;title=%E6%98%9F%E9%9C%B2%E8%B0%B7%E7%89%A9%E8%AF%AD%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89&amp;desc=undefined&amp;summary=undefined&amp;site=%E6%98%9F%E9%9C%B2%E8%B0%B7%E7%89%A9%E8%AF%AD%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89&amp;pics=https%3A%2F%2Fstardewvalley.net%2Fwp-content%2Fuploads%2F2017%2F12%2Fsdv_divider.png" title="分享到QQ"><i class="solitude fab fa-qq"></i></a><a class="social-share-ico icon-weibo" target="_blank" rel="noopener" href="http://service.weibo.com/share/share.php?url=https%3A%2F%2Faozijx.github.io%2Fhiner%2Fhiner%2F2025%2F03%2F22%2Fstardew-valley-tips%2F&amp;title=%E6%98%9F%E9%9C%B2%E8%B0%B7%E7%89%A9%E8%AF%AD%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89&amp;pic=https%3A%2F%2Fstardewvalley.net%2Fwp-content%2Fuploads%2F2017%2F12%2Fsdv_divider.png" title="分享到微博"><i class="solitude fab fa-weibo"></i></a><div class="social-share-ico icon-link" onclick="utils.copy(&quot;https://aozijx.github.io/hiner/hiner/2025/03/22/stardew-valley-tips/&quot;)" title="复制文章链接"><i class="solitude fas fa-link"></i></div><div class="social-share-ico icon-qrcode" title="使用手机扫码阅读这篇文章"><i class="solitude fas fa-qrcode"></i><div class="share-main"><div class="share-main-all"><div id="qrcode"></div><div class="reward-dec">使用手机扫码阅读这篇文章</div></div></div><script pjax>typeof QRCode === 'function' && new QRCode(document.getElementById("qrcode"), {
+    text: 'https://aozijx.github.io/hiner/hiner/2025/03/22/stardew-valley-tips/',
+    correctLevel : QRCode.CorrectLevel.L
+});
+window.addEventListener('DOMContentLoaded', () => {
+    new QRCode(document.getElementById("qrcode"), {
+        text: 'https://aozijx.github.io/hiner/hiner/2025/03/22/stardew-valley-tips/',
+        correctLevel : QRCode.CorrectLevel.L
+    });
+});
+</script></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本文是原创文章，采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans">CC BY-NC-SA 4.0</a>协议，完整转载请注明来自<a href="/hiner/">Hinerの小窝</a></span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/hiner/tags/steam/"><span class="tags-punctuation"><i class="solitude fas fa-hashtag"></i>steam<span class="tagsPageCount">3</span></span></a><a class="post-meta__tags" href="/hiner/tags/%E6%98%9F%E9%9C%B2%E8%B0%B7%E7%89%A9%E8%AF%AD/"><span class="tags-punctuation"><i class="solitude fas fa-hashtag"></i>星露谷物语<span class="tagsPageCount">3</span></span></a></div></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/hiner/2025/03/27/stardew-valley-mods/"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">星露谷 Mod 推荐</div></div></a></div><div class="next-post pull-right"><a href="/hiner/2025/03/20/stardew-valley-mod-installation/"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">星露谷 Mod 安装指南</div></div></a></div></nav>
+        <div class="relatedPosts">
+            <div class="headline">
+                <i class="solitude fas fa-star"></i>
+                <span>喜欢这篇的人也看了</span>
+                <div class="relatedPosts-link">
+                    <a onclick="event.preventDefault(); toRandomPost();" href="javascript:void(0);" rel="external nofollow" data-pjax-state="">随便逛逛</a>
+                </div>
+            </div>
+            <div class="relatedPosts-list">
+            <div>
+                <a href="/hiner/2025/03/27/stardew-valley-mods/" title="星露谷 Mod 推荐">
+                    <img class="cover" src="https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png" alt="cover">
+                    <div class="content is-center">
+                        <div class="title">星露谷 Mod 推荐</div>
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="/hiner/2025/03/20/stardew-valley-mod-installation/" title="星露谷 Mod 安装指南">
+                    <img class="cover" src="https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png" alt="cover">
+                    <div class="content is-center">
+                        <div class="title">星露谷 Mod 安装指南</div>
+                    </div>
+                </a>
+            </div>
+            </div>
+        </div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="top-group"><div class="sayhi" id="sayhi" onclick="sco.changeWittyWord()"></div></div></div><div class="avatar"><img alt="头像" src="/hiner/img/logo.png"></div><div class="description">何须浅碧深红色,<br>自是花中第一流。</div><div class="bottom-group"><span class="left"><div class="name">Hiner</div><div class="desc">只有迎风，风筝才能飞得更高。</div></span><div class="social-icons is-center"><a class="social-icon" target="_blank" rel="noopener" href="https://github.com/aozijx" title="Github"><i class="solitude  fab fa-github"></i></a><a class="social-icon" href="mailto:xxhtxml@outlook.com" title="Mail"><i class="solitude  far fa-envelope"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="solitude fas fa-bars"></i><span>文章目录</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90%E5%9F%BA%E7%A1%80%E7%94%9F%E5%AD%98%E3%80%91"><span class="toc-text">【基础生存】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90%E5%B7%A5%E5%85%B7%E4%B8%8E%E5%8D%87%E7%BA%A7%E3%80%91"><span class="toc-text">【工具与升级】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90%E6%8E%A2%E7%B4%A2%E4%B8%8E%E8%B5%84%E6%BA%90%E3%80%91"><span class="toc-text">【探索与资源】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90%E5%86%9C%E5%9C%BA%E5%BB%BA%E8%AE%BE%E3%80%91"><span class="toc-text">【农场建设】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90%E7%A4%BE%E5%8C%BA%E4%B8%AD%E5%BF%83%E3%80%91"><span class="toc-text">【社区中心】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90NPC%E4%B8%8E%E5%A5%BD%E6%84%9F%E3%80%91"><span class="toc-text">【NPC与好感】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90%E5%AD%A3%E8%8A%82%E8%8A%82%E6%97%A5%E3%80%91"><span class="toc-text">【季节节日】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90%E8%81%94%E6%9C%BA%E3%80%91"><span class="toc-text">【联机】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7%E3%80%91"><span class="toc-text">【实用工具】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%8A%80%E5%B7%A7%E3%80%91"><span class="toc-text">【快捷键技巧】</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="solitude fas fa-map"></i><span>最近发布</span></div><div class="aside-list"><a class="aside-list-item" href="/hiner/2025/10/28/minecraft-java-server-guide/" title="Minecraft Java 服务器搭建与配置指南（Ubuntu / WSL）"><div class="thumbnail"><img alt="Minecraft Java 服务器搭建与配置指南（Ubuntu / WSL）" src="https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/screenshots/1.21-new-trial-chambers-patterns.jpg"></div><div class="content"><span class="title" href="/hiner/2025/10/28/minecraft-java-server-guide/" title="Minecraft Java 服务器搭建与配置指南（Ubuntu / WSL）">Minecraft Java 服务器搭建与配置指南（Ubuntu / WSL）</span></div></a><a class="aside-list-item" href="/hiner/2025/09/27/input-method-time-format/" title="使用输入法自定义短语输出时间"><div class="thumbnail"><img alt="使用输入法自定义短语输出时间" src="/hiner/img/default.avif"></div><div class="content"><span class="title" href="/hiner/2025/09/27/input-method-time-format/" title="使用输入法自定义短语输出时间">使用输入法自定义短语输出时间</span></div></a><a class="aside-list-item" href="/hiner/2025/09/26/vscode-usage-tips/" title="VS Code 使用技巧"><div class="thumbnail"><img alt="VS Code 使用技巧" src="/hiner/src/img/vscode.webp"></div><div class="content"><span class="title" href="/hiner/2025/09/26/vscode-usage-tips/" title="VS Code 使用技巧">VS Code 使用技巧</span><span class="categories" href="/hiner/2025/09/26/vscode-usage-tips/">VSCode</span></div></a><a class="aside-list-item" href="/hiner/2025/09/02/express-request-response-api/" title="Express Request 与 Response API 参考"><div class="thumbnail"><img alt="Express Request 与 Response API 参考" src="/hiner/img/default.avif"></div><div class="content"><span class="title" href="/hiner/2025/09/02/express-request-response-api/" title="Express Request 与 Response API 参考">Express Request 与 Response API 参考</span></div></a><a class="aside-list-item" href="/hiner/2025/08/22/css-transition-animation-reverse/" title="CSS transition 与 animation 的反向播放"><div class="thumbnail"><img alt="CSS transition 与 animation 的反向播放" src="/hiner/img/default.avif"></div><div class="content"><span class="title" href="/hiner/2025/08/22/css-transition-animation-reverse/" title="CSS transition 与 animation 的反向播放">CSS transition 与 animation 的反向播放</span></div></a></div></div></div></div></main><footer id="footer"><div id="st-footer-bar"><div class="footer-logo"><span>Solitude</span></div><div class="footer-bar-description"></div><a class="footer-bar-link" href="/hiner/about/" title="Learn more / 了解更多">Learn more / 了解更多</a></div><div id="footer_deal"><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/aozijx" title="Github"><i class="solitude  fab fa-github"></i></a><div><div class="nolazyload footer_mini_logo" id="footer_mini_logo" title="返回顶部" onclick="sco.toTop()"><img src="https://aozijx.github.io/xuao/src/img/cat.gif" alt="返回顶部"></div></div><a class="deal_link" href="mailto:xxhtxml@outlook.com" title="Mail"><i class="solitude  far fa-envelope"></i></a></div><div id="st-footer"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2025 - 2026 By<a class="footer-bar-link" href="/hiner/" title="Hiner">Hiner</a></div><div class="beian-group"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://hexo.io/" title="框架：Hexo">框架：Hexo</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" title="主题：Solitude">主题：Solitude</a></div></div><div><div class="footer-bar-right"><a class="footer-bar-link" href="/hiner/atom.xml" title="">RSS</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude/blob/main/LICENSE" title=""><i class="solitude fas fa-copyright"></i><i class="solitude fab fa-creative-commons-by"></i><i class="solitude fab fa-creative-commons-nc"></i><i class="solitude fab fa-creative-commons-nd"></i></a></div></div></div></div><div class="comment-barrage needEndHide"></div></footer></div><div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="solitude fas fa-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="solitude fas fa-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="solitude fas fa-arrows-rotate"></i></div><div class="rightMenu-item" id="menu-top"><i class="solitude fas fa-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="solitude fas fa-clone"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="solitude fas fa-clipboard"></i><span>粘贴文本</span></div><div class="rightMenu-item" id="menu-newwindow"><i class="solitude far fa-window-maximize"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="solitude fas fa-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="solitude fas fa-clone"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="solitude fas fa-cloud-arrow-down"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-search"><i class="solitude fas fa-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="solitude fas fa-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="solitude fas fa-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="solitude fas fa-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="solitude fas fa-clone"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" id="menu-randomPost" onclick="toRandomPost()||rm.hideRightMenu()"><i class="solitude fas fa-tower-broadcast"></i><span>随机文章</span></div><div class="rightMenu-item" id="menu-copyPostLink" onclick="copyPostLink()||rm.hideRightMenu()"><i class="solitude fas fa-link"></i><span>复制链接</span></div><div class="rightMenu-item" id="consoleMusic" onclick="sco.musicToggle()||rm.hideRightMenu()"><i class="solitude solitude fas fa-compact-disc"></i><span>音乐胶囊</span></div><div class="rightMenu-item" id="buttonPio" onclick="togglePio()||rm.hideRightMenu()"><i class="solitude solitude fas fa-user-astronaut"></i><span>显示看板娘</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" id="menu-darkmode" onclick="sco.switchDarkMode()"><i class="solitude fas fa-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></div><div class="rightMenu-item" id="menu-translate"><i class="solitude fas fa-language"></i><span>轉為繁體</span></div></div></div><div id="rightmenu-mask"></div></div><div><!-- Critical scripts loaded synchronously--><script src="/hiner/js/utils.js?v=3.0.20"></script><script src="/hiner/js/main.js?v=3.0.20"></script><!-- Non-critical scripts loaded asynchronously--><script async src="/hiner/js/third_party/waterfall.min.js?v=3.0.20"></script><script src="https://fastly.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><!-- Feature-specific scripts loaded asynchronously--><script async src="https://fastly.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script><script defer src="https://fastly.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script><script defer src="https://fastly.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script><script defer src="https://fastly.jsdelivr.net/npm/typeit@8.8.7/dist/index.umd.min.js"></script><script defer src="/hiner/js/third_party/universe.min.js?v=3.0.20"></script><script>document.addEventListener('DOMContentLoaded', () => {
+  if (typeof dark === 'function') dark();
+});
+</script><script defer src="/hiner/js/tw_cn.js?v=3.0.20"></script><!-- UI enhancement scripts--><script src="https://fastly.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><script defer src="https://fastly.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script src="https://fastly.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.umd.min.js"></script><script src="https://fastly.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js"></script><!-- Music player scripts--><script>var meting_api = 'https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&r=:r';</script><script defer src="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script defer src="https://fastly.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script><!-- Cover color processing scripts--><script defer src="https://fastly.jsdelivr.net/npm/colorthief@2.6.0/dist/color-thief.min.js"></script><script defer src="/hiner/js/covercolor/local.js?v=3.0.20"></script><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+utils.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+</script><script src="https://fastly.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!-- Search functionality--><!-- Right menu functionality--><script defer src="/hiner/js/right_menu.js?v=3.0.20"></script><script src="https://cdn.jsdelivr.net/npm/greensock@1.20.2/dist/TweenLite.js"></script><script src="/hiner/src/live2d/live2dcubismcore.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pixi.js@5.3.6/dist/pixi.min.js"></script><script src="/hiner/src/live2d/cubism4.min.js"></script><link href="/hiner/src/live2d/pio.css" rel="stylesheet" type="text/css"/><script src="/hiner/src/live2d/pio.js"></script><script src="https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/pio_sdk4.js"></script><script src="https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/load.js"></script><script src="https://open.lightxi.com/unpkg/chinese-lunar@0.1.4/lib/chinese-lunar.js"></script><script src="/hiner/src/js/schedule.js"></script><div class="js-pjax"><script>mermaid.run();
+</script></div></div><!-- pjax--><script>let pjax = null;
+
+function initPjax() {
+    if (typeof Pjax === 'undefined') {
+        console.warn('Pjax is not loaded yet, retrying...');
+        setTimeout(initPjax, 100);
+        return;
+    }
+
+    pjax = new Pjax({
+        elements: 'a:not([target="_blank"])',
+        selectors: ["title","#body-wrap","#site-config","meta[name=\"description\"]",".js-pjax","meta[property^=\"og:\"]","#config-diff",".rs_show",".rs_hide"],
+        cacheBust: false,
+        analytics: false,
+        scrollRestoration: false
+    })
+
+    // 将 pjax 实例挂载到全局
+    window.pjax = pjax;
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    document.addEventListener('pjax:complete', () => {
+        window.refreshFn()
+
+        document.querySelectorAll('script[data-pjax]').forEach(item => {
+            const newScript = document.createElement('script')
+            const content = item.text || item.textContent || item.innerHTML || ""
+            Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+            newScript.appendChild(document.createTextNode(content))
+            item.parentNode.replaceChild(newScript, item)
+        })
+
+        GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+    })
+
+    document.addEventListener('pjax:error', (e) => {
+        if (e.request.status === 404) {
+            pjax.loadUrl('/404.html')
+        }
+    })
+}
+
+// 初始化 Pjax
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPjax);
+} else {
+    initPjax();
+}</script><!-- google adsense--><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="solitude fas fa-xmark"></i></button></nav><div class="search-wrap"><div class="search-box"><input class="search-box-input" id="search-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="输入关键词快速查找"></div><div id="search-results"><div id="search-hits"><a class="tag-list" href="javascript:void(0);" onclick="pjax.loadUrl('/hiner/tags/Hexo/')">Hexo</a></div></div><div id="search-pagination"></div><div id="search-tips"></div></div></div><div id="search-mask"></div></div><script src="/hiner/js/search/local.js?v=3.0.20"></script><div><div class="needEndHide" id="nav-music"><div id="nav-music-hoverTips"><i class="music-control-btn fas fa-backward-step" id="music-prev" onclick="sco.musicSkipBack()"></i><i class="music-control-btn fas fa-pause" id="music-pause" onclick="sco.musicToggle()"></i><i class="music-control-btn fas fa-play" id="music-play" onclick="sco.musicToggle()"></i><i class="music-control-btn fas fa-forward-step" id="music-next" onclick="sco.musicSkipForward()"></i></div><meting-js id="18639216206" server="netease" type="playlist" mutex="true" preload="none" theme="var(--efu-main)" data-lrctype="0" order="random" volume="0.8"></meting-js></div></div></body></html>
+        <script>
+            const posts = ["2025/10/28/minecraft-java-server-guide/","2025/09/27/input-method-time-format/","2025/09/26/vscode-usage-tips/","2025/09/02/express-request-response-api/","2025/08/22/css-transition-animation-reverse/","2025/07/26/javascript-property-access/","2025/07/16/usb-drive-icon/","2025/07/08/vue-installation-guide/","2025/06/30/html-tags/","2025/06/18/theme-switching/","2025/05/10/vscode-plugins/","2025/04/19/python-qr-code/","2025/04/16/xuao/","2025/04/16/css-properties/","2025/04/05/git-commands/","2025/04/02/wsl-docker-firefox-guide/","2025/03/30/random-image-wallpaper-api/","2025/03/27/stardew-valley-mods/","2025/03/22/stardew-valley-tips/","2025/03/20/stardew-valley-mod-installation/","2025/03/16/solitude-theme-customization/","2025/03/15/katex-reference/","2025/03/15/markdown-html-effects/","2025/03/15/github-acceleration/","2025/03/14/genshin-impact-mod-installation/","2025/03/13/hexo-katex-configuration/","2025/03/13/hexo-code-highlighting/","2025/03/13/interesting-formulas/","2025/03/12/hexo-solitude-tags/","2025/03/12/hello-world/"];
+            function toRandomPost() {
+                const randomPost = posts[Math.floor(Math.random() * posts.length)];
+                pjax.loadUrl(GLOBAL_CONFIG.root + randomPost);
+            }
+        </script>

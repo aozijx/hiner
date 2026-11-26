@@ -1,0 +1,717 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Minecraft Java 服务器搭建与配置指南（Ubuntu / WSL） | Hinerの小窝</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="/hiner/img/pwa/favicon.png"><link rel="stylesheet" href="/hiner/css/index.css?v=3.0.20"><link rel="canonical" href="https://aozijx.github.io/hiner/2025/10/28/minecraft-java-server-guide/index.html"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"><!-- Feature-specific CSS--><!-- aplayer--><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><!-- swiper--><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css"><!-- fancybox ui--><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.min.css"><!-- katex--><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"><!-- Open Graph--><meta name="description" content="¶更新软件包列表并升级现有软件 1sudo apt update ¶安装 Java 运行环境 本文以 Minecraft 1.21.1 为基准，需要 Java 21： 1sudo apt install openjdk-21-jre-headless -y 版本对应：1.20.5 – 1.21.x"><!-- pwa--><meta name="theme-color" content="#006a73"><meta name="apple-mobile-web-app-status-bar-style" content="#006a73"><link rel="manifest" href="/hiner/manifest.json"><meta name="msapplication-TileColor" content="#006a73"><link rel="mask-icon" href="/hiner/img/pwa/favicon.png" color="#006a73"><link rel="apple-touch-icon" sizes="180x180" href="/hiner/img/pwa/favicon.png"><link rel="icon" type="image/png" sizes="16x16" href="/hiner/img/pwa/favicon_16.png"><link rel="icon" type="image/png" sizes="32x32" href="/hiner/img/pwa/favicon_32.png"><link rel="bookmark" href="/hiner/img/pwa/favicon.png"><script>console.log(' %c Solitude %c ' + '3.0.20' + ' %c https://github.com/everfu/hexo-theme-solitude',
+    'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
+    'background:#ff9a9a ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff',
+    'background:unset ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff')
+</script><script>let mdate = "7-7,9-18,12-13";
+mdate = (mdate.split(","));
+let ndate = new Date();
+for (let i of mdate) {
+    if (i === (ndate.getMonth()+1) + "-" + (ndate.getDate())) {
+        document.documentElement.classList.add('memorial');
+    }
+}
+</script><link href="/hiner/src/css/schedule.css" rel="stylesheet"><script src="/hiner/src/js/copylink.js" async></script><script src="/hiner/src/js/piotoggle.js" async></script><script src="/hiner/src/js/cover-fallback.js"></script><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+
+                if (name && keyObj[name]) return
+
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+            addEventListenerPjax: (ele, event, fn, option = false) => {
+              ele.addEventListener(event, fn, option)
+              utils.addGlobalFn('pjax', () => {
+                  ele.removeEventListener(event, fn, option)
+              })
+            },
+            diffDateFormat: (selector) => {
+                selector.forEach(item => {
+                    const date = new Date(item.getAttribute('datetime') || item.textContent);
+                    item.textContent = (date.getMonth() + 1).toString()+'/'+date.getDate().toString();
+                });
+            },
+        }
+    })()</script><!-- theme--><script>initTheme = () => {
+    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const cachedMode = utils.saveToLocal.get('theme');
+    if (cachedMode === undefined) {
+        const nowMode =
+            isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', nowMode);
+    } else {
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    }
+    typeof rm === 'object' && rm.mode(cachedMode === 'dark' && isDarkMode)
+}
+initTheme()</script><script>const GLOBAL_CONFIG = {
+    root: '/hiner/',
+    algolia: undefined,
+    localsearch: {"preload":true,"path":"search.xml"},
+    runtime: '2025-03-11 11:30:00',
+    lazyload: {
+        enable: true,
+        error: '/hiner/img/error_load.avif'
+    },
+    copyright: false,
+    highlight: {"limit":200,"expand":true,"copy":true,"syntax":"highlight.js"},
+    randomlink: false,
+    lang: {"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"day":"天前","hour":"小时前","just":"刚刚","min":"分钟前","month":"个月前"},"day":" 天","f12":"开发者模式已打开，请遵循GPL协议。","totalk":"无需删除空行，直接输入评论即可","search":{"empty":"找不到你查询的内容：${query}","hit":"找到 ${hits} 条结果，用时 ${time} 毫秒","placeholder":"输入关键词快速查找","count":"共 <b>${count}</b> 条结果。","loading":"搜索中..."}},
+    aside: {
+        state: {
+            morning: "✨ 早上好，新的一天开始了",
+            noon: "🍲 午餐时间",
+            afternoon: "🌞 下午好",
+            night: "早点休息",
+            goodnight: "晚安 😴",
+        },
+        witty_words: ["欢迎你","随便逛逛吧","愿你的服务器永远在线","坚信美好的事情即将发生","唯愿人间有惊鸿","愿星光落在你肩上","前行的人，总会遇见同行者.","此处有风，可稍作停留.","愿你的道路漫长，充满奇迹。","焚尽世间铅华，寻一程美好时光。","不求天长地久，只愿曾经拥有。","岁月静好，与君共","但使汝辈心欢乐，不嫁南枝与北枝"],
+        witty_comment: {
+            prefix: '好久不见，',
+            back: '欢迎再次回来，',
+        },
+    },
+    covercolor: {
+        enable: true
+    },
+    comment: false,
+    lightbox: 'fancybox',
+    right_menu: {"mode":{"dark":"深色模式","light":"浅色模式"},"img_error":"此图片无法复制与下载","music":{"start":"播放音乐","stop":"暂停音乐"},"translate":true,"ctrlOriginalMenu":"按住Ctrl+右键可打开浏览器右键菜单"},
+    translate: {"translateDelay":0,"defaultEncoding":2},
+    lure: {"jump":"404 Not Found","back":"ヾ(≧∇≦*)ゝ hey."},
+    expire: false,
+};</script><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: '',
+    toc: true,
+    comment: false,
+    ai_text: false,
+    color: false,
+}</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha512-fHwaWebuwA7NSF5Qg/af4UeDx9XqUpYpOGgubo3yWu+b2IQR4UeQwbb42Ti7gVAjNtVoI/I9TEoYeu9omwcC6g==" crossorigin="anonymous" referrerpolicy="no-referrer" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/hiner/atom.xml" title="Hinerの小窝" type="application/atom+xml">
+</head><body id="body"><div><canvas id="universe"></canvas></div><div><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="solitude fas fa-xmark"></i></div><div class="console-card-group"><div class="console-card-group-right"><div class="console-card tags" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">标签</div><div class="author-content-item-title">寻找感兴趣的领域</div></div><div class="card-tag-cloud"><a href="/hiner/tags/CSS/">CSS<sup>3</sup></a><a href="/hiner/tags/%E5%8E%9F%E7%A5%9E/">原神<sup>1</sup></a><a href="/hiner/tags/Mod/">Mod<sup>3</sup></a><a href="/hiner/tags/GitHub/">GitHub<sup>1</sup></a><a href="/hiner/tags/Hexo/">Hexo<sup>2</sup></a><a href="/hiner/tags/Git/">Git<sup>1</sup></a><a href="/hiner/tags/Katex/">Katex<sup>3</sup></a><a href="/hiner/tags/HTML/">HTML<sup>3</sup></a><a href="/hiner/tags/JavaScript/">JavaScript<sup>1</sup></a><a href="/hiner/tags/Python/">Python<sup>1</sup></a><a href="/hiner/tags/%E5%A3%81%E7%BA%B8/">壁纸<sup>1</sup></a><a href="/hiner/tags/solitude/">solitude<sup>1</sup></a><a href="/hiner/tags/steam/">steam<sup>3</sup></a><a href="/hiner/tags/%E6%98%9F%E9%9C%B2%E8%B0%B7%E7%89%A9%E8%AF%AD/">星露谷物语<sup>3</sup></a><a href="/hiner/tags/vscode/">vscode<sup>2</sup></a><a href="/hiner/tags/%E6%8F%92%E4%BB%B6/">插件<sup>1</sup></a><a href="/hiner/tags/%E6%96%87%E6%A1%A3/">文档<sup>1</sup></a><a href="/hiner/tags/vue/">vue<sup>1</sup></a><a href="/hiner/tags/Docker/">Docker<sup>1</sup></a><a href="/hiner/tags/WSL/">WSL<sup>1</sup></a><a href="/hiner/tags/Blog/">Blog<sup>1</sup></a></div></div><div class="console-card history" onclick="sco.hideConsole()"><ul class="card-archive-list"><li class="item"><a href="/archives/2025/10/"><span class="date">2025/10</span><div class="count-group"><span class="count">1</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2025/09/"><span class="date">2025/09</span><div class="count-group"><span class="count">3</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2025/08/"><span class="date">2025/08</span><div class="count-group"><span class="count">1</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2025/07/"><span class="date">2025/07</span><div class="count-group"><span class="count">3</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2025/06/"><span class="date">2025/06</span><div class="count-group"><span class="count">2</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2025/05/"><span class="date">2025/05</span><div class="count-group"><span class="count">1</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2025/04/"><span class="date">2025/04</span><div class="count-group"><span class="count">5</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2025/03/"><span class="date">2025/03</span><div class="count-group"><span class="count">14</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/"><span class="date">全部文章</span><div class="count-group"><span class="count">30</span><span class="unit">篇</span></div></a></li></ul></div></div></div><div class="button-group"><div class="console-btn-item"><span class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换"><i class="solitude fas fa-circle-half-stroke"></i></span></div><div class="console-btn-item" id="consoleHideAside"><span class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制"><i class="solitude fas fa-arrows-left-right-to-line"></i></span></div><div class="console-btn-item" id="consoleMusic" onclick="sco.musicToggle()"><span class="music-switch" title="音乐开关"><i class="solitude fas fa-compact-disc"></i></span></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div></div><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/hiner/archives/"><div class="headline">文章</div><div class="length-num">30</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/hiner/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/hiner/tags/"><div class="headline">标签</div><div class="length-num">21</div></a></div></div></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude fas fa-circle-half-stroke"></i><span>显示模式</span></span></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">音乐馆</div><div class="back-menu-list"><a class="back-menu-item" href="/hiner/HeoMusic/" title="HeoMusic"><img class="nolazyload back-menu-item-icon" src="/hiner/HeoMusic/img/icon.webp" alt="HeoMusic"><span class="back-menu-item-text">HeoMusic</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文章</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/archives/"><i class="solitude  fas fa-folder-closed"></i><span>归档</span></a></li><li><a class="site-page child" href="/hiner/categories/"><i class="solitude  fas fa-clone"></i><span>分类</span></a></li><li><a class="site-page child" href="/hiner/tags/"><i class="solitude  fas fa-tags"></i><span>标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>社交</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/links/"><i class="solitude  fas fa-link"></i><span>友链</span></a></li><li><a class="site-page child" href="/hiner/message/"><i class="solitude  fas fa-comment-dots"></i><span>弹幕</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>娱乐</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/music/"><i class="solitude  fas fa-music"></i><span>音乐馆</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>工具</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/tlink/"><i class="solitude  fas fa-toolbox"></i><span>工具箱</span></a></li><li><a class="site-page child" href="/hiner/katex/"><i class="solitude  fas fa-square-root-alt"></i><span>Katex公式编辑器</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/about/"><i class="solitude  fas fa-address-card"></i><span>关于</span></a></li><li><a class="site-page child" href="/hiner/essay/"><i class="solitude  fas fa-wifi"></i><span>说说</span></a></li><li><a class="site-page child" href="/hiner/Gallery/"><i class="solitude  fa-solid fa-image"></i><span>图库</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="card-tag-cloud"><a href="/hiner/tags/CSS/">CSS<sup>3</sup></a><a href="/hiner/tags/%E5%8E%9F%E7%A5%9E/">原神<sup>1</sup></a><a href="/hiner/tags/Mod/">Mod<sup>3</sup></a><a href="/hiner/tags/GitHub/">GitHub<sup>1</sup></a><a href="/hiner/tags/Hexo/">Hexo<sup>2</sup></a><a href="/hiner/tags/Git/">Git<sup>1</sup></a><a href="/hiner/tags/Katex/">Katex<sup>3</sup></a><a href="/hiner/tags/HTML/">HTML<sup>3</sup></a><a href="/hiner/tags/JavaScript/">JavaScript<sup>1</sup></a><a href="/hiner/tags/Python/">Python<sup>1</sup></a><a href="/hiner/tags/%E5%A3%81%E7%BA%B8/">壁纸<sup>1</sup></a><a href="/hiner/tags/solitude/">solitude<sup>1</sup></a><a href="/hiner/tags/steam/">steam<sup>3</sup></a><a href="/hiner/tags/%E6%98%9F%E9%9C%B2%E8%B0%B7%E7%89%A9%E8%AF%AD/">星露谷物语<sup>3</sup></a><a href="/hiner/tags/vscode/">vscode<sup>2</sup></a><a href="/hiner/tags/%E6%8F%92%E4%BB%B6/">插件<sup>1</sup></a><a href="/hiner/tags/%E6%96%87%E6%A1%A3/">文档<sup>1</sup></a><a href="/hiner/tags/vue/">vue<sup>1</sup></a><a href="/hiner/tags/Docker/">Docker<sup>1</sup></a><a href="/hiner/tags/WSL/">WSL<sup>1</sup></a><a href="/hiner/tags/Blog/">Blog<sup>1</sup></a></div></div></div></div><div><div class="needEndHide" id="rightside"><div class="rs_hide"><button class="translate" type="button" title="简繁转换">简</button><button class="mode" type="button" title="显示模式切换" onclick="sco.switchDarkMode()"><i class="fas fa-circle-half-stroke"></i></button><button class="aside pc" type="button" title="侧边栏" onclick="sco.switchHideAside()"><i class="fas fa-arrows-alt-h"></i></button></div><div class="rs_show"><button class="config" type="button" title="扩展" onclick="document.querySelector(&quot;.rs_hide&quot;).classList.toggle(&quot;show&quot;)"><i class="fas fa-gear fa-spin"></i></button><button class="mobile toc" type="button" title="目录" onclick="document.querySelector('#card-toc').classList.toggle('open')"><i class="fas fa-list"></i></button><button class="top" type="button" title="返回顶部" onclick="sco.toTop()"><i class="fas fa-arrow-up"></i><span id="percent">0</span></button></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><div class="back-home-button" tabindex="-1"><i class="solitude fas fa-bars-progress"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">音乐馆</div><div class="back-menu-list"><a class="back-menu-item" href="/hiner/HeoMusic/" title="HeoMusic"><img class="nolazyload back-menu-item-icon" src="/hiner/HeoMusic/img/icon.webp" alt="HeoMusic"><span class="back-menu-item-text">HeoMusic</span></a></div></div></div></div><a href="/hiner/" title="返回博客主页" id="site-name"><span class="title">Solitude</span><i class="solitude fas fa-home"></i></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">Minecraft Java 服务器搭建与配置指南（Ubuntu / WSL）</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文章</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/archives/"><i class="solitude  fas fa-folder-closed"></i><span>归档</span></a></li><li><a class="site-page child" href="/hiner/categories/"><i class="solitude  fas fa-clone"></i><span>分类</span></a></li><li><a class="site-page child" href="/hiner/tags/"><i class="solitude  fas fa-tags"></i><span>标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>社交</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/links/"><i class="solitude  fas fa-link"></i><span>友链</span></a></li><li><a class="site-page child" href="/hiner/message/"><i class="solitude  fas fa-comment-dots"></i><span>弹幕</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>娱乐</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/music/"><i class="solitude  fas fa-music"></i><span>音乐馆</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>工具</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/tlink/"><i class="solitude  fas fa-toolbox"></i><span>工具箱</span></a></li><li><a class="site-page child" href="/hiner/katex/"><i class="solitude  fas fa-square-root-alt"></i><span>Katex公式编辑器</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/hiner/about/"><i class="solitude  fas fa-address-card"></i><span>关于</span></a></li><li><a class="site-page child" href="/hiner/essay/"><i class="solitude  fas fa-wifi"></i><span>说说</span></a></li><li><a class="site-page child" href="/hiner/Gallery/"><i class="solitude  fa-solid fa-image"></i><span>图库</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="travellings_button"><a class="site-page" target="_blank" rel="noopener" href="https://www.travellings.cn/go.html" title=""><i class="solitude fas fa-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机一篇文章" href="javascript:void(0);"><i class="solitude fas fa-dice-d6"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索"><i class="solitude fas fa-magnifying-glass"></i></a></div><div class="nav-button" id="nav-console"><a class="console_switchbutton" onclick="sco.showConsole()" title="中控台" href="javascript:void(0);"><label><i class="left"></i><i class="center"></i><i class="right"></i></label></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude fas fa-bars"></i></a></div></div></div></nav><div class="coverdiv" id="coverdiv"><img class="nolazyload" id="post-cover" src="https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/screenshots/1.21-new-trial-chambers-patterns.jpg" alt="Minecraft Java 服务器搭建与配置指南（Ubuntu / WSL）"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="该文章为原创文章，注意版权协议">原创</a><div class="tag_share"><div class="post-meta__tag-list"></div></div></div></div><h1 class="post-title">Minecraft Java 服务器搭建与配置指南（Ubuntu / WSL）</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-date" title="发布于 2025-10-28 22:32:55"><i class="post-meta-icon solitude fas fa-calendar-days"></i><time datetime="2025-10-28T14:32:55.000Z">2025-10-28T14:32:55.000Z</time></span><span class="post-meta-date" title="最后更新于 2026-11-26 18:11:37"><i class="post-meta-icon solitude fas fa-arrows-rotate"></i><time datetime="2026-11-26T10:11:37.383Z">2026-11-26T10:11:37.383Z</time></span></div></div></div><div class="post-radius-bottom"></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content article-container"><h2 id="更新软件包列表并升级现有软件"><a class="header-anchor" href="#更新软件包列表并升级现有软件">¶</a>更新软件包列表并升级现有软件</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update</span><br></pre></td></tr></table></figure>
+<h2 id="安装-Java-运行环境"><a class="header-anchor" href="#安装-Java-运行环境">¶</a>安装 Java 运行环境</h2>
+<p>本文以 Minecraft 1.21.1 为基准，需要 <strong>Java 21</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install openjdk-21-jre-headless -y</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>版本对应</strong>：1.20.5 – 1.21.x 需要 Java 21；<strong>26.x 起需要 Java 25</strong>（<code>openjdk-25-jre-headless</code>，发行版软件源没有时可用 Adoptium/Temurin 源安装）。Java 版本低于要求时服务器会直接启动失败。</p>
+</blockquote>
+<h2 id="创建服务器目录"><a class="header-anchor" href="#创建服务器目录">¶</a>创建服务器目录</h2>
+<p>用于存放服务器文件，创建后进入该目录：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> ~/minecraft-server</span><br><span class="line"><span class="built_in">cd</span> ~/minecraft-server</span><br></pre></td></tr></table></figure>
+<h2 id="下载-1-21-1-服务器-JAR"><a class="header-anchor" href="#下载-1-21-1-服务器-JAR">¶</a>下载 1.21.1 服务器 JAR</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://piston-data.mojang.com/v1/objects/59353fb40c36d304f2035d51e7d6e6baa98dc05c/server.jar</span><br></pre></td></tr></table></figure>
+<p><strong>关于 JAR 文件名</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>版本</th>
+<th>官方下载文件名</th>
+<th>官方推荐启动命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.21.x 及更早</td>
+<td><code>server.jar</code></td>
+<td><code>java -Xmx4G -Xms4G -jar server.jar nogui</code></td>
+</tr>
+<tr>
+<td><strong>26.x 起</strong></td>
+<td><code>minecraft_server.&lt;版本&gt;.jar</code></td>
+<td><code>java -Xmx4G -Xms4G -jar minecraft_server.26.3.jar nogui</code></td>
+</tr>
+</tbody>
+</table>
+<p>文件名本身没有约束，只要 <code>-jar</code> 后面的名称与实际文件一致即可；为简洁起见，下文统一使用 <code>server.jar</code>。</p>
+<p><strong>其他获取方式</strong>：</p>
+<ul>
+<li>官方下载页：<a target="_blank" rel="noopener" href="https://www.minecraft.net/zh-hans/download/server">https://www.minecraft.net/zh-hans/download/server</a></li>
+<li>版本清单（含各版本 JAR 直链）：<a target="_blank" rel="noopener" href="https://piston-meta.mojang.com/mc/game/version_manifest_v2.json">https://piston-meta.mojang.com/mc/game/version_manifest_v2.json</a></li>
+<li>第三方归档：<a target="_blank" rel="noopener" href="https://antmmmmm.github.io/">https://antmmmmm.github.io/</a></li>
+</ul>
+<h2 id="接受-EULA-协议"><a class="header-anchor" href="#接受-EULA-协议">¶</a>接受 EULA 协议</h2>
+<p>运行服务器前必须同意 Mojang 的最终用户许可协议（EULA）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;eula=true&quot;</span> &gt; eula.txt</span><br></pre></td></tr></table></figure>
+<h2 id="初次运行以生成配置文件"><a class="header-anchor" href="#初次运行以生成配置文件">¶</a>初次运行以生成配置文件</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -Xmx1024M -Xms1024M -jar server.jar nogui</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>-Xmx1024M</code>：最大堆内存 1GB，按机器配置调整（如 <code>-Xmx4096M</code> 表示 4GB）。</li>
+<li><code>-Xms1024M</code>：启动时初始堆内存，通常与 <code>-Xmx</code> 保持一致。</li>
+<li><code>-jar server.jar</code>：指定要运行的 JAR；26.x 需换成 <code>minecraft_server.&lt;版本&gt;.jar</code>。</li>
+<li><code>nogui</code>：不启用图形界面，节省资源。</li>
+</ul>
+<p>首次启动会生成 <code>server.properties</code>、<code>world/</code>、<code>logs/</code> 等文件。日志出现 <code>Done</code> 即表示启动成功；先输入 <code>stop</code> 关服，再按需修改配置。</p>
+<h2 id="创建启动脚本"><a class="header-anchor" href="#创建启动脚本">¶</a>创建启动脚本</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> -e <span class="string">&quot;#!/bin/bash\ncd ~/minecraft-server\njava -Xmx1024M -Xms1024M -jar server.jar nogui&quot;</span> &gt; start.sh</span><br><span class="line"><span class="built_in">chmod</span> +x start.sh</span><br></pre></td></tr></table></figure>
+<h2 id="启动服务器"><a class="header-anchor" href="#启动服务器">¶</a>启动服务器</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./start.sh</span><br></pre></td></tr></table></figure>
+<p>日志末尾出现 <code>Done (x.xxxs)!</code> 表示启动完成。客户端通过“多人游戏 → 添加服务器”连接 <code>&lt;服务器 IP&gt;:25565</code>（默认端口）。</p>
+<p>两项最常用的配置（改完需重启生效）：</p>
+<ul>
+<li><code>motd</code>：玩家在服务器列表中看到的描述。</li>
+<li><code>online-mode</code>：<code>true</code> 校验正版账号；<code>false</code> 跳过 Mojang 验证，任何人都能用任意 ID 登录，<strong>建议只在测试或内网环境使用</strong>，公网开启存在账号冒用风险。</li>
+</ul>
+<h2 id="server-properties-配置详解（以-1-21-1-为基准）"><a class="header-anchor" href="#server-properties-配置详解（以-1-21-1-为基准）">¶</a>server.properties 配置详解（以 1.21.1 为基准）</h2>
+<blockquote>
+<p>文件位于服务器根目录。<strong>修改后必须重启服务器</strong>——<code>/reload</code> 只重载数据包和函数，不会重读 <code>server.properties</code>。</p>
+</blockquote>
+<h3 id="完整键值参考"><a class="header-anchor" href="#完整键值参考">¶</a>完整键值参考</h3>
+<blockquote>
+<p>1.21.1 是本文档编写时的参考版本。后续版本废弃、新增或将部分键迁移到 gamerule，详见每行末尾的版本标注。</p>
+</blockquote>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Minecraft server properties（1.21.1 基准）</span></span><br><span class="line"><span class="attr">accepts-transfers</span>=<span class="string">false               # [v1.20.5+ 新增] 是否接受其他服务器通过 /transfer 传来的玩家连接；仅在多服联动场景设为 true</span></span><br><span class="line"><span class="attr">allow-flight</span>=<span class="string">false                   # 是否允许飞行，false 时生存模式飞行会被踢出</span></span><br><span class="line"><span class="attr">allow-nether</span>=<span class="string">true                    # [v1.21.9 废弃 → gamerule allowEnteringNetherUsingPortals] 是否允许通过下界传送门进入下界</span></span><br><span class="line"><span class="attr">broadcast-console-to-ops</span>=<span class="string">true        # 是否向在线管理员广播控制台命令输出</span></span><br><span class="line"><span class="attr">broadcast-rcon-to-ops</span>=<span class="string">true           # 是否向在线管理员广播 RCON 命令输出</span></span><br><span class="line"><span class="attr">bug-report-link</span>=                     <span class="string"># [v1.21.1+] 服务器 Bug 报告链接，显示在客户端&quot;服务器问题&quot;按钮</span></span><br><span class="line"><span class="attr">difficulty</span>=<span class="string">easy                      # 游戏难度（peaceful / easy / normal / hard）</span></span><br><span class="line"><span class="attr">enable-command-block</span>=<span class="string">false           # [v1.21.9 废弃 → gamerule commandBlocksEnabled] 是否允许命令方块执行</span></span><br><span class="line"><span class="attr">enable-jmx-monitoring</span>=<span class="string">false          # 是否启用 JMX 监控（Java 管理接口）</span></span><br><span class="line"><span class="attr">enable-query</span>=<span class="string">false                   # 是否启用 GameSpy4 查询协议（第三方服务器列表工具用）</span></span><br><span class="line"><span class="attr">enable-rcon</span>=<span class="string">false                    # 是否启用 RCON 远程控制台</span></span><br><span class="line"><span class="attr">enable-status</span>=<span class="string">true                   # 是否让服务器出现在服务器列表中（关闭后仍可直连但显示离线）</span></span><br><span class="line"><span class="attr">enforce-secure-profile</span>=<span class="string">true          # [v1.19+] 是否强制玩家使用 Mojang 签名的聊天密钥；1.19 默认 false，**1.19.1 起默认 true**；Geyser/Bedrock 桥接服务器需设 false</span></span><br><span class="line"><span class="attr">enforce-whitelist</span>=<span class="string">false              # 是否强制白名单（从 whitelist.json 移除的在线玩家立即踢出）</span></span><br><span class="line"><span class="attr">entity-broadcast-range-percentage</span>=<span class="string">100 # 实体广播范围百分比（10-1000），越低客户端看到远处实体越少、网络压力越小</span></span><br><span class="line"><span class="attr">force-gamemode</span>=<span class="string">false                 # 是否强制每次加入都重置为 gamemode 指定的游戏模式</span></span><br><span class="line"><span class="attr">function-permission-level</span>=<span class="string">2          # /function 和命令方块内命令的**最低**权限等级门槛（1-4，默认 2）</span></span><br><span class="line"><span class="attr">gamemode</span>=<span class="string">survival                    # 默认游戏模式（survival / creative / adventure / spectator）</span></span><br><span class="line"><span class="attr">generate-structures</span>=<span class="string">true             # 是否生成村庄、要塞等结构</span></span><br><span class="line"><span class="attr">generator-settings</span>=<span class="string">&#123;&#125;                 # 自定义世界生成器 JSON（默认 &#123;&#125; 即使用原版默认）</span></span><br><span class="line"><span class="attr">hardcore</span>=<span class="string">false                       # 是否极限模式（死亡变旁观、难度锁定 hard）</span></span><br><span class="line"><span class="attr">hide-online-players</span>=<span class="string">false            # [v1.18+] 是否在服务器列表中隐藏玩家昵称（只显示数量）</span></span><br><span class="line"><span class="attr">initial-disabled-packs</span>=              <span class="string"># 初次创建世界时自动禁用的数据包名称（逗号分隔）</span></span><br><span class="line"><span class="attr">initial-enabled-packs</span>=<span class="string">vanilla        # 初次创建世界时自动启用的数据包名称（逗号分隔）</span></span><br><span class="line"><span class="attr">level-name</span>=<span class="string">world                     # 世界文件夹名称</span></span><br><span class="line"><span class="attr">level-seed</span>=                          <span class="string"># 世界种子（空为随机；支持数字和字符串）</span></span><br><span class="line"><span class="attr">level-type</span>=<span class="string">minecraft:normal          # 世界类型（1.19+ 起使用命名空间 ID 格式）</span></span><br><span class="line"><span class="attr">log-ips</span>=<span class="string">true                         # [v1.20.2+] 是否在日志中记录玩家 IP</span></span><br><span class="line"><span class="attr">max-chained-neighbor-updates</span>=<span class="string">1000000 # 限制单次 tick 内连续邻居更新次数，用于防止红石 TNT 复制等卡服机器；负值禁用</span></span><br><span class="line"><span class="attr">max-players</span>=<span class="string">20                       # 最大同时在线玩家数</span></span><br><span class="line"><span class="attr">max-tick-time</span>=<span class="string">60000                  # 单个 tick 最长毫秒数，超时服务器看门狗会强制关闭；设 -1 禁用</span></span><br><span class="line"><span class="attr">max-world-size</span>=<span class="string">29999984             # 世界半径上限（方块数），即 59999968 边</span></span><br><span class="line"><span class="attr">motd</span>=<span class="string">A Minecraft Server              # 服务器列表中显示的描述（支持 § 颜色代码和 \n 换行）</span></span><br><span class="line"><span class="attr">network-compression-threshold</span>=<span class="string">256    # 数据包多少字节以上启用 zlib 压缩；设 -1 禁用（局域网推荐）</span></span><br><span class="line"><span class="attr">online-mode</span>=<span class="string">true                     # 是否验证正版账号（false 允许任何名称登录；仅反向代理场景设 false）</span></span><br><span class="line"><span class="attr">op-permission-level</span>=<span class="string">4                # /op 新提升的 op 默认等级（1-4，默认 4）。⚠️ 不是&quot;最低 op 等级&quot;；ops.json 里每个玩家可以有独立 level 值</span></span><br><span class="line"><span class="attr">player-idle-timeout</span>=<span class="string">0                # 玩家 idle 超过多少分钟后踢出；0 禁用</span></span><br><span class="line"><span class="attr">prevent-proxy-connections</span>=<span class="string">false      # 是否探测 VPN/代理连接（同步阻塞，现代代理基本绕不过，通常留 false）</span></span><br><span class="line"><span class="attr">pvp</span>=<span class="string">true                             # [v1.21.9 废弃 → gamerule pvp] 是否允许玩家间直接伤害</span></span><br><span class="line"><span class="attr">query.port</span>=<span class="string">25565                     # GameSpy4 查询协议端口（与 server-port 同端口时 UDP 监听）</span></span><br><span class="line"><span class="attr">rate-limit</span>=<span class="string">0                         # 单客户端每秒最大包数，超出踢出；0 禁用</span></span><br><span class="line"><span class="attr">rcon.password</span>=                       <span class="string"># RCON 密码（空密码等于禁用）</span></span><br><span class="line"><span class="attr">rcon.port</span>=<span class="string">25575                      # RCON 监听端口</span></span><br><span class="line"><span class="attr">region-file-compression</span>=<span class="string">deflate      # [v1.20.5+] 区块文件压缩算法（deflate/lz4/none），默认 deflate；lz4 读写更快但体积稍大</span></span><br><span class="line"><span class="attr">require-resource-pack</span>=<span class="string">false          # 是否强制玩家接受服务器资源包</span></span><br><span class="line"><span class="attr">resource-pack</span>=                       <span class="string"># 服务器资源包下载 URL</span></span><br><span class="line"><span class="attr">resource-pack-id</span>=                    <span class="string"># [Paper/Spigot 专有，原版无此键] 资源包 UUID</span></span><br><span class="line"><span class="attr">resource-pack-prompt</span>=                <span class="string"># 拒绝资源包时显示的提示文字</span></span><br><span class="line"><span class="attr">resource-pack-sha1</span>=                  <span class="string"># 资源包 SHA-1 校验值，用于验证下载完整性</span></span><br><span class="line"><span class="attr">server-ip</span>=                           <span class="string"># 绑定的本机 IP（空为绑定所有接口，通常留空）</span></span><br><span class="line"><span class="attr">server-port</span>=<span class="string">25565                    # 监听端口</span></span><br><span class="line"><span class="attr">simulation-distance</span>=<span class="string">10               # [v1.18+] 模拟距离（区块半径）；此范围内 mob 才会 tick、农场才运行</span></span><br><span class="line"><span class="attr">spawn-animals</span>=<span class="string">true                   # [v1.21.2 废弃，无 gamerule 替代] 是否生成被动动物</span></span><br><span class="line"><span class="attr">spawn-monsters</span>=<span class="string">true                  # [v1.21.9 废弃 → gamerule spawnMonsters] 是否生成敌对生物</span></span><br><span class="line"><span class="attr">spawn-npcs</span>=<span class="string">true                      # [v1.21.2 废弃，无 gamerule 替代] 是否生成村民等 NPC</span></span><br><span class="line"><span class="attr">spawn-protection</span>=<span class="string">16                  # 出生点保护半径（方块），公式 2x+1；0 禁用；至少 1 个 op 时才生效</span></span><br><span class="line"><span class="attr">sync-chunk-writes</span>=<span class="string">true               # 是否同步写区块；SSD 推荐 true 防崩溃损坏，HDD 高负载可设 false</span></span><br><span class="line"><span class="attr">text-filtering-config</span>=               <span class="string"># 云文字过滤 JSON 配置路径（空禁用，国内环境用不到；原版 1.21.0+ 存在）</span></span><br><span class="line"><span class="attr">text-filtering-version</span>=<span class="string">0              # 文字过滤配置格式版本（0 或 1；text-filtering-config 为空时此值无意义）</span></span><br><span class="line"><span class="attr">use-native-transport</span>=<span class="string">true            # [Linux 专用] 是否使用 native transport（epoll）性能优化</span></span><br><span class="line"><span class="attr">view-distance</span>=<span class="string">10                     # 视距（区块半径）；仅影响客户端加载/发送的区块</span></span><br><span class="line"><span class="attr">white-list</span>=<span class="string">false                     # 是否启用白名单（白名单在 whitelist.json 中维护）</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"># ----- 以下为 1.21.2+ 新增的键，1.21.1 原版没有 -----</span></span><br><span class="line"><span class="comment"># pause-when-empty-seconds=60        # [v1.21.2+ 新增] 空服多少秒后暂停 tick loop；Paper 默认 -1（不禁用以兼容插件）</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># ----- 1.21.11（25w34a/25w35a 快照）新增键 -----</span></span><br><span class="line"><span class="comment"># enable-code-of-conduct=false        # 是否在服务器列表显示社区守则</span></span><br><span class="line"><span class="comment"># management-server-host=localhost    # Java 21 新增的 Management Protocol 监听地址</span></span><br><span class="line"><span class="comment"># management-server-port=0            # Management Protocol 端口（0 = 禁用；启用默认 25585）</span></span><br><span class="line"><span class="comment"># management-server-secret=           # Management Protocol 密钥（随机生成）</span></span><br><span class="line"><span class="comment"># management-server-tls-keystore=     # Management Protocol TLS 密钥库路径</span></span><br><span class="line"><span class="comment"># management-server-tls-keystore-password=   # 密钥库密码</span></span><br><span class="line"><span class="comment"># status-heartbeat-interval=0         # Management Server 心跳间隔（0 = 禁用）</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># ----- 26.2 新增键 -----</span></span><br><span class="line"><span class="comment"># chat-spam-threshold-seconds=10      # 聊天 spam 踢人阈值（秒数），之前与 commands 共用</span></span><br><span class="line"><span class="comment"># command-spam-threshold-seconds=10    # 命令 spam 踢人阈值（秒数），之前与 chat 共用</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>版本迁移小结</strong>（官方来源：Minecraft Wiki / <a target="_blank" rel="noopener" href="http://Minecraft.net">Minecraft.net</a> 官方博客 / PaperMC Docs）：</p>
+<ul>
+<li><strong>1.21.2</strong>：废弃 <code>spawn-animals</code>、<code>spawn-npcs</code>（无 gamerule 替代）；新增 <code>pause-when-empty-seconds</code></li>
+<li><strong>1.21.9</strong>：废弃 <code>allow-nether</code>、<code>pvp</code>、<code>enable-command-block</code>、<code>spawn-monsters</code>，统一迁移到 gamerule。<strong>注意默认值反转</strong>：
+<ul>
+<li><code>enable-command-block</code>（默认 <strong>false</strong>）→ <code>commandBlocksEnabled</code>（默认 <strong>true</strong>），升级后命令方块会自动启用！</li>
+<li>其余 3 项默认值方向不变（<code>pvp</code> 默认 true → gamerule <code>pvp</code> 默认 true）</li>
+</ul>
+</li>
+<li><strong>1.21.10</strong>：配置无变化，同 1.21.9</li>
+<li><strong>1.21.11+</strong>：全部 gamerule 改名（驼峰 → snake_case / 语义化），详见下方 gamerule 节</li>
+<li><strong>26.2</strong>：新增 <code>chat-spam-threshold-seconds</code>、<code>command-spam-threshold-seconds</code>（均默认 10），把原来合并的聊天/命令刷屏阈值拆开（来源：官方 26.2 Pre-Release 1 公告）</li>
+<li><strong>26.x 起</strong>：版本号改为“年份.序号”格式，需要 <strong>Java 25</strong>；官方下载文件名变为 <code>minecraft_server.&lt;版本&gt;.jar</code></li>
+</ul>
+</blockquote>
+<h3 id="场景一：开服前必改的-7-项"><a class="header-anchor" href="#场景一：开服前必改的-7-项">¶</a>场景一：开服前必改的 7 项</h3>
+<table>
+<thead>
+<tr>
+<th>键</th>
+<th>建议值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>motd</code></td>
+<td>自定义</td>
+<td>服务器列表显示的文字，支持 <code>§</code> 颜色代码</td>
+</tr>
+<tr>
+<td><code>difficulty</code></td>
+<td><code>normal</code></td>
+<td>影响怪物强度与饥饿消耗；<code>peaceful</code> 会清空敌对生物</td>
+</tr>
+<tr>
+<td><code>gamemode</code></td>
+<td><code>survival</code></td>
+<td>新玩家默认模式；配合 <code>force-gamemode=true</code> 每次进服强制重置</td>
+</tr>
+<tr>
+<td><code>max-players</code></td>
+<td>按需</td>
+<td>软上限，超过后显示“服务器已满”</td>
+</tr>
+<tr>
+<td><code>online-mode</code></td>
+<td><code>true</code></td>
+<td>改为 <code>false</code> 即离线模式，任何人可用任意 ID 进入</td>
+</tr>
+<tr>
+<td><code>white-list</code></td>
+<td>公开服设为 <code>true</code></td>
+<td>只有白名单玩家能进；再开 <code>enforce-whitelist=true</code> 会立即踢掉被移除者</td>
+</tr>
+<tr>
+<td><code>server-port</code></td>
+<td><code>25565</code></td>
+<td>改端口后，防火墙和端口转发规则要同步修改</td>
+</tr>
+</tbody>
+</table>
+<h3 id="场景二：配置-OP-与白名单"><a class="header-anchor" href="#场景二：配置-OP-与白名单">¶</a>场景二：配置 OP 与白名单</h3>
+<ol>
+<li>启动服务器并进入控制台；</li>
+<li>执行 <code>op &lt;玩家名&gt;</code>，玩家立即获得管理员权限，同时写入 <code>ops.json</code>；</li>
+<li>执行 <code>whitelist on</code> 开启白名单；</li>
+<li>执行 <code>whitelist add &lt;玩家名&gt;</code> 逐个添加；</li>
+<li><code>whitelist list</code> 核对名单；手动改过 <code>whitelist.json</code> 后用 <code>whitelist reload</code> 重新读取。</li>
+</ol>
+<blockquote>
+<p><code>ops.json</code>、<code>whitelist.json</code> 只在启动或显式重载时读取。<strong>手动编辑前先 <code>stop</code> 关服</strong>，否则关服时内存数据会覆盖你的修改。</p>
+</blockquote>
+<h3 id="场景三：RCON-远程管理"><a class="header-anchor" href="#场景三：RCON-远程管理">¶</a>场景三：RCON 远程管理</h3>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">enable-rcon</span>=<span class="string">true</span></span><br><span class="line"><span class="attr">rcon.port</span>=<span class="string">25575</span></span><br><span class="line"><span class="attr">rcon.password</span>=<span class="string">换成一个强密码</span></span><br><span class="line"><span class="attr">broadcast-rcon-to-ops</span>=<span class="string">true</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>开启后可用 mcrcon / rcon-cli 从内网另一台机器执行控制台命令（示例见后文 RCON 小节）；</li>
+<li><strong>不要把 25575 暴露到公网</strong>，RCON 是明文协议；跨公网请走 SSH 隧道；</li>
+<li>改完重启才生效。</li>
+</ul>
+<h3 id="场景四：资源包"><a class="header-anchor" href="#场景四：资源包">¶</a>场景四：资源包</h3>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">resource-pack</span>=<span class="string">https://example.com/pack.zip</span></span><br><span class="line"><span class="attr">resource-pack-sha1</span>=<span class="string">资源包的40位SHA-1</span></span><br><span class="line"><span class="attr">require-resource-pack</span>=<span class="string">true</span></span><br><span class="line"><span class="attr">resource-pack-prompt</span>=<span class="string">请接受资源包后再进入</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>必须是<strong>直链</strong>（点开即下载），对象存储、GitHub Releases 均可；</li>
+<li><code>require-resource-pack=true</code> 时，拒绝下载的玩家会被踢出；</li>
+<li><code>resource-pack-sha1</code> 建议填写，避免客户端拿到损坏或被篡改的包。</li>
+</ul>
+<h3 id="场景五：性能调优"><a class="header-anchor" href="#场景五：性能调优">¶</a>场景五：性能调优</h3>
+<p>内存分配（经验值，按人数和插件量调整）：</p>
+<table>
+<thead>
+<tr>
+<th>同时在线</th>
+<th>建议 <code>-Xmx</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–5 人</td>
+<td>2G</td>
+</tr>
+<tr>
+<td>6–10 人</td>
+<td>4G</td>
+</tr>
+<tr>
+<td>11–20 人</td>
+<td>6–8G</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>键</th>
+<th>建议</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>view-distance</code></td>
+<td>8–10</td>
+<td>影响客户端视野，调大主要增加带宽</td>
+</tr>
+<tr>
+<td><code>simulation-distance</code></td>
+<td>4–8</td>
+<td><strong>最影响 CPU</strong>，决定多远范围内的实体和农场继续运行，应优先下调</td>
+</tr>
+<tr>
+<td><code>entity-broadcast-range-percentage</code></td>
+<td>50–100</td>
+<td>降低可减少远处实体的同步包</td>
+</tr>
+<tr>
+<td><code>network-compression-threshold</code></td>
+<td>256；纯局域网可设 <code>-1</code></td>
+<td><code>-1</code> 关闭压缩，省 CPU</td>
+</tr>
+<tr>
+<td><code>max-tick-time</code></td>
+<td>60000；卡顿误杀可设 <code>-1</code></td>
+<td>看门狗单 tick 超时阈值</td>
+</tr>
+<tr>
+<td><code>sync-chunk-writes</code></td>
+<td>SSD 保持 <code>true</code>；HDD 高负载可设 <code>false</code></td>
+<td><code>false</code> 写入更快，但崩溃时更易损坏区块</td>
+</tr>
+<tr>
+<td><code>use-native-transport</code></td>
+<td>Linux 保持 <code>true</code></td>
+<td>使用 epoll，Linux 下通常更快</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>调优顺序：先降 <code>simulation-distance</code>，再看 <code>view-distance</code>，最后才动压缩和广播范围。</p>
+</blockquote>
+<h3 id="场景六：世界生成"><a class="header-anchor" href="#场景六：世界生成">¶</a>场景六：世界生成</h3>
+<ul>
+<li><code>level-type</code>：<code>minecraft:normal</code>（默认）、<code>minecraft:flat</code>（超平坦）、<code>minecraft:large_biomes</code>（巨型生物群系）、<code>minecraft:amplified</code>（放大化）；</li>
+<li><code>level-seed</code>：留空随机；填数字或字符串可复现同一张地图；</li>
+<li><code>generate-structures=false</code>：不生成村庄、要塞等结构；</li>
+<li><code>generator-settings</code>：超平坦或自定义维度使用的 JSON，普通世界保持 <code>&#123;&#125;</code>；</li>
+<li>世界类型和种子只对<strong>新世界</strong>生效，已有 <code>world/</code> 需删除或改用新的 <code>level-name</code>。</li>
+</ul>
+<h3 id="场景七：备份与维护"><a class="header-anchor" href="#场景七：备份与维护">¶</a>场景七：备份与维护</h3>
+<p>手动备份（先关自动保存，避免拷到写了一半的区块）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">save-off</span><br><span class="line">save-all</span><br><span class="line">tar -czf ~/backup-$(<span class="built_in">date</span> +%F-%H%M).tar.gz ~/minecraft-server/world</span><br><span class="line">save-on</span><br></pre></td></tr></table></figure>
+<p>用 cron 每天凌晨 4 点自动备份：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0 4 * * * <span class="built_in">cd</span> ~/minecraft-server &amp;&amp; tar -czf ~/backups/world-$(<span class="built_in">date</span> +\%F).tar.gz world</span><br></pre></td></tr></table></figure>
+<ul>
+<li>运行中备份至少先执行 <code>save-all</code>；</li>
+<li><code>logs/</code> 和 <code>crash-reports/</code> 出问题时要保留，排查服务器崩溃时是关键证据。</li>
+</ul>
+<h2 id="常用-gamerule-命令（原版）"><a class="header-anchor" href="#常用-gamerule-命令（原版）">¶</a>常用 gamerule 命令（原版）</h2>
+<blockquote>
+<p><strong>权限</strong>：<strong>普通玩家不能执行 <code>/gamerule</code></strong>。需要 <strong>op level 2 及以上</strong>（<code>function-permission-level=2</code>，这是原版默认值）。控制台直接输入 <code>gamerule &lt;规则&gt; &lt;值&gt;</code> 同样有效且不需要 op。<br>
+<strong>执行位置</strong>：聊天框（带 <code>/</code>）<strong>或</strong> 控制台（不带 <code>/</code>）都能执行。<strong>不能写进 server.properties</strong>。<br>
+以下规则名适用于 <strong>Minecraft 1.21.10 及更早版本</strong>（驼峰命名）。<strong>1.21.11+ 规则名整体改为下划线风格</strong>，例如 <code>keepInventory</code> → <code>keep_inventory</code>，<code>minecraft:</code> 前缀可选。</p>
+</blockquote>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"># ========== 原生 gamerule（原版一直存在） ==========</span><br><span class="line"></span><br><span class="line"># 世界与自然</span><br><span class="line">/gamerule doDaylightCycle &lt;true|false&gt;     # 是否昼夜交替（1.21.11+ 改为 advance_time）</span><br><span class="line">/gamerule doFireTick &lt;true|false&gt;          # 是否允许火焰蔓延（1.21.11+ 改为 fire_spread_radius_around_player，且从布尔值改为数值 0~128）</span><br><span class="line">/gamerule doMobSpawning &lt;true|false&gt;       # 是否自然生成被动和敌对生物（1.21.11+ 改为 spawn_mobs）</span><br><span class="line">/gamerule doWeatherCycle &lt;true|false&gt;       # 是否天气变化（1.21.11+ 改为 advance_weather）</span><br><span class="line">/gamerule mobGriefing &lt;true|false&gt;         # 苦力怕爆炸/末影人搬方块/僵尸挖门等（1.21.11+ 改为 mob_griefing）</span><br><span class="line">/gamerule keepInventory &lt;true|false&gt;        # 死亡后是否保留物品和经验（1.21.11+ 改为 keep_inventory）</span><br><span class="line">/gamerule spawnRadius &lt;方块数&gt;              # 玩家首次出生/重生的随机半径（1.21.11+ 改为 respawn_radius）</span><br><span class="line"></span><br><span class="line"># 实体与性能</span><br><span class="line">/gamerule maxEntityCramming &lt;数值&gt;          # 单个方块可同时容纳的实体数量上限（1.21.11+ 改为 max_entity_cramming）</span><br><span class="line"></span><br><span class="line"># 权限与日志</span><br><span class="line">/gamerule commandBlockOutput &lt;true|false&gt;   # 命令方块输出是否显示在聊天栏（1.21.11+ 改为 command_block_output）</span><br><span class="line">/gamerule sendCommandFeedback &lt;true|false&gt;  # 是否在聊天栏显示命令反馈（1.21.11+ 改为 send_command_feedback）</span><br><span class="line">/gamerule logAdminCommands &lt;true|false&gt;    # 是否将管理员命令写入服务器日志（1.21.11+ 改为 log_admin_commands）</span><br><span class="line"></span><br><span class="line"># ========== v1.21.9 新增（替代 server.properties 废弃键） ==========</span><br><span class="line"># 以下三条是 v1.21.9 把 server.properties 里的废弃键迁移为 gamerule，**之前版本不存在**</span><br><span class="line"></span><br><span class="line">/gamerule allowEnteringNetherUsingPortals &lt;true|false&gt;</span><br><span class="line">    # [v1.21.9+] 是否允许下界传送门（替代废弃的 allow-nether；1.21.11+ 改为同名下划线）</span><br><span class="line">/gamerule spawnMonsters &lt;true|false&gt;</span><br><span class="line">    # [v1.21.9+] 是否生成敌对生物（替代废弃的 spawn-monsters；1.21.11+ 改为 spawn_monsters）</span><br><span class="line">/gamerule pvp &lt;true|false&gt;</span><br><span class="line">    # [v1.21.9+] 是否允许玩家间伤害（替代废弃的 pvp；1.21.11+ 同名不变）</span><br><span class="line">/gamerule commandBlocksEnabled &lt;true|false&gt;</span><br><span class="line">    # [v1.21.9+] 是否允许命令方块执行（替代废弃的 enable-command-block）</span><br><span class="line">    # ⚠️ 默认值反转！废弃前 enable-command-block 默认 false，这里默认 **true**，升级后命令方块会自动启用！</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>无 gamerule 替代的 server.properties 废弃键</strong>：<code>spawn-animals</code>（1.21.2 废弃）、<code>spawn-npcs</code>（1.21.2 废弃）。原版 1.21.11+ 没有对应 gamerule，被动动物和 NPC 的自然生成目前无法通过 gamerule 关闭。</p>
+</blockquote>
+<h2 id="原版权限系统（0-4-级）"><a class="header-anchor" href="#原版权限系统（0-4-级）">¶</a>原版权限系统（0-4 级）</h2>
+<blockquote>
+<p>Minecraft 原版<strong>没有精细的权限控制</strong>（比如“让张三能 /tp 但不能 /gamemode”），只有 5 个等级，上级自动包含下级所有权限。</p>
+</blockquote>
+<p><strong>玩家进服时默认是 level 0</strong>（不是 1，也不是 2）。你成为 OP 后等级由 <code>ops.json</code> 里的 <code>level</code> 决定；控制台 / RCON 永远是 level 4。</p>
+<table>
+<thead>
+<tr>
+<th>等级</th>
+<th>身份</th>
+<th>能执行的命令举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0</strong></td>
+<td>所有玩家（默认）</td>
+<td><code>/help</code>、<code>/me</code>、<code>/msg</code>、<code>/reply</code>、<code>/list</code>、<code>/teammsg</code>、<code>/trigger</code></td>
+</tr>
+<tr>
+<td><strong>1</strong></td>
+<td>—</td>
+<td>几乎没有专属命令（主要让玩家能看到调试信息）</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>基础管理</td>
+<td><code>/gamerule</code>、<code>/tp</code>、<code>/gamemode</code>、<code>/give</code>、<code>/kill</code>、<code>/time set</code>、<code>/weather</code>、<code>/difficulty</code>、<code>/say</code>、<code>/setblock</code>、<code>/fill</code>、<code>/summon</code>、<code>/title</code>、<code>/tellraw</code>、<code>/spawnpoint</code>、<code>/setworldspawn</code></td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>服务器管理</td>
+<td><code>/op</code>、<code>/deop</code>、<code>/ban</code>、<code>/kick</code>、<code>/whitelist</code>、<code>/datapack</code>、<code>/tick</code>、<code>/debug</code>、<code>/banlist</code></td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>服务器所有者</td>
+<td><code>/stop</code>、<code>/save-all</code>、<code>/save-off</code>、<code>/save-on</code>、<code>/perf</code>、<code>/jfr</code>、<code>/setidletimeout</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="关于-关闭作弊-是否影响-OP"><a class="header-anchor" href="#关于-关闭作弊-是否影响-OP">¶</a>关于&quot;关闭作弊&quot;是否影响 OP</h3>
+<p><strong>先澄清</strong>：Java 版<strong>有</strong>&quot;允许作弊&quot;开关，但它是<strong>单人 / 局域网世界</strong>的机制；<strong>专用服务器（本文档的场景）的 server.properties 里没有这个键</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>开关名称 / 位置</th>
+<th>权限来源</th>
+<th>关闭后会影响 OP 吗</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>单人世界</strong></td>
+<td>创建世界时&quot;允许命令&quot;，或世界选项里再次开启；存于 <code>level.dat</code> 的 <code>allowCommands</code></td>
+<td>该开关本身</td>
+<td>关闭后**所有人（含世界主人）**都不能用命令</td>
+</tr>
+<tr>
+<td><strong>局域网开放</strong></td>
+<td>“对局域网开放&quot;界面的&quot;允许作弊：开/关”</td>
+<td>继承 <code>level.dat</code> + 房主授予 op</td>
+<td>关闭时除房主外都不能用命令</td>
+</tr>
+<tr>
+<td><strong>专用服务器</strong></td>
+<td><strong>不存在</strong></td>
+<td>只看 <code>ops.json</code> 里的 level；控制台/RCON 恒为 4</td>
+<td>无此开关，OP 不受影响</td>
+</tr>
+</tbody>
+</table>
+<p>补充两点：</p>
+<ul>
+<li>基岩版专用服务器的 <code>allow-cheats=false</code> 是<strong>另一个东西</strong>，写进 Java 的 server.properties 会被静默忽略。</li>
+<li>单人世界转成专用服务器后，<code>level.dat</code> 里的 <code>allowCommands</code> <strong>不再生效</strong>，一切以 <code>ops.json</code> 为准。</li>
+</ul>
+<h3 id="两个容易搞混的配置"><a class="header-anchor" href="#两个容易搞混的配置">¶</a>两个容易搞混的配置</h3>
+<ul>
+<li><code>op-permission-level=4</code>：你执行 <code>/op Notch</code> 时，Notch 被授予的等级。<strong>默认 4</strong>。如果你改成 2，新 op 就只有 level 2，但控制台依然是 4。</li>
+<li><code>function-permission-level=2</code>：<strong>最低门槛</strong>。低于此等级的命令不能在 <code>/function</code> 和命令方块里执行。<strong>默认 2</strong>。</li>
+</ul>
+<h3 id="每个玩家的权限可以不同步"><a class="header-anchor" href="#每个玩家的权限可以不同步">¶</a>每个玩家的权限可以不同步</h3>
+<p><code>server.properties</code> 里的值只是“默认值”。真正存储权限的是 <strong><code>ops.json</code></strong> 文件，每个玩家可以有独立的 level：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;uuid&quot;</span><span class="punctuation">:</span> <span class="string">&quot;xxx-xxx-xxx&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Notch&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;level&quot;</span><span class="punctuation">:</span> <span class="number">4</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;bypassesPlayerLimit&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>需要精确控制某个人的等级时，<strong>停服后手动改 ops.json</strong>（开着服改会被覆盖）。</p>
+<h3 id="原版没有的命令（必须装插件-数据包）"><a class="header-anchor" href="#原版没有的命令（必须装插件-数据包）">¶</a>原版没有的命令（必须装插件/数据包）</h3>
+<p>以下命令<strong>原版完全不存在</strong>，看到网上教程里的这些命令，都是插件（多为 EssentialsX）或数据包提供的：</p>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>原版没有的命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>家与传送</td>
+<td><code>/home</code>、<code>/sethome</code>、<code>/delhome</code>、<code>/tpa</code>、<code>/tpaccept</code>、<code>/tpahere</code>、<code>/warp</code>、<code>/setwarp</code>、<code>/spawn</code>、<code>/back</code></td>
+<td>原版只有 <code>/tp</code>（需坐标或目标玩家，level 2）和 <code>/spawnpoint</code>（改重生点，level 2）</td>
+</tr>
+<tr>
+<td>物品与生存</td>
+<td><code>/kit</code>、<code>/repair</code>、<code>/heal</code>、<code>/feed</code>、<code>/fly</code>、<code>/god</code>、<code>/hat</code>、<code>/enderchest</code>、<code>/nick</code></td>
+<td>原版操作用 <code>/give</code>、<code>/effect</code>、<code>/gamemode</code> 手动实现</td>
+</tr>
+<tr>
+<td>经济与管理</td>
+<td><code>/money</code>、<code>/pay</code>、<code>/balance</code>、<code>/shop</code>、<code>/invsee</code>、<code>/socialspy</code>、<code>/afk</code></td>
+<td>原版无经济系统，需要插件</td>
+</tr>
+<tr>
+<td>信息类</td>
+<td><code>/rules</code>、<code>/motd</code>、<code>/ping</code>、<code>/seen</code></td>
+<td>原版只有 <code>/help</code>、<code>/list</code>、<code>/seed</code>（level 2）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>原版也无法让&quot;非 op 玩家用某个特定命令&quot;</strong>。想让普通玩家用 <code>/home</code>、让助手能 <code>/kick</code> 但不能 <code>/ban</code>，只能用插件：</p>
+<ul>
+<li><strong>Paper/Spigot</strong> + <strong>LuckPerms</strong>（权限系统）+ <strong>Vault</strong>（权限 API）</li>
+<li><strong>EssentialsX</strong>（提供 <code>/home</code>、<code>/tpa</code>、<code>/warp</code> 等日常命令）</li>
+<li>单纯加 <code>/home</code>、<code>/tpa</code> 也可以只装<strong>数据包</strong>，但权限仍无法细分</li>
+</ul>
+<h2 id="普通玩家就能用的基础命令"><a class="header-anchor" href="#普通玩家就能用的基础命令">¶</a>普通玩家就能用的基础命令</h2>
+<blockquote>
+<p>下面这些命令<strong>不需要 op</strong>，任何玩家进服（level 0）就能执行。控制台也能执行（不带 <code>/</code>）。</p>
+</blockquote>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">/help [页码] [搜索关键字]            # 帮助菜单，列出所有你有权执行的命令；/help gamerule 只列 gamerule 相关</span><br><span class="line">/me &lt;消息&gt;                          # 以第三人称发送聊天消息（如 * Notch 挠了挠头）</span><br><span class="line">/msg &lt;玩家&gt; &lt;消息&gt;                  # 私聊指定玩家；别名 /tell、/whisper</span><br><span class="line">/reply &lt;消息&gt;                       # 回复最近一条私聊；别名 /r</span><br><span class="line">/list [uuids]                       # 列出当前在线玩家；加 uuids 显示 UUID</span><br><span class="line">/teammsg &lt;消息&gt;                     # 给同队玩家发消息；别名 /tm</span><br><span class="line">/trigger &lt;目标选择器&gt; set &lt;数值&gt;     # 触发 objective，需要地图/数据包在记分板里预先创建好</span><br><span class="line">/trigger &lt;目标选择器&gt; add &lt;增量&gt;     # 给记分板加分</span><br><span class="line">/trigger &lt;目标选择器&gt; query          # 查询记分板当前值</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：<code>/advancement</code>、<code>/recipe</code>、<code>/data</code>、<code>/seed</code> 这些看起来“无害”的命令，在服务器的判定里都是 <strong>level 2</strong>，普通玩家无法使用。</p>
+</blockquote>
+<h2 id="常用-OP-控制台命令（1-21-1-原版）"><a class="header-anchor" href="#常用-OP-控制台命令（1-21-1-原版）">¶</a>常用 OP / 控制台命令（<strong>1.21.1 原版</strong>）</h2>
+<blockquote>
+<p><strong>权限前提</strong>：<strong>普通玩家不能执行</strong>任何下面的命令。必须满足以下条件之一：</p>
+<ul>
+<li>你在服务器<strong>控制台</strong>里直接输入（不需要身份验证，你就是服务器所有者）</li>
+<li>你是游戏内的 <strong>OP</strong>，且权限等级满足命令要求（level 2 基础命令 / level 4 管理命令）</li>
+</ul>
+<p><strong>执行位置约定</strong>：以下命令分两类——</p>
+<ul>
+<li><strong>聊天框 &amp; 控制台通用</strong>：带 <code>/</code> 前缀，控制台也能识别</li>
+<li><strong>仅控制台</strong>：<strong>不带 <code>/</code></strong>，只能在服务器终端里执行，聊天框里打会显示红字报错</li>
+</ul>
+<p>下方列出的都是 1.21.1 原版高频使用命令。<strong>1.21.11+ 对部分命令的参数做了调整</strong>，已在对应行标注。</p>
+</blockquote>
+<h3 id="仅控制台（不带-）"><a class="header-anchor" href="#仅控制台（不带-）">¶</a>仅控制台（不带 <code>/</code>）</h3>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">stop                              # 安全关闭服务器（保存世界后退出；务必用这个，别直接 Ctrl+C）</span><br><span class="line">save-all                          # 强制立即保存所有世界数据</span><br><span class="line">save-on                           # 开启自动保存（默认开启）</span><br><span class="line">save-off                          # 临时关闭自动保存（例如给世界备份时）</span><br><span class="line">reload                            # 只重载数据包和函数；server.properties、ops.json 的改动不会被重载，需重启服务器</span><br><span class="line">list                              # 列出当前在线玩家及其数量</span><br></pre></td></tr></table></figure>
+<h3 id="聊天框-控制台通用"><a class="header-anchor" href="#聊天框-控制台通用">¶</a>聊天框 &amp; 控制台通用</h3>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line"># --- 服务器广播 ---</span><br><span class="line">/say &lt;消息&gt;                       # 以 [Server] 为前缀向所有玩家广播消息</span><br><span class="line"></span><br><span class="line"># --- 权限管理 ---</span><br><span class="line">/op &lt;玩家名&gt;                      # 提升管理员（等同于把玩家写入 ops.json）</span><br><span class="line">/deop &lt;玩家名&gt;                    # 撤销管理员</span><br><span class="line">/whitelist add &lt;玩家名&gt;           # 加入白名单</span><br><span class="line">/whitelist remove &lt;玩家名&gt;        # 移出白名单</span><br><span class="line">/whitelist list                   # 列出所有白名单玩家</span><br><span class="line">/whitelist &lt;on|off&gt;               # 启用/关闭白名单</span><br><span class="line">/whitelist reload                 # 重载 whitelist.json（手动改了文件后用）</span><br><span class="line">/ban &lt;玩家名&gt; [原因]              # 封禁玩家（写入 banned-players.json）</span><br><span class="line">/pardon &lt;玩家名&gt;                  # 解封</span><br><span class="line">/kick &lt;玩家名&gt; [原因]             # 踢出在线玩家</span><br><span class="line">/ban-ip &lt;IP地址&gt; [原因]           # 按 IP 封禁（写入 banned-ips.json）</span><br><span class="line">/pardon-ip &lt;IP地址&gt;               # 按 IP 解封</span><br><span class="line"></span><br><span class="line"># --- 玩家管理 ---</span><br><span class="line">/gamemode &lt;survival|creative|adventure|spectator&gt; [玩家名]</span><br><span class="line">    # 切换游戏模式；不写玩家名默认对自己生效</span><br><span class="line">/tp &lt;目标玩家&gt;</span><br><span class="line">    # 传送到目标玩家身边</span><br><span class="line">/tp &lt;玩家&gt; &lt;目标玩家&gt;</span><br><span class="line">    # 把指定玩家传送到目标玩家（op 权限才能跨玩家传送）</span><br><span class="line">/tp &lt;玩家&gt; &lt;x&gt; &lt;y&gt; &lt;z&gt; [yaw] [pitch]</span><br><span class="line">    # 传送到坐标；Y 的合法范围：Overworld -64~320 / Nether 0~127 / End 0~128（1.18+ 起支持负数 Y）</span><br><span class="line">/experience add &lt;玩家&gt; &lt;数量&gt; &lt;levels|points&gt;</span><br><span class="line">    # 给经验；levels = 等级数，points = 经验条点数</span><br><span class="line">/kill [目标]</span><br><span class="line">    # 自杀 / 击杀指定目标（1.21.1+ 支持 /kill @e[type=item] 清掉落物）</span><br><span class="line">/effect &lt;玩家&gt; clear</span><br><span class="line">    # 清掉玩家所有药水效果</span><br><span class="line"></span><br><span class="line"># --- 世界管理 ---</span><br><span class="line">/time set &lt;day|noon|night|midnight|0~24000&gt;</span><br><span class="line">    # 设置世界时间；day=1000（早上）、noon=6000、night=13000、midnight=18000、数值=tick</span><br><span class="line">/weather &lt;clear|rain|thunder&gt; [持续秒数]</span><br><span class="line">    # 设置天气；不写持续秒数默认 600 秒</span><br><span class="line">/difficulty &lt;peaceful|easy|normal|hard&gt;</span><br><span class="line">    # 修改游戏难度，立刻生效</span><br><span class="line">/seed</span><br><span class="line">    # 显示当前世界种子（仅 op 可用）</span><br><span class="line">/worldborder set &lt;半径&gt;</span><br><span class="line">    # 设置世界边界半径（方块数）</span><br><span class="line">/worldborder center &lt;x&gt; &lt;z&gt;</span><br><span class="line">    # 移动世界边界中心</span><br><span class="line"></span><br><span class="line"># --- 物品与方块（建造/调试常用） ---</span><br><span class="line">/give &lt;玩家&gt; &lt;物品ID&gt; [数量]</span><br><span class="line">    # 直接给物品；物品 ID 带命名空间，如 minecraft:diamond</span><br><span class="line">/clear &lt;玩家&gt; [物品ID] [最大数量]</span><br><span class="line">    # 清空背包，或只清指定物品</span><br><span class="line">/summon &lt;实体ID&gt; [x] [y] [z]</span><br><span class="line">    # 生成实体，如 /summon minecraft:zombie</span><br><span class="line">/setblock &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;方块ID&gt;</span><br><span class="line">    # 在指定坐标放置单个方块</span><br><span class="line">/fill &lt;x1&gt; &lt;y1&gt; &lt;z1&gt; &lt;x2&gt; &lt;y2&gt; &lt;z2&gt; &lt;方块ID&gt;</span><br><span class="line">    # 用方块填充区域，单次最多 32768 格</span><br><span class="line">/clone &lt;起点&gt; &lt;终点&gt; &lt;目标点&gt;</span><br><span class="line">    # 复制一块区域到另一处</span><br><span class="line">/execute as &lt;目标&gt; at @s run &lt;命令&gt;</span><br><span class="line">    # 以某个实体身份/位置执行命令（现代命令核心，替代旧的 execute 语法）</span><br><span class="line"></span><br><span class="line"># --- 世界细节 ---</span><br><span class="line">/spawnpoint [玩家] [x] [y] [z]</span><br><span class="line">    # 设置某个玩家的个人重生点</span><br><span class="line">/setworldspawn [x] [y] [z]</span><br><span class="line">    # 设置整个世界（无个人重生点玩家）的重生点</span><br><span class="line">/forceload add &lt;x1&gt; &lt;z1&gt; &lt;x2&gt; &lt;z2&gt;</span><br><span class="line">    # 强制加载区块，防止远处红石/农场停摆</span><br><span class="line">/title &lt;玩家&gt; &lt;title|subtitle|actionbar&gt; &lt;文本&gt;</span><br><span class="line">    # 在屏幕中央/物品栏上方显示标题</span><br><span class="line">/tellraw &lt;玩家&gt; &lt;JSON文本&gt;</span><br><span class="line">    # 发送富文本消息（支持颜色、点击事件、悬浮提示）</span><br><span class="line">/scoreboard objectives add &lt;名称&gt; &lt;dummy|...&gt;</span><br><span class="line">    # 创建计分板目标，配合 /scoreboard players set 使用</span><br><span class="line">/tag &lt;目标&gt; add &lt;标签&gt;</span><br><span class="line">    # 给实体打标签，便于 @e[tag=xxx] 选择</span><br><span class="line"></span><br><span class="line"># --- 数据包 / 函数 ---</span><br><span class="line">/datapack list</span><br><span class="line">    # 列出已加载的数据包</span><br><span class="line">/datapack enable &lt;名称&gt;</span><br><span class="line">    # 启用数据包（原版实现 /home 类功能的另一种方式）</span><br><span class="line">/function &lt;命名空间:路径&gt;</span><br><span class="line">    # 执行数据包里的 .mcfunction 函数</span><br><span class="line"></span><br><span class="line"># --- 其他管理 ---</span><br><span class="line">/banlist &lt;players|ips&gt;</span><br><span class="line">    # 查看封禁列表</span><br><span class="line">/transfer &lt;主机名&gt; [端口] [玩家]</span><br><span class="line">    # [v1.20.5+] 把玩家转移到另一台服务器（目标服需 accepts-transfers=true）</span><br><span class="line">/setidletimeout &lt;分钟&gt;</span><br><span class="line">    # 设置挂机踢出时间（level 4）</span><br></pre></td></tr></table></figure>
+<h3 id="RCON-远程控制台"><a class="header-anchor" href="#RCON-远程控制台">¶</a>RCON 远程控制台</h3>
+<p>如果你在 <code>server.properties</code> 中开启了 <code>enable-rcon=true</code> 并设置密码，就可以从<strong>另一台机器</strong>远程执行控制台命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在本机安装 mcrcon（或用 rcon-cli 等工具）</span></span><br><span class="line">rcon -H &lt;服务器IP&gt; -P 25575 -p &lt;密码&gt; stop</span><br><span class="line">rcon -H &lt;服务器IP&gt; -P 25575 -p &lt;密码&gt; save-all</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>注意</strong>：RCON 通过 TCP 明文传输，生产环境建议只在<strong>内网</strong>使用，或者配合 SSH 隧道。</p>
+</blockquote>
+<p>更多配置项见 <a target="_blank" rel="noopener" href="https://zh.minecraft.wiki/w/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F?variant=zh-cn">Minecraft Wiki · 服务端配置文件格式</a>。</p>
+<p>其他说明：</p>
+<ul>
+<li>确认防火墙已放行服务器端口（默认 25565）。</li>
+<li>定期备份世界目录（<code>world/</code>），避免数据丢失。</li>
+</ul>
+<h2 id="让局域网好友加入"><a class="header-anchor" href="#让局域网好友加入">¶</a>让局域网好友加入</h2>
+<p>服务器默认绑定 <code>0.0.0.0</code>（所有接口），普通局域网环境可直接通过 IP 连接；<strong>WSL2 使用 NAT 网络，必须额外做端口转发</strong>。</p>
+<p><strong>获取 WSL2 的 IP 地址</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ip addr show eth0  <span class="comment"># 网卡名不确定时用 ip a 查看</span></span><br></pre></td></tr></table></figure>
+<p>找到 <code>inet</code> 后面形如 <code>172.xx.xx.xx</code> 的地址，即 WSL2 的内部 IP。</p>
+<p><strong>配置端口转发（WSL2 必需）</strong><br>
+WSL2 的 IP 属于 NAT 内网，局域网设备无法直接访问。需在 Windows 上把 25565 转发进去：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 以管理员身份打开 PowerShell</span></span><br><span class="line">netsh interface portproxy add v4tov4 listenport=<span class="number">25565</span> listenaddress=<span class="number">0.0</span>.<span class="number">0.0</span> connectport=<span class="number">25565</span> connectaddress=<span class="number">172</span>.xx.xx.xx</span><br></pre></td></tr></table></figure>
+<p>WSL2 每次重启后 IP 可能变化，需要重新执行；可用 <code>netsh interface portproxy show all</code> 查看现有规则。</p>
+<p><strong>在 Windows 防火墙中开放端口</strong><br>
+Minecraft 默认使用 25565 端口。</p>
+<ul>
+<li>按 Win + R，输入 wf.msc 打开“高级安全 Windows 防火墙”。</li>
+<li>在左侧选择“入站规则”，在右侧点击“新建规则…”。</li>
+<li>选择“端口”，点击“下一步”。</li>
+<li>选择“TCP”，并输入特定本地端口 25565，点击“下一步”。</li>
+<li>选择“允许连接”，点击“下一步”。</li>
+<li>保持所有网络类型（域、专用、公用）都被选中，点击“下一步”。</li>
+<li>为规则起一个名字，例如 “Minecraft WSL Server”，点击“完成”。</li>
+</ul>
+<p><strong>确认服务器绑定所有接口</strong><br>
+<code>server.properties</code> 中 <code>server-ip=</code> 留空即绑定 <code>0.0.0.0</code>（所有接口），官方服务器默认如此。</p>
+<p><strong>测试连接</strong></p>
+<ul>
+<li><strong>本机测试</strong>：客户端“多人游戏 → 添加服务器”，地址填 <code>localhost</code> 或 WSL2 的内部 IP。</li>
+<li><strong>局域网测试</strong>：朋友添加服务器时填 <strong>Windows 主机的局域网 IP</strong>（<code>ipconfig</code> 中“WLAN / 以太网”下的 IPv4，通常是 <code>192.168.x.x</code>），不是 WSL2 的 <code>172.x</code> 地址。</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author_group"><div class="post-copyright__author_img"><img class="post-copyright__author_img_front" src="/hiner/img/logo.png"></div><div class="post-copyright__author_name">Hiner</div><div class="post-copyright__author_desc"></div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div><div class="post-reward"><div class="reward-button" title="赞赏作者" onclick="AddRewardMask()"><i class="solitude fas fa-heart"></i>赞赏作者</div><div class="reward-main"><ul class="reward-all"><span class="reward-title">感谢您的赞赏</span><ul class="reward-group"><li class="reward-item"><a href="https://aozijx.github.io/aozijx/wechat_qr_code.png"><img class="post-qr-code-img nolazyload" src="https://aozijx.github.io/aozijx/wechat_qr_code.png" alt="WeChat" style="border-color: var(--efu-green)"></a><div class="post-qr-code-desc">WeChat</div></li><li class="reward-item"><a href="https://aozijx.github.io/aozijx/alipay_qr_code.png"><img class="post-qr-code-img nolazyload" src="https://aozijx.github.io/aozijx/alipay_qr_code.png" alt="Alipay" style="border-color: var(--efu-blue)"></a><div class="post-qr-code-desc">Alipay</div></li></ul><a class="reward-main-btn" href="/hiner/about/"><div class="reward-text">赞赏名单</div><div class="reward-dec">因为您的支持，我才能够实现写作的价值。</div></a></ul></div></div><script>function RemoveRewardMask() {
+    let rewardMainElements = document.querySelectorAll(".reward-main");
+    let quitBoxElement = document.querySelector("#quit-box");
+
+    rewardMainElements.forEach(element => {
+        element.style.display = "none";
+    });
+
+    if (quitBoxElement) {
+        quitBoxElement.style.display = "none";
+    }
+}
+
+function AddRewardMask() {
+    let rewardMainElements = document.querySelectorAll(".reward-main");
+    let quitBoxElement = document.querySelector("#quit-box");
+
+    rewardMainElements.forEach(element => {
+        element.style.display = "flex";
+    });
+
+    if (quitBoxElement) {
+        quitBoxElement.style.display = "flex";
+    }
+}</script><div class="reward-link mode"><a class="reward-link-button" href="/hiner/atom.xml"><i class="solitude fas fa-seedling"></i>订阅</a></div></div></div><div class="social-share"><a class="social-share-ico icon-qq" target="_blank" rel="noopener" href="https://connect.qq.com/widget/shareqq/index.html?url=https%3A%2F%2Faozijx.github.io%2Fhiner%2Fhiner%2F2025%2F10%2F28%2Fminecraft-java-server-guide%2F&amp;title=Minecraft%20Java%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97%EF%BC%88Ubuntu%20%2F%20WSL%EF%BC%89&amp;desc=undefined&amp;summary=undefined&amp;site=Minecraft%20Java%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97%EF%BC%88Ubuntu%20%2F%20WSL%EF%BC%89&amp;pics=https%3A%2F%2Fwww.minecraft.net%2Fcontent%2Fdam%2Fminecraftnet%2Fgames%2Fminecraft%2Fscreenshots%2F1.21-new-trial-chambers-patterns.jpg" title="分享到QQ"><i class="solitude fab fa-qq"></i></a><a class="social-share-ico icon-weibo" target="_blank" rel="noopener" href="http://service.weibo.com/share/share.php?url=https%3A%2F%2Faozijx.github.io%2Fhiner%2Fhiner%2F2025%2F10%2F28%2Fminecraft-java-server-guide%2F&amp;title=Minecraft%20Java%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97%EF%BC%88Ubuntu%20%2F%20WSL%EF%BC%89&amp;pic=https%3A%2F%2Fwww.minecraft.net%2Fcontent%2Fdam%2Fminecraftnet%2Fgames%2Fminecraft%2Fscreenshots%2F1.21-new-trial-chambers-patterns.jpg" title="分享到微博"><i class="solitude fab fa-weibo"></i></a><div class="social-share-ico icon-link" onclick="utils.copy(&quot;https://aozijx.github.io/hiner/hiner/2025/10/28/minecraft-java-server-guide/&quot;)" title="复制文章链接"><i class="solitude fas fa-link"></i></div><div class="social-share-ico icon-qrcode" title="使用手机扫码阅读这篇文章"><i class="solitude fas fa-qrcode"></i><div class="share-main"><div class="share-main-all"><div id="qrcode"></div><div class="reward-dec">使用手机扫码阅读这篇文章</div></div></div><script pjax>typeof QRCode === 'function' && new QRCode(document.getElementById("qrcode"), {
+    text: 'https://aozijx.github.io/hiner/hiner/2025/10/28/minecraft-java-server-guide/',
+    correctLevel : QRCode.CorrectLevel.L
+});
+window.addEventListener('DOMContentLoaded', () => {
+    new QRCode(document.getElementById("qrcode"), {
+        text: 'https://aozijx.github.io/hiner/hiner/2025/10/28/minecraft-java-server-guide/',
+        correctLevel : QRCode.CorrectLevel.L
+    });
+});
+</script></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本文是原创文章，采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans">CC BY-NC-SA 4.0</a>协议，完整转载请注明来自<a href="/hiner/">Hinerの小窝</a></span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"></div></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="next-post pull-full"><a href="/hiner/2025/09/27/input-method-time-format/"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">使用输入法自定义短语输出时间</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="top-group"><div class="sayhi" id="sayhi" onclick="sco.changeWittyWord()"></div></div></div><div class="avatar"><img alt="头像" src="/hiner/img/logo.png"></div><div class="description">何须浅碧深红色,<br>自是花中第一流。</div><div class="bottom-group"><span class="left"><div class="name">Hiner</div><div class="desc">只有迎风，风筝才能飞得更高。</div></span><div class="social-icons is-center"><a class="social-icon" target="_blank" rel="noopener" href="https://github.com/aozijx" title="Github"><i class="solitude  fab fa-github"></i></a><a class="social-icon" href="mailto:xxhtxml@outlook.com" title="Mail"><i class="solitude  far fa-envelope"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="solitude fas fa-bars"></i><span>文章目录</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0%E8%BD%AF%E4%BB%B6%E5%8C%85%E5%88%97%E8%A1%A8%E5%B9%B6%E5%8D%87%E7%BA%A7%E7%8E%B0%E6%9C%89%E8%BD%AF%E4%BB%B6"><span class="toc-text">更新软件包列表并升级现有软件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-Java-%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83"><span class="toc-text">安装 Java 运行环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%AE%E5%BD%95"><span class="toc-text">创建服务器目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD-1-21-1-%E6%9C%8D%E5%8A%A1%E5%99%A8-JAR"><span class="toc-text">下载 1.21.1 服务器 JAR</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A5%E5%8F%97-EULA-%E5%8D%8F%E8%AE%AE"><span class="toc-text">接受 EULA 协议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E6%AC%A1%E8%BF%90%E8%A1%8C%E4%BB%A5%E7%94%9F%E6%88%90%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">初次运行以生成配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC"><span class="toc-text">创建启动脚本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">启动服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#server-properties-%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%BB%A5-1-21-1-%E4%B8%BA%E5%9F%BA%E5%87%86%EF%BC%89"><span class="toc-text">server.properties 配置详解（以 1.21.1 为基准）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E9%94%AE%E5%80%BC%E5%8F%82%E8%80%83"><span class="toc-text">完整键值参考</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%BA%E6%99%AF%E4%B8%80%EF%BC%9A%E5%BC%80%E6%9C%8D%E5%89%8D%E5%BF%85%E6%94%B9%E7%9A%84-7-%E9%A1%B9"><span class="toc-text">场景一：开服前必改的 7 项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%BA%E6%99%AF%E4%BA%8C%EF%BC%9A%E9%85%8D%E7%BD%AE-OP-%E4%B8%8E%E7%99%BD%E5%90%8D%E5%8D%95"><span class="toc-text">场景二：配置 OP 与白名单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%BA%E6%99%AF%E4%B8%89%EF%BC%9ARCON-%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86"><span class="toc-text">场景三：RCON 远程管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%BA%E6%99%AF%E5%9B%9B%EF%BC%9A%E8%B5%84%E6%BA%90%E5%8C%85"><span class="toc-text">场景四：资源包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%BA%E6%99%AF%E4%BA%94%EF%BC%9A%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98"><span class="toc-text">场景五：性能调优</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%BA%E6%99%AF%E5%85%AD%EF%BC%9A%E4%B8%96%E7%95%8C%E7%94%9F%E6%88%90"><span class="toc-text">场景六：世界生成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%BA%E6%99%AF%E4%B8%83%EF%BC%9A%E5%A4%87%E4%BB%BD%E4%B8%8E%E7%BB%B4%E6%8A%A4"><span class="toc-text">场景七：备份与维护</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8-gamerule-%E5%91%BD%E4%BB%A4%EF%BC%88%E5%8E%9F%E7%89%88%EF%BC%89"><span class="toc-text">常用 gamerule 命令（原版）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E7%89%88%E6%9D%83%E9%99%90%E7%B3%BB%E7%BB%9F%EF%BC%880-4-%E7%BA%A7%EF%BC%89"><span class="toc-text">原版权限系统（0-4 级）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E-%E5%85%B3%E9%97%AD%E4%BD%9C%E5%BC%8A-%E6%98%AF%E5%90%A6%E5%BD%B1%E5%93%8D-OP"><span class="toc-text">关于&quot;关闭作弊&quot;是否影响 OP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%A4%E4%B8%AA%E5%AE%B9%E6%98%93%E6%90%9E%E6%B7%B7%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="toc-text">两个容易搞混的配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AF%8F%E4%B8%AA%E7%8E%A9%E5%AE%B6%E7%9A%84%E6%9D%83%E9%99%90%E5%8F%AF%E4%BB%A5%E4%B8%8D%E5%90%8C%E6%AD%A5"><span class="toc-text">每个玩家的权限可以不同步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E7%89%88%E6%B2%A1%E6%9C%89%E7%9A%84%E5%91%BD%E4%BB%A4%EF%BC%88%E5%BF%85%E9%A1%BB%E8%A3%85%E6%8F%92%E4%BB%B6-%E6%95%B0%E6%8D%AE%E5%8C%85%EF%BC%89"><span class="toc-text">原版没有的命令（必须装插件&#x2F;数据包）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%99%AE%E9%80%9A%E7%8E%A9%E5%AE%B6%E5%B0%B1%E8%83%BD%E7%94%A8%E7%9A%84%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4"><span class="toc-text">普通玩家就能用的基础命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8-OP-%E6%8E%A7%E5%88%B6%E5%8F%B0%E5%91%BD%E4%BB%A4%EF%BC%881-21-1-%E5%8E%9F%E7%89%88%EF%BC%89"><span class="toc-text">常用 OP &#x2F; 控制台命令（1.21.1 原版）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%85%E6%8E%A7%E5%88%B6%E5%8F%B0%EF%BC%88%E4%B8%8D%E5%B8%A6-%EF%BC%89"><span class="toc-text">仅控制台（不带 &#x2F;）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%81%8A%E5%A4%A9%E6%A1%86-%E6%8E%A7%E5%88%B6%E5%8F%B0%E9%80%9A%E7%94%A8"><span class="toc-text">聊天框 &amp; 控制台通用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RCON-%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6%E5%8F%B0"><span class="toc-text">RCON 远程控制台</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A9%E5%B1%80%E5%9F%9F%E7%BD%91%E5%A5%BD%E5%8F%8B%E5%8A%A0%E5%85%A5"><span class="toc-text">让局域网好友加入</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="solitude fas fa-map"></i><span>最近发布</span></div><div class="aside-list"><a class="aside-list-item" href="/hiner/2025/10/28/minecraft-java-server-guide/" title="Minecraft Java 服务器搭建与配置指南（Ubuntu / WSL）"><div class="thumbnail"><img alt="Minecraft Java 服务器搭建与配置指南（Ubuntu / WSL）" src="https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/screenshots/1.21-new-trial-chambers-patterns.jpg"></div><div class="content"><span class="title" href="/hiner/2025/10/28/minecraft-java-server-guide/" title="Minecraft Java 服务器搭建与配置指南（Ubuntu / WSL）">Minecraft Java 服务器搭建与配置指南（Ubuntu / WSL）</span></div></a><a class="aside-list-item" href="/hiner/2025/09/27/input-method-time-format/" title="使用输入法自定义短语输出时间"><div class="thumbnail"><img alt="使用输入法自定义短语输出时间" src="/hiner/img/default.avif"></div><div class="content"><span class="title" href="/hiner/2025/09/27/input-method-time-format/" title="使用输入法自定义短语输出时间">使用输入法自定义短语输出时间</span></div></a><a class="aside-list-item" href="/hiner/2025/09/26/vscode-usage-tips/" title="VS Code 使用技巧"><div class="thumbnail"><img alt="VS Code 使用技巧" src="/hiner/src/img/vscode.webp"></div><div class="content"><span class="title" href="/hiner/2025/09/26/vscode-usage-tips/" title="VS Code 使用技巧">VS Code 使用技巧</span><span class="categories" href="/hiner/2025/09/26/vscode-usage-tips/">VSCode</span></div></a><a class="aside-list-item" href="/hiner/2025/09/02/express-request-response-api/" title="Express Request 与 Response API 参考"><div class="thumbnail"><img alt="Express Request 与 Response API 参考" src="/hiner/img/default.avif"></div><div class="content"><span class="title" href="/hiner/2025/09/02/express-request-response-api/" title="Express Request 与 Response API 参考">Express Request 与 Response API 参考</span></div></a><a class="aside-list-item" href="/hiner/2025/08/22/css-transition-animation-reverse/" title="CSS transition 与 animation 的反向播放"><div class="thumbnail"><img alt="CSS transition 与 animation 的反向播放" src="/hiner/img/default.avif"></div><div class="content"><span class="title" href="/hiner/2025/08/22/css-transition-animation-reverse/" title="CSS transition 与 animation 的反向播放">CSS transition 与 animation 的反向播放</span></div></a></div></div></div></div></main><footer id="footer"><div id="st-footer-bar"><div class="footer-logo"><span>Solitude</span></div><div class="footer-bar-description"></div><a class="footer-bar-link" href="/hiner/about/" title="Learn more / 了解更多">Learn more / 了解更多</a></div><div id="footer_deal"><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/aozijx" title="Github"><i class="solitude  fab fa-github"></i></a><div><div class="nolazyload footer_mini_logo" id="footer_mini_logo" title="返回顶部" onclick="sco.toTop()"><img src="https://aozijx.github.io/xuao/src/img/cat.gif" alt="返回顶部"></div></div><a class="deal_link" href="mailto:xxhtxml@outlook.com" title="Mail"><i class="solitude  far fa-envelope"></i></a></div><div id="st-footer"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2025 - 2026 By<a class="footer-bar-link" href="/hiner/" title="Hiner">Hiner</a></div><div class="beian-group"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://hexo.io/" title="框架：Hexo">框架：Hexo</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" title="主题：Solitude">主题：Solitude</a></div></div><div><div class="footer-bar-right"><a class="footer-bar-link" href="/hiner/atom.xml" title="">RSS</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude/blob/main/LICENSE" title=""><i class="solitude fas fa-copyright"></i><i class="solitude fab fa-creative-commons-by"></i><i class="solitude fab fa-creative-commons-nc"></i><i class="solitude fab fa-creative-commons-nd"></i></a></div></div></div></div><div class="comment-barrage needEndHide"></div></footer></div><div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="solitude fas fa-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="solitude fas fa-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="solitude fas fa-arrows-rotate"></i></div><div class="rightMenu-item" id="menu-top"><i class="solitude fas fa-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="solitude fas fa-clone"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="solitude fas fa-clipboard"></i><span>粘贴文本</span></div><div class="rightMenu-item" id="menu-newwindow"><i class="solitude far fa-window-maximize"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="solitude fas fa-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="solitude fas fa-clone"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="solitude fas fa-cloud-arrow-down"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-search"><i class="solitude fas fa-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="solitude fas fa-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="solitude fas fa-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="solitude fas fa-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="solitude fas fa-clone"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" id="menu-randomPost" onclick="toRandomPost()||rm.hideRightMenu()"><i class="solitude fas fa-tower-broadcast"></i><span>随机文章</span></div><div class="rightMenu-item" id="menu-copyPostLink" onclick="copyPostLink()||rm.hideRightMenu()"><i class="solitude fas fa-link"></i><span>复制链接</span></div><div class="rightMenu-item" id="consoleMusic" onclick="sco.musicToggle()||rm.hideRightMenu()"><i class="solitude solitude fas fa-compact-disc"></i><span>音乐胶囊</span></div><div class="rightMenu-item" id="buttonPio" onclick="togglePio()||rm.hideRightMenu()"><i class="solitude solitude fas fa-user-astronaut"></i><span>显示看板娘</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" id="menu-darkmode" onclick="sco.switchDarkMode()"><i class="solitude fas fa-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></div><div class="rightMenu-item" id="menu-translate"><i class="solitude fas fa-language"></i><span>轉為繁體</span></div></div></div><div id="rightmenu-mask"></div></div><div><!-- Critical scripts loaded synchronously--><script src="/hiner/js/utils.js?v=3.0.20"></script><script src="/hiner/js/main.js?v=3.0.20"></script><!-- Non-critical scripts loaded asynchronously--><script async src="/hiner/js/third_party/waterfall.min.js?v=3.0.20"></script><script src="https://fastly.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><!-- Feature-specific scripts loaded asynchronously--><script async src="https://fastly.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script><script defer src="https://fastly.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script><script defer src="https://fastly.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script><script defer src="https://fastly.jsdelivr.net/npm/typeit@8.8.7/dist/index.umd.min.js"></script><script defer src="/hiner/js/third_party/universe.min.js?v=3.0.20"></script><script>document.addEventListener('DOMContentLoaded', () => {
+  if (typeof dark === 'function') dark();
+});
+</script><script defer src="/hiner/js/tw_cn.js?v=3.0.20"></script><!-- UI enhancement scripts--><script src="https://fastly.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><script defer src="https://fastly.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script src="https://fastly.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.umd.min.js"></script><script src="https://fastly.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js"></script><!-- Music player scripts--><script>var meting_api = 'https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&r=:r';</script><script defer src="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script defer src="https://fastly.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script><!-- Cover color processing scripts--><script defer src="https://fastly.jsdelivr.net/npm/colorthief@2.6.0/dist/color-thief.min.js"></script><script defer src="/hiner/js/covercolor/local.js?v=3.0.20"></script><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+utils.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+</script><script src="https://fastly.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!-- Search functionality--><!-- Right menu functionality--><script defer src="/hiner/js/right_menu.js?v=3.0.20"></script><script src="https://cdn.jsdelivr.net/npm/greensock@1.20.2/dist/TweenLite.js"></script><script src="/hiner/src/live2d/live2dcubismcore.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pixi.js@5.3.6/dist/pixi.min.js"></script><script src="/hiner/src/live2d/cubism4.min.js"></script><link href="/hiner/src/live2d/pio.css" rel="stylesheet" type="text/css"/><script src="/hiner/src/live2d/pio.js"></script><script src="https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/pio_sdk4.js"></script><script src="https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/load.js"></script><script src="https://open.lightxi.com/unpkg/chinese-lunar@0.1.4/lib/chinese-lunar.js"></script><script src="/hiner/src/js/schedule.js"></script><div class="js-pjax"><script>mermaid.run();
+</script></div></div><!-- pjax--><script>let pjax = null;
+
+function initPjax() {
+    if (typeof Pjax === 'undefined') {
+        console.warn('Pjax is not loaded yet, retrying...');
+        setTimeout(initPjax, 100);
+        return;
+    }
+
+    pjax = new Pjax({
+        elements: 'a:not([target="_blank"])',
+        selectors: ["title","#body-wrap","#site-config","meta[name=\"description\"]",".js-pjax","meta[property^=\"og:\"]","#config-diff",".rs_show",".rs_hide"],
+        cacheBust: false,
+        analytics: false,
+        scrollRestoration: false
+    })
+
+    // 将 pjax 实例挂载到全局
+    window.pjax = pjax;
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    document.addEventListener('pjax:complete', () => {
+        window.refreshFn()
+
+        document.querySelectorAll('script[data-pjax]').forEach(item => {
+            const newScript = document.createElement('script')
+            const content = item.text || item.textContent || item.innerHTML || ""
+            Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+            newScript.appendChild(document.createTextNode(content))
+            item.parentNode.replaceChild(newScript, item)
+        })
+
+        GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+    })
+
+    document.addEventListener('pjax:error', (e) => {
+        if (e.request.status === 404) {
+            pjax.loadUrl('/404.html')
+        }
+    })
+}
+
+// 初始化 Pjax
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPjax);
+} else {
+    initPjax();
+}</script><!-- google adsense--><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="solitude fas fa-xmark"></i></button></nav><div class="search-wrap"><div class="search-box"><input class="search-box-input" id="search-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="输入关键词快速查找"></div><div id="search-results"><div id="search-hits"><a class="tag-list" href="javascript:void(0);" onclick="pjax.loadUrl('/hiner/tags/Hexo/')">Hexo</a></div></div><div id="search-pagination"></div><div id="search-tips"></div></div></div><div id="search-mask"></div></div><script src="/hiner/js/search/local.js?v=3.0.20"></script><div><div class="needEndHide" id="nav-music"><div id="nav-music-hoverTips"><i class="music-control-btn fas fa-backward-step" id="music-prev" onclick="sco.musicSkipBack()"></i><i class="music-control-btn fas fa-pause" id="music-pause" onclick="sco.musicToggle()"></i><i class="music-control-btn fas fa-play" id="music-play" onclick="sco.musicToggle()"></i><i class="music-control-btn fas fa-forward-step" id="music-next" onclick="sco.musicSkipForward()"></i></div><meting-js id="18639216206" server="netease" type="playlist" mutex="true" preload="none" theme="var(--efu-main)" data-lrctype="0" order="random" volume="0.8"></meting-js></div></div></body></html>
+        <script>
+            const posts = ["2025/10/28/minecraft-java-server-guide/","2025/09/27/input-method-time-format/","2025/09/26/vscode-usage-tips/","2025/09/02/express-request-response-api/","2025/08/22/css-transition-animation-reverse/","2025/07/26/javascript-property-access/","2025/07/16/usb-drive-icon/","2025/07/08/vue-installation-guide/","2025/06/30/html-tags/","2025/06/18/theme-switching/","2025/05/10/vscode-plugins/","2025/04/19/python-qr-code/","2025/04/16/xuao/","2025/04/16/css-properties/","2025/04/05/git-commands/","2025/04/02/wsl-docker-firefox-guide/","2025/03/30/random-image-wallpaper-api/","2025/03/27/stardew-valley-mods/","2025/03/22/stardew-valley-tips/","2025/03/20/stardew-valley-mod-installation/","2025/03/16/solitude-theme-customization/","2025/03/15/katex-reference/","2025/03/15/markdown-html-effects/","2025/03/15/github-acceleration/","2025/03/14/genshin-impact-mod-installation/","2025/03/13/hexo-katex-configuration/","2025/03/13/hexo-code-highlighting/","2025/03/13/interesting-formulas/","2025/03/12/hexo-solitude-tags/","2025/03/12/hello-world/"];
+            function toRandomPost() {
+                const randomPost = posts[Math.floor(Math.random() * posts.length)];
+                pjax.loadUrl(GLOBAL_CONFIG.root + randomPost);
+            }
+        </script>
