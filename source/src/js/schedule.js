@@ -95,7 +95,12 @@ function cardTimes() {
         lunarMon = chineseLunar.format(lunarDate, "M");
         lunarDay = chineseLunar.format(lunarDate, "d");
 
-        const newYearDate = new Date("2026/02/17 00:00:00");
+        // 春节即农历正月初一，自动取今年未过的或明年的
+        const thisYear = now.getFullYear();
+        let newYearDate = chineseLunar.lunarToSolar(thisYear, 1, 1);
+        if (newYearDate < now) {
+            newYearDate = chineseLunar.lunarToSolar(thisYear + 1, 1, 1);
+        }
         const daysUntilNewYear = Math.floor((newYearDate - now) / 1e3 / 60 / 60 / 24);
         asideTime = new Date(`${new Date().getFullYear()}/01/01 00:00:00`);
         asideDay = (now - asideTime) / 1e3 / 60 / 60 / 24;

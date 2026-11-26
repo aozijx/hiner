@@ -494,7 +494,7 @@ right_menu:
       id: consoleMusic
       class: 
       icon: solitude fas fa-compact-disc
-    - name: 显示看板娘
+    - name: 隐藏看板娘
       click: togglePio()
       id: buttonPio
       class: 
@@ -518,7 +518,7 @@ copy:
 
 # --------------------------- start ---------------------------
 # Mermaid
-mermaid: true
+mermaid: false
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -816,6 +816,7 @@ extends:
    - <script src="/hiner/src/js/copylink.js" async></script>
    - <script src="/hiner/src/js/piotoggle.js" async></script>
    - <script src="/hiner/src/js/cover-fallback.js"></script>
+   - '<script>window.Snackbar=window.Snackbar||{show:function(){}};</script>'
   # Insert in body
   # 插入到 body
   body:
@@ -827,8 +828,10 @@ extends:
    - <link href="/hiner/src/live2d/pio.css" rel="stylesheet" type="text/css"/>
    - <script src="/hiner/src/live2d/pio.js"></script>
    - <script src="https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/pio_sdk4.js"></script>
-   - <script src="https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/load.js"></script>
-   - <script src="https://open.lightxi.com/unpkg/chinese-lunar@0.1.4/lib/chinese-lunar.js"></script>
+   - <script src="/hiner/src/live2d/load.js"></script>
+   - <script src="/hiner/src/js/chinese-lunar.js"></script>
+   - <script defer src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+   - '<script>window.addEventListener("DOMContentLoaded",function(){window.mermaid&&window.mermaid.run()});</script>'
    - <script src="/hiner/src/js/schedule.js"></script>
 # --------------------------- end ---------------------------
 
@@ -1064,7 +1067,7 @@ CDN:
     # pace_js:
     # pjax:
     # qrcode:
-    # snackbar:
+    snackbar: https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js
     # swiper_css:
     # swiper_js:
     # twikoo:
