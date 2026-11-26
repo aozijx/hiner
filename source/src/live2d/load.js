@@ -20,10 +20,14 @@ var 引流 = [
   "https://www.bilibili.com/video/BV1oU4y1h7Sc",
 ]
 
+// 复用主题注入的 GLOBAL_CONFIG.root，避免硬编码子目录
+const siteBase = (typeof GLOBAL_CONFIG !== "undefined" && GLOBAL_CONFIG.root) || "/";
+
 const initConfig = {
   mode: "fixed",
   hidden: true,
   content: {
+    home: siteBase,
     link: 引流[Math.floor(Math.random() * 引流.length)],
     welcome: ["Hi!"],
     touch: "",
@@ -35,7 +39,7 @@ const initConfig = {
       { "selector": ".post-content a, .page-content a, .post a", "type": "link" }
     ],
   },
-  night: "toggleNightMode()",
+  night: "sco.switchDarkMode()",
   model: [
     "https://cdn.jsdelivr.net/gh/journey-ad/blog-img/live2d/Diana/Diana.model3.json",
     "https://cdn.jsdelivr.net/gh/journey-ad/blog-img/live2d/Ava/Ava.model3.json",
