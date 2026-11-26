@@ -1,5 +1,5 @@
 ---
-title: 星露谷 Mod
+title: 星露谷 Mod 推荐
 date: 2025-03-27 22:07:53
 author: Hiner
 categories: [游戏]
@@ -102,7 +102,7 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 
 ### [BaZhua's Marriable Role Portrait](https://www.nexusmods.com/stardewvalley/mods/20236?tab=files&file_id=115950)
 {% note 'attention' 'fas fa-wand-magic-sparkles' %}
-在 nexus 设置打开 **显示成人内容** 再访问
+在 Nexus 中开启**显示成人内容**后再访问。
 {% endnote %}
 
 {% link "BaZhua's Marriable Role Portrait" '12个可婚角色的像素肖像' 'https://www.nexusmods.com/stardewvalley/mods/20236' %}

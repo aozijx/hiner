@@ -7,7 +7,7 @@ tags: [Blog]
 cover: img/default.avif
 ---
 
-开始学习 HTML 和 CSS 写的一个页面，后来在网上看到有意思的效果，都会写一遍
+这是我开始学习 HTML 和 CSS 时编写的一个页面。后来在网上看到有意思的效果，也会尝试着复现。
 
 ## 渐变
 
@@ -66,7 +66,7 @@ document.querySelectorAll('.color span').forEach((span, index) => {
 ```
 
 ## 透明字
-> 可换艺术字、使用滚动动画
+> 可替换为艺术字，并使用滚动动画。
 
 <style>
     .gta {

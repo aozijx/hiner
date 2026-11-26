@@ -1,5 +1,5 @@
 ---
-title: Git 命令
+title: Git 常用命令与操作
 date: 2025-04-05 00:57:35
 author: Hiner
 categories: [学习分享]
@@ -25,7 +25,7 @@ git config --list                   # 查看所有配置项
 git config user.name                # 查看当前用户名
 
 # 系统级配置（跨平台开发常用）
-git config --global core.autocrlf input      # Mac/Linux：换行符转换为LF
+git config --global core.autocrlf input      # macOS/Linux：换行符转换为 LF
 git config --global core.autocrlf true       # Windows：换行符转换为CRLF
 git config --global core.fileMode false      # 忽略文件权限变更
 git config core.ignorecase false             # 打开文件大小写敏感
@@ -68,7 +68,7 @@ git commit --allow-empty -m "描述"  # 创建空提交（用于触发CI等场�
 
 # 提交规范建议
 # feat: 添加新功能
-# fix: 修复bug
+# fix: 修复 bug
 # docs: 文档变更
 # style: 代码格式调整（不影响逻辑）
 # refactor: 代码重构
@@ -190,7 +190,7 @@ git push origin --delete v1.0     # 删除远程标签
   2. 修改上一次提交：
      ```bash
      git commit --amend -m "新的提交信息"
-     git commit --amend --no-edit         #不用修改提交信息
+     git commit --amend --no-edit         # 无需修改提交信息
      ```
   3. 强制推送：
      ```bash
@@ -219,4 +219,4 @@ git push origin --delete v1.0     # 删除远程标签
 - 备份 .git 文件夹：如果误操作，可尝试恢复原有 .git 文件夹。
 
 ## 实现快捷操作
-- 在 Windows 或 MacOS 命令行中，可以直接将文件或者文件夹拖入窗口，实现快速输入路径
+- 在 Windows 或 macOS 命令行中，可以直接将文件或文件夹拖入窗口，快速输入路径。

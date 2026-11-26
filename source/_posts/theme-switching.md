@@ -1,5 +1,5 @@
 ---
-title: 主题切换方式
+title: 网页主题切换方式
 date: 2025-06-18 16:15:04
 author: Hiner
 categories: [学习分享]
@@ -7,10 +7,10 @@ tags: [HTML, CSS]
 cover: 
 ---
 
-Color Mode 或者 Theme Mode
+Color Mode，也称为 Theme Mode。
 
 ## 属性选择器
-借助 JavaScript 动态地修改 HTML 根元素的data - theme属性，进而实现网站主题样式的切换
+借助 JavaScript 动态修改 HTML 根元素的 `data-theme` 属性，进而实现网站主题样式的切换。
 属性选择器是主题切换中最灵活的实现方式：
 ```css
 /* 浅色主题 */
@@ -59,7 +59,7 @@ div {
 }
 ```
 
-也可以在前面加上元素限定，使某个元素改变
+也可以添加元素限定，使特定元素发生变化。
 ```css
 div[data-theme="theme"] {
     /* */
@@ -82,21 +82,21 @@ div[data-theme="theme"] {
 }
 ```
 
-JavaScript中检测系统主题偏好：
+JavaScript 中检测系统主题偏好：
 ```JavaScript
 const systemPrefersDark = window.matchMedia(
   "(prefers-color-scheme: dark)"
 ).matches;
 ```
 
-## 样式优先级：
+## 样式优先级
 - 手动设置的 data-theme 属性优先级最高。
 - 系统偏好的 prefers-color-scheme 次之。
 - 全局默认样式优先级最低。
 
 ## 体验优化
-- 为颜色变化添加过渡效果显著提升用户体验。
-- 使用 localStorage 保存用户选择。
+- 为颜色变化添加过渡效果，显著提升用户体验。
+- 使用 `localStorage` 保存用户选择。
 - 通过主题指示器和激活状态的按钮，让用户清晰了解当前主题状态。
 
 ## AI

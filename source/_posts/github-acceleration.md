@@ -1,5 +1,5 @@
 ---
-title: GitHub 加速
+title: GitHub 访问加速
 date: 2025-03-15 12:48:50
 author: 
 categories: [学习分享]
@@ -7,8 +7,8 @@ tags: [GitHub]
 cover: src/img/GitHub.webp
 ---
 转载:[Jerry Zhou](https://blog.jerryz.com.cn/article/github-speed-up/)
-通过修改系统hosts文件的办法，绕过国内DNS解析，直接访问GitHub的CDN节点，从而达到GitHub访问加速的目的。不需要海外的服务器辅助。
-做到以下需要三步：
+通过修改系统 hosts 文件，绕过国内 DNS 解析，直接访问 GitHub 的 CDN 节点，从而达到加速访问 GitHub 的目的，无需海外服务器辅助。
+完成以下操作需要三步：
 - 获取 GitHub 官方 CDN 地址
 - 修改系统 hosts 文件
 - 刷新系统 DNS 缓存
@@ -39,7 +39,7 @@ cover: src/img/GitHub.webp
 ```
 ## 修改系统 hosts 文件
 打开 C:\Windows\System32\drivers\etc
-- 显示隐藏的文件(Win11)
+- 显示隐藏文件（Windows 11）
 文件资源管理器 - 查看 - 显示 - 隐藏的项目
 
 ## 刷新系统 DNS 缓存

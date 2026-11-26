@@ -1,5 +1,5 @@
 ---
-title: 随机壁纸 API
+title: 随机图片与壁纸 API 收集
 date: 2025-03-30 15:28:00
 author: Hiner
 categories: [资源分享]
@@ -19,8 +19,8 @@ cover: https://moe.jitsu.top/img/?sort=pc&34
     })
 </script>
 
-分享一些图片或者壁纸 API ，仅收集
-> 首次进入后刷新页面，点击图片即可切图
+分享一些图片或壁纸 API，仅作收集。
+> 首次进入页面后刷新，点击图片即可切换图片。
 
 ## [今日诗词](https://www.jinrishici.com/)
 每次返回一句诗词
@@ -37,7 +37,7 @@ cover: https://moe.jitsu.top/img/?sort=pc&34
 </script>
 
 ## [Lorem Picsum](https://picsum.photos/)
-更改链接数字以改变图片像素
+更改链接中的数字可以调整图片分辨率。
 <img src="https://picsum.photos/1920/1080" onclick="changeImage(this)" alt="" >
 
 ## 必应壁纸
@@ -53,20 +53,20 @@ cover: https://moe.jitsu.top/img/?sort=pc&34
 ## [动漫高清壁纸 - 岁月小筑](https://cloud.qqshabi.cn/apidetail/33.html)
 <img src="https://cloud.qqshabi.cn/api/images/api.php" onclick="changeImage(this)" alt="">
 
-## [PAULZZH 东方Project随机图片API](https://img.paulzzh.com/)
+## [PAULZZH 东方 Project 随机图片 API](https://img.paulzzh.com/)
 <img src="https://img.paulzzh.com/touhou/random" onclick="changeImage(this)" alt="">
 
 ## [保罗 API ](https://api.paugram.com/)
 <img src="https://api.paugram.com/wallpaper/" onclick="changeImage(this)" alt="">
 
-## [墨天逸— 随机图片API](https://api.mtyqx.cn/)
+## [墨天逸——随机图片 API](https://api.mtyqx.cn/)
 <img src="https://api.mtyqx.cn/tapi/random.php" onclick="changeImage(this)" alt="">
 
 ## [赫萝随机图片 API](https://api.horosama.com/)
 <img src="https://api.horosama.com/random.php" onclick="changeImage(this)" alt="">
 
 ## 小小 API
-二次元（type为pc或wap表示横图或竖图）：
+二次元（`type` 为 `pc` 或 `wap`，分别表示横图或竖图）：
 <img src="https://v2.xxapi.cn/api/randomAcgPic?type=pc&return=302" onclick="changeImage(this)" alt="">
 <img src="https://v2.xxapi.cn/api/meinvpic?return=302" onclick="changeImage(this)" alt="">
 <img src="https://v2.xxapi.cn/api/baisi?return=302" onclick="changeImage(this)" alt="">
@@ -92,10 +92,10 @@ cover: https://moe.jitsu.top/img/?sort=pc&34
 {% endtabs %}
 
 ## [如诗的 API 接口](https://api.likepoems.com/)
-- 随机返回pixiv图片
+- 随机返回 Pixiv 图片
 <img src="https://api.likepoems.com/img/pixiv/" onclick="changeImage(this)" alt="">
 
-- 随机返回pc图片
+- 随机返回 PC 图片
 <img src="https://api.likepoems.com/img/pc/" onclick="changeImage(this)" alt="">
 
 ## [随机萌图](https://api.miaomc.cn/image/#APIContainer)
@@ -104,16 +104,16 @@ cover: https://moe.jitsu.top/img/?sort=pc&34
 ## [无铭 API](https://jkapi.com/)
 收录 API ，需注册获取 API key
 
-## [98情缘API](https://www.98qy.com/sjbz/)
+## [98 情缘 API](https://www.98qy.com/sjbz/)
 <img src="http://www.98qy.com/sjbz/api.php" onclick="changeImage(this)" alt="">
 
-## [Jitsuの随机涩图API](https://img.jitsu.top/#/?id=jitsuの随机涩图api)(img.jitsu.top)
+## [Jitsu の随机涩图 API](https://img.jitsu.top/#/?id=jitsuの随机涩图api)（img.jitsu.top）
 <img src="https://moe.jitsu.top/img/" onclick="changeImage(this)" alt="">
 <img src="https://moe.jitsu.top/img/?sort=pc&34" onclick="changeImage(this)" alt="">
 <img src="https://moe.jitsu.top/api" onclick="changeImage(this)" alt="">
 <img src="https://moe.jitsu.top/r18" onclick="changeImage(this)" alt="">
 
-## [韩小韩WebAPI接口](https://api.vvhan.com/)
+## [韩小韩 Web API 接口](https://api.vvhan.com/)
 ### Bing
 <img src="https://api.vvhan.com/api/bing" onclick="changeImage(this)" alt="">
 
@@ -192,9 +192,9 @@ cover: https://moe.jitsu.top/img/?sort=pc&34
 
 ## [糖豆子 API](http://api.tangdouz.com/)
 {% fold '展开' %}
-- 随机二次元竖图http://api.tangdouz.com/abz/dm.php
-- 随机美腿http://api.tangdouz.com/mt.php
-- 美女图http://api.tangdouz.com/mn.php
+- 随机二次元竖图 http://api.tangdouz.com/abz/dm.php
+- 随机美腿 http://api.tangdouz.com/mt.php
+- 美女图 http://api.tangdouz.com/mn.php
 - 抖音瞳瞳系列视频 https://api.yujn.cn/api/tongtong.php
 - 超高质量图片 https://api.yujn.cn/api/gzl_ACG.php?type=image&form=pc
 {% endfold %}
@@ -220,7 +220,7 @@ cover: https://moe.jitsu.top/img/?sort=pc&34
 - 随机动漫图
 <img src="http://api.yujn.cn/api/ecy.php" onclick="changeImage(this)" alt="">
 
-- 高质量acg图片
+- 高质量 ACG 图片
 <img src="http://api.yujn.cn/api/ACG.php" onclick="changeImage(this)" alt="">
 
 - 动漫风景图
@@ -232,7 +232,7 @@ cover: https://moe.jitsu.top/img/?sort=pc&34
 - 原神图
 <img src="http://api.yujn.cn/api/ys.php" onclick="changeImage(this)" alt="">
 
-- 原神cos
+- 原神 COS
 <img src="http://api.yujn.cn/api/yscos.php" onclick="changeImage(this)" alt="">
 
 - 黑丝
@@ -303,7 +303,7 @@ cover: https://moe.jitsu.top/img/?sort=pc&34
 {% link '赵苦瓜のBlog' '欢迎来到赵苦瓜のBlog~！' 'https://blog.jixiaob.cn/?post=93' %}
 {% link '酷小呵' ' ' 'https://www.kuhehe.top/2023/03a05de98.html#30-远方随机风景壁纸api' %}
 
-> 遇到问题，fancybox
+> 遇到问题，请参考 Fancybox。
 
 ```html
 <img src="https://imgapi.xl0408.top/index.php" onclick="changeImage(this)" alt="">

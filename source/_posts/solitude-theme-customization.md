@@ -1,5 +1,5 @@
 ---
-title: solitude 主题魔改
+title: Solitude 主题自定义记录
 date: 2025-03-16 18:09:10
 updated: 2025-08-14  21:38:10
 author: Hiner
@@ -10,12 +10,12 @@ cover: img/default.avif
 
 ## config
 ### 背景图片
-git 提交hash：`007e2cf4b07e95d24f2845bb78f3a711c29a9aa6`
+Git 提交哈希：`007e2cf4b07e95d24f2845bb78f3a711c29a9aa6`
 ### 文章推荐轮播图
-git 提交hash：`48ddc536baea18c56483140582a93e6384934abe`
+Git 提交哈希：`48ddc536baea18c56483140582a93e6384934abe`
 
 ## 右键菜单添加复制当前页面链接按钮
-新建 `/themes/solitude/js/copylink.js` ，内容如下：
+新建 `/themes/solitude/js/copylink.js`，内容如下：
 
 ```JavaScript
 function copyPostLink() {
@@ -29,7 +29,7 @@ function copyPostLink() {
     });
 }
 ```
-修改 `_config.solitude.yml` ，引入js：
+修改 `_config.solitude.yml`，引入 JS：
 
 ```yaml
 extends:

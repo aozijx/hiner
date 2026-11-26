@@ -1,5 +1,5 @@
 ---
-title: hexo 配置 katex
+title: Hexo 配置 KaTeX
 date: 2025-03-13 22:46:59
 author: Hiner
 categories: [学习分享]
@@ -12,7 +12,7 @@ Hexo 社区提供了 hexo-filter-katex 插件，能自动处理公式渲染：
 npm install hexo-filter-katex --save
 ```
 ## 配置 Hexo 全局文件
-在 Hexo 根目录的 _config.yml 中添加以下配置：
+在 Hexo 根目录的 `_config.yml` 中添加以下配置：
 ```yml
 katex:
   # 开启全局渲染（无需在每篇文章中声明）
@@ -23,7 +23,7 @@ katex:
     - code
 ```
 ## 修改文章 Front-matter
-在需要渲染公式的文章头部添加 katex: true：
+在需要渲染公式的文章 Front-matter 中添加 `katex: true`：
 ```markdown
 ---
 title: 测试文章
@@ -32,7 +32,7 @@ katex: true
 ---
 ```
 ## 解决 Markdown 语法冲突
-Hexo 默认的 Markdown 渲染器 (hexo-renderer-marked) 会与 KaTeX 的 _ 和 \\ 冲突，更换渲染器：
+Hexo 默认的 Markdown 渲染器（hexo-renderer-marked）会与 KaTeX 中的 `_` 和 `\\` 冲突，因此需要更换渲染器：
 ```bash
 npm uninstall hexo-renderer-marked --save
 npm install hexo-renderer-markdown-it --save

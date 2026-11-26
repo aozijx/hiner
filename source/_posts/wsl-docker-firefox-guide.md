@@ -1,5 +1,5 @@
 ---
-title: Docker 安装
+title: WSL、Docker 与 Firefox 配置指南
 date: 2025-04-02 14:58:47
 author: 
 categories: []
@@ -7,20 +7,20 @@ tags: [Docker, WSL]
 cover: /src/img/docker-logo.png
 ---
 
-在安装 Docker 之前，我们要知道，Docker 并非是一个通用的容器工具，它依赖于已存在并且运行的 Linux 内核环境。
-- Docker 是一个开源的应用容器引擎，让开发者可以打包应用以及依赖包到一个可移植的镜像中，然后发布到任何流行的 Linux或Windows机器上，也可以实现虚拟化。
+在安装 Docker 之前需要了解：Docker 并非通用的虚拟化工具，它依赖已经运行的 Linux 内核环境。
+- Docker 是一个开源的应用容器引擎，可以将应用及其依赖打包为可移植的镜像，然后发布到常见的 Linux 或 Windows 机器上，也可以实现虚拟化。
 - Docker 一般在 GNU/Linux 系统中运行。其他系统想要部署 Docker 就必须安装一个虚拟的 Linux 环境。
 - 虚拟机（VM）的理解和使用也是 Docker 得以运行的先决条件。
 - Docker 实质上是在已经运行的 Linux 下制造了一个隔离的文件环境，因此它的执行效率几乎等同于所部署的 Linux 主机。
-- 容器是完全使用沙箱机制，相互之间不会有任何接口。
+- 容器使用沙箱机制彼此隔离，容器之间不会直接共享接口。
 ![](/hiner/src/img/docker.svg)
 
 ## 安装 WSL
-### 开启电脑的 Hyper-V 功能，否则 Docker 等其他虚拟化工具会报错
+### 启用 Hyper-V 功能，否则 Docker 等虚拟化工具可能报错
    1. 打开控制面板 -> 程序 -> 程序和功能 -> 启用或关闭 Windows 功能
-   2. Hyper-V 和 适用于 Linux 的 Windows 子系统和虚拟机平台 （勾选）
+   2. 勾选 Hyper-V、适用于 Linux 的 Windows 子系统和虚拟机平台。
 
-### 下载适用于 Linux 的 Windows 子系统和虚拟机
+### 启用适用于 Linux 的 Windows 子系统和虚拟机平台
 1. 启用 WSL 功能
    ```powershell
    dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
@@ -48,7 +48,7 @@ cover: /src/img/docker-logo.png
    ```
 
 - [设置 Linux 用户名和密码](https://learn.microsoft.com/zh-cn/windows/wsl/setup/environment#set-up-your-linux-username-and-password)
-请注意，输入密码时，屏幕上不会显示任何内容。 这称为盲人键入。 你不会看到你正在键入的内容，这是完全正常的。
+请注意，输入密码时屏幕上不会显示任何内容。这是正常的密码隐藏行为，也常被称为盲打。
 
 ### 设置 WSL 语言环境
 ```bash
@@ -67,7 +67,7 @@ wsl  # 重新进入
 ### CPU 漏洞警告
 `Speculative Return Stack Overflow: IBPB-extending microcode not applied!`
 **原因**：CPU 微码未更新，缺少针对 “推测性返回栈溢出” 漏洞的缓解措施。
-**建议**：更新系统微码（sudo apt install intel-microcode或amd64-microcode）。
+**建议**：更新系统微码（`sudo apt install intel-microcode` 或 `sudo apt install amd64-microcode`）。
 **解决方案**：
 安装 CPU 漏洞修复补丁
   ```bash
@@ -85,14 +85,14 @@ wsl  # 重新进入
 nvidia-smi  # 检查显卡驱动是否安装成功
 ```
 如果出现 `Command 'nvidia-smi' not found`，请检查显卡驱动是否正确安装。
-没有问题就更改 firefox 的配置
+如果没有问题，继续修改 Firefox 的配置。
 在 Firefox 地址栏中输入 **about:config**，并承诺小心操作。然后搜索以下首选项，确保它们被设置为 **true**：
 - **gfx.webrender.all** - 确保此项为 true。这是启用现代渲染后端的关键。
 - **gfx.webrender.compositor.force-enabled** - 设置为 true
 - **layers.acceleration.force-enabled** - 设置为 true
-- **media.hardware-video-decoding.force-enabled** - 设置为 true (强制启用硬件视频解码)
+- **media.hardware-video-decoding.force-enabled** - 设置为 true（强制启用硬件视频解码）
 
-**注意**： 修改后需要完全关闭 Firefox 再重新打开才能生效。
+**注意**：修改后需要完全关闭 Firefox，再重新打开才能生效。
 
 #### GUI 缩放问题
 `gtk_widget_set_size_request: assertion 'width >= -1' failed`: 这意味着某个 GUI 组件尝试设置一个无效的宽度（小于 -1），触发了 GTK 的断言错误。
@@ -120,7 +120,7 @@ sudo apt install fonts-noto-cjk  # 包含简体中文、繁体中文、日文、
 ```
 #### 安装 WSLg 支持
 `** (firefox:16322): WARNING **: 23:55:47.805: Failed to create DBus proxy for org.a11y.Bus: Could not connect: No such file or directory`
-Firefox 在尝试连接 DBus（Linux 进程通信服务） 时失败，特别是与 辅助功能总线（a11y.Bus） 相关的部分。在 WSL 环境中，DBus 默认未运行，因此 Firefox 会报错（尽管它仍然可以运行，但某些功能可能受限）。
+Firefox 在尝试连接 DBus（Linux 进程通信服务）时失败，特别是与辅助功能总线（a11y.Bus）相关的部分。在 WSL 环境中，DBus 默认未运行，因此 Firefox 会报错（尽管它仍然可以运行，但某些功能可能受限）。
 
 **解决方案**
 1. 安装并启动 DBus
@@ -137,7 +137,7 @@ Firefox 在尝试连接 DBus（Linux 进程通信服务） 时失败，特别是
    ps aux | grep dbus
    ```
 2. 调整 DBus 的安全配置
-   >注意：WSL 对 systemd 支持有限，DBus 可能无法自启动，每次重启 WSL 后需手动运行 sudo service dbus start。
+   > 注意：WSL 对 systemd 支持有限，DBus 可能无法自动启动。每次重启 WSL 后，都需要手动运行 `sudo service dbus start`。
 
    **解决方案**：强制 Firefox 使用 X11 而非 Wayland
    如果使用 WSLg（Windows 11 的 GUI 支持），Firefox 可能默认尝试 Wayland，而 WSLg 的 Wayland 支持不完善：
@@ -159,7 +159,7 @@ Firefox 在尝试连接 DBus（Linux 进程通信服务） 时失败，特别是
    Start-Process -Wait -Filepath "下载的 exe 程序" -ArgumentList "install --installation-dir=D:\Docker"
    ```
    - **汉化**：[https://github.com/asxez/DockerDesktop-CN](https://github.com/asxez/DockerDesktop-CN)
-3. **检验成功**
+3. **验证安装是否成功**
 打开 powershell 或 cmd 并键入
    ```cmd
    docker -v

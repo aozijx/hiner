@@ -1,5 +1,5 @@
 ---
-title: vscode 文档
+title: VS Code 使用技巧
 date: 2025-09-26 01:07:09
 author: Hiner
 categories: VSCode
@@ -9,8 +9,8 @@ cover: src/img/vscode.webp
 ## [调试](https://code.visualstudio.com/docs/debugtest/debugging)
 ### 外部终端
 默认情况下，VSCode 会在集成终端中运行 程序。
-当在 **launch.json** 中设置 **"externalTerminal"** 为 **true** 时，VSCode 会在外部终端中运行 C/ C++ 程序，而不是在集成终端中运行。
-相应的，Python 设置 **"console": "externalTerminal"** 时使用外部终端
+在 **launch.json** 中将 **"externalTerminal"** 设置为 **true** 时，VS Code 会在外部终端中运行 C/C++ 程序，而不是在集成终端中运行。
+相应地，Python 将 **"console": "externalTerminal"** 设置为使用外部终端。
 
 ## [变量](https://code.visualstudio.com/docs/editor/variables-reference)
 VSCode 支持在 **launch.json** 和 **tasks.json** 中使用变量。
@@ -28,7 +28,7 @@ VSCode 支持在 **launch.json** 和 **tasks.json** 中使用变量。
 
 ## [基本编辑](https://vscode.js.cn/docs/editing/codebasics)
 ### [多重选择（多光标）](https://vscode.js.cn/docs/editing/codebasics#_multiple-selections-multicursor)
-VS Code 支持多个光标，可进行快速的同步编辑。您可以使用 {% keyboard 'Alt' %}+{% keyboard 'Left click' %} 添加次要光标（渲染得更细）。每个光标根据其所在上下文独立操作。一种常见的添加更多光标的方法是使用 {% keyboard 'Ctrl' %}+{% keyboard 'Alt' %}+{% keyboard 'Down' %} 或 {% keyboard 'Ctrl' %}+{% keyboard 'Alt' %}+{% keyboard 'Up' %} 在下方或上方插入光标。
+VS Code 支持多个光标，可进行快速的同步编辑。您可以使用 {% keyboard 'Alt' %}+{% keyboard 'Left click' %} 添加次要光标（显示得更细）。每个光标会根据所在上下文独立操作。另一种常见的添加光标方法是使用 {% keyboard 'Ctrl' %}+{% keyboard 'Alt' %}+{% keyboard 'Down' %} 或 {% keyboard 'Ctrl' %}+{% keyboard 'Alt' %}+{% keyboard 'Up' %}，在下方或上方插入光标。
 {% keyboard 'Ctrl' %}+{% keyboard 'D' %} 会选择光标处的单词，或当前选区的下一个匹配项。
 {% keyboard 'Ctrl' %}+{% keyboard 'Shift' %}+{% keyboard 'L' %} 会选择所有匹配项。
 
@@ -40,7 +40,7 @@ VS Code 支持多个光标，可进行快速的同步编辑。您可以使用 {%
 ![Column text selection](https://vscode.js.cn/assets/docs/editing/codebasics/column-select.gif)
 
 ### [快速滚动](https://vscode.js.cn/docs/getstarted/tips-and-tricks#_fast-scrolling)
-按住 {% keyboard 'Alt' %} 可以在编辑器和资源管理器中启用快速滚动。默认情况下，快速滚动使用 5 倍速度倍数，但您可以通过编辑器：快速滚动灵敏度 [editor.fastScrollSensitivity](vscode://settings/editor.fastScrollSensitivity) 设置来控制倍数。
+按住 {% keyboard 'Alt' %} 可以在编辑器和资源管理器中启用快速滚动。默认情况下，快速滚动使用 5 倍速；您可以通过“编辑器：快速滚动灵敏度”[editor.fastScrollSensitivity](vscode://settings/editor.fastScrollSensitivity) 设置调整倍速。
 
 ### [向上/向下复制行](https://vscode.js.cn/docs/getstarted/tips-and-tricks#_copy-line-up-down)
 使用 {% keyboard 'Shift' %}+{% keyboard 'Alt' %}+{% keyboard 'Up' %} 或 {% keyboard 'Shift' %}+{% keyboard 'Alt' %}+{% keyboard 'Down' %} 可以快速向上或向下复制当前行。
@@ -75,7 +75,7 @@ VS Code 支持多个光标，可进行快速的同步编辑。您可以使用 {%
 ![Keyboard Reference Sheet](https://vscode.js.cn/assets/docs/getstarted/tips-and-tricks/KeyboardReferenceSheet.png)
 
 ## [IntelliSense 的相关设置](https://vscode.js.cn/docs/editing/intellisense)
-VSCode 的智能补全功能可以通过以下设置进行配置:
+VS Code 的智能补全功能可以通过以下设置进行配置：
 ### Tab 补全
 默认情况下，Tab 补全是禁用的。使用 [editor.tabCompletion](vscode://settings/editor.tabCompletion) 设置来启用它。存在以下值：
 - off - (默认) Tab 补全被禁用。
@@ -89,7 +89,7 @@ VSCode 的智能补全功能可以通过以下设置进行配置:
 可用的 [editor.suggestSelection](vscode://settings/editor.suggestSelection) 值有：
 
 - first - (默认) 总是选择列表顶部的项。
-- recentlyUsed - 除非前缀（通过输入来选择）选择了不同的项，否则将选择之前使用过的项。
+- recentlyUsed - 除非通过前缀选择了其他项，否则将选择之前使用过的项。
 - recentlyUsedByPrefix - 根据之前完成这些建议的前缀来选择项。
 
 ## Python

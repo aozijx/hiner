@@ -1,5 +1,5 @@
 ---
-title: Python QR Code生成二维码
+title: Python QR Code 使用指南
 date: 2025-04-19 12:49:37
 author: Hiner
 categories: [学习分享]
@@ -64,7 +64,7 @@ img.save("qrcode.png")  # 保存为PNG
 - ERROR_CORRECT_Q 在户外环境中张贴的海报上的二维码，或者可能会被折叠、涂抹的纸质二维码，纠错能力 25%。
 - ERROR_CORRECT_H 在工业环境中被油污、灰尘覆盖的二维码标签，纠错能力 30%。
 
-## IImage factories
+## Image factories
 ### 终端显示 ASCII 二维码
 ```python
 import qrcode
@@ -85,9 +85,9 @@ qr.make_image().save("qrcode.svg")
 ```
 
 ## Styled Image
-> 这些 QR Codes 不能保证适用于所有阅读器，建议 error correction 设置为 High（尤其是在嵌入图像）。  
+> 这些 QR Code 不保证适用于所有阅读器，建议将 error correction 设置为 High（尤其是在嵌入图像时）。
 
-StyledPilImage 是 qrcode 库中用于生成 样式化二维码图像 的类，基于 Pillow（PIL）库。它允许你通过不同的 module_drawer（模块绘制器）和颜色参数，自定义二维码的模块形状、颜色和整体视觉效果。
+StyledPilImage 是 qrcode 库中用于生成样式化二维码图像的类，基于 Pillow（PIL）库。它允许你通过不同的 module_drawer（模块绘制器）和颜色参数，自定义二维码的模块形状、颜色和整体视觉效果。
 
 ### 核心功能
 1. 模块形状自定义
@@ -156,7 +156,7 @@ img = qr.make_image(
 |VerticalBarsDrawer|垂直条形模块|艺术化风格输出|
 
 1. 自定义绘制器
-实现一个 星形模块 的示例：
+实现一个星形模块的示例：
 ```python
 from qrcode.image.styles.moduledrawers.base import ModuleDrawer
 
@@ -213,7 +213,7 @@ img = qr.make_image(
 
 ## 注意事项
 1. 可扫描性
-过度复杂的样式（如低对比度颜色、密集渐变）可能导致扫码失败。建议：
+过于复杂的样式（如低对比度颜色、密集渐变）可能导致扫码失败。建议：
    - 保持前景与背景对比度 > 70%
    - 使用 error_correction=qrcode.constants.ERROR_CORRECT_H（最高容错率）
 

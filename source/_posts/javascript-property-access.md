@@ -1,5 +1,5 @@
 ---
-title: JavaScript 
+title: JavaScript 属性访问与可选链
 date:  2025-07-26 11:07:41
 author: Hiner
 categories: [学习分享]
@@ -26,8 +26,8 @@ const time = prompt("请输入你想查询的属性名：");
 console.log(date[time]);
 
 ```
-- 点表示法不能使用变量作为属性名，也不能使用包含特殊字符或空格的属性名
-- 方括号表示法可以使用**变量**作为属性名（如 date[prop] 其中 prop 是变量），也支持**特殊字符**的属性名
+- 点表示法不能使用变量作为属性名，也不能访问包含特殊字符或空格的属性名。
+- 方括号表示法可以使用**变量**作为属性名（如 `date[prop]`，其中 `prop` 是变量），也支持包含**特殊字符**的属性名。
 
 ### 可选链操作符
 ```JavaScript
@@ -42,9 +42,9 @@ function fun(num) {
 
 fun(2)
 ```
-按照上面的写法，我遇到了这个报错 `Uncaught TypeError: Cannot read properties of undefined (reading '0')`，实际上程序正常运行了，但控制台报错看着不太友好，所以我想要改进一下代码。
-解释：这个错误是因为当 num 在配置中不存在时，config[num] 返回 `undefined`，然后尝试访问 [0] 就会报错
-解决办法：
+按照上面的写法，我遇到了如下报错：`Uncaught TypeError: Cannot read properties of undefined (reading '0')`。虽然程序在当前示例中可以正常运行，但控制台报错不够友好，因此需要改进代码。
+原因：当 `num` 在配置中不存在时，`config[num]` 返回 `undefined`，继续访问 `[0]` 就会报错。
+解决方法：
 1. 可选链操作符
 用于安全地访问对象属性或方法，避免因访问 `null` 或 `undefined` 值而导致的错误。
 ```JavaScript

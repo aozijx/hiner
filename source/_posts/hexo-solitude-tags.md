@@ -1,5 +1,5 @@
 ---
-title: 初试 Hexo
+title: Hexo Solitude 标签使用指南
 date: 2025-03-12 20:04:33
 author: Hiner
 categories: [整理]
@@ -97,7 +97,7 @@ content
 |参数   |说明     |默认值      |
 |-------|---------|----------|
 |title  |标题     |无         |
-|open   |是否展开 |不填不显示  |
+|open   |是否展开 |不填写时不显示  |
 <!-- endtab -->
 
 <!-- tab 效果 -->
@@ -132,13 +132,13 @@ content
 
 <!-- tab 示例 -->
 ```markdown
-{% card '诡秘之主','https://book.qidian.com/info/1010868264/','https://bookcover.yuewen.com/qdbimg/349573/1010868264/300','4.5','第一次接触这种西方文学小说，刚开始感觉看不懂，断断续续看了很多次。后来越看越觉好看，每次看甚至都需要查“文档”','fa-solid fa-book-open','小说' %}
-{% card 崩坏：星穹铁道, https://sr.mihoyo.com/, https://bu.dusays.com/2024/10/28/671f2b2119bcf.webp, 5, 健康阳光积极向上的欢乐向回合制 Gacha 游戏, fas fa-gamepad, JRPG, 450px, 275px %}
+{% card '诡秘之主','https://book.qidian.com/info/1010868264/','https://bookcover.yuewen.com/qdbimg/349573/1010868264/300','4.5','第一次接触这种西方文学小说，刚开始感觉看不懂，断断续续看了很多次。后来越看越觉得好看，每次看甚至都需要查“文档”','fa-solid fa-book-open','小说' %}
+{% card 崩坏：星穹铁道, https://sr.mihoyo.com/, https://bu.dusays.com/2024/10/28/671f2b2119bcf.webp, 5, 健康、阳光、积极向上且欢乐的回合制 Gacha 游戏, fas fa-gamepad, JRPG, 450px, 275px %}
 ```
 <!-- endtab -->
 <!-- tab 效果 -->
-{% card '诡秘之主','https://book.qidian.com/info/1010868264/','https://bookcover.yuewen.com/qdbimg/349573/1010868264/300','4.5','第一次接触这种西方文学小说，刚开始感觉看不懂，断断续续看了很多次。后来越看越觉好看，每次看甚至都需要查“文档”','fa-solid fa-book-open','小说' %}
-{% card 崩坏：星穹铁道, https://sr.mihoyo.com/, https://bu.dusays.com/2024/10/28/671f2b2119bcf.webp, 5, 健康阳光积极向上的欢乐向回合制 Gacha 游戏, fas fa-gamepad, JRPG, 450px, 275px %}
+{% card '诡秘之主','https://book.qidian.com/info/1010868264/','https://bookcover.yuewen.com/qdbimg/349573/1010868264/300','4.5','第一次接触这种西方文学小说，刚开始感觉看不懂，断断续续看了很多次。后来越看越觉得好看，每次看甚至都需要查“文档”','fa-solid fa-book-open','小说' %}
+{% card 崩坏：星穹铁道, https://sr.mihoyo.com/, https://bu.dusays.com/2024/10/28/671f2b2119bcf.webp, 5, 健康、阳光、积极向上且欢乐的回合制 Gacha 游戏, fas fa-gamepad, JRPG, 450px, 275px %}
 <!-- endtab -->
 {% endtabs %}
 
@@ -194,7 +194,7 @@ content
 {% endtabs %}
 
 ### Button
-展示按钮
+显示按钮。
 {% tabs button %}
 <!-- tab 语法 -->
 ```markdown
@@ -225,7 +225,7 @@ content
 | 参数名 | 说明   | 默认值 | 可选值 |
 |--------|--------|--------|-----|
 | type   | 类型   | 无     | primary, success, warning, danger, info, modern, flat, simple |
-| icon   | 图标   | 无     | Fant Awesome 图标 |
+| icon   | 图标   | 无     | Font Awesome 图标 |
 <!-- endtab -->
 <!-- tab 示例 -->
 ```markdown
@@ -242,7 +242,7 @@ content
 {% endtabs %}
 
 ### Keyboard
-展示键盘按键
+显示键盘按键。
 {% tabs Keyboard %}
 <!-- tab 语法 -->
 ```markdown
@@ -265,7 +265,7 @@ content
 {% endtabs %}
 
 ### Spoiler
-展示剧透
+显示剧透内容。
 {% tabs button %}
 <!-- tab 语法 -->
 ```markdown

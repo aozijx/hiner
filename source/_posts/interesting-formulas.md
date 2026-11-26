@@ -1,5 +1,5 @@
 ---
-title: 有趣的公式
+title: 有趣的数学与化学公式
 date: 2025-03-13 20:10:26
 author: Hiner
 categories: [趣味娱乐]
@@ -10,8 +10,8 @@ cover: https://latex.codecogs.com/svg.image?$love\;you\\forver$
 
 # 数学公式
 
-若 $$ log_I forever = love\,you $$
-那么 $$ I^{love\,you} = forever $$
+如果 $$ log_I forever = love\,you $$，
+那么 $$ I^{love\,you} = forever $$。
 
 <hr>
 

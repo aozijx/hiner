@@ -1,5 +1,5 @@
 ---
-title: express
+title: Express Request 与 Response API 参考
 date: 2025-09-02 20:10:39
 author: 
 categories: 
@@ -15,7 +15,7 @@ cover:
 - **req.accepts(types)**  
   检查请求是否接受指定的内容类型，返回最佳匹配或 false  
   **示例**：`req.accepts('json')` 返回 'json' 或 false
-  **细节**：支持数组和字符串，按质量值(q)排序返回最佳匹配
+  **细节**：支持数组和字符串，按质量值（q）排序后返回最佳匹配。
 
 - **req.acceptsCharsets(charset [, ...])**  
   返回客户端支持的第一个指定字符集
@@ -30,12 +30,12 @@ cover:
   **细节**：基于 `Accept-Language` 头，如 `req.acceptsLanguages('en', 'zh')`
 
 - **req.app**  
-  当 callback 为外部文件时，用于访问 express 实例
+  当 callback 为外部文件时，用于访问 Express 实例。
   **细节**：可用于访问应用级别的设置和中间件
 
 
 - **req.baseUrl**  
-  获取路由当前安装的 URL 路径
+  获取当前路由挂载的 URL 路径。
 
 - **req.body**  
   包含解析的请求体（需要 body-parser 中间件）
@@ -68,7 +68,7 @@ cover:
   当信任代理设置启用时，包含客户端 IP 地址链。
   需在 Express 实例初始化时设置 `app.set('trust proxy', true)`，否则 `req.ips` 会返回空数组。
   **场景**：部署在 Nginx 等反向代理后的服务，需通过 `req.ips` 获取真实客户端 IP 链（如 `[客户端IP, 代理IP]`），而 `req.ip` 会返回代理服务器 IP。
-  **细节**：信任代理可配置为布尔值、IP地址、子网或数组
+  **细节**：信任代理可配置为布尔值、IP 地址、子网或数组。
 
 - **req.is(type)**  
   检查请求的 Content-Type 是否匹配指定类型
@@ -133,7 +133,7 @@ cover:
 - **req.xhr**  
   布尔值，检查请求是否通过 XMLHttpRequest 发起（基于 `X-Requested-With: XMLHttpRequest` 头）。
   现代前端框架（如 React/Vue）的异步请求（如 Axios、Fetch）默认可能不携带该头，导致 `req.xhr` 误判为 `false`。
-  **补充**：建议结合 `req.get('Accept')` 或自定义请求头（如 `X-Request-Type: ajax`）辅助判断，
+  **补充**：建议结合 `req.get('Accept')` 或自定义请求头（如 `X-Request-Type: ajax`）辅助判断。
   ```JavaScript
   const isAjax = req.xhr || req.get('X-Request-Type') === 'ajax' || req.get('Accept')?.includes('application/json');
   ```
@@ -215,11 +215,11 @@ cover:
 
 - **res.sendFile(path [, options] [, fn])**  
   传输文件并自动设置 Content-Type
-  **路径安全问题**：确保传入的路径是受信任的，避免目录遍历攻击，若传入用户可控的路径（如 `res.sendFile(req.query.filePath)`），可能导致 “目录遍历攻击”（如用户传入 `../etc/passwd` 读取系统文件），使用 root 选项限制根目录：`res.sendFile('report.pdf', { root: '/path/to/safe/dir' })`；
+  **路径安全问题**：确保传入的路径是受信任的，避免目录遍历攻击。若传入用户可控的路径（如 `res.sendFile(req.query.filePath)`），可能导致目录遍历（例如用户传入 `../etc/passwd` 读取系统文件）。应使用 root 选项限制根目录：`res.sendFile('report.pdf', { root: '/path/to/safe/dir' })`。
   **细节**：支持 options: { root, headers, dotfiles, maxAge, ... }
 
 - **res.sendStatus(statusCode)**  
-  设置响应状态码并发送对应的状态消息，若后续再调用 `res.send()` 或 `res.json()`，会报错（因响应已结束）；
+  设置响应状态码并发送对应的状态消息。若后续再调用 `res.send()` 或 `res.json()`，会报错（因为响应已经结束）。
   **细节**：如 `res.sendStatus(404)` 发送 "Not Found"
 
 - **res.set(field [, value])**  
@@ -262,4 +262,4 @@ cover:
 8. **编码问题**：明确设置字符集，避免乱码问题
 
 建议参考 [Express.js 官方文档](https://expressjs.com/) 获取最新和最完整的信息。
-express5.x API 文档 [https://expressjs.com/en/5x/api.html](https://expressjs.com/en/5x/api.html)
+Express 5.x API 文档：[https://expressjs.com/en/5x/api.html](https://expressjs.com/en/5x/api.html)

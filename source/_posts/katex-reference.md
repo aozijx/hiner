@@ -1,5 +1,5 @@
 ---
-title: Katex 支持表
+title: KaTeX 符号与函数参考
 date: 2025-03-15 18:53:52
 author: Hiner
 categories: [整理]
@@ -10,10 +10,10 @@ cover: https://latex.codecogs.com/svg.image?&space;TIP
 
 ## 编辑网站
 {% link 'Katex' '官方演示' 'https://katex.org/#demo' %}
-{% link 'Katex' 'CodeCogs公式编辑器' 'https://editor.codecogs.com/' %}
-{% link 'Katex' 'iMathEQ数学工具' 'https://www.imatheq.com/corpsite/index.html' %}
+{% link 'Katex' 'CodeCogs 公式编辑器' 'https://editor.codecogs.com/' %}
+{% link 'Katex' 'iMathEQ 数学工具' 'https://www.imatheq.com/corpsite/index.html' %}
 
-## Katex支持表
+## KaTeX 支持表
 {% link '官方支持表' '按类型排序' 'https://katex.org/docs/supported' %}
 {% link '官方支持表' '按字母顺序排序，其中列出了支持和不支持的函数。' 'https://katex.org/docs/support_table' %}
 
@@ -47,7 +47,7 @@ cover: https://latex.codecogs.com/svg.image?&space;TIP
 | 23.  | $\Psi$ `\Psi`       | $\psi$ `\psi`         |                          | <code>/psa&#618;/</code>                         |
 | 24.  | $\Omega$ `\Omega`   | $\omega$ `\omega`     |                          | <code>/o&#650;&#712;me&#618;&#609;&#601;/</code> |  
 
-tips: 把Katex公式和markdown语法(``)混写了，导致格式问题，都换成html语法就没问题了
+提示：将 KaTeX 公式与 Markdown 语法（``）混写会导致格式问题，全部改用 HTML 语法即可解决。
 
 ## 数学符号
 $+$ <code>+</code> $-$ <code>-</code> $*$ <code>*</code> $\div$ <code>\div</code> 
@@ -59,7 +59,7 @@ $\circlearrowleft$ $\circlearrowright$ $\curvearrowleft$ $\curvearrowright$ $\Da
 
 **箭头扩展**
 $\xLeftarrow{abc}$ $\xleftrightarrow{abc}$ $\xhookleftarrow{abc}$ $\xtwoheadleftarrow{abc}$ $\xleftharpoonup{abc}$ $\xleftharpoondown{abc}$ $\xleftrightharpoons{abc}$ $\xtofrom{abc}$ $\xlongequal{abc}$ $\xrightarrow[under]{over}$ $\xRightarrow{abc}$ $\xLeftrightarrow{abc}$ $\xhookrightarrow{abc}$ $\xtwoheadrightarrow{abc}$ $\xrightharpoonup{abc}$ $\xrightharpoondown{abc}$ $\xrightleftharpoons{abc}$ $\xmapsto{abc}$
-可扩展的箭头都可以用相同的方式接受可选参数，比如说，<code>\xrightarrow[under]{over}</code>显示出来就是 $\xrightarrow[under]{over}$
+可扩展的箭头都可以用相同的方式接受可选参数。例如，<code>\xrightarrow[under]{over}</code> 显示出来就是 $\xrightarrow[under]{over}$。
 ## 罗马字母
 添加<code>\mathrm{A}</code>
 $\mathrm{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$

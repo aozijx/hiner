@@ -1,5 +1,5 @@
 ---
-title: Minecraft Java 服务器搭建指南（Ubuntu / WSL · 1.21.1）
+title: Minecraft Java 服务器搭建与配置指南（Ubuntu / WSL）
 date: 2025-10-28 22:32:55
 author:
 categories:
@@ -33,7 +33,7 @@ wget https://piston-data.mojang.com/v1/objects/59353fb40c36d304f2035d51e7d6e6baa
 | 1.21.x 及更早 | `server.jar` | `java -Xmx4G -Xms4G -jar server.jar nogui` |
 | **26.x 起** | `minecraft_server.<版本>.jar` | `java -Xmx4G -Xms4G -jar minecraft_server.26.3.jar nogui` |
 
-文件名本身没有约束，只要 `-jar` 后面跟的名字与实际文件一致即可；本文为简洁统一下文用 `server.jar`。
+文件名本身没有约束，只要 `-jar` 后面的名称与实际文件一致即可；为简洁起见，下文统一使用 `server.jar`。
 
 **其他获取方式**：
 - 官方下载页：https://www.minecraft.net/zh-hans/download/server
@@ -53,7 +53,7 @@ java -Xmx1024M -Xms1024M -jar server.jar nogui
 - `-jar server.jar`：指定要运行的 JAR；26.x 需换成 `minecraft_server.<版本>.jar`。
 - `nogui`：不启用图形界面，节省资源。
 
-首次启动会生成 `server.properties`、`world/`、`logs/` 等文件，日志出现 `Done` 即启动成功。先输入 `stop` 关服，再按需修改配置。
+首次启动会生成 `server.properties`、`world/`、`logs/` 等文件。日志出现 `Done` 即表示启动成功；先输入 `stop` 关服，再按需修改配置。
 
 ## 创建启动脚本
 ```bash
@@ -74,7 +74,7 @@ chmod +x start.sh
 > 文件位于服务器根目录。**修改后必须重启服务器**——`/reload` 只重载数据包和函数，不会重读 `server.properties`。
 
 ### 完整键值参考
-> 1.21.1 是本文档编写时的参考版本。后续版本对部分键进行了废弃、新增或迁移到 gamerule，详见每行末尾的版本标注。
+> 1.21.1 是本文档编写时的参考版本。后续版本废弃、新增或将部分键迁移到 gamerule，详见每行末尾的版本标注。
 
 ```properties
 # Minecraft server properties（1.21.1 基准）
@@ -160,7 +160,7 @@ white-list=false                     # 是否启用白名单（白名单在 whit
 
 > **版本迁移小结**（官方来源：Minecraft Wiki / Minecraft.net 官方博客 / PaperMC Docs）：
 > - **1.21.2**：废弃 `spawn-animals`、`spawn-npcs`（无 gamerule 替代）；新增 `pause-when-empty-seconds`
-> - **1.21.9**：废弃 `allow-nether`、`pvp`、`enable-command-block`、`spawn-monsters`，统一迁移为 gamerule。**注意默认值反转**：
+> - **1.21.9**：废弃 `allow-nether`、`pvp`、`enable-command-block`、`spawn-monsters`，统一迁移到 gamerule。**注意默认值反转**：
 >   - `enable-command-block`（默认 **false**）→ `commandBlocksEnabled`（默认 **true**），升级后命令方块会自动启用！
 >   - 其余 3 项默认值方向不变（`pvp` 默认 true → gamerule `pvp` 默认 true）
 > - **1.21.10**：配置无变化，同 1.21.9
@@ -229,7 +229,7 @@ resource-pack-prompt=请接受资源包后再进入
 | 键 | 建议 | 说明 |
 |---|---|---|
 | `view-distance` | 8–10 | 影响客户端视野，调大主要增加带宽 |
-| `simulation-distance` | 4–8 | **最影响 CPU**，决定多远的实体和农场还在运行，应优先下调 |
+| `simulation-distance` | 4–8 | **最影响 CPU**，决定多远范围内的实体和农场继续运行，应优先下调 |
 | `entity-broadcast-range-percentage` | 50–100 | 降低可减少远处实体的同步包 |
 | `network-compression-threshold` | 256；纯局域网可设 `-1` | `-1` 关闭压缩，省 CPU |
 | `max-tick-time` | 60000；卡顿误杀可设 `-1` | 看门狗单 tick 超时阈值 |
@@ -308,7 +308,7 @@ save-on
 > **无 gamerule 替代的 server.properties 废弃键**：`spawn-animals`（1.21.2 废弃）、`spawn-npcs`（1.21.2 废弃）。原版 1.21.11+ 没有对应 gamerule，被动动物和 NPC 的自然生成目前无法通过 gamerule 关闭。
 
 ## 原版权限系统（0-4 级）
-> Minecraft 原版**没有精细的权限控制**（比如"让张三能 /tp 但不能 /gamemode"），只有 5 个等级，上级自动包含下级所有权限。
+> Minecraft 原版**没有精细的权限控制**（比如“让张三能 /tp 但不能 /gamemode”），只有 5 个等级，上级自动包含下级所有权限。
 
 **玩家进服时默认是 level 0**（不是 1，也不是 2）。你成为 OP 后等级由 `ops.json` 里的 `level` 决定；控制台 / RCON 永远是 level 4。
 
@@ -338,7 +338,7 @@ save-on
 - `function-permission-level=2`：**最低门槛**。低于此等级的命令不能在 `/function` 和命令方块里执行。**默认 2**。
 
 ### 每个玩家的权限可以不同步
-server.properties 里的值只是"默认值"。真正存权限的是 **`ops.json`** 文件，每个玩家可以有独立的 level：
+`server.properties` 里的值只是“默认值”。真正存储权限的是 **`ops.json`** 文件，每个玩家可以有独立的 level：
 ```json
 {
   "uuid": "xxx-xxx-xxx",
@@ -379,7 +379,7 @@ server.properties 里的值只是"默认值"。真正存权限的是 **`ops.json
 /trigger <目标选择器> query          # 查询记分板当前值
 ```
 
-> 注意：`/advancement`、`/recipe`、`/data`、`/seed` 这些看起来"无害"的命令，在服务器的判定里都是 **level 2**，普通玩家用不了。
+> 注意：`/advancement`、`/recipe`、`/data`、`/seed` 这些看起来“无害”的命令，在服务器的判定里都是 **level 2**，普通玩家无法使用。
 
 ## 常用 OP / 控制台命令（**1.21.1 原版**）
 > **权限前提**：**普通玩家不能执行**任何下面的命令。必须满足以下条件之一：
@@ -501,14 +501,14 @@ list                              # 列出当前在线玩家及其数量
 ```
 
 ### RCON 远程控制台
-如果你在 server.properties 里开启了 `enable-rcon=true` 并设了密码，可以从**另一台机器**远程执行控制台命令：
+如果你在 `server.properties` 中开启了 `enable-rcon=true` 并设置密码，就可以从**另一台机器**远程执行控制台命令：
 ```bash
 # 在本机安装 mcrcon（或用 rcon-cli 等工具）
 rcon -H <服务器IP> -P 25575 -p <密码> stop
 rcon -H <服务器IP> -P 25575 -p <密码> save-all
 ```
 
-> **注意**：RCON 走 TCP 明文传输，生产环境建议只在**内网**使用，或者配合 SSH 隧道。
+> **注意**：RCON 通过 TCP 明文传输，生产环境建议只在**内网**使用，或者配合 SSH 隧道。
 
 更多配置项见 [Minecraft Wiki · 服务端配置文件格式](https://zh.minecraft.wiki/w/服务端配置文件格式?variant=zh-cn)。
 

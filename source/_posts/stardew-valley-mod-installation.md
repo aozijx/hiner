@@ -1,5 +1,5 @@
 ---
-title: 星露谷 Mod 安装教程
+title: 星露谷 Mod 安装指南
 date: 2025-03-20 15:05:04
 author: Hiner
 categories: [游戏]
@@ -11,7 +11,7 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 ### 下载 SMAPI
 - PC: 
   {% link 'SMAPI' 'GitHub，选择 SMAPI 4.1.10 installer.zip 下载' 'https://github.com/Pathoschild/SMAPI/releases/tag/4.2.1' %}
-  {% link 'SMAPI' 'nexus，需要N网账号' 'https://www.nexusmods.com/stardewvalley/mods/2400' %}
+  {% link 'SMAPI' 'Nexus，需要 Nexus 账号' 'https://www.nexusmods.com/stardewvalley/mods/2400' %}
 - Android
   {% link 'SMAPI' 'SMAPI For Android' 'https://github.com/NRTnarathip/SMAPILoader/releases/tag/1.1.4' %}
 
@@ -26,9 +26,9 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
 3. 安装完成后会显示 SMAPI installed successfully!，并自动复制 SMAPI 启动路径（如 "D:\Steam\steamapps\common\Stardew Valley\StardewModdingAPI.exe" %command%）。
 
 ## 二、配置 Steam 启动项
-1. 打开 Steam ，右键点击游戏库中的 《星露谷物语》 → 属性 → 通用 → 启动选项。
-2. 粘贴上述命令行的输出路径或者 SMAPI 路径到输入框（加上 %command% 命令），保存设置。
-![Steam启动项设置](/hiner/src/img/stardew_valley.png)
+1. 打开 Steam，右键点击游戏库中的《星露谷物语》→ 属性 → 通用 → 启动选项。
+2. 将上述命令行输出的路径或 SMAPI 路径粘贴到输入框中（加上 `%command%` 命令），然后保存设置。
+![Steam 启动项设置](/hiner/src/img/stardew_valley.png)
 
 ## 三、注册 Nexus Mods 账号
 1. 访问 {% link 'Nexus Mods官网' 'Nexus Mods' 'https://www.nexusmods.com/' %}
@@ -41,7 +41,7 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
    以热门的 “自动化” Mod（Automate） 为例：{% link 'Automate下载页' 'Nexus Mods' 'https://www.nexusmods.com/stardewvalley/mods/1063' %}
    - 点击 Files → Manual Download 下载文件（通常为 .zip 格式）。
 2. 安装 Mod
-  - 解压下载的 Mod 文件，将解压后的整个文件夹复制到：你的游戏目录 /Stardew Valley/Mods 中(steam 点击游戏管理 -> 浏览本地文件)
+  - 解压下载的 Mod 文件，将解压后的整个文件夹复制到游戏目录下的 `/Stardew Valley/Mods` 中（在 Steam 中点击“管理”→“浏览本地文件”）。
 > 示例路径：D:\Steam\steamapps\common\Stardew Valley\Mods
 > 如果 Mods 文件夹不存在，手动创建。
 
@@ -62,8 +62,8 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
     将 Mod 中的 PNG 文件夹复制到 /Mods/PNG Retex Helper/assets 中并替换即可
     实测 **Portraiture** {% keyboard 'P' %} 键可替换 **PNG Retex Helper** 肖像
   - [Fashion Sense](https://www.nexusmods.com/stardewvalley/mods/9969)
-    服装等等 Mod 解压到游戏 Mods 文件夹
-    在皮埃尔商店购买 Hand Mirror ，您只需使用 Hand Mirror 即可更改 Fashion Sense 配饰、发型、帽子、衬衫、袖子、裤子或鞋子，。自定义服装也可以通过此工具保存和加载。
+    将服装等 Mod 解压到游戏的 Mods 文件夹中。
+    在皮埃尔商店购买 Hand Mirror。使用 Hand Mirror 即可更改 Fashion Sense 的配饰、发型、帽子、衬衫、袖子、裤子或鞋子。自定义服装也可以通过此工具保存和加载。
 
 ## 五、验证 Mod 是否生效
 1. 通过 Steam 启动游戏，会自动运行 SMAPI。
@@ -81,7 +81,7 @@ cover: https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png
   - 定期在 Nexus Mods 检查更新，关注 Mod 页面的 Posts 板块获取兼容性通知。
 
 - Mod 兼容
-  - 检查Mod是否兼容1.6版本，或删除冲突Mod。
+  - 检查 Mod 是否兼容 1.6 版本，或删除冲突的 Mod。
 
 ## 七、推荐工具
 Mod 管理工具：可自动检测缺失依赖和 Mod 更新。
@@ -93,15 +93,15 @@ Mod 故障排查
 {% link 'SMAPI log parser' '日志解析器' 'https://smapi.io/log' %}
 > 按 {% keyboard 'win' %} + {% keyboard 'R' %} 在输入框中键入 **%appdata%\StardewValley\ErrorLogs** ，将日志文件拖入网页输入框即可。
 
-> 按照以上步骤操作，即可畅玩星露谷物语的 Mod 内容！遇到问题可查阅 SMAPI 官方文档 或社区论坛。
+> 按照以上步骤操作，即可畅玩星露谷物语的 Mod 内容！遇到问题可查阅 SMAPI 官方文档或社区论坛。
 {% fold '小技巧' %}
-- 可以在已游玩存档的任何时期添加 Mod 
+- 可以在已游玩存档的任何时期添加 Mod。
 - 遇到“这个角色属于另一位玩家”问题，找到存档，记事本打开，快捷键 {% keyboard 'Ctrl' %} + {% keyboard 'F' %} 寻找 `<farmhand>` ，找到角色名称后向后寻找 `<userID>xxx</userID>` ，意思是只有指定 ID 的玩家可以加入游戏，改成 `<userID />` 。
 - 主机位置 `<player>`
 - 从机位置 `<farmhand>`
 - 房屋代码 `<farmhouse>`
 - 房屋等级 `<houseUpgradeLevel>`
 - 记录献祭及各种邮件内容 `<mailReceived>`
-- 记录看过的情景等等的内容 `<eventsSeen>`
+- 记录看过的事件等内容 `<eventsSeen>`
 - 记录玩家 ID 识别哪只动物是哪个玩家买的 `<UniqueMultiplayerID>`
 {% endfold %}

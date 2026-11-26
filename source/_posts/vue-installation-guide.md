@@ -1,5 +1,5 @@
 ---
-title: vue
+title: Vue 安装方式与项目创建
 date: 2025-07-08 23:22:52
 author: Hiner
 categories: [学习分享]
@@ -7,7 +7,7 @@ tags: [vue]
 cover: src/img/vue.webp
 ---
 
-## vue 安装区别
+## Vue 安装方式的区别
 1. **npm install vue**
 - **作用**：安装 Vue.js 的核心库（运行时 + 编译器），仅包含 Vue 的底层功能。
 - **用途**：在项目中直接使用 Vue.js 进行开发，比如创建 Vue 实例、组件等。
@@ -70,11 +70,11 @@ Vite 官方提供了 Vue 模板，可以直接生成一个基于 Vite 的 Vue �
 
 ### 关键点说明
 - 无需全局安装工具
-create vite 直接调用最新版本的 Vite，无需提前安装 @vue/cli 或全局 Vite。
+`npm create vite` 会直接调用最新版本的 Vite，无需提前安装 @vue/cli 或全局安装 Vite。
 
 - 项目结构对比
   - 使用 @vue/cli 生成的项目基于 Webpack。
-  - 使用 vite 生成的项目基于 Vite（默认集成 Vue 3，支持 `<script setup>` 语法）。
+  - 使用 Vite 生成的项目基于 Vite（默认集成 Vue 3，支持 `<script setup>` 语法）。
 
 - 手动安装 Vue
 如果已有 Vite 项目，只需安装 Vue：
@@ -92,7 +92,7 @@ create vite 直接调用最新版本的 Vite，无需提前安装 @vue/cli 或�
   ```
 
 ### 问题：
-#### 因为 PowerShell 的执行策略（Execution Policy） 默认禁止运行脚本，导致无法直接执行 npm 命令。
+#### PowerShell 的执行策略（Execution Policy）默认禁止运行脚本，导致无法直接执行 npm 命令
   ```bash
   npm : xxxxx cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at http
   s:/go.microsoft.com/fwlink/?LinkID=135170.
@@ -112,7 +112,7 @@ create vite 直接调用最新版本的 Vite，无需提前安装 @vue/cli 或�
    - **-Force**：跳过确认提示。
 
 1. 使用 cmd 代替 PowerShell
-如果不想修改策略，可以直接在 命令提示符（cmd） 中运行：
+如果不想修改策略，可以直接在命令提示符（CMD）中运行：
    ```cmd
    npm create vite@latest my-vue-app --template vue
    ```

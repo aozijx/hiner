@@ -1,24 +1,24 @@
 ---
-title: Hexo 代码高亮
+title: Hexo 代码高亮与代码块配置
 date: 2025-03-13 22:37:43
 author: Hiner
 categories: [学习分享]
 tags: [Hexo]
 cover: https://img.alicdn.com/imgextra/i2/2209748222339/O1CN010muxj21T9JF0IPCI2_!!2209748222339.jpg
 ---
-我遇到了代码高亮的问题，显示不正常等等，首先，在 hexo 根目录的 config 配置文件中缺少了 prismjs 的 enable: false 属性，然后关闭 highlight 的 wrap 和 hljs 属性等。
+我遇到了代码高亮显示异常的问题。检查后发现，Hexo 根目录下的配置文件缺少 `prismjs` 的 `enable: false` 属性；此外，还需要关闭 `highlight` 的 `wrap` 和 `hljs` 属性。
 ## 一
-使用 `{% codeblock %}` 和 `{% endcodeblock %}` 包裹代码，并在 codeblock 后添加说明 [title] [lang:language] [url] [link text] [additional otions]
-{% codeblock [title] [lang:language] [url] [link text] [additional otions] %}
+使用 `{% codeblock %}` 和 `{% endcodeblock %}` 包裹代码，并在 `codeblock` 后添加说明：[title] [lang:language] [url] [link text] [additional options]。
+{% codeblock [title] [lang:language] [url] [link text] [additional options] %}
 code snippet
 {% endcodeblock %}
 ## 二
-使用 `{% code %}` 和 `{% endcode %}` 包裹代码，并在 code 后添加说明 [title] [lang:language] [url] [link text] [additional options]
+使用 `{% code %}` 和 `{% endcode %}` 包裹代码，并在 `code` 后添加说明：[title] [lang:language] [url] [link text] [additional options]。
 {% code [title] [lang:language] [url] [link text] [additional options] %}
 code snippet
 {% endcode %}
 ## 三
-使用两个` ``` `包裹代码，并在` ``` `后添加说明 [language] [title] [url] [link text] [additional options]
+使用两个 ` ``` ` 包裹代码，并在 ` ``` ` 后添加说明：[language] [title] [url] [link text] [additional options]。
 ```[language] [title] [url] [link text]
 code snippet
 ```
@@ -40,7 +40,7 @@ code snippet
 
 ## 注意事项
 1. 依赖渲染器或插件：
-Hexo 默认的 hexo-renderer-marked 渲染器可能不支持所有参数（如 title、url）。
+Hexo 默认使用的 hexo-renderer-marked 渲染器可能不支持所有参数（如 title、url）。
    - 若需完整功能，建议使用扩展插件：
      - hexo-renderer-markdown-it（支持更多 Markdown 扩展语法）。
      - hexo-prism-plugin（支持行号、高亮行等）。
@@ -50,8 +50,8 @@ Hexo 默认的 hexo-renderer-marked 渲染器可能不支持所有参数（如 t
 参数之间需用空格分隔，若标题本身包含空格，需用引号包裹（如 "This is a title"）。
 
 ## 完整示例
-```python 斐波那契数列 https://github.com/example/fibonacci 源码链接 linonstart=1 hl_lines=3
-python 斐波那契数列 https://github.com/example/fibonacci 源码链接 linonstart=1 hl_lines=3
+```python 斐波那契数列 https://github.com/example/fibonacci 源码链接 linenostart=1 hl_lines=3
+python 斐波那契数列 https://github.com/example/fibonacci 源码链接 linenostart=1 hl_lines=3
 def fibonacci(n):
     a, b = 0, 1
     for _ in range(n):

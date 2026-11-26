@@ -1,5 +1,5 @@
 ---
-title: CSS 动画之 transition 与 animation
+title: CSS transition 与 animation 的反向播放
 date: 2025-08-22 21:06:32
 author:
 categories:
@@ -18,7 +18,6 @@ cover:
    - 可以在多个状态之间切换
    - 适用于复杂的动画效果
 
-对于动画的倒放，transition 原生支持
-animation 可以使用 direction 属性，设置为 reverse 即可实现倒放效果。应用两个动画即可实现。
+`transition` 可以在状态变化时实现反向过渡；`animation` 则可以通过设置 `direction` 属性实现倒放，例如将其设为 `reverse`。
 
 [stackoverflow](https://stackoverflow.org.cn/questions/16516793)

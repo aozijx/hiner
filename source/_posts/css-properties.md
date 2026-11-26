@@ -1,5 +1,5 @@
 ---
-title: CSS 属性
+title: 常用 CSS 属性与效果
 date: 2025-04-16 23:22:52
 author: Hiner
 categories: [学习分享]
@@ -29,9 +29,9 @@ cover: src/img/mdn_web_docs.png
 ### 3. [mix-blend-mode](https://developer.mozilla.org/zh-CN/docs/Web/CSS/mix-blend-mode)  
 混合模式（如 `multiply`, `overlay`, `screen`）
 
-### 4. 3D 
+### 4. 3D
 - **[transform-style](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-style)**  设置元素的子元素是位于 3D 空间中还是平面中。
-  必须设置在父容器（`flat` | `preserve-3d`）
+  该属性必须设置在父容器上（`flat` | `preserve-3d`）。
 ---
 
 ## 二、变形与动画
@@ -63,8 +63,8 @@ cover: src/img/mdn_web_docs.png
 - **[flex-flow](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-flow)**  简写属性
   示例：`flex-flow: <direction> <wrap>;`
 ### 2. 特殊布局
-- **[aspect-ratio](https://developer.mozilla.org/zh-CN/docs/Web/CSS/aspect-ratio)**  强制宽高比
-  示例：`aspect-ratio: 16 /9;`
+- **[aspect-ratio](https://developer.mozilla.org/zh-CN/docs/Web/CSS/aspect-ratio)**  设置宽高比
+  示例：`aspect-ratio: 16 / 9;`
 - **[shape-outside](https://developer.mozilla.org/zh-CN/docs/Web/CSS/shape-outside)**  文字环绕
 示例：
   ```css
@@ -127,7 +127,7 @@ cover: src/img/mdn_web_docs.png
 
 ### 3. 交互增强
 - **[cursor](https://developer.mozilla.org/zh-CN/docs/Web/CSS/cursor)**
-  鼠标指针样式（grab, zoom-in）
+  鼠标指针样式（`grab`、`zoom-in`）
 - **resize**
   允许用户调整尺寸（vertical | horizontal）
 

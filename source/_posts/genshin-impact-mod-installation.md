@@ -1,5 +1,5 @@
 ---
-title: 原神 Mod 安装
+title: 原神 Mod 安装指南
 date: 2025-03-14 14:30:22
 author: Hiner
 categories: [游戏]
@@ -13,15 +13,15 @@ cover: src/img/Furina.jpg
 
 ### 更改配置文件
 
-将 3DMigoto 解压到除了游戏文件夹的任意位置，打开 **d3dx.ini** 文件，按 Ctrl+F 搜索“Settings used by the external 3DMigoto Loader”的 **loader** 等等关键词，找到 **target** = D:\miHoYo Launcher\games\Genshin Impact Game\YuanShen.exe 后，将等号后的游戏路径改成自己的，更改完成后保存设置。
+将 3DMigoto 解压到游戏文件夹之外的任意位置，打开 **d3dx.ini** 文件，按 Ctrl+F 搜索“Settings used by the external 3DMigoto Loader”中的 **loader** 等关键词，找到 **target** = D:\miHoYo Launcher\games\Genshin Impact Game\YuanShen.exe 后，将等号后的游戏路径改成自己的，完成后保存设置。
 
 ### 放置 Mod
 
-在 Mods 文件夹放置你解压好的 Mod 文件，注意：一个角色只能有一个对应的模型 Mod 文件，否则会造成模型冲突。
+将解压后的 Mod 文件放入 Mods 文件夹。注意：一个角色只能对应一个模型 Mod 文件，否则会造成模型冲突。
 
 ### 启动游戏
 
-启动 3DMigoto Loader.exe，将弹出一个命令行窗口，提示你现在可以打开游戏了，是的，它不会帮你打开游戏，需要手动启动。首次打开若模型异常，请到游戏设置中关闭动态高精度。游戏内更换或移动 Mod 后，按 F10 刷新游戏。当 3DMigoto 开启时，在数字键盘上按 0 可以开启狩猎模式（显示绿色文本，默认）或关闭（无文本）。
+启动 3DMigoto Loader.exe 后会弹出命令行窗口，提示你可以打开游戏。它不会自动启动游戏，需要手动打开。首次启动时如果模型异常，请在游戏设置中关闭动态高精度。游戏内更换或移动 Mod 后，按 F10 刷新游戏。启用 3DMigoto 时，在数字键盘上按 0 可以开启或关闭狩猎模式（默认开启时显示绿色文本）。
 
 ### T:
 
