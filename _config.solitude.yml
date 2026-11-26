@@ -640,7 +640,7 @@ errorpage:
 # can only use NetEase Cloud Music, QQ Music and other music platforms supported by the mainland China region,
 # the subsequent consideration of the use of JSON files to store music information and customize the implementation of the third-party API does not depend on the page.
 # Music Page
-meting_api: "https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r" # Custom API
+meting_api: "https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&r=:r" # Custom API
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -649,7 +649,7 @@ meting_api: "https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth
 capsule:
   enable: true
   # 歌单 ID / 单曲 ID
-  id: 5144842535
+  id: 18639216206
   # 服务商：netease / qq / xiami / kugou / baidu
   server: netease
   # 类型：playlist / song
@@ -950,7 +950,7 @@ search:
 music:
   enable: true
   # 歌单 ID / 单曲 ID
-  id: 5144842535
+  id: 18639216206
   # 服务商：netease / qq / xiami / kugou / baidu
   server: netease
   # 类型：playlist / song
