@@ -12,10 +12,6 @@
 // ----
 
 var Paul_Pio = function (prop) {
-    // 保存props到全局变量，以便togglePio函数访问
-    window.pio = window.pio || {};
-    window.pio.props = prop;
-    
     var that = this;
 
     var current = {
@@ -23,7 +19,7 @@ var Paul_Pio = function (prop) {
         menu: document.querySelector(".pio-container .pio-action"),
         canvas: document.getElementById("pio"),
         body: document.querySelector(".pio-container"),
-        root: document.location.protocol + '//' + document.location.hostname + '/'
+        root: prop.content.home || '/'
     };
 
     /* - 方法 */
@@ -151,7 +147,7 @@ var Paul_Pio = function (prop) {
                 location.href = current.root;
             };
             elements.home.onmouseover = function () {
-                modules.render(prop.content.home + "/hiner/" || "点击这里回到首页！");
+                modules.render( "点击这里回到首页！");
             };
             current.menu.appendChild(elements.home);
 

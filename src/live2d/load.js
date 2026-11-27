@@ -20,10 +20,14 @@ var 引流 = [
   "https://www.bilibili.com/video/BV1oU4y1h7Sc",
 ]
 
+// 复用主题注入的站点根路径，避免硬编码子目录
+const siteBase = (window.Solitude && Solitude.config && Solitude.config.root) || "/";
+
 const initConfig = {
   mode: "fixed",
   hidden: true,
   content: {
+    home: siteBase,
     link: 引流[Math.floor(Math.random() * 引流.length)],
     welcome: ["Hi!"],
     touch: "",
@@ -35,7 +39,7 @@ const initConfig = {
       { "selector": ".post-content a, .page-content a, .post a", "type": "link" }
     ],
   },
-  night: "toggleNightMode()",
+  night: "Solitude.switchDarkMode()",
   model: [
     "https://cdn.jsdelivr.net/gh/journey-ad/blog-img/live2d/Diana/Diana.model3.json",
     "https://cdn.jsdelivr.net/gh/journey-ad/blog-img/live2d/Ava/Ava.model3.json",
@@ -45,12 +49,12 @@ const initConfig = {
 }
 
 function 加载圣·嘉然() {
-  pio_reference = new Paul_Pio(initConfig)
+  window.pio_reference = new window.Paul_Pio(initConfig)
 
-  pio_alignment = "left"
+  window.pio_alignment = "left"
 
   // Then apply style
-  pio_refresh_style()
+  window.pio_refresh_style()
 }
 
 function onModelLoad(model) {
@@ -72,20 +76,20 @@ function onModelLoad(model) {
   ]
 
   function playAction(action) {
-    action.text && pio_reference.modules.render(action.text)
-    action.motion && pio_reference.model.motion(action.motion)
+    action.text && window.pio_reference.modules.render(action.text)
+    action.motion && window.pio_reference.model.motion(action.motion)
 
     if (action.from && action.to) {
       Object.keys(action.from).forEach(id => {
         const hidePartIndex = coreModel._partIds.indexOf(id)
-        TweenLite.to(coreModel._partOpacities, 0.6, { [hidePartIndex]: action.from[id] });
+        window.TweenLite.to(coreModel._partOpacities, 0.6, { [hidePartIndex]: action.from[id] });
         // coreModel._partOpacities[hidePartIndex] = action.from[id]
       })
 
       motionManager.once("motionFinish", (data) => {
         Object.keys(action.to).forEach(id => {
           const hidePartIndex = coreModel._partIds.indexOf(id)
-          TweenLite.to(coreModel._partOpacities, 0.6, { [hidePartIndex]: action.to[id] });
+          window.TweenLite.to(coreModel._partOpacities, 0.6, { [hidePartIndex]: action.to[id] });
           // coreModel._partOpacities[hidePartIndex] = action.to[id]
         })
       })
@@ -95,7 +99,7 @@ function onModelLoad(model) {
   canvas.onclick = function () {
     if (motionManager.state.currentGroup !== "Idle") return
 
-    const action = pio_reference.modules.rand(touchList)
+    const action = window.pio_reference.modules.rand(touchList)
     playAction(action)
   }
 
@@ -226,5 +230,4 @@ function onModelLoad(model) {
 }
 
 
-var pio_reference
-window.onload = 加载圣·嘉然
+window.addEventListener("load", 加载圣·嘉然)
