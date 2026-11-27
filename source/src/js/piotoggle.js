@@ -29,3 +29,6 @@ function togglePio() {
 // 模型自带「×」关闭时不经过 togglePio，打开右键菜单与页面加载完成时各同步一次
 document.addEventListener("contextmenu", updatePioToggleText);
 window.addEventListener("load", updatePioToggleText);
+
+// 挂到主题公开 API，供右键菜单配置调用
+window.Solitude.togglePio = togglePio;
