@@ -1,0 +1,4 @@
+[submodule "themes/solitude"]
+	path = themes/solitude
+	url = https://github.com/aozijx/hexo-theme-solitude.git
+	branch = upgrade-4.0

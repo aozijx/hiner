@@ -74,6 +74,16 @@ nav:
 # 首页顶部
 hometop:
   enable: true
+  # 全局版式开关：classic(3.x 旧版外观) / center(4.0 新版外观)
+  # 该开关统一控制以下 7 处样式，排查时对照 *_classic 文件即可：
+  #   1. 首页顶部            hometop-classic.pug / home-top-classic.styl（含 #home_top 宽度、首页主栏结构）
+  #   2. 分类栏              categoryBar-classic.pug / category-bar-classic.styl（首页、归档页、分类页）
+  #   3. 导航栏(含分组下拉)  header-classic.styl
+  #   4. 中控台(含关闭按钮)  console-classic.styl + console.pug
+  #   5. 文章详情头部封面    postMeta.pug + meta.styl（classic 为背景图，center 为右侧卡片）
+  #   6. 分页组件            pagination-classic.styl
+  #   7. 关于页打赏          award-classic.pug + reward-classic.styl
+  style: classic
   banner:
     title: 分享技术<br>与科技生活 # 大字
     desc: # 小字
@@ -404,11 +414,11 @@ font:
 # --------------------------- start ---------------------------
 # Background
 # 背景图片
-# background:
-#   enable: false
-#   opacity: .2
-#   dark: /hiner/src/img/dark.png
-#   light: /hiner/src/img/light.jpg
+background:
+  enable: true
+  opacity: .2
+  dark: /hiner/src/img/dark.png
+  light: /hiner/src/img/light.jpg
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -470,32 +480,32 @@ right_menu:
   # 自定义列表
   custom_list:
     - name: 随机文章
-      click: toRandomPost()
+      click: Solitude.randomPost()
       id: menu-randomPost
       class:
       icon: fas fa-tower-broadcast
     # - name: 全部分类
-    #   click: pjax.loadUrl('/categories/') # External links with window.open, pjax can not request cross-domain content.
+    #   click: Solitude.navigate('/categories/') # External links with window.open, pjax can not request cross-domain content.
     #   id:
     #   class:
     #   icon: fas fa-clone
     # - name: 全部标签
-    #   click: pjax.loadUrl('/tags/')
+    #   click: Solitude.navigate('/tags/')
     #   id:
     #   class:
     #   icon: fas fa-tags
     - name: 复制链接
-      click: copyPostLink()
+      click: Solitude.copyPostLink()
       id: menu-copyPostLink
       class:
       icon: fas fa-link
     - name: 音乐胶囊
-      click: sco.musicToggle()
+      click: Solitude.musicToggle()
       id: consoleMusic
       class: 
       icon: solitude fas fa-compact-disc
     - name: 隐藏看板娘
-      click: togglePio()
+      click: Solitude.togglePio()
       id: buttonPio
       class: 
       icon: solitude fas fa-user-astronaut
@@ -813,10 +823,9 @@ extends:
   head:
   #  - <script src="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js"></script>
    - <link href="/hiner/src/css/schedule.css" rel="stylesheet">
-   - <script src="/hiner/src/js/copylink.js" async></script>
-   - <script src="/hiner/src/js/piotoggle.js" async></script>
-   - <script src="/hiner/src/js/cover-fallback.js"></script>
-   - '<script>window.Snackbar=window.Snackbar||{show:function(){}};</script>'
+   - <script type="module" src="/hiner/src/js/copylink.js"></script>
+   - <script type="module" src="/hiner/src/js/piotoggle.js"></script>
+   - <script type="module" src="/hiner/src/js/cover-fallback.js"></script>
   # Insert in body
   # 插入到 body
   body:
@@ -827,12 +836,12 @@ extends:
    - <script src="/hiner/src/live2d/cubism4.min.js"></script>
    - <link href="/hiner/src/live2d/pio.css" rel="stylesheet" type="text/css"/>
    - <script src="/hiner/src/live2d/pio.js"></script>
-   - <script src="https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/pio_sdk4.js"></script>
-   - <script src="/hiner/src/live2d/load.js"></script>
+   - <script src="/hiner/src/live2d/pio_sdk4.js"></script>
+   - <script type="module" src="/hiner/src/live2d/load.js"></script>
    - <script src="/hiner/src/js/chinese-lunar.js"></script>
    - <script defer src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
    - '<script>window.addEventListener("DOMContentLoaded",function(){window.mermaid&&window.mermaid.run()});</script>'
-   - <script src="/hiner/src/js/schedule.js"></script>
+   - <script type="module" src="/hiner/src/js/schedule.js"></script>
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
